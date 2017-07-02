@@ -1,0 +1,25 @@
+The following words are either not in Comlex or don't have supporting lexical and semantic knowledge in the kb.
+
+Adjectives - 33
+"accustomed" "additional" "bumpy" "closer" "conclusive" "detectable" "different" "electrical" "gravitational" "horsedrawn" "inconceivable" "intellectual" "juicy" "lesser" "magnetic" "mathematical" "microscopic" "muscular" "nonzero" "planetary" "prevailing" "proportional" "resistive" "rotational" "scholarly" "scientific" "unaffected" "unbalanced" "unchanged" "unchanging" "unimpeded" "unsupported" "worse" 
+
+Adverbs - 35
+"actually" "algebraically" "allegedly" "appropriately" "briefly" "clearly" "completely" "continually" "differently" "easily" "equivalently" "eventually" "exactly" "externally" "farther" "finally" "formidably" "horizontally" "ignorantly" "indefinitely" "likely" "namely" "nearly" "nicely" "oppositely" "predominantly" "prematurely" "rapidly" "similarly" "simply" "skillfully" "slowly" "steadily" "surely" "vertically"
+
+Auxiliaries - 2
+"did" "does" 
+
+Conjunctions - 1
+"provided"  
+
+Nouns - 47
+"absence" "acceleration" "application" "assertion" "astronomer" "bowstring" "brightness" "civilization" "classification" "closeness" "conception" "configuration" "consideration" "contamination" "corruption" "demonstration" "deviation" "difficulties" "difficulty" "distinction" "evidence" "explanation" "exposition" "failure" "floodwaters" "followers" "following" "gravitation" "imagination" "imperfections" "interference" "knowledge" "magnitudes" "millennia" "observation" "observer" "observers" "ones" "persecution" "printer" "reaction" "refutation" "restatement" "stability" "tabletop" "thinkers" "variation"
+
+Pronouns - 1
+"themselves"
+
+Verbs - 17
+"accomplished" "acting" "applied" "born" "concerned" "hurling" "involved" "noted" "pushing" "refute" "said" "shown" "stated" "thinking" "traveling" "undergoes" "worked" 
+
+Factoring out: Chapter Terminology, Proper names, possessives and contractions (not testable)
+"Aristotelian" "Aristotle" "Aristotle's" "BC" "Burl" "Cambridge" "Christmas" "Copernican" "Copernicus" "De" "England" "F" "Galileo" "Galileo's" "Greece" "Hewitt" "Isaac" "Italian" "Latin" "N" "Newton" "newton" "newtons" "Newton's" "Nicolaus" "Pisa" "Principia" "quintessence" "Revolutionibus" "SIGMA" "SIGMAF" "Violent" "violent" "+" "=" "It's" "That's" "arrow's" "cannot" "couldn't" "doesn't" "mother's" "we'll" "you'll"

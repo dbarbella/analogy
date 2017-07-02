@@ -1,0 +1,185 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: SUSD-dec-14-paragraphs-simplified.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: November 10, 2014 20:41:08
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+
+(listOfParasInChapter SUSD-Simplified-Dec2014-01-Miniature 
+                      (TheList
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 1)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 2)))
+
+
+(listOfParasInChapter SUSD-Simplified-Dec2014-01 
+                      (TheList
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 1)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 2)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 3)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 3.6)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 4)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 5)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 5.5)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 6)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 7)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 8)
+                       (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 9)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Debug-Test-01 16 1)
+ "We examined the elements of a solar heating system. We will examine the solar heating system operating during a typical day."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Debug-Test-01 16 2)
+ "Now, we will consider collection of heat and storage of heat. After that, we will consider using the stored heat. We also compare the rainwater collection system and the solar heating system."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 1)
+ "We examined the elements of a solar heating system. 
+We will examine the solar heating system operating during a typical day. 
+Now, we will consider collection of heat and storage of heat. 
+After that, we will consider using the stored heat. 
+We also compare the rainwater collection system and the solar heating system."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 2)
+ "At the start of each day, the solar heating system is semifull. 
+At the start of each day, the rainwater collection system is semifull. 
+The rainwater collection system could have some rainwater in it. 
+The solar heating system's heat storage is warm because the solar heating system collected heat during the previous day. 
+In the rainwater collection system, the valve closes.
+This prevents the flow of the stored water. 
+The rain is not falling.
+The water in the pipe has leaked out.
+The sun has not yet risen on the solar heating system. 
+The solar collector was exposed to the cold air in the night.
+The heat storage contains heat.
+Because of this, the heat storage's temperature is greater than the air's temperature.
+The control device sensed that the heat storage's temperature was greater than the solar collector's temperature. 
+Because of this, the control device shut off the pump.
+This prevented the cooling process of the heat storage."
+ )
+
+
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 3)
+ "The height of the sun rises.
+This increases the solar collector's temperature.
+A solar collector faces south.
+In the morning, the solar collector is not facing the sun.
+Because of this, the solar collector absorbs a low amount of sunlight. 
+The solar collector absorbs the sunlight.
+The solar collector's temperature increases. 
+The heat storage's temperature exceeds the solar collector's temperature."
+ )
+
+
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 3.6)
+ "Because the heat storage's temperature exceeds the solar collector's temperature, the control device does not turn on the pump.
+Because the solar collector's temperature exceeds the air's temperature, heat leaves the solar collector through the glaze.
+The heat in the solar collector leaves.  
+No heat in the solar collector remains.
+The solar collector does not collect heat."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 4)
+ "The rainwater collection system is like the solar heating system. 
+Rainwater falls onto the rainwater collection tray.
+The amount of captured rainwater is low. 
+Because of this, the depth of the water in the storage tank exceeds the depth of the water in the pipe.
+Rainwater does not flow into the storage tank. 
+The rain captured by the tray leaks away."
+ )
+
+
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 5)
+ "The system does not capture heat, when the heat storage's temperature exceeds the solar collector's temperature. 
+A solar collector on a cloudy day does not capture heat. 
+Similarly, when the sun is low, the amount of solar radiation on the solar collector is low.
+Because of this, the heat storage's temperature exceeds the solar collector's stagnation temperature."
+ )
+
+
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 5.5)
+ "The rate of heat flow from the solar collector equals the rate of absorption of heat. 
+The air is cold.  
+This increases the distance between the temperature of the solar collector and the temperature of the heat storage.
+This increases the amount of necessary solar radiation."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 6)
+"As the height of the sun increases, the amount of solar radiation on the solar collector increases.
+Eventually, the solar collector's temperature exceeds the heat storage's temperature. 
+The control device senses the temperature difference between the solar collector and the heat storage. 
+This causes the control device to turn the pump.
+The water in the pump flows.
+Because of this, the solar collector's heat moves to the heat storage.
+Water flows from the storage tank to the solar collector.
+The water is heated in the solar collector.
+Warm water from the solar collector increases the temperature of the heat storage.
+Heat flows from the solar collector to the heat storage. 
+Because of this, heat is saved." 
+ )
+
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 7)
+ "The amount of rain that falls on the rainwater collection system increases. 
+That increase is like an increase of the amount of solar radiation on the solar collector.
+The amount of rainwater in the pipe increases.
+Because of this, the depth of the water in the pipe exceeds the depth of the water in the storage tank.
+The valve opens.
+Because of this, the rainwater flows into the storage tank."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 8)
+ "During the late morning, the sun faces the solar collector directly. 
+Because of this, the solar collector absorbs additional solar radiation.
+The pump is turned on.
+Because of this, warm water flows from the storage tank through the solar collector.
+The water's temperature increases in the solar collector.
+The water is hot when the water returns to the heat storage. 
+Because of this, the water increases the temperature of the heat storage.
+The solar collector's temperature exceeds the heat storage's temperature. 
+Because of this, the pump is turned on.
+Efficiency is high in the late morning. 
+Water flows to the solar collector from the heat storage.
+The heat storage is cool before noon.
+When the solar collector is cool, leakage of heat is low.
+This increases efficiency."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-Simplified-Dec2014-01 16 9)
+ "Heavy rain is like direct sunlight.
+Water fills the pipe.
+The water flows through the valve into the storage tank.
+Because the depth of water in the pipe is low, rainwater is saved.
+Because the depth of the water in the pipe is low, efficiency is high."
+ )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

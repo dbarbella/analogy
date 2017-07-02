@@ -1,0 +1,5 @@
+A quantity that has magnitude and direction is called a "vector quantity".
+Force is a vector quantity.
+A vector quantity is represented by an arrow.
+The length of the arrow shows the magnitude of the quantity.
+The direction of the arrow shows the direction of the quantity.

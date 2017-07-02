@@ -1,0 +1,192 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: Dolphins-Feb-05-2015-01.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: February 5, 2015 17:23:35
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+
+(listOfParasInChapter Dolphins-Feb-05-2015-01 
+                      (TheList
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 1)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 2)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 3)                  
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 4)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 5)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 6)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 7)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 8)))
+
+(listOfParasInChapter Dolphins-Feb-05-2015-01-mini
+                      (TheList
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 1)))
+
+(listOfParasInChapter Dolphins-Feb-05-2015-01-mini-para-07-08
+                      (TheList
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 7)
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 8)
+                       ))
+
+(listOfParasInChapter Dolphins-Feb-05-2015-01-mini-para-08
+                      (TheList
+                       (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01-secondhalf 1 8)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 1)
+ "A dolphin's anatomy differs from a porpoise's anatomy.
+You can distinguish the two animals by looking at the head and the dorsal fins. 
+The dolphin has a beak.
+Because of this, the dolphin has a long nose.
+The porpoise has no beak.
+Because of this, the porpoise has a flat nose.
+The dolphin has curved dorsal fins. 
+The porpoise has triangular dorsal fins. 
+You can also distinguish the two by their teeth.
+The dolphin has conical teeth.
+The porpoise has flat teeth."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01-mini 1 1)
+ "A dolphin's anatomy differs from a porpoise's anatomy.
+You can distinguish the two animals by looking at the head and the dorsal fins. 
+The dolphin has a beak.
+Because of this, the dolphin has a long nose."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 2)
+ "Dolphins and porpoises can be many sizes. 
+Generally, a dolphin's size exceeds a porpoise's size. 
+A killer whale is a dolphin.
+It is 35 feet long.
+Another dolphin is 4 feet long. 
+The porpoise is darker than the dolphin.
+The porpoise is 5 feet long.
+The porpoise and the dolphin breathe air through a blowhole at the top of the head. 
+Like other mammals, the dolphin and the porpoise give birth to live young.
+The dolphin and the porpoise nurse their offspring. 
+The dolphin and the porpoise have hair. 
+Soon after birth, the dolphin and the porpoise lose the hair."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 3)
+ "A dolphin and a porpoise have three sorts of fin. 
+The pectoral fins contain bones. 
+They are used for stopping and steering.
+The fins contain the same number of bones as a human arm. 
+The fins have five digits.
+The structure of the digits is like the structure of fingers.
+The bones came from an ancestor of dolphins and porpoises.
+The ancestor lived on the land.
+The ancestor lived many years in the past."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 4)
+ "The flippers of a dolphin contain digits that are like fingers.
+The dorsal fin of the dolphin stabilizes the dolphin during movement.
+The dorsal fin of a porpoise stabilizes the porpoise during movement.
+A dorsal fin is made of collagen.
+The tail is made of collagen.
+Collagen is a connective tissue.
+It is like cartilage."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 5)
+ "A dolphin and a porpoise use echolocation.
+Echolocation is for navigating.
+Echolocation is for finding food.
+Echolocation is for communication.
+The porpoise lacks a melon.
+The melon of the dolphin helps the dolphin with echolocation.
+The porpoise has better eyes.
+A dolphin and a porpoise have a small external ear.
+The ear is behind the eye. 
+The dolphin and the porpoise do not rely on smell.
+The voice of a dolphin is extensive and frequent. 
+It travels further than the voice of a porpoise.
+The distance that it travels exceeds the distance of the porpoise's voice."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 6)
+ "Male dolphins and porpoises have two genital holes on their ventral side.
+Female dolphins and porpoises have four genital holes.
+The female dolphins and the female porpoises have two holes for sex organs and two holes for nursing.
+The female dolphins and the female porpoises have teats inside the body.
+The mating season of dolphins and porpoises is short.
+The dominant male dolphins and the dominant male porpoises have several mates.
+The dolphins often mate for life. 
+A dolphin gestates for a year, and a porpoise gestates for a year. 
+The dolphin and the porpoise often have one calf.
+The calf is weaned after one year."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 7)
+ "A dolphin lives in a group of a dozen dolphins.
+When food is abundant, a group of 1000 dolphins forms. 
+Dolphins use ultrasonic sounds to coordinate hunts. 
+A porpoise is shy.
+The porpoise lives in a group of a small number of porpoises, or the porpoise lives alone.
+The porpoise is rarely in a large pod.
+The grouping behavior of the porpoise does not result in stable associations.
+It results in temporary relationships. 
+The relationships change when porpoises join or leave.
+Porpoises coordinate, when they are apart. 
+The porpoises use echolocation to find prey.
+They use echolocation to stay together.
+They do not use echolocation to communicate like dolphins."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01-mini 1 7)
+ "A porpoise is shy.
+The porpoise lives in a group of a small number of porpoises, or the porpoise lives alone.
+The porpoise is rarely in a large pod.
+The grouping behavior of the porpoise does not result in stable associations."
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01 1 8)
+ "A dolphin and a porpoise are intelligent.
+The dolphin and the porpoise have large brains. 
+The dolphin and the porpoise are sapient like a human.
+The dolphin and the porpoise can use a mirror.
+Scientists have performed research.
+The research allows the scientists to argue for protection of porpoises and dolphins. 
+Because of this, hunting the whales is prohibited. 
+Dolphins call the names of family, when they become separated. 
+Dolphins and humans are the only species to call with names.
+The dolphins stay with injured dolphins.  
+The dolphins help humans at sea.
+A dolphin is outgoing.
+Because of this, the dolphin lives well in captivity.
+A porpoise lives poorly in captivity."
+ )
+
+
+
+;;;(textContentsOfSourceText-Canonical 
+;;; (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01-secondhalf 1 8)
+;;; "Because of this, the dolphin lives well in captivity.
+;;;A porpoise lives poorly in captivity."
+;;; )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Dolphins-Feb-05-2015-01-secondhalf 1 8)
+ "Because of this, the dolphin lives well in captivity."
+ )
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

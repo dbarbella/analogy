@@ -1,0 +1,120 @@
+12. A SOLAR HEATING SYSTEM
+
+Not only do we want to extract heat from our collector, but we
+also want to store this same heat to use after the sun goes
+down. We can accomplish both purposes by using transport
+heat flow. Our simple insulated plate collector can be modified
+by soldering metal tubing onto the back of the plate and
+pumping water through the tubing.
+
+Using both metal tubing and metal plate is important,
+since heat flows easily through metal by conduction. In this
+case, the heat flows from where the sun hits the plate to where
+the tubing is soldered to the plate. Convection into a liquid, like
+water, is excellent, so the heat flowing into the tubing easily
+heats the water. Insulation is again used on the back side of the
+collector to prevent heat from leaking away.
+
+After solar heat flows into the water, it can be transported
+from the collector by pumping the heated water to a heat storage
+tank. A heat storage tank is a water-filled tank covered with
+insulation to prevent heat loss. The pump transports water from
+the storage tank to the collector, where it is solar heated, and is
+then pumped back to the storage tank in a continuous cycle. We
+learned earlier that transport heat flow depends on how fast the
+water is pumped. Let's assume that we've "sized" the pump so
+that the water flows fast enough to let heat flow easily out of the
+collector and into storage. At the same time, the pump won't be
+so big that the power needed to run it will be significant compared
+with the heat collected by our system.
+-----------------------
+;;;To return to the water analogy: we don't want only a high
+;;;depth in the pipe of the rainwater tray. We want to extract and
+;;;store some rainwater for use when the rain stops. If we use a fat
+;;;tube to connect the bottom of the pipe to a big tank, some of the
+;;;rainwater will flow into the tank. The tube is fat enough so the
+;;;water in the pipe can flow easily into the tank.
+A pipe attaches to the rain collection system.
+The pipe of the tray contains rainwater.
+A fat tube attaches to the pipe.
+The rainwater flows into a tank.
+The width of the tube enables the flow.
+The tank attaches to the rain collection system.
+The flow enables storing the rainwater in the tank.
+
+
+
+;;;The fat tube is analogous to the pump used in the solar
+;;;heating system.
+The pump of a solar heating system is like the fat tube.
+
+;;;Just as the pump lets transport heat flow easily
+;;;from the solar collector to the heat storage tank, so the fat tube
+;;;lets volume flow easily from the rainwater collector to the rainwater
+;;;storage tank.
+Similarly, the pump enables a flow of heat from the solar collector to a tank.
+------------------------
+Suppose a heavy rain is falling on the rainwater tray. The
+water will flow down the pipe and start filling the tank. Some of
+the incoming rainwater will flow into the tank, and some will
+flow out the leak. Since we want to store as much rainwater as
+we can, we'd like as little as possible to leak away. When only a
+small fraction of the incoming rainwater leaks away, we say we
+have high collection efficiency. We're efficiently using the rainwater
+by storing lots of it and letting only a little leak away. By
+contrast, we have low collection efficiency when a large fraction
+of the incoming rainwater leaks away and only a small fraction is
+stored.
+
+When do we get high collection efficiency and when do
+we get low collection efficiency? The easiest way to understand
+collection efficiency is to remember that high efficiency happens 
+only when leakage is low. Leakage is low only when the
+depth of water in the pipe is low-a nearly empty pipe leaks less
+than a full one.
+
+In the rainwater collecting apparatus we're discussing,
+we could get high efficiency or low efficiency, depending on the
+depth of the water in the pipe. For example, if the water depth in
+the tank were low, the depth of water in the pipe would also be
+low (the fat tube makes sure both have about the same depth). A
+low pipe depth means high efficiency: little leakage and lots of
+flow to storage. The same apparatus would give us low collection
+efficiency if the storage tank were nearly full. A full tank
+would indicate that the water depth in the pipe was also high
+(the fat tube insures this), resulting in high losses. Of course, if
+most of what is coming into the pipe were lost through leakage,
+the collection efficiency would be low.
+------------------------
+Now that you have some understanding of collection efficiency,
+let's return to the solar heater. We'll assume it's about
+noon on a bright, sunny day: the collector is absorbing lots of
+solar radiation.
+
+When the heat storage tank is cool, then cool water is
+pumped through the collector. The sun warms it somewhat, so it
+comes out a little warmer than it went in, but on the average the
+solar collector plate stays fairly cool. With a cool solar collector
+plate, heat losses by radiation and convection are small, so little
+heat is lost. Lots of heat goes to storage and efficiency is high.
+Similarly, when the rainwater tank has little water in it, the depth
+in the pipe is low, so little rainwater is lost through the leak.
+Lots of water goes to storage and efficiency is high.
+
+When the storage temperature is hot, the water being
+pumped to the solar collector is also hot. The collector, in turn,
+gets hotter. But when the collector gets hot, it loses more heat
+from its front plate by radiation and convection. Since more
+solar heat is lost, less heat is stored and the efficiency Is low.
+
+A hot collector means low-efficiency solar collection. We
+learned earlier that the hottest a collector can get is its stagnation
+temperature. But at its stagnation temperature its efficiency
+is precisely zero-it loses all the solar radiation it absorbs. If the
+water pumped to the collector is cooler than the stagnation temperature,
+some solar heat can be stored: the cooler the water,
+the higher the efficiency. The highest efficiency is achieved
+when very cold water is pumped into the collector. The tendency
+for efficiency to depend on temperature is an inherent feature of
+all solar heaters. It has an important effect on how solar energy
+can be applied to various kinds of heating needs.

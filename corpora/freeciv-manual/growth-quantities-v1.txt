@@ -1,0 +1,9 @@
+There is a type of quantity called "production points".
+There is a type of quantity called "production progress".
+There is a type of quantity called "luxury points".
+There is a type of quantity called "gold".
+
+Every city has food points.
+Every city has production points.
+Every city has luxury points.
+Every player has gold.

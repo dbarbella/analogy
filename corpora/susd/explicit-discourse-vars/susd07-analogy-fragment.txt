@@ -1,0 +1,16 @@
+The temperature temperatureofhouse005 of house house005 is like the depth depthofwater001 of water water001 in bucket bucket001. 
+Heat heat005 is like the water water001.
+Water water001 flows into bucket bucket001 from faucet faucet001.
+Holes holes001 are in bucket bucket001.
+Furnace furnace005 is like faucet faucet001.
+Faucet faucet001 pumps water water001 into bucket bucket001.
+Furnace furnace005 pumps heat heat005 into house house005.
+The water water001 exits bucket bucket001 through holes holes001.
+There is a temperature temperatureofhouse005 of the house house005.
+There is a temperature temperatureofoutside005 of the outside outside005.
+There is a distance distance005 between the temperature temperatureofhouse005 and the temperature temperatureofoutside005.
+The distance distance005 pushes heat heat005 from the house house005.
+There is a depth depthofwater001 of the water water001.
+There is a distance distance001 between depth depthofwater001 and bottom bottomofbucket001 of the bucket bucket001.
+Distance distance001 pushes the water water001 from bucket bucket001.
+The temperature temperatureofoutside005 of the outside outside005 is like the bottom bottomofbucket001 of bucket bucket001.

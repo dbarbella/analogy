@@ -1,0 +1,11 @@
+A solar panel is like a rain collection system.
+The solar panel collects solar radiation.
+The rain collection system catches rainwater with a tray.
+A pipe attaches to the tray.
+However, the pipe has a leak.
+The water leaks quickly, as the rain collection system fills.
+The spillage balances the intake, when the rain collection system fills.
+When the spillage balances the intake, the water stops rising.
+When the spillage balances the intake, the water reaches a stagnation depth.
+A stagnation temperature is like the stagnation depth.
+When the heat's leakage balances the incoming solar radiation, the heat in the solar panel reaches a stagnation temperature.

@@ -1,0 +1,12 @@
+A hot brick brick005 leaks heat heat005 to a cool room room005.
+The temperature temperatureofbrick005 of a brick brick005 and the temperature temperatureofroom005 of a room room005 are different.
+The distance distance005 between temperature temperatureofbrick005 and temperature temperatureofroom005 pushes thermal energy heat005 from brick brick005.
+Heat heat005 leaves until distance distance005 disappears.
+A hot brick brick005 is like a bucket bucket001 of water water001.
+There is a hole hole001 in bucket bucket001.
+The water water001 exits bucket bucket001 through hole hole001.
+The depth depthofwater001 of water water001 is higher than depth depthofhole001 of hole hole001.
+The distance distance001 between depth depthofwater001 and depth depthofhole001 pushes volume volume001 from bucket bucket001.
+After the water water001 leaves, the distance distance001 between depth depthofwater001 and depth depthofhole001 disappears.
+When the distance distance001 in depth depthofwater001 disappears, the volume volume001 does not exit through the hole hole001.
+The distance distance005 is like the distance distance001. 

@@ -1,0 +1,65 @@
+;;; this is actually a different kind of bad revenge: it's not OK for an adult to be vengeful 
+;;; against a child.  Let's expand this one later.
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Bad-Revenge-Three
+                      (TheList
+                       (SourceTextChapterParagraphFn Bad-Revenge-Three 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Bad-Revenge-Three 1 1)
+"Gerald was a person.
+Nancy was a person.
+Lewis was a person.
+Gerald was Nancy's son.
+Lewis was a child.
+Gerald was a child.
+Lewis hurt Gerald.
+The hurt was morally wrong.
+Because Lewis hurt Gerald, Nancy hurt Lewis.
+The hurt was morally wrong.")
+
+(in-microtheory (ScenarioMtFn Bad-Revenge-3))
+(genlMt (ScenarioMtFn Bad-Revenge-3) MoralDMRulesMt)
+
+;;; the (doneBy hurt123 hurt123) problem likely comes from the subject failing to
+;;; attach with a gerund, i.e., "Lewis hurting Gerald was..." fails to see the hurting 
+;;; as the subject and fails to see "Lewis" as the head of the subclause
+
+;;;Discourse-3645292141-67760
+;;;Universe: be68151 hurt68126 be68646 
+;;;
+;;;(drsForDiscourse Discourse-3645292141-67760)
+;;;
+;;;(isa gerald67763 Person)
+;;;
+;;;(isa nancy67799 Person)
+;;;
+;;;(isa lewis67835 Person)
+;;;
+;;;(possessiveRelation nancy67884 gerald67871)
+;;;
+;;;(biologicalSons nancy67884 gerald67871)
+;;;
+;;;(isa lewis67924 HumanChild)
+;;;
+;;;(isa gerald67946 HumanChild)
+;;;
+;;;(isa hurt68126 HarmingAnAgent)
+;;;
+;;;(doneBy hurt68126 hurt68126)
+;;;
+;;;(maleficiary hurt68126 gerald68142)
+;;;
+;;;(maleficiary hurt68126 lewis68516)
+;;;
+;;;(doneBy hurt68126 nancy68438)
+;;;
+;;;(doneBy hurt68126 lewis68339)
+;;;
+;;;(maleficiary hurt68126 gerald68408)
+;;;
+;;;(causes-EventEvent hurt68126 hurt68126)
+;;;
+;;;(maleficiary hurt68126 lewis68637)

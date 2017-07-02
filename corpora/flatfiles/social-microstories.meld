@@ -1,0 +1,40 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: untitled
+;;;;    System: Companions
+;;;;    Author: Ken Forbus
+;;;;   Created: August 19, 2015 16:19:03
+;;;;   Purpose: Microstories for social reasoning experiments
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate: 2011-03-08 22:12:45 -0600 (Tue, 08 Mar 2011) $
+;;;;  $LastChangedBy: forbus $
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+(listOfParasInChapter Fred-Loss-Story-20150819 
+                      (TheList
+                       (SourceTextChapterParagraphFn Fred-Loss-Story-20150819 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Fred-Loss-Story-20150819 1 1)
+ "Fred was frustrated because hs phone was stolen."
+ )
+
+(listOfParasInChapter George-Loss-Story-20150819 
+                      (TheList
+                       (SourceTextChapterParagraphFn George-Loss-Story-20150819 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn George-Loss-Story-20150819 1 1)
+ "George was frustrated. His laptop was gone."
+ )
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

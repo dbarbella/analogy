@@ -1,0 +1,74 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Neutral-Revenge-One
+                      (TheList
+                       (SourceTextChapterParagraphFn Neutral-Revenge-One 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Neutral-Revenge-One 1 1)
+"Robert was a person.
+James was a person.
+Robert and James were boxers.  
+Robert hit James in the head. 
+The hitting was morally neutral. 
+Because Robert and James are boxers, James attacked Robert.
+The attack was morally neutral.")
+
+;;; boxer == boxerSHorts
+;;; "James and Robert are boxers" --> "are = unit of area measurement"
+;;;Discourse-3645282016-51390
+;;;Universe: hit51755 be51773 be52125 attack52107 
+;;;
+;;;(drsForDiscourse Discourse-3645282016-51390)
+;;;
+;;;(isa robert51393 Person)
+;;;
+;;;(isa james51429 Person)
+;;;
+;;;(implies-DrsDrs (DrsCaseFn DRS-3645282143-52276)
+;;; (DrsCaseFn DRS-3645282143-52277))
+;;;
+;;;DRS-3645282143-52276
+;;;Universe: boxer51489 
+;;;
+;;;(isa boxer51489 BoxerShorts)
+;;;
+;;;DRS-3645282143-52277
+;;;(isa hit51755 HittingAnObject)
+;;;
+;;;(ruleQualifier boxer51961 (DrsCaseFn DRS-3645282144-52278))
+;;;
+;;;DRS-3645282144-52278
+;;;Universe: attack51989 
+;;;
+;;;(isa attack51989 AttackOnObject)
+;;;
+;;;(performedBy attack51989 james51978)
+;;;
+;;;(objectAttacked attack51989 robert52029)
+;;;
+;;;(implies-DrsDrs (DrsCaseFn DRS-3645282144-52279)
+;;; (DrsCaseFn DRS-3645282144-52280))
+;;;
+;;;DRS-3645282144-52279
+;;;Universe: boxer51961 
+;;;
+;;;(denotesFunction-Underspecified are51942 Are-UnitOfArea)
+;;;
+;;;(isa boxer51961 BoxerShorts)
+;;;
+;;;(compoundNoun are51942 boxer51961)
+;;;
+;;;DRS-3645282144-52280
+;;;(ruleQualifier robert51929 (DrsCaseFn DRS-3645282144-52278))
+;;;
+;;;DRS-3645282144-52278
+;;;Universe: attack51989 
+;;;
+;;;(isa attack51989 AttackOnObject)
+;;;
+;;;(performedBy attack51989 james51978)
+;;;
+;;;(objectAttacked attack51989 robert52029)
+;;;
+;;;(isa attack52107 AttackOnObject)

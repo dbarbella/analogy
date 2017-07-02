@@ -1,0 +1,8 @@
+A solar panel solarpanel005 is like a bucket bucket001.
+A bucket bucket001 in a storm rainstorm001 collects rain rain001.
+A solar panel solarpanel005 collects solar rays light005.
+If the bucket bucket001 is angled to catch the rain rain001, the amount amountofrain001 of collected rain rain001 is highest.
+The top topofbucket001 of the bucket bucket001 faces the rain rain001.
+If the rain rain001 falls straight, the top topofbucket001 lies flat.
+If the rain rain001 is blown sideways by the wind, the top topofbucket001 angles toward the rain rain001.
+A solar panel solarpanel005 points towards the sun sun005 to pick up the most solar rays solarrays005.

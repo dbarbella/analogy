@@ -1,0 +1,21 @@
+analogy_strings.py
+	- Contains sets of words used by other files
+
+boyer_moore.py
+	- Contains functions that search for sets of words in larger texts
+
+import_susd.py
+	- Stub attempt to import SUSD as an NLTK corpus
+
+nltknoodling.py
+	- Scratch file for learning NLTK stuff
+
+susd_remover.py
+	- Processes the raw SUSD files into the analogies format
+
+utils.py
+	- Various utility files
+
+wordhunt.py
+	- Script that uses boyer_moore to find words.
+

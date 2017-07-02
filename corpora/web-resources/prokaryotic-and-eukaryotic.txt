@@ -1,0 +1,62 @@
+;; Retreived c. Oct 8 2015 from http://www.cod.edu/people/faculty/fancher/prokeuk.htm
+
+
+Prokaryotic and Eukaryotic Cells
+
+Part of our definition/description of what it means to be a living thing on Earth includes the assertion that living things are made of cells and cell products. In other words, we consider the cell to be a pretty fundamental structural aspect of life.
+
+Cells in our world come in two basic types, prokaryotic and eukaryotic. "Karyose" comes from a Greek word which means "kernel," as in a kernel of grain. In biology, we use this word root to refer to the nucleus of a cell. "Pro" means "before," and "eu" means "true," or "good." So "Prokaryotic" means "before a nucleus," and "eukaryotic" means "possessing a true nucleus." This is a big hint about one of the differences between these two cell types. Prokaryotic cells have no nuclei, while eukaryotic cells do have true nuclei. This is far from the only difference between these two cell types, however.
+
+Here's a simple visual comparison between a prokaryotic cell and a eukaryotic cell:
+
+ 
+This particular eukaryotic cell happens to be an animal cell, but the cells of plants, fungi and protists are also eukaryotic.
+
+Despite their apparent differences, these two cell types have a lot in common. They perform most of the same kinds of functions, and in the same ways. Both are enclosed by plasma membranes, filled with cytoplasm, and loaded with small structures called ribosomes. Both have DNA which carries the archived instructions for operating the cell. And the similarities go far beyond the visible--physiologically they are very similar in many ways. For example, the DNA in the two cell types is precisely the same kind of DNA, and the genetic code for a prokaryotic cell is exactly the same genetic code used in eukaryotic cells.
+
+Some things which seem to be differences aren't. For example, the prokaryotic cell has a cell wall, and this animal cell does not. However, many kinds of eukaryotic cells do have cell walls.
+
+Despite all of these similarities, the differences are also clear. It's pretty obvious from these two little pictures that there are two general categories of difference between these two cell types: size and complexity. Eukaryotic cells are much larger and much more complex than prokaryotic cells. These two observations are not unrelated to each other.
+
+If we take a closer look at the comparison of these cells, we see the following differences:
+
+Eukaryotic cells have a true nucleus, bound by a double membrane. Prokaryotic cells have no nucleus. The purpose of the nucleus is to sequester the DNA-related functions of the big eukaryotic cell into a smaller chamber, for the purpose of increased efficiency. This function is unnecessary for the prokaryotic cell, because its much smaller size means that all materials within the cell are relatively close together. Of course, prokaryotic cells do have DNA and DNA functions. Biologists describe the central region of the cell as its "nucleoid" (-oid=similar or imitating), because it's pretty much where the DNA is located. But note that the nucleoid is essentially an imaginary "structure." There is no physical boundary enclosing the nucleoid.
+
+Eukaryotic DNA is linear; prokaryotic DNA is circular (it has no ends).
+
+Eukaryotic DNA is complexed with proteins called "histones," and is organized into chromosomes; prokaryotic DNA is "naked," meaning that it has no histones associated with it, and it is not formed into chromosomes. Though many are sloppy about it, the term "chromosome" does not technically apply to anything in a prokaryotic cell. A eukaryotic cell contains a number of chromosomes; a prokaryotic cell contains only one circular DNA molecule and a varied assortment of much smaller circlets of DNA called "plasmids." The smaller, simpler prokaryotic cell requires far fewer genes to operate than the eukaryotic cell.
+
+Both cell types have many, many ribosomes, but the ribosomes of the eukaryotic cells are larger and more complex than those of the prokaryotic cell. Ribosomes are made out of a special class of RNA molecules (ribosomal RNA, or rRNA) and a specific collection of different proteins. A eukaryotic ribosome is composed of five kinds of rRNA and about eighty kinds of proteins. Prokaryotic ribosomes are composed of only three kinds of rRNA and about fifty kinds of protein.
+
+The cytoplasm of eukaryotic cells is filled with a large, complex collection of organelles, many of them enclosed in their own membranes; the prokaryotic cell contains no membrane-bound organelles which are independent of the plasma membrane. This is a very significant difference, and the source of the vast majority of the greater complexity of the eukaryotic cell. There is much more space within a eukaryotic cell than within a prokaryotic cell, and many of these structures, like the nucleus, increase the efficiency of functions by confining them within smaller spaces within the huge cell, or with communication and movement within the cell.
+Examination of these differences is interesting. As mentioned above, they are all associated with larger size and greater complexity. This leads to an important observation. Yes, these cells are different from each other. However, they are clearly more alike than different, and they are clearly evolutionarily related to each other. Biologists have no significant doubts about the connection between them. The eukaryotic cell is clearly developed from the prokaryotic cell.
+
+One aspect of that evolutionary connection is particularly interesting. Within eukaryotic cells you find a really fascinating organelle called a mitochondrion. And in plant cells, you'd find an additional family of organelles called plastids, the most famous of which is the renowned chloroplast. Mitochondria (the plural of mitochondrion) and chloroplasts almost certainly have a similar evolutionary origin. Both are pretty clearly the descendants of independent prokaryotic cells, which have taken up permanent residence within other cells through a well-known and very common phenomenon called endosymbiosis.
+
+One structure not shown in our prokaryotic cell is called a mesosome. Not all prokaryotic cells have these. The mesosome is an elaboration of the plasma membrane--a sort of rosette of ruffled membrane intruding into the cell.
+
+This diagram shows a trimmed down prokaryotic cell, including only the plasma membrane and a couple of mesosomes. A mitochondrion is included for comparison:
+
+
+The similarities in appearance between these structures are pretty clear. The mitochondrion is a double-membrane organelle, with a smooth outer membrane and an inner membrane which protrudes into the interior of the mitochondrion in folds called cristae. This membrane is very similar in appearance to the prokaryotic plasma membrane with its mesosomes.
+
+But the similarities are a lot more significant than appearance. Both the mesosomes and the cristae are used for the same function: the aerobic part of aerobic cellular respiration. Cellular respiration is the process by which a cell converts the raw, potential energy of food into biologically useful energy, and there are two general types, anaerobic (not using oxygen) and aerobic (requiring oxygen). In practical terms, the big difference between the two is that aerobic cellular respiration has a much higher energy yield than anaerobic respiration. Aerobic respiration is clearly the evolutionary offspring of anaerobic respiration. In fact, aerobic respiration really is anaerobic respiration with additional chemical sequences added on to the end of the process to allow utilization of oxygen (a very common evolutionary pattern--adding new parts to old systems). So it's pretty reasonable of biologists to think that a mitochondrion evolved from a once-independent aerobic prokaryotic cell which entered into an endosymbiotic relationship with a larger, anaerobic cell.
+
+So is there any real evidence that the distant ancestors of mitochondria were independent cells? Quite a lot, actually. And of a very convincing type. Mitochondria (and chloroplasts, for that matter) have their own genetic systems. They have their own DNA, which is not duplicated in the nucleus. That DNA contains a number of the genes which are necessary to make the materials needed for aerobic cellular respiration (or photosynthesis, in the case of the chloroplast). Mitochondrial and chloroplast DNA molecules are naked and circular, like prokaryotic DNA. These organelles also have their own population of ribosomes, which are smaller and simpler than the ribosomes out in the general cytoplasm. Mitochondria and chloroplasts also divide on their own, in a manner similar to the binary fission of prokaryotic cells.
+
+Then there's that interesting outer membrane, another feature chloroplasts share with mitochondria. The manners by which large objects enter cells automatically create an outer membrane (actually a part of the big cell's plasma membrane) around the incoming object.
+
+This discussion suggests a very interesting question. Endosymbiosis is a very widespread phenomenon. The more we look, the more examples we find throughout the kingdoms of life. So, if a mitochondrion is the distant descendent of an independent prokaryotic cell, is it then an organism living inside a larger cell? Or is it just a part of that larger cell? Is it an independent organism or not?
+
+Before you leap to a conclusion, think a bit. Certainly, mitochondria are absolutely dependent upon the cells in which they reside. Like any long-time endosymbiont, they long ago gave up many of the basic life processes needed for independent life. And the cells in which they reside are completely dependent upon their mitochondria, because the anaerobic respiration they could do without the mitochondria wouldn't provide nearly enough energy for the cell's needs. In fact, it's very probable that the evolution of big, complex eukaryotic cells wasn't possible until the "invention" of aerobic respiration.
+
+But there are many endosymbiotic relationships in nature which are just as interdependent. For example, no termite could survive without the population of endosymbionts that lives inside its guts, digesting its woody diet for it. And the protists and bacteria that make up that population can't survive outside the termite. Complete interdependency.
+
+Now, the termite and its passengers look a lot more like independent creatures to us than a cell and its mitochondria. But they are actually no more independent of each other. So if we decide that the mitochondrion is just a part of the cell, then don't we have to also decide that the endosymbionts inside the termite's guts are just parts of the termite? If not, how do we justify insisting that there's a difference?
+
+Before you get too frustrated trying to sort this out, allow me to relieve your mind. There is, in fact, no answer to this question. Just the reinforcement of a very important lesson. Despite our human need to sort our world into neat, clean categories, the real universe often doesn't cooperate, and this is just such a case. We want to be able to decide "two separate organisms" or "parts of the same organism" in cases like this, but reality shows us that there are many situations which fall somewhere between these two categories. This is a lesson we learned when we examined the "alive" vs "not alive" issue, and again when we tried to decide how to functionally describe species. We want neat categories; nature doesn't cooperate.
+
+Copyright © 2000 College of DuPage 
+Center for Independent Learning (630) 942-2185
+fancher2@cdnet.cod.edu 
+Updated 09 Sept 2004

@@ -1,0 +1,99 @@
+6. THERMAL STORAGE
+
+In solar energy heating systems, it's not enough to simply capture
+the sun's heat-it must also be stored. While heating a
+house during the day is useful, the house needs heat at night as
+well. Heat collected during the day must be stored until night.
+How is heat stored?
+
+Storing heat is analogous to storing volume. If a cylindrical
+tank is filled with water, the amount that it holds-the
+volume stored-depends on how high its depth is. Similarly, the
+heat stored in a substance depends on how high its temperature
+is; a hot brick stores more heat than a warm one.
+
+If a solar-heated house is to be kept at 70° F during the
+winter, heat stored at 50° F isn't useful. Only if the temperature
+of the storage material is above 70° F can the stored heat be
+used to warm the house. Thus, useful heat in terms of room
+heating is heat that is stored in a substance that is hotter than
+the room's temperature. By analogy, the useful water in a tank is
+the water stored above the outlet. Once the depth drops below
+the outlet, the remaining volume won't flow out, so it's not
+useful.
+
+The amount of heat stored also depends on how much
+material is heated. The more storage material there is, the more
+heat can be stored at the same temperature above room temperature.
+Similarly, a bigger tank holds more volume than a smaller
+tank when both are of the same depth.
+
+Often the amount of material is measured by volume.
+Using volume as a basis of measurement, different materials
+can be compared as to how well they store heat. In solar heating
+systems, heat is usually stored in water or crushed rock. Water
+stores heat somewhat better than does rock. A container of
+water can store two to three times the heat as the same-sized
+container filled with crushed rock.
+
+Some materials store heat very poorly. Air, for example,
+stores almost no heat. A container of air stores one-thousandth
+the amount of heat as the same-sized container of water does.
+
+To understand heat storage, consider the following
+example. When you turn off your furnace on a cold day, your
+house doesn't get cold immediately because heat is stored in
+the walls, the floor, and the furniture (very little is stored in the
+air). The stored heat leaks out slowly and keeps you warm for a
+short time even when the furnace is off. Adobe houses in the
+Southwest have very thick walls that store the day's heat well
+into the night.
+
+Another form of heat storage is called latent heat storage.
+Instead of storing heat simply by getting hotter, some materials
+store heat by melting. Ordinary wax is such a material. Let's take
+a piece of solid wax. As we heat it, it gets hotter as does any
+other material. But when it gets so hot that it begins to melt a
+curious thing happens: even though we continue to add heat to
+the wax, It doesn't get any hotter. All the heat goes into melting
+the wax, and it stays at nearly the same temperature until all the
+wax is melted. Melted or liquid wax again acts like any other
+material-the more heat added, the hotter it gets.
+
+When melted wax loses heat, its temperature naturally
+drops. But when it begins to solidify again it stops getting
+cooler. As it solidifies, it gives back all the extra heat-the latent
+heat-that was put into it when it was melted. While the wax is
+solidifying, its temperature remains nearly constant. Once it has
+completely hardened, it once again behaves like any other
+material, dropping in temperature as it gives up heat.
+
+Suppose we use wax to store heat. As the wax melts,
+heat will be stored. Later, if we want the stored heat, we'd let the
+wax solidify again, giving up its latent heat. Materials like wax
+are called phase change material because they store heat by
+changing phase-that is, by melting or solidifying.
+
+Why would you go to the trouble to use wax to store heat
+rather than water or crushed rocks? Because wax and other
+phase change materials can store a lot of heat. Wax can store
+several times the amount of heat of an equal volume of water
+and many times the heat of an equal volume of crushed rock.
+Wax itself is fairly expensive to use to store heat. Other phase
+change materials are cheaper and don't pose a fire hazard that
+wax might.
+
+The water analogy to a phase change material is a tank
+that has a bulge in its sides. When the water depth is below the
+bulge, adding volume only increases the depth, as it would in
+any other tank. But when the depth reaches the bulge, a lot more
+volume is needed to raise the depth. Extra volume is stored in
+the bulge just as extra heat is stored in the wax when it melts. If
+the tank is drained the extra volume can be recovered, just as the
+latent heat in the wax can be recovered when it solidifies. When
+the water depth in a tank is at the level of the bulge, volume can
+be added or taken away without changing the depth much.
+Similarly, when wax is near its melting temperature, heat can be
+added or taken away without changing the wax's temperature
+much.
+

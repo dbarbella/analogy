@@ -1,0 +1,68 @@
+Aristotle on Motion
+
+1. Aristotle asserted that natural motion proceeds from the "nature" of an object, dependent on the combination of the four elements (earth, water, air, and fire) the object contains. In his view, every object in the universe has a proper place, determined by its "nature"; any object not in its proper place will "strive" to get there. Violent motion, Aristotle's other class of motion, resulted from pushing or pulling forces. Violent motion was imposed motion. The essential thing about violent motion was that it was externally caused and was imparted to objects; they moved not of themselves, not by their "nature," but because of pushes or pulls.
+
+2. Natural motion could be either straight up or straight down, as in the case of all things on Earth, or it could be circular, as in the case of celestial objects. Since the moon is a celestial object, Aristotle would have considered its motion to be natural motion.
+
+3. Aristotle's statements about motion were a beginning in scientific thought, and, although he did not consider them to be the final words on the subject, his followers for nearly 2000 years regarded his views as beyond question. Implicit in the thinking of ancient, medieval, and early Renaissance times was the notion that the normal state of objects is one of rest. Since it was evident to most thinkers until the 16th century that Earth must be in its proper place, and since a force capable of moving Earth was inconceivable, it seemed quite clear to them that Earth does not move.
+
+Copernicus and the Moving Earth
+
+4. Copernicus reasoned that the simplest way to account for the observed motions of the Sun, Moon, and planets through the sky was to assume that Earth (and other planets) circle around the Sun.
+
+Galileo and the Leaning Tower
+5. Contrary to Aristotle's assertion, Galileo found that a stone twice as heavy as another did not fall twice as fast.
+
+Galileo's Inclined Planes
+
+6. He noted that balls rolling on downward-sloping planes picked up speed, while balls rolling on upward-sloping planes lost speed. From this he reasoned that balls rolling along a horizontal plane would neither speed up nor slow down. The ball would finally come to rest not because of its "nature," but because of friction. This idea was supported by Galileo's observation of motion along smoother surfaces: When there was less friction, the motion of objects persisted for a longer time; the less the friction, the more the motion approached constant speed. He reasoned that, in the absence of friction or other opposing forces, a horizontally moving object would continue moving indefinitely.
+
+7. This means that the moving object has the tendency to resist changes in motion. For example, a moving object sliding horizontally on a frictionless surface will continue moving indefinitely.
+
+8. Inertia is the name given to the property that objects in motion tend to stay in motion.
+
+Newton's First Law of Motion
+
+9. Every object continues in a state of rest or of uniform speed in a straight line unless acted on by a nonzero net force.
+
+Net Force
+
+10. If a cart is pulled to the right with 100 pounds and to the left with 30 pounds, then the net force on the cart is 70 pounds to the left.
+
+11. We say that force is a vector quantity because force has both a magniture and a direction.
+
+The Equilibrium Rule
+
+12. Both pounds and newtons are units of weight, which in turn are units of force.
+
+13. If an object is pulled with 80 newtons to the right and 80 newtons to the left, the net force on the object is 0 newtons.
+
+14. The net force on a bag pulled down by gravity with 18 newtons and pulled upward by a rope with 18 newtons is zero newtons?
+
+15. When the net force on something is zero, we say that it is in mechanical equilibrium.
+
+16. In mathematical notation, the equilibrium rule is (SIGMA)F = 0.
+
+Support Force
+
+17. The table exerts an upward support force equal the weight of the book. Therefore the table provides 15 N of support force. If we call the upward force positive, then the downward weight is negative, and the two add to become zero. The net force on the book is zero.
+
+18. When you weigh yourself on a bathroom scale at rest, the support force and the force of gravity pulling you down have the same magnitude.
+
+Equilibrium of Moving Things
+
+19. Equilibrium is a state of no change. A bowling ball rolling at constant speed in a straight line is in equilibrium.
+
+20. We can test whether or not something is in equilibrium by noting whether or not it undergoes changes in its state of motion.
+
+21. If you push on a crate with a force of 100 N and it moves at a steady speed in a straight-line path, it is in dynamic equilibrium. The fact that the net force on the crate equals zero means that the force of friction must be equal and opposite to our pushing force. Thus, the force of friction acting on the crate is 100 N.
+
+The Moving Earth
+
+22. When Copernicus announced the idea of a moving Earth in the 16th century, the concept of inertia was not understood.
+
+23. Not only is the bird moving at 30 kilometers per second but so are the branch of the tree, the tree, the Earth, and even the air in between. Things in motion remain in motion if no unbalanced forces are acting upon them. So, when the bird drops from the branch, its initial sideways motion of 30 kilometers per second remains unchanged.
+
+24. You are traveling at 30 km/s relative to the Sun before, during, and after your jump. Inertia supports this answer.
+
+25. Aristotle did not recognize that all moving things follow the same rules. He imagined that rules for motion in the heavens were very different from the rules of motion on Earth.

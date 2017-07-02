@@ -1,0 +1,87 @@
+11. A SIMPLE SOLAR COLLECTOR
+
+Now we need to learn what a solar collector is. The simplest
+kind of flat-plate solar collector is just a black-painted metal
+plate with a layer of insulation on the back side. It's painted
+black because black best absorbs solar radiation, as we discussed
+in Chapter 9. Since insulators prevent heat from conducting
+through them, the insulation on the collector prevents
+heat loss from the collector's back side.
+
+If we faced the plate toward the sun at noon, it would
+begin to get hot as it absorbed solar heat. How hot would it get?
+
+We can learn a lot about a solar collector by thinking of it
+in terms of a rainwater collector. Imagine that we are building a
+device to collect rainwater. As a start, we get a big tray to catch
+the rainwater, just as a solar collector "collects," or absorbs,
+solar radiation. We attach a capped pipe to the tray so that all
+the rain falling in the tray will flow down the pipe and be caught.
+
+Suppose the only capped pipe we can find is one that
+leaks. As the tray collects rain, the pipe fills; but rainwater flows
+out through the leak. The deeper the water gets in the pipe, the
+more water leaks out. At some point the depth gets so high that
+the flow out the leak balances the incoming flow of rainwater.
+Once this point is reached, the water gets no deeper. When the
+incoming rainwater exactly balances the outgoing water loss
+through the leak, the depth of water in the pipe is at its stagnation
+depth.
+
+Similarly, the stagnation temperature is how hot a collector
+gets when the incoming solar radiation exactly balances the
+heat losses that take place by radiation and convection. To
+continue our analogy, the tray captures rainwater as the solar
+collector captures solar radiation. Just as the water in the pipe
+gets deeper and deeper, so does the temperature of the plate
+become hotter and hotter. And just as more water flows out
+through the leak as the water In the pipe gets deeper, so more
+heat leaks off the front of the solar collector by radiation and
+convection as the plate gets hotter. At some point the plate gets
+so hot that the heat losses exactly balance the incoming solar
+radiation. Once this point is reached, the plate gets no hotter.
+
+The stagnation temperature of a surface-the hottest a
+surface exposed to the sun can get-depends on how much
+solar radiation is absorbed. The amount of radiation absorbed
+depends on the color of the surface, the angle of the sun's rays
+striking the collector, and how much sunlight actually strikes it.
+The best setup to use to absorb solar radiation is the one just
+described: a black surface squarely facing the sun on a clear
+day. A light-colored surface, a surface not directly facing the
+sun, or an overcast day will reduce the amount of solar radiation
+absorbed by the surface.
+
+How will less absorbed radiation affect the stagnation
+temperature? Let's use the analogy of the rainwater collector
+again to understand what happens. Suppose a light rain is falling 
+on the tray rather than a heavy rain-that's comparable to
+less solar radiation striking the solar collector. With less rain
+falling, the tray collects less and the incoming rainwater flow is
+less. Recall that when we discussed house heating, we found
+that a lower water depth in the bucket resulted in less flow out
+through the bucket's holes: high depths are associated with
+high leakage; low depths, with low leakage. Thus, if less rainwater
+is flowing down the pipe, the depth needn't be as high to
+force all of the incoming water out through the holes. The water
+in the pipe wouldn't be as deep before the flow out through the
+holes balanced the incoming rainwater flow. We can conclude
+from this that if the incoming rainwater is less, the stagnation
+depth also goes down.
+
+How can we apply this analogy to the solar collector? We
+would expect the stagnation temperature to be less if the
+absorbed solar radiation was less (since the stagnation depth
+was less when the rainfall was less). When less solar radiation is
+absorbed, our simple solar collector starts to get hot. It will lose
+more and more heat as it gets hotter. Eventually the heat losses
+will equal the amount of solar radiation absorbed. But since the
+solar radiation absorbed is less, the collector won't be very hot
+when the losses balance the absorbed radiation.
+
+How hot our simple solar collector gets depends on how
+much solar radiation it absorbs. We've gotten the plate hot, but
+we haven't gotten any heat from it yet-the plate may be collecting
+solar radiation, but it's not doing us any good. You can't pay
+your heating bills with a hot black plate. We want heat from a
+solar heating system, not temperature.

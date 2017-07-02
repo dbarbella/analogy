@@ -1,0 +1,10 @@
+Cities need food every turn.
+The food required in a city depends on the size of the city.
+The size of a city is the number of its citizens.
+The food required in a city depends on the number of citizens.
+The food required in a city depends on the number of settlers.
+The food required in a city depends on the city's total food consumption.
+The food consumption of citizens is two food points per turn.
+The food consumption of settlers depends on the government.
+Under anarchy, despotism, monarchy, and communism, the food consumption of settlers one food point per turn.
+Under republic and democracy, the food consumption of settlers is two points per turn.

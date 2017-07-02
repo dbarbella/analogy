@@ -1,0 +1,68 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: ada-sources-Mar2015.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: March 29, 2015 14:41:59
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Leak-Insulation-March2016
+                      (TheList
+                       (SourceTextChapterParagraphFn Leak-Insulation-March2016 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Leak-Insulation-March2016 1 1)
+ "A house is like a bucket with holes in the bottom.
+Insulating the house is like shrinking the holes in the bucket.
+If the house is insulated, a furnace uses less heat to warm the house.
+Similarly, if we shrink the holes, a faucet uses less water to fill the bucket.
+The furnace adds an amount of heat.
+The amount of the heat added matches the amount of the heat that leaks out.
+Similarly, the faucet adds an amount of water.
+The amount of the water added matches the amount of the water that leaks out.
+If the amount of the heat that is leaking is decreased, the amount of the heat that the furnace adds is decreased.
+Shrinking the holes in the bucket causes a decrease of the amount of the water that is leaking. 
+Because of this decrease, less water is needed from the faucet.")
+
+
+(listOfParasInChapter Leak-Insulation-March2015
+                      (TheList
+                       (SourceTextChapterParagraphFn Leak-Insulation-March2015 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Leak-Insulation-March2015 1 1)
+ "A house is like a bucket with holes in the bottom.
+Insulating the house is like shrinking the holes in the bucket.
+If the house is insulated, a furnace uses less heat to warm the house.
+Similarly, if we shrink the holes, a faucet uses less water to fill the bucket.
+The furnace adds an amount of heat.
+The amount of the heat added matches the amount of the heat that leaks out.
+Similarly, the faucet adds an amount of water.
+The amount of the water added matches the amount of the water that leaks out.
+If the amount of the heat that is leaking is decreased, the amount of the heat that the furnace adds is decreased.
+If we shrink the holes in the bucket, the amount of the water that is leaking is reduced.
+Because of this, the amount of the water that the faucet adds is decreased.")
+
+(listOfParasInChapter Ball-Sound-March2015
+                      (TheList
+                       (SourceTextChapterParagraphFn Ball-Sound-March2015 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Ball-Sound-March2015 1 1)
+ "A ball is thrown at a sidewalk.
+When the ball hits the sidewalk, the ball bounces back.
+The ball is thrown at a pillow.
+When the ball hits the pillow, the ball stops.
+A sound is like the ball.
+When the sound hits a hard surface, the sound bounces back.
+When the sound hits a soft surface, the sound stops.")
+
+
+
+

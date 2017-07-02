@@ -1,0 +1,42 @@
+Trade points come from commerce.
+Some trade points are lost by corruption.
+Corruption depends on the form of government.
+Corruption in a city depends on its distance from the capital.
+
+A city has trade points.
+Each city uses its trade points for three things.
+Trade points can be converted to player gold.
+Trade points can be converted into luxury points.
+Worker happiness can be improved by luxury points.
+Trade points can be converted into science points.
+Discovering a new technology consumes science points.
+The conversion rates for trade points affect the entire civilization. 
+The conversion rates depend on the form of government.
+The civilization accumulates gold and science points.
+Luxury points are only accumulated in the city that produces them.
+The conversion rates represent an important tradeoff.
+Three types of buildings directly affect trade.
+Building a courthouse affects trade.
+Building a palace affects trade.
+Building a super highway affects trade.
+Access to roads adds to a city's trade points.
+Terrain with rare commodities adds to a city's trade points.  
+
+Trade routes provide trade points.
+A trade route is established as follows.
+Produce a caravan or freight in the city.  
+Send that unit to another city.
+The city must either be at least eight squares away or belong to a different civilization.
+The civilizations of the two cities must have an alliance.
+Finally, give the make trade route command.
+The city starting the trade route gets gold points and science points.
+The revenue depends on the trade already produced by the two cities.
+The revenue is higher when the cities are further apart.
+The railroad or flight technologies lower the revenue.
+Trade routes generate trade points for both cities every turn.
+The trade points produced by the trade route depends on the trade points from the terrain worked by both cities.
+Trade routes generate more if the cities are on different continents.
+Trade routes generate more if the cities are from different civilizations.
+
+A city can have four trade routes.
+Attempting to establish a fifth trade route will cause the trade route with the smallest revenue to be eliminated.

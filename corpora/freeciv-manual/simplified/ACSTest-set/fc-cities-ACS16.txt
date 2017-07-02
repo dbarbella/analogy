@@ -1,0 +1,61 @@
+Cities are created when settlers are given the build city command.
+Cities cannot be built on glaciers or oceans. 
+The city's number of citizens is the size of a city.  
+The size of a city can reach dozens.  
+Citizens can be killed by famine and by war.  
+When the size of a city reaches zero, the city is destroyed.  
+
+Each city can work terrain within the five by five grid centered on the city, minus its corners.  
+Resources can be extracted from terrain by placing a citizen there.  
+The square where a city is placed is always worked for resources. Terrain cannot be worked by two citizens at once.  
+
+Terrain that is occupied by an enemy unit cannot be worked. 
+This means you can conduct a siege by placing your units on terrain being worked by an enemy city. 
+Units can be ordered to pillage, which destroys improvements.
+
+Buildings can be added to cities. 
+Different types of buildings have different effects on a city.  Each city can only have at most one building of a particular type.  
+Some buildings require other buildings.  
+Most buildings require achieving some technology before they can be constructed.  
+Some buildings can be made obsolete when some technology is discovered.
+	
+Building a building costs production points. 
+Building a building can require multiple turns.  
+Once completed, many buildings require gold points for upkeep.  If you cannot pay the upkeep on all of your buildings, some of them will be automatically sold.  
+Selling a building provides one gold piece for each production point used in building it.
+
+Each type of wonder can only be constructed by one civilization per game. 
+Civilizations often race to complete a desirable wonder. While building affect only their on city, many wonders benefit their entire civilization.  
+You can create a building in a city using the city's production points.  
+By sending trade units to a city building a wonder, their entire cost can be used towards constructing the wonder.  
+
+Each citizen plays one role at a time.  
+A citizen can be a worker, assigned to a terrain tile around the city.
+A citizen can be an entertainer.  
+Entertainers produce two luxury points per turn for their city.  Two other roles become avaialble when the size of a city reaches five.  
+A citizen can be a tax collector.  Tax collectors provide three extra gold per turn.  
+A citizen can be a scientist.  Each scientist adds three points to your research output.
+
+Each citizen is either happy, content, unhappy, or angry.  
+The first four workers in a city are content by default.  
+Workers beyond five are initially unhappy.  
+A city falls into disorder when there are more unhappy workers than happy workers. 
+A city in disorder generates no food, production, science, or taxes.  
+A city in disorder can still produce luxury points.  Unhappy workers can revolt.  
+In democracy, prolonged disorder can result in revolution.  Converting workers to entertainers, tax collectors, or scientists can avoid disorder.  
+Some buildings and wonders can make workers content. This can help avoid disorder.
+
+Cities with more than two citizens celebrate when half their citizens are happy workers and none are unhappy. 
+When celebrating, under monarchy or communism terrain has a trade bonus.  
+When celebrating under republic or democracy, the city enters a state of rapture.  
+In rapture, a city grows by one citizen on each turn that has a food surplus.  
+Rapture provides a rapid way to grow large cities.
+
+For every to luxury points a city produces, one content worker is made happy.  
+If there are no content workers, one unhappy worker becomes content.  
+Luxury points can be produced by entertainers.  
+Luxury points can also be produced by converting some trade points to luxury points.  
+
+Military units can affect city happiness.  
+Under authoritarian governments military units stationed in a city prevent unhappiness. 
+Under representative governments, military units can cause unhappiness when they are outside your national borders.  

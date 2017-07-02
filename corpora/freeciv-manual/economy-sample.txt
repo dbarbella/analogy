@@ -1,0 +1,6 @@
+Trade reflects wealth generated in each city by external commerce.
+Some trade points may be lost to corruption, which varies among forms of government and increases with distance from your capital city.
+Each city distributes its remaining trade points among three uses.
+One is gold, in the form of taxes, which goes into your national treasury.
+Another are luxury points, which influence worker morale.
+Third, science points contribute towards the discovery of new technology.

@@ -1,0 +1,21 @@
+1. Lucy stands on scale S1 and scale S2. Scale S1 displays a 350 Newton weight. Scale S2 displays a 350 Newton weight. What is the weight of Lucy? 
+- start with: Lucy stands with one foot on one scale and her other foot on a second scale. Each scale reads 350 N. What is Lucy's weight?
+- for clarity, change references to "N" into "Newtons" -> Each scale reads 350 Newtons.
+- for referential simplicity, label the scales S1 and S2 -> Lucy stands with one foot on scale S1 and her other foot on scale S2.
+- simplify relationship between Lucy and each scale, removing references to each foot -> Lucy stands on scale S1 and scale S2.
+- remove "each", refer to scale readings individually -> Scale S1 displays a 350 Newton weight. Scale S2 displays a 350 Newton weight.
+- using 's possessive breaks the parse, use "of" instead -> What is the weight of Lucy?
+
+2. Henry weighs 1200 Newtons. He stands on scale S1 and scale S2. Scale S1 reads twice as much as scale S2. What are the scale readings?
+- start with: Henry weighs 1200 N and stands on a pair of scales so that one scale reads twice as much as the other. What are the scale readings?
+- for clarity, change references to "N" into "Newtons" -> Henry weighs 1200 Newtons and stands on a pair of scales so that one scale reads twice as much as the other.
+- break up clauses into individual sentences -> Henry weighs 1200 Newtons. He stands on a pair of scales. One scale reads twice as much as the other.
+- for referential simplicity, label the scales S1 and S2 -> He stands on scale S1 and scale S2. Scale S1 reads twice as much as scale S2.
+
+3. The sketch shows a scaffold in mechanical equilibrium. The person in the middle weighs 500 Newtons. The tension in the left rope is 400 Newtons. The tension in the right rope is 400 Newtons. What is the weight of the scaffold?
+- start with: The sketch shows a scaffold in mechanical equilibrium. The person in the middle weighs 500 N. The tension in the left rope is 400 N. The tension in the right rope is 400 N. What is the weight of the scaffold?
+- for clarity, change references to "N" into "Newtons" -> The person in the middle weighs 500 Newtons. The tension in the left rope is 400 Newtons. The tension in the right rope is 400 Newtons.
+
+4. The sketch shows a scaffold in mechanical equilibrium. The scaffold weighs 400 Newtons. The scaffold supports two painters, one 500 Newtons and the other 400 Newtons. The tension in the left rope is 800 Newtons. What is the tension in the right rope?
+- start with: The sketch shows a scaffold in mechanical equilibrium. The scaffold weighs 400 N. The scaffold supports two painters, one 500 N and the other 400 N. The tension in the left rope is 800 N. What is the tension in the right rope?
+- for clarity, change references to "N" into "Newtons" -> The scaffold weighs 400 Newtons. The scaffold supports two painters, one 500 Newtons and the other 400 Newtons. The tension in the left rope is 800 Newtons.

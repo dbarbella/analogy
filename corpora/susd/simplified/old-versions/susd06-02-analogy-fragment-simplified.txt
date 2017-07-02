@@ -1,0 +1,12 @@
+Wax is a phase change material.
+The wax is like a bucket of liquid with a bump.
+The bottom of the bucket is below the bump of the bucket.
+Adding the liquid to the bottom quickly increases the liquid's depth.
+Adding the liquid to the bump slowly increases the depth of the liquid.
+The bump stores the liquid.
+The wax stores the heat, when the wax melts.
+The wax stores the heat like the bump stores the liquid.
+If the bucket drains, the liquid is recovered.
+If the wax freezes, the heat is recovered.
+If the depth lies at the bump, removing the liquid slowly decreases the depth.
+Near the wax's melting point, removing the heat slowly changes the temperature of the wax.

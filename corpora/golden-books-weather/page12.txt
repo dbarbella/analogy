@@ -1,0 +1,16 @@
+Water in the Atmosphere.
+Water is always present in the air.
+It evaporates from the earth, of which 70.8 per cent is covered with water.
+In the air, water exists in three states: solid, liquid, and invisible vapor.
+The amount of water vapor in the air is called the "humidity".
+The "relative humidity" is the amoutn of vapor the air is holding expressed as a percentage of the amount of the air could hold at that particular temperature.
+Warm air can hold more water than cold.
+When air with a given amount of water vapor cools, its relative humidity goes up.
+When the air is warmed, its relative humidity drops.
+
+As the table below shows, Air at 86 degrees Fahrenheit is "saturated" when it holds 30.4 grams of water vapor per cubic meter.  
+(In other words, it has a relative humidity of 100 per cent; it has reached its dew point.)
+But air at 68 degrees Fahrenheit is saturated when it holds only 17.3 grams per cubic meter.
+That's a difference of 13.1 grams per cubic meter.
+So every cubic meter of 86 degree saturated air that is cooled to 68 degrees will lose 13.1 grams of water vapor.
+This water vapor becomes cloud droplets which, if conditions are right, will fall as rain or snow.

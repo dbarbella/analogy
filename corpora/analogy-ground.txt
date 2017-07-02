@@ -1,0 +1,138 @@
+;----
+>gbw-01-n
+
+Heat and air movements.
+The air is heated mainly by contact with the warm earth.
+When air is warmed, it expands and becomes lighter.
+A layer of air, warmed by contact with the earth, rises and is replaced by colder air which flows in and under it.
+This cold air, in turn, is warmed and rises, and it, too, is replaced by colder air.
+Such a circulating movement of warm and cold fluids is called "convection".
+You can see convection currents if you drop small bits of paper into a glass container in which water is being heated.
+ 
+The air at the equator receives much more heat than the air at the poles.
+So warm air at the equator rises and is replaced by colder air flowing in from the north and south. 
+The warm, light air rises and moves poleward high above the earth.
+As it cools, it sinks, replacing the cool surface air which has moved toward the equator.
+If the earth did not rotate, the air would circulate as shown.  
+Because the earth does rotate, the circulation is different.
+ 
+;----
+>gbw-02-n
+ 
+Water is always present in the air.
+It evaporates from the earth, of which 70.8 per cent is covered with water.
+In the air, water exists in three states: solid, liquid, and invisible vapor.
+The amount of water vapor in the air is called the "humidity".
+The "relative humidity" is the amoutn of vapor the air is holding expressed as a percentage of the amount of the air could hold at that particular temperature.
+Warm air can hold more water than cold.
+When air with a given amount of water vapor cools, its relative humidity goes up.
+When the air is warmed, its relative humidity drops.
+ 
+As the table below shows, Air at 86 degrees Fahrenheit is "saturated" when it holds 30.4 grams of water vapor per cubic meter.  
+(In other words, it has a relative humidity of 100 per cent; it has reached its dew point.)
+But air at 68 degrees Fahrenheit is saturated when it holds only 17.3 grams per cubic meter.
+That's a difference of 13.1 grams per cubic meter.
+So every cubic meter of 86 degree saturated air that is cooled to 68 degrees will lose 13.1 grams of water vapor.
+This water vapor becomes cloud droplets which, if conditions are right, will fall as rain or snow.
+ 
+;----
+>gbw-03-n
+ 
+Heat and atmospheric water.
+Heat evaporates millions of tons of water into the air daily.
+Lakes, streams, and oceans send up a steady stream of water vapor.
+An amazing amount of water transpires from the leaves of green plants.
+A single apple tree may move 1800 gallons of water into the air in a six-month growing season.
+ 
+As moist warm air rises, it slowly cools.
+Finally it cools so much that its relative humidity reaches 100 per cent.
+Clouds form and, under certain conditions, rain or snow comes down.
+This external process of evaporation, condensation, and precipitation is called the water cycle.
+ 
+;----
+>gbw-04-n
+ 
+How clouds are formed.
+When air is cooled below its saturation point the water vapor in it condenses to form clouds.
+When water vapor at a teakettle spout is cooled by the air around it, a small cloud forms.
+Your warm moist breath forms a miniature cloud when it hits the cold winter air.
+The clouds you see nearly every day form in several ways but all form by the same general process -- cooling of air below its saturation point.
+ 
+Earth radiates heat rapidly on clear nights.
+Air in contact with cold earth may cool below its saturation point and form low clouds, or fog (a cloud on the ground).
+ 
+Warm air may move over a cold surface and be cooled below its saturation point.
+Clouds may form as warm lake or ocean air moves in over a cooler land surface.
+ 
+Warm air is often lifted by a heavier mass of cold air which pushes under it like a wedge.
+Clouds form as warm air cools below its saturation point.
+ 
+Air may be heated by contact with the earth's warm surface.
+It expands, becomes lighter, and rises (convection).
+Expansion lowers its temperature.
+As it rises, it cools -- at a rate of about 5.5 degrees Fahrenheit for each 1000 feet of rise.
+This "adiabatic cooling" occurs whenever air rises.
+Most clouds form because of adiabatic cooling.
+ 
+Air moving up a slope loses heat adiabatically as it rises.
+If it rises enough to cool below its saturation point, clouds will form.
+ 
+Warm air often pushes over a mass of cold air.
+Clouds may form as it cools adiabatically because of its rise.
+ 
+Sometimes rain or snow from high clouds may fall through warm air, cool it, and cause lower clouds to form.
+These lower clouds will generally be in layers -- often in several layers.
+ 
+;----
+>gbw-05-n
+ 
+Air consists mainly of gases that will not directly sustain life.
+Oxygen, which all living things need, makes up slightly less than 21 per cent of the air.
+Inert nitrogen makes up 78 per cent.
+The remainder of the gases, all totalling less than one per cent, are carbon dioxide, argon, neon, radon, helium, krypton, xenon, hydrogen, methane, nitrous oxide, and ozone (a form of oxygen).
+Besides these, air contains up to 4 per cent water vapor, also dust and gases such as smoke, salt, other chemicals from sea spray or industry, carbon monoxide, and micro-organisms.
+ 
+If the air were perfectly quiet, the heavier particles and gases would settle close to the earth and the lightest would be found the farthest out from the earth's surface.
+But the constant motion of the air near the surface mixes the gases so that the same proportions exist from the earth's surface up to about 45 miles.  
+Farther out are found chiefly the lighter gases.  
+Probably only the lightest gases, helium and hydrogen, are found at heights above 500 miles.
+In intermediate levels are found high concentrations of ozone and ionized nitrogen, together with smaller quantities of other ionized gases.
+ 
+;----
+>gbw-06-n
+ 
+The atmosphere consists of five layers.
+First and most important is the troposphere, which lies closest to the earth.
+Next above is the stratosphere.
+Where the troposphere ends and the stratosphere begins is a boundary called the tropopause, which averages 5 miles above the earth near the poles, and 11 miles above at the equator.
+The stratosphere goes up to about 30 miles.
+Above this is the mesosphere, extending to about 50 miles.
+The atmosphere above contains layers of ionized particles that reflect long radio waves back to earth.
+At about 500 miles the exosphere starts; little is known about this layer.
+ 
+ 
+;----
+>gbw-07-n
+ 
+Condensation complicates adiabatic cooling and warming.
+Condensation makes the temperatures on the windward side of mountain ranges lower than those on the leeward side.
+Mainly because of condensation, there are relatively cool valleys west of the Sierra Nevadas and hot deserts to the east.
+ 
+Considerable heat is needed to change liquid water to water vapor.
+Heat increases the speed of water molecules, so that many more escape as water vapor.
+Changing a pan of water at the boiling point to vapor requires six times the heat needed to raise the same amount of water from freezing to boiling.
+When water vapor condenses back into liquid water, the same large amount of heat is given off.
+This heat can increase the temperature of the air considerably.
+When air is rising, two opposing influences operate as its moisture condenses: adiabatic cooling tends to lower its temperature; and heat of condensation tends to raise it.
+The net effect is an average cooling of 3.2 degrees Fahrenheit per 1000 feet of rise when condensation occurs.
+ 
+Take an example: Air at 60 degrees Fahrenheit moves up the west side of a mountain.
+It cools adiabatically 5.5 degrees Fahrenheit for each 1000 feet of rise up to the clouds at 4000 feet.  As condensation begins, heat is released, and the adiabatic cooling is thus partly offset.  From 4000 feet to the mountain top, at 10000 feet, the net cooling is only 3.2 degrees Fahrenheit per 1000 feet.  Thus the total cooling of the wind as it sweeps up the mountain is: 
+4 * 5.5, or 22 degrees Fahrenheit from the valley floor to cloud base 
+plus 6 * 3.2, or 19.2 degrees Fahrenheit from cloud base to mountain top
+Total 41.2 degrees Fahrenheit from valley to mountain top.
+The air that began at 60 degrees Fahrenheit tops the mountain at 18.8 degrees Fahrenheit.
+ 
+As the air pours down the eastern slope, it compresses and warms, adiabatically, at the rate of 5.5 degrees Fahrenheit per 1000 feet.  Because of the warming, no further condensation occurs.  Total warming of the air from mountain top to valley, 10000 feet below, is 10 * 5.5. degrees Fahrenheit, or 55 degrees Fahrenheit.  Adding this to the mountain top temperature of 18.8 degrees Fahrenheit gives 73.8 degrees Fahrenheit as the temperature of the eastern valley.  The temperature at the eastern foot of the mountain is 13.8 degrees Fahrenheit higher than at the western foot.  Condensation and precipitation on the western slope made the difference.
+ 
+Chinook winds are an example of this down-slope warming of air.  They occur on the eastern slope of the Rockies, often with dramatic effect.  One Chinook brought the temperature up from -6 degrees Fahrenheit to 37 degrees Fahrenheit in 15 minutes.

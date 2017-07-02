@@ -1,0 +1,47 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Good-Revenge-Two
+                      (TheList
+                       (SourceTextChapterParagraphFn Good-Revenge-Two 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Good-Revenge-Two 1 1)
+"Benjamin was a person.
+Robert was a person.
+Alexandra was a person.
+Benjamin was Robert's friend.
+Alexandra insulted Robert.
+The insulting hurt Robert.
+The insulting was morally wrong.
+Because Alexandra insulted Robert, Benjamin insulted Alexandra.
+The insulting was morally right.")
+
+
+;;; don't get full parses on "Ben insulting Alex", for example
+;;; gotta make sure pnames can be the subjects of sentences
+;;; "friends" still doesn't work
+;;; lots missing in this one
+
+;;;Discourse-3645284436-63522
+;;;Universe: insult63689 hurt63786 be63939 be64296 
+;;;
+;;;(drsForDiscourse Discourse-3645284436-63522)
+;;;
+;;;(isa benjamin63525 Person)
+;;;
+;;;(isa robert63561 Person)
+;;;
+;;;(isa alexandra63597 Person)
+;;;
+;;;(possessiveRelation robert63646 benjamin63633)
+;;;
+;;;(isa insult63689 InsultingSomeone)
+;;;
+;;;(isa hurt63786 HarmingAnAgent)
+;;;
+;;;(maleficiary hurt63786 robert63852)
+;;;
+;;;(doneBy hurt63786 insult63689)
+;;;
+;;;(causes-EventEvent insult63689 insult63689)
+

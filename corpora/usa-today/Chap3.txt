@@ -1,0 +1,366 @@
+Hot and cold air masses are only the beginning of weather. To create the constant 
+panorama of changing skies, winds and temperatures, something has to set those air 
+masses in motion. That something is air pressure - the force air exerts on everything it 
+touches.
+Air pressure is important for three reasons. It creates the wind - from the great seas 
+of wind that blow hundreds of miles across the Earth to the lightest local sea breezes. Up 
+and down movement of air in low- and high-pressure areas creates cloudy or clear skies. 
+Finally, changes in air pressure give vital clues about what the weather will do over the 
+next several hours.
+Since the air's pressure at any one place rarely stays the same for long, the winds and 
+weather are constantly changing.
+
+What makes air pressure?
+Even though we can't see it, air is real and has weight. It's made up mostly of 
+molecules of nitrogen and oxygen. In the lower part of the atmosphere, air is about 78 
+percent nitrogen and 21 percent oxygen with other gases accounting for the other one 
+percent. Here we will use the term air molecules to refer to all molecules of all the gases 
+in air. As in any gas, air molecules are zipping around at incredible speeds. Near the 
+Earth's surface, they're traveling an average of about 1,600 feet per second or 1,090 mph. 
+Warm up the air and the average speed increases: cool it off, and it slows down. Air 
+molecules are bumping into and bouncing off each other - and anything else that gets in 
+their way.
+The impacts of those billions of bouncing molecules cause pressure. Imagine a 
+bathroom scale attached to a wall. Now start throwing baseballs at the scale. The weight 
+indicator jumps every time a bad hits it. It's showing the force of the ball colliding with 
+the scale. If enough people lobbed enough baseballs at the scale, the indicator wouldn't 
+have time to move down between hits. The balls would apply such constant pressure the 
+indicator's tiny movements wouldn't be noticeable. What the indicator reports - the 
+amount of force the balls are applying - would depend on how fast the baseballs are going 
+and how frequently they are hitting the scale.
+Right now, air molecules are bouncing off you from every direction. You don't feel 
+each tiny impact because the air has so many extremely tiny molecules moving so 
+quickly. Near the ground, a box one inch on each side would hold around 400 sextillion 
+air molecules. That's 400 followed by 21 zeros.
+
+Some rules of air pressure
+Air pressure depends on the number of air molecules in a given space and how fast 
+they're moving. Heating air - or any other gas - increases its pressure unless you give it 
+more room. Cooling air will decrease its pressure, if it's kept in the same amount of 
+space. Squeezing air into less space increases its pressure. Allowing air to expand into a 
+larger space decreases pressure. Also, if you heated air and squeezed it into a smaller 
+space at the same time, its pressure would zoom. The science behind all this is shown in 
+the simple experiment below.
+
+Air and gravity
+Every molecule of air, even those 200 miles above the Earth where the atmosphere 
+trails away to outer space, is being pulled downward by the force of gravity. So why 
+aren't all of the air molecules pulled down into a huge clump of nitrogen and oxygen here 
+at the surface? Air pressure is the answer.
+Air molecules are zipping around creating pressure that pushes in all directions, 
+including upward. That is how air pressure offsets gravity.
+But gravity does have an effect. Pressure is greater at lower levels because the air's 
+molecules are squeezed under the weight of the air above. At sea level, the average 
+pressure is 14.7 pounds per square inch. Go up to 1,000 feet and it drops to about 14.1 
+pounds per square inch. At about 18,000 feet, the pressure is 7.3 pounds per square inch; 
+about half of the atmosphere's air molecules are below you; half above.
+
+Air pressure aches
+Since human beings evolved in an environment where the air pressure doesn't change 
+rapidly, our bodies have trouble handling rapid decreases or increases in air pressure. 
+That's why airplanes or even fast elevators can make us uncomfortable.
+These quick changes in air pressure can cause several uncomfortable consequences:
+Why do your ears pop as you go up or down in an airplane or a fast elevator? Air 
+pressure inside and outside the middle ear normally is equal. But, as a person goes up, the 
+outside pressure decreases, leaving the pressure inside the middle ear higher. The air 
+inside the ear usually moves through the Eustachian tube to the throat, equalizing the 
+pressure. However, if a person has a cold, the Eustachian tube might be blocked, making 
+it harder for the air to leave the middle ear and causing a sense of fullness or pain.
+Ear discomfort isn't the only symptom of pressure imbalance:
+Sinuses arc cavities in the bones in the front of the skull. If their openings are 
+stopped up, say by swelling caused by an allergy, pressure changes can cause pain as the 
+higher pressure inside the sinuses presses against nerves. 
+Gases in the stomach, for example from a carbonated drink, need to escape to lower 
+pressure outside the body as you gain altitude.
+Dental problems, such as a tooth abscess, can create tiny air pockets. When the air 
+inside an abscess can't escape and presses against a tooth's nerve, the pain can be 
+excruciating.
+But there are far more serious side effects of a decrease in air pressure. If airplanes 
+were not pressurized, as an airplane climbed, the decreasing air pressure would mean a 
+decrease in oxygen.
+Oxygen is vital to all the body, but oxygen depletion affects brain cells first with the 
+most dangerous consequences, such as the loss of the ability to think clearly. Early 
+symptoms of oxygen starvation - called hypoxia - vary from person to person. But 
+eventually a victim becomes unconscious.
+Most people who fly never have to worry about hypoxia because airliners are 
+pressurized: the air pressure is kept at near-ground levels no matter how high the plane 
+flies. For instance, the pressure in the cabin of an airliner flying around 35.000 feet is 
+kept at the normal air pressure for 5,000 to 6,000 feet. But emergency oxygen masks 
+must be available. And, the crews of non-pressurized aircraft must use oxygen masks 
+whenever they are above 14,000 feet.
+As an airliner climbs away from the airport, the air pressure inside is gradually 
+lowered. While the plane might be climbing 2,000 feet each minute, the pressure changes 
+as if in a 500 feet-per-minute climb, a more tolerable pressure for humans. When the 
+plane descends, the pressure normally changes at the rate of about 300 feet each minute, 
+even though the actual descent is faster.
+
+Mapping highs and lows
+Stopped-up eats or aching sinuses tell people about air-pressure changes caused by going 
+higher or lower in the atmosphere. Most people's bodies don't tell them about the 
+important air-pressure changes associated with weather. Pressure changes too slowly 
+from one place to another on the Earth's surface for most people to feel. These 
+differences, however, are the ones that cause the winds. They're marked on weather maps 
+by Hs and Ls.
+
+The letters denote areas of high and low air pressure. An H marks the center of an 
+area with higher pressure than its surroundings. An L marks the center of an area with 
+lower air pressure than surrounding areas. High and low pressure are always relative. 
+There's no particular pressure number that divides high and low.
+In general, low air pressure at the Earth's surface means clouds and precipitation 
+while high pressure usually brings clear skies.
+
+Measuring air pressure
+One of the results of the flowering of scientific knowledge that came with the end of 
+the Middle Ages was the invention of the mercury barometer in 1643 by Evangelista 
+Torricelli, one of Galileo's assistants. Mercury barometers used today to make air 
+pressure readings are little changed from Torricelli's original.
+A mercury barometer (left) is a simple instrument. A tube that's closed at one end is 
+filled with mercury and put, open end down, into a container of mercury. A ruler is 
+attached next to the tube. Air pressure on the mercury in the container keeps the mercury 
+in the tube from flowing out. The greater the air pressure, the higher the mercury will rise 
+in the tube. The air's pressure pushes down harder on the mercury in the dish, forcing 
+more of it up into the tube. Because there is an inch-ruler next to the mercury tube, 
+meteorologists measure air pressure in inches of mercury -instead of pounds per square 
+inch. Very high pressure at the surface can push the mercury up approximately 32 inches 
+into the tube.
+Since a 32-inch tube of mercury is bulky and often inconvenient, aneroid barometers 
+are more common than mercury barometers. An aneroid barometer is a flexible metal 
+bellows that's been tightly sealed after having some air removed. It might remind you of a 
+tiny accordion. Increased outside air pressure squeezes the flexible metal; decreased 
+pressure allows it to expand. It can be attached to a pointer or a moving pen to keep a 
+pressure record as shown at left.
+
+Millibars and kilopascals
+In this chapter, pressure usually will be discussed in pounds per square inch. The sea 
+level pressure of 14.7 pounds per square inch, for example, means 14.7 pounds of force is 
+pushing against each square inch of any surface exposed to the air. Pressure pushes 
+equally in all directions, up, down and sideways.
+Meteorologists, however, usually use other measurements. In the United States, 
+inches of mercury is the most common measurement used for pressure at the Earth's 
+surface. This comes from the mercury barometer. Most of the rest of the world uses a 
+metric measurement called the millibar. It is a direct pressure measurement like pounds 
+per square inch. In some places these measurements are given in kilopascals, which are 
+millibars divided by 10. In the United States upper-atmosphere pressures are always 
+measured in millibars and weather reports meant for scientists use millibars for surface 
+pressure.
+
+Pressure and altitude
+Because air pressure decreases as altitude increases, airplane pilots can determine 
+their plane's altitude with a special kind of aneroid barometer called an altimeter. 
+Altimeters are more precise than many aneroid barometers and can be adjusted to account 
+for weather changes. A change in air pressure of one-tenth of an inch of mercury will 
+make an altimeter read 100 feet higher or lower.
+Climbing 2,000 feet up a mountain or in an airplane can create a difference in air 
+pressure of about two inches of mercury. On the ground, to get that land of pressure 
+change you would have to go from the center of a strong high-pressure system to the 
+center of a strong low-pressure system. You would be in the middle of quite a storm.
+
+The balance between gravity's pull and pressure keeps vertical air pressure changes 
+from causing winds to blow up or down. But, relatively tiny pressure differences between 
+places at the same altitude can cause roaring winds.
+A pressure change at 1.7 inches of mercury might not sound like much. In fact that's 
+the change that occurs on an elevator ride up the 1,707 feet to the top at the Sears Tower 
+in Chicago. But, if you traveled across the ocean for about 150 miles and came through 
+that same pressure change, you'd be in a hurricane. In fact, the normal air pressure at the 
+top of the Sears Tower is what you would find a few feet above the ocean in the center of 
+a hurricane with winds above 110 mph.
+
+Starting the winds moving
+Winds are the result of the action of various forces, all of which are acting at the 
+same time. In order to understand the winds, we have to look at these forces one at a 
+time. We have to pretend that the wind begins with one force, then another and so on. 
+Just remember, all the forces we talk about are acting together.
+
+The drawings below show how differences in air pressure create one of the forces 
+that causes the winds. The top drawing shows two containers of air connected by a pipe. 
+This is a push-of-war instead of a tug-of-war. Even though the air in both containers is 
+applying a force, the air in the pipe will move in the direction the stronger one is pushing. 
+The greater the difference in strength between the two containers, the faster the air will 
+go.
+
+Winds are stronger if the high- and low-pressure areas are close together. If the tube 
+between the two air containers were longer, as shown in the bottom drawing, the added 
+air in the tube would mean the pressure would have more weight to push. Keeping the 
+same force, but adding more distance - therefore, more weight - means the air wouldn't be 
+pushed as fast.
+
+Wind makers
+Three important forces work together to determine how strong the winds will be and 
+where they will blow.
+Pressure Gradient Force: This goes back to our push-of-war. To forecast winds, 
+meteorologists note the size of the pressure difference and the distance between the high- 
+and low-pressure areas. This combination is called the Pressure Gradient Force (PGF).
+Friction: As wind blows near the surface of the Earth, it rubs against trees, hills, 
+buildings and other objects that slow it down. That is the force of friction. There is far 
+less friction over water than over land.
+Coriolis Effect: Pressure Gradient Force and friction would explain everything about 
+winds if the Earth were not rotating. The wind could blow straight from high pressure to 
+low pressure and die down when the pressures equalize. But the Earth is spinning, which 
+is why winds curve as they blow.
+
+Things that move freely across the Earth – rockets, ocean currents, the wind - that 
+might follow a straight path if the Earth wasn't rotating end up following a curved path. 
+The Earth is rotating under them.
+In the Northern Hemisphere the wind, ocean currents or rockets act as though they're 
+being pushed to their right. In the Southern Hemisphere the push is to the left. This 
+curving motion is called the Coriolis Effect named after Gustave-Gaspard Coriolis, a 
+French scientist who first described it mathematically in 1835. An important point: The 
+Coriolis Effect depends on speed. The faster a rocket or the wind is moving, the stronger 
+the Coriolis Effect.
+
+Vertical movement of air
+Imagine putting in a wood screw. Turn the screwdriver clockwise and the screw goes 
+down. Turn counterclockwise, the screw comes up. This will help you remember that in 
+the Northern Hemisphere, air goes clockwise and down around high pressure. Air goes 
+counterclockwise and up around low pressure.
+
+Sinking air in a high-pressure area is warmed by the increase in pressure. As it warms, 
+any water in the air evaporates into vapor. Even more important, the warming keeps 
+water vapor from condensing into clouds and precipitation. That makes for generally 
+good weather. 
+
+Rising air in low-pressure areas becomes cooler. It condenses water vapor into 
+clouds and precipitation - wet weather. Eventually air rising in low-pressure areas comes 
+down in high-pressure areas at the surface.
+
+Jet stream winds
+How gases react to temperature and pressure, how high pressure pushes air, and the 
+three forces on wind are the building blocks of jet streams, a major influence on our 
+weather.
+Jet streams are relatively narrow bands of high-speed winds in the upper atmosphere. 
+Their general direction is west to east   hut they can swoop northward and southward. 
+They develop when strong temperature differences cause great pressure differences at 
+high altitudes. In general, the twists and turns of jet streams follow the boundaries 
+between warm and cold air.
+In winter, because temperature contrasts are greater, jet streams tend to blow faster. 
+In the Northern Hemisphere they move south as polar air pushes south, shoving the 
+warm-cold boundary southward. Polar jet streams cross Canada during the summer and 
+slip southward over the United States in the winter. They move back and forth with the 
+advance and retreat of cold air. Subtropical jet streams often flow over the southern 
+United States in the winter.
+Jet streams blow from west to east in both the Northern and Southern Hemispheres. 
+The drawings on Pages 36 and 37 show how in the Northern Hemisphere cold, high-
+altitude temperatures in the north and warm, high-altitude temperatures in the south 
+create pressure differences that push air around 30,000 feet above the ground from south 
+to north - toward the North Pole. Coriolis Effect turns the resulting wind to its right, 
+creating west-to-east jet streams.
+In the Southern Hemisphere, the high-altitude temperature differences are similar, 
+but the cold is in the south, the warm in the north. The resulting pressure differences push 
+wind southward, toward the South Pole. But, in the Southern Hemisphere, Coriolis Effect 
+turns the wind to its left. Since the wind is heading south, a left turn means it ends up 
+blowing from west to east.
+
+Jet streams and jets
+Jet streams are extremely important to pilots of high-flying airplanes - and to 
+airlines. In fact, the right jet stream winds are money in the bank for an airline. Even on 
+the relatively short Chicago to New York flight, catching a 150 mph, eastbound jet 
+stream can save 400 to 500 gallons of fuel for a Boeing 727. It works the other way, too. 
+A westbound airliner from Europe to Chicago fighting a strong eastbound jet stream 
+might have to land early to take on more fuel.
+Jet streams account for many of the bumps you feel in a high-flying airliner. As an 
+airplane flies through any area where the wind's speed or direction changes rapidly, the 
+ride will be bumpy because of wind shear. In recent years the term wind shear has come 
+to be associated with a particular kind of wind near the ground called a downburst, which 
+has caused several airline accidents. But wind shear is any sudden change in wind speed 
+or direction. It can happen near the ground or at 35,000 feet. It can be vertical or 
+horizontal. The bigger the change in speed or direction, the greater the turbulence. The 
+International Civil Aviation Organization defines a wind-speed change of mote than 10 
+mph in a 100-foot distance as strong wind shear. A change of more than 14 mph in 100 
+feet is severe wind shear.
+
+Temperate zones
+The parts of the Earth from roughly 30 degrees to 50 degrees latitude in both 
+hemispheres are known as the temperate zones. Most of the United States except northern 
+Alaska and Hawaii is in this zone. While the average temperatures in these regions are 
+temperate compared with constant polar cold or tropical heat, anyone who lives in the 
+mainland United States knows the weather can be anything but temperate.
+War zones might be a better term. These middle latitudes are where polar cold and 
+tropical heat battle, creating storms. Storms, which are low-pressure areas, move across 
+the land and sea, followed by, high-pressure areas. As the lows and highs pass, winds 
+from these clashes can swing from all directions. But the ever-present strong jet streams 
+often guide these storms. That is why most storms generally follow a path from west to 
+east.
+In the Northern Hemisphere winds encounter plenty of resistance. They run into the 
+Rockies and other large western mountains and the smaller Appalachians in the eastern 
+United States. The large mountain ranges of Europe and Asia also slow the winds. But in 
+the Southern Hemisphere only the tip of South America extends far south of 40 degrees 
+south latitude. Winds blow mostly over open ocean. This allows the winds to build up to 
+higher speeds and kick up huge waves that can circle the globe without hitting land. 
+Because of these winds, sailors started calling the region the roaring 40s.
+
+Global wind patterns
+Trade winds blow generally from northeast to southwest in the Northern 
+Hemisphere. For hundreds of years, sailing ship captains - among them Christopher 
+Columbus - sailed far enough south to catch the steady, easterly trade winds that pushed 
+them westward to the Caribbean. To return to Europe, they sailed northward close to the 
+North American coast until they found the westerly winds that predominate in the 
+temperate latitudes.
+
+The Intertropical Convergence Zone, where the trade winds come together - 
+converge - shows up on satellite photos as a band of white clouds near the equator. 
+Sailors know this zone as the doldrums. Here the winds blow lightly or not at all. As the 
+trade winds approach this area, they die out as air warmed by the tropical oceans begins 
+rising.
+During the Northern Hemisphere summer, as shown on Page 41, the Intertropical 
+Convergence Zone creeps northward especially over Asia. The zone moves more directly 
+under the sun where it's hotter. In the fall it moves southward to the equator, or, in some 
+places, even south of the equator.
+
+Air rising from the Intertropical Convergence Zone's thunderstorms flows northward 
+or southward in the upper atmosphere and sinks when it gets about as far north as Florida 
+or as far south as Australia. Then it forms huge high-pressure areas at the surface with 
+light winds. On land these high-pressure areas help create the Earth's large deserts, such 
+as in the southwestern United States and across northern Africa and Saudi Arabia. At sea, 
+these high-pressure areas, where air is slowly descending, create calm or light, variable 
+winds and mostly clear skies.
+
+Polar winds: Around the poles, the winds are variable, but blow from the east on 
+average. As cold air piles up, it creates strong high pressure at the surface.
+
+As cold air flows away from the North and South Poles, it warms slightly, as it reaches 
+about 60 degrees latitude, where the ocean is a little warmer. Warming causes the air to 
+rise, which creates low-pressure areas. Meteorologists call these semi-permanent lows, 
+since they are in the same places most of the time, but not always. Air flowing away from 
+both the North and South Poles into these low-pressure areas causes easterly winds 
+around the polar regions in both hemispheres.
+
+The clear skies of the high-pressure areas and cloudy skies of the lows are important 
+global weather makers. The pattern of winds around the semi-permanent areas of high 
+and low pressure also makes west winds dominate at the surface in the temperate zones. 
+The flow of the wind around these big highs and lows is a weather predictor.
+The drawings on the next page show how these semi-permanent pressure areas and 
+the winds around them change from January to July.
+As you look at the drawings you'll see that low-pressure areas over the oceans near 
+the poles grow in the winter, shrink in the summer. The high-pressure areas over tropical 
+oceans, in contrast, grow in summer and shrink in winter.
+Low-pressure areas in a particular latitude form over the warmer parts of the globe. 
+In winter, oceans near the poles are warmer than the land. Air over the warm water is 
+warmed more than air over land and begins rising, creating low pressure - and stormy 
+weather Areas such as the Aleutian Low spawn winter storms. In summer, as the land 
+warms up, the contrast between land and ocean temperatures decreases and the low-
+pressure areas weaken. 
+High-pressure areas in a particular latitude form where the surface is cooler. In the 
+summer, the contrast between the hot, tropical land and the cooler oceans is greater than 
+in winter. This is why the high-pressure areas over tropical oceans grow in the summer.
+
+
+Local winds
+While global-scale winds, such as the trades, determine the weather over large areas, 
+smaller winds create local weather.
+
+Sea breezes: One of the most common local winds is a sea breeze along the ocean or 
+near large lakes. During the day the land heats up more than the water. Warm air rises 
+over the land and cooler air flows in from the water to replace it. If the water is warm 
+enough, such as off the coast of Florida, a land breeze can begin at night as the land 
+cools.
+
+Mountain winds: Mountains also create their own winds. During the day the sun can 
+heat mountain slopes, especially bare rock. The warmed air above rises and more air 
+flows upward from valleys to replace it. This creates a wind blowing up the mountain 
+during the afternoon. As the mountain slopes cool at night, cold air, which is heavier than 
+warm air, begins flowing down into the valleys.
+
+Winds, whether they're the jet streams racing overhead, the gales in the roaring 40s or the 
+first warm breezes of spring, move masses of air around the Earth. The clash of these 
+moving air masses creates the storms that dominate our ever-changing weather.
+

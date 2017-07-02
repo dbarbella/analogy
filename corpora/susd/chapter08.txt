@@ -1,0 +1,86 @@
+8. HOUSE HEAT LOSSES
+
+Houses lose their heat because it's hotter inside than outside.
+How exactly is the heat lost? Mostly it is lost in three ways: heat
+leaking by conduction through the walls and roof; heat leaking
+by radiation and convection through windows; and heat leaking
+by transport through cracks in windows and doors.
+
+Conduction losses through walls and roofs usually
+account for about half of the total heat loss in an uninsulated
+house. But if fiberglass batting or plastic foam is used to insulate 
+the walls and thick fiberglass batting insulates the roof, the
+conduction losses can easily be cut in half. The thicker the insulation
+is, the less heat is lost by conduction. A roof with three
+inches of fiberglass insulation will lose twice as much heat as a
+roof with six inches of insulation.
+
+The next most important heat loss is through windows.
+Even though ordinarily very little surface area of a house is made
+up of windows, heat losses through windows can amount to as
+much as the heat loss through an insulated wall. If a well-insulated
+wall of your house is one-tenth glass, as much heat can be
+lost by conduction through the wall as through windows-even
+though the wall has a ten times larger area.
+
+Window heat loss takes place by conduction, convection,
+and radiation. Heat is convected and radiated to the inside surface
+of the glass by the warm room. Even though we can see
+through glass, in terms of radiation heat flow it's as if the glass
+weren't transparent at all: the glass prevents radiation heat from
+flowing directly outside. Once the heat reaches the inner surface
+of the glass, it is conducted through the glass. Glass is a good
+conductor, so the heat flows easily through the glass to the
+glass's outer surface. Once there, the heat flows outdoors by
+means of convection and radiation. Since the wind is often
+blowing outdoors, heat leaves the window's outer surface very
+easily.
+
+The net effect of all these combined heat losses is that
+windows aren't very good insulators. Heat losses through windows
+can be cut down by using two layers of glass-as in
+doubled-glazed windows or storm windows. A double-glazed
+window has an air gap between the glass layers, so it's much
+harder for heat to flow through it. As with glass made of a single
+layer, it flows by convection and radiation to the window's inner
+surface. Then it flows by conduction through the first glass
+layer, by conduction and radiation through the air gap, by conduction
+through the outer glass layer, and finally by convection
+and radiation to the outdoors. Double-glazed windows lose
+about half as much heat as a single-layered window; most of
+this effect is due to the fact that the air gap acts as a good
+insulator.
+
+The third major heat loss from a house is by infiltration-
+warm air leaking out through cracks in the walls, doors,
+windows and being replaced by cold outdoors air. Infiltration
+can account for one-third of the heat loss of an uninsulated
+house and a half or more of an insulated one. Many houses are
+poorly built, and thus have quite a bit of air infiltration. On
+other hand, if a house were completely sealed it would feel
+stuffy. In any case, cutting down on infiltration is an easy
+matter. Infiltration heat losses can be reduced by 
+weather-stripping doors and caulking windows.
+
+To return to our water analogy. Recall that a house's heat
+losses are equivalent to the holes in the bottom of a bucket. If
+we insulate the house-reduce the conduction, window, and
+infiltration losses-it's like making the holes in the
+bucket smaller. Just as the furnace needs less heat to keep a 
+well-insulated house warm, so a faucet needs to add less water to a bucket
+with small holes to maintain a constant water level.
+
+On the average, the furnace adds exactly what heat leaks
+out of the house. If less heat leaks out, the furnace uses less
+and your heating bill is less. Similarly, on the average the faucet
+adds the same amount of water to the bucket as leaks out of it. If
+the holes in the bucket are smaller, less water leaks out through
+them and less water is needed from the faucet.
+
+Conserving heat in a house by better insulating is probably
+more important than solar heating the same house. A
+solar heating system that could save half of your heating bill
+might cost several times more than better insulation, which
+could also save half of your heating bill. If your house is already
+well insulated, then solar heating is probably worth the expense.
+

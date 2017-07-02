@@ -1,0 +1,119 @@
+18. USING STORED HEAT
+
+Solar heat has been collected and stored in order to be used. In a
+swimming-pool heater it's easy to use the stored heat. Instead
+of pumping the solar-heated water to a heat storage tank, the
+pool itself stores the sun's heat. But if we're trying to heat a
+house or water, we need some way to get the heat out of storage.
+By analogy, if we want to get the rainwater from the rainwater
+collector, one way would be to tap into the side of the
+storage tank. We can tap off some stored rainwater whether
+we're simultaneously collecting rainwater or whether the rain
+has stopped and we're only tapping off the stored rainwater.
+
+Similarly, a heat storage tank can be "tapped" to yield its
+stored heat. However, instead of actually removing the hot water
+from the storage tank, a heat exchanger is usually used to
+extract the heat-but not hot water. A heat exchanger consists
+of a coil of copper tubing which sits inside the heat storage
+tank; cool water is pumped into one end of the coil and hot water
+flows out the other end. The stored hot water heats the outer
+surface of the copper coil by natural convection; the heat flows
+easily through the copper by conduction. The water flowing
+through the coil is then heated by convection from the hot copper
+surfaces that the water flows past. This kind of heat exchanger
+is called a liquid-to-liquid heat exchanger, since heat is
+transferred from one liquid (the hot storage water) to another
+(the water pumped through the coil).
+
+Cool water can be pumped into the heat exchanger
+whether or not the solar energy system is also collecting heat. It
+is possible to withdraw heat from storage while simultaneously
+adding solar heat to storage. The only requirement for the heat
+exchanger is that the stored water must be hotter than the cool
+incoming water.
+
+Let's consider the case of heating water. Usually a solar
+heating system is used as a preheater for a conventional gas,
+oil, or electrical hot-water heater. Cold water from a well or
+water main flows through the heat exchanger before going to the
+conventional auxiliary unit, as it is sometimes called.
+
+The preheater arrangement has several advantages. First,
+the stored solar-heated water only has to be hotter than the
+water main temperature to extract stored heat. Usually, the
+water main temperature is about the same as the ground temperature,
+so even a little sunlight can heat the water from the main.
+Second, if the solar heater cannot get the water hot enough, the
+auxiliary hot-water heater can top it off. In the winter, for example,
+the water main temperature could be 50° F. The solar heater
+might only be able to heat it to 100° F. The auxiliary heater
+needs only to heat it another 30° for its temperature to reach the
+desired 130° F. Most of the heat was added by the solar heater,
+but some was added by the auxiliary heater. Since most people
+are accustomed to regulated hot water, having a conventional
+auxiliary unit in addition to the solar preheater is almost a
+necessity.
+
+Similarly, in house heating, a solar heating system can
+be used as a preheater for a conventional furnace. Let's suppose
+we're solar heating a house that is heated by forced air (forcing
+heated air through air ducts). We can extract solar heat from our
+storage tank with a liquid-to-air heat exchanger.
+
+Recall that we've already used a liquid-to-liquid heat
+exchanger to extract heat from our storage for hot-water
+heating. The two types of heat exchangers look distinctly different. 
+This is because it is so much easier to transfer heat to water
+than to air, and much more surface must be exposed to the air
+than to the water.
+
+In a liquid-to-air heat exchanger (a car radiator is one
+type), hot water pumped through many parallel tubes transfers
+heat to the air by way of hundreds of thin metal fins attached to
+the tubes. Heat flows easily into the metal tubes from the flowing
+hot water. Then it's conducted easily along the fins, insuring
+that lots of hot fin surface is exposed to the air blowing by.
+Because heat doesn't flow easily by convection from a surface
+into air, a lot of fin surface is needed and the air must blow fast
+over the fins.
+
+In heating a house with a solar preheater, a liquid-to-liquid
+heat exchanger draws heat from the solar heat storage and
+feeds it into a liquid-to-air heat exchanger. The latter transfers
+heat to the air flowing into a furnace-often an electric furnace.
+If the air is sufficiently hot, the furnace's coils never come on.
+But if the solar heat storage is too cool, the coil of the furnace
+will add additional heat to the air.
+
+Solar heat is also used as a preheater for a conventional
+heating system. Note that even though electricity is a very
+expensive fuel, it is used only a fraction of the time: the house is
+primarily solar heated, and electricity is used as a back-up.
+
+So far we've talked about preheater, or series arrangements
+of solar and auxiliary heating systems. Series, in electrical
+terms, means flowing first into one and then into the other;
+the auxiliary adds its heat only after the solar heat is added.
+Another arrangement is a parallel one where both the solar
+heating system and the auxiliary unit directly heat the house. An
+example of a parallel arrangement is a house that is simultaneously
+heated by electric baseboard heating and hot-water
+baseboard heating. Both systems add heat to the house, but the
+electric auxiliary system comes on only when the temperature of
+the solar storage is insufficient to heat the house.
+
+There are many other ways that solar energy can be
+coupled with an auxiliary unit for house and hot-water heating.
+The ones shown here are just a few of the possibilities.
+
+But why have an auxiliary unit at all? Without one you
+couldn't count on having your hot water or house heated after
+several days of cloudy weather. Then why not store a week's
+supply of heat? From an economic viewpoint, storing much
+more than a day or two's heat supply becomes expensive. A
+storage tank that holds a week's supply of heat costs much more
+than one that holds a day's supply. Although some solar energy
+heating systems have been, built to store heat for months at a
+time, the majority of residential systems store only a day's heat
+supply.

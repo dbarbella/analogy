@@ -1,0 +1,32 @@
+A man owns a mine.
+A gold mine contains poor ore.
+Mining gold requires digging much.
+Processing the ore requires expensive mining equipment.
+Acquiring the gold requires processing the ore.
+The gold is free, but acquiring the gold is expensive.
+Acquiring the gold benefits the man, if a monetary value of the gold rises.
+Acquiring the gold benefits the man, if a monetary value of the mining equipment falls.
+Acquiring the gold harms the man, if the monetary value of the gold falls.
+Acquiring the gold harms the man, if the monetary value of the mining equipment rises.
+A gold mine in Utah closes, if the monetary value of the gold falls.
+The gold mine opens, if the monetary value of the gold rises.
+Solar radiation is like the poor ore.
+Acquiring solar energy requires collecting the solar radiation.
+Using the solar energy requires transforming the solar energy into electricity.
+The solar collector collects the solar energy.
+Similarly, the mining equipment collects the gold.
+The solar collector is expensive.
+The solar collector is more expensive than the solar radiation.
+The solar heating system saves cash, if a monetary value of the electricity rises.
+The solar heating system wastes cash, if the monetary value of the electricity falls. 
+The gold mine in Utah closes, if the gold mine wastes cash.
+Similarly, if the monetary value of the electricity falls, a solar heating system in Florida closes.
+Because the monetary value of gold now rises, the gold mine in Utah makes cash.
+Similarly, the monetary value of the electricity now rises.
+Because the monetary value of the electricity rises, the solar heating system saves cash. 
+The solar collector collects sunlight.
+The solar collector is like the mining equipment.
+Mining the poor ore wastes cash, if the monetary value of the mining equipment falls.
+The mining equipment possesses longevity, if the mining equipment possesses simplicity. 
+Similarly, if the solar collector possesses simplicity, the solar collector possesses longevity. 
+Because the flat plate system possesses simplicity, the flat plate system saves cash.

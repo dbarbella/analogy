@@ -1,0 +1,60 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Good-Revenge-Three
+                      (TheList
+                       (SourceTextChapterParagraphFn Good-Revenge-Three 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Good-Revenge-Three 1 1)
+"Gerald was a person.
+Nancy was a person.
+Lewis was a person.
+Gerald was Nancy's son.
+Lewis was an adult.
+Gerald was a child.
+Lewis hurt Gerald.
+The hurt was morally wrong.
+Because Lewis hurt Gerald, Nancy hurt Lewis.
+The hurt was morally right.")
+
+;;; close
+;;; possessiveRElation issue with "son" same as "husband"
+;;; the hurting ends up being seen as being done by itself
+;;; i.e., (doneBy hurt123 hurt123)
+;;;
+;;;Discourse-3645284145-62370
+;;;Universe: hurt62742 be62767 be63262 
+;;;
+;;;(drsForDiscourse Discourse-3645284145-62370)
+;;;
+;;;(isa gerald62373 Person)
+;;;
+;;;(isa nancy62409 Person)
+;;;
+;;;(isa lewis62445 Person)
+;;;
+;;;(possessiveRelation nancy62494 gerald62481)
+;;;
+;;;(biologicalSons nancy62494 gerald62481)
+;;;
+;;;(isa lewis62534 AdultAnimal)
+;;;
+;;;(isa gerald62571 HumanChild)
+;;;
+;;;(isa hurt62742 HarmingAnAgent)
+;;;
+;;;(maleficiary hurt62742 gerald62758)
+;;;
+;;;(doneBy hurt62742 hurt62742)
+;;;
+;;;(doneBy hurt62742 nancy63054)
+;;;
+;;;(maleficiary hurt62742 lewis63132)
+;;;
+;;;(maleficiary hurt62742 gerald63024)
+;;;
+;;;(doneBy hurt62742 lewis62955)
+;;;
+;;;(causes-EventEvent hurt62742 hurt62742)
+;;;
+;;;(maleficiary hurt62742 lewis63253)

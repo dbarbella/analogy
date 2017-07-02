@@ -1,0 +1,293 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: ada-sources-original.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: March 16, 2015 14:24:33
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(listOfParasInChapter Ball-Sound-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Ball-Sound-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Ball-Sound-Original 1 1)
+ "A ball is thrown at a sidewalk.
+When the ball hits the sidewalk, the ball bounces back.
+The ball is thrown at a pillow.
+When the ball hits the pillow, the ball stops.
+A sound is like the ball.
+When the sound hits a hard surface, it bounces back.
+When the sound hits a soft surface, the sound stops.")
+
+
+(listOfParasInChapter Gold-Mine-Solar-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Gold-Mine-Solar-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Gold-Mine-Solar-Original 1 1)
+ "A man owns a mine.
+A gold mine contains poor ore.
+Mining gold requires digging much.
+Processing the ore requires expensive mining equipment.
+Acquiring the gold requires processing the ore.
+The gold is free, but acquiring the gold is expensive.
+Acquiring the gold benefits the man, if a monetary value of the gold rises.
+Acquiring the gold benefits the man, if a monetary value of the mining equipment falls.
+Acquiring the gold harms the man, if the monetary value of the gold falls.
+Acquiring the gold harms the man, if the monetary value of the mining equipment rises.
+A gold mine in Utah closes, if the monetary value of the gold falls.
+The gold mine opens, if the monetary value of the gold rises.
+Solar radiation is like the poor ore.
+Acquiring solar energy requires collecting the solar radiation.
+Using the solar energy requires transforming the solar energy into electricity.
+The solar collector collects the solar energy.
+Similarly, the mining equipment collects the gold.
+The solar collector is expensive.
+The solar collector is more expensive than the solar radiation.
+The solar heating system saves cash, if a monetary value of the electricity rises.
+The solar heating system wastes cash, if the monetary value of the electricity falls. 
+The gold mine in Utah closes, if the gold mine wastes cash.
+Similarly, if the monetary value of the electricity falls, a solar heating system in Florida closes.
+Because the monetary value of gold now rises, the gold mine in Utah makes cash.
+Similarly, the monetary value of the electricity now rises.
+Because the monetary value of the electricity rises, the solar heating system saves cash. 
+The solar collector collects sunlight.
+The solar collector is like the mining equipment.
+Mining the poor ore wastes cash, if the monetary value of the mining equipment falls.
+The mining equipment possesses longevity, if the mining equipment possesses simplicity. 
+Similarly, if the solar collector possesses simplicity, the solar collector possesses longevity. 
+Because the flat plate system possesses simplicity, the flat plate system saves cash.")
+
+
+(listOfParasInChapter Bucket-Brick-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Bucket-Brick-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Bucket-Brick-Original 1 1)
+ "A hot brick leaks heat to a cool room.
+The temperature difference between the brick's temperature and the room's temperature pushes the heat from the brick. 
+The heat escapes until the temperature difference disappears.
+The hot brick is like a bucket of the water.
+There is a hole in the bucket.
+The water exits the bucket through the hole.
+The water's depth exceeds the hole's height.
+The water flows from the bucket.
+The depth difference between the water's depth and the hole's height causes the exit.
+After the water leaves, the depth difference disappears. 
+When the depth difference disappears, the exit stops.
+The temperature difference is like the depth difference. ")
+
+
+
+(listOfParasInChapter Water-Storage-Heat-Storage-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Water-Storage-Heat-Storage-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Water-Storage-Heat-Storage-Original 1 1)
+ "The brick in the room stores heat.
+The bucket stores a volume of the water.
+Storing the heat is like storing the volume.
+The volume of the water that the bucket stores depends on the depth of the water.
+Similarly, the heat that the brick stores depends on the temperature of the brick.
+A solar heating system heats a house, if the heat is stored at a high temperature.
+The heat is useful, if a material's temperature is higher than the room's temperature.
+The value of the volume of the water in the bucket rises, if the volume of the water reaches above the valve.
+If the volume of the water falls below the valve, the value of the volume of the water falls.
+The heat that the brick stores depends on a quantity of the brick.
+If the brick's quantity increases, the brick stores much heat.
+If the bucket's size increases, the bucket stores much water.
+If the size of the bucket decreases, the bucket stores little water.")
+
+(listOfParasInChapter Water-Storage-Heat-Storage-Original-mini
+                      (TheList
+                       (SourceTextChapterParagraphFn Water-Storage-Heat-Storage-Original-mini 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Water-Storage-Heat-Storage-Original-mini 1 1)
+ "The brick in the room stores heat.
+The bucket stores a volume of the water.
+Storing the heat is like storing the volume.
+The volume of the water that the bucket stores depends on the depth of the water.")
+
+(listOfParasInChapter Phase-Change-Materials-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Phase-Change-Materials-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Phase-Change-Materials-Original 1 1)
+ "Wax is a phase change material.
+The wax is like a bucket of liquid with a bump.
+The bottom of the bucket is below the bump of the bucket.
+Adding the liquid to the bottom quickly increases the liquid's depth.
+Adding the liquid to the bump slowly increases the depth of the liquid.
+The bump stores the liquid.
+The wax stores the heat, when the wax melts.
+The wax stores the heat like the bump stores the liquid.
+If the bucket drains, the liquid is recovered.
+If the wax freezes, the heat is recovered.
+If the depth lies at the bump, removing the liquid slowly decreases the depth.
+Near the wax's melting point, removing the heat slowly changes the temperature of the wax.")
+
+
+(listOfParasInChapter Faucet-Furnace-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Faucet-Furnace-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Faucet-Furnace-Original 1 1)
+ "The temperature of a house is like the depth of the water in a bucket.
+Heat is like the water.
+A flow of the heat is like a flow of the water.
+The water flows into the bucket from a faucet.
+The bucket has a hole.
+The furnace of the house is like the faucet.
+The faucet pumps the water into the bucket.
+Similarly, the furnace pumps the heat into the house.
+The water exits the bucket through the hole in the bucket.
+Similarly, the heat exits the house through the wall of the house.
+The temperature of the house is like the depth of the water in a bucket.
+A distance between the temperature of the house and the outside's temperature pushes heat from the house. 
+A distance between the depth of the water and the bucket's bottom pushes water from the bucket. 
+The temperature of the outside is like the bottom of the bucket.
+A thermostat maintains the temperature of the house.
+A line on the bucket marks the depth of the target.
+If the depth of the water falls below the line, the faucet adds the water.
+Similarly, if the temperature of the house falls below the thermostat, the furnace adds the heat.")
+
+(listOfParasInChapter Faucet-Furnace-Original-mini
+                      (TheList
+                       (SourceTextChapterParagraphFn Faucet-Furnace-Original-mini 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Faucet-Furnace-Original-mini 1 1)
+ "The temperature of a house is like the depth of the water in a bucket.
+The water flows into the bucket from a faucet.
+The bucket has a hole.")
+
+
+(listOfParasInChapter Leak-Insulation-Original-Old
+                      (TheList
+                       (SourceTextChapterParagraphFn Leak-Insulation-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Leak-Insulation-Original-Old 1 1)
+ "Heat leaves a house through a wall.
+The wall is like a hole in a bucket.
+Insulation for the house is like a reduction of the size of the hole.
+A reduction of leakage results from the reduction of the size of the hole.
+It reduces the water added by the faucet.
+Similarly, the furnace infrequently adds the heat to the house with insulation.
+The water that the faucet adds balances the leakage.
+Similarly, the heat that the furnace adds balances the leave of the heat.")
+
+(listOfParasInChapter Leak-Insulation-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Leak-Insulation-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Leak-Insulation-Original 1 1)
+ "Remember: A house is like a bucket with holes in the bottom.
+The heat lost through the walls is like the water lost through the holes.
+Insulating a house is like reducing the size of the holes in the bucket.
+Reducing the size of the holes reduces the volume of lost water.
+Reducing the volume of lost water reduces the volume of water we have to add.
+The furnace is like the faucet.
+The faucet needs to pump less water if the volume of lost water is reduced.
+The furnace needs to pump less heat if the amount of lost heat is reduced.")
+
+
+
+
+(listOfParasInChapter Rain-Sunlight-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Rain-Sunlight-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Rain-Sunlight-Original 1 1)
+ "A bucket is in a rain storm.
+A solar collector is like the bucket.
+The bucket collects rain; the solar collector collects sunlight.
+Collecting the rainwater requires angling the bucket towards the rain.
+An open top of the bucket collects the rain. The top points towards the rain. 
+If the rain falls straight down, the top lies flat.
+If wind blows the rain, the top angles toward the rain. 
+Similarly, collecting the sunlight requires pointing the solar collector towards the sunlight.")
+
+(listOfParasInChapter Stagnation-Stagnation-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Stagnation-Stagnation-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Stagnation-Stagnation-Original 1 1)
+ "A solar panel is like a rain collection system.
+The solar panel collects solar radiation.
+The rain collection system catches rainwater with a tray.
+A pipe attaches to the tray.
+However, the pipe has a leak.
+The water leaks quickly, as the pipe fills.
+The spillage balances the intake, when the pipe fills.
+When the spillage balances the intake, the water stops rising.
+When the spillage balances the intake, the water reaches a stagnation depth.
+A stagnation temperature is like the stagnation depth.
+A solar cell attaches to the solar panel.
+When the heat's leakage balances the incoming solar radiation,
+the heat in the solar panel reaches a stagnation temperature.")
+
+
+(listOfParasInChapter Intensity-Rain-Sunlight-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Intensity-Rain-Sunlight-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Intensity-Rain-Sunlight-Original 1 1)
+ "A solar collector is like a rain collection system.
+A drizzle falls on the rain collection system's tray.
+Little solar radiation hits the solar collector.
+The little solar radiation is like the drizzle.
+Because the drizzle falls, the tray collects little water.
+Because the drizzle falls, the intake is reduced.
+If the water's depth falls, the spillage is reduced.
+If the depth of the water rises, the spillage is increased.
+If the intake is reduced, a low depth pushes the intake from the pipe.
+If the intake is reduced, the stagnation depth is reduced.
+If the intake is reduced, the low depth balances the intake.
+If the solar radiation is reduced, the stagnation temperature is reduced.")
+
+(listOfParasInChapter Atmosphere-Greenhouse-Original
+                      (TheList
+                       (SourceTextChapterParagraphFn Atmosphere-Greenhouse-Original 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Atmosphere-Greenhouse-Original 1 1)
+ "A greenhouse gas is a gas.
+The greenhouse effect occurs, when a greenhouse gas warms stuff. 
+The greenhouse gas's name comes from a greenhouse. 
+The greenhouse effect's name comes from a greenhouse. 
+The glass composes a greenhouse. 
+The greenhouse gas is like the glass.
+The greenhouse gas in the atmosphere admits sunlight.
+The glass of the greenhouse admits sunlight.
+The greenhouse gas traps heat.
+The glass traps heat. 
+Vegetation in the greenhouse grows despite the winter.
+The winter is cold outside the greenhouse. 
+Similarly, life thrives in the atmosphere despite the environment.
+The environment outside the atmosphere is harsh.")
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

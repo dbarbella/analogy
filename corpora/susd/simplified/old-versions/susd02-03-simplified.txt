@@ -1,0 +1,64 @@
+
+* Why does heat flow?
+Consider the flow of heat.
+
+* Heat flows from one place to another because the temperature of the two places is different.
+Heat flows from one place to another place, because the place's temperature differs from the other place's temperature. 
+
+* A hot brick loses heat to a cool room. 
+A hot brick leaks heat to a cool room.
+
+*The temperature difference-the brick's temperature minus the room's temperature-drives the heat from the brick. 
+The heat escapes until the temperature difference disappears.
+
+*Heat leaks from the brick until the temperature difference is gone. 
+The heat escapes until the temperature difference disappears.
+
+*No more heat flows from the brick when it becomes as cool as the room it is in.
+Heat stops flowing, when the brick's temperature equals the room's temperature. 
+
+*Similarly, a full can of water will leak volume from a hole in the side of the can. 
+Similarly, a can of water leaks volume from a hole in the side of the can. 
+
+* The depth of the water is higher than the depth of the hole, so the depth difference drives volume out through the hole.
+The water's depth exceeds the hole's height.
+This pushes volume through the hole.
+
+* Eventually, all the volume that can leak out does so.
+Eventually, the leak of volume stops. 
+
+* When this happens, the water depth has fallen so that it is the same as that of the hole.
+This happens, when the water's depth equals the hole's height.
+
+* There is no more depth difference, so no more volume flows out through the hole.
+Because the depth difference disappears, the leak of the volume stops.
+
+* Just as a difference in temperature causes heat to flow, so a difference in depth causes volume to flow.
+A temperature difference is like a depth difference.
+The temperature difference causes heat to flow.
+The depth difference causes volume to flow.
+
+* When there is no temperature difference, heat flow ceases; 
+When the temperature difference disappears, the flow of the heat stops.
+
+*when there is no depth difference, volume flow ceases.
+When the depth difference disappears, the flow of the volume stops.
+
+* The direction of volume flow is always downhill--from a higher depth to a lower one.
+Volume flows down.
+Volume flows from a high depth to a low depth.
+
+* If two cans having different depths are connected by a tube, volume will always flow toward the depth that is lower.
+A thin can and a wide can are connected by a tube.
+The depth of the can differs from the depth of the other can.
+Volume flows to the lower depth.
+
+* Note that the narrow can has much less volume than the wide one. 
+The thin can has less volume than the wide can.
+
+* Even so, volume flows toward the can with the lower depth.
+Despite this, volume flows toward the can with the low depth.
+
+* It's depth, not volume, that causes volume to flow.
+The depth causes the flow.
+The volume does not cause the flow.

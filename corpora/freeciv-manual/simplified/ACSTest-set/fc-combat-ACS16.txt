@@ -1,0 +1,53 @@
+An attack happens when one unit moves towards a tile containing another unit.  
+The 2 units involved must be from different civilizations.  
+An attack ends with 1 of the 2 units being destroyed.  
+Whichever unit survives remains in the location it had when the attack started.  
+The attacking unit must have a positive attack strength.  
+A defending unit with 0 defense strength dies immediately. 
+
+The amount of damage a unit can sustain is measured in hit points.  
+A unit dies when its hit points decrease to 0. 
+During an attack, units inflict damage on each other. 
+Damage inflicted by the attacker depends on its attack strength. 
+Damage inflicted by the defender depends on its defense strength. 
+
+Damaged units enter combat with fewer hit points. 
+Damaged units have fewer movement points per turn. 
+A unit can be repaired by spending turns neither moving or attacking. 
+On an open tile, repair restores 1 hit point per turn.  
+Repair restores 2 hit points per turn for fortified units.  Repair restores one third of their points if located in a city.
+
+When several units on the same square are attacked, the unit with the largest defense strength is the defender.
+If that defender loses, all units on the square are lost.  
+If there are multiple units in a city or in a fortress, only the defender is lost. 
+If a ship carrying other units is involved in combat, those units are destroyed if the ship is destroyed.
+
+Defeating a unit inside a city without walls kills one citizen, if the attacker is a land unit. 
+Once there are no defenders in a city, moving your unit inside the city makes it part of your civilization.  
+To do this, your unit must be a land unit or a helicopter. 
+Some buildings may be destroyed when a city is captures.  Capturing a city can also lead to discovering a new technology.
+
+The type of unit determines what it can attack. 
+Land units can only attack other land units. 
+Ships can attack other ships.  
+Ships are either surface ships or submarines. 
+Surface ships can attack land units adjacent to them.   
+Submarines cannot attack land units. 
+Helicopters can attack land and sea units. 
+Helicopters can be attacked by any kind of unit.
+Bombers can attack all land and sea units.  
+Missles can attack any land and sea units.  
+Land and sea units cannot attach bombers or missles. 
+Only fighters can attack every kind of unit. 
+An aircraft within a city or air base can be attacked by land units. 
+Ships in port can be attacked by land units. Marines on a ship can attack other units. 
+Other land units on a ship cannot attack anything until they disembark.
+
+Units can be ordered to sentry.  
+A sentry unit no longer asks for orders each turn. 
+Sentry units can be reactivated by selecting them.  
+Sentry units automatically activate when an enemy unit comes into view. 
+Land units can be ordered to fortify.  
+Forification costs 1 movement point.  
+Fortified units have the same advantage as land units within an unwalled city. 
+A unit that has exhausted its movement points on a turn cannot forify immediately.

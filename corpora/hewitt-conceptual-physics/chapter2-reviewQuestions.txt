@@ -1,0 +1,69 @@
+Aristotle on Motion
+
+1. Contrast Aristotle's ideas of natural motion and violent motion.
+
+2. What class of motion, natural or violent, did Aristotle attribute to motion of the Moon?
+
+3. What state of motion did Aristotle attribute to Earth?
+
+Copernicus and the Moving Earth
+
+4. What relationship between the Sun and Earth did Copernicus formulate?
+
+Galileo and the Leaning Tower
+
+5. What did Galileo discover in his legendary experiment on the Leaning Tower of Pisa?
+
+Galileo's Inclined Planes
+
+6. What did Galileo discover about moving bodies and force in his experiments with inclined planes?
+
+7. What does it mean to say that a moving object has inertia? Give an example.
+
+8. Is inertia the reason for moving objects maintaining motion or the name given to this property?
+
+Newton's First Law of Motion
+
+9. Cite Newton's first law of motion.
+ 
+Net Force
+
+10. What is the net force on a cart that is pulled to the right with 100 pounds and to the left with 30 pounds?
+
+11. Why do we say that force is a vector quantity?
+
+The Equilibrium Rule
+
+12. Can force be expressed in units of pounds and also in units of newtons?
+
+13. What is the net force on an object that is pulled with 80 newtons to the right and 80 newtons to the left?
+
+14. What is the net force on a bag pulled down by gravity with 18 newtons and pulled upward by a rope with 18 newtons?
+
+15. What does it mean to say something is in mechanical equilibrium?
+
+16. State the equilibrium rule in symbolic notation.
+
+Support Force
+
+17. Consider a book that weighs 15 N at rest on a flat table. How many newtons of support force does the table provide? What is the net force on the book in this case?
+
+18. When you stand at rest on a bathroom scale, how does your weight compare with the support force by the scale?
+
+Equilibrium of Moving Things
+
+19. A bowling ball at rest is in equilibrium. Is the ball in equilibrium when it moves at constant speed in a straight-line path?
+
+20. What is the test for whether or not a moving object is in equilibrium?
+
+21. If you push on a crate with a force of 100 N and it slides at constant velocity, how much is the friction acting on the crate?
+
+The Moving Earth
+
+22. What concept was missing in people's minds in the 16th century when they couldn't believe Earth was moving?
+
+23. A bird sitting in a tree is traveling at 30 km/s relative to the faraway Sun. When the bird drops to the ground below, does it still go 30 km/s, or does this speed become zero?
+
+24. Stand next to a wall that travels at 30 km/s relative to the Sun. With your feet on the ground, you also travel the same 30 km/s. Do you maintain this speed when your feet leave the ground? What concept supports your answer?
+
+25. What did Aristotle fail to recognize about the rules of nature for objects on Earth and in the heavens?

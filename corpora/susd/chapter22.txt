@@ -1,0 +1,94 @@
+22. PASSIVE SOLAR: THE CONTROL FUNCTION
+
+The control function in passive solar heating affects both when
+and where solar heat is delivered to the living space. When considers
+the timing aspects. Heat delivered when a house is cold is
+better than heat delivered when the house is already warm
+enough. Where considers distribution. Heat must be delivered
+to all rooms in a house, not just the ones that happen to have a
+southern exposure.
+
+One aspect of the control function is seasonal. For example,
+the movable-insulation methods (Drumwall, Skytherm, and
+Beadwall) can also be used to adjust the delivery of solar heat
+based on the season. Overheating can be reduced by varying the
+amount of time during the day that the insulation is in place. For
+example, a Skytherm house might have its heat store collecting
+solar heat all day in the winter, half a day in the spring, and not
+at all in the summer.
+
+Seasonal control of solar heat can also be achieved by
+using awnings and trees, shrubs, or other plants. Awnings and
+leafy plants shade a direct-gain house in summer when heat
+isn't needed but let solar heat in during the winter. Since the sun
+is high in the sky in the summer, an awning generally provides
+more shade in the summer than in the winter. Leafy trees don't
+have leaves in the colder months, when solar heat is needed.
+
+Daily control of solar heat is another aspect of the control
+function. One way you've already learned about to control heat
+on a daily basis is to use lots of storage. If storage is very large,
+the house never gets too hot during the day yet it can warm a
+house all night long. The Drumwall, Skytherm, and Beadwall
+systems use huge amounts of water storage to reduce the temperature
+swing and are still able to provide heat overnight.
+
+The masonry wall of the Trombé wall system achieves
+daily control in another way. The outer surface of the wall gets
+quite hot, but it is separated from the living space by the wall
+itself. As the wall heats up during the day, heat is conducted
+through the wall (in addition to the thermosyphon heating mentioned
+earlier). By nighttime, the wall has become quite warm
+and continues to conduct its stored heat to the living space. The
+heat delivered by the wall to the living space is delayed from the
+late afternoon (when it's not really needed) until nighttime
+(when it is needed). This delay in delivering heat depends on
+how thick the wall is-a foot-thick wall seems to be about the
+best. Once the heat gets to the inner wall surface it is transferred
+to the living space by radiation and convection heat flow.
+
+The control function may also be achieved on a daily and
+a seasonal basis by stopping the solar radiation from entering a
+direct-gain house. The Sun Window system, as it is called,
+replaces the glass south wall with a wall of clear plastic which
+has many passages molded into it. When the temperature inside
+the house gets too high, a dark-colored liquid is pumped
+through the passages. The passages are so close to each other
+that most of the sunlight that would enter the house is blocked.
+The effect is similar to lowering a window shade on the south
+wall-except that only the dark liquid moves anywhere.
+
+Since the liquid is dark, it absorbs solar radiation. Not
+only does it keep the sun from entering a too hot house, but the
+fluid itself gets hot. The hot dark liquid is pumped to a storage
+tank where it can be used to heat water or the house later at
+night. The Sun Window system combines the simplicity of
+direct-gain passive heating with the control function of active
+solar heating.
+
+Passive systems can also accomplish the control function 
+by separating the heat storage from the living space. The
+simplest approach to separating the two is to have a direct-gain
+greenhouse separated from the house itself. The greenhouse not
+only houses plants and stores heat but also acts as a buffer
+between the living space and the direct-gain system. In the late
+afternoon the direct-gain greenhouse might get quite warm, but
+that doesn't necessarily mean the living space will get too warm.
+A small fan can be used to draw in air from the greenhouse to
+warm the house when required, or vents can be opened to let the
+warm air flow into the living space when required.
+
+You may have noticed that some of the passive systems
+we've been discussing aren't strictly passive. The Sun Window
+method uses electricity to pump dark liquid through the plastic
+wall, and the greenhouse method can use electricity to blow
+heated air into the house. In fact, many passively heated houses
+use active methods when convenient. For example, passive
+solar houses often use fans to distribute heat from warm south-facing
+rooms to cooler north-facing rooms. As improved diode
+and control functions are added to the passive direct-gain
+house, the distinction between active and passive may become
+blurred. But after all, the purpose of any system is to provide
+solar heat as cheaply, reliably, and conveniently as possible,
+even if it means combining aspects of both active and passive
+solar heating.

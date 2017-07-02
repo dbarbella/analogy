@@ -1,0 +1,49 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Good-Revenge-Four
+                      (TheList
+                       (SourceTextChapterParagraphFn Good-Revenge-Four 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Good-Revenge-Four 1 1)
+"Alexandra was a person.
+Nora was a person.
+Jane was a person.
+Alexandra was Nora's friend.
+Nora was Jane's friend.
+Jane revealed Nora's secrets.
+The revealing was morally wrong.
+Because Jane revealed Nora's secrets, Alexandra revealed Jane's secrets.
+The revealing was morally right.")
+
+;;; friends doesn't work
+;;; "reveal" isn't quite right
+;;; "secret" missingSemTrans
+;;;Discourse-3645283871-60163
+;;;Universe: person60225 reveal60427 secret60495 secret60593 be60613 secret61010 secret60903 be61124 secret61112 
+;;;
+;;;(drsForDiscourse Discourse-3645283871-60163)
+;;;
+;;;(isa alexandra60166 Person)
+;;;
+;;;(isa person60225 Person)
+;;;
+;;;(isa jane60250 Person)
+;;;
+;;;(isa reveal60427 RevealingInformation)
+;;;
+;;;(missingSemTrans secret60495 noun Secret-TheWord)
+;;;
+;;;(missingSemTrans secret60593 noun Secret-TheWord)
+;;;
+;;;(missingSemTrans secret60903 noun Secret-TheWord)
+;;;
+;;;(missingSemTrans secret61010 noun Secret-TheWord)
+;;;
+;;;(causes-EventEvent reveal60427 reveal60427)
+;;;
+;;;(possessiveRelation jane60984 secret61010)
+;;;
+;;;(missingSemTrans secret61112 noun Secret-TheWord)
+;;;
+;;;(possessiveRelation jane61101 secret61112)

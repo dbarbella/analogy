@@ -1,0 +1,72 @@
+*A simple analogy to the heat and temperature of an object is the volume and depth of water in a cup.
+The heat of an object is like the volume of the water in a cup.
+The temperature of the object is like the depth of the water in the cup.
+
+*How deep the water is does not measure the cup's volume.
+The depth of the water does not measure the volume of the cup.
+
+
+*Although the volume and the depth are related-generally, the deeper the water in the cup is, the more volume of water there is in it-depth is a different measure from volume. 
+The volume affects the depth. 
+A larger depth means a larger volume. 
+Depth differs from volume. 
+
+
+*Also, the depth of the water can be measured with a ruler, but a measuring cup must be used to ascertain the volume. 
+You can use a ruler to measure the depth of the water.
+A measuring cup is required to measure the volume of the water.
+
+* According to our analogy, depth and temperature are easily measured, so they are like each other; volume and heat are measured only indirectly, so they are like each other too.
+The temperature is like the depth, because it is easy to measure.
+The heat is like the volume, because it is measured indirectly.
+
+*To see in more detail how depth is related to temperature, and volume to heat, let's consider a few simple cases.
+Considering cases elucidates the depth's relationship to the temperature.
+Considering cases elucidates the volume's relationship to the heat.
+
+
+*First, think of two different-sized cans that have the same depth of water in them.
+The size of a can differs from the size of another can. 
+The depth of water in the can equals the depth of water in the other can. 
+
+* Though the depth of water in both cans is the same, the bigger can holds more volume.
+Despite this, the bigger can holds more volume.
+
+* Similarly, if two pans of dirt are heated in an oven for several hours, both will have the same temperature.
+Similarly, if a pan of dirt and another pan of dirt are cooked, the pan's temperature equals the other pan's temperature. 
+
+
+* But even though the temperature of both pans is the same, the bigger pan holds more heat. 
+Despite this, the bigger pan holds more heat.
+
+*Just as the depth can be the same while the volume is different, so can the temperature be the same while the heat is different.
+The depth is identical, when the volume is different.
+Similarly, the temperature is identical, when the heat is different. 
+
+* Second, let's consider two objects in which the heat is the same yet the temperatures differ. 
+An object's heat equals another object's heat.
+The object's temperature differs from the other object's temperature.
+
+* Two warm bricks could contain the same amount of heat as one hot brick;
+The heat of two warm bricks could equal the heat of one hot brick.
+
+* though the hot brick naturally has a higher temperature than the warm ones.
+The temperature of the hot brick is greater than the temperature of the warm bricks.
+
+* In the same way, two cans can hold the same volume but have different depths.
+Similarly, two cans can have identical volumes and different depths. 
+
+* The analogy is helpful in another way.
+The analogy helps in another way. 
+
+* Both volume and heat flow-both can move from place to place.
+Volume flows.
+It can move.
+Similarly, heat flows. 
+It also moves.
+
+* When you pour water out of a pitcher into a glass, volume flows from the pitcher to the glass; 
+When water pours out of a pitcher into a glass, volume flows from the pitcher to the glass.
+
+* when you open a door on a cold day, heat flows from inside the house to the outdoors.
+When a door opens on a cold day, heat flows from the house to the outdoors. 

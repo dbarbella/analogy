@@ -1,0 +1,52 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Good-Revenge-One
+                      (TheList
+                       (SourceTextChapterParagraphFn Good-Revenge-One 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Good-Revenge-One 1 1)
+"James was a person.
+Pamela was a person.
+Gerald was a person.
+James was Pamela's husband. 
+Gerald hit James. 
+The hitting hurt James.
+The hitting was morally wrong.  
+Because Gerald hurt James, Pamela attacked Gerald.
+The attack was morally right.")
+
+;;; holy crap did it get this one right?
+;;; no: still the whole husband ownership thing
+;;;Discourse-3645283520-58629
+;;;Universe: hit59219 be59237 hurt59423 attack59524 be59647 attack59629 
+;;;
+;;;(drsForDiscourse Discourse-3645283520-58629)
+;;;
+;;;(isa james58632 Person)
+;;;
+;;;(isa pamela58668 Person)
+;;;
+;;;(isa gerald58704 Person)
+;;;
+;;;(possessiveRelation pamela58753 james58740)
+;;;
+;;;(wife james58740 pamela58753)
+;;;
+;;;(isa hit59219 HittingAnObject)
+;;;
+;;;(causes-EventEvent hurt59423 attack59524)
+;;;
+;;;(isa hurt59423 HarmingAnAgent)
+;;;
+;;;(isa attack59524 AttackOnObject)
+;;;
+;;;(performedBy attack59524 pamela59519)
+;;;
+;;;(doneBy hurt59423 gerald59420)
+;;;
+;;;(objectAttacked attack59524 gerald59561)
+;;;
+;;;(maleficiary hurt59423 james59489)
+;;;
+;;;(isa attack59629 AttackOnObject)

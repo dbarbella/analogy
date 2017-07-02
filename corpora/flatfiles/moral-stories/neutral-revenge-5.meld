@@ -1,0 +1,61 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Neutral-Revenge-Five
+                      (TheList
+                       (SourceTextChapterParagraphFn Neutral-Revenge-Five 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Neutral-Revenge-Five 1 1)
+"Henry was a person. 
+Jane was a person. 
+Henry was Jane's husband. 
+Henry took Jane's wallet.
+The taking was morally neutral. 
+Because Henry took Jane's wallet, Jane took Henry's wallet. 
+The taking was morally neutral.")
+
+;;; EAGeneralQueriesMt generates:
+;;; needs some work. The "takings" are overly linked; "Jane's Husband" turns to "Jane owns Henry"
+;;;Universe: take6337 wallet6373 wallet6521 wallet6455 take6601 be6621 
+;;;
+;;;(drsForDiscourse Discourse-3645278345-6192)
+;;;
+;;;(isa henry6195 Person)
+;;;
+;;;(isa jane6231 Person)
+;;;
+;;;(possessiveRelation jane6280 henry6267)
+;;;
+;;;(wife henry6267 jane6280)
+;;;
+;;;(possessiveRelation jane6358 wallet6373)
+;;;
+;;;(isa wallet6373 Wallet)
+;;;
+;;;(isa take6337 TakingSomething)
+;;;
+;;;(objectOfPossessionTransfer take6337 wallet6373)
+;;;
+;;;(toPossessor take6337 henry6334)
+;;;
+;;;(isa wallet6521 Wallet)
+;;;
+;;;(isa wallet6455 Wallet)
+;;;
+;;;(possessiveRelation henry6502 wallet6521)
+;;;
+;;;(possessiveRelation jane6440 wallet6455)
+;;;
+;;;(causes-EventEvent take6337 take6337)
+;;;
+;;;(toPossessor take6337 jane6472)
+;;;
+;;;(toPossessor take6337 henry6416)
+;;;
+;;;(objectOfPossessionTransfer take6337 wallet6455)
+;;;
+;;;(objectOfPossessionTransfer take6337 wallet6521)
+;;;
+;;;(isa take6601 TakingSomething)
+;;;
+;;;(isa take6601 MorallyNeutralEvent)

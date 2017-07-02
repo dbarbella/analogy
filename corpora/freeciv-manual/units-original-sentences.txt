@@ -1,0 +1,107 @@
+Units
+
+Units both offer mobility to your civilization and supply the violence with which it will survive and expand. The available units may be classified as military units, whose talents are those of defense and aggression, and a few noncombatants which support expansion (explorers, settlers, workers, and engineers), diplomacy (the diplomat and spy), and trade (caravans and freight). 
+The support of your units will be one of your major expenses. Each unit requires one production point per turn, and settlers — the units derived from citizens — also require one or two food points per turn depending on your form of government. Note that autocratic governments force cities to support several units for free, which can save production points for other uses. 
+Under representative governments, aggressive units standing outside your borders each cause one or two workers to become unhappy. This makes war quite expensive under representative government, since production points are required to support each unit and luxury points must be produced to mollify the citizenry. 
+
+Contents
+
+Movement
+
+Units begin every turn with one or more movement points, depending upon their natural mobility.  These are shown for each unit in the catalogue below.  Movement points are reduced, for damaged land and sea units, in proportion to the extent of their damage. Movement points not consumed by the end of the turn are lost and cannot be stored or transferred. Sea units gain extra movement points if their civilization possesses the Lighthouse, Magellan's expedition, or nuclear power. 
+Every action undertaken by a unit consumes movement points. This manual describes each action in the section where it is most relevant; see the index for the full list of actions. Actions require one movement point unless otherwise noted.
+
+The most basic action is movement. Units can move into any of the eight surrounding squares under fairly obvious constraints: land units are confined to land and transport vessels; ships are confined to ocean squares and port cities (which are thus the only cities that can build them); and aircraft ignore terrain, though they must often end their turn where they can refuel.  See the description of each unit for specific restrictions. Moving one square usually consumes one movement point, and units can always move one square regardless of their wounds. Rough terrain, however, can be more costly for land units as detailed in the terrain catalogue, and land units disembarking from ships lose all remaining movement points.
+
+Enemy units impose zones of control, such that military units, settlers, workers, and engineers cannot move between squares adjacent to enemy units without retreating into unthreatened territory first, unless the square they enter already holds a friendly city or unit, or the unit is one that ignores zones of control. Note also that land units can embark and disembark from transports whenever the transport is adjacent to land or another transport, this does not require ports or other facilities.
+
+Land units can move instantly between airports in friendly cities with the airlift action. An airport can participate in only one airlift per turn. 
+
+Unit Catalogue
+
+Several schemes are possible for organizing the variety of units available in Freeciv. This manual arranges them chronologically: each of the eras in the following table groups units which require similar numbers of advances before they can be built. While the eras have been given picturesque names to suggest the periods of history to which they correspond, the choice of which units were arranged together was determined strictly by their technological cost. 
+
+About a half-dozen attributes define each unit in the following table. The Cost specifies how many production points a city must invest to build one unit. Next comes M the number of movement points the unit is granted each turn, followed by C the number of other units that the unit can carry (called its capacity). The combat statistics A attack strength, D defense strength, HP hit points, and FP firepower are all explained in the section describing combat. 
+
+Bronze Age
+
+Expansion and primitive warfare require no technology. Settlers can not only found new cities, but improve land and build roads. 
+
+These four units require only one technology each. Workers can improve land but cannot build cities. Horsemen, Archers and Phalanx provide mobile offense, heavy offense, and heavy defense, respectively. 
+
+Iron Age
+
+Trireme: This simple transport can only move in Ocean tiles and it cannot enter deep ocean tiles.
+
+A second tier of more expensive and capable units becomes available. Attack strength outpaces defense strength, making defense difficult outside of walled cities. 
+
+Besides building an embassy, your diplomat can attempt to bribe or incite rebellion, and perform espionage and sabotage; see Diplomacy. 
+
+Age of Exploration
+
+Because explorers treat all terrain as roads, each move expends only one third of their one point. 
+
+Each caravan can enhance trade by creating a trade route, or can carry production points to contribute toward a Wonder. 
+
+Both feudalism and chivalry advance military organization and make most Bronze Age units obsolete. Pikemen are similar to the phalanx but are doubly effective against horsemen, chariots, knights, and dragoons
+
+The caravel offers greater capacity than the trireme and does not need to remain in Ocean tiles.
+
+Age of Gunpowder
+
+Magnetism replaces the caravel with two ships: the high capacity galleon and the heavily armed frigate. The steam engine offers the even more specialized ironclad warship. 
+
+The advent of gunpowder and the advances which follow make all earlier combat units obsolete. Since this advance does not require feudalism, the medieval units may be skipped by those eager to reach powder. The new units follow roughly the bronze age pattern of heavy defense, mobile offense, and heavy offense, except that musketeers are really as strong attacking as defending. 
+
+Engineers work twice as fast as workers or settlers and offer more ways in which land can be transformed. 
+
+The Industrial Age
+
+Both the galleon and ironclad are replaced by more powerful versions. These and all later ships can see two squares away rather than one.
+
+Rifles give foot soldiers greater attack than defense strength for the first time since the ancient legions. Cavalry are simply an improvement over dragoons. 
+
+Like explorers, alpine troops expend only one-third of a movement point to move one square regardless of terrain; this makes alpine troops a powerful unit in mountainous regions. 
+
+Both trade and diplomacy gain mobility. Spies are capable of more actions than diplomats; can be given more precise orders; and often survive and can be reused. 
+
+Modern Technology
+
+Two new warships offer less mobility but vastly enhanced firepower. 
+
+The submarine compensates for its weak defense by stealth.  The submarine is invisible to any units or cities that are not immediately adjacent. Unlike other ships it cannot attack land units, and can only carry missiles. 
+
+Not only are marines powerful troops, but they are the only land units that can attack directly from ships (instead of having to move onto land first). 
+
+The partisan behaves like an armed explorer, treating all terrain as roads and thus requiring only one-third movement point to move one square. Some cities will generate them when conquered (see details page).
+
+Bombardment continues its steady advance. 
+
+With flight, combat takes to the air. While aircraft can attack ground units, they can themselves be engaged only by other aircraft, and cannot enter and take undefended enemy cities. Fighters need fuel to avoid crashing and thus must end every turn in a city, on a carrier or an airbase. 
+
+High Technology
+
+The defense strength of the AEGIS cruiser is multiplied by 5 when attacked by an aircraft (including helicopters) or missile. While transports can carry only land units, the carrier may bear only aircraft (including helicopters). 
+
+The final generation of ground forces offers the familiar choice between heavy attack strength and defense capability. When attacking units within cities, the howitzer negates any defense advantage that would be offered by city walls. Paratroopers can be paradropped from friendly cities or airbases, allowing long range actions; they have a range of 10 squares, and may move immediately after being paradropped. 
+
+Unlike other airborne units, the helicopter can conquer an undefended enemy city like a land unit. Like bombers they expend all their remaining movement points when they attack an enemy target. Though they do not crash for ending their turn outside a friendly city or airbase, it does cause two hit points of damage, and they can be attacked by ground units. 
+
+Bombers can end one turn aloft before returning to a city, carrier, or airbase to refuel. They can make only one attack each turn which expends all their remaining movement points, stranding them until their next turn when to survive they must return to refuel. AWACS offers greatly enlarged vision. 
+
+There are two types of missles: Nuclear missle and Cruise missle.  To survive, missiles must end each turn in a city or upon a carrier, submarine or airbase. They are always destroyed when they finally attack. The effects of a nuclear missile are described here. (Beware of nuclear winter when using nukes.) 
+
+The Space Age
+
+Stealth Bomber obsoletes Bomber.  Stealth Fighter obsoletes Fighter.
+
+The final military advances produce stealth aircraft. They offer greater strength and longer range than the aircraft they replace, and are invisible to enemy units and cities except when in an adjacent square. 
+
+
+
+
+
+
+
+
+ 

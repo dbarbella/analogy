@@ -1,0 +1,84 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Bad-Revenge-One
+                      (TheList
+                       (SourceTextChapterParagraphFn Bad-Revenge-One 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Bad-Revenge-One 1 1)
+"Robert was a person.
+Anthony was a person.
+Robert hit Anthony. 
+The hitting hurt Anthony.  
+The hitting was morally wrong.  
+Because Robert hurt Anthony, Anthony attacked Robert.  
+The attack was morally wrong.")
+
+(in-microtheory (ScenarioMtFn Bad-Revenge-1))
+(genlMt (ScenarioMtFn Bad-Revenge-1) MoralDMRulesMt)
+
+;; SLIGHTLY TAILORED TO RESOLVE THE ACTORS AND THE HARMS PROPERLY
+(isa robert30903 Person)
+
+(isa anthony30939 Person)
+
+(isa hit30978 HittingAnObject)
+
+(objectActedOn hit30978 anthony30939)
+
+(performedBy hit30978 robert30903)
+
+(isa hurt31160 HarmingAnAgent)
+
+(maleficiary hurt31160 anthony30939)
+
+(doneBy hurt31160 hit30978)
+
+(isa hit30978 MorallyWrongEvent)
+
+(causes-EventEvent hurt31160 attack31563)
+
+(isa attack31563 AttackOnObject)
+
+(objectAttacked attack31563 robert30903)
+
+(performedBy attack31563 anthony30939)
+
+(isa attack31563 MorallyWrongEvent)
+
+
+;;; ORIGINAL OUTPUT
+;;;
+;;;(isa robert30903 Person)
+;;;
+;;;(isa anthony30939 Person)
+;;;
+;;;(isa hit30978 HittingAnObject)
+;;;
+;;;(objectActedOn hit30978 anthony31044)
+;;;
+;;;(performedBy hit30978 robert30975)
+;;;
+;;;(isa hurt31160 HarmingAnAgent)
+;;;
+;;;(maleficiary hurt31160 anthony31233)
+;;;
+;;;(doneBy hurt31160 hit30978)
+;;;
+;;;(isa hit30978 MorallyWrongEvent)
+;;;
+;;;(causes-EventEvent hurt31462 attack31563)
+;;;
+;;;(isa hurt31462 HarmingAnAgent)
+;;;
+;;;(isa attack31563 AttackOnObject)
+;;;
+;;;(doneBy hurt31462 robert31459)
+;;;
+;;;(objectAttacked attack31563 robert31600)
+;;;
+;;;(maleficiary hurt31462 anthony31528)
+;;;
+;;;(performedBy attack31563 anthony31558)
+;;;
+;;;(isa attack31563 MorallyWrongEvent)

@@ -1,0 +1,130 @@
+Every turn, cities require food. 
+The food required in a city depends on the size of the city.
+The size of a city is the number of its citizens.
+The food required in a city depends on the city's number of citizens.
+The food required in a city depends on the city's  number of settlers.
+The food required in a city depends on the city's total food consumption.
+
+A citizen consumes 2 food points per turn from a city.
+The food consumption of settlers depends on the government.
+Under anarchy, a settler consumes 1 food point per turn from a city.
+Under despotism, a settler consumes 1 food point per turn from a city.
+Under monarchy, a settler consumes 1 food point per turn from a city.
+Under communism, a settler consumes 1 food point per turn from a city.
+Under republic, a settler consumes 2 food points per turn from a city.
+Under democracy, a settler consumes 2 food points per turn from a city.
+
+Cities produce food.
+The city's rate of food production depends on the city's number of working citizens.
+The city's rate of food production depends on the terrain being worked.
+Most terrain produces less than two food points per turn.
+Some terrain produces more food points because that terrain has special properties.
+Irrigating a tile increases tile food production.
+
+Every city has a storage capacity.
+If the food required in the city is less than the city's rate of food production, the city accumulates food.
+If the food required in the city is greater than the city's rate of food production, the city loses food.
+Starvation occurs if the food stored would become negative.
+During starvation, settlers die first, followed by citizens, until the food stored would be zero.  
+
+When the amount of food stored in a city becomes full, the population grows by one citizen.
+The growth causes the amount of food stored in the city to become empty. 
+Building a granary in a city increases its growth rate.
+With a granary in a city, the amount of food stored becomes half-full after growth.
+The amount of food stored in a city needed to reach full depends on the population of the city.
+This means that each new citizen is more costly than the last.
+
+A city produces at least one production point per turn.
+The production points required in a city depend on the city's number of units.
+These units include military units, settlers, workers, and engineers.
+Each unit consumes 1 production point per turn.
+Under some governments, a few units are supported for free.
+If the city's production points are less than the production points required by the city, a unit is disbanded.
+Building a product consumes extra production points. 
+
+Cities can build units.
+Cities can build buildings.
+Cities can build wonders.
+When the accumulated production points reaches the cost of the product, that product is complete.
+Products appear in their city when complete.
+Completed units appear on the map.
+Completed buildings are added to the city's list of structures.
+Completed wonders are added to the city's list of structures.
+Any extra production points after something is completed are applied towards the next project.
+Each city can have only one of each type of building.
+Some buildings require that another is built first.
+Each wonder can only be completed by one civilization per game.
+If you produce units or buildings that you cannot support, they will be disbanded immediately after completion.
+Building a settler consumes one citizen.
+Building a settler consumes production points.
+If a city builds a settler with its last citizen, that city will disband when the settler is completed.
+
+The product a city is building can be changed on any turn.
+The accumulated production points are used towards the new product.
+Switching products during construction can be costly.
+No points are lost in switching between different types of units, different types of buildings, or different wonders.
+Otherwise, half of the accumulated production points are lost.
+
+You can spend gold to complete a project in one turn.
+The purchase cost of the product depends on the total production points required.
+As the city accumulates more production points, the purchase cost of the product falls.
+
+Wonders cost more than other types of products.
+Cities can be directed to produce gold instead of other products.
+A city can produe one gold piece per turn for each production point it produces.
+Some building types enhance production.
+The Factory, Power Plant, Hydro Plant, Offshore Platform, Nuclear Plant, and Manufacturing Plant enhance production.
+Each city can have only one power plant.
+
+By default, new cities start working on the best available defensive units.
+When a city completes a unit, by default it starts working on another unit of the same type.
+After completing a building or a wonder, by default a city starts working on a different type of building or wonder.
+
+It is useful to classify your cities based on their terrain properties.
+It is also useful to classify your cities based on how you intend to use them in your civilization.
+Some cities might be built to provide defenses of your borders.
+Some cities might be focused on research or on economic output.
+
+Commerce produces trade points.
+Some trade points are lost by corruption.
+Corruption depends on the form of government.
+Corruption in a city depends on the city's distance from the capital.
+
+A city has trade points.
+Each city uses its trade points for three things.
+A city can convert trade points to player gold.
+A city can convert trad points into luxury points.
+Worker happiness can be improved by luxury points.
+A city can convert trade points into science points.
+Discovering a new technology consumes science points.
+The conversion rates of trade points affect the entire civilization. 
+The rate of conversion depends on the form of government.
+The civilization accumulates gold.
+The civilization accumulates science points.
+Luxury points are only accumulated in the city that produces them.
+The conversion rates represent an important tradeoff.
+Three types of buildings directly affect trade.
+Adding a courthouse decreases corruption.
+Adding a palace affects trade.
+Adding a super highway affects trade.
+Access to roads adds to a city's trade points.
+Terrain with rare commodities adds to a city's trade points.  
+
+Trade routes produce trade points.
+A trade route is established as follows.
+Produce a caravan or freight in the city.  
+Send that unit to another city.
+The city must either be at least eight squares away or belong to a different civilization.
+The civilizations of the two cities must have an alliance.
+Finally, give the make trade route command.
+The city starting the trade route gets gold points and science points.
+The revenue of a trade route depends on the trade already produced by the two cities.
+The revenue of a trade route is higher when the cities are further apart.
+The railroad or flight technologies lower the revenue.
+Trade routes produce trade points for both cities every turn.
+The trade points produced by the trade route depends on the trade points from the terrain worked by both cities.
+Trade routes generate more if the cities are on different continents.
+Trade routes generate more if the cities are from different civilizations.
+
+A city can have four trade routes.
+Attempting to establish a fifth trade route will cause the trade route with the smallest revenue to be eliminated.

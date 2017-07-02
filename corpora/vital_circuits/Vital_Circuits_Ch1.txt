@@ -1,0 +1,440 @@
+The Task of a Circulation
+
+Imagine a vast collection of ordinary suburban houses-quite a vast
+collection since we intend them as analogs of our 100,000,000,000,000
+(100 trillion) cells. Each has a certain functional autonomy, being
+equipped with the full facilities for storing, preparing, and eating
+food; for dressing and sleeping; for (as no biologist can forget)
+conceiving; and so forth. The autonomy, however, has its limits,
+transcended by the need for delivery of water, food, and energy, and
+for disposal of refuse and sewage. The biological analogs of these
+inputs and outputs are what a circulatory system manages-clearly
+crucial and just as clearly the most pedestrian of matters. Again 1
+emphasize that for neither the houses' nor the cells are they dramatic
+matters of active concern. In both cases requiring attention is the
+sort of pathological situation one prefers to avoid. For either,
+functions such as communication are more obtrusive-for a house both
+the wired and wireless sorts of communication, for a cell both neural
+and endocrine signals.  Signals most often indicate changes, changes
+commonly demand responses, and we've learned (in several senses) to
+pay attention. Nonetheless, while perhaps more obvious and insistent,
+these communicative systems are only intermittently critical; their
+failure is less certainly and immediately fatal.
+
+A circulatory system, then, moves material around within an animal. A
+carrier, blood, goes around and around, while other items make less
+monotonously repetitive circuits. Just what items are moved around
+varies a bit, both from time to time and from organism to organism.
+The system turns out to be more multifunctional than at first it
+appears. For one thing, the contrast I made with communicative systems
+involves no single, sharp distinction - hormones are commonly
+blood-borne, and they are nothing more than messages that regulate and
+synchronize the activities of otherwise fairly autonomous cells. For
+another, heat is transferred through movement of blood - it's a
+byproduct of all of our metabolic chemistry and is eventually dumped
+off upon our surroundings. While heat is produced throughout a body,
+it must be lost across a surface. Thus it needs transporting from core
+to periphery; or, at least under some circumstances, one's core will
+get intolerably warm. Under other conditions we find it useful to heat
+our appendages with what we make in the middle: cold fingers and toes
+are as likely to reflect poor circulation as to indicate insufficient
+heat production. Circulatory systems are even used to transmit
+force. The obvious case is erectile tissue: without heart and
+bloodstream we'd have no way to pump up our kind of penis-muscles have
+no role in the job. A less obvious but more widespread use of the
+hydraulic force of a pressurized bloodstream is in pushing blood
+though the filtration stage of kidneys.
+
+By far the most demanding circulatory task for creatures like us is
+the transport of dissolved gases. In particular, oxygen is carried
+from the lungs elsewhere, and carbon dioxide, the main product of
+using that oxygen, is returned to the lungs. Of the two, oxygen
+transport is probably the trickier, simply because less oxygen
+normally dissolves in watery liquids. (Oxygenated rather than
+carbonated beer would be a lot less bubbly.) All the numerous tasks
+beside transporting oxygen and carbon dioxide could be done with a
+simpler and more sluggish system. I defend this assertion that gas
+transport is the most demanding function with a typical bit of
+biologist's logic-through comparison with a circulatory system that
+proves completely adequate for organisms that don't use it to
+transport dissolved gases. As it happens, insects have a separate
+system of pipes that carry oxygen and carbon dioxide to and from
+individual cells in (mainly) gaseous form. They do have hearts and
+some blood vessels, but their circulatory systems work at rather low
+pressures and flow speeds. To anticipate any argument that insects are
+primitive or inactive let me point out that many of them fly, and
+flying is about the most energy-intensive activity known either in
+nature or in human-designed transportation systems.
+
+Among animals, we birds and mammals are unusual (but not quite unique)
+in maintaining rather warm and fairly constant internal
+temperatures. By insisting on having hot innards, we're committed to a
+rapid pace of life. We eat copiously and often, and we release heat
+by combining stored fat and carbohydrate with oxygen. Our internal
+fires burn intensely, and not just as analogy or metaphor. When the
+fat's in the fire it uses the same amount of oxygen and releases the
+same amount of energy as when it's burned under much more controlled
+conditions within our cells. A sedentary person consumes about 70
+kilocalories an hour, which translates into a heat production of 80
+watts. By contrast, a sedentary alligator of the same weight but with
+a body at ambient temperature consumes only about 17 kilocalories an
+hour, corresponding to 20 watts, about four times less. Our cells need
+proportionately more oxygen and produce more carbon dioxide than do
+those of the alligator; our circulatory systems have to bring the
+first to the cells from our lungs and take the second back to the
+lungs. Still, as we'll see, without circulatory systems even
+alligators are quite out of the question.
+
+Alligators and insects are certainly not everyone's favorite
+creatures. But notice the heuristic utility of the perspective they
+permit, even if one's concern is entirely with humans. I've used the
+comparison with insects to argue that gas transport is the most
+demanding circulatory function and with alligators to suggest that the
+demand is especially great because we're warm-blooded animals. Thus I
+justify what might otherwise seem a disproportionate emphasis on a
+single function in a peculiar subset of vertebrates in all that will
+follow.
+
+Simple Circuitry
+
+At this point, we should take a look at a specific circulatory system,
+perhaps starting with a picture of our own, but a formidable problem
+immediately arises-we can't draw a decently informative illustration
+of our circulatory system on an ordinary printed page. For one thing,
+the system is three-dimensional; worse yet, it's made of parts
+awkwardly diverse in size. If capillaries, 8 micrometers (a
+three-thousandth of an inch) in diameter, are shown, then the heart
+(less than 5 inches high and slightly more than 3 inches wide) won't
+fit on the page. So it takes considerable imagination to visualize the
+thing. In fact, there's a more general problem. We biologists are all
+too prone, I think, to submerge ourselves and everyone else in
+anatomical and terminological detail. It's better if we defer that
+plunge at least briefly. Beginning with an overall view of function
+will greatly reduce the burden imposed by a lot of names and places.
+
+For now, describing function can be helped considerably by using
+analogies and by beginning with less complex biological cases. So
+we'll go back to our suburban houses, now using them to draw parallels
+between household heating systems and the oxygen distribution systems
+of animals. In particular, we'll focus on those systems in which heat
+is produced centrally and then distributed as hot air or hot water to
+the various rooms. The components of such a system are, first, a set
+of pipes for transporting the hot air or water. There must also be
+some pump for either circulating medium. Finally, two different kinds
+of exchangers are needed. In one, heat is acquired by the medium-we
+call it a furnace; in the other heat is transferred to the living
+quarters- it may be a set of radiators or just a trivial mixing
+arrangement for hot air coming out of some ports. So-pipes, pump, and
+two kinds of exchangers. These are precisely, and for just the same
+reasons, the indispensable components of circulatory systems. All
+others are really just fillips and flourishes. At this point we might
+draw a picture of a heating system on one side of a page and at least
+a crude one of a circulatory system on the other, but the very
+different appearance and location of the parts of each would get in
+the way of recognizing any underlying similarity in their
+interconnections. A better way is to borrow the engineering practice
+of using purely functional diagrams.The hot air heating system (Figure
+1.1a) needs a full set of distributional ducts, but it manages to work
+without much in the way of return pipes. A house has a fixed volume,
+and air is pretty nearly incompressible at any speeds of flow with
+which we might comfortably coexist. So blow air from furnace to
+periphery, and the air will return to the furnace of its own accord. A
+little help may be needed-my house has a few return ducts from the
+more remote bedrooms, and it ought to have another to keep the living
+room (on the other end) properly heated. (And animals arranged this
+way come equipped with a quite a few odd ducts and auxiliary pumps to
+handle their various anatomical tortuosities.)
+
+The circulatory system of a snail or spider (Figure 1.1b) is arranged
+in much the same way as the hot air heating system. Blood is pumped by
+a heart; it exchanges dissolved gases with the environment through a
+set of gills (most snails) or sheet-like lungs (most spiders); and it
+moves heartward again without benefit of very specific piping. In this
+heartward oozing through the rest of the body, the second exchange
+takes place, the one by which tissues are provided with dissolved
+oxygen and dump their dissolved carbon dioxide. In the biology
+textbooks of my youth such a system, termed an open circulatory
+system, was derided as primitive on account of its lack of discrete
+return pipes. That's probably an unnecessary and inappropriate bit of
+vertebrate or mammalian hubris. Spiders, lobsters, and the rest of the
+great phylum of arthropods (which includes the insects, a distinct
+group from the spiders) have inextensible outer shells rather than our
+more flexible skin. Furthermore, water and all bloods are even less
+easily compressed than air. If blood is pumped to the front, it simply
+has to find its way rearward since it can go nowhere else. Discrete
+pipes to carry blood rearward would be just so much needless baggage,
+wasting space better	      invested in equipment closer to proper
+reproductive imperatives-in short, to guts and gonads. Similarly,
+pumping blood outward to the tips of legs must, if no leaks develop,
+force it back inward automatically.
+
+By contrast, in a recirculating hot water system (a fine, if initially
+expensive way to heat a house), a pump pushes water first through the
+heat exchanger of the furnace and then through the heat exchangers
+more commonly referred to as radiators (Figure 1.2a). A return pipe
+from each radiator carries the somewhat cooler water back to the pump
+and furnace. Radiators are necessary, of course, because our houses
+are filled with air rather than water. The circulatory system of a
+fish (Figure 1.2b) is closely analogous. A heart pumps blood forward;
+blood then passes through the gills where it acquires oxygen and
+disposes of carbon dioxide. After that it goes by way of arteries to
+the other exchanger, the network of capillaries elsewhere in the body;
+it finally returns through veins to the heart again.
+
+ The Bird-and-Mammal Scheme
+
+What of ourselves, neither spiders nor fish, but proper mammals? We
+use a modification of the piscine scheme; and I mean modification in
+both of the biologist's senses - historical and functional. That is,
+our structures represent the end of a long history of modification of
+what some early fishes invented about 400 million years ago. Our
+mammalian version probably reached very much its present form by a
+still ancient 200 million years ago. At least that's the well-accepted
+inference, since our circulatory equipment operates in a way quite
+similar to that of modern fishes and most likely of ancient fishes as
+well. A little educated guessing is, of course, involved - circulatory
+systems don't leave nice, accommodating fossils as do bones. It would,
+however, be quite astonishing if ancient fish did things very much
+differently from their extant descendants. The evolutionary history
+isn't irrelevant. If you set out to design, de novo, a mammalian
+circulation, you might do better to arrange it a bit differently from
+what we in fact have. If you're limited to modifying pre-existing
+anatomy, then you're likely to end up with certain quirks and
+jury-rigged arrangements.
+
+It's worth noting that, while descent with modification is evolution's
+way, existing structures are not uncommonly pressed into service for
+new functions. The main buoyancy devices of fish, swim bladders, come
+from the same antecedent structures as do our lungs. The tiny bones in
+our middle ears come from the same antecedents as some associated with
+the gills of fish, bones whose equivalents see service in the jaws of
+reptiles and amphibians.4 By contrast, these circulatory systems we're
+talking about not only come from the same ancestral structures, but
+also retain the same essential function. Vertebrates have been pretty
+conservative, evolutionarily, and circulatory systems seem to have
+especially strong traditions. According to the best evidence, birds
+and mammals represent separate offshoots of the reptilian stock,
+lineages that branched from different reptilian forebears at different
+times. Birds and mammals nonetheless hit upon the same basic
+alterations of the reptilian circulation. Perhaps that isn't too
+surprising - the changes are simple, logical, and effective.
+
+Figure 1.3 is a circuit diagram of the circulatory arrangements of
+mammals and birds. Two really major alterations are evident. Gills,
+suitable for extracting oxygen from water, have been replaced,
+functionally, by lungs that extract oxygen from air. Gills haven't, it
+turns out, been modified into lungs. Curiously, the components of the
+gills have been lost or put to other purposes, and lungs have
+developed separately as outpocketings of the esophagus-the
+outpocketings that in fish we noted serve as gas-filled swim
+bladders. The other alteration is the addition of a second heart. A
+fish pushes blood through two exchangers with one heart; a bird or
+mammal has an additional pump between the exchangers. Our blood goes
+from one heart to the lungs to the second heart to the rest of the
+body and then back to the first heart.
+
+At once something distinctly queer about the arrangement jumps
+out. Two hearts located in quite different places hardly constitute a
+proper vision for St. Valentine, and they certainly don't correspond
+to our common notion of what we have inside. No mistake-in a
+func-tional sense each of us does have two hearts, but they just
+happen to be combined into one muscular organ, and they can beat only
+in syn-chrony. The anatomical combination obscures the functional
+distinc-tion. That combination, though, is probably one of those
+accidents of "descent with modification," as Mr. Darwin put it, one of
+those odd quirks evolution leaves in its wake. Anyhow, half-heart one
+(right side) pushes blood through the lungs, and it's a little
+smaller; half-heart two (left side) is larger and pushes blood through
+the rest of the body.
+
+The scheme makes good sense. As we'll see later, these pumps really
+expend energy pushing blood through the tiniest vessels, mainly
+capillaries, of both the lungs and all the other organs. In a plumbing
+system, loss of energy is associated with a decrease in pressure,
+which will be discussed further in Chapter 4. Therefore the pressure
+imparted by the pump to the blood decreases substantially as blood
+passes through a set of tiny vessels. Going through two sets in
+sequence (at a given speed) would require that the blood start with
+twice the pressure needed to push through one set. Among other
+difficulties, the pipes leaving the pump would need additional
+reinforcement or would be more suscep-tible to blow-outs (ruptured
+aneurysms, in the trade). Solution-a booster pump between first and
+second sets of tiny vessels.
+
+(Again, to dismiss the single-hearted fishes as primitive would be an
+indefensibly anthropocentric attitude. Fish do quite nicely, thank
+you- they're the most numerous of all vertebrates. They, like
+alligators, just don't ordinarily go in for our profligate rates of
+oxygen use. Fish blood circulates more slowly than does our own, and
+the pressures involved are correspondingly lower.)
+
+Which pump we call the main one and which the booster is more or less
+arbitrary. Our "lung" half-heart (right side) is the more imme-diate
+functional descendent of the sole piscine pump, so we might best
+regard the larger "body" half-heart (left side) as the secondary
+booster. Curiously, the creatures that stand between fish and us in an
+evolutionary sense, amphibians and reptiles, have various sorts of
+in-between arrangements about which more will be said later. The full,
+deluxe, duplex deal graces only birds and mammals. Odder still, these
+nearly identical hearts clearly represent two quite independently
+evolved modifications of the hearts of reptilian forebears. Possession
+of these fancy double hearts is surely related to the fact that only
+birds and mammals routinely maintain body temperatures well above
+those of their surroundings.
+
+A few items of terminology are now unavoidable. (I only disparage
+terms as jargon when I don't need them.) Our mammalian system consists
+of two pumps, collectively called the heart, and three main kinds of
+pipes. Arteries have thick walls that withstand the full pressure
+generated by the squeeze of the heart; they carry blood away from the
+heart. (The largest artery, the one leading out to the body from the
+heart is called the aorta.) Capillaries are tiny pipes with very thin
+walls that are supplied with blood by the arteries. Whether in the
+lungs or elsewhere, they're the sites at which material is exchanged
+between blood and the tissues of the body. Veins have thinner walls
+and much lower internal pressures than the arteries. They drain the
+capillaries and return blood to the heart. Each side of the heart
+consists of two pumping chambers serially arranged, an atrium
+(sometimes called an "auricle" on account of being a bit ear-shaped)
+and a ventricle. Thus the heart has four chambers in all. The system
+has other components, but these are the main ones.
+
+What flows through the system is blood, consisting of a watery liquid
+(plasma) in which are suspended a variety of small entities-mainly
+cells of varying sorts and sizes. In addition, blood carries dissolved
+gases, salts, hormones, droplets of fat, energy-yielding molecules
+such as glucose, waste materials such as urea, and a wide variety of
+proteins involved in such functions as clotting and inflammatory
+responses. These materials enter and leave the blood as it passes
+through the capillaries of the various organs.
+
+Quantifying Things
+
+Let's add some numbers to all the words, using the human circulation
+as source of data-adult humans of average size. At least in pushing
+blood around humans are not especially unusual mammals, lots of human
+data are available, and both reader and writer are without the
+slightest doubt quite human While most of these numbers will come up
+again later, it will be handy to have them in one place.
+
+Blood volume: 5.2 liters (5.5 quarts) in the body, about 5 percent of
+which is in the heart. Being relieved of a pint (half a quart or about
+half a liter) is no big deal if you're in normal health-it's less than
+10 percent of your stock. Lady Macbeth, you may remember, found this
+large volume noteworthy.
+
+Output, left ventricle: 5 liters (5.3 quarts) per minute for a person
+at rest, and about six times higher in strenuous exercise. The output
+of the right ventricle is, of course, precisely the same. When at
+rest, the whole blood volume of the body passes through the left heart
+every minute, or a bit of blood takes about a minute to make the
+complete circulatory circuit. During heavy exercise, the circuit takes
+only about 10 seconds.
+
+Stroke volume and heartbeat rate: The 5 liters per minute is the
+product of about 70 milliliters (2.5 ounces) per stroke times about 72
+strokes per minute.
+
+Fraction of blood occupied by cells ("hematocrit"): from 37 to 52
+percent. Most of this volume is occupied by the so-called red blood
+cells, of which you have 5 million per cubic millimeter or about
+25,000,000,000,000 (25 trillion) in all.
+
+Speed of flow leaving heart: 0.3 meters (about 1 foot) per second,
+resting. In maximal aerobic exercise in a well-conditioned person it
+rises to about 2 meters per second (about 6 feet per second or 2.5
+miles per hour); a leisurely walking pace.
+
+Speed of flow in capillarieso 0 4 millimeters per second at rest or
+about 800 times lower than the speed at the aorta, the exit from the
+heart. That's 50 days per mile, in our perceptual world exceedingly
+slow.
+
+Overall area of capillary wall: 8000 square meters or all of 2
+acres. That's the surface across which material can move between the
+cir-culatory system and the surrounding tissues.
+
+Combined length of pipes: 100,000 kilometers (60,000 miles)-more than
+twice around the earth at the equator.
+
+Heart weight: About 0.3 kilograms (11 ounces) or about half a percent
+of body weight. A heart isn't an especially large organ.
+
+Power output of heart: 1.3 watts at rest, about 8 watts during
+exercise. The latter is about 30 times less than the power per unit
+weight of a good internal combustion piston engine of almost any size.
+
+Power consumption of heart: At rest, this is 13 watts, or about a
+sixth of the body's resting power consumption of 80 watts, as
+mentioned earlier. 1.3 (earlier) divided by 13 is, of course, 10
+percent. Thus about 10 percent of the fuel (fat, etc.) consumed by the
+heart appears as useful, blood propelling, output.
+
+And Questions Left Hanging
+
+I've now sketched the main features of the circulatory systems that
+will occupy the forthcoming pages. All the rest, though, isn't just
+detail. The present description is about as bald as its author, only a
+little more user-friendly than a textbook, and without all of my
+favorite devices. Worst of all, it conveys little sense of the logic
+and elegance of the various features of these systems. To push one of
+my long-standing polemical themes, such features do not unfold from an
+evermore detailed study of the organisms, but from consideration of
+just what problems these circulatory systems are up against. It sounds
+backward - to imagine problems and then to investigate what animals have
+done about them-but the approach turns out to be useful both as a way
+to do science and as a way to talk about functional systems. The
+following, then, are a few of the problems.
+
+Liquids are, for all practical purposes, incompressible. If, in
+contracting, the heart's chambers get smaller, then blood pushed out
+must turn up as an increased volume elsewhere. One attractive fix,
+beating left and right hearts alternately, isn't used, perhaps because
+of the fact that the two ventricles are squeezed by the same muscle
+(-two hearts beat as one, even without romantic hyperbole). Are there
+functional consequences of this periodic variation of the volume of
+the rest of the system?
+
+If you blow into a cylindrical balloon it inevitably expands almost to
+full inflation in one portion before inflating anywhere else. The
+initial bulge is what we'd call an aneurysm. When you have one in any
+part of your circulatory system you're in mortal danger since
+aneurysms, like balloons, are prone to burst. Blood vessels don't
+ordinarily develop aneurysms, however, and one wonders why. They
+certainly have stretchy walls-the situation described in the previous
+item absolutely demands stretchy walls.
+
+Your circulatory system is a serial arrangement of pipes and pumps (as
+just described). Thus in any period of time as much blood must pass
+through the lungs as passes through the capillaries of every other
+organ in the body combined. Lungs are only a tiny fraction (about 1
+percent) of the body's mass-are they really as bloody as this
+requirement seems to imply?
+
+A heart is mainly muscle; contraction of this muscle reduces the
+volume of the chambers inside. So blood gets squeezed out. Valves
+ensure that it always get squeezed out in one direction, and each
+valve dutifully opens and shuts once in each stroke. How can they
+perform their mechanical task when they have no nerve supply to ensure
+that they open and shut at the right points in the stroke
+
+Blood flows rapidly in the arteries but much more slowly in the
+capillaries, allowing time for diffusion of dissolved materials across
+the capillary walls. But the blood speeds up again as it gets intc the
+veins and is finally heartward bound. Where's the pump that so speeds
+venous blood on its return journey?
+
+The hearts of large animals beat less frequently than do those of
+small animals. Large animals live longer, usually, than do small
+ones. If you multiply the number of heartbeats per minute by the
+number of minutes per lifetime you get a figure for heartbeats per
+lifetime, certainly an odd datum. What makes the datum really strange
+is that its value, about 1 billion, is nearly the same for most
+mammals. Anything constant amid the great diversity of or. ganisms
+catches our attention-but what functional significance if any, might
+attach to heartbeats per lifetime?
+
+It's easy to go on, but you surely get the idea. Most of a book lie;
+ahead, and with some heartwrenching cardiac pun (your choice) we press
+on.
+

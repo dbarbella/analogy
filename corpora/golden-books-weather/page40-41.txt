@@ -1,0 +1,22 @@
+Condensation complicates adiabatic cooling and warming.
+Condensation makes the temperatures on the windward side of mountain ranges lower than those on the leeward side.
+Mainly because of condensation, there are relatively cool valleys west of the Sierra Nevadas and hot deserts to the east.
+
+Considerable heat is needed to change liquid water to water vapor.
+Heat increases the speed of water molecules, so that many more escape as water vapor.
+Changing a pan of water at the boiling point to vapor requires six times the heat needed to raise the same amount of water from freezing to boiling.
+When water vapor condenses back into liquid water, the same large amount of heat is given off.
+This heat can increase the temperature of the air considerably.
+When air is rising, two opposing influences operate as its moisture condenses: adiabatic cooling tends to lower its temperature; and heat of condensation tends to raise it.
+The net effect is an average cooling of 3.2 degrees Fahrenheit per 1000 feet of rise when condensation occurs.
+
+Take an example: Air at 60 degrees Fahrenheit moves up the west side of a mountain.
+It cools adiabatically 5.5 degrees Fahrenheit for each 1000 feet of rise up to the clouds at 4000 feet.  As condensation begins, heat is released, and the adiabatic cooling is thus partly offset.  From 4000 feet to the mountain top, at 10000 feet, the net cooling is only 3.2 degrees Fahrenheit per 1000 feet.  Thus the total cooling of the wind as it sweeps up the mountain is: 
+4 * 5.5, or 22 degrees Fahrenheit from the valley floor to cloud base 
+plus 6 * 3.2, or 19.2 degrees Fahrenheit from cloud base to mountain top
+Total 41.2 degrees Fahrenheit from valley to mountain top.
+The air that began at 60 degrees Fahrenheit tops the mountain at 18.8 degrees Fahrenheit.
+
+As the air pours down the eastern slope, it compresses and warms, adiabatically, at the rate of 5.5 degrees Fahrenheit per 1000 feet.  Because of the warming, no further condensation occurs.  Total warming of the air from mountain top to valley, 10000 feet below, is 10 * 5.5. degrees Fahrenheit, or 55 degrees Fahrenheit.  Adding this to the mountain top temperature of 18.8 degrees Fahrenheit gives 73.8 degrees Fahrenheit as the temperature of the eastern valley.  The temperature at the eastern foot of the mountain is 13.8 degrees Fahrenheit higher than at the western foot.  Condensation and precipitation on the western slope made the difference.
+
+Chinook winds are an example of this down-slope warming of air.  They occur on the eastern slope of the Rockies, often with dramatic effect.  One Chinook brought the temperature up from -6 degrees Fahrenheit to 37 degrees Fahrenheit in 15 minutes.

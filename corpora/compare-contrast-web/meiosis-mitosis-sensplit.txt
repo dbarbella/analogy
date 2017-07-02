@@ -1,0 +1,114 @@
+http://www.diffen.com/difference/Meiosis_vs_Mitosis
+
+Differences in Purpose
+
+Though both types of cell division are found in many animals, plants, and fungi, mitosis is more common than meiosis and has a wider variety of functions. 
+Not only is mitosis responsible for asexual reproduction in single-celled organisms, but it is also what enables cellular growth and repair in multicellular organisms, such as humans. 
+In mitosis, a cell makes an exact clone of itself. 
+This process is what is behind the growth of children into adults, the healing of cuts and bruises, and even the regrowth of skin, limbs, and appendages in animals like geckos and lizards. 
+
+Meiosis is a more specific type of cell division (of germ cells, in particular) that results in gametes, either eggs or sperm, that contain half of the chromosomes found in a parent cell. 
+Unlike mitosis with its many functions, meiosis has a narrow but significant purpose: assisting sexual reproduction. 
+It is the process that enables children to be related but still different from their two parents. 
+
+Meiosis and Genetic Diversity
+
+Sexual reproduction uses the process of meiosis to increase genetic diversity. 
+Offspring created through asexual reproduction (mitosis) are genetically identical to their parent, but the germ cells created during meiosis are different from their parent cells. 
+Some mutations frequently occur during meiosis. 
+Further, germ cells have only one set of chromosomes, so two germ cells are required to make a complete set of genetic material for the offspring. 
+The offspring is therefore able to inherit genes from both parents and both sets of grandparents. 
+
+Genetic diversity makes a population more resilient and adaptable to the environment, which increases chances of survival and evolution for the long term. 
+
+Mitosis as a form of reproduction for single-cell organisms originated with life itself, around 3.8 billion years ago. 
+Meiosis is thought to have appeared around 1.4 billion years ago. 
+
+Mitosis and Meiosis Stages
+
+Cells spend about 90% of their existence in a stage known as interphase. 
+Because cells function more efficiently and reliably when small, most cells carry out regular metabolic tasks, divide, or die, rather than simply grow larger in the interphase. 
+Cells "prepare" for division by replicating DNA and duplicating protein-based centrioles. 
+When cell division begins, the cells enter into either mitotic or meiotic phases. 
+
+In mitosis, the end product is two cells: the original parent cell and a new, genetically identical daughter cell. 
+Meiosis is more complex and goes through additional phases to create four genetically different haploid cells which then have the potential to combine and form a new, genetically diverse diploid offspring. 
+
+Stages of Mitosis
+
+There are four mitotic phases: prophase, metaphase, anaphase, and telophase. 
+Plant cells have an additional phase, preprophase, that occurs before prophase. 
+
+During the mitotic prophase, the nuclear membrane (sometimes called "envelope") dissolves. 
+Interphase's chromatin tightly coils and condenses until it becomes chromosomes. 
+These chromosomes are made up of two genetically identical sister chromatids that are joined together by a centromere. 
+Centrosomes move away from the nucleus in opposite directions, leaving behind a spindle apparatus. 
+
+The process of mitosis
+
+In metaphase, motor proteins found on either side of the chromosomes' centromeres help move the chromosomes according to the pull of the opposing centrosomes, eventually placing them in a vertical line down the center of the cell; this is sometimes known as the metaphase plate or spindle equator. 
+
+The spindle fibers begin to shorten during anaphase, pulling the sister chromatids apart at their centromeres. 
+These split chromosomes are dragged toward the centrosomes found at opposite ends of the cell, making many of the chromatids briefly appear "V" shaped. 
+The two split portions of the cell are officially known as "daughter chromosomes" at this point in the cell cycle. 
+
+Telophase is the final phase of mitotic cell division. 
+During telophase, the daughter chromosomes attach to their respective ends of the parent cell. 
+Previous phases are repeated, only in reverse. 
+The spindle apparatus dissolves, and nuclear membranes form around the separated daughter chromosomes. 
+Within these newly formed nuclei, the chromosomes uncoil and return to a chromatin state. 
+
+One final process—cytokinesis—is required for the daughter chromosomes to become daughter cells. 
+Cytokinesis is not part of the cell division process, but it marks the end of the cell cycle and is the process by which the daughter chromosomes separate into two new, unique cells. 
+Thanks to mitosis, these two new cells are genetically identical to each other and to their original parent cell; they now enter their own individual interphases. 
+
+Stages of Meiosis
+
+There are two primary meiosis stages in which cell division occurs: meiosis 1 and meiosis 2. 
+Both primary stages have four stages of their own. 
+Meiosis 1 has prophase 1, metaphase 1, anaphase 1, and telophase 1, while meiosis 2 has prophase 2, metaphase 2, anaphase 2, and telophase 2. 
+Cytokinesis plays a role in meiosis, too; however, as in mitosis, it is a separate process from meiosis itself, and cytokinesis shows up at a different point in the division. 
+
+Meiosis 1 vs Meiosis 2
+
+In meiosis 1, a germ cell divides into two diploid cells (halving the number of chromosomes in the process), and the main focus is on the exchange of similar genetic material (e. g. , a hair gene; see also genotype vs phenotype). 
+In meiosis 2, which is quite similar to mitosis, the two diploid cells further divide into four haploid cells. 
+
+An overview of the process and phases of meiosis
+
+Stages of Meiosis 1
+
+The first meiotic phase is prophase 1. 
+As in mitosis, the nuclear membrane dissolves, chromosomes develop from the chromatin, and the centrosomes push apart, creating the spindle apparatus. 
+Homologous (similar) chromosomes from both parents pair up and exchange DNA in a process known as crossing over. 
+This results in genetic diversity. 
+These paired up chromosomes—two from each parent—are called tetrads. 
+
+In metaphase 1, some of the spindle fibers attach to the chromosomes' centromeres. 
+The fibers pull the tetrads into a vertical line along the center of the cell. 
+
+Anaphase 1 is when the tetrads are pulled apart from each other, with half the pairs going to one side of the cell and the other half going to the opposite side. 
+It is important to understand that whole chromosomes are moving in this process, not chromatids, as is the case in mitosis. 
+
+At some point between the end of anaphase 1 and the developments of telophase 1, cytokinesis begins splitting the cell into two daughter cells. 
+In telophase 1, The spindle apparatus dissolves, and nuclear membranes develop around the chromosomes that are now found at opposite sides of the parent cell / new cells. 
+
+Stages of Meiosis 2
+
+In prophase 2, centrosomes form and push apart in the two new cells. 
+A spindle apparatus develops, and the cells' nuclear membranes dissolve. 
+
+Spindle fibers connect to chromosome centromeres in metaphase 2 and line the chromosomes up along the cell equator. 
+
+During anaphase 2, the chromosomes' centromeres break, and the spindle fibers pull the chromatids apart. 
+The two split portions of the cells are officially known as "sister chromosomes" at this point. 
+
+As in telophase 1, telophase 2 is aided by cytokinesis, which splits both cells yet again, resulting in four haploid cells called gametes. 
+Nuclear membranes develop in these cells, which again enter their own interphases. 
+
+Cellular Biology
+
+Both mitosis and meiosis are studied by scientists generally by using a microscope to identify and classify chromosomal patterns and relationships within a cell’s structure. 
+An understanding of the way cells synthesize chromosomes for reproduction can be applied in biomechanics and nanotechnology. 
+Transplantation of genes and chromosomes through injection and implantation is used to experiment with bioengineering and cloning. 
+A primary hope is that understanding the process by which cells replicate will lead to improved medical outcomes and perhaps even cures. 

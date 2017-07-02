@@ -1,0 +1,40 @@
+Units provide mobility and violence.
+There are four types of units.  
+Military units are used for defense and attack.  
+Noncombatants are used for expanding a civilization.  
+Diplomatic units are used for interacting with other civilizations. 
+Trade units are used for economic purposes.  
+
+Supporting units is a major expense.  
+Each unit consumes 1 production point per turn.  
+Settlers consume 1 or 2 food points per turn, depending on your form of government.  
+Autocratic governments force cities to support several units for free.  
+This saves production points for other purposes.
+
+Under representative governments, aggressive units standing outside your borders each cause 1 or 2 workers to become unhappy.  
+This makes war quite expensive under representative government, since luxury points must be produced to mollify the citizens as well as the production points needed to support the units.
+
+A unit begins each turn with a number of movement points.
+The number of movement points a unit has depends on the unit's mobility.
+Movement points negatively depend on the damage of a unit.  
+Movement points not consumed by the end of the turn are lost and cannot be stored or transferred.  
+Building a lighthouse, Magellan's expedition, or nuclear power increases the movement points of sea units.
+units consumes movement points when they act.  
+Actions require at least one movement point.
+
+Units can potentially move to any of the eight tiles that surround them. 
+Land units are confined to land and transport vessels. 
+Ships are confined to water and port cities.  
+Aircraft ignore terrain. 
+Aircraft need to end their turns in places where they can refuel.  
+A unit consumes 1 movement point per action.
+Regardless of damage, units can always move one square.  
+Movement on rough terrain costs more movement points for land units.  
+Land units disembarking from ships lose all remaining movement points.
+
+Enemy units impose zones of control.  
+A zone of control consists of the 8 squares surrounding a unit. 
+Military units and noncombatants cannot move directly between two squares in a zone of control.  
+
+Land units can move instantly from one airport to another in a friendly city with the airlift action.  
+An airport can participate in only 1 airlift per turn.

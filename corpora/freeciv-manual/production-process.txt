@@ -1,0 +1,6 @@
+Production is a process.
+Production is done by a city.
+Production results in some product.
+Production can take multiple turns to complete.
+Production accumulates excess production points of a city.
+When production progress equals the cost of the product, the process is finished.

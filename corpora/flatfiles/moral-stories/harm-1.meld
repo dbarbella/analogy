@@ -1,0 +1,267 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: harm-1.meld
+;;;;    System: Companions
+;;;;    Author: Joe Blass
+;;;;   Created: August 27, 2015 14:03:41
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate: 2015-08-31 14:55:24 -0500 (Mon, 31 Aug 2015) $
+;;;;  $LastChangedBy: blass $
+;;;; ---------------------------------------------------------------------------
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter harm-1
+                      (TheList
+                       (SourceTextChapterParagraphFn harm-1 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn harm-1 1 1)
+ "Jon hit David.
+The hit was harm.")
+
+(listOfParasInChapter harm-2
+                      (TheList
+                       (SourceTextChapterParagraphFn harm-2 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn harm-2 1 1)
+ "Eleanor hit Robert.
+The hit was harm.")
+
+(listOfParasInChapter harm-3
+                      (TheList
+                       (SourceTextChapterParagraphFn harm-3 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn harm-3 1 1)
+ "Anthony stole David's wallet.
+The stealing was harm.")
+
+(listOfParasInChapter harm-4
+                      (TheList
+                       (SourceTextChapterParagraphFn harm-4 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn harm-4 1 1)
+ "Sarah stole Jane's car.
+The stealing was harm.")
+
+(listOfParasInChapter harm-5
+                      (TheList
+                       (SourceTextChapterParagraphFn harm-5 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn harm-5 1 1)
+ "Jennifer attacked Marcus.
+The attacking was harm.")
+
+(listOfParasInChapter harm-6
+                      (TheList
+                       (SourceTextChapterParagraphFn harm-6 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn harm-6 1 1)
+ "Tobias attacked Joan.
+The attacking was harm.")
+
+
+(in-microtheory (MicrostoryMtFn harm-1))
+(genlMt (MicrostoryMtFn harm-1) MicrostoryMt)
+
+(isa jon54722 Person)
+
+(isa david54791 Person)
+
+(isa hit54725 HittingAnObject)
+
+(performedBy hit54725 jon54722)
+
+(objectActedOn hit54725 david54791)
+
+(isa hit54725 HarmingAnAgent)
+
+
+
+(in-microtheory (MicrostoryMtFn harm-2))
+(genlMt (MicrostoryMtFn harm-2) MicrostoryMt)
+
+(isa eleanor54958 Person)
+
+(isa robert55027 Person)
+
+(isa hit54965 HittingAnObject)
+
+(performedBy hit54965 eleanor54958)
+
+(objectActedOn hit54965 robert55027)
+
+(isa hit54965 HarmingAnAgent)
+
+
+
+(in-microtheory (MicrostoryMtFn harm-3))
+(genlMt (MicrostoryMtFn harm-3) MicrostoryMt)
+
+(isa jamie55222 Person)
+
+(isa anthony55193 Person)
+
+(isa wallet55237 Wallet)
+
+(isa steal55198 Stealing)
+
+(possessiveRelation jamie55222 wallet55237)
+
+(isa steal55198 GainingUserRights)
+
+(toPossessor steal55198 anthony55193)
+
+(objectOfPossessionTransfer steal55198 wallet55237)
+
+(doneBy steal55198 anthony55193)
+
+(isa steal55198 HarmingAnAgent)
+
+
+
+(in-microtheory (MicrostoryMtFn harm-4))
+(genlMt (MicrostoryMtFn harm-4) MicrostoryMt)
+
+(isa jane55393 Person)
+
+(isa sarah55364 Person)
+
+(possessiveRelation jane55393 car55408)
+
+(isa car55408 Automobile)
+
+(isa steal55369 Stealing)
+
+(isa steal55369 GainingUserRights)
+
+(toPossessor steal55369 sarah55364)
+
+(objectOfPossessionTransfer steal55369 car55408)
+
+(doneBy steal55369 sarah55364)
+
+(isa steal55369 HarmingAnAgent)
+
+
+
+
+(in-microtheory (MicrostoryMtFn harm-7))
+(genlMt (MicrostoryMtFn harm-7) MicrostoryMt)
+
+(isa michael55823 Person)
+
+(isa jeremy55275 Person)
+
+(possessiveRelation michael55823 food63409)
+
+(isa food63409 Food)
+
+(isa steal56299 Stealing)
+
+(isa steal56299 GainingUserRights)
+
+(toPossessor steal56299 jeremy55275)
+
+(objectOfPossessionTransfer steal56299 food63409)
+
+(doneBy steal56299 jeremy55275)
+
+(isa steal56299 HarmingAnAgent)
+
+
+
+(in-microtheory (MicrostoryMtFn harm-5))
+(genlMt (MicrostoryMtFn harm-5) MicrostoryMt)
+
+(isa jennifer55535 Person)
+
+(isa marcus55572 Person)
+
+(isa attack55538 AttackOnObject)
+
+(performedBy attack55538 jennifer55535)
+
+(objectAttacked attack55538 marcus55572)
+
+(isa attack55538 HarmingAnAgent)
+
+
+
+(in-microtheory (MicrostoryMtFn harm-6))
+(genlMt (MicrostoryMtFn harm-6) MicrostoryMt)
+
+(isa joan55740 Person)
+
+(isa tobias55703 Person)
+
+(isa attack55706 AttackOnObject)
+
+(objectAttacked attack55706 joan55740)
+
+(performedBy attack55706 tobias55703)
+
+(isa attack55706 HarmingAnAgent)
+
+
+;;;; test cases to infer harm
+
+(in-microtheory (MicrostoryMtFn infer-harm-1))
+(genlMt (MicrostoryMtFn infer-harm-1) MicrostoryMt)
+
+(isa leonard55819 Person)
+
+(isa clifton55820 Person)
+
+(isa hit54919 HittingAnObject)
+
+(performedBy hit54919 leonard55819)
+
+(objectActedOn hit54919 clifton55820)
+
+
+
+(in-microtheory (MicrostoryMtFn infer-harm-2))
+(genlMt (MicrostoryMtFn infer-harm-2) MicrostoryMt)
+(isa carl55343 Person)
+
+(isa theodore55489 Person)
+
+(isa bag55950 Bag)
+
+(isa steal55230 Stealing)
+
+(possessiveRelation carl55343 bag55950)
+
+(isa steal55230 GainingUserRights)
+
+(toPossessor steal55230 theodore55489)
+
+(objectOfPossessionTransfer steal55230 bag55950)
+
+(doneBy steal55230 theodore55489)
+
+
+
+(in-microtheory (MicrostoryMtFn infer-harm-3))
+(genlMt (MicrostoryMtFn infer-harm-3) MicrostoryMt)
+
+(isa tracy55818 Person)
+
+(isa josh55819 Person)
+
+(isa attack55712 AttackOnObject)
+
+(objectAttacked attack55712 tracy55818)
+
+(performedBy attack55712 josh55819)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

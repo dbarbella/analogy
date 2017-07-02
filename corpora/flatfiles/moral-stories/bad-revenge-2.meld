@@ -1,0 +1,97 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Bad-Revenge-Two
+                      (TheList
+                       (SourceTextChapterParagraphFn Bad-Revenge-Two 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Bad-Revenge-Two 1 1)
+ "Thomas was a person. 
+James was a person. 
+Thomas disliked James. 
+Because of the disliking, Thomas insulted James. 
+The insulting hurt James's feelings. 
+The insulting was morally wrong. 
+Because Thomas insulted James, James hit Thomas . 
+The hitting was morally wrong. ")
+
+(in-microtheory (ScenarioMtFn Bad-Revenge-2))
+(genlMt (ScenarioMtFn Bad-Revenge-2) MoralDMRulesMt)
+
+;; SLIGHTLY TAILORED TO RESOLVE THE ACTORS PROPERLY
+
+(isa thomas44379 Person)
+
+(isa james44415 Person)
+
+(dislikes-Generic thomas44379 james44415)
+
+(isa insult44566 InsultingSomeone)
+
+(denotesRelation-Underspecified dislike44536 dislikes-Generic)
+
+(causes-ThingSit dislike44536 insult44566)
+
+(isa hurt44703 HarmingAnAgent)
+
+(doneBy hurt44703 insult44566)
+
+(maleficiary hurt44703 feeling44890)
+
+(isa feeling44890 FeelingAttribute)
+
+(possessiveRelation james44415 feeling44890)
+
+(causes-EventEvent insult44566 hit45300)
+
+(isa hit45300 HittingAnObject)
+
+(objectActedOn hit45300 thomas44379)
+
+(performedBy hit45300 james44415)
+
+(isa insult44566 MorallyWrongEvent)
+
+(isa hit45300 MorallyWrongEvent)
+
+;;; ORIGINAL OUTPUT
+
+;;;(isa thomas44379 Person)
+;;;
+;;;(isa james44415 Person)
+;;;
+;;;(dislikes-Generic thomas44451 james44486)
+;;;
+;;;(isa insult44566 InsultingSomeone)
+;;;
+;;;(isa feeling44890 FeelingAttribute)
+;;;
+;;;(possessiveRelation james44814 feeling44890)
+;;;
+;;;(isa insult45042 InsultingSomeone)
+;;;
+;;;(causes-EventEvent insult45244 hit45300)
+;;;
+;;;(isa insult45244 InsultingSomeone)
+;;;
+;;;(isa hit45300 HittingAnObject)
+;;;
+;;;(objectActedOn hit45300 thomas45371)
+;;;
+;;;(performedBy hit45300 james45295)
+;;;
+;;;(isa hit45449 HittingAnObject)
+;;;
+;;;(denotesRelation-Underspecified dislike44536 dislikes-Generic)
+;;;
+;;;(causes-ThingSit dislike44536 insult44566)
+;;;
+;;;(isa hurt44703 HarmingAnAgent)
+;;;
+;;;(doneBy hurt44703 insult44566)
+;;;
+;;;(maleficiary hurt44703 feeling44890)
+;;;
+;;;(isa insult44566 MorallyWrongEvent)
+;;;
+;;;(isa hit45300 MorallyWrongEvent)

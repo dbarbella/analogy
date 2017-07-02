@@ -1,0 +1,1 @@
+An aqueduct allows a city to grow larger than size 8.  A sewer system is also required for a city to grow larger than size 12. An aqueduct is a requirement for building a sewer system.  Aqueducts cost 60 to build, and require 2 for upkeep.  To build a bank requires the technology of construction.

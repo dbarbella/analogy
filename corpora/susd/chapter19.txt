@@ -1,0 +1,147 @@
+19. AIR-HEATING SOLAR SYSTEMS
+
+So far we've only discussed hydronic, or water-heating, solar
+energy systems. It's also practical to let solar radiation heat air
+instead of water. An air-heating solar collector is very similar to
+the water-heating collectors we've already learned about. Air,
+instead of water, is forced past solar-heated surfaces.
+
+Most air-heating solar collectors are made with an
+absorber surface with air ducts instead of water ducts attached
+to the back side. As in a water-heating collector, glazing prevents 
+heat loss from the black absorbing surface. An inlet duct
+lets air be blown into one side of the collector, and an outlet
+duct lets it flow out the other side. Insulation prevents heat loss
+from the sides and back of the air duct.
+
+After solar radiation passes through the glazing, it is
+absorbed by the black absorbing surface. Some heat is lost by
+natural convection and radiation from the absorbing surface,
+depending on how hot it gets-as in a water-heating solar collector.
+What is not lost flows by conduction through the absorbing
+surface to the air duct where it flows by forced convection
+into the airstream and is transported to storage.
+
+In air-heating solar collectors, lots of surface area must
+be exposed to the airstream. Often the back side of the absorbing
+surface has many fins, as do liquid-to-air heat exchangers
+and baseboard heaters. Heat conducted through the metal
+absorbing surface is conducted along the fins. With lots of fin
+surface exposed to the air in the ducts, solar heat can easily flow
+by convection into the airstream.
+
+Storage for an air-heating system is a rockbed-a closed
+container of crushed rocks, each about the size of an egg. As the
+hot air flows through the crevices in the rockbed, it gives up its
+heat to the rocks. The rocks heat up and the air cools. If much
+smaller rocks are used, it's hard for the air to flow through the
+crevices; if much larger rocks are used, they don't heat up thoroughly.
+Heat in the rockbed stratifies; the rocks higher up are
+hotter than those near the bottom of the bed. Air coming from
+the bottom of the rockbed is cooler than the solar-heated air
+entering the top.
+
+Functionally, the air-heating system works almost
+exactly the same as a water-heating system does. Solar heat is
+transmitted through the glazing and is absorbed by the black
+absorbing surface. The heat is conducted from the absorber surface 
+and convected by air flowing through air ducts. Similarly, in
+a hydronic system, heat is also conducted from the absorber
+surface but is convected by water pumped through tubes. In
+both types of collector, heat is lost from the absorbing surface
+by means of radiation and convection, depending on how hot
+the surface gets. The heat that isn't lost is transported to
+storage by either air or water. As in a water-heating system,
+storage increases in temperature as heat is added. Cooler air
+(rather than cooler water) is blown (rather than pumped) back to
+the collector. Efficiency-the fraction of the incoming solar
+radiation going to storage-still depends on the collector temperature:
+a hot collector gives low efficiency and a cool collector
+gives high efficiency.
+
+As in a water-heating system, a controller detects when
+the temperature of the air leaving the solar collector is hotter
+than the air entering it. The controller turns on the fan when heat
+can be extracted from the sun, and it turns it off at night or on
+cloudy days when no useful solar heat is available.
+
+All in all, air-heating systems function much the way
+water-heating systems do. In fact, the systems are so similar
+that the rainwater analogy can represent both. However, although 
+they are functionally similar, there are important differences
+in the design of the two types of systems.
+
+One way solar air-heating collectors differ from water-heating
+ones is in temperature rise. Temperature rise is the difference
+between how hot the air is going into the collector and
+how hot it is coming out. Since air doesn't transport heat as well
+as water does, air flowing through a collector tends to heat up
+more. If the same amount of air and water were flowing into their
+respective collectors at the same temperature, the air would
+come out hotter than the water. If the air comes out hotter, then
+the average collector temperature would be hotter too-and a
+hot collector means low efficiency.
+
+Fortunately, air-heating systems don't have low efficiency,
+since the air blowing into them is cooler. Because of the
+stratified effect mentioned earlier, air flowing into the collector
+comes from the rockbed fairly cool. Cool air entering the solar
+collector tends to lower the collector's temperature and to
+improve efficiency. The improvement due to the cool inlet of air
+from the rockbed offsets the reduced efficiency of a big temperature
+rise through the collector: the air starts off cooler but gets
+hotter. The net effect is that an air-heating system is just as efficient
+as a water-heating system.
+
+What are the advantages and disadvantages of using an
+air-heating system? Generally, air systems are best for house
+heating, while hydronic systems can be used for house heating,
+hot-water heating, and pool heating. Although it is possible to
+make an air-heating hot-water heater or pool heater (using an
+air-to-liquid heat exchanger), it is usually too costly to be
+practical.
+
+For house heating, an air-heating system won't spring a
+leak and ruin your rug as a water-heating system might do.
+Leaks in hydronic systems can be caused by corrosion of metal
+collectors and pipes or by freezing, as we'll see later. Leaks in
+air-heating systems won't ruin your rug, but they can mean a big
+loss in efficiency. Unless air leaks in ducts and collectors are
+carefully sealed, heat can easily leak away. If there are air leaks,
+they are very hard to detect.
+
+But the greatest advantage of an air-heating system is
+that no freezing or boiling precautions must be taken. Water in a
+hydronic system can freeze, rupturing a solar collector's water
+carrying passages. Since almost everywhere in the United States
+except Hawaii, southern California, and southern Florida have
+occasional freezing weather, hydronic systems must have some
+type of freeze protection. Antifreeze is often added to the water
+as protection against freezing, or drain-down systems can be
+installed to drain the water from the collector at night to prevent
+it from freezing.
+
+Water can also boil in a hydronic solar collector if it gets
+too hot. It probably won't boil while the pump is running, since
+the water pumped through the collector keeps it relatively cool.
+But if the pump breaks down or the electricity goes out, the collector 
+can get very hot. Stagnation temperatures of 300° F and
+higher can occur on a bright, sunny day. To prevent the collector
+water from boiling, chemicals like glycol can be added, or the
+system can be set up to drain the collector automatically if the
+pump stops working. In any event, freezing and boiling precautions
+can add expense and complication to a solar heating
+system that an air-heating system doesn't entail.
+
+What about the disadvantages of air-heating systems?
+There are some. First, an air-heating system tends to use more
+electricity driving its fans than a hydronic system does driving
+its pumps. Second, the ducts needed to transport the heat from
+the solar collector to the storage tank and then from storage to
+the rest of the house can be much bulkier than the piping in a
+hydronic system. Also, the bulky ducts are generally more
+expensive to install than are the pipes.
+
+Now that we've looked at solar energy systems that use
+pumps or fans to transport heat from collector to storage, let's
+look at some systems that are truly solar powered.

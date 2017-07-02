@@ -1,0 +1,1 @@
+analogy_string_list = [['is', 'like', 'a'], ['analogous'], ['analogy']]

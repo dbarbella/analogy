@@ -1,0 +1,11 @@
+Inertia - The property of things to resist changes in motion.
+
+Newton's first law of motion (the law of inertia) - Every object continues in a state of rest or of uniform speed in a straight line unless acted on by a nonzero net force.
+
+Force - In the simplest sense, a push or a pull.
+
+Net force - The vector sum of forces that act on an object.
+
+Mechanical equilibrium - The state of an object or system of objects for which there are no changes in motion. In accord with Newton's first law, if at rest, the state of rest persists. If moving, motion continues without change.
+
+Equilibrium rule - For any object or system of objects in equilibrium, the sum of the forces acting equals zero. In equation form, (SIGMA)F = 0.

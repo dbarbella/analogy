@@ -1,0 +1,11 @@
+1. C, B, A
+
+2. D, B, A, C
+
+3a. B, A, C, D
+
+3b. B, A, C, D
+
+4a. Air and ice friction are negligible, therefore they are all equal.
+
+4b. C, B, A

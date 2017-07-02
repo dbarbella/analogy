@@ -1,0 +1,31 @@
+Cities require food every turn.
+The food required in a city depends on the size of the city.
+The size of a city is the number of its citizens.
+The food required in a city depends on the number of citizens.
+The food required in a city depends on the number of settlers.
+
+Citizens consume two food points per turn.
+The food consumption of settlers depends on the government.
+Under anarchy, despotism, monarchy, and communism, settlers consume one food point per turn.
+Under republic and democracy, settlers consume two food points per turn.
+
+Cities produce food.
+The rate of food production depends on the number of citizens working.
+The rate of food production depends on the terrain being worked.
+Most terrain produces less than two food points per turn.
+Some terrain produces more food points because that terrain has special properties.
+Irrigating a place increases food production.
+
+Every city has a storage capacity.
+If the rate of food production is greater than food required, storage occurs.
+When storage occurs in a city, the amount of food stored increases. 
+If the rate of food production is less than food required, the difference is drawn from food stored.
+Starvation occurs if the food stored would become negative.
+During starvation, settlers die first, followed by citizens, until the food stored would be zero.  
+
+When the amount of food stored in a city becomes full, the population grows by one citizen.
+The growth causes the amount of food stored in the city to become empty. 
+Building a granary in a city increases its growth rate.
+With a granary in a city, the amount of food stored becomes half-full after growth.
+The amount of food stored in a city needed to reach full depends on the population of the city.
+This means that each new citizen is more costly than the last.

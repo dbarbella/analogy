@@ -1,0 +1,6 @@
+The brick has mass.
+The tub contains 5 liters of water.
+The pressure in the cylinder is increasing.
+As the temperature of the steam rises, the pressure in the boiler increases.
+Heat flows from the hot brick to the cool ground.
+The heat flows from the hot brick. The heat flows to the cool ground.  

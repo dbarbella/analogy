@@ -1,0 +1,82 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Good-Revenge-Five
+                      (TheList
+                       (SourceTextChapterParagraphFn Good-Revenge-Five 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Good-Revenge-Five 1 1)
+"Robert was a person.
+Jane was a person.
+Donald was a person.
+Robert was Jane's husband.
+Donald stole Jane's wallet.
+The theft was morally wrong.
+Because Donald stole Jane's wallet, Robert hit Donald.
+The hitting was morally right.")
+
+;;; close!
+;;; still have issues with possessives (Jane's husband -> (possessiveRelation Jane Robert))
+;;; doesn't get the coreference on "Because X, Y", where X has been stated already
+;;; one of the words (stealing?) leads to an extra set of parens around the interpretation
+;;; not reflected below
+;;;Discourse-3645283104-54973
+;;;Universe: steal55156 wallet55195 be55259 steal55241 steal55445 hit55506 wallet55484 be55684 hit55666 
+;;;
+;;;(drsForDiscourse Discourse-3645283104-54973)
+;;;
+;;;(isa robert54976 Person)
+;;;
+;;;(isa jane55012 Person)
+;;;
+;;;(isa donald55048 Person)
+;;;
+;;;(possessiveRelation jane55097 robert55084)
+;;;
+;;;(wife robert55084 jane55097)
+;;;
+;;;(possessiveRelation jane55180 wallet55195)
+;;;
+;;;(isa wallet55195 Wallet)
+;;;
+;;;((DrsCaseFn DRS-3645283187-55862))
+;;;
+;;;DRS-3645283187-55862
+;;;(objectOfPossessionTransfer steal55156 wallet55195)
+;;;
+;;;(isa steal55156 GainingUserRights)
+;;;
+;;;(toPossessor steal55156 donald55151)
+;;;
+;;;(isa steal55156 Stealing)
+;;;
+;;;(doneBy steal55156 donald55151)
+;;;
+;;;(isa steal55241 Stealing)
+;;;
+;;;(possessiveRelation jane55469 wallet55484)
+;;;
+;;;(isa wallet55484 Wallet)
+;;;
+;;;(causes-EventEvent steal55445 hit55506)
+;;;
+;;;(isa hit55506 HittingAnObject)
+;;;
+;;;((DrsCaseFn DRS-3645283187-55863))
+;;;
+;;;DRS-3645283187-55863
+;;;(isa steal55445 Stealing)
+;;;
+;;;(isa steal55445 GainingUserRights)
+;;;
+;;;(objectOfPossessionTransfer steal55445 wallet55484)
+;;;
+;;;(toPossessor steal55445 donald55440)
+;;;
+;;;(doneBy steal55445 donald55440)
+;;;
+;;;(performedBy hit55506 robert55501)
+;;;
+;;;(objectActedOn hit55506 donald55580)
+;;;
+;;;(isa hit55666 HittingAnObject)

@@ -1,0 +1,46 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: sew_heat.txt
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: February 18, 2010 17:23:14
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  modified: Thursday, February 18, 2010 at 17:27:36 by dmb843
+;;;; ---------------------------------------------------------------------------
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Simple English Wiki "Heat"
+;;; Retrieved & Formatted 2.18.10 17:25:00
+
+Heat is a form of energy.
+In thermodynamics, heat means energy which is moved between two things when one of them is hotter than the other.
+
+Heat is not the same as temperature.
+The temperature of an object is a measure of the average speed of the moving particles it is made from and the energy of the particles is called the internal energy.
+When an object is heated, its internal energy can increase to make the object hotter.
+The first law of thermodynamics says that the increase in internal energy is equal to the heat added minus the work done on the surroundings.
+
+Heat is a form of energy and not a physical substance.
+Heat has no mass.
+
+Heat can move from one place to another in different ways: Conduction, Convection and Radiation
+
+The measure of how much heat is needed to cause some change in temperature for a material is the specific heat capacity of the material.
+If the particles in the material are hard to move, then more energy is needed to make them move quickly, so a lot of heat will cause a small change in temperature.
+A different particle that is easier to move will need less heat for the same change in temperature.
+
+Specific heat capacities can be looked up in a table, like this one.
+
+Unless some work is done, heat moves only from hot things to cold things.
+
+Heat can be measured.
+That is, the amount of heat a thing has can be given a number.
+One of the units of measurement for heat is the joule.
+
+Heat is usually measured with a calorimeter, where the energy in a material is allowed to flow into nearby water, which has a known specific heat capacity.
+The temperature of the water is then measured before and after, and heat can be found using a formula.
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

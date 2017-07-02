@@ -1,0 +1,1 @@
+﻿Military units can affect city happiness.

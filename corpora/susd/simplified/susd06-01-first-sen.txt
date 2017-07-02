@@ -1,0 +1,2 @@
+The brick in the room stores heat.
+The bucket stores a volume of the water.

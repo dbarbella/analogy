@@ -1,0 +1,5 @@
+When the food production of a city increases, the city's rate of granary fill increases.
+When a city's food production decreases, the city's rate of granary fill decreases.
+When a city has a food surplus, the city's population increases.
+When a city's granary fills, the city's population increases.
+When the population of a city increases, the city's granary size increases.

@@ -1,0 +1,71 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Bad-Revenge-Four
+                      (TheList
+                       (SourceTextChapterParagraphFn Bad-Revenge-Four 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Bad-Revenge-Four 1 1)
+"Alexandra was a person.
+Eleanor was a person.
+Alexandra was Eleanor's friend.
+Eleanor revealed Alexandra's secrets.
+The reveal was morally wrong.
+Because Eleanor revealed Alexandra's secrets, Alexandra revealed Eleanor's secrets.
+The reveal was morally wrong.")
+
+(in-microtheory (ScenarioMtFn Bad-Revenge-4))
+(genlMt (ScenarioMtFn Bad-Revenge-4) MoralDMRulesMt)
+
+;;; HEAVILY EDITED
+(isa alexandra51392 Person)
+
+(isa eleanor51428 Person)
+
+(friends alexandra51392 eleanor51428)
+
+(isa reveal51521 RevealingInformation)
+
+(isa secret51572 Secret)
+
+(topicOfInfoTransfer reveal51521 secret51572) 
+
+(possessiveRelation alexandra51392 secret51572)
+
+(isa reveal51521 MorallyWrongEvent)
+
+(causes-EventEvent reveal51521 reveal51852)
+
+(isa reveal51852 RevealingInformation)
+
+(topicOfInfoTransfer reveal51852 secret51903)
+
+(isa secret51903 Secret)
+
+(possessiveRelation eleanor51428 secret51903)
+
+(isa reveal51852 MorallyWrongEvent)
+
+;;; RAW
+;;;
+;;;(isa alexandra51392 Person)
+;;;
+;;;(isa eleanor51428 Person)
+;;;
+;;;(possessiveRelation eleanor51477 alexandra51464)
+;;;
+;;;(friends alexandra51464 eleanor51477)
+;;;
+;;;(isa reveal51521 RevealingInformation)
+;;;
+;;;(isa secret51572 Secret)
+;;;
+;;;(possessiveRelation alexandra51553 secret51572)
+;;;
+;;;(isa reveal51621 RevealingInformation)
+;;;
+;;;(isa reveal51852 RevealingInformation)
+;;;
+;;;(isa secret51903 Secret)
+;;;
+;;;(possessiveRelation eleanor51884 secret51903)

@@ -1,0 +1,66 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: SUSD-ch-2-April2015.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: April 9, 2015 09:50:48
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+
+(listOfParasInChapter SUSD-02-April2015
+                      (TheList
+                       (SourceTextChapterParagraphFn SUSD-02-April2015 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-02-April2015 1 1)
+ "Understanding a solar heating system requires understanding heat. Understanding a solar heating system requires understanding a temperature. Sometimes, the heat is misunderstood. Sometimes, the temperature is misunderstood. The words have precise definitions.
+The heat differs from the temperature. The temperature can be measured directly with a thermometer. Directly measuring the heat is impossible. A hot object has a greater temperature. Heat is difficult to measure. The heat of an object depends on the temperature of the object. The heat of the object depends on the material of the object. The heat of the object depends on the size of the object.
+Unlike the temperature, the heat costs money. Heating a house requires buying heat from the utility company. You can buy heat from an oil company. You can buy heat from a gas company. You can buy heat from an electric company. Heat that is sent to a house costs money. Increasing the heat increases the bills. You do not buy the temperature. A high temperature means a hot house. The high temperature does not mean increased bills. Heat has value. The temperature does not have value. A solar heating system saves cash, if the solar heating system provides heat.
+The heat of an object is like the volume of the water in a cup. The temperature of the object is like the depth of the water in the cup. The depth of the water does not measure the volume of the cup. The volume affects the depth. A larger depth means a larger volume. Depth differs from volume. You can use a ruler to measure the depth of the water. Measuring the volume of the water requires a measuring cup. The temperature is like the depth, because it is easy to measure. The heat is like the volume, because it is measured indirectly.
+Considering cases elucidates the depth's relationship to the temperature. Considering cases elucidates the volume's relationship to the heat. The size of a can differs from the size of another can. The depth of water in the can equals the depth of water in the other can.
+Despite this, the bigger can holds a greater volume. Similarly, if a pan of dirt and another pan of dirt are cooked, the pan's temperature equals the other pan's temperature. Despite this, the bigger pan holds greater heat. The depth is identical, when the volume is different. The temperature is identical, when the heat is different.
+An object's heat equals another object's heat. The object's temperature differs from the other object's temperature. The heat of two warm bricks could equal the heat of one hot brick. Similarly, two cans can have identical volumes and different depths.
+The analogy helps in another way. When water pours out of a pitcher into a glass, volume flows from the pitcher to the glass. When a door opens on a cold day, heat flows from the house to the outdoors.
+Consider the flow of heat. Heat flows from one place to another place, because the place's temperature differs from the other place's temperature. A hot brick leaks heat to a cool room. The heat escapes until the temperature difference disappears. The flow of the heat stops, when the brick's temperature equals the room's temperature. 
+Similarly, a can of water leaks volume from a hole in the side of the can. The water's depth exceeds the hole's height. This pushes volume through the hole. Eventually, the leak of volume stops. This happens, when the water's depth equals the hole's height. Because the depth difference disappears, the leak of the volume stops. A temperature difference is like a depth difference. The temperature difference causes heat to flow. The depth difference causes volume to flow. When the temperature difference disappears, the flow of the heat stops. When the depth difference disappears, the flow of the volume stops.
+Volume flows down. Volume flows from a high depth to a low depth. A thin can and a wide can are connected by a tube. The depth of the can differs from the depth of the other can. Volume flows to the lower depth. The thin can has less volume than the wide can. Despite this, volume flows toward the can with the low depth. The depth causes the flow. The volume does not cause the flow. 
+Similarly, the heat flows down. The heat flows from a place with a high temperature to a place with a low temperature. If a hot stone is placed into a big pan of warm water, the heat flows from the stone to the water. The heat flows, because the stone is hot and the water is warm. The heat flows to the object with the lower temperature. The water has the lower temperature. The big pan of water has more heat than the hot little stone. Despite this, the heat flows from the stone to the water. The temperature causes the flow of the heat. The amount of the heat does not cause the flow of the heat. The heat is like the volume. The volume flows down to low depths. The heat flows down to low temperatures. A depth difference causes the volume to flow. Similarly, a temperature difference causes the heat to flow. The flow of the heat at cold temperatures is similar to the flow of the heat at hot temperatures.
+You could think that this is strange. Consider a situation. A frozen chicken leaves a freezer. The frozen chicken is placed into a refrigerator. The chicken warms. The chicken is in the cold refrigerator, but the heat flows into the chicken. Because the chicken is colder than the refrigerator, the heat flows into the chicken. This causes the chicken to warm. If the chicken is placed into a hot oven, the heat flows into the chicken. The heat flows until the chicken's temperature equals the oven's temperature. The flow of the heat depends on the temperature difference between the chicken and the chicken's environment. The flow of the heat does not depend on the temperature of the environment.")
+
+
+(listOfParasInChapter SUSD-02-April2015-second
+                      (TheList
+                       (SourceTextChapterParagraphFn SUSD-02-April2015-second 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-02-April2015-second 1 1)
+ "Despite this, the bigger can holds a greater volume. Similarly, if a pan of dirt and another pan of dirt are cooked, the pan's temperature equals the other pan's temperature. Despite this, the bigger pan holds greater heat. The depth is identical, when the volume is different. The temperature is identical, when the heat is different.
+An object's heat equals another object's heat. The object's temperature differs from the other object's temperature. The heat of two warm bricks could equal the heat of one hot brick. Similarly, two cans can have identical volumes and different depths.
+The analogy helps in another way. When water pours out of a pitcher into a glass, volume flows from the pitcher to the glass. When a door opens on a cold day, heat flows from the house to the outdoors.
+Consider the flow of heat. Heat flows from one place to another place, because the place's temperature differs from the other place's temperature. A hot brick leaks heat to a cool room. The heat escapes until the temperature difference disappears. The flow of the heat stops, when the brick's temperature equals the room's temperature. 
+Similarly, a can of water leaks volume from a hole in the side of the can. The water's depth exceeds the hole's height. This pushes volume through the hole. Eventually, the leak of volume stops. This happens, when the water's depth equals the hole's height. Because the depth difference disappears, the leak of the volume stops. A temperature difference is like a depth difference. The temperature difference causes heat to flow. The depth difference causes volume to flow. When the temperature difference disappears, the flow of the heat stops. When the depth difference disappears, the flow of the volume stops.
+Volume flows down. Volume flows from a high depth to a low depth. A thin can and a wide can are connected by a tube. The depth of the can differs from the depth of the other can. Volume flows to the lower depth. The thin can has less volume than the wide can. Despite this, volume flows toward the can with the low depth. The depth causes the flow. The volume does not cause the flow. 
+Similarly, the heat flows down. The heat flows from a place with a high temperature to a place with a low temperature. If a hot stone is placed into a big pan of warm water, the heat flows from the stone to the water. The heat flows, because the stone is hot and the water is warm. The heat flows to the object with the lower temperature. The water has the lower temperature. The big pan of water has more heat than the hot little stone. Despite this, the heat flows from the stone to the water. The temperature causes the flow of the heat. The amount of the heat does not cause the flow of the heat. The heat is like the volume. The volume flows down to low depths. The heat flows down to low temperatures. A depth difference causes the volume to flow. Similarly, a temperature difference causes the heat to flow. The flow of the heat at cold temperatures is similar to the flow of the heat at hot temperatures.
+You could think that this is strange. Consider a situation. A frozen chicken leaves a freezer. The frozen chicken is placed into a refrigerator. The chicken warms. The chicken is in the cold refrigerator, but the heat flows into the chicken. Because the chicken is colder than the refrigerator, the heat flows into the chicken. This causes the chicken to warm. If the chicken is placed into a hot oven, the heat flows into the chicken. The heat flows until the chicken's temperature equals the oven's temperature. The flow of the heat depends on the temperature difference between the chicken and the chicken's environment. The flow of the heat does not depend on the temperature of the environment."
+ )
+
+(listOfParasInChapter SUSD-02-April2015-micro
+                      (TheList
+                       (SourceTextChapterParagraphFn SUSD-02-April2015-micro 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn SUSD-02-April2015-micro 1 1)
+ "Despite this, the bigger can holds a greater volume.")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

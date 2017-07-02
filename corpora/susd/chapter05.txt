@@ -1,0 +1,108 @@
+5. RADIATION AND TRANSPORT
+
+Radiation heat flow is very similar to convection heat flow in
+many ways. Radiation heat flows from surfaces, as does convection
+heat flow. Radiation is also similar to convection in
+another basic way: the bigger the surface is, the more heat flows
+from the surface. Most surfaces lose heat by both radiation and
+convection, and it's sometimes hard to separate the two kinds of
+heat flow. For instance, the example used to illustrate convection-
+a cooling bowl and a cooling mug of soup-applies
+equally to radiation. The bowl loses heat quickly by both
+convection and radiation because the bowl has a bigger surface
+area. Some of the heat flow from both the bowl and the mug
+takes place by means of convection, and some by radiation.
+
+However, radiation differs significantly from convection,
+especially with regard to solar energy. One big difference is that
+convection depends on a liquid or gas flowing by the surface.
+With radiation heat flow, the heat leaves the surface even if there
+is no gas or liquid around. In the vacuum of space, where no gas
+or liquid exists, heat flows from a space satellite only by radiation.
+Radiation heat flow is often called infrared radiation. Infrared
+film, for example, is sensitive to radiation heat flow; it is
+used to photograph heat leaving objects by radiation. We'll learn
+more about radiation heat flow when we discuss solar radiation-
+a kind of radiation heat flow that comes from the sun.
+
+A second important difference between radiation and
+convection is that radiation heat flows from a surface in straight
+lines. If you put your hand to the side of a heating coil on an
+electric range, you would feel the warmth of the radiation heat
+flow. But if you put a book or even a piece of paper between the
+coil and your hand, it would block the radiation heat flow. Likewise,
+if you're sitting in front of a fire, the radiation heat flow
+from the embers is blocked if someone sits in front of you.
+
+As with all heat flow, radiation heat flow depends on
+temperature difference. The important temperature difference is
+that which the surface sees. In the case of the bowl, the soup's
+surface sees the temperature of its surroundings (the room), so
+the important temperature difference is that between the soup
+and the room. In the case of the hand, the skin's surface "sees"
+the coil, so the important temperature difference is that between
+the skin and the coil.
+
+Shiny surfaces play a role in radiation heat flow because
+they reflect radiation. For example, a thermos bottle is "silvered"
+to reflect back any heat that the hot soup inside might
+lose by radiation. This trick keeps the soup hot longer. Fiberglass
+batting used to insulate houses also has a shiny reflecting
+surface to keep heat in.
+
+Radiation heat flow, then, is much like convection in one
+way: heat flows from surfaces at a rate depending on the size of
+the surface. But unlike convection, radiation heat flow travels in
+straight lines and can be very easily blocked from flowing. In
+addition, radiation heat flow can be affected by how shiny the
+surface is, whereas convection cannot.
+
+Finally, let's discuss transport heat flow. Heat flow via a
+flowing gas or liquid is somewhat different from conduction,
+convection, and radiation. Suppose you wanted to heat up a cup
+of coffee by adding more hot coffee to it. When you add the
+coffee you're also adding heat, since the hot coffee has heat
+stored in it. Heat is physically transported from the pot to the
+cup by transferring a certain amount of hot coffee from the pot
+to the cup.
+
+In most transport heat flow, the flowing gas or liquid
+moves continuously, not just for a short time, as in the example
+of the coffee and cup. To understand this, think again of the
+example of a house losing heat through its chimney. In this
+case, the flowing medium which transports the heat is a gas-mostly
+hot air. But for as much hot air that goes up the chimney,
+there must be as much cold air that comes in from outside to
+replace it. The cold air isn't so obvious because it leaks in
+through cracks in the walls, windows, and doors. Nevertheless,
+as much cold air leaks in as hot air leaves. The air, then, moves
+continuously: it enters in through the cracks, is heated by the
+fire, and flows out through the chimney. As in conduction, convection,
+and radiation, the amount of heat flow depends on the
+temperature difference. In this case, the important temperature
+difference is that between the incoming airflow and the outgoing
+airflow-the temperature of the hot air going out the chimney
+minus that of the cold air leaking in through the cracks in the
+house.
+
+Transport heat flow depends on two other factors besides
+temperature difference. One is how fast the gas or liquid is
+flowing, and the other is what the flowing medium is. To better
+understand the first factor, suppose your house were heated by
+hot-water radiators. Hot water flows in one end and out the
+other end; how fast it flows depends on how wide you open the
+valve. To get lots of heat out of the radiator, you open the valve
+so that lots of hot water will flow through the radiator. If you
+don't want much heat, you close the valve so that little hot water
+will flow into the radiator; it, in turn, will add little heat to the
+room.
+
+The second factor in transport heat flow is the flowing
+medium itself. Air and water are the two most important heat
+transfer mediums used in solar heating systems today. The key
+difference is the volume needed. In this respect, water is a much
+better heat transfer medium than air. More than a thousand
+times more air than water is needed to transport the same
+amount of heat. Fans are often used to transport heated air,
+while heated water is generally moved by pumps.
+

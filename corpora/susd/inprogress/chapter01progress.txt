@@ -1,0 +1,260 @@
+I. INTRODUCTION AND ECONOMICS
+
+*The sun has been giving energy to the earth for millions of years.
+The sun gives energy to the earth.
+
+
+*Sunlight shining down on plants eons ago was the major cause of the coal, oil, and natural gas we use as fuels today.
+In the past, sunlight hit vegetation.
+This created fuel.
+In the present, humanity uses the fuel. 
+
+
+*These fuels are called fossil fuels because they are the products of fossils of dead plants.
+The fuel is a fossil fuel, because the fuel is made of dead plants. 
+
+* A similar source of solar energy used today is called biomass;
+* this term refers to the use of the sun's energy to grow plants which can be used for fuels and other purposes.
+Solar energy hits vegetation.
+This causes the growth of the vegetation.
+The vegetation turns into a fuel.
+This is biomass energy. 
+
+* For example, wood used in fireplaces is a form of biomass solar energy.
+Wood for a fireplace is biomass energy.
+
+* Researchers are working on other ways to grow plants for use as energy.
+Researchers try to grow new vegetation for energy. 
+
+
+* Seaweed is being grown and harvested for methane production (a gas-like natural gas),
+* and trees are being grown for use in power plants to generate electricity.
+Researchers grow seaweed for production of methane.
+Researchers grow trees for production of electricity.
+
+
+*The sun also has a major impact on wind and ocean currents.
+The sun impacts wind currents.
+The sun impacts ocean currents. 
+
+
+* Different parts of the earth's surface are heated differently by the sun,
+* causing circulating currents in both the oceans and the atmosphere.
+The sun unevenly heats the earth.
+This creates currents in the ocean.
+
+
+* Ocean currents are rivers of cold or warm water which can be tapped to run power plants;
+* someday, these currents may be used to produce electricity.
+A current is a river in the ocean.
+The current makes electricity.
+
+
+* Winds have been used for centuries to power pumps and to grind grain.
+Wind powers a pump.
+Wind grinds grain.
+
+* The sun's radiation may also be used directly to provide either electricity or heat;
+* it is used directly as it comes raining down through the atmosphere rather than indirectly by making plants grow or causing wind or ocean currents.
+Solar radiation directly provides electricity.
+Solar radiation directly provides heat.
+
+
+
+* Solar cells convert sunlight directly to electricity.
+A solar cell directly transforms sunlight into electricity. 
+
+
+* These cells are usually made of silicon (a mineral used in the transistors which run radios and pocket calculators).
+The solar cell is made of silicon.
+
+
+* Many of the space satellites circling the earth today are powered by solar cells.
+A solar cell powers a satellite.
+
+
+* Since solar cells are very expensive in terms of the amount of electricity they provide,
+* their use to date has been mostly to provide power for remote weather stations where the cost of
+* bringing in power lines would be prohibitive;
+Because a solar cell is expensive, it is used to power weather stations.
+Because the weather stations are remote, a power line are expensive.
+
+* another application has been in powering remote railroad-crossing lights and ocean buoys.
+A solar cell powers a traffic light.
+A solar cell powers a buoy.
+
+* Heating is the other example of direct use of the sun.
+The sun directly heats objects.
+
+* You've probably experienced the heating effects of solar energy
+* when walking barefoot on a tarred road on a hot, sunny day.
+Sunlight increases the temperature of a road.
+
+* The heat produced by solar energy can be used to power turbines to
+* generate electricity, or it can be used to heat buildings or water.
+Solar energy produces heat.
+The heat powers a turbine.
+The turbine makes electricity.
+The heat heats buildings.
+The heat heats water.
+
+
+* One system now being developed to generate electricity uses hundreds of mirrors which focus the sun's rays on a central tower;
+* a boiler on the tower gets very hot and produces steam, driving a turbine that generates electricity.
+A new system is developing.
+The system uses an array of mirrors.
+The array reflects sunlight onto a tower.
+A boiler is on the tower.
+The sunlight heats the bucket.
+The bucket produces steam.
+The steam powers a turbine.
+The turbine makes electricity.
+
+
+
+* Although the sun's position changes from morning to evening, the mirrors move to
+* let the sun's reflection focus on the tower.
+* Systems like these are called tracking because they follow the sun from sunrise to
+* sundown.
+Because the array angles towards the sun, the system is a tracking system.
+
+
+
+* Even if a solar energy system isn't designed to follow the sun, the sun's heat can still be captured.
+* Solar heating systems which aren't of the tracking kind are called flat-plate systems.
+A fixed solar heating system also captures sunlight.
+An immobile solar heating system is a flat plate system. 
+
+* In comparison to tracking systems, they are not very sophisticated,
+* but almost all of the solar energy systems in use today are of the flat-plate variety.
+A flat plate system is simpler than a tracking system.
+A flat plate system is more frequent than a tracking system.
+
+* Over a million flat-plate systems are now in operation, mostly in countries with hot, sunny climates
+* such as Israel and Australia.
+A flat plate system is common in a sunny country. 
+
+
+* The most common use for such systems is to heat water, but it is also practical to use them to warm a house in winter.
+A flat plate system usually heats water.
+A flat plate system also heats a house in winter.
+
+
+* Since flat-plate systems are the simplest and most widely used methods of using solar energy
+* today, we will investigate them in detail.
+
+* But first it is important to understand why solar energy has just recently begun to be a
+* practical means of providing direct heating.
+
+* If sunlight is free, why hasn't solar energy been used
+* before to heat houses and produce electricity? The following
+* example will help you understand why.
+
+
+
+
+
+
+
+
+* Let's suppose you owned a gold mine that contained only very low-grade gold ore.
+A man owns a mine.
+A gold mine contains poor ore.
+
+* You would have to do a lot of digging before you got even a little gold.
+Mining gold requires digging much.
+
+* If you bought some expensive mining equipment, you could process much more of the low-grade ore and get more gold.
+Processing the ore requires expensive mining equipment.
+Acquiring the gold requires processing the ore.
+
+* Thus, even though the gold itself is free, it would be very costly to get very much of it out of the mine.
+The gold is free, but acquiring the gold is expensive.
+
+
+* You would have to balance the cost of the mining equipment against how much
+* money you'd get when you sold your gold. If the gold were very
+* valuable and the mining equipment relatively cheap, it might be
+* worthwhile to dig up the gold. But if the equipment were expensive
+* and the gold not very valuable, you'd be better off to leave it
+* in the ground.
+Acquiring the gold benefits the man, if the gold possesses great value.
+Acquiring the gold benefits the man, if the mining equipment possesses only a little value.
+Acquiring the gold harms the man, if the gold possesses little value.
+Acquiring the gold harms the man, if the mining equipment possesses only a great value.
+
+* Many gold mines in Utah that have only low-grade ore were closed down years ago;
+* some have recently reopened because the price of gold has increased enough to make
+* mining it worthwhile.
+A gold mine in Utah closes, if the gold possesses only a little value.
+The gold mine opens, if the gold possesses great value.
+
+* Solar energy is like the low-grade ore.
+Solar radiation is like the poor ore.
+
+
+*The sun's rays must be "mined," or collected,
+Acquiring solar energy requires collecting the solar radiation.
+
+
+* and then transformed into useful heat or electricity before they are worth anything.
+Using the solar energy requires transforming the solar energy into electricity.
+
+
+* A solar energy system helps you get "free" solar energy, just as the mining
+* equipment helps you get "free" gold.
+The solar collector collects the solar energy.
+Similarly, the mining equipment collects the gold.
+
+
+* But, like mining equipment, a solar energy system can be very expensive-perhaps 
+* more than the sun's energy is worth.
+The solar collector is expensive.
+The solar collector is more expensive than the solar radiation.
+
+* If conventional energy is expensive-that is, if the cost of
+* heating by using fossil fuels and electricity goes up-then it
+* might be worth the expense to install a solar energy system. But
+* if these forms of energy are cheap, then the cost of installing a
+* solar energy system would probably be too expensive. Simply
+* put, the cost of the solar energy would come to more than the
+* value of the energy it could collect from the sun.
+The solar heating system saves cash, if electricity possesses great value.
+The solar heating system wastes cash, if electricity possesses only a little value. 
+
+
+* Just as many gold mines in Utah were shut down when it became too costly to
+* mine their gold, many solar hot-water heaters used in Florida
+* and California during the 1950s were shut down when the cost of
+* electricity was so cheap.
+The gold mine in Utah closes, if the gold mine wastes cash.
+Similarly, a solar heating system in Florida closes, if electricity possesses only a little value.
+
+
+
+* Recently the cost of heating by gas, oil, and electricity has risen so much that solar energy systems
+* are once again worthwhile, much as the Utah gold mines have
+* once again become profitable because of the rise in the price of
+* gold.
+Because gold now possesses great value, the gold mine in Utah makes cash.
+Similarly, electricity now possesses great value.
+Because the electricity possesses great value, the solar heating system saves cash. 
+
+* A solar energy system can be thought of as "mining" sunlight.
+The solar collector collects sunlight. It is like mining equipment.
+
+* If mining equipment is simple and rugged, it will give many years of service before it must be replaced.
+* But mining equipment can't be too expensive or it will make mining low-grade ore unprofitable.
+Mining poor ore wastes cash, if the mining equipment possesses great value.
+The mining equipment possesses longevity, if the mining equipment possesses simplicity. 
+
+* Like mining equipment, solar energy systems must be simple, rugged, and low in cost so that they
+* will give many years of service without making the sunlight that they "mine" unprofitable.
+Similarly, if the solar collector possesses simplicity, the solar collector possesses longevity. 
+
+
+* This is why the flat-plate collector solar system is being used so much today in countries such as
+* Japan, Israel, and Australia: It is a very simple, rugged system whose cost is low enough to make the use of solar energy
+* worthwhile.
+Because the flat plate system possesses simplicity, the flat plate system saves cash.
+

@@ -1,0 +1,7 @@
+A city produces food.
+A granary has food.
+A settler requires food.
+A citizen requires food.
+Adding a granary in a city increases its city food production.
+Adding a harbor in a city increases its city food production.
+Adding a supermarket in a city increases its city food production.

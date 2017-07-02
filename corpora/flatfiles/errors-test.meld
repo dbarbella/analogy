@@ -1,0 +1,42 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: errors-test.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: July 10, 2015 02:37:39
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+
+(listOfParasInChapter Errors-Test
+                      (TheList
+                       (SourceTextChapterParagraphFn Errors-Test 1 1)
+                       (SourceTextChapterParagraphFn Errors-Test 1 2)
+                       
+                       ))
+
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Errors-Test 1 2)
+ "Cat sleeps"
+ )
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Errors-Test 1 1)
+ "The cat of of of sleeps."
+ )
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

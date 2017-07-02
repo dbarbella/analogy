@@ -1,0 +1,6 @@
+Adding a granary in a city increases its growth rate. 
+Adding a research lab in a city increases its science output.
+Adding a library in a city increases its science output.
+Adding a university in a city increases its science output.
+Irrigating a place increases food production.
+Mining a place increases its shield production.

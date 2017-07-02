@@ -1,0 +1,47 @@
+Every city produces at least one production point per turn.
+The production points required in a city depend on the number of units in the city.
+These units include military units, settlers, workers, and engineers.
+The production point consumption of units is one production point per turn.
+Under some governments, a few units are supported for free.
+If the city's production points are less than the production points required, a unit is disbanded.
+Extra production points are consumed by the process of building a product.
+
+Cities can build units, buildings, or wonders. 
+When the amount of production points used in creating a product reaches the cost of the product, that product is complete.
+Products appear in their city when complete.
+Completed units appear on the map.
+Completed buildings are added to the city's list of structures.
+Completed wonders are added to the city's list of structures.
+Any extra production points after something is completed are applied towards the next project.
+Each city can have only one of each type of building.
+ Some buildings require that another is built first.
+Each wonder can only be completed by one civilization per game.
+If you produce units or buildings that you cannot support, they will be disbanded immediately after completion.
+Building a settler consumes one citizen, in addition to production points.
+If a city builds a settler with its last citizen, that city will disband when the settler is completed.
+
+The product a city is building can be changed on any turn.
+The accumulated production points are used towards the new product.
+Switching products during construction can be costly.
+No points are lost in switching between different types of units, different types of buildings, or different wonders.
+Otherwise, half of the accumulated production points are lost.
+
+You can spend gold to complete a project in one turn.
+The purchase cost of the product depends on the total production needed.
+As the accumulated production of the city rises, the purchase cost of the product falls.
+
+Wonders cost more to purchase than other types of products.
+Cities can be directed to produce gold instead of other products.
+A city producing gold will create one gold piece per turn for each production point it generates.
+Some building types enhance production.
+Building types that enhance production are Factory, Power Plant, Hydro Plant, Offshore Platform, Nuclear Plant, Manufacturing Plant.
+Each city can have only one building that is a power plant.
+
+By default, new cities start working on the best available defensive units.
+When a city completes a unit, by default it starts working on another unit of the same type.
+After completing a building or a wonder, by default a city starts working on a different type of building or wonder.
+
+It is useful to classify your cities based on their terrain properties.
+It is also useful to classify your cities based on how you intend to use them in your civilization.
+Some cities might be built to provide defenses of your borders.
+Some cities might be focused on research or on economic output.

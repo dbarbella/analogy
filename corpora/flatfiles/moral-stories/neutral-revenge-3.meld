@@ -1,0 +1,38 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Neutral-Revenge-Three
+                      (TheList
+                       (SourceTextChapterParagraphFn Neutral-Revenge-Three 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Neutral-Revenge-Three 1 1)
+"Lewis was a person.
+Gerald was a person.
+Lewis pretended to shoot Gerald.
+The pretending was morally neutral.
+Because Lewis pretended to shoot Gerald, Gerald pretended to punch Lewis.
+The pretending was morally neutral.")
+
+
+;;; "pretending to X" is not properly ontologized
+;;; with the last sentence, recomputing using EAGeneralQueriesMt fails
+;;; without it, here is the output:
+;;;Universe: pretend35616 pretend35943 pretend35790 
+;;;
+;;;(drsForDiscourse Discourse-3645280930-35538)
+;;;
+;;;(causes-EventEvent pretend35790 pretend35943)
+;;;
+;;;(isa lewis35541 Person)
+;;;
+;;;(isa gerald35577 Person)
+;;;
+;;;(isa pretend35616 Pretending)
+;;;
+;;;(performedBy pretend35616 lewis35613)
+;;;
+;;;(causes-EventEvent pretend35616 pretend35616)
+;;;
+;;;(performedBy pretend35616 gerald35937)
+;;;
+;;;(performedBy pretend35616 lewis35787)

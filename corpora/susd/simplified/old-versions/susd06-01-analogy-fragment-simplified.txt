@@ -1,0 +1,13 @@
+The brick in the room stores heat.
+The bucket stores a volume of the water.
+Storing the heat is like storing the volume.
+The volume of the water that the bucket stores depends on the depth of the water.
+Similarly, the heat that the brick stores depends on the temperature of the brick.
+A solar heating system heats a house, if the heat is stored at a high temperature.
+The heat is useful, if a material's temperature is higher than the room's temperature.
+The value of the volume of the water in the bucket rises, if the volume of the water reaches above the valve.
+If the volume of the water falls below the valve, the value of the volume of the water falls.
+The heat that the brick stores depends on a quantity of the brick.
+If the brick's quantity increases, the brick stores much heat.
+If the bucket's size increases, the bucket stores much water.
+If the size of the bucket decreases, the bucket stores little water. 

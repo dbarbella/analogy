@@ -1,0 +1,21 @@
+Technology
+
+Through the game you and your opponents will race to discover ever more powerful technologies, which enhance your own civilizations while menacing those of each other. A few advances provide immediate benefits, such as making new actions available to your units; many introduce new units or buildings you can construct; and most are also gateways to further technology. Beware that some advances also make things obsolete. While obsolete units merely become impossible to make, leaving the ones you have already made intact, obsolete buildings are immediately sold, and obsolete wonders lose their effect. Worse yet, your wonders can be obsoleted by an advance made by another player! 
+
+There are a few ways to gain advances from other civilizations: you will sometimes discover enemy technology when you capture a city; you can steal advances with Diplomats and Spies; the Great Library wonder, while it lasts, gives its owner every advance that two other civilizations have reached; and another player might grant technology in the terms of a pact. But otherwise advances must be discovered through the efforts of your own people. 
+
+By default, each player starts without any technology at all (this can be changed with a server option). From there you each direct your research toward one advance at a time, deciding which technology you need most quickly and which you can afford to attain later. Research progress is measured in research points (bulbs), which can be generated both through trade and by scientists. The cost for each technology is fixed and depends on the number of its 'parent techs'.  
+
+Instead of selecting each new advance manually, you can establish a long-term goal that is several technologies away, and your scientists will work through all the prerequisite advances automatically. If you ignore technology completely then your scientists choose the next advance on their own. 
+
+You can ask the game for a report on your science progress, or simply watch the lightbulb on the client which gets brighter as the next advance nears. The online help system displays a very helpful technology tree for every item and technology in the game, allowing you to explore the advances they require.
+
+The Space Race 
+
+As described in the overview with which this manual opened, the game may be won peacefully by building a spacecraft and becoming the first civilization to reach Alpha Centauri. One civilization must start the space race by completing the Apollo Program wonder, which allows every civilization with the necessary technology to begin building spacecraft components: Space Module, Space Structural, and Space Component.  The Space Module requires the Superconductor technology.  It costs 320 and its upkeep is 0.  The Space Structural requires the Space Flight technology.  It costs 80 and its upkeep is 0.  The Space Component requires the Plastics technology.  It costs 160 and its upkeep is 0.  
+
+The skeleton of your spacecraft consists of structural components, each of which can hold in place either a component or module. Components provide fuel and propulsion systems, and decrease the amount of time your craft will require to reach Alpha Centauri; you can install up to sixteen, though they must be installed in pairs. Modules themselves come in three flavors: a habitation module provides living space for ten thousand colonists; a life support module can keep ten thousand colonists alive; and a solar panel provides the power required by any two other modules. 
+
+Use the spaceship window to observe your progress as you build your spacecraft. You may manufacture spacecraft elements anywhere with a factory; they will automatically be assembled in your capital city. As you add components you improve the craft's probability of success and travel time; you may launch as soon as you find these satisfactory. If several civilizations are building spacecraft, they are faced with the decision of whether to launch quickly and start their craft on its way, or continue building in the hopes of launching a faster spacecraft later, or one with a higher probability of success.
+ 
+Both during construction and after its launch, the spacecraft is considered a building of your capital city, and will be lost if your capital is taken or destroyed. 

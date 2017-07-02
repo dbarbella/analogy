@@ -1,0 +1,362 @@
+
+To make a quick, uncomplicated weather forecast, look out the window.
+If the visibility is 15 miles and there's not a cloud in the sky, you can bet it's not 
+going to rain in the next 30 minutes, says William Bonner; an authority on forecasting 
+with the University Corporation for Atmospheric Research in Boulder; Col. But if just 
+over the horizon, 45 miles away, there's a squall line moving along at 40 mph, one hour 
+from now you can get a lot of rain.
+Many people, especially in past centuries, studied clouds and winds and were 
+sometimes able to say what the next day's weather would be like.
+But for good forecasts you need to look farther than over the horizon, and you need 
+to know more about the atmosphere than clouds and winds alone can tell. Bonner says 
+that if you think in terms of how far you have to see to forecast the weather, a view of 
+most of North America is needed to say what's likely tomorrow on the East Coast.
+To have any hope of a good forecast for three days from now you need a view of the 
+weather all over the Northern Hemisphere. A good five-day forecast requires a view of 
+the weather across the whole Earth, Bonner says.
+Technology, such as weather radar or satellite pictures, expands the weather horizon. 
+A radar set shows a squall line as much as 200 miles away and helps measure how fast 
+and in what direction it's moving. Satellites can show storms all over the world.
+
+More needed than a weather view
+New observational tools, such as Doppler radar and proposed new satellites, will 
+make that view more detailed. But even the best view of worldwide weather doesn't give 
+enough information to make a sure prediction of tomorrow's weather.
+There are too many things going on. Imagine that a storm heading your way is like a 
+bowling ball heading down the alley for the pins. In a regular bowling lane, you could set 
+up sensors to measure the exact path and speed of the hall as it leaves the bowler's hand 
+and feed the data into a computer program in a few basic laws of physics written as 
+mathematical equations and before the ball is halfway down the lane, the computer could 
+say which pins are likely to be knocked down.
+But this is the Weather Bowling Lane where the ball's motion can change the lane 
+itself, point it in a totally different direction. The ball can knock down pins three lanes 
+over. And the ball can grow or shrink as it rolls along. How do you predict all that? And 
+yet that is simple compared to what is needed for a weather forecast.
+Earlier in this book we looked at the building blocks of weather forecasting:
+? How the sun heats the Earth unequally, forming warm and cold air masses
+? How air-pressure differences cause winds
+? How the Earth's rotation and friction change the winds
+? How water's phase changes add or take heat away from the air
+All of these actions, plus the possible interactions among them, go into making the 
+weather. All are condensed into mathematical equations and programmed into weather 
+forecasting computers.
+This complexity is part of the reason why forecasters, even with global data and 
+powerful computers, can produce only a few accurate forecasts for as far as seven days 
+ahead.
+
+Producing skilled forecasts
+No one can predict the detailed, day-by-day weather more than a week ahead. In fact, 
+forecasting skill generally drops off quickly after three or four days. Anyone who claims 
+to be able to predict a year in advance, say that June 21 will be rainy while the 22nd will 
+be sunny, is pulling your leg.
+Meteorologists describe forecasts as skilled or unskilled. A skilled forecast is one 
+that does better than methods such as flipping a coin, forecasting that the weather will be 
+the same as the 30-year average for a particular day or predicting that a day's weather will 
+be the same as yesterday's weather. That's called a persistence forecast.
+For example, you could run up a respectable forecasting score in the summer in Los 
+Angeles by using persistence. A forecast for no rain and a high in the 80s would work 
+day after day. Enough unskilled forecasts that take normal conditions into account - no 
+July snowstorms for Los Angeles - can add up to what seems like a respectable score of 
+50 or 60 percent correct.
+Scientific forecasters don't merely add up the number of times they're correct. They 
+see how their forecasts compare to various kinds of unskilled forecasts. Success requires 
+doing better than the unskilled forecasts.
+For more than seven days ahead, the best forecasters can do now is offer odds of the 
+weather being average or some comparison to average - hotter; colder; drier or wetter 
+than average for a period such as a week, a month or a season. These forecasts don't try to 
+say what each particular day will be like.
+Scientists have good reason to believe that despite improvements in observations, 
+computers and computer models, detailed forecasts for much more than two weeks ahead 
+never will be possible. We'll see why at the end of this chapter when we look at the role 
+of chaos in the atmosphere.
+
+Computers move into forecasting
+When Ronald McPherson joined the National Weather Service in 1959 - it was then 
+the Weather Bureau - the operations manual prohibited us from issuing forecasts beyond 
+36 hours. You could issue an outlook for another day. Now we issue forecasts for five 
+days and an outlook for six to 10 days. All of that came about largely because of 
+numerical weather prediction.
+Numerical forecasting means using mathematical equations to predict the weather, a 
+job that can be handled only by the world's most powerful computers. In the United 
+States this is done at the National Meteorological Center in Camp Springs, Md., which is 
+at the heart of weather forecasting in the United States. Ronald McPherson is its director.
+Since coming to the NMC in 1968, McPherson has seen computers grow more 
+powerful, allowing for improvements in the computer models used for forecasting. This, 
+along with improved observation systems, has led to better forecasts.
+The key to computer forecasting in the United States is the National Meteorological 
+Center's Cray YMP-832 super-computer, which is able to handle about two billion 
+operations a second.
+Drawings on Pages 174 and 175 show in general how the center's computers work 24 
+hours a day, seven days a week digesting weather information from around the world and 
+producing forecasts.
+The Cray's output is sent out in the form of about 20,000 different kinds of text and 
+around 6,000 graphics, mostly maps, each day. NMC forecasts go to local National 
+Weather Service offices, other government agencies and private meteorologists, 
+including those at television stations and airlines, and other nations, especially those in 
+the Western Hemisphere. The material includes discussions by NMC meteorologists 
+comparing how a day's run of the computer models compares to previous runs and how 
+the models compare to each other.
+These interpretations help other forecasters make their predictions.
+
+Producing local forecasts
+NMC predictions are meant for forecasters; they would be of little use to most 
+people. In addition to maps and text describing general weather patterns around the 
+world, NMC also supplies local Weather Service offices with information about what the 
+big weather patterns imply for conditions at each Weather Service location.
+This information is used as the starting point for the local and regional forecasts - 
+from the Weather Service, private forecasting firms and your local TV weather report. If 
+you could watch the television weather in two cities at the same time, you'd be amazed at 
+how similar they are, McPherson says. They all do their own forecasts, but they all start 
+with our products.
+Each of the nation's weather forecast offices produces basic public forecasts, aviation 
+forecasts and, if any large bodies of water are in its area, marine forecasts. A primary 
+responsibility is alerting people in their areas to potentially dangerous weather, says Jim 
+Belville, the meteorologist in charge of the Sterling, Va., office about 30 miles west of 
+Washington, D.C. But, as Belville's career shows, each office has to tailor local 
+forecasting to its area.
+When he was at the Lubbock, Tex., office, Belville wanted to forecast perfectly for 
+the Texas Tech football games, big local events at a time of year when the weather 
+quickly can turn bitterly cold or kick up a blizzard.
+In New Orleans, he prepared special forecasts for the 28,000 people working on oil 
+rigs in the Gulf of Mexico, some as far as 200 miles from land. About 1,000 helicopter 
+trips are made each day to oil rigs. Their pilots need forecasts for wind speeds at the level 
+of the rig decks. Boats serving the rigs need to know when the waves will be over six feet 
+high, too rough for them to dock. And, of course, there was always the forecast for Mardi 
+Gras to worry about.
+In Washington, D.C., Belville says a normal week might include calls from the 
+White House, the Secretary of Commerce, four senators and the Air Force band - all 
+wondering what the weather will be like for ceremonies or for planned trips.
+Shortly before the president of South Korea was to arrive at the White House in 
+1991, a thunderstorm began moving across the Washington area. Officials worried about 
+lightning hitting the honor guard. Belville's office had a new lightning detection system 
+in place that produces a computer display of almost every bolt of lightning hitting the 
+ground. The office stayed in contact with the White House, giving them almost a stroke 
+by stroke account of the lightning and told them when the danger was past. The honor 
+guard took its place in time without having to worry about lightning.
+
+Doppler shows its stuff
+Probably the most promising, new weather observation and forecasting technology is 
+Doppler radar. Old weather radar showed the location, movement and strength of 
+precipitation. It also gave clues about the types of precipitation. Doppler does all that as 
+well as measuring wind speed and direction. In addition, the new Doppler radar uses 
+computer technology to indicate boundaries between cool and warm air. Doppler radar 
+can see a front coming, even when it's not kicking up any precipitation. It also can detect 
+winds in clear air.
+By the end of October 1991, the new Doppler radar in Sterling, Va., had shown off 
+its potential twice, doing things the forecasters hadn't expected.
+Saturday, Oct.19, 1991, the Washington, D.C., area was enjoying a beautiful, warm 
+day with the Potomac River and Chesapeake Bay crowded with boaters. Early in the 
+afternoon the Doppler radar picked up a warm-cool air boundary heading eastward.
+We began tracking the front about 30 minutes before it got to the office, Belville 
+says, and we had good wind velocities off the Doppler. We timed the movement and 
+issued a small-craft advisory for the tidal Potomac and Chesapeake Bay.
+Before the front arrived, the winds had been from the south at about 5 mph. Behind it 
+winds were 20 to 30 mph, kicking up three- and four-foot waves on the river and bay. It 
+was a very, very dangerous situation for small boats. They got notice an hour and a half 
+before the front got to them.
+Without the new radar, the forecasters would have had no idea about the sudden 
+wind shift until the front hit a weather station's wind instruments.
+The Saturday before, Belville says, we were sitting here at 6 o'clock in the evening, 
+looking at the Doppler wind profile when we started seeing the winds at the 1,000 foot 
+level begin to increase. They were very light, about six knots, at the surface. When the 
+winds reached 25 knots at 1,000 feet we reissued the terminal forecasts for Dulles, 
+(Washington) National and BWI (Baltimore-Washington International) airports calling 
+for low-level wind shear.
+Within an hour the 1,000-foot winds had reached 40 knots while the winds at the 
+ground were still only about 6 knots. We started getting a lot of pilot reports talking about 
+low-level wind shear. There were no thunderstorms, just a low-level jet.
+Meteorologists have known about such low-level jet streams on the Plains for years, 
+but the one detected by the Sterling, Va., radar was one of the first, well-documented 
+cases east of the Appalachians. It can be a real hazard, Belville said. Without the 
+Doppler, we would have had no idea it was happening until we started getting pilot 
+reports.
+
+
+The new world of local forecasting
+Sterling's Doppler radar is part of the NEXRAD (Next Generation Weather Radar) 
+network. It eventually will include 160 units, most of them operated by the National 
+Weather Service in and near the United States. It also will have a few units at overseas 
+military bases.
+The first NEXRAD units were put to work at three locations: at the Norman, Okla., 
+weather office, near the National Severe Storms Laboratory where Doppler weather radar 
+was developed; at Melbourne, Fla., for forecasting space shuttle and other rocket 
+launches at the Kennedy Spacecraft Center and at the Sterling, Va., office.
+While the NEXRAD radars are designed to track weather for an area stretching about 
+125 miles from its base antenna, another radar system is being installed at 45 major 
+airports around the country. These Doppler Weather Radars are being purchased by the 
+Federal Aviation Administration. Instead of keeping an eye on the big weather picture, 
+Terminal Doppler Weather Radars will watch closely for showers and thunderstorms 
+likely to produce downbursts at airports, especially the small, but sometimes deadly 
+microbursts discussed in Chapter 8. These radars, which are expected to cost about $340 
+million, are scheduled to be running at all 45 airports by the middle of 1994.
+New radars are just part of the planned Weather Service modernization. New 
+weather forecast offices will be located near 115 of the NEXRAD units. A one-year test 
+of the new system is expected in the central United States, beginning as early as 1993.
+Other technologies to be included in the new system are:
+? More data collection points. Automated Surface Observing Systems (ASOS) are 
+collections of automated weather instruments. About 1,000 are expected to provide 
+surface observations from places without observations now. They will replace human 
+observations at some weather stations.
+?	Improved satellites. The new Geostationary Operation Environmental Satellite 
+(GOES) will take photos of clouds at the same time it is collecting other information. 
+Today's satellites can do only one of these at a time. By doing both at the same time, the 
+new satellites will send information to forecasters more quickly. The new satellites 
+should be able to provide updates every six minutes when severe weather threatens.
+?	Aid in handling data. The Advanced Weather Interactive Processing System 
+(AWIPS) will help forecasters solve the problem of handling all of the data they receive. 
+The system will enable forecasters to combine various kinds of information and to 
+highlight areas of interest.
+?	Wind profilers. These are special radars that look straight up into the sky, 
+measuring wind speeds and directions every six minutes Instead of every 12 hours as 
+current weather balloons do.
+
+Other uses of the new systems
+The state of Oklahoma is using new, automated weather sensors as part of a much 
+wider environmental monitoring network called Mesonet, which it expects to have in 
+operation by the end of 1992.
+Since Oklahoma is in the heart of tornado country; it has been a center of research 
+into new forecasting techniques. Many of the new lands of weather sensors are being 
+installed first in Oklahoma and surrounding states.
+Oklahoma's Mesonet will include 107 automated stations, at least one in each of the 
+state's 77 counties. Every 15 minutes each station will measure temperature, humidity; 
+wind speed and direction, air pressure and precipitation - as well as the temperature of the 
+soil four inches below the surface. This data will go to a central computer in Norman, 
+Okla. Some stations also will measure the amount of solar radiation and soil temperatures 
+at other depths.
+Data will be transmitted over the Oklahoma Law Enforcement Telecommunications 
+System, which links all of the state's law enforcement agencies. This will not be a strain 
+on their system, says Ben Crawford, director of the Oklahoma Climatological Survey. 
+Every state has a similar system. All we're doing is tapping a resource that's available to 
+every other state. The total volume of data we will move in 24 hours is equal to one 
+lengthy rap sheet on a criminal.
+Crawford says the system will help anyone who needs up-to-the-minute information 
+including weather forecasters, highway departments and farmers.
+The extra sensors will add to the information avail-able to forecasters as they track 
+winter storms and the dangerous thunderstorms of spring and summer. Forecasters 
+tracking drought will have day-to-day updates on precipitation all over the state. In the 
+past, many volunteer weather observers, whose reports help track slow weather changes 
+such as drought, sent in reports only once a month.
+With Mesonet a farmer will be able to call up data on a computer and then use a 
+special program to decide when to apply crop pesticides. Temperatures and precipitation 
+over several weeks are keys to determining how many insects are likely to be eating 
+which crops.
+The data also will give detailed, current wind information that can make spraying 
+safer. Mesonet also should help farmers use irrigation water more efficiently, saving not 
+only water; but also fuel and money.
+Crawford asserts that the state's $2.7 million investment in getting the network 
+running should save at least that much in the first year of operation.
+He envisions data also being made available to schools across Oklahoma. It could 
+bring a new emphasis to science and math studies at the high school level, turn a few 
+more students to science. If nothing else, it will teach them more about the environment. 
+At best it could influence them to become scientists.
+
+Some likely forecasting changes
+By the middle of the 1990s, McPherson expects the Weather Service to be giving 
+probabilities for its forecasts five to seven days ahead. They would say things such as 
+there is a 70 percent probability that the temperature will be five to ten degrees above 
+normal. This would give people the idea that the most probable condition will be several 
+degrees above normal, but also tell them that there is uncertainty and indicate how much 
+faith the forecasters have in the prediction.
+Once people learn what the probabilities are, they could use them to help make 
+decisions. For instance, McPherson imagines the owner of a beach resort calling part-
+time employees in the middle of the week and telling them he won't need them for the 
+weekend, if the odds are 80 percent for a rainy weekend. But if the odds are only 50 
+percent for rain, the owner could say it looks like it might be a bad weekend, but be 
+available if you can, might need you. There are a lot of businesses that could be helped 
+by a skilled forecast that far ahead.
+McPherson also is looking for improvements in the 30-day and 90-day, or seasonal, 
+forecasts.
+While the forecasts for up to 10 days are made by computers using the laws of 
+physics that determine the weather, the 90-day forecasts are more statistical. They rely on 
+long-term climate records and correlations between weather patterns existing when the 
+forecast is made and how similar patterns have worked out in the past.
+In addition to using patterns of winds and air pressure, the forecasters also rely in 
+some cases on patterns of sea-surface temperatures. Researchers have found that warmer-
+or-cooler-than-normal sea-surface temperatures in some parts of the oceans are linked 
+with general patterns of weather in some areas. We'll look at one such link known as El 
+Nino in Chapter 12.
+Researchers are working on using a computer model that includes interactions 
+between the oceans and the atmosphere as part of the forecasts for 30 days and 90 days 
+ahead. It will get the physics into the seasonal forecast, McPherson says. We think it will 
+provide some useful guidance.
+
+The limits to forecasting
+In 1904, Vihelm Bjerknes (1862-1951) stated the basic idea behind using computers 
+to forecast weather:
+If we know enough about what the atmosphere is doing now and if we know the physical 
+laws that govern its movements, we can predict what will happen in the future. During 
+World War I, Lewis Fay Richardson (1881-1953) developed the key mathematical 
+concepts needed to forecast weather. But until the development of electronic computers 
+after World War II, scientists had no practical way to solve the equations.
+By the early 1950s, researchers working under John von Neumann and Jule Charney 
+at the Institute for Advanced Studies in Princeton, N.J., were making simple forecasts 
+with computers. These forecasts were showing promise and scientists had every reason to 
+expect their forecasts to become better as they improved their computers and learned 
+more about the atmosphere's laws.
+But even though scientists were learning more and the forecasts were getting better; 
+they weren't improving as fast as expected. They weren't keeping up with the growth in 
+knowledge and computer power.
+One of those looking into the problems of computer forecasts in the early 1960s was 
+Edward Lorenz, a theoretical meteorologist at the Massachusetts Institute of Technology 
+(MIT). He had intended to be a mathematician when he graduated from Dartmouth 
+College in 1938, but World War II made him an Army Air Corps weather forecaster. At 
+MIT after the war, he turned his attention to mathematical and theoretical problems 
+involving weather systems.
+Lorenz developed a set of equations to mimic some aspects of weather, without 
+being as complicated as the real atmosphere. He programmed them into a Royal McBee 
+computer and found they created changing patterns much like the weather's.
+One day in 1961, Lorenz decided to rerun some results from his computer model, but 
+instead of starting at the beginning, with original figures, he started about halfway 
+through by entering the numbers he had on a printout. Soon the computer's weather began 
+deviating from the first run. Eventually the two patterns hardly resembled each other. Yet 
+both had started from the same point.
+At first Lorenz thought something was wrong with the computer; but he soon 
+eliminated that possibility. Lorenz eventually found that a tiny difference in the numbers 
+fed to the computer made a big difference in the results. The computer took calculations 
+out to six decimal places, but printed them out only to three places. When Lorenz started 
+the new run at the halfway point, he programmed in numbers only to three decimal 
+places. This tiny change, for example the difference between 3.461453 and 3.461, was 
+enough to change the output drastically.
+The unexpected result showed that Lorenz's weather-like system had a sensitive 
+dependence on initial conditions. Tiny changes in the data eventually result in big 
+changes in the output.
+Lorenz says his results were like those being obtained by the University of Chicago 
+dishpan experiments that were attracting scientific attention at the time.
+In these, a pan is filled with water and put on a turntable. The center of the pan is 
+cooled while the rim is heated. Water in the cold center sinks and flows toward the rim 
+while warm water at the rim rises and flows toward the center. When the pan is rotated, 
+the moving water eventually develops wavy patterns resembling jet-stream winds.
+As the speed is increased, the water's movements begin flipping from one kind of 
+wavy pattern to another in no apparent order - just like real jet streams, the weather, and 
+the results Lorenz found in his computer's output.
+Lorenz's work was the beginning of the mathematical theory of chaos, which has 
+become important not only in meteorology but in most other sciences.
+The theory tells weather forecasters they can never expect to know all of the 
+conditions that will affect a prediction. As observations, computers and models are 
+improved, forecasts are getting better. But there always will be conditions on too small a 
+scale to be observed. If you try to forecast for a long enough period, these conditions 
+eventually will make the forecast diverge further and further from reality.
+Lorenz says that in the 1960s we knew we weren't making good forecasts. The 
+greatest practical use of these results was that they told us where to put our efforts. By 
+working on things that will give us improvements in shorter range forecasts, there's a 
+better likelihood we will break through. Today, meteorologists believe the ultimate limit 
+to detailed day-by-day forecasts is about two weeks.
+While chaos means we shouldn't hope for day-to-day forecasts for more than two 
+weeks, it doesn't mean we can't forecast anything about weather or climate weeks, 
+months or even years from now.
+If instead of day-to-day details, you're interested in average conditions, researchers 
+have good hope of making useful forecasts for coming seasons. As we'll see in Chapter 
+12, climate modelers expect to make years-long predictions about the climate.
+These hopes are reasonable because large-scale processes, not small details, 
+determine averages. Here's a simple example of how this works. If in the fall the ocean 
+near a city is 5 F warmer than normal, and if the wind usually blows from the ocean, the 
+winter should be warmer than normal. Oceans cool slowly and each winter day with an 
+ocean breeze will be warmer than normal. But this knowledge won't help forecast a 
+particular day's temperature more than a few days ahead.
+Astronomers, who don't have to worry about chaos in eclipse predictions, are sure 
+there will be a very long, total eclipse of the sun across the Caribbean on June 13, 2132. 
+If today's thinking about the limits chaos puts on forecasting are correct, the National 
+Weather Service of the 22nd century might be able to tell people a year ahead that the 
+summer of 2132 will be hot. But the San Juan, Puerto Rico, forecast office won't be able 
+to tell tourists where to find clear skies for the eclipse any earlier than two weeks ahead.
+

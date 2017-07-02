@@ -1,0 +1,221 @@
+;;;; -*-  Mode: LISP; Syntax: Common-Lisp; Base: 10                          -*-
+;;;; ---------------------------------------------------------------------------
+;;;; File name: SUSD-case-info.meld
+;;;;    System: 
+;;;;    Author: David Barbella
+;;;;   Created: May 29, 2014 20:58:24
+;;;;   Purpose: 
+;;;; ---------------------------------------------------------------------------
+;;;;  $LastChangedDate$
+;;;;  $LastChangedBy$
+;;;; ---------------------------------------------------------------------------
+
+(in-microtheory StoredSUSDCaseInfoMt)
+
+(interpretationOfWithRespectTo Dolphins-Feb-05-2015-01 (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn Reading-of-Dolphins-Feb-05-2015-01-020914-01))
+
+(interpretationOfWithRespectTo SUSD-Simplified-Dec2014-01 (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn Reading-of-SUSD-Simplified-Dec2014-03))
+
+(interpretationOfWithRespectTo SUSD-Simplified-Jan2015-01 (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn Reading-of-SUSD-Simplified-Jan2015-02))
+
+(interpretationOfWithRespectTo SUSD-Simplified-Dec2014-01-Miniature (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn Reading-of-SUSD-Simplified-Dec2014-01-Miniature-01))
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 1) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P1-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 2) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P2-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 3) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P3-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 36) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P36-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 4) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P4-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 5) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P5-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 55) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P55-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 6) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P6-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 7) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P7-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 8) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P8-121814-02-Auto))
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 9) (TheList EAGeneralQueriesMt) 
+                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P9-121814-02-Auto))
+
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P1-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P2-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P3-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P36-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P4-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P5-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P55-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P6-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P7-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P8-121814-02-Auto))
+(genlMt AllJustCorefByParaSUSD16-1218 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P9-121814-02-Auto))
+
+;;;;;;;;;;;;;; 
+;;;
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 1) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P1-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 2) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P2-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 3) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P3-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 36) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P36-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 4) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P4-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 5) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P5-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 55) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P55-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 6) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P6-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 7) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P7-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 8) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P8-120214-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 9) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P9-120214-01-Auto))
+;;;
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P1-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P2-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P3-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P36-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P4-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P5-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P55-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P6-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P7-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P8-120214-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P9-120214-01-Auto))
+;;;
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 1) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P1-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 2) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P2-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 3) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P3-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 36) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P36-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 4) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P4-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 5) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P5-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 55) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P55-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 6) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P6-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 7) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P7-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 8) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P8-112114-01-Auto))
+;;;(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-Nov2014-01 16 9) (TheList EAGeneralQueriesMt) 
+;;;                               (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P9-112114-01-Auto))
+;;;
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P1-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P2-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P3-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P36-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P4-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P5-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P55-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P6-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P7-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P8-112114-01-Auto))
+;;;(genlMt AllJustCorefByParaSUSD16-1125 (FactsFromReadingMtFn ReadingOf-SUSD-Nov2014-01-Ch16-P9-112114-01-Auto))
+
+
+;;;;;;;;;;;;;; Old ones
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 1) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P1-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 1) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P1-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 2) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P2-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 2) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P2-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 3) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P3-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 3) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P3-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 3.6) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P36-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 3.6) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P36-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 4) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P4-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 4) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P4-090114-01-CorefQR)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 5) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P5-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 5) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P5-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 5.5) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P55-090114-01-10-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 5.5) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P55-090114-01-10-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 6) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P6-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 6) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P6-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 7) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P7-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 7) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P7-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 8) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P8-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 8) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P8-090114-01-CorefQRMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 9) (TheList EAGeneralQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P9-090114-01-JustCorefMt)
+
+(interpretationOfWithRespectTo (SourceTextChapterParagraphFn SUSD-Simplified-May2014-01 16 9) (TheList EAGeneralQueriesMt QPInterpretationQueriesMt) 
+                               ReadingOf-SUSD-May2014-01-Ch16-P9-090114-01-CorefQRMt)
+
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P1-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P2-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P3-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P36-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P4-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P5-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P55-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P6-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P7-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P8-090114-01-JustCorefMt)
+(genlMt AllJustCorefSUSD16-0901 ReadingOf-SUSD-May2014-01-Ch16-P9-090114-01-JustCorefMt)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; End of Code

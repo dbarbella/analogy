@@ -1,0 +1,102 @@
+I have laid out the simplification process for each sentence, beginning with the starting form
+and following with a list of labeled transformations and the reasoning behind each. I have also 
+included notes on representation, reasoning, and roadblocks encountered along the way. This
+chapter deals with a lot of disproven beliefs about physics, who held those beliefs, who
+disproved them, and how they were disproven. Questions 1-8 deal with this.
+
+Aristotle on Motion
+
+1. Contrast Aristotle's concept of natural motion and Aristotle's concept of violent motion.
+- start with: Contrast Aristotle's ideas of natural motion and violent motion.
+- no coverage for "idea", substitute "concept". -> Contrast Aristotle's concepts of natural motion and violent motion.
+- distribute "Aristotle's concept of" -> Contrast Aristotle's concept of natural motion and Aristotle's concept of violent motion.
+
+2. Aristotle believed that the motion of the Moon was what kind of motion? Natural motion or violent motion?
+- start with: What class of motion, natural or violent, did Aristotle attribute to motion of the Moon?
+- move the aside to its own sentence fragment -> What class of motion did Aristotle attribute to motion of the Moon? Natural or violent?
+- no coverage for "class", substitute "kind" -> What kind of motion did Aristotle attribute to motion of the Moon? Natural or violent?
+- no coverage for "attribute to", substitute "believe" -> Aristotle believed that the motion of the Moon was what kind of motion? Natural or violent?
+- distribute "motion" across the fragment -> Aristotle believed that the motion of the Moon was what kind of motion? Natural motion or violent motion?
+- need a method to extract the choices from the sentence fragment and kick off a query for each.
+
+3. What state of motion did Aristotle attribute to Earth?
+- start with: What state of motion did Aristotle attribute to Earth?
+- "Earth" should be "the Earth" -> What state of motion did Aristotle attribute to the Earth?
+- note: even given a "best of all possible worlds" parse of this question and the chapter text that could provide the answer, question is vague and the answer is merely implied by the text. The question is best interpreted as "Did Aristotle believe that the Earth was moving?". The text only says that Aristotle's followers did not believe that the Earth was moving. Answering this question requires making the assumption that a person and their followers share the same beliefs. Otherwise it would be necessary to reason that Copernicus formulated the theory that the Earth moved, and since Copernicus came after Aristotle, Aristotle couldn't have believed that the Earth moved. Again, tricky.
+
+Copernicus and the Moving Earth
+
+4. What relationship between the Sun and the Earth did Copernicus formulate?
+- start with: What relationship between the Sun and Earth did Copernicus formulate?
+- "Earth" should be "the Earth" -> What relationship between the Sun and the Earth did Copernicus formulate?
+- note: chapter text says that the Earth and other planets "circle" the Sun, but there isn't a straightforward way to encode this. However, "orbit" and the relation (orbits ?x ?y) provide a compact representation we can use.
+- note: tricky. Need a frame for specifying that a generic relation holds between two arbitrary 
+things.
+
+Galileo and the Leaning Tower
+
+5. What did Galileo discover in his experiment on the Leaning Tower of Pisa?
+- start with: What did Galileo discover in his legendary experiment on the Leaning Tower of Pisa?
+- cull extraneous adjective "legendary" -> What did Galileo discover in his experiment on the Leaning Tower of Pisa?
+- added background facts about The Leaning Tower of Pisa.
+
+
+Galileo's Inclined Planes
+
+6. What did Galileo discover about moving bodies and force in his experiments with inclined planes?
+
+7. What does it mean to say that a moving object has inertia? Give an example.
+
+8. Is inertia the reason for moving objects maintaining motion or the name given to this property?
+
+Newton's First Law of Motion
+
+9. Cite Newton's first law of motion.
+- frame added for "cite"
+- the only place in the chapter where Hewitt uses the term "Newton's First Law of Motion" explicitly is in the summary of terms. It wouldn't be unreasonable to draw directly from that section.
+ 
+Net Force
+
+10. What is the net force on a cart that is pulled to the right with 100 pounds and to the left with 30 pounds?
+
+11. Why do we say that force is a vector quantity?
+
+The Equilibrium Rule
+
+12. Can force be expressed in units of pounds and also in units of Newtons?
+
+13. What is the net force on an object that is pulled with 80 Newtons to the right and 80 Newtons to the left?
+
+14. What is the net force on a bag pulled down by gravity with 18 Newtons and pulled upward by a rope with 18 Newtons?
+
+15. What does it mean to say something is in mechanical equilibrium?
+
+16. State the equilibrium rule in symbolic notation.
+
+Support Force
+
+17. Consider a book that weighs 15 Newtons at rest on a flat table. How many newtons of support force does the table provide? What is the net force on the book in this case?
+- start with: Consider a book that weighs 15 N at rest on a flat table. How many newtons of support force does the table provide? What is the net force on the book in this case?
+- for clarity, change references to "N" into "Newtons" -> Consider a book that weighs 15 Newtons at rest on a flat table.
+
+18. When you stand at rest on a bathroom scale, how does your weight compare with the support force by the scale?
+
+Equilibrium of Moving Things
+
+19. A bowling ball at rest is in equilibrium. Is the ball in equilibrium when it moves at constant speed in a straight-line path?
+
+20. What is the test for whether or not a moving object is in equilibrium?
+
+21. If you push on a crate with a force of 100 Newtons and it slides at constant velocity, how much is the friction acting on the crate?
+- start with: If you push on a crate with a force of 100 N and it slides at constant velocity, how much is the friction acting on the crate?
+- for clarity, change references to "N" into "Newtons" -> If you push on a crate with a force of 100 Newtons and it slides at constant velocity, how much is the friction acting on the crate?
+
+The Moving Earth
+
+22. What concept was missing in people's minds in the 16th century when they couldn't believe Earth was moving?
+
+23. A bird sitting in a tree is traveling at 30 km/s relative to the faraway Sun. When the bird drops to the ground below, does it still go 30 km/s, or does this speed become zero?
+
+24. Stand next to a wall that travels at 30 km/s relative to the Sun. With your feet on the ground, you also travel the same 30 km/s. Do you maintain this speed when your feet leave the ground? What concept supports your answer?
+
+25. What did Aristotle fail to recognize about the rules of nature for objects on Earth and in the heavens?

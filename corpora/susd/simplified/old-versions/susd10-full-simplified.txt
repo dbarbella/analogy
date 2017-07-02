@@ -1,0 +1,55 @@
+A solar heating system includes a solar collector.
+It includes a heat storage. 
+The solar collector captures solar radiation.
+The heat is then stored in the heat storage.
+The heat is moved from the heat storage to the house. 
+
+A solar collector is like a large net.
+Solar radiation hits the solar collector.
+The solar collector gathers the solar radiation. 
+
+A bucket is in a rain storm.
+A solar collector is like the bucket.
+The bucket collects rain; the solar collector collects solar radiation.
+Collecting the rainwater requires angling the bucket towards the rain.
+An open top of the bucket collects the rain. The top points towards the rain. 
+If the rain falls straight down, the top lies flat.
+If wind blows the rain, the top angles toward the rain. 
+Similarly, collecting the solar radiation requires pointing the solar collector towards the sun.
+
+A small shaft attaches to the solar collector.
+The shaft has a shadow.
+If the shadow is absent, then the solar collector is pointed toward the sun.
+
+The position of the sun changes, as the earth rotates. 
+At dawn, the sun rises in the east.
+At dusk, the sun sets in the west. 
+At noon, the sun is high in the sky.
+In the united states, the sun does not move overhead.
+
+A person faces south.
+The sun rises left of him.
+The sun moves through the sky.
+The sun sets right of him. 
+
+When the season changes, the position of the sun changes. 
+In the winter, the sun travels at a low height.
+In the winter, the sun travels at a high height.
+Because the sun travels at a high height in the summer, a shadow shrinks in the summer. 
+
+The solar collector is for collecting solar radiation. 
+However, the position of the sun changes, but the solar collector is stationary.
+The solar collector faces the south to collect maximum solar radiation. 
+
+A solar heating system for a house angles toward a low position.
+In the winter, the house needs heat.
+In the winter, the sun moves to a low position.  
+
+A solar heating system for a water heater angles toward a medium position.
+In the winter, the water heater needs heat.
+In the summer, the water heater needs heat.
+The medium position is a compromise.
+
+A solar heating system for a pool angles toward a high position.
+In the summer, the pool needs heat.
+In the summer, the sun moves to a high position. 

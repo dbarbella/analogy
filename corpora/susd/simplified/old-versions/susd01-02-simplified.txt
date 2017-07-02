@@ -1,0 +1,31 @@
+A man owns a mine.
+A gold mine contains poor ore.
+Mining gold requires digging much.
+Processing the ore requires expensive mining equipment.
+Acquiring the gold requires processing the ore.
+The gold is free, but acquiring the gold is expensive.
+Acquiring the gold benefits the man, if the gold possesses great value.
+Acquiring the gold benefits the man, if the mining equipment possesses only a little value.
+Acquiring the gold harms the man, if the gold possesses little value.
+Acquiring the gold harms the man, if the mining equipment possesses great value.
+A gold mine in Utah closes, if the gold possesses only a little value.
+The gold mine opens, if the gold possesses great value.
+Solar radiation is like the poor ore.
+Acquiring solar energy requires collecting the solar radiation.
+Using the solar energy requires transforming the solar energy into electricity.
+The solar collector collects the solar energy.
+Similarly, the mining equipment collects the gold.
+The solar collector is expensive.
+The solar collector is more expensive than the solar radiation.
+The solar heating system saves cash, if electricity possesses great value.
+The solar heating system wastes cash, if electricity possesses only a little value. 
+The gold mine in Utah closes, if the gold mine wastes cash.
+A solar heating system in Florida closes, if electricity possesses only a little value.
+Because gold now possesses great value, the gold mine in Utah makes cash.
+Similarly, electricity now possesses great value.
+Because the electricity possesses great value, the solar heating system saves cash. 
+The solar collector collects sunlight. It is like mining equipment.
+Mining poor ore wastes cash, if the mining equipment possesses great value.
+The mining equipment possesses longevity, if the mining equipment possesses simplicity. 
+Similarly, if the solar collector possesses simplicity, the solar collector possesses longevity. 
+Because the flat plate system possesses simplicity, the flat plate system saves cash.

@@ -1,0 +1,102 @@
+(in-microtheory TextContentsOfSourceTextsCanonicalMt)
+
+(listOfParasInChapter Bad-Revenge-Five
+                      (TheList
+                       (SourceTextChapterParagraphFn Bad-Revenge-Five 1 1)))
+
+(textContentsOfSourceText-Canonical 
+ (SourceTextChapterParagraphFn Bad-Revenge-Five 1 1)
+"Donald was a person.
+Jane was a person.
+Donald stole Jane's wallet.
+The theft was morally wrong.
+Because Donald stole Jane's wallet, Jane stole Donald's car.
+The theft was morally wrong.")
+
+(in-microtheory (ScenarioMtFn Bad-Revenge-5))
+(genlMt (ScenarioMtFn Bad-Revenge-5) MoralDMRulesMt)
+
+;; SLIGHTLY TAILORED TO RESOLVE TOKENS PROPERLY AND TO ADD MORAL VALENCE WHICH WAS ELMINIATED BY REFERENCE RESOLUTION
+
+(isa donald48396 Person)
+
+(isa jane48432 Person)
+
+(isa steal48473 Stealing)
+
+(isa wallet48512 Wallet)
+
+(possessiveRelation jane48432 wallet48512)
+
+(isa steal48473 GainingUserRights)
+
+(objectOfPossessionTransfer steal48473 wallet48512)
+
+(doneBy steal48473 donald48396)
+
+(toPossessor steal48473 donald48396)
+
+(isa steal48473 MorallyWrongEvent)
+
+(causes-EventEvent steal48473 steal48557)
+
+(isa steal48557 Stealing)
+
+(possessiveRelation donald48396 car48873)
+
+(isa car48873 Automobile)
+
+(isa steal48557 GainingUserRights)
+
+(doneBy steal48557 jane48432)
+
+(toPossessor steal48557 jane48432)
+
+(objectOfPossessionTransfer steal48557 car48873)
+
+(isa steal48557 MorallyWrongEvent)
+
+
+;;; ORIGINAL OUTPUT
+;;; MORAL VALENCE TAKEN OUT BY REFERENCE RESOLUTION
+;;;(isa donald48396 Person)
+;;;
+;;;(isa jane48432 Person)
+;;;
+;;;(isa steal48473 Stealing)
+;;;
+;;;(isa wallet48512 Wallet)
+;;;
+;;;(possessiveRelation jane48497 wallet48512)
+;;;
+;;;(isa steal48473 GainingUserRights)
+;;;
+;;;(objectOfPossessionTransfer steal48473 wallet48512)
+;;;
+;;;(doneBy steal48473 donald48468)
+;;;
+;;;(toPossessor steal48473 donald48468)
+;;;
+;;;(isa steal48557 Stealing)
+;;;
+;;;(isa wallet48800 Wallet)
+;;;
+;;;(causes-EventEvent steal48557 steal48557)
+;;;
+;;;(possessiveRelation donald48854 car48873)
+;;;
+;;;(possessiveRelation jane48785 wallet48800)
+;;;
+;;;(isa car48873 Automobile)
+;;;
+;;;(isa steal48557 GainingUserRights)
+;;;
+;;;(toPossessor steal48557 donald48756)
+;;;
+;;;(doneBy steal48557 jane48817)
+;;;
+;;;(toPossessor steal48557 jane48817)
+;;;
+;;;(objectOfPossessionTransfer steal48557 car48873)
+;;;
+;;;(doneBy steal48557 donald48756)

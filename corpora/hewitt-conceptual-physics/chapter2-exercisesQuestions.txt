@@ -1,0 +1,96 @@
+1. A ball rolling along a floor doesn't continue rolling indefinitely. Is it because it is seeking a place of rest or because some force is acting upon it? If the latter, identify the force.
+
+2. Copernicus postulated that Earth moves around the Sun (rather than the other way around), but he was troubled about the idea. What concepts of mechanics was he missing (concepts later introduced by Galileo and Newton) that would have eased his doubts?
+
+3. What Aristotelian idea did Galileo discredit in his fabled Leaning Tower demonstration?
+
+4. What Aristotelian idea did Galileo demolish with his experiments with inclined planes?
+
+5. Was it Galileo or Newton who first proposed the concept of inertia?
+
+6. Asteroids have been moving through space for billions of years. What keeps them moving?
+
+7. A space probe may be carried by a rocket into outer space. What keeps the probe moving after the rocket no longer pushes it?
+
+8. In answer to the question "What keeps Earth moving around the Sun?" a friend asserts that inertia keeps it moving. Correct your friend's erroneous assertion.
+
+9. Your friend says that inertia is a force that keeps things in their place, either at rest or in motion. Do you agree? Why or why not?
+
+10. Why is it important that Tim pull slightly downward when he attempts to whip the cloth from beneath the dishes? (What occurs if he pulls slightly upward?)
+
+11. Consider a ball at rest in the middle of a toy wagon. When the wagon is pulled forward, the ball rolls against the back of the wagon. Interpret this observation in terms of Newton's first law.
+
+12. In tearing a paper towel or plastic bag from a roll, why is a sharp jerk more effective than a slow pull?
+
+13. If you're in a car at rest that gets hit from behind, you can suffer a serious neck injury called whiplash. What does whiplash have to do with Newton's first law?
+
+14. In terms of Newton's first law (the law of inertia), how does a car headrest help to guard against whiplash in a rear-end collision?
+
+15. Why do you lurch forward in a bus that suddenly slows? Why do you lurch backward when it picks up speed? What law applies here?
+
+16. Suppose that you're in a moving car and the motor stops running. You step on the brakes and slow the car to half speed. If you release your foot from the brakes, will the car speed up a bit, or will it continue at half speed and slow due to friction? Defend your answer.
+
+17. When you push a cart, it moves. When you stop pushing, it comes to rest. Does this violate Newton's law of inertia? Defend your answer.
+
+18. Each bone in the chain of bones forming your spine is separated from its neighbors by disks of elastic tissue. What happens, then, when you jump heavily onto your feet from an elevated position? (Hint: Think about the hammerhead in Figure 2.5.) Can you think of a reason why you are a little taller in the morning than at night?
+
+19. Start a ball rolling down a bowling alley and you'll find that it moves slightly slower with time. Does this violate Newton's law of inertia? Defend your answer.
+
+20. Consider a pair of forces, one having a magnitude of 20 N and the other a magnitude of 12 N. What maximum net force is possible for these two forces? What is the minimum net force possible?
+
+21. When any object is in mechanical equilibrium, what can be correctly said about all the forces that act on it? Must the net force necessarily be zero?
+
+22. A monkey hangs stationary at the end of a vertical vine. What two forces act on the monkey? Which, if either, is greater?
+
+23. Can an object be in mechanical equilibrium when only a single force acts on it? Explain.
+
+24. When a ball is tossed straight up, it momentarily comes to a stop at the top of its path. Is it in equilibrium during this brief moment? Why or why not?
+
+25. A hockey puck slides across the ice at a constant speed. Is it in equilibrium? Why or why not?
+
+26. Can you say that no force acts on a body at rest? Or is it correct to say that no net force acts on it? Defend your answer.
+
+27. Nellie Newton hangs at rest from the ends of the rope as shown. How does the reading on the scale compare with her weight?
+
+28. Harry the painter swings year after year from his bosun's chair. His weight is 500 N and the rope, unknown to him, has a breaking point of 300 N. Why doesn't the rope break when he is supported as shown at the left? One day, Harry is painting near a flagpole, and, for a change, he ties the free end of the rope to the flagpole instead of to his chair, as shown at the right. Why did Harry end up taking his vacation early?
+
+29. For the pulley system shown, what is the upper limit of weight the strong man can lift?
+
+30. If the strong man in the previous exercise exerts a downward force of 800 N on the rope, how much upward force is exerted on the block?
+
+31. A force of gravity pulls downward on a book on a table. What force prevents the book from accelerating downward?
+
+32. How many significant forces act on a book at rest on a table? Identify the forces.
+
+33. Consider the normal force on a book at rest on a tabletop. If the table is tilted so that the surface forms an inclined plane, will the magnitude of the normal force change? If so, how?
+
+34. When you push downward on a book at rest on a table, you feel an upward force. Does this force depend on friction? Defend your answer.
+
+35. Place a heavy book on a table and the table pushes up on the book. Why doesn't this upward push cause the book to rise from the table?
+
+36. As you stand on a floor, does the floor exert an upward force against your feet? How much force does it exert? Why are you not moved upward by this force?
+
+37. An empty jug of weight W rests on a table. What is the support force exerted on the jug by the table? What is the support force when water of weight w is poured into the jug?
+
+38. If you pull horizontally on a crate with a force of 200 N, it slides across the floor in dynamic equilibrium. How much friction is acting on the crate?
+
+39. In order to slide a heavy cabinet across the floor at constant speed, you exert a horizontal force of 600 N. Is the force of friction between the cabinet and the floor greater than, less than, or equal to 600 N? Defend your answer.
+
+40. Consider a crate at rest on a factory floor. As a pair of workmen begin lifting it, does the support force on the crate provided by the floor increase, decrease, or remain unchanged? What happens to the support force on the workmen's feet?
+
+41. Two people each pull with 300 N on a rope in a tug of war. What is the net force on the rope? How much force is exerted on each person by the rope?
+
+42. Two forces act on a parachutist falling in air: weight and air drag. If the fall is steady, with no gain or loss of speed, then the parachutist is in dynamic equilibrium. How do the magnitudes of weight and air drag compare?
+
+43. A child learns in school that Earth is traveling faster than 100,000 kilometers per hour around the Sun and, in a frightened tone, asks why we aren't swept off. What is your explanation?
+
+44. Before the time of Galileo and Newton, some learned scholars thought that a stone dropped from the top of a tall mast of a moving ship would fall vertically and hit the deck behind the mast by a distance equal to how far the ship had moved forward while the stone was falling. In light of your understanding of Newton's first law, what do
+you think about this?
+
+45. Because Earth rotates once every 24 hours, the west wall in your room moves in a direction toward you at a linear speed that is probably more than 1000 kilometers per hour (the exact speed depends on your latitude). When you stand facing the wall, you are carried along at the same speed, so you don't notice it. But when you jump upward, with your feet no longer in contact with the floor, why doesn't the high-speed wall slam into you?
+
+46. If you toss a coin straight upward while riding in a train, where does the coin land when the motion of the train is uniform along a straight-line track? When the train slows while the coin is in the air? When the train is turning?
+
+47. The smokestack of a stationary toy train consists of a vertical spring gun that shoots a steel ball a meter or so straight into the air—so straight that the ball always falls back into the smokestack. Suppose the train moves at constant speed along the straight track. Do you think the ball will still return to the smokestack if shot from the moving train? What if the train gains speed along the straight track? What if it moves at a constant speed on a circular track? Why do your answers differ?
+
+48. Consider an airplane that flies due east on a trip, then returns flying due west. Flying in one direction, the plane flies with Earth's rotation, and in the opposite direction, against Earth's rotation. But, in the absence of winds, the times of flight are equal either way. Why is this so?

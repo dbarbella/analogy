@@ -1,0 +1,8 @@
+A bucket is in a rain storm.
+A solar collector is like the bucket.
+The bucket collects rain; the solar collector collects sunlight.
+Collecting the rainwater requires angling the bucket towards the rain.
+An open top of the bucket collects the rain. The top points towards the rain. 
+If the rain falls straight down, the top lies flat.
+If wind blows the rain, the top angles toward the rain. 
+Similarly, collecting the sunlight requires pointing the solar collector towards the sunlight.

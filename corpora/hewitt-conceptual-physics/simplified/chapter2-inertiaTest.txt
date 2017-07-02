@@ -1,0 +1,3 @@
+Objects resist changes in motion. 
+This is a property of objects. 
+This property is called "inertia".

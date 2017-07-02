@@ -1,0 +1,21 @@
+Your population must consume food to survive.
+Every citizen consumes two food points per turn.
+The food points per turn consumed by settlers depends on the government.
+Under anarchy, despotism, monarchy, and communism, settlers consume one food point per turn.
+Under republic and democracy, settlers consume two food points per turn.
+This food comes from the city that is supporting them.
+Using a citizen to work a piece of terrain can produce food points.
+Most terrain produces less than two food points per turn.
+Some terrain has special properties so it produces more food points.
+Improving a piece of terrain can improve its ability to produce food.
+Every city can store food points.
+Building a granary in a city enhances its capacity to store food points.
+A city that produces more food than it requires accumulates the excess.
+A city that produces less food than it requires draws food from storage.
+The city population starves when the food storage is not sufficient to meet the food needed on a turn.
+Settlers and citizens die until the food needed is equal to the food stored.
+Settlers die first, followed by citizens.
+When the food storage capacity becomes full, the population grows by one citizen.
+This growth causes the food storage to become empty. 
+Food storage capacity of a city increases with its population.
+This means that each new citizen is more costly than the last.
