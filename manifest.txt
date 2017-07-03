@@ -7,6 +7,9 @@ boyer_moore.py
 import_susd.py
 	- Stub attempt to import SUSD as an NLTK corpus
 
+personal.py
+        - Customize this file to make other things work.
+
 nltknoodling.py
 	- Scratch file for learning NLTK stuff
 
