@@ -75,7 +75,7 @@ def find_boyer_moore_all_paras(paras_list, pattern):
         para_index += 1
     return para_indices
 
-# Very inefficient beta version - looks through the corpus once for 
+# Very inefficient beta version - looks through the corpus once for each string.
 def find_any_patterns(paras_list, pattern_list):
     para_indices = []
     for pattern in pattern_list:
