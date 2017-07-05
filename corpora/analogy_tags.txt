@@ -1,0 +1,818 @@
+['DT', 'JJ', 'NN', ',', 'IN', 'NNP', 'NNP', 'NNP', 'NNP', 'NNP', 'IN', 'NNP', ',', 'MD', 'VB', 'JJ', 'NN', 'NNS', ',', 'WP', 'VBP', 'PRP$', 'JJ', 'JJ', 'NN', 'NN', ',', 'IN', 'DT', '$', 'CD', 'JJ', 'NN', 'NN', 'IN', 'NNS', 'IN', 'JJ', 'IN', 'NNS', 'CC', 'NNS']
+
+['DT', 'VBN', 'NN', 'NN', ',', 'JJ', 'TO', 'CD', 'DT', 'NNP', 'VBD', 'JJ', 'NN', 'IN', 'DT', 'NN', ',', 'DT', 'NN', 'IN', 'NNP', 'NN']
+
+['DT', 'NNP', 'NN', 'NNS', 'RB', 'IN', 'DT', 'NNP', 'NN', 'IN', 'NNP', 'RB', 'RB', 'JJ', 'NN', 'IN', 'PRP$', 'JJ', 'NN', 'NNS', 'IN', 'DT', 'JJ', 'NN']
+
+['NNP', 'NNP', 'VBZ', 'IN', 'NNP', 'NNP', 'MD', 'VB', 'CD', 'JJR', 'NN', 'NNS', ',', 'JJ', 'TO', 'DT', 'NN', 'NN', 'VBN', 'JJ', 'NNS', 'RB', 'CC', 'RB', 'VBN', 'TO', 'DT', 'NNP', 'NNP', 'NNP']
+
+['DT', 'IN', 'DT', 'NN', 'POS', 'JJ', 'NNS', 'MD', 'VB', 'CD', 'JJ', 'NNS', ',', 'JJ', 'IN', 'JJ', 'NNS', 'NN', ',', 'DT', 'NN', 'NN', 'CC', 'DT', 'NN', ',', 'TO', 'VB']
+
+['PRP', 'VBZ', 'JJ', 'TO', 'VB', 'JJ', 'WRB', 'DT', 'NN', 'VBZ', 'IN', '$', 'CD', 'CD', ',', 'IN', 'DT', 'NNS', 'IN', 'CD', 'NN', 'MD', 'RB', 'VB', 'DT', 'JJ', 'IN', 'DT', 'NNS', 'IN', 'DT', 'NN']
+
+['DT', 'NNPS', 'VBP', 'CD', 'JJR', 'NN', 'NNS', ':', 'IN', 'NNP', 'CC', 'NNP', ':', 'IN', 'PRP', 'VBP', 'IN', 'DT', 'NN', 'NNS', 'RB', ',', 'CC', 'PRP', 'VBZ', 'IN', 'IN', 'NN', 'NNP', 'NNP', 'POS', 'NNS', 'MD', 'VB', 'DT', 'NNP', 'RB', 'IN', 'PRP', 'VBP', 'VBG', 'IN', 'DT', 'NN', 'IN', 'NN', 'PRP', 'VBD', 'VBN', 'TO', 'VB', 'IN', 'JJ', 'NNS']
+
+['``', 'NNP', 'MD', 'VB', 'DT', 'NN', 'NN', 'RB', 'IN', 'PRP', 'VBP', 'DT', 'NN', "''"]
+
+['UH', ',', 'PRP', 'VBP', ',', 'PRP', 'VBP', 'NNS', ',', 'NNS', 'VBD', 'TO', 'VB', ',', 'CC', 'PRP', 'MD', 'RB', 'VB', 'WRB', 'PRP', 'VBP', 'VBN', ',', 'RB', 'RB', 'RB', 'IN', 'PRP$', 'NNS', 'VBP', 'VBN', 'RB', 'IN', 'DT', 'JJ', 'CC', 'NN', 'IN', 'DT', 'NN']
+
+['NNP', 'NNS', ',', 'JJ', 'IN', 'NNP', 'NNP', 'NNP', ',', 'CD', 'NNP', ',', 'NNP', 'NNP', ',', 'VBP', 'VBN', 'VBG', 'DT', 'NN', 'IN', 'NNS', 'CC', 'VBG', 'NN', 'NNS', 'IN', 'NNP', 'POS', 'NN', ',', 'NNP', 'NNP', 'NNP', ',', 'CD', 'NNP', ',', 'NNP', 'NNP']
+
+['``', 'PRP', 'VBZ', 'IN', 'VBG', 'DT', 'JJ', 'NN', 'TO', 'DT', 'JJ', 'CC', 'VBG', 'PRP', 'TO', 'VB', 'RP', 'CC', 'VB', "''", ',', 'PRP', 'VBD']
+
+['PRP', 'VBD', 'RB', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'IN', 'PRP', 'VBD', 'PRP', 'VBD', 'RB', 'PRP$', 'NN', 'IN', 'NNP', 'NN', 'NNS', 'MD', 'VB', 'RB', 'RB', 'JJ', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NNP', 'NNP', 'NN', 'NNS', 'VBP', 'RB', 'PRP', 'MD', 'VB']
+
+['DT', 'NN', 'RB', 'VBZ', 'NN', 'CC', 'NN', 'NN', 'NNS', 'JJ', 'IN', 'NN', ',', 'NNS', ',', 'FW', '.']
+
+['NNS', 'IN', 'NN', ',', 'DT', 'NNP', 'VBD', ',', 'MD', 'VB', 'RB', 'VBN', 'IN', 'NNS', 'WRB', 'PRP', 'VBZ', 'DT', 'NN', 'VBD', 'DT', 'JJ', 'NN', 'IN', 'NN', ',', 'JJ', 'IN', 'NNS', 'TO', 'DT', 'NN']
+
+['IN', 'PRP$', 'NN', 'NN', 'IN', 'NN', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'VBZ', 'IN', 'DT', 'JJ', 'NN', 'VBZ', 'RB', 'IN', 'VBG', 'JJ', 'NN', 'IN', 'PRP', 'RB', 'VBD', ':']
+
+['DT', 'NNP', 'CC', 'PRP$', 'NNS', 'VBD', 'IN', 'DT', 'NN', 'MD', 'VB', 'VBN', 'TO', 'VB', 'NNP', 'NNP', 'IN', 'DT', 'JJ', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'NNP', ',', 'NNP', 'CC', 'NNP', 'NNP', 'IN', 'WDT', 'EX', 'MD', 'VB', 'DT', 'VBG', 'RB']
+
+[]
+
+['NNP', 'VBD', 'PRP', 'RP', ',', 'RB', 'IN', 'NNP', 'NN', 'VBD', 'VBN', 'VBG', 'PRP', 'IN', 'NNS']
+
+['IN', 'DT', 'NNS', ',', 'DT', 'NN', 'NNS', 'VBP', 'VBN', 'TO', 'VB', 'TO', 'JJ', 'NNS', ',', 'CC', 'TO', 'JJ', 'NNS', 'JJ', 'IN', 'NNS', 'CC', 'JJR', 'NNS', 'IN', 'JJ', 'NNS']
+
+['DT', 'NN', 'VBZ', 'RB', 'NNS', 'JJ', 'IN', 'NNS', ',', 'JJ', 'NNS', ',', 'CC', 'NNS', ',', 'IN', 'DT', 'NNS', 'VBD', 'RP', 'NN', 'NNS', ',', 'JJ', 'IN', '``', 'NNP', 'IN', 'DT', 'NNP', "''", ',', '``', 'DT', 'NNP', 'POS', 'NNP', "''", ',', 'CC', '``', 'DT', 'NNP', 'NNP', "''"]
+
+['PRP', 'VBZ', 'DT', 'NN', 'IN', 'DT', 'NN', 'NN', 'NN', ',', 'NN', 'IN', 'JJ', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'NN', ',', 'NN', 'IN', 'JJ', 'JJ', 'NN', 'NNS', ',', 'CC', 'VBD', 'NNS', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'NN', ',', 'NN', 'NN', ',', 'NN', 'CC', 'NN', 'NN']
+
+['PRP', 'VBD', 'VBN', 'VBN', 'IN', 'JJ', 'NNS', 'TO', 'VB', 'RP', 'IN', 'JJ', 'NNS', 'IN', 'VBG', 'NNS', 'JJ', 'IN', 'NNP', 'NNP', 'NNP', 'IN', 'NNP']
+
+['RB', 'NNP', 'VBD', 'DT', 'JJ', 'NNS', 'IN', 'PRP$', 'NN', ':', 'PRP', 'VBD', 'JJ', 'NNS', 'JJ', 'IN', 'NNS', 'CC', 'NN', ',', 'VBD', 'NN', 'CC', 'NN', 'CC', 'VBD', 'DT', 'NN', 'IN', 'NN', 'RB']
+
+['IN', 'DT', 'NN', 'PRP', 'VBZ', 'RB', 'IN', 'RB', 'VBN', 'PRP$', 'JJ', 'NN', 'IN', 'JJ', 'CC', 'JJ', 'NN']
+
+['DT', 'JJ', 'NN', 'VBZ', 'IN', 'PRP', 'MD', 'VB', 'RB', 'RB', 'RB', 'RB', 'IN', 'NNP', 'MD', 'VB', 'DT', 'NN', 'IN', 'NN', 'IN', 'NN', 'CC', 'IN', 'JJ', 'JJ', 'NNS', 'VBP', 'RB', 'TO', 'DT', 'NN', 'IN', 'IN', 'IN', 'JJ', 'NN', 'PRP', 'VBP', 'VBG', 'NN', 'IN', 'NNP', 'NNP']
+
+['NNP', 'NNS', 'VBP', 'NN', 'WDT', 'JJ', 'NNS', 'NN', ',', 'JJ', 'IN', 'NN', 'NN']
+
+['WRB', 'JJ', 'NNS', 'VBP', 'VBN', ',', 'PRP', 'VBZ', 'RB', 'RB', 'JJ', 'TO', 'VB', 'NNS', 'RB', ',', 'NN', 'JJ', ',', 'FW', '.']
+
+[]
+
+['NNS', 'WP', 'VBP', 'PRP', 'IN', 'NNS', 'VBP', 'IN', 'DT', 'NNP', 'WP', 'VBD', 'IN', 'NN', 'PRP$', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS']
+
+['IN', 'PRP', 'VBZ', 'DT', 'NN', ',', 'PRP', 'VBZ', ',', '``', 'NN', 'VBZ', 'PRP$', 'JJ', 'NN', 'RB', 'IN', 'PRP', 'VBP', "''"]
+
+['DT', 'JJ', 'NN', 'VBZ', 'RBS', 'JJ', 'WRB', 'EX', 'VBP', 'JJ', 'VBN', 'NNS', 'CC', 'IN', 'NNS', 'WP', 'VBP', 'JJ', ',', 'NN', 'IN', 'DT', 'JJ', 'NN', ',', 'CC', 'VBP', 'VBN', 'IN', 'NNS', 'JJ', 'IN', 'JJ', 'NN', 'CC', 'JJ', 'NN']
+
+['NNP', 'PRP', 'VBZ', 'MD', 'VB', 'VBN', 'TO', 'VB', 'IN', 'NNS', 'IN', 'NN', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'NN', 'NN']
+
+['NNP', 'VBZ', 'IN', 'PRP', 'CC', 'DT', 'NN', 'IN', 'NN', 'VBZ', 'IN', 'JJ', 'NNS', 'IN', 'PRP$', 'NN']
+
+['PRP', 'VBZ', 'IN', 'RB', 'JJ', 'NNS', 'IN', 'PRP', 'VBZ', 'DT', 'NN', 'IN', 'NNS', ',', 'VBZ', 'JJ', ',', 'VBG', 'NNS', 'CC', 'VBG', 'RB', 'IN', 'PRP', 'VBP', 'RB', ',', 'JJ', 'IN', 'PRP', ',', 'CC', 'VBG', 'PRP', 'DT', 'RBS', 'JJ', 'CC', 'JJ', 'IN', 'NNS', ',', 'JJ', 'IN', 'PRP', 'MD', 'VB', 'DT', 'JJ', 'NN']
+
+['PRP', 'VBP', 'RB', 'VB', 'IN', 'NNP', 'VBZ', 'IN', 'NNP', ',', 'RB', 'IN', 'DT', 'JJS', '.']
+
+['NNP', 'IN', 'DT', 'EX', 'VBZ', 'JJ', 'NN', 'IN', 'NNP', 'NNP', 'RB', 'VBD', 'IN', 'DT', 'NN', 'JJ', 'TO', 'DT', 'WDT', 'RB', 'VBD']
+
+['DT', 'NNP', 'NNP', 'NN', '(', 'NNP', 'CD', ')', 'VBN', '``', 'NNP', 'NNP', 'VBZ', 'NNP', 'NNP', 'NNP', 'NNP', "''", 'NNS', 'TO', 'DT', 'NN', 'WDT', 'VBZ', 'NNS', 'JJ', 'IN', 'NNS']
+
+['NNP', 'NNP', 'NNP', ',', 'JJ', 'NN', 'IN', 'DT', 'NNP', 'NNP', 'NNP', 'NNP', 'CC', 'NNP', 'NNP', ',', 'IN', 'PRP$', 'NNS', 'TO', 'DT', 'NNP', 'NNP', 'IN', 'NNP', 'NNP', 'IN', 'NNP', 'IN', 'NNP', 'CD', ',', 'CD', ',', 'VBD', 'IN', 'DT', 'NN', 'IN', 'VBG', 'TO', 'VB', 'NN', 'RB', 'TO', 'VB', 'DT', 'NN', 'NN', 'CC', 'TO', 'VB', 'JJ', 'NNS', 'JJ', 'IN', 'NNS', 'WRB', 'PRP', 'VBD', ':', '``', 'IN', 'DT', 'VBZ', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'POS', 'NN', 'CC', 'IN', 'DT', 'VBZ', 'DT', 'JJ', 'NN', ',', 'NN', 'IN', 'DT', 'MD', 'VB', 'JJ', 'TO', 'VB', "''"]
+
+['PRP', 'VBP', 'VBN', 'TO', 'VB', 'DT', 'IN', 'PRP', 'VBP', 'RB', 'VBN', 'IN', 'DT', 'NN', 'IN', 'NN', 'NN', 'NN', 'CC', 'DT', 'NN', 'IN', 'NNS', 'IN', 'NN', 'IN', 'DT', 'NN', 'JJ', 'IN', 'NNP', 'NNP']
+
+['DT', 'NN', 'PRP', 'VBD', 'IN', 'PRP', 'VBD', 'JJ', 'IN', 'PRP', 'MD', 'RB', 'VB', 'CC', 'IN', 'WDT', 'PRP', 'MD', 'RB', 'VB', 'JJ']
+
+['RB', 'PRP', 'MD', 'VB', 'RP', 'DT', 'JJ', 'NNS', 'IN', 'DT', 'IN', 'DT', 'NN', 'NNS', 'JJ', 'IN', 'NN', ',', 'NNP', 'CC', 'NN']
+
+['JJ', 'NN', 'IN', 'DT', 'NN', 'NN', 'MD', 'VB', 'CD', 'CD', 'NN', ',', 'JJ', 'CC', 'JJ', 'NNS', 'CC', 'NNS', 'IN', 'DT', 'JJ', 'CD', 'NNS', ',', 'CC', 'IN', 'CD', 'CC', 'CD', 'CD', 'JJ', 'NNS', 'RB', 'VBG', 'MD', 'VB', 'PRP$', 'NNS', 'VBN', 'JJ', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'NN']
+
+['RB', 'PRP', 'VBP', 'PRP$', 'JJ', 'NN', 'IN', 'NN', 'NN', ',', 'VBN', 'IN', 'JJ', 'CC', 'NNPS', 'IN', 'DT', 'NNP', ',', 'WRB', 'PRP', 'VB', 'IN', 'RB', 'IN', 'JJ', 'NNS', 'IN', 'PRP$', 'NNS', 'IN', 'IN', 'NN']
+
+['PRP', 'CC', 'JJ', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'VBD', 'NNS', 'IN', 'VBG', 'VBN', 'RB', 'DT', 'JJ', 'NNS', ',', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', '``', 'DT', 'NNP', 'POS', 'NNP', "''", ',', 'CC', 'RB', 'IN', 'VBG', 'VBN', 'RP', 'DT', 'NNS', 'IN', 'DT', 'RB', 'JJR', '``', 'NN', "''", 'IN', 'DT', 'JJ', 'NN', 'IN', 'NNPS', ',', 'VBG', 'IN', 'DT', 'NNP', 'NNP', 'PRP']
+
+['DT']
+
+['DT']
+
+['IN', 'PRP', 'VBP', 'IN', 'DT', 'NNP', 'NNP', ',', 'PRP', 'MD', 'RB', 'RB', 'RB', 'VB', 'VBG', 'IN', 'NNP', 'NNS', ',', 'NNP', 'NNP', 'CC', ',', 'IN', 'DT', 'NN', ',', 'NN', 'IN', 'JJ']
+
+['IN', 'VBG', 'DT', 'NN', 'PRP', 'MD', 'VB', 'VBG', 'JJS', ',', 'IN', 'RB', 'DT', ',', 'IN', 'PRP$', 'JJ', 'NN', 'TO', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NNP', 'NNP', '(', 'RB', 'VBN', 'RP', ')', 'CC', 'DT', 'NNP', '.', ',', 'NNP', '.', 'CC', 'NNS']
+
+['DT', 'NN', 'IN', 'DT', 'NN', 'VBD', 'PRP$', 'NNS', 'DT', 'JJR', 'IN', 'RB', 'RB', 'IN', 'DT', 'JJ', 'NN', 'CC', 'JJ', 'NN', 'NN', 'VBD', 'RB', 'JJ']
+
+[]
+
+['RB', 'JJ', 'VBP', 'NNP', 'NNP', ',', 'IN', 'DT', 'NN', 'RBR', 'JJ', 'CC', 'NN', 'IN', 'DT', 'JJ', 'NN', 'CC', 'RB', 'IN', 'JJ', ',', 'NNP', 'NNP', ',', 'IN', 'PRP$', 'NN', 'NN', ',', 'CC', 'NNP', 'NNP', ',', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN']
+
+['DT', 'VBZ', 'NN', 'IN', 'WP', 'NNP', 'POS', 'JJS', 'NNS', 'VBP', 'IN', ',', 'IN', 'PRP', 'VBP', 'RB', 'VBN']
+
+['PRP', 'RB', 'VBZ', 'TO', 'VB', 'IN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', ',', 'CC', 'DT', 'IN', 'PRP', ',', 'JJ', 'IN', 'DT', 'NN', '``', 'NNP', 'PRP', "''", ',', 'VBZ']
+
+['IN', 'DT', 'JJ', ',', 'NNP', 'NNP', 'CC', 'NNP', 'NNP', 'VBD', 'JJ', 'IN', 'PRP$', 'NNS', 'IN', 'DT', 'NNS', 'IN', 'NNS', 'JJ', 'IN', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', 'CC', 'NNP']
+
+['PRP', 'VBZ', 'TO', 'VB', 'PRP$', 'NN', 'NN', 'CC', 'RB', 'PRP', 'VBP', 'RB', 'JJ', 'NNS', 'IN', 'WP', 'PRP$', 'JJ', 'NN', 'VBZ', 'IN']
+
+['IN', 'DT', 'VBZ', 'JJ', ',', 'RB', 'DT', 'NN', 'NN', 'VBZ', 'RB', 'IN', 'PRP', 'VBD', 'NNS', 'IN', 'NNS', 'RB', 'CC', 'IN', 'PRP', 'MD', 'VB', 'NNS', 'IN', 'NNS', 'RB', ',', 'RB', 'IN', 'DT', 'NN', 'VBZ', 'VBG']
+
+['CC', 'DT', 'JJ', 'NN', 'IN', 'JJ', 'NN', 'IN', 'DT', 'JJR', 'NN', 'VBD', '``', 'NNP', 'NNP', "''", 'VBP', 'DT', 'RB', 'RB', 'JJ', 'IN', 'CD', 'VBZ', 'PRP', 'TO', 'VB', 'VBN', ',', 'CC', 'PRP', 'VBP', 'JJ', 'RB']
+
+['CC', 'PRP', 'MD', 'VB', 'IN', 'PRP$', 'JJ', 'NN', 'RB', 'IN', 'IN', 'DT', 'JJ', 'NN', 'VBN', 'IN', 'PRP', ':', 'JJ', 'IN', '``', 'NN', "''"]
+
+['NNP', 'MD', 'VB', 'IN', 'DT', 'JJ', ',', 'VBG', 'JJ', 'JJ', 'NN', ',', 'RB', 'IN', ',', 'IN', 'DT', 'NNS', ',', 'NN', 'VBZ']
+
+['IN', 'JJ', 'NNS', ',', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'DT', 'JJ', 'NN', 'MD', 'VB', 'DT', 'NN', 'RB', ',', 'VBG', 'RB', 'DT', 'NN', 'IN', 'NN']
+
+['RB', 'NNP', 'CC', 'NNS', ',', 'JJ', 'IN', 'NNP', 'NNP', 'NNP', 'NNP', 'IN', 'DT', 'NNP', 'NNP', ',', 'VBD', 'RP', 'TO', 'VB', 'DT', 'NN', 'NN', 'IN', 'JJ', 'CC', 'JJ', 'NNS', ':', 'CC', 'RB', 'IN', 'JJ', 'NNS', 'IN', 'DT']
+
+['PRP', 'VBZ', 'IN', 'DT', 'JJ', 'NN', 'WDT', ',', 'VBG', 'JJ', 'IN', 'NNP', 'CC', 'NNP', ',', 'VBZ', 'RB', 'IN', 'DT', 'RB', 'VBG', 'NN', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'VBP', 'VBN', 'VBN', 'IN', 'PRP']
+
+['RB', 'VBP', 'RB', 'PRP', 'IN', 'DT', 'JJ', 'NN', ',', 'WP', 'RB', 'VBP', 'RB', 'VB', 'EX', 'VBZ', 'DT', 'JJ', '``', 'NN', "''", 'IN', 'DT', 'NN', ',', 'RB', 'IN', 'JJ', 'RP', 'IN', 'PRP', ':', 'RB', 'IN', 'DT', 'JJ', 'NN', '.']
+
+['TO', 'VB', 'DT', ',', 'PRP', 'VBZ', 'JJ', 'TO', 'VB', 'RP', 'IN', 'IN', 'DT', 'NN', 'IN', 'NNS', 'IN', 'WDT', 'NNS', 'VBP', 'TO', 'VB', 'VBN', 'VBZ', 'JJ', 'IN', 'TO', 'VB', 'JJR', 'IN', 'CD', ',', 'RB', 'DT', 'NN', 'IN', 'DT', '``', 'JJ', "''", 'NN', 'VBZ', 'DT', 'JJ', 'NN']
+
+['IN', 'NN', ',', 'DT', 'NN', 'RB', 'VBZ', 'VBN', 'VBN', 'IN', 'RB', 'JJ', 'IN', 'DT', '``', 'NN', "''", 'IN', 'DT', 'NN', 'IN', 'VBG', 'NN', 'IN', 'PRP', 'IN', 'NN', 'TO', 'VB', 'DT', 'NN']
+
+['TO', 'VB', 'DT', ',', 'PRP', 'VBZ', 'JJ', 'TO', 'VB', 'RP', 'IN', 'IN', 'DT', 'NN', 'IN', 'NNS', 'IN', 'WDT', 'NNS', 'VBP', 'TO', 'VB', 'VBN', 'VBZ', 'JJ', 'IN', 'TO', 'VB', 'JJR', 'IN', 'CD', ',', 'RB', 'DT', 'NN', 'IN', 'DT', '``', 'JJ', "''", 'NN', 'VBZ', 'DT', 'JJ', 'NN']
+
+['NN', ',', 'NN', 'CC', 'NN', ',', 'VBG', 'PRP$', 'NNS', 'IN', 'DT', 'NN', ',', 'CC', '``', 'NN', 'PRP', 'RP', "''", 'IN', 'DT', 'NN', 'VBP', 'IN', 'NN', 'NNS', 'WRB', 'PRP', 'VBP', 'JJ', ':', 'PRP', 'MD', 'VB', 'PRP$', 'NN', 'RB', ',', 'CC', 'PRP', 'MD', 'RB', 'VB', 'DT', 'NN', 'IN', 'DT', 'NN', ',', 'JJ', 'NN']
+
+['DT', 'JJ', 'JJ', 'NN', 'RB', 'VBD', 'TO', 'VB', 'PRP', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NNP', 'NN', 'RB', 'IN', 'CD', 'MD', 'VB', 'DT', 'NN', 'IN', 'DT', 'JJ', '``', 'NN', "''", ',', 'CC', 'PRP', 'VBD', 'TO', 'PRP$', 'NNS', 'VBG', 'TO', 'NNP', 'POS', 'NN', 'CC', 'NN', 'IN', ',', '``', 'IN', 'DT', 'NN', 'MD', 'VB', 'PRP$', 'MD', ',', 'PRP', 'MD', 'VB', 'IN', 'DT', 'NN', ',', 'IN', 'PRP', 'VB', 'IN', 'NNP', ',', 'CC', 'IN', 'PRP', 'VBP', 'IN', 'PRP', "''", '(', 'NNP', 'CD', ':', 'CD', ')']
+
+['PRP', 'MD', 'VB', 'IN', 'PRP', 'VBP', 'IN', 'NNP', 'POS', 'NN', 'CC', 'VB', 'RB', 'IN', 'JJ', 'IN', 'PRP', 'IN', 'PRP', 'VBP', 'IN', 'PRP', 'VBP', 'TO', 'DT', 'NN', 'IN', 'PRP$', 'JJ', 'NN']
+
+['DT', 'NN', 'IN', 'JJ', 'NN', ',', 'JJ', 'IN', 'DT', 'NNP', 'NNP', ',', 'MD', 'VB', 'VBN', 'IN', 'DT', 'NN']
+
+['TO', 'VB', 'IN', 'NNS', 'VB', 'VBN', 'IN', 'VBG', 'JJ', 'NNS', 'VBZ', 'IN', 'VBG', 'IN', 'PRP', 'VB', 'VBN', 'IN', 'VBG', 'NNS']
+
+['PRP', 'VBZ', 'VBG', 'IN', 'DT', 'NN', 'WDT', 'RB', 'IN', 'RB', 'VBZ', 'DT', 'JJ', 'NN', '(', 'CC', 'VBZ', 'VBN', 'RB', 'CC', 'RB', 'TO', 'VB', 'TO', 'DT', 'JJ', 'NN', ')', 'IN', 'PRP', 'RB', 'VBZ', 'DT', 'JJ']
+
+['RB', ',', 'RB', 'IN', 'DT', 'JJ', 'NNS', 'VBP', 'VBN', 'IN', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'NN', 'WDT', 'MD', 'RB', 'VB', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', 'IN', 'DT', 'NN', ',', 'CC', 'RB', 'NN', 'CC', 'NN', 'TO', 'DT', 'NN', ',', 'DT', 'JJ', 'NN', 'MD', 'VB', 'VBD', 'IN', 'NN', 'IN', 'DT', 'NN', 'IN', 'WP', 'PRP', 'MD', 'RB', 'RB', 'VB', 'VBG', ',', 'IN', 'JJ', 'NN', ',', 'TO', 'VB', 'DT', 'NN']
+
+['NNP', 'VBZ', 'RB', 'RB', 'JJ', 'IN', 'NN', 'VBZ', 'JJ']
+
+['PRP$', 'NN', ',', 'NN', ',', 'VBZ', 'DT', 'JJ', 'IN', 'PRP', 'VBD', 'CD', 'NNS', 'RB', ':', 'IN', 'EX', 'VBZ', 'NN', 'IN', 'NNS', ',', 'CC', 'NN', 'CC', 'NN', 'IN', 'NNP']
+
+['DT', 'JJ', 'NNS', 'MD', 'VB', 'CC', 'VB', 'IN', 'NN', 'NN', 'CC', 'MD', 'VB', 'RB', 'IN', 'PRP', 'VBD', 'IN', 'JJ', 'NN']
+
+['CD', 'NN', 'VBZ', 'DT', 'NN', '``', 'JJ', 'NN', 'MD', 'VB', 'IN', 'DT', 'NN', 'WP', 'PRP', 'VBZ', 'RB', 'VBN', 'IN', 'DT', 'NN', "''"]
+
+['PRP', 'VBZ', 'RB', 'JJ', 'TO', 'VB', 'NN', 'JJ', 'IN', 'DT', 'NNP', 'CC', 'NNP', 'IN', 'JJ', 'NNS', 'IN', 'JJ', 'JJ', 'NNS']
+
+['IN', ',', 'IN', 'DT', 'NN', 'JJ', 'IN', 'NN', ',', 'PRP', 'VBP', 'RB', 'VBG', 'TO', 'VB', 'NN', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', ',', 'RB', 'PRP', 'MD', 'VB', 'PRP$', 'NN', 'TO', 'VBG', 'NN', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'IN', 'CD', 'CC', 'CD', 'TO', 'CD']
+
+['IN', ',', 'IN', 'DT', 'NN', 'JJ', 'IN', 'NN', ',', 'PRP', 'VBP', 'RB', 'VBG', 'TO', 'VB', 'NN', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', ',', 'RB', 'PRP', 'MD', 'VB', 'PRP$', 'NN', 'TO', 'VBG', 'NN', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'IN', 'CD', 'CC', 'CD', 'TO', 'CD']
+
+['DT', 'JJ', 'NN', ',', 'JJ', 'IN', 'DT', 'NNP', 'CC', 'NNP', ',', 'MD', 'VB', 'RB', 'CD', 'CC', 'CD', 'JJ', 'JJ', 'NNS']
+
+['DT', 'IN', 'PRP', 'VBP', 'JJ', ',', 'JJ', 'IN', 'DT', 'NN', 'IN', 'PRP', 'VBP', 'VBN', 'CC', 'JJ', 'NN', 'IN', 'PRP$', 'NNS', 'CC', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'NNS', 'CC', 'JJ', 'NNS']
+
+['DT', 'NN', 'MD', 'VB', 'RB', 'RB', 'JJ', 'IN', 'DT', 'NN', 'NN', 'IN', 'PRP', 'VBZ', 'VBN', 'DT', 'NN']
+
+['NN', 'IN', 'NN', 'CC', 'JJ', 'NN', 'MD', 'VB', 'TO', 'RB', 'RB', 'JJ', 'NN']
+
+['NNS', 'VBP', 'RB', 'DT', 'JJ', 'CC', 'DT', 'NNS', 'VBP', 'RB', 'VB', 'JJ', 'NN', ',', 'JJ', 'IN', 'NNS', 'IN', 'DT', 'NN', ',', 'TO', 'VB', 'VBN', 'IN', 'DT']
+
+['PRP', 'VBZ', 'DT', 'JJ', 'NN', 'CC', 'PRP', 'VBZ', 'VBN', 'TO', 'VB', 'RBR', 'RB', 'TO', 'NNS', 'VBN', 'TO', 'VB', 'TO', 'JJR', 'NN', 'NNS', 'JJ', 'IN', 'NNS']
+
+['NNS', 'VBP', 'IN', 'CD', 'TO', 'CD', 'NNS', 'CC', 'DT', 'NN', 'NNS', 'CC', 'JJ', 'NNS', 'VB', 'IN', 'DT', 'JJ', 'IN', 'IN', 'NNS']
+
+['IN', 'RB', 'PRP', 'MD', 'RB', 'VB', 'DT', 'NN', 'NN', 'TO', 'DT', 'JJ', 'NN', 'NN', 'IN', 'NNP', ',', 'NNP', ',', 'WDT', 'VBZ', 'RB', 'IN', 'PRP', 'MD', 'VB', 'CD', 'NNS', 'RB']
+
+['DT', 'JJ', 'NN', 'IN', 'NNP', 'VBZ', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NNP', 'NNP', 'NNP', 'IN', 'PRP$', 'NN', 'CC', 'JJ', 'NN', 'NNS']
+
+['VB', 'WDT', 'VB', 'NN', ',', 'JJ', 'IN', 'VBG', 'DT', 'NN', ',', 'VBG', 'JJ', 'NN', ',', 'CC', 'VBG', 'DT', 'NN', 'NN', ',', 'RB', 'IN', 'NN']
+
+['NNP', 'RP', 'DT', 'JJ', 'NNS', ':', 'NN', ',', 'JJ', 'NN', ',', 'NN', ',', 'NN', ':', 'CC', 'DT', 'JJ', 'NNS', ',', 'JJ', 'IN', 'JJ', 'NN', 'NN', ',', 'JJ', 'NN', 'NN', ',', 'CC', 'JJ', 'IN', 'DT', 'NN', 'NNS', 'IN', 'DT', 'NN']
+
+['IN', 'DT', 'NN', 'IN', 'NN', 'VBZ', 'RB', 'JJ', ',', 'CC', 'PRP', 'VBP', 'TO', 'VB', 'DT', 'JJ', 'NN', ',', 'PRP', 'MD', 'VB', 'VBN', 'IN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN']
+
+['NNP', 'JJ', 'NNS', ',', 'JJ', 'IN', 'DT', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', ',', 'MD', 'VB', 'VBN', 'RB', 'RB']
+
+['NNP', 'NN', 'IN', 'NN', 'NN', 'DT', 'JJ', 'IN', 'NN', 'NNS', ',', 'VBG', 'NN', 'NN']
+
+['DT', 'JJ', 'NN', 'IN', 'DT', 'JJ', 'NNS', 'MD', 'VB', 'IN', 'DT', 'JJ', 'NN', 'IN', 'NN', 'NN', 'JJ', 'IN', 'NN', ',', 'NN', 'VBD', 'NN', 'NN', ',', 'JJ', 'NN', 'NN', 'NN', ',', 'JJ', 'NN', ',', 'CC', 'DT', 'JJ', 'NN', 'RB', 'JJ', 'IN', 'NN', 'IN', 'PRP$', 'NN', 'NN', 'NN']
+
+['PRP', 'MD', 'VB', 'VBN', 'TO', 'VB', 'IN', 'DT', 'NN', 'JJ', 'IN', 'NNS', 'IN', 'JJ', 'NNS', 'CC', 'VB', 'NNS', 'CC', 'DT', 'NN', 'IN', 'NN', 'RB', 'RB', 'IN', 'NN', 'NNS']
+
+[]
+
+['DT', 'NN', 'NNS', ',', 'JJ', 'IN', 'JJ', 'NNS', 'CC', 'NN', 'NN', ',', 'RB', 'VBP', 'JJR', 'JJ', 'NN', 'IN', 'JJ', 'NNS']
+
+['PRP', 'MD', 'VB', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'CC', 'DT', 'NNS', 'CC', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'JJ', 'NN', ',', 'JJ', 'NN', 'NNS', ',', 'CC', 'JJ', 'NNS']
+
+['JJ', 'NNS', ',', 'JJ', 'IN', 'NN', 'NN', ',', 'NN', 'IN', 'NN', ',', 'DT', 'JJ', 'NN', 'PRP', 'VBZ', ',', 'VB', 'NN', ',', 'NN', ',', 'NN', ',', 'MD', 'VB', 'PRP$', 'NN', 'NN']
+
+['DT', 'NNS', 'MD', 'VB', 'JJ', 'NNS', 'JJ', 'IN', 'JJ', 'JJ', 'NN', 'NNS', 'CC', 'VBG', 'NNS', ',', 'NNS', ',', 'NNS', ',', 'NN']
+
+['IN', 'NN', ',', 'DT', 'NN', 'VBG', 'JJ', 'RB', 'VBN', 'NNS', ',', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'CC', 'DT', 'JJ', 'NN', ',', 'MD', 'VB', 'JJ', ',', 'IN', 'DT', 'NN', 'JJ', 'TO', 'DT', 'JJ', 'NN', 'MD', 'RB']
+
+['NNP', ',', 'VBG', 'DT', 'NN', 'IN', 'NN', ',', 'VBZ', 'IN', 'DT', 'NN', 'CC', 'JJ', 'NN', ',', 'VBG', 'IN', 'CD', 'VBN', 'JJS', 'TO', 'DT', ',', 'VBG', 'IN', 'DT', 'NN']
+
+['PRP', 'VBZ', 'RBR', 'IN', 'RB', 'NN', 'IN', 'NN', 'NN', 'WDT', 'VBZ', 'PRP$', 'NN', ',', 'IN', 'RB', 'IN', 'NNS', 'MD', 'VB', 'IN', 'NN', ',', 'NN', 'VBZ', 'DT', 'RB', 'JJ', 'NNS', 'TO', 'VB', 'IN', 'NNS']
+
+['IN', 'PDT', 'DT', 'NNS', 'VBP', 'JJ', 'JJR', ',', 'NNS', 'CC', 'DT', 'JJ', 'NN', 'PRP', 'VBP', 'JJ', 'JJR', ',', 'CC', 'JJ', 'VBG', 'NNS', 'MD', 'VB', 'VBN', ',', 'CC', 'DT', 'NNS', 'VBN', 'VBP', 'DT', 'JJ', 'IN', 'IN', 'NN']
+
+['CC', 'DT', 'NN', 'VBD', 'VBD', 'JJ', 'DT', 'NN', 'IN', 'NN', 'TO', 'DT', 'VBG', 'IN', 'JJ', 'NN', 'IN', 'CD', 'MD', 'RB', 'VB', 'DT', 'JJS', 'NN']
+
+['CC', 'DT', 'NN', 'VBD', 'VBD', 'JJ', 'DT', 'NN', 'IN', 'NN', 'TO', 'DT', 'VBG', 'IN', 'JJ', 'NN', 'IN', 'CD', 'MD', 'RB', 'VB', 'DT', 'JJS', 'NN']
+
+['NNP', 'POS', 'NNS', 'VBD', 'RB', 'VBN', 'CC', 'DT', 'NNS', 'VBD', 'TO', 'VB', 'TO', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'POS', 'VBN', ',', 'JJ', 'IN', 'DT', 'NN', ',', 'TO', 'VB', 'DT', 'JJ', 'NN']
+
+['IN', 'NN', 'IN', 'DT', 'NNS', 'IN', 'NNS', 'IN', 'NN', 'JJ', 'IN', 'NN', ',', 'JJ', 'NN', ',', 'NN', ',', 'JJ', 'NN', 'NNS', ':', 'CD', 'NNS', 'IN', 'NN', 'IN', 'NN', 'IN', 'CD', 'NNS', 'RB']
+
+['DT', 'NN', 'VBN', 'TO', 'NNS', '(', 'JJ', 'IN', 'VBG', 'JJ', 'NNS', ')', 'RB', 'TO', 'PRP$', 'VBG', 'VBN', 'TO', 'VB', 'NNS', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'VBG', 'NNS', ',', 'CC', 'JJ', 'NN']
+
+['PRP', 'VBZ', 'IN', 'JJ', 'NNS', 'IN', 'NNP', 'WRB', ',', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', ',', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'VBZ', 'VBN', 'IN']
+
+['NN', 'IN', 'NNS', ',', 'NNS', ',', 'JJ', 'NN', 'NNS', ',', 'NN', 'NNS', 'CC', 'NN', 'NNS', 'VBZ', 'JJ', 'TO', 'DT', 'JJ', 'NN', 'IN', 'NN', 'NNS', 'RB', 'IN', 'IN', 'JJ', 'NN']
+
+['DT', 'JJ', 'NNS', 'JJ', 'IN', 'NNP', 'NNP', 'IN', 'NNP', 'NNP', ',', 'NNP', 'NNP', 'IN', 'NNP', 'NNP', ',', 'NNP', 'NNP', 'NNP', 'CC', 'JJ', 'NN', 'NNS', ',', 'MD', 'CC', 'VB', 'NN', 'RB', 'IN', 'DT', 'NN']
+
+['JJ', 'NN', 'IN', 'VBG', 'NNS', 'JJ', 'IN', 'NN', ',', 'NN', 'NN', ',', 'NNS', 'CC', 'NN', 'VBZ', 'RB', 'JJ']
+
+['EX', 'MD', 'VB', 'DT', 'NN', 'IN', 'DT', 'NNS', 'IN', 'DT', 'NN', 'NNS', ',', 'IN', 'JJ', 'CC', 'VBN', 'TO', 'NNS', 'VBP', 'JJ', 'NN', ':', 'IN', 'VBP', 'JJ', 'NNS', ':', 'IN', 'DT', 'JJ', 'NN', 'NN', 'JJ', 'IN', 'DT', '``', 'NNP', 'NNP', 'IN', 'NNP', 'IN', 'NNP', "''"]
+
+['WRB', 'NNS', 'VBP', 'VBN', 'IN', 'VBG', 'NNS', ':', 'JJ', 'IN', 'NN', ',', 'NN', 'NNS', ',', 'VBG', 'NNS', ',', 'NN', ':', 'VBP', 'PRP', 'VB', 'TO', 'VB', 'DT', 'NN', 'IN', 'PRP$', 'NN', 'IN', 'NN', '.']
+
+['MD', 'PRP', 'VB', 'VBG', 'DT', 'JJ', 'NN', 'NNS', 'TO', 'DT', 'VBN', 'IN', 'IN', 'JJ', 'NN', ',', 'JJ', 'IN', 'VBD', 'VBN', 'IN', 'DT', 'NN', 'NN', 'RB', 'VBN', 'IN', 'NNP', 'NNPS', 'NNP', '.']
+
+['NN', 'TO', 'VB', 'IN', 'DT', 'IN', 'PRP$', 'NNS', ':', 'JJ', 'IN', 'JJ', 'NN', 'NN', ':', 'MD', 'VB', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'RB', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NNS', 'TO', 'PRP']
+
+['VB', 'DT', 'NN', 'NN', 'JJ', 'RB', 'JJ', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'NN', 'NNS', 'MD', 'VB', 'VBN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN']
+
+[]
+
+['PRP', 'VBP', 'VBN', 'IN', 'DT', 'JJ', 'NNS', 'JJ', 'IN', 'JJ', 'NNS', 'CC', 'JJ', 'NNS', 'VBP', 'RB', 'JJ', ':']
+
+['NNP', 'NNS', 'IN', 'NN', 'VBP', 'VBN', ',', 'JJ', 'IN', 'JJ', 'NN', ',', 'JJ', 'NN', 'NNS', 'VBG', 'JJ', 'NNS', ',', 'CC', 'DT', 'NN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', 'IN', 'NN']
+
+['PRP', 'VBP', 'VBN', 'DT', 'NN', 'IN', 'CD', "''", "''", 'NN', 'CC', 'IN', 'DT', 'NNS', 'CD', 'NNS', 'RB', ',', 'RB', 'IN', 'NNS', ',', 'TO', 'VB', 'JJ', 'IN', 'DT', 'JJ', 'VBG', 'JJ', 'IN', 'NN', 'CC', 'NNS', 'CC', 'TO', 'VB', 'NNS', 'IN', 'JJ', 'NN']
+
+['IN', 'PRP', 'VBP', 'CD', 'IN', 'DT', 'JJ', 'NN', 'NN', 'NN', 'NNS', 'JJ', 'IN', '``', 'NNP', "''", 'VB', 'JJ', 'TO', 'VB', 'PRP']
+
+['IN', 'JJ', 'NNS', 'IN', 'NNS', ',', 'JJ', 'IN', 'JJ', 'JJ', 'NNS', 'VBG', 'DT', 'NN', ',', 'NN', ',', 'JJ', 'CC', 'JJ', 'NNS', ',', 'FW', '.', ',', 'VBD', 'NNS', 'CC', 'RB', 'VBD', 'NN', 'NNS', 'VBP', 'JJ', 'NNS', 'RB', 'VBN']
+
+['CD', 'IN', 'DT', 'RBS', 'JJ', 'NNS', 'IN', 'NN', 'IN', 'NNS', 'NNS', 'VBZ', 'DT', 'JJ', 'JJ', 'NN', ',', 'RB', 'VBG', 'VBN', 'IN', 'JJ', 'JJ', 'NN', 'NNS', 'JJ', 'IN', 'NNP', 'NNP', 'NNP', 'NNP', ',', 'NNP', 'NNP', ',', 'CC', 'NNP', 'NNP', 'NNP', ',', 'NNP', 'NNP', ',', 'NNP', '.']
+
+['NNS', 'IN', 'JJ', 'NNS', 'VBP', 'RB', 'JJR', ',', 'VBG', 'IN', 'IN', '$', 'CD', 'DT', 'NN', 'IN', 'TO', '$', 'CD', 'DT', 'NN', 'IN', 'DT', 'NNP', 'NNP', ',', 'CC', 'DT', 'NN', 'IN', 'NN', 'NN', 'VBZ', 'RB', 'DT', 'JJ', 'IN', 'IN', 'DT', 'JJR', 'JJ', 'NNS']
+
+['PRP', 'VBD', 'JJ', 'IN', 'DT', 'NN', 'IN', 'VBG', ',', 'NN', 'IN', 'DT', 'NN', 'TO', 'VB', 'RB', 'IN', 'DT', 'JJ', 'JJ', 'NN', 'JJ', 'IN', 'NNP']
+
+['JJS', 'NNS', 'VBP', 'DT', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'NN', '(', 'RB', 'VBN', ')', 'NN', ',', 'RB', 'IN', 'PRP', 'VBP', 'NN', 'NNS', 'IN', 'NNS']
+
+['VBN', 'NNS', 'CC', 'NNS', 'VBP', 'VBN', 'IN', 'NNS', 'CC', 'NNS', 'JJ', 'IN', 'NN', 'NN']
+
+['NNP', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'NN', 'NN', ',', 'NN', 'CC', 'NN', 'VBP', 'VBN', 'RB', 'DT', 'NN']
+
+['NNP', ',', 'NN', 'POS', 'NN', 'CC', 'NN', 'NN', 'VBP', 'VBN', 'IN', 'NN', 'CC', 'IN', 'NNS', 'JJ', 'IN', 'NNS', 'VBP', ',', 'NN', 'NNS']
+
+['NNP', 'NNP', 'NNP', 'IN', 'PRP$', 'NN', 'NNP', 'IN', 'NNP', 'VBZ', 'DT', 'JJ', 'NN', 'WDT', 'RB', 'IN', 'NN', 'VBZ', 'JJ', 'IN', 'VBG', 'DT', 'JJ', 'NN', 'WDT', 'VBZ', 'DT', 'JJ', 'NN', 'IN', 'NN', 'CC', 'NN', 'IN', 'NN', 'NN', ',', 'RB', 'VBZ', 'PRP', 'DT', 'JJ', 'NN', 'WP', 'VBZ', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'PRP$', 'NN']
+
+['JJ', 'NNS', 'VBP', ',', 'RB', ',', 'IN', 'IN', 'JJ', 'NN', 'IN', 'CD', 'CC', 'DT', 'JJ', 'NN', 'NNS', 'IN', 'JJR', 'IN', 'DT', 'JJ', 'NN', ',', 'PRP', 'VBZ', 'JJ', 'TO', 'VB', 'DT', 'NN']
+
+['NNP', 'NNP', ',', 'PRP$', 'JJ', 'NN', ',', 'RB', 'VBD', 'DT', 'JJ', 'NN', 'RB', 'RB', 'RB', 'IN', 'PRP', 'VBD', 'IN', 'PRP', 'VBD', 'VBN', 'VBN', 'IN', 'PRP$', 'NN', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'WP', 'VBD', 'VBN', 'VBG', 'PRP$', 'NN', ':', 'DT', 'NN', 'VBG', 'IN', 'DT', 'JJ', 'NN', ',', 'JJ', 'NN', ':', 'CC', 'PRP']
+
+['VBZ', 'NNP', 'NNP', 'NNP', ',', 'NN', 'IN', 'DT', 'NNP', 'POS', 'NNP', 'IN', 'NNP', 'NNP', ':', '``', 'NNS', 'VBP', 'JJ', 'TO', 'VB', 'PRP$', 'NN', 'RB', 'TO', 'JJR', 'NNS', ',', 'CC', 'TO', 'NNS', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'VBZ', ',', 'CC', 'NN']
+
+['DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'MD', 'VB', 'CD', 'CC', 'CD', 'NNS', 'TO', 'VB']
+
+['PRP', 'MD', 'VB', 'TO', 'VB', 'IN', 'NN', 'NN', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'VBG', 'CC', 'NN', ',', 'CC', 'IN', 'DT', ',', 'PRP', 'MD', 'VB', 'TO', 'VB', 'PRP$', 'NN']
+
+['IN', 'DT', 'JJ', 'CC', 'JJ', 'NN', 'IN', 'NN', 'VBZ', 'VBN', ':', 'JJ', 'IN', 'DT', 'NN', 'NN', ',', 'DT', 'NN', ',', 'CC', 'DT', 'NN', ':', 'PRP', 'VBZ', 'RBR', 'TO', 'VB', 'NN', 'IN', 'DT', 'NN', 'TO', 'VB', 'DT', 'NN']
+
+['NNP', 'NNP', 'CD', ',', 'VBN', 'IN', 'CD', 'IN', 'PRP', 'VBZ', 'JJ', 'TO', 'VB', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'IN', 'NN', 'IN', 'DT', 'JJ', 'NN', 'CC', 'RB', 'IN', 'DT', 'JJ', 'NN', 'IN', 'JJ', 'NN', ',', 'IN', 'EX', 'VBP', 'JJ', 'NNS', ',', 'JJ', 'IN', 'DT', 'RB', 'VBN', 'IN', 'DT', 'JJ', 'JJ', ',', 'JJ', ',', 'JJ', 'CC', 'JJ', '``', 'NNS', "''"]
+
+[]
+
+['RB', 'IN', 'DT', 'NN', 'PRP', 'VBD', 'RB', 'JJ', 'IN', 'NNS', 'POS', 'NNS', 'TO', 'VB', 'IN', 'NN', 'NNP', '``', 'NN', 'NNS', "''", 'TO', 'VB', 'DT', 'JJ', 'NNS', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'VBG', 'DT', 'NNS', ',', 'VBG', 'NNS', ',', 'CC', 'NN', 'NNS']
+
+['CC', 'VBZ', 'PRP', 'DT', 'NN', 'WDT', 'NN', ',', 'VBG', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'JJ', 'CD', 'NNS', ',', 'VBZ', 'VBN', 'DT', 'NN', 'IN', 'JJ', 'NN', ',', 'WDT', 'VBD', 'NNS', 'JJ', 'IN', 'DT', 'NNP', 'NNP', 'NNP', 'CC', 'DT', 'NNP', 'NNP', 'NNP', 'VBD', 'VBN', 'IN', 'DT', 'CD', ',', 'CC', 'DT', 'VBZ', 'IN', 'JJ', 'NN', ',', 'NNP', 'NN', ',', 'NNP', 'NN', 'VBP', 'VBN', 'PRP$', 'NN', 'CC', 'NN', 'NN']
+
+['IN', 'PRP$', 'JJ', 'CC', 'JJ', 'NN', 'TO', 'VB', 'PRP$', 'NN', 'NN', ',', 'DT', 'NN', 'VBZ', 'VBN', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'DT']
+
+[]
+
+['RB', 'NNP', 'NNP', 'VBD', 'RP', 'TO', 'VB', 'PRP', 'IN', 'DT', 'NN', 'IN', 'NNP', ',', 'RB', 'IN', 'PRP', 'PRP', 'VBD', 'VBN', 'VBN', 'DT', 'JJ', 'NN', 'IN']
+
+['NNP', 'NNS', ',', 'JJ', 'IN', 'NNS', ',', 'VBP', 'DT', 'NN', 'IN', 'VBG', 'RB', 'IN', 'DT', 'NN', 'CC', 'RB', 'VB', 'JJ', 'NNS', ',', 'JJ', 'IN', 'DT', 'NN', 'IN', 'NN', 'CC', 'DT', 'NN', 'IN', 'NN', ',', 'TO', 'VB', 'PRP', 'IN', 'DT', 'JJ', 'NN', 'NN']
+
+['PRP$', 'JJ', 'NN', 'NN', 'VBZ', 'VBN', 'DT', 'NN', 'NN', 'IN', 'VBG', 'NNS', 'JJ', 'IN', 'NNP', 'NNP', 'NNP', ',', 'NNP', 'NNP', ',', 'CC', 'NNP', 'NNP']
+
+['EX', 'VBZ', 'NN', 'TO', 'VB', 'IN', 'NNP', 'MD', 'VB', 'VBN', 'DT', 'NN', 'IN', 'RB', 'VBN', 'IN', 'PRP$', 'NN', 'VBD', 'PRP', 'RB', 'VBN', 'IN', 'PRP$', 'NN', 'POS', 'NN', 'VBD', 'RB', 'IN', 'PRP', 'VBD', 'RB', 'TO', 'VB', 'NN']
+
+['DT', 'NN', 'IN', 'DT', 'JJ', 'NNP', 'NNP', 'IN', 'VBD', 'NN', 'VBD', 'JJ', 'TO', 'VB', 'JJ', 'NN', 'VBD', 'PRP$', 'NN', 'IN', 'JJ', 'NNP', 'CC', 'VBD', 'PRP', 'IN', 'DT', 'NNP', 'NNPS']
+
+['JJ', 'JJ', 'NNS', 'VBN', 'IN', 'VBG', 'JJ', 'JJ', 'IN', 'DT', 'NN', 'NN', ',', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'NN', ',', 'CC', 'NN']
+
+['DT', 'VBD', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NNP', 'NN', 'NNS', 'RB', 'RB', 'IN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'CC', 'NN', 'NNS', ',', 'DT', 'IN', 'WDT', 'VBD', 'TO', 'VB', 'JJ', 'NN', 'NNS', ',', 'VBG', 'NNS', 'IN', 'DT', 'NN', ',', 'RB', 'IN', 'DT', 'NN', 'CC', 'NN', 'NNS', 'VBD', 'WRB', 'NN', 'VBD', 'JJ']
+
+['IN', 'DT', 'JJ', 'NN', '(', 'IN', 'DT', 'JJ', 'WP', 'VBD', 'RB', 'VBN', 'IN', 'VBG', 'VBN', 'IN', 'NN', ')', 'VBD', 'IN', 'JJS', 'DT', 'NNS', 'IN', 'NN', ',', 'RB', 'IN', 'DT', 'JJ', 'JJ', 'IN', 'DT', 'NN', 'VBD', 'TO', 'VB', '(', 'CC', 'VB', ')', 'IN', 'PRP', 'MD', 'VB', 'IN', 'PRP$', 'NNS']
+
+['IN', 'DT', 'NN', ',', 'IN', 'JJ', 'NN', ',', 'VBZ', 'JJ', ',', 'PRP', 'MD', 'VB', 'IN', 'PRP', 'VBD', 'DT', 'JJ', 'NNS', 'IN', 'CD', 'CD', 'NNS', 'TO', 'VB', 'DT', 'JJ', 'NN', ',', 'CC', 'DT', 'JJ', 'NNS', ',', 'IN', 'JJ', 'NN', ',', 'VBD', 'DT', 'RBS', 'JJ', 'NN', 'IN', 'NNS', 'DT', 'NN', 'VBZ', 'VBN']
+
+['CC', 'RB', ',', 'IN', '``', 'DT', 'NN', 'IN', 'JJ', 'NN', 'VBZ', 'RB', 'JJ', 'TO', 'DT', 'NN', 'IN', 'NN', ':', 'RB', ',', 'TO', 'VB', 'DT', 'NN', ',', 'TO', 'VB', 'PRP$', 'MD', ',', 'TO', 'VB', 'PRP$', 'NN', ',', 'NN', ',', 'CC', 'NN']
+
+['RB', ',', 'PRP', 'MD', 'RB', 'RB', 'JJ', 'NN', 'DT', 'NN', 'IN', 'DT', 'NN', 'JJ', 'IN', 'DT', 'JJ', 'VBZ', 'VBG', 'IN', 'NNP', 'VBD', 'JJR', 'NNS', 'IN', 'NNP', 'CC', 'DT', 'NNP', 'NNPS', 'IN', 'IN', 'DT', 'NNP', 'RB', 'IN', 'NN']
+
+['IN', 'DT', 'NN', 'JJ', 'TO', 'DT', 'NN', 'IN', 'JJ', 'NN', 'VBZ', 'IN', 'DT', 'NN', 'POS', 'JJ', 'NNS', 'VBZ', 'RBR', 'JJ', 'CC', 'RBR', 'JJ', 'TO', 'VB']
+
+['IN', 'NNS', 'JJ', 'IN', 'DT', 'NNS', 'CC', 'VBZ', 'DT', 'JJ', 'NN', 'VBZ', 'VBN', 'IN', 'CC', 'PRP', 'VBD', 'DT', 'NNS', 'VBD', 'RB', 'JJR', 'IN', 'PRP', 'VBD', ':']
+
+['RB', ',', 'RB', 'IN', 'PDT', 'DT', 'NNS', 'VBP', 'RB', 'VBN', 'CC', 'VBN', 'RB', 'TO', 'PRP$', 'JJ', 'NN', ',', 'IN', 'DT', 'NNS', 'WDT', 'VBD', 'PRP', 'CC', 'VBD', 'IN', 'PRP', 'VBD', 'VBN', 'VBP', 'RB', 'DT', 'VBD']
+
+['DT', 'NN', ',', 'IN', 'NNP', 'NNP', 'RB', 'VBD', 'PRP', 'IN', 'PRP$', 'NN', 'IN', 'DT', 'NNP', 'NN', ',', 'MD', 'VB', '``', 'IN', 'DT', 'NN', 'VBN', 'CC', 'VBN', 'JJ', 'IN', 'NNS', 'MD', 'VB', "''"]
+
+[]
+
+['NN', 'POS', 'NN', ',', 'JJ', 'IN', 'DT', 'NN', 'IN', 'RB', 'CD', 'JJ', 'NNS', '(', 'NNP', 'NNP', ',', 'NNP', 'CC', 'NNP', ')', 'RB', 'RB', 'JJ', 'NN', ',', 'MD', 'VB', 'VBN', 'JJ', 'IN', 'NN', 'POS', 'NNP', 'IN', 'NN']
+
+['PRP', 'VBD', 'IN', ',', 'IN', 'CC', 'IN', 'DT', 'NNS', 'RB', 'RB', 'IN', 'VBD', 'DT', 'NNP', 'NNP']
+
+[]
+
+['PRP', 'VBP', 'NNS', 'IN', 'PRP$', 'JJ', 'NN', 'IN', 'NNS', 'JJ', 'IN', '``', 'NN', "''", ',', '``', 'NN', "''", ',', 'CC', '``', 'VB', 'JJ', "''"]
+
+['DT', 'JJ', 'NN', 'IN', 'NNP', 'NNP', 'VBZ', 'JJ', 'TO', 'NNS', 'PRP', 'VBD', 'VBN', 'IN', 'DT', 'NNS']
+
+['PRP', 'VBD', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'MD', 'RB', 'VB', 'JJ', 'NNS', ',', 'IN', 'DT', 'NN', 'VBZ', 'RB', 'DT', 'JJ', 'IN', 'PRP$', 'NN', ':', 'IN', 'DT', 'JJ', 'NN', ',', 'DT', 'NNS', 'VBD', 'TO', 'VB', 'VBN', 'IN', 'DT', 'NN', 'PRP']
+
+['DT', 'JJ', 'NN', 'TO', 'DT', 'NN', 'IN', 'NN', 'VBZ', 'DT', 'NN', 'IN', 'DT', '``', 'NN', "''", 'IN', 'DT', 'NN', 'IN', 'NN']
+
+['PRP', 'VBZ', ',', 'RB', ',', 'NNS', 'JJ', 'IN', 'NNP', 'CC', 'NNP', 'VBD', ',', 'IN', 'WDT', 'DT', 'IN', 'VBZ', 'IN', 'JJ', 'TO', 'VB', 'RB', 'JJ', 'NNS', 'IN', 'NN', 'TO', 'VB', 'RB', 'JJ', ',', 'DT', 'NN', 'IN', 'DT', 'NN', ',', 'IN', 'NN', ',', 'CC', 'DT', 'JJ', 'NN']
+
+['DT', 'VBP', 'IN', 'DT', 'JJ', 'NNS', 'IN', 'WDT', 'DT', 'NN', 'VBZ', 'PRP', 'IN', 'DT', 'NN', 'CC', 'VBZ', 'DT', 'NN', 'IN', 'NN', 'CC', 'NN']
+
+['DT', 'NN', 'IN', 'NNP', 'CD', ',', 'VBZ', 'RB', 'RB', 'JJ', 'TO', 'DT', 'IN', 'NNP']
+
+['PRP', 'VBZ', 'IN', 'JJ', 'JJ', 'NNS', ',', 'JJ', 'IN', '``', 'DT', 'NNP', "''", ':', '``', 'EX', 'VBZ', 'DT', 'NN', 'VBZ', 'RB', 'IN', 'PRP$', 'NN']
+
+[]
+
+['IN', 'DT', 'NN', 'NN', 'DT', 'NN', 'MD', 'VB', 'JJ', 'TO', 'DT', 'VBN', 'IN', 'NNP', 'CD']
+
+['IN', 'DT', 'NNS', 'IN', 'JJ', 'NN', 'VBP', 'RB', 'JJ', ',', 'NN', 'MD', 'VB', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'RB', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', 'JJ', 'IN', 'VBZ', 'VBN', 'JJ', 'IN', 'DT', 'NN', 'IN', 'NN', 'NNS', ',', 'DT', 'NN', ',', 'CC', 'DT', 'JJ', 'NN', 'NN']
+
+['RB', 'VBN', 'RB', 'VBP', 'DT', 'JJ', 'NNS', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'NN', 'NN', ',', 'WRB', 'DT', 'NN', ',', 'VBG', ',', 'VBG', ',', 'CC', 'VBG', 'VBP', 'DT', 'RB', 'JJ', 'IN', 'NNS', 'CC', 'NN', 'NN', 'VBP', 'RB', 'DT', 'NNS']
+
+['RB', 'EX', 'MD', 'VB', 'DT', 'NN', 'IN', 'NN', ':', 'PRP', 'MD', 'VB', 'NNS', 'IN', 'PRP$', 'JJ', 'VBG', 'NN', ',', 'JJ', 'RB', 'WRB', 'VBN', 'TO', 'DT', 'JJR', 'JJ', 'NN', 'IN', 'JJ', 'NN']
+
+['RB', 'EX', 'MD', 'VB', 'DT', 'NN', 'IN', 'NN', ':', 'PRP', 'MD', 'VB', 'NNS', 'IN', 'PRP$', 'JJ', 'VBG', 'NN', ',', 'JJ', 'RB', 'WRB', 'VBN', 'TO', 'DT', 'JJR', 'JJ', 'NN', 'IN', 'JJ', 'NN']
+
+[]
+
+['CD', 'NN', ',', 'IN', 'DT', 'JJ', 'NN', 'VBD', 'VBG', 'VBN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NNS', 'VBG', 'RB', ',', 'DT', 'JJ', 'NN', 'VBD', 'VBN', ':', 'RB', 'IN', 'DT', 'NNS', 'VBD', 'VBN', 'TO', 'VB', 'JJ', 'NNS', 'VBG', 'IN', 'NN']
+
+['``', 'PRP', 'VBD', 'VBN', 'IN', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'TO', 'VB', ',', 'RB', 'JJ', 'CC', 'JJ', "''", ',', 'PRP', 'VBZ', 'VBD', ',', '``', 'IN', 'NN', 'DT', 'JJ', 'NN', 'IN', 'NN', 'JJ', 'IN', 'PRP', 'VBD', 'VBN', 'IN', 'IN', 'DT', 'NN', 'IN', 'JJ', "''"]
+
+['NNP', 'NNP', 'NNP', ',', 'JJ', 'NN', 'IN', 'PRP', 'VBD', ',', 'VBD', 'IN', 'DT', 'JJ', 'NN', 'JJ', 'IN', 'PRP', 'VBD', 'IN', 'PRP$', 'NNS', 'DT', 'JJ', 'NNPS', ',', 'TO', 'VB', 'DT', 'JJ', 'NNS', 'VBG', 'VBN', 'IN', 'PRP']
+
+['DT', 'VBD', 'NNP', ',', 'RB', ',', 'JJ', ',', 'CC', 'RB', ',', 'IN', 'WP', 'PRP', 'DT', 'VBD', 'IN', 'NN', ',', 'RB', 'IN', 'NNP', 'VBD', 'JJ', 'VBN', 'IN', 'NN', 'IN', 'PRP$', 'NN', 'IN', 'PRP', 'VBD', 'PRP', ':']
+
+['DT', 'VBD', 'NNP', ',', 'RB', ',', 'JJ', ',', 'CC', 'RB', ',', 'IN', 'WP', 'PRP', 'DT', 'VBD', 'IN', 'NN', ',', 'RB', 'IN', 'NNP', 'VBD', 'JJ', 'VBN', 'IN', 'NN', 'IN', 'PRP$', 'NN', 'IN', 'PRP', 'VBD', 'PRP', ':']
+
+[]
+
+[]
+
+['``', 'RB', "''", ',', 'VBD', 'NNP', ',', '``', 'CD', 'VBN', 'CC', 'VBN', ',', 'JJ', 'IN', 'MD', 'VB', 'VBN', 'IN', 'DT', 'NN', "''"]
+
+['CC', ',', 'RB', 'IN', 'PRP', 'VBD', 'IN', 'NNP', 'IN', 'NN', 'IN', 'PRP$', 'JJR', 'NNS', ',', 'RB', 'RB', 'VBP', 'DT', 'JJ', 'CC', 'JJ', 'NNS', 'WDT', 'VBP', 'VB', 'DT', 'NN', 'CC', 'NN', 'NN', 'NN']
+
+['NNP', 'VBD', 'RB', 'RB', 'JJ']
+
+['IN', 'NN', 'IN', 'NNP', 'NNP', 'POS', 'JJ', 'NNS', 'VBG', 'NN', 'IN', 'NNS', ',', 'DT', 'NN', 'VBD', 'RB', 'VB', 'DT', 'JJ', 'IN', 'IN', 'NN']
+
+['IN', 'DT', 'JJ', 'NNS', 'IN', 'DT', 'NNP', ',', 'WDT', 'VBD', 'RB', 'IN', 'DT', 'JJ', 'NN', 'IN', 'NNP', 'VBD', ',', 'PRP', 'VBD', 'PRP$', 'NNS', 'IN', 'RB', 'JJR', 'NN']
+
+['PRP', 'VBD', 'PRP', 'NN', 'TO', 'VB', 'IN', 'DT', 'NN', 'IN', 'DT', 'NNS', ',', 'CC', ',', 'RB', 'IN', 'DT', 'NNP', 'NNP', 'VBD', 'RP', 'DT', 'JJ', 'NN', ',', 'NNP', 'MD', 'VB', 'RP', 'PRP$', 'JJ', 'NN', 'IN', 'PRP', 'VBD', 'TO', 'DT', 'NNP', 'NNP', 'TO', 'VB', 'PRP$', 'NNS', 'IN', 'DT', 'NNP']
+
+['RB', 'PRP', 'VBZ', 'RB', 'DT', 'NN', ',', 'CC', 'CD', 'IN', 'DT', 'RBS', 'JJ', 'NNS', 'IN', 'JJ', 'NN', 'CC', 'NN', 'IN', 'DT', 'JJ', 'NN', 'VBZ', 'DT', 'NN', 'IN', 'DT', 'NN', 'CC', 'NN', 'IN', 'NN', 'CC', 'NN']
+
+['RB', 'NNP', 'POS', '``', 'PRP$', 'NN', 'VBZ', 'IN', 'DT', 'JJ', ',', 'JJ', 'VBD', "''", 'CC', 'NNP', 'POS', '``', 'DT', 'JJ', 'NN', ',', 'VBD', 'NN', 'IN', 'NNP', "''", 'IN', 'RB', 'JJ', 'IN', 'NN', ',', 'RB', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'IN', 'WDT', 'PRP', 'VBP', 'RB', 'VBN']
+
+['RB', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'IN', 'NN', ',', 'DT', 'NN', 'IN', 'NN', ',', 'CC', 'DT', 'NN', 'IN', 'NN']
+
+['PRP', 'MD', 'VB', 'DT', 'NN', ',', 'VBD', 'TO', 'DT', 'NNS', 'IN', 'NNS', 'JJ', 'IN', 'DT', 'RB', 'VBN', ',', 'IN', 'NNS', 'VBP', '``', 'NNS', "''", 'IN', 'DT', 'NN', 'JJ', 'TO', 'NNS', 'CC', 'NNS', 'WDT', 'MD', 'VB', 'VBN', 'JJ', 'IN', 'CD', 'NN', 'IN', 'NNS', 'TO', 'DT', 'CC', 'RB', ',', 'IN', 'DT', 'NN', ',', 'IN', 'CD', 'NN', 'TO', 'DT']
+
+['DT', 'JJ', 'NN', 'IN', 'NN', 'NN', ',', 'JJ', 'IN', 'JJS', 'IN', 'NNP', 'POS', 'NNS', 'VBD', ',', 'VBD', 'VBN', 'TO', 'NN', 'IN', 'NNP', 'POS', 'NN', 'IN', 'DT', 'IN', 'DT', 'JJS', 'NNS', 'IN', 'DT', 'NNS']
+
+['DT', 'NN', 'VBD', 'RB', 'RB', ',', 'IN', 'DT', 'JJ', 'NN', 'IN', 'NNS', ',', 'DT', 'VBG', 'RB', 'TO', 'VB', 'NNS', ',', 'NNS', 'VBG', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'CD', 'NNP', 'NNP', ',', 'DT', 'JJ', 'NN', 'IN', 'NNP', 'WP', 'VBD', 'DT', 'NN', 'IN', 'DT', 'NNP', 'NNP', 'IN', 'RB', 'JJ', 'NNS']
+
+['IN', 'NNP', 'VBD', 'VBN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'VBG', 'TO', 'DT', 'JJ', 'NN', ',', 'EX', 'VBD', 'JJ', 'IN', 'PRP$', 'JJ', ',', 'JJ', 'IN', 'DT', 'NNP', 'NNP', 'NNP', ':']
+
+['PRP', 'RB', 'VBD', 'PRP$', 'JJ', 'NNS', ',', 'JJ', 'IN', 'DT', 'CD', 'VBG', 'DT', 'NN', ',', 'JJ', 'NN', 'NN', 'IN', 'DT', 'NN', 'IN', 'WDT', 'VBD', 'DT', 'JJ', 'JJ', 'NN', 'VBN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NN', 'CC', 'NNS', ':']
+
+['RB', 'PRP', 'VBD', 'VBN', 'IN', 'DT', 'NN', 'RB', 'JJ', 'TO', 'DT', 'NN', 'IN', 'NNP']
+
+['PRP', 'VBD', 'RB', 'VB', 'PRP', 'JJ', 'TO', 'VB', 'IN', 'DT', 'NNP', 'MD', 'VB', 'IN', 'JJS', 'RB', 'RB', 'IN', 'DT', 'RBS', 'JJ', 'IN', 'PRP$', 'NNS', ':']
+
+['NNP', 'VBZ', ',', 'IN', 'NNS', ',', 'RB', 'IN', 'JJ', 'IN', 'DT', 'NNS', 'PRP', 'IN', 'PRP', 'VBZ', 'IN', 'PRP$', 'NN']
+
+['JJ', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NN', 'CC', 'JJ', 'NN', ',', 'VBP', 'IN', 'JJ', 'NN', 'TO', 'PRP']
+
+['IN', 'DT', 'JJ', 'NN', 'EX', 'VBZ', 'IN', 'DT', 'JJ', 'NN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', '(', 'CC', 'RB', 'IN', 'DT', 'JJ', 'NN', ',', 'EX', 'VBG', 'VBN', 'DT', 'JJ', 'NN', 'IN', 'NNP', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'JJ', 'NNP', 'IN', 'NNP', ')']
+
+['NNS', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'NN', ',', 'NN', ',', 'CC', 'DT', 'NN', 'IN', 'VBG', ',', 'WDT', 'VBP', 'RB', 'JJ', 'IN', 'JJ', 'CC', 'JJ', 'NN', ',', 'VBP', 'PRP$', 'NN']
+
+['IN', 'PRP$', 'NN', 'VBG', 'NNP', 'IN', 'NNP', 'CD', ',', 'CD', ',', 'NNP', 'VBD', 'NNP', 'RB', 'IN', '``', 'NN', 'MD', '(', 'VB', ')', 'NN', 'NNP', 'NNP', '.', 'NNP', '.', 'DT', 'NNS', 'VBN', 'TO', 'DT', 'NNP', 'IN', 'DT', 'NNP', 'IN', 'DT', 'NN', 'CC', 'NN', 'IN', 'JJ', 'NNS', 'CC', 'NNS', 'VBP', 'PRP$', 'NN', 'VBZ', 'IN', 'TO', 'VB', 'VBN', ',', 'CC', 'PRP', 'VBP', 'JJ', 'PRP', 'VBP', 'IN', 'JJ', 'NN', 'CC', 'NN', 'NN', 'DT', 'NNS', 'JJ', 'TO', 'VB']
+
+['JJ', 'NN', 'VBZ', 'VBN', 'VBN', 'IN', 'DT', 'RB', 'JJ', 'NN', ',', 'CC', 'WP', 'VBZ', 'RB', 'JJ', 'VBZ', 'NNP', 'POS', 'JJ', 'NN', 'IN', 'DT', 'NNP', 'NN', 'IN', '``', 'JJ', 'CC', 'JJ', 'NN', "''"]
+
+['CC', 'DT', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'IN', 'PRP', 'VB', 'RB', 'TO', 'DT', 'NN', 'IN', 'NN', 'NN', ',', 'CC', 'RB', 'IN', 'PRP', 'VBD', 'RB', 'VBN', 'DT', 'NN', 'CC', 'DT', 'NNP', 'NNS', 'PRP', 'MD', 'VB', 'VBN', 'DT', 'NNS', ',', 'JJ', 'IN', 'DT', 'JJ', 'NN', ',', 'WDT', 'VBD', 'RP', 'DT', 'NN', 'IN', 'PRP', 'IN', 'JJ', 'CC', 'VBG', 'JJ', 'NN', 'IN', 'DT', 'NN']
+
+[]
+
+['IN', 'PRP', ',', 'RB', 'IN', 'NNS', ',', 'PRP$', 'NNS', 'VBD', 'RB', 'VBN', 'CC', 'RB', 'JJ', 'IN', 'VBG', 'DT', 'NN', 'IN', 'DT', 'JJ', 'JJ', 'NN', ':']
+
+['RB', 'DT', 'RB', 'JJ', 'IN', 'DT', 'RBR', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NNP', 'CC', 'NNP', ',', 'VBP', 'VBN', 'JJ', 'NNS', 'IN', 'NN']
+
+['VBG', 'DT', 'NNS', 'CC', 'NNS', 'IN', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'DT', 'NN', ',', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'NN', ',', 'NN', ',', 'CC', 'NN', ':']
+
+['IN', 'DT', 'JJ', 'NN', ',', 'PRP', 'VBZ', 'DT', 'NN', 'IN', 'NN', 'TO', 'VB', 'RP', 'NNS', 'WRB', 'PRP', 'VBP', ',', 'JJ', 'IN', 'IN', 'DT', 'NN', 'VBZ', 'IN', 'NNS', 'IN', 'NN', 'TO', 'VB', 'PRP', ',', 'CC', 'IN', 'NNS', 'IN', 'JJ', 'NNS', 'TO', 'NN', 'PRP']
+
+['IN', 'JJ', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NNP', ',', 'DT', 'NN', 'IN', 'JJ', 'NN', 'MD', 'VB', 'DT', 'NNS', 'IN', 'DT', 'NN', 'IN', 'WDT', 'PRP', 'MD', 'VB', 'VB', 'PRP$', 'JJ', 'JJ', 'CC', 'JJ', 'NN', 'IN', 'JJ', 'CC', 'DT', 'JJ', 'NN']
+
+['IN', 'JJ', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NNP', ',', 'DT', 'NN', 'IN', 'JJ', 'NN', 'MD', 'VB', 'DT', 'NNS', 'IN', 'DT', 'NN', 'IN', 'WDT', 'PRP', 'MD', 'VB', 'VB', 'PRP$', 'JJ', 'JJ', 'CC', 'JJ', 'NN', 'IN', 'JJ', 'CC', 'DT', 'JJ', 'NN']
+
+['DT', 'NN', 'VBD', 'VBN', 'IN', 'NN', 'NNS', 'JJ', 'TO', 'DT', 'IN', 'DT', 'NN']
+
+['DT', 'VBG', 'NN', ',', 'PRP', 'VBD', 'VBN', ',', '``', 'MD', 'VB', 'JJ', 'TO', 'DT', 'WDT', 'VBZ', 'IN', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'JJ', 'CC', 'JJR', 'IN', 'NNP', 'NNP', "''"]
+
+['IN', 'DT', 'NN', 'IN', 'DT', 'NNS', 'IN', 'DT', 'NN', 'VBP', 'VBN', 'TO', 'VB', 'RB', 'IN', 'DT', 'NN', 'IN', 'PRP$', 'NNS', ',', 'NNS', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', '(', 'JJ', 'IN', 'NN', ')', 'MD', 'VB', 'VBN', 'IN', 'NN', 'NN', 'IN', 'JJ', 'JJ', 'NNS', ',', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'NN']
+
+['DT', 'NN', 'IN', 'JJ', 'JJ', 'NNS', 'JJ', 'IN', 'NNS', 'CC', 'NNS', 'IN', 'NN', 'CC', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'VBG', 'TO', 'JJ', 'NN', 'NN', 'NNS', 'VBP', 'VBG', 'VBN', 'IN', 'NN', 'NNS', 'CC', ',', 'IN', 'DT', 'JJ', 'CD', 'NN', 'NNS', ',', 'VBP', 'VBN', 'IN', 'NN', 'NNP', 'CD', ',', 'CD']
+
+['IN', 'JJ', 'NNS', ',', 'DT', 'JJ', 'NN', 'VBG', 'IN', 'DT', 'NNS', '(', 'NNP', 'CD', ')', 'VBZ', 'DT', 'JJ', 'IN', 'DT', 'IN', 'DT', 'NN', ':', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', 'NNP', ',', 'NNP', 'NNP', ',', 'NNP', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', ',', 'NNP', 'NNP', ',', 'NNP', ',', 'CC', 'NNP', ')']
+
+['NNS', 'JJ', 'IN', 'NNS', 'MD', 'VB', 'VBN']
+
+['DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'NN', 'NN', 'NN', 'MD', 'VB', 'IN', 'DT', 'NN']
+
+['CC', 'PRP', 'VBZ', 'PRP$', 'NNS', 'IN', 'DT', 'JJ', 'NNS', 'IN', 'NN', ',', 'JJ', 'NNS', ',', 'DT', 'NNS', 'IN', 'DT', 'NNP', 'NNPS', 'IN', 'JJ', 'NNS', 'CC', 'NNS', ',', 'JJ', 'NNS', ',', 'CC', 'JJ', 'NNS', 'IN', 'DT', 'JJ', 'NNS', 'IN', 'WRB', 'PRP', 'VBP', 'TO', 'VB', 'PRP', ',', 'IN', 'NN', 'NN', 'JJ', 'IN', 'NN', 'NNS', 'CC', 'NNP', 'NNP', 'NNP', 'NNS', 'VBD', 'IN', 'DT', 'NNP']
+
+['DT', 'NN', 'TO', 'WDT', 'VBG', 'NNS', 'JJ', 'IN', 'NNP', 'NNP', 'JJ', 'NNS', ',', 'NNS', ',', 'JJ', 'NNS', ',', 'CC', 'DT', 'NN', 'NN', 'CC', 'NNS', 'IN', 'DT', 'NN', 'NN', 'MD', 'CC', 'MD', 'NN', 'DT', 'NN', 'IN', 'DT', 'NNP', 'NNP', 'NNS', 'MD', 'VB', 'RB', 'VBN']
+
+['NNP', 'NN', 'NN', 'IN', 'DT', 'JJ', 'NN', 'MD', 'VB', 'VBN', 'IN', 'NN', 'IN', 'DT', 'RBS', 'JJ', 'NNS', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NNS', 'CC', 'NN', ',', 'IN', 'JJ', 'NNS', 'IN', 'NN', 'CC', 'JJ', 'NNS']
+
+['DT', 'NN', 'CC', 'NN', 'IN', 'NN', 'IN', 'NN', 'CC', 'NN', 'VBZ', 'DT', 'JJ', 'CC', 'VBG', 'NN', 'IN', 'DT', 'NNS', 'IN', 'JJ', 'NN', 'CC', 'NN', 'JJ', 'IN', ':', '(', 'DT']
+
+['DT', 'JJ', 'NN', 'VBZ', 'TO', 'VB', 'RP', 'NN', 'IN', 'NN', 'IN', 'NN', 'IN', 'NN', 'NN', 'NN', 'CC', 'IN', 'NN', 'IN', 'DT', 'JJ', 'NN', 'IN', 'NNS', 'WDT', 'VBP', 'JJ', 'NNS', 'IN', 'VBN', 'NNP', 'NNP', 'NNS', 'JJ', 'IN', 'NN', 'NN', ',', 'CC', 'WDT', 'VBP', 'DT', 'NN', 'IN', 'NN', 'TO', 'NNS', 'IN', 'NNP', 'NNP', 'CC', 'NNP', 'NNP']
+
+['IN', 'JJ', ',', 'DT', 'NNS', 'IN', 'NN', 'NNS', 'VBP', 'DT', 'NNS', 'WDT', 'VBP', 'IN', 'VBG', 'NNS', 'CC', 'IN', 'NN', 'NNS', ',', 'JJ', 'IN', 'JJ', 'NNS', 'IN', 'NNS', 'CC', 'NNS', ',', 'JJR', 'NNS', 'IN', 'JJ', 'NN', ',', 'CC', 'NNS', 'IN', 'DT', 'NN', 'CC', 'NN', 'NNS', 'IN', 'DT', 'NNP', 'NNS']
+
+['DT', 'NNS', ',', 'WDT', 'VBP', 'RB', 'IN', 'NN', 'CC', 'IN', 'NN', 'NN', ',', 'VBP', 'VBN', 'IN', 'NN', 'IN', 'NNS', 'IN', 'NN', 'CC', 'NN', 'CC', 'IN', 'NN', 'IN', 'JJ', 'JJ', 'NN', 'JJ', 'IN', 'NNS', ',', 'NNS', ',', 'NNS', ',', 'CC', 'JJ', 'NNS']
+
+['DT', 'NN', 'NN', 'MD', 'VB', 'JJ', 'TO', 'DT', 'VBG', 'IN', 'NNP', 'IN', 'JJ', 'NNS', 'CC', 'DT', 'NNS', 'MD', 'VB', 'JJ', 'IN', 'DT', 'NNS', 'IN', 'DT', 'NN']
+
+['IN', 'DT', 'JJ', 'NN', '(', 'JJ', 'NN', ')', 'IN', 'VBG', 'DT', 'NN', 'IN', 'NN', 'NNS', ',', 'JJ', 'IN', 'VBG', 'DT', 'NN', 'CC', 'VBG', 'DT', 'NN', 'NN', ',', 'FW', '.', ',', 'VBZ', 'IN', 'NNP', ',', 'NNP', ',', 'CC', 'DT', 'JJ', 'NN', ',', 'PRP', 'MD', 'VB', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'NN', 'WDT', 'VBZ', 'RB', 'DT', 'NNP', ',', 'NNP', ',', 'CC', 'JJ', 'NN']
+
+['NN', 'VBZ', 'VBG', 'IN', 'NNP', 'CC', 'NNP', 'WP', 'VBP', 'NNS', 'IN', 'DT', 'NNP', 'NNPS', 'MD', 'VB', 'JJ', 'TO', 'NN', 'IN', 'NN', 'IN', 'PRP$', 'NNS', ',', 'DT', 'JJ', 'IN', 'IN', 'PRP', 'VBD', 'NNS', 'IN', 'DT', 'NNP', 'NNPS']
+
+['DT', 'JJ', 'NN', 'VBZ', 'IN', 'NN', ':', 'JJ', ',', 'IN', 'PRP', 'RB', 'VBZ', ',', 'TO', 'JJ', 'JJ', 'NN', ':', 'VBZ', 'RB', 'RB', 'JJ', 'IN', 'NN', 'IN', 'JJ', 'NN', 'VBZ', 'JJ', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN']
+
+['CC', 'JJS', 'NN', 'VBP', 'IN', 'NNS', 'JJ', 'IN', 'DT', 'VBP', 'RB', 'VBN', 'IN', 'DT', 'NN', 'NN', ',', 'VB', 'PRP', 'VB', 'PRP', 'IN', 'DT', 'NNS', 'IN', ',', 'IN', 'NNP', 'EX', 'MD', 'VB', 'VBN', 'DT', 'NN', 'IN', 'WDT', 'TO', 'VB', 'DT', 'NNP', ',', 'CC', 'IN', 'EX', 'MD', 'RB', 'VB', 'IN', 'JJ', 'NN', 'IN', 'WDT', 'DT', 'NNP', 'MD', 'VB', ',', 'VBN', 'IN', 'DT', 'NN', ',', 'IN', 'PRP$', 'NNS', ',', 'PRP$', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'IN', 'NN']
+
+['DT', 'NN', 'MD', 'VB', 'CD', 'JJ', 'NNS', ',', 'RB', 'DT', 'JJ', 'IN', 'PRP$', 'JJ', 'NN']
+
+['IN', 'DT', 'NN', 'EX', 'VBP', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NNS', ',', 'NN', 'NNS', ',', 'JJ', 'NNS', ',', 'NNS', ',', 'CC', 'JJ', 'NNS']
+
+['VBG', 'DT', 'JJS', 'NN', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'NNS', 'CC', 'NNS', 'IN', 'CD', ',', 'NN', 'NN', 'IN', 'NN', 'NN', 'NNS', 'IN', 'CD', 'VBD', 'IN', '$', 'CD', 'CD', ',', 'VBN', 'TO', '$', 'CD', 'CD', 'IN', 'CD']
+
+['NN', 'CC', 'NN', 'NNS', 'VBN', 'IN', 'DT', 'NN', 'NN', 'NNP', 'CC', 'DT', 'NN', 'NN', 'IN', 'JJ', 'NN', 'NN', 'NNS', 'JJ', 'IN', 'NNP', 'VBP', 'VBN', 'TO', 'VB', 'RB']
+
+['NNS', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NNS', 'CC', 'NNS', ',', 'IN', 'RB', 'VBG', 'RB', 'RB', 'IN', 'DT', 'IN', 'NNS', 'VBD', 'RB', 'IN', 'CD', 'DT', 'NN', ',', 'CC', 'MD', 'VB', 'RB', 'IN', 'CD']
+
+[]
+
+['DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'NN', 'IN', 'NNP', 'VBZ', 'RB', 'JJR', 'IN', 'DT', 'VBN', 'JJ', 'NN', ',', 'IN', 'DT', 'NN', 'VBN', 'IN', 'NNS', 'IN', 'JJ', 'NNS', 'IN', 'CD', 'NNS', 'CC', 'CD', 'NN', 'VBZ', 'IN', 'DT', 'IN', 'DT', 'JJ', 'NN', 'IN', 'IN', 'NNS']
+
+['IN', 'DT', 'NNP', 'NN', 'VBZ', 'JJ', 'IN', 'NN', 'IN', 'DT', 'IN', 'JJ', 'NN', 'CC', 'JJ', 'NN', ',', 'PRP', 'VBZ', 'VBG', 'TO', 'VB', 'PRP', 'IN', 'DT', 'NN', 'WDT', 'MD', 'VB', 'VBN', 'TO', 'VB', 'JJ', 'NNS']
+
+['PRP', 'VBZ', 'JJ', 'TO', 'VB', 'NN', 'TO', 'JJ', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'NN', 'WDT', 'VBP', 'JJ', 'TO', 'JJ', 'NN']
+
+['IN', 'DT', 'NNP', 'NN', 'VBZ', 'JJ', 'IN', 'NN', 'IN', 'DT', 'IN', 'JJ', 'NN', 'CC', 'JJ', 'NN', ',', 'PRP', 'VBZ', 'VBG', 'TO', 'VB', 'PRP', 'IN', 'DT', 'NN', 'WDT', 'MD', 'VB', 'VBN', 'TO', 'VB', 'JJ', 'NNS']
+
+['DT', 'VBZ', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'VBN', 'IN', 'NNP', 'IN', '``', 'DT', 'JJ', 'NNS', 'IN', 'JJ', 'NNS', 'MD', 'VB', 'VBN', 'TO', 'VBG', 'NNS', "''"]
+
+['DT', 'JJ', 'NN', 'NNP', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'VBZ', 'VBN', 'IN', 'VBG', 'DT', 'NN', 'JJ', 'NNS', 'DT', 'NN', ',', 'RB', 'IN', 'PRP', 'VBZ', 'IN', 'DT', 'JJ', 'CC', 'JJ', 'NN', 'NN']
+
+['DT', 'NNS', 'VBP', 'VBN', 'IN', 'DT', 'JJ', 'NNS', 'RB', 'IN', 'DT', 'NN', 'MD', 'VB', 'VBN', 'CC', 'VBN', 'IN', 'IN', 'NN', 'IN', 'CD', 'POS', 'NNS']
+
+[]
+
+['JJ', 'DT', 'NN', 'VBZ', 'VBN', 'TO', 'VB', 'RB', 'JJ', 'IN', 'PRP', 'MD', 'VB', 'VBN', 'TO', 'VB', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'VBG', 'NNS', ',', 'NNS', ',', 'NNS', ',', 'JJ', 'NNS', ',', 'CC', 'JJ', 'NN', ',', 'IN', 'DT', 'NN', 'VBZ', 'VBN', 'TO', 'DT', 'JJ', 'NNS', 'VBN', '``', 'NN', "''", ',', '``', 'NN', "''", ',', '``', 'NN', "''", ',', 'FW', '.', ',', 'WDT', 'VBP', 'RB', 'VBN', 'IN', 'JJ', 'NNS', 'IN', 'NN']
+
+['IN', 'DT', 'NN', 'VBZ', 'DT', 'NN', 'VBD', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'NN', 'NN', 'NN', 'JJ', 'TO', 'DT', 'IN', 'NNP', 'CC', 'NNP']
+
+['DT', 'NN', 'VBD', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'JJ', 'TO', 'DT', 'VBN', 'IN']
+
+['DT', 'NN', 'VBZ', 'TO', 'VB', 'JJ', 'IN', 'NNP', 'NNS', ',', 'CC', 'VBZ', 'DT', 'JJ', 'IN', 'DT', 'VBN', 'IN', 'NNP']
+
+['DT', 'NN', 'VBZ', 'VBN', 'IN', 'NN', 'TO', 'DT', 'JJ', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'NN']
+
+['CD', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'JJ', 'CC', 'JJ', 'NN', ',', 'JJ', 'NN', ',', 'FW', '.', ',', 'DT', 'NNS', 'IN', 'DT', 'JJ', 'JJ', 'VBN', 'IN', 'VBG', 'NNS', 'VBP', 'JJ']
+
+['CC', 'JJ', 'NNS', ',', 'IN', 'NN', ',', 'RB', 'JJ', 'NNS', 'JJ', 'IN', 'NN', 'NNS', 'WDT', 'MD', 'VB', 'IN', 'NNS', 'TO', 'VB', 'PRP', 'RBR', 'JJ', 'TO', 'VB']
+
+['RB', 'JJ', '(', 'JJ', ')', 'NNS', 'JJ', 'IN', 'NNS', ',', 'NNS', ',', 'CC', 'NNS', 'VBG', 'DT', 'NN', 'CC', 'RB', 'NN', 'VBP', 'JJR', 'IN', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', 'IN', 'IN', 'DT', 'JJ', 'NN']
+
+['RB', ',', 'PRP', 'VBZ', 'VBN', 'VBN', 'IN', 'DT', 'NN', 'IN', 'DT', 'CC', 'NN', 'IN', 'DT', 'NN', 'MD', 'RB', 'VB', 'DT', 'JJ', 'IN', 'DT', 'IN', 'JJ', 'CC', 'NN', 'NNS', '(', 'NNP', ',', 'CD', ')', ',', 'CC', 'DT', 'JJ', 'NN', 'MD', 'RB', 'VB', 'VBN']
+
+['RB', ',', 'DT', 'NN', 'MD', 'RB', 'VB', 'DT', 'NN', 'IN', 'NN', 'IN', 'JJ', 'NN', 'NNS', 'JJ', 'IN', 'JJ', 'NNS']
+
+['DT', 'JJ', 'JJ', 'CC', 'JJ', 'NN', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'NN', ',', 'JJ', 'IN', 'DT', 'NNS', 'IN', 'DT', 'NN', 'CC', 'DT', 'NN', 'IN', 'DT', 'NN', 'CC', 'JJR', 'NN', ',', 'VBP', 'JJ', 'IN', 'VBG', 'RP', 'DT', 'JJR', 'NNS', 'TO', 'WDT', 'PRP', 'VBP', 'RB', 'VBN', 'IN', 'PRP$', 'JJ', 'NN']
+
+['EX', 'MD', 'VB', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'VBG', 'IN', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'JJ', 'NN', 'IN', 'NNS', ',', 'NNS', ',', 'NN', 'NNS', ',', 'NNS', ',', 'FW', '.']
+
+['NNS', 'WDT', 'VBP', 'VBN', 'TO', 'VB', 'JJ', 'NNS', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'VBG', 'NNP', 'NN', ',', 'NN', ',', 'NN', ',', 'NNS', ',', 'NN', ',', 'FW', '.', ',', 'RB', 'IN', 'DT', 'NN']
+
+['PRP', 'VBZ', 'JJ', 'IN', 'JJ', 'JJ', 'NNS', 'MD', 'VB', 'VBN', 'JJ', 'IN', 'JJ', 'NN', 'NNS']
+
+['IN', 'DT', 'JJ', 'NN', 'JJ', 'NN', 'VBP', 'VBN', 'VBN', 'IN', 'NN', 'IN', 'NNP', 'VBG', 'JJ', 'NNS', 'JJ', 'TO', 'DT', 'VBN', 'IN', 'NNP', 'CC', 'NNP', ',', 'CC', 'JJ', 'NN', 'CC', 'JJ', 'NNS', 'IN', 'DT', 'NNS', 'VBG', 'NNS', 'IN', 'DT', 'NNP', 'CC', 'NNP', 'NNS', 'VBP', 'VBN', 'VBN']
+
+['DT', 'NN', 'NN', 'IN', 'DT', 'NN', 'NN', 'VBZ', 'JJ', 'TO', 'DT', 'IN', 'NNP', ',', 'CC', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NNS', 'VBZ', 'RB', 'VB', 'NN', 'IN', 'NN', ',', 'CC', 'DT', 'NNS', 'VBP', 'IN', 'DT', 'JJ', 'NN']
+
+['RB', 'DT', 'NN', 'IN', 'PRP', 'TO', 'VB', 'VBZ', 'TO', 'VB', 'PRP', 'DT', 'NN', 'IN', 'DT', 'JJ', 'VBG', 'NNS', 'JJ', 'IN', 'DT', 'JJ', 'NNP', 'NN', 'IN', 'PRP$', 'NNP', 'NNP', ',', 'CC', 'RB', 'DT', 'JJ', 'NN', 'NN', ',', 'CC', 'RB', 'DT', 'JJ', 'JJ', 'NN', 'IN', 'NN', ',', 'RB', 'CD', 'IN', 'NN', 'CC', 'NN', 'NNS']
+
+['JJS', 'NNS', 'VBP', 'TO', 'VB', 'DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'JJS', ',', 'DT', 'NN', 'NN', ',', 'CC', 'DT', 'NN', 'VBN', 'IN', 'DT', 'NN', ':']
+
+['DT', 'RBS', 'JJ', 'NNS', 'VBP', 'JJ', 'TO', 'DT', 'VBN', 'IN', 'NN', 'CD', ',', ',', 'VBG', 'VBN', 'IN', 'JJ', ',', 'RB', 'JJ', 'JJ', 'NNS', 'CC', 'JJ', ',', 'RB', 'JJ', 'NN', 'NNS', '(', 'NNS', '.', 'CD', ',', 'CD', ')']
+
+['IN', 'DT', 'VB', 'JJ', ',', 'DT', 'NN', 'VBZ', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'JJ', 'NNS', 'MD', 'VB', 'JJ', 'NN', 'IN', 'JJ', 'NN', 'JJ', 'TO', 'DT', 'VBN', 'IN', 'JJ', 'NN']
+
+['IN', 'NN', ',', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'TO', 'VB', 'NN', 'MD', 'VB', 'VBN', 'TO', 'PRP$', 'NN', ',', 'RB', 'JJ', 'NNS', 'CC', 'JJ', ',', 'JJ', 'NNS', 'VBD', 'IN', 'DT', 'NN', 'RB', 'VBG', 'IN', 'JJ', 'JJ', 'NN', 'NNS', 'JJ', 'IN', 'DT', 'VBN', 'IN', 'NNS', 'CD', ',', 'CC', 'CD']
+
+['NNP', 'JJ', 'NNS', 'JJ', 'TO', 'CD', 'CC', 'CD', 'CC', 'DT', 'JJ', 'NNS', 'VBN', 'IN', 'DT', 'NN', 'IN', 'DT', 'NNS', 'CC', 'NNS', 'IN', 'DT', 'NN', 'VBP', 'VBN', 'VBN', 'IN', 'DT', 'NNP']
+
+['IN', 'DT', 'JJ', 'NN', ',', 'EX', 'VBP', 'DT', 'JJ', 'JJ', 'NNS', 'IN', 'DT', 'JJ', 'JJ', 'NN', ',', 'JJ', 'IN', 'NN', ',', 'VBG', 'DT', 'VBG', 'NN', 'CC', 'RB', 'VBG', 'IN', 'NN', 'IN', 'DT', 'JJ', 'IN', 'JJ', 'NN']
+
+['IN', 'PRP$', 'NN', 'JJ', 'NNS', 'VBD', 'NN', 'NNS', 'TO', 'DT', 'NN', ',', 'RB', 'RB', 'IN', 'NN', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NN']
+
+['DT', 'NN', 'VBZ', 'RB', 'VB', 'TO', 'VB', 'DT', 'JJ', 'IN', 'WP', 'VBZ', 'RB', 'JJ', 'IN', 'DT', 'NN', ',', 'CC', 'EX', 'VBZ', 'DT', 'NN', 'RB', 'RB', 'IN', 'NN', 'MD', 'VB', 'VBN', 'IN', 'NN', 'IN', 'JJ', 'NNS']
+
+['NNP', ',', 'VBZ', 'DT', 'VBG', 'NN', 'IN', 'DT', 'NN', 'DT', 'JJ', 'IN', 'DT', 'VBD', 'IN', 'DT', 'NN', 'WRB', 'PRP', 'VBZ', 'VBN', 'CC', 'VBN', '.']
+
+['IN', 'DT', 'NN', 'CC', 'NNS', 'EX', 'VBD', 'JJ', 'NNS', 'CC', 'JJ', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'VBN', 'IN', 'NNP', 'CD']
+
+['DT', 'NN', 'IN', 'VBG', 'NNS', 'VBD', 'RB', 'DT', 'JJ', 'IN', 'DT', 'VBN', 'IN', 'NNP', 'FW', 'NN', '(', 'CD', ')']
+
+['CC', 'RB', 'IN', 'RB', 'JJ', 'NN', 'NNS', 'JJ', 'IN', 'DT', 'NN', ',', 'NN', 'NN', 'RB', 'VBN', 'IN', 'DT', 'NN', 'CC', 'DT', 'JJ', 'NN', 'VBZ', 'VBN', 'IN', 'DT', 'NN']
+
+['IN', 'DT', 'NNS', 'DT', 'JJ', 'CC', 'JJ', 'NN', 'VBZ', 'VBN', ',', 'CC', 'DT', 'NN', 'VBZ', 'JJ', 'IN', 'VBZ', 'VBN', 'RB', 'CC', 'MD', 'VB', 'VBN', 'IN', 'JJ', 'NNS', 'IN', 'NNS']
+
+['DT', 'NN', 'VBZ', 'JJ', 'TO', 'DT', 'NN', 'IN', 'NNP', 'IN', 'EX', 'VBZ', 'DT', 'VBG', 'NN', 'IN', 'DT', 'JJ', ',', 'VBD', 'NN', 'VBN', 'IN', 'NNP']
+
+['NNS', 'JJ', 'TO', 'DT', 'MD', 'VB', 'VBN', 'IN', 'DT', 'NN', 'IN', 'NNP']
+
+['NNS', 'JJ', 'IN', 'DT', 'NNP', 'NNP', 'NNP', 'IN', 'DT', 'NNPS', 'VBP', 'VBN', 'IN', 'JJ', 'NNS', 'MD', 'VB', 'IN', 'JJ', 'JJ', 'NN']
+
+['PRP', 'VBZ', 'VBN', 'IN', 'DT', 'NN', 'NNS', ',', 'JJ', 'IN', 'JJ', 'JJ', 'NNS', 'CC', 'DT', 'JJ', 'NNS', 'IN', 'NN', ':', 'NN', ',', 'JJ', 'NN', ',', 'NN', ',', 'JJ', 'NN', ',', 'DT', 'NN', 'IN', 'NN']
+
+['PRP', 'VBP', 'VBG', 'CC', 'VBG', 'JJ', 'NNS', 'JJ', 'IN', 'JJ', 'NN', ',', 'JJ', 'NN', 'CC', 'NN', ',', 'JJ', 'NN', 'IN', 'NN', ',', 'CC', 'VBG', 'NN', 'VBD', 'IN', 'DT', 'NN']
+
+['TO', 'DT', 'NN', 'DT', 'NN', 'MD', 'VB', 'VBN', 'DT', 'NNP', 'IN', 'WDT', '``', 'JJ', 'NNS', 'VBP', 'VBN', 'IN', 'NN', ',', 'IN', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'NN', ',', 'WDT', 'VBP', 'RB', 'CC', 'RB', 'JJ', "''"]
+
+['RB', 'IN', 'DT', 'NNS', 'MD', 'VB', 'DT', 'JJ', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'CC', 'VBP', 'NNS', 'RB', 'RB', 'VBG', 'RB', ',', 'PRP', 'VBP', 'JJ', 'NN', 'IN', 'NNS', ',', 'IN', 'NN', 'IN', 'NN', ',', 'IN', 'DT', 'IN', 'DT', 'NNS', 'VBP', '(', 'RB', 'NNS', 'IN', 'RB', 'JJ', 'NNS', ')', 'CC', 'JJ', 'NN', '(', 'JJ', 'IN', 'NNS', 'IN', 'JJ', 'NN', ')', 'IN', 'JJ', 'NNS']
+
+['JJ', 'IN', 'VBG', 'NNS', 'VBD', 'VBN', 'RB', 'IN', 'IN', 'DT', 'JJ', 'NNS', ',', 'DT', 'JJ', 'NN', 'VBG', 'IN', 'EX', 'VBD', 'DT', 'RB', 'JJR', 'NN', 'IN', 'DT', 'VBN', 'IN', 'NN', 'IN', 'DT', 'JJ', 'NN']
+
+['DT', 'NN', 'CC', 'NNS', 'JJ', 'TO', 'PRP', ',', 'MD', 'VB', 'TO', 'VB', 'DT', 'JJ', 'NN', 'IN', 'VBG', 'DT', 'NN', 'NN']
+
+['RB', 'IN', 'DT', 'NN', 'VBD', 'VBN', 'IN', 'DT', 'NN', 'VBD', 'PRP', 'JJ', 'TO', 'NN', 'RB', 'TO', '(', 'CD', ')', ',', 'JJ', 'NN', 'NNS', ',', 'JJ', 'IN', 'NN', ',', 'JJ', ',', 'NN', ',', 'NN', ',', 'CC', 'RB', 'IN']
+
+['NNS', 'JJ', 'IN', '``', 'NN', 'IN', 'DT', 'NN', 'IN', 'PRP', "''", ',', 'CC', '``', 'CD', 'NNS', 'IN', 'NN', "''", ',', 'VBD', 'RB', 'JJ']
+
+['EX', 'VBZ', 'JJ', 'NN', 'NN', 'TO', 'VB', 'DT', 'NN', 'IN', 'DT', 'NN', 'IN', 'VBG', 'NNS', 'WP', 'VBP', 'JJ', 'TO', 'VB', 'NN', 'IN', 'VBG', 'NNS']
+
+['DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'NN', 'NN', 'VBZ', 'RB', 'VBN', ',', 'RB', 'IN', 'DT', 'RB', 'JJ', 'NN', 'JJ', 'IN', 'JJ']
+
+['CC', 'DT', 'NN', 'IN', 'NN', 'IN', 'NN', 'CC', 'NN', ',', 'IN', 'NN', ',', 'MD', 'VB', 'NNS', 'JJ', 'IN', 'DT']
+
+['NNS', 'JJ', 'IN', 'DT', 'CD', 'MD', 'RB', 'VB', 'DT', 'NNS', 'IN', 'NN', 'VBZ', 'JJ', 'CC', 'IN', 'PRP', 'VBZ', 'JJ']
+
+['VBG', 'DT', 'VBN', 'CC', 'JJ', 'NNS', 'WDT', 'VBP', 'VBZ', 'VB', ',', 'NN', 'NNS', ',', 'JJ', 'IN', 'DT', 'NNP', '.', 'IN', 'CD', 'CC', 'DT', 'JJ', 'NNP', 'NN', 'IN', 'CD', ',', 'NN', 'IN', 'NNS', 'WRB', 'IN', 'IN', 'NN', ',', 'CC', 'VBP', 'RB', 'IN', 'DT', 'JJ', 'PRP', 'VBP', 'TO', 'VB', 'VBN', 'IN', 'JJ', 'NN', 'WRB', 'IN', 'NN']
+
+[]
+
+['IN', 'DT', 'NN', 'NN', ',', 'DT', 'JJ', 'NN', 'NN', 'VBZ', 'DT', 'JJ', 'NNS', ',', 'RB', 'IN', 'CD', 'NNS', 'VBZ', 'DT', 'NN', 'NN', 'NN', 'NN']
+
+['PRP', 'RB', 'RB', 'VBZ', 'IN', 'NNS', 'VBP', 'RB', ',', 'VBG', 'IN', 'DT', 'RBS', 'JJ', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'JJ', 'NNS', ',', 'RB', 'IN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'POS', '``', 'JJ', "''", 'MD', 'VB', 'RB', '``', 'JJ', "''", 'DT', 'JJ', 'NN']
+
+['DT', 'VBZ', 'PRP', 'JJ', 'IN', 'NNP', 'NNS', 'IN', 'JJ', 'NN', 'CC', 'JJ', 'JJ', 'NN', 'VBP', 'JJ', 'TO', 'VB', 'RBR', 'IN', 'DT', 'JJ', 'JJ', 'NNS']
+
+['IN', 'NN', 'TO', 'VB', 'RB', 'IN', 'DT', 'NN', 'IN', 'DT', 'CD', 'NN', ',', 'WDT', 'PRP', 'MD', 'VB', 'DT', 'NN', 'IN', '``', 'JJ', 'NN', "''", 'IN', '``', 'JJ', "''", 'NN', 'NNS', ',', 'PRP', 'RB', 'VBD', 'DT', 'NN', 'IN', 'VBG', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'NN', 'NN', ',', 'WDT', 'MD', 'VB', 'JJ', 'IN', 'DT', 'JJ', 'NN']
+
+['IN', 'DT', 'JJ', 'NN', 'DT', 'NNS', 'VBD', 'VBN', 'IN', 'RB', 'PDT', 'DT', 'JJ', 'JJ', 'NNS', ',', 'IN', 'RB', ',', 'RB', 'IN', 'DT', 'JJ', 'NNS', 'IN', 'NNP', 'CC', 'NNP', 'VBP', 'PRP', ',', 'IN', 'RBR', 'NN', ',', 'NN']
+
+['DT', 'NN', 'JJ', 'IN', 'NNP', 'MD', 'VB', 'VBN', 'IN', 'NN', 'CC', 'MD', 'VB', 'VBN', 'IN', 'TO', 'VB', 'PRP$', 'NN', ':']
+
+['NNS', 'JJ', 'TO', 'DT', 'NN', 'NN']
+
+['EX', 'MD', 'VB', 'JJ', 'NNS', 'WDT', 'VBP', 'RB', 'JJ', 'TO', 'DT', 'JJ', 'NN', 'NN', 'NN', 'CC', 'NN', 'NN', 'CC', 'WP$', 'NN', 'TO', 'VB', 'DT', 'NN', 'MD', 'RB', 'VB', 'JJ', 'TO', 'DT', 'NNS', 'JJ', 'TO', 'DT', 'NNS']
+
+['EX', 'MD', 'VB', 'JJ', 'NNS', 'WDT', 'VBP', 'RB', 'JJ', 'TO', 'DT', 'JJ', 'NN', 'NN', 'NN', 'CC', 'NN', 'NN', 'CC', 'WP$', 'NN', 'TO', 'VB', 'DT', 'NN', 'MD', 'RB', 'VB', 'JJ', 'TO', 'DT', 'NNS', 'JJ', 'TO', 'DT', 'NNS']
+
+['IN', 'NN', 'TO', 'NNS', 'JJ', 'IN', 'DT', 'DT', 'NNS', 'IN', 'NN', 'CD', '(', 'NN', ')', ',', 'VBN', 'IN', 'JJ', 'NN', ',', 'VBP', 'DT', 'NN', 'VBG', 'NN', ',', 'IN', 'DT', 'NNS', 'VBP', 'JJ', 'CC', 'JJ', 'TO', 'DT', 'VBG', 'NN']
+
+['IN', 'DT', 'JJ', 'NNS', ',', 'RB', ',', 'PRP', 'VBZ', 'TO', 'VB', 'RBR', 'RB', 'IN', 'NN', 'NNS', 'JJ', 'IN', 'VBG', 'DT', 'NN', ',', 'VBG', 'TO', 'VB', 'NNS', 'CC', 'VBP', 'IN', 'NN', 'NNS', ',', 'CC', 'VBG', 'RP', 'NNS', 'VBG', 'DT', 'NN']
+
+['DT', 'NNS', 'IN', 'NN', 'CC', 'NN', 'MD', 'VB', 'VBN', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'JJ', 'NN', 'CC', 'NN', ',', 'JJ', 'NN', ',', 'NN', 'NN', 'NN', ',', 'DT', 'JJ', 'NN', ',', 'JJ', 'NN', ',', 'NN', ',', 'CC', 'JJ', 'NN']
+
+['DT', 'NNS', 'IN', 'NN', 'CC', 'NN', 'MD', 'VB', 'VBN', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'JJ', 'NN', 'CC', 'NN', ',', 'JJ', 'NN', ',', 'NN', 'NN', 'NN', ',', 'DT', 'JJ', 'NN', ',', 'JJ', 'NN', ',', 'NN', ',', 'CC', 'JJ', 'NN']
+
+['DT', 'NNS', 'TO', 'NNS', 'JJ', 'IN', 'DT', 'RB', 'VBP', 'TO', 'DT', 'NN', 'IN', 'DT', 'NN', 'POS', 'JJ', 'JJ', 'NN', 'CC', 'RB', 'IN', 'PRP$', 'JJ', 'NN', ',', 'RB', 'RB', 'IN', 'IN', 'PRP$', 'NN', 'CC', 'WP', 'PRP', 'VBZ', 'PRP$', 'NN', 'TO', 'VB', 'IN', 'DT', 'NN']
+
+['RB', 'EX', 'VBP', 'DT', 'NN', 'NNS', 'CC', 'DT', 'NNS', 'POS', 'NNS', 'JJ', 'IN', 'DT', 'NNP', 'NNP', 'IN', 'NNP', 'CC', 'NNP', ',', 'CC', 'DT', 'NNP', 'NNP', 'IN', 'NNP', 'NNP']
+
+['RB', ',', 'NNS', 'IN', 'NNP', 'NNP', 'NNP', 'NN', '``', 'JJ', 'NN', "''", 'VBZ', 'DT', 'NN', 'VBN', 'TO', 'VB', 'IN', 'JJ', 'NN', 'TO', 'NNS', 'IN', 'NN', 'IN', 'NN', ',', 'IN', 'DT', 'NN', 'IN', 'NN', 'RB', 'IN', 'NN', '``', 'JJ', 'NN', "''", 'VBZ', 'VBN', 'VBN', 'RBR', 'RB', ',', 'RB', 'IN', 'TO', 'VB', 'NNS', 'WDT', ',', 'IN', 'DT', 'NN', 'IN', 'DT', 'CD', 'JJ', '(', 'JJ', 'IN', 'NN', 'IN', 'NN', ',', 'CC', 'NN', 'IN', 'NNS', ')', ',', 'VBP', 'RB', 'RB', 'DT', 'JJ', 'NN']
+
+['IN', 'RB', 'VBN', 'IN', 'DT', 'JJR', 'NN', ',', 'DT', 'JJR', 'JJ', 'NN', 'NNS', 'IN', 'NN', 'NNS', 'CC', 'NN', 'NNS', 'VBP', 'DT', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'NN', ',', 'JJ', 'IN', 'JJ', ',', 'JJ', ',', 'JJ', 'NN', ',', 'NN', 'NN', ',', 'FW', '.']
+
+['IN', 'RB', 'VBN', 'IN', 'DT', 'JJR', 'NN', ',', 'DT', 'JJR', 'JJ', 'NN', 'NNS', 'IN', 'NN', 'NNS', 'CC', 'NN', 'NNS', 'VBP', 'DT', 'JJ', 'NNS', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'IN', 'NN', ',', 'JJ', 'IN', 'JJ', ',', 'JJ', ',', 'JJ', 'NN', ',', 'NN', 'NN', ',', 'FW', '.']
+
+['WDT', 'DT', 'JJ', 'NNS', 'IN', 'JJ', 'NNS', 'VBP', 'IN', 'NN', ',', 'NNP', 'POS', 'NNS', 'VBD', 'RB', 'RB', 'JJ', 'DT', 'NN', 'IN', 'MD', 'VB', 'VBN']
+
+['NNP', 'VBD', 'VBN', 'DT', 'NN', 'IN', 'NNP', 'VBD', ',', 'VBN', ',', 'CC', 'RB', 'IN', 'DT', 'JJ', 'NN', 'VBD', 'DT', 'NN', 'TO', 'VB', 'PRP', ',', 'PRP', 'VBD', 'IN', 'DT', 'NN', 'POS', 'NNS', ':', 'JJ']
+
+['PRP', 'VBD', 'JJ', 'TO', 'VB', 'NNS', 'TO', 'VB', 'DT', 'NN', ',', 'RB', 'VBG', 'DT', 'NN', 'IN', 'VBG', 'NNS', 'JJ', 'IN', 'DT', 'IN', 'DT', 'NNP', ',', 'CC', 'RB', 'DT', 'NN', 'VBD', 'IN', 'PRP', 'VBD', 'DT', 'NN', 'IN', 'VBG', 'JJ', 'NNS', 'CC', 'VBG', 'DT', 'NN', 'IN', 'VBG', 'NN']
+
+['PRP', 'VBD', 'JJ', 'TO', 'VB', 'NNS', 'TO', 'VB', 'DT', 'NN', ',', 'RB', 'VBG', 'DT', 'NN', 'IN', 'VBG', 'NNS', 'JJ', 'IN', 'DT', 'IN', 'DT', 'NNP', ',', 'CC', 'RB', 'DT', 'NN', 'VBD', 'IN', 'PRP', 'VBD', 'DT', 'NN', 'IN', 'VBG', 'JJ', 'NNS', 'CC', 'VBG', 'DT', 'NN', 'IN', 'VBG', 'NN']
+
+[')', 'CC', 'DT', 'NN', ',', 'JJ', 'NN', 'IN', 'NNP', ',', 'IN', 'PRP', 'VBD', 'PRP', 'RP', 'IN', 'DT', 'NN', ',', 'VBD', 'RB', 'RB', 'JJ', 'TO', 'VB', 'IN', 'VBG', 'PRP$', 'NN']
+
+[]
+
+['RB', 'PRP', 'VBD', 'RB', ',', 'RB', 'IN', 'PRP', 'VBD', 'VBN', 'NN', 'IN', 'DT', 'NN', 'RB', 'IN', 'DT', 'NN', 'IN', 'VBG', 'IN', 'RB', 'DT', 'JJ', 'NN', 'IN', 'DT', 'JJ', 'NNP', 'NNP', 'MD', 'VB', 'DT', 'NN', 'IN', 'NNP', 'NNP', 'IN', 'NNP', ',', 'IN', 'NNP', 'NNP', 'VBG', 'NN', 'IN', 'DT', 'NNP']
+
+['PRP', 'VBZ', 'DT', 'NN', 'IN', 'DT', 'NN', 'TO', 'PRP', 'IN', 'RB', 'JJ', 'IN', 'PRP$', 'JJ', 'NNS', 'VBP', 'RB', 'JJ', 'TO', 'VB', 'DT', 'JJ', 'NN', 'TO', 'DT', 'NN', 'IN', 'DT', 'NN', ',', 'JJ', 'IN', 'NNS', ',', 'IN', 'DT', 'JJ', 'NN']
+
+['DT', 'NN', 'VBZ', 'VBN', 'JJ', 'NN', 'IN', 'NN', ',', 'IN', 'NN', ',', 'CC', 'IN', 'DT', 'JJ', 'NNS', 'IN', 'JJ', 'JJ', 'NN', ',', 'JJ', 'IN', 'DT', 'NNP', 'NNP']
+
+['DT', 'NN', 'VBZ', 'IN', 'IN', 'DT', 'NN', 'JJ', 'IN', 'NNP', 'POS', 'WDT', 'VBZ', 'JJ', 'NNS', ',', 'CC', 'WDT', 'VBZ', 'IN', 'JJ', 'JJ', 'NNS', ',', 'JJ', 'NNS', 'MD', 'VB', 'VBN', 'TO', 'VB', 'WDT', 'NN', 'DT', 'NN', 'VBZ', 'VBG', 'IN', 'DT', 'NN']
+
+['PRP', 'VBZ', 'RB', ',', 'VBG', 'PRP$', 'NN', 'IN', 'DT', 'JJ', 'NN', ',', 'RB', 'IN', 'DT', 'VBG', 'NNS', 'IN', 'VBP', 'PRP', 'DT', 'CC', 'VB', 'DT', 'NN', 'VBD', 'NN', 'NN', 'PRP']
+
+['PRP', 'VBZ', 'RB', 'DT', 'JJ', 'NN', 'TO', 'VB', 'IN', 'DT', 'VBZ', 'WP', 'NNP', 'VBD', 'TO', 'VB']
+
+['PRP', 'VBP', 'PDT', 'DT', 'MD', 'VB', 'TO', 'NNP', 'RB', 'RB', 'RB', ',', 'IN', ',', 'IN', 'IN', 'DT', 'NN', 'IN', 'NN', ',', 'PRP', 'VBZ', 'RB', 'JJ', ':', 'IN', 'JJS', 'RB', 'RB']
+
+[]
+
+['RB', 'PRP', 'VBZ', 'IN', 'NN', 'IN', 'DT', 'NN', 'NN', 'RB', 'IN', 'PRP$', 'NN', 'VBZ', 'IN', 'TO', 'VB', 'VBN', 'CC', 'VBZ', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'WP', 'RB', 'VBZ', 'RP', 'DT', 'NN', 'IN', 'NNS', 'WDT', 'PRP', 'VBZ', 'VBN', 'TO', 'NNP', 'POS', 'NN', 'IN', 'VBG']
+
+['IN', 'NN', 'VBZ', 'IN', 'NNS', 'IN', 'NN', 'NNS', 'VBP', 'RB', 'VB', 'JJ', 'NNS', 'IN', 'DT', 'NNP', 'NNS', ',', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'VBN', 'NN', 'NN', 'VBD', 'DT', 'JJ', 'IN', 'IN', 'JJ', 'NN', 'NNS']
+
+['JJ', 'NN', 'VBZ', 'RB', 'RB', 'JJ']
+
+['DT', 'JJ', 'NNS', 'IN', 'NN', 'NNS', 'VBP', 'JJ', 'NNP', 'NN', 'NNS', 'JJ', 'TO', 'DT', 'IN', 'NNS', 'IN', 'PRP', 'RB', 'VBP', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'PRP$', 'NNS']
+
+['CC', 'NNS', 'WDT', 'VBP', 'DT', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'NN', 'CC', 'RB', 'NNP', 'NNP', 'VBD', 'VBN']
+
+['NN', 'IN', 'DT', 'NN', 'NN', 'VBZ', 'RB', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'IN', 'VBG', 'DT', 'NN', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'NN']
+
+['IN', 'DT', 'NNS', ',', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'NN', 'VBP', 'VBN']
+
+['IN', 'DT', 'NNS', ',', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'NN', 'VBP', 'VBN']
+
+['NNS', 'IN', 'JJ', 'NNS', ',', 'JJ', 'IN', 'DT', 'NNP', 'NNP', 'IN', 'NNP', ',', 'VBP', 'VBN']
+
+['DT', 'JJ', 'NN', 'IN', 'NN', 'VBZ', 'VBN', 'IN', 'DT', 'NN', 'NN', 'IN', 'JJ', 'CC', 'VBG', 'NNS', 'JJ', 'IN', 'DT', 'NNP', 'NNP']
+
+['IN', 'JJ', 'NNS', 'IN', 'NNS', 'VBP', 'IN', 'PRP$', 'NNS', 'IN', 'NN', ',', 'DT', 'NN', 'IN', 'NNS', 'VBP', 'VBN', 'VBN', 'IN', 'DT', 'NNS', 'VBG', 'CD', 'CC', 'DT', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'NN', ',', 'NN', ',', 'VBG', ',', 'NN', 'NN', ',', 'NN', ',', 'NN', ',', 'CC', 'NN']
+
+['DT', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'VBP', '(', 'CD', ')', 'NNS', 'JJ', 'IN', 'NNS', ',', 'NNS', ',', 'CC', 'NNS', ',', '(', 'CD', ')', 'NNS', ',', '(', 'CD', ')', 'NNS', ',', '(', 'CD', ')', 'NN', ',', 'CC', '(', 'CD', ')', 'NN', 'NNS']
+
+['DT', 'JJ', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'IN', 'JJ', 'NNS', 'VBP', '(', 'CD', ')', 'NNS', 'JJ', 'IN', 'NNS', ',', 'NNS', ',', 'CC', 'NNS', ',', '(', 'CD', ')', 'NNS', ',', '(', 'CD', ')', 'NNS', ',', '(', 'CD', ')', 'NN', ',', 'CC', '(', 'CD', ')', 'NN', 'NNS']
+
+['DT', 'NN', 'IN', 'JJ', 'NNS', 'JJ', 'IN', 'NNP', 'NN', 'IN', 'NN', 'NNS', 'DT', 'NN', 'WDT', 'MD', 'VB', 'VBN', 'IN', 'IN', 'NN', 'NN']
+
+['IN', 'DT', 'RB', 'JJ', 'NNS', 'IN', 'VBG', 'NNS', ',', 'NN', 'NNS', ',', 'JJ', ',', 'JJ', ',', 'NN', 'NNS', ',', 'CC', 'DT', 'NN', 'NN', 'NN', 'NN', 'VBG', 'DT', 'NN', 'JJ', 'IN', 'DT', 'NN', 'NN', 'VBP', 'VBN', 'JJS', 'NN', 'IN', 'JJ', 'NNS']
+
+['NN', 'NNS', 'JJ', 'IN', 'JJ', 'NN', 'NN', 'CC', 'NN', 'VBP', 'DT', 'RB', 'JJ', 'NN', 'NN', 'IN', 'NN', ',', 'CC', 'NN', 'MD', 'VB', 'VBN', 'TO', 'VB', 'RB', 'VBN', 'VBG', 'NNS']
+
+['NN', 'NNS', 'JJ', 'IN', 'JJ', 'NN', 'NN', 'CC', 'NN', 'VBP', 'DT', 'RB', 'JJ', 'NN', 'NN', 'IN', 'NN', ',', 'CC', 'NN', 'MD', 'VB', 'VBN', 'TO', 'VB', 'RB', 'VBN', 'VBG', 'NNS']
+
+['NN', 'MD', 'VB', 'CC', 'CD', 'IN', 'CD', 'NNS', ':', 'NN', 'NN', 'NN', 'VBN', 'IN', 'DT', 'NN', 'IN', 'NN', 'IN', 'DT', 'NN', 'CC', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'JJ', 'NN']
+
+['DT', 'NN', 'VBZ', 'DT', 'NN', 'TO', 'VB', 'RB', 'TO', 'JJ', 'NN', 'NN', 'NNS', 'JJ', 'IN', 'DT', 'NN', 'NN']
+
+['PRP', 'VBD', 'TO', 'VB', 'PRP$', 'NN', ',', 'CC', 'PRP', 'VBD', 'RB', 'VB', 'TO', ',', 'DT', 'NN', 'PRP$', 'NNS', 'VBD', 'IN', ',', 'RB', 'IN', 'PRP', 'VBD', 'RB', 'VB', 'TO', 'VB', 'NN', 'IN', 'DT', 'NN']
+
+['PRP', 'VBD', 'TO', 'VB', 'PRP$', 'NN', ',', 'CC', 'PRP', 'VBD', 'RB', 'VB', 'TO', ',', 'DT', 'NN', 'PRP$', 'NNS', 'VBD', 'IN', ',', 'RB', 'IN', 'PRP', 'VBD', 'RB', 'VB', 'TO', 'VB', 'NN', 'IN', 'DT', 'NN']
+
+['NNS', 'JJ', 'IN', 'JJ', 'CC', 'JJ', 'NN', 'VBP', 'JJ']
+
+['RB', 'DT', 'NN', 'VBD', 'VBN', 'IN', 'NNS', ',', 'JJ', 'IN', 'DT', 'JJ', 'NNP', 'NNP', 'IN', 'NNP', ',', 'WRB', 'DT', 'JJ', 'NNS', 'VBD', 'JJ', 'NNP', 'POS', 'JJ', 'JJ', 'NN']
+
+['RB', 'JJR', 'CC', 'VBD', 'RP', 'IN', 'DT', 'NN', ',', 'PRP$', 'NN', 'RB', 'JJ', 'PRP', 'IN', 'DT', 'NN', 'IN', 'WDT', 'PRP', 'VBD', 'DT', 'NN', ',', 'RB', 'IN', 'PRP$', 'NN', 'VBD', 'WRB', 'PRP', 'VBD']
+
+['IN', 'DT', 'NN', 'IN', 'NN', 'VBN', 'IN', 'PRP$', 'NN', ',', 'PRP', 'VBD', 'RB', 'VB', 'PRP$', 'NNS', 'CC', 'VBD', 'IN', 'DT', 'NN', 'NN', 'RB', 'IN', 'DT', 'NN', 'VBD', 'IN', 'NN', 'CD']
+
+['CC', 'IN', 'NN', 'VBD', 'JJ', ',', 'IN', 'RB', 'IN', 'DT', 'NN', ',', 'IN', 'DT', 'NN', 'IN', 'PRP$', 'NN', 'NNS', ',', 'VBD', 'VBN', 'IN', 'PRP$', 'NN', 'NNS', ',', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NN', 'VBD', 'NN', 'IN', 'VBG', 'IN', 'DT', 'NN', ':', 'NNP', 'CC', 'PRP', ',', 'RB', 'TO', 'VB', 'VBN', 'RB', 'IN', 'DT', 'JJ', 'NN', 'CC', 'NN', 'NNS', 'CC', 'IN', 'DT', 'JJ', 'NN', 'IN', 'VBG', 'IN', 'RB', 'JJ', 'NNS', ',', 'VBD', 'VBN', 'TO', 'VB']
+
+['PRP', 'VBD', 'TO', 'VB', 'DT', 'JJ', 'VBZ', 'IN', 'CD', 'NNS', 'IN', 'DT', 'JJ', 'NN', 'RB', 'IN', 'NNP', 'VBD', ',', '``', 'PRP', 'VBZ', 'DT', 'JJ', 'NN', ',', 'NNP']
+
+['IN', 'DT', 'NN', 'IN', 'DT', 'NNP', ',', 'NNP', 'NNP', 'NNS', 'VBD', 'DT', 'RBR', 'JJ', 'NNS', 'IN', 'DT', 'JJ', 'NN', ',', 'CC', 'NNP', 'POS', 'NN', 'NN', 'VBD', 'RB', 'RB', 'JJ', 'IN', 'NNS']
+
+['PRP', 'VBD', 'IN', 'TO', 'DT', 'NN', 'CC', 'VBD', 'DT', 'NN', 'RB', 'IN', 'PRP', 'VBD', 'VBG']
+
+['DT', ',', 'PRP', 'MD', 'VB', 'PRP', 'RB', 'IN', 'JJ', 'NN', 'RB']
+
+['WRB', ',', 'NNP', 'VBD', 'TO', 'PRP', ',', 'VBD', 'IN', 'PRP$', 'JJ', 'JJ', 'NN', ',', 'PRP', 'MD', 'VB', 'DT', 'IN', 'DT', 'NNS', 'WP', 'VBP', 'VBP', 'RB', 'RB', 'JJ', 'IN', 'MD', 'VB']
+
+['PRP', 'VBD', 'IN', 'DT', 'NN', 'IN', 'NNP', 'POS', 'NN', ',', 'JJ', 'PRP', 'VBD', 'VBN', 'IN', 'NNP', ':', 'RB', 'RB', 'JJ', 'IN', 'IN', 'PRP', 'MD', 'VBN', 'PRP', 'IN', 'PRP$', 'JJ', 'NN']
+
+['IN', 'PRP', 'VBP', 'DT', 'NN', 'NN', 'TO', 'DT', 'NN', 'IN', 'NNP', 'CC', 'NNP', 'RB', 'RB', 'RB', 'IN', 'PRP', 'MD']
+
+['DT', 'NN', 'JJ', 'TO', 'DT', 'NN', 'RB']
+
+['NN', ',', 'WRB', 'PRP$', 'CD', 'NNS', 'CC', 'JJ', 'VBZ', 'RB', ',', 'WRB', 'PRP', 'VBZ', 'DT', 'JJ', 'IN', 'DT', 'NN']
+
+['PRP', 'MD', 'VB', 'WP', 'VBZ', 'IN', 'NNS', ',', 'RB', 'JJ', 'IN', 'NNP', 'CC', 'NNP', ',', 'IN', 'PRP', 'MD', 'VB', 'WP', 'VBZ', 'IN', 'IN', 'PRP']
+
+['DT', 'NN', ',', 'PRP$', 'NN', 'RB', 'VBN', 'IN', 'NN', ',', 'VBD', 'TO', 'VB', 'DT', 'NN', 'IN', 'DT', 'JJ', 'RB', 'IN', 'DT', 'JJ', 'NN', 'NN', 'VBD', 'IN', 'DT', 'NN']
+
+['RB', ',', 'PRP', 'VBD', 'TO', 'PRP', ',', 'NN', 'VBZ', 'DT', 'NN', 'RB', 'IN', 'DT', 'NN', '.']
+
+['CC', 'DT', 'JJ', 'PRP', 'VBD', 'RB', 'RB', 'JJ']
+
+['PRP', 'VBD', ',', 'IN', 'NN', ',', 'VBN', 'VBN', 'TO', 'CC', 'VB', 'DT', 'NN', 'NN', 'NN', 'WDT', 'VBD', 'VBN', 'DT', 'JJR', 'JJ', 'JJ', 'NNS', 'JJ', 'IN', '``', 'NNP', 'NN', 'NNP', "''", ',', '``', 'NNP', "''", ',', '``', 'NNP', "''", ',', '``', 'NNP', 'FW', 'NNP', "''", ',', 'DT', 'JJ', 'NN', 'NNS', ',', 'NNP', 'NNP', ',', 'NNP', 'NNP', 'CC', 'NNP', 'NNP', ',', 'RB', 'RB', 'IN', 'DT', 'JJ', 'JJ', 'NNS', 'IN', 'DT', 'NNP', ',', 'NNP', 'JJ', 'NNS', 'CC', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NNPS']
+
+['JJ', 'NNP', 'VBD', 'PRP$', 'NN', 'RB', 'IN', 'DT', 'JJ', 'NN', 'NNS', 'VBN', 'RB', 'DT', 'NNS', 'CC', 'DT', 'NN']
+
+['IN', 'DT', 'NNS', ',', 'PRP', 'VBD', 'VBN', ',', 'JJ', 'NNS', ',', 'JJ', 'TO', 'DT', 'CD', 'IN', 'DT', 'NN', ',', 'VBD', 'DT', 'JJ', 'NN']
+
+['IN', 'PRP', 'VBP', 'RB', 'VB', 'DT', 'NN', 'IN', 'CD', 'NNS', ',', 'PRP$', 'NN', 'MD', 'VB', 'VBN', 'DT', 'JJ', 'IN', 'NNP', 'POS', 'VBD']
+
+['CC', 'PRP', 'RB', 'VBD', 'TO', 'VB', 'DT', 'NN', 'RBR', 'CC', 'VB', 'PRP', 'VBD', 'PRP', 'MD', 'VB', 'RB', 'RB', 'JJ', 'IN', 'PRP', 'RB', 'VBD', 'IN', 'PRP$', 'CC', 'IN', 'NNP']
+
+[]
+
+[]
+
+['PRP', 'VBD', 'RB', 'IN', 'DT', 'JJ', 'NN', 'VBD', 'RB', 'IN', 'DT', 'NN', 'CC', 'VBD', 'VBG', 'IN', 'DT', 'NNS']
+
+[]
+
+['DT', 'JJ', 'NN', 'VBZ', 'IN', 'CD', 'IN', 'DT', 'NNS', 'WP', ',', 'IN', 'DT', 'JJ', 'NN', 'MD', 'VB', 'DT', 'NN', 'POS', 'JJ', 'NN']
+
+['PRP$', 'NNS', 'VBD', 'DT', 'JJ', ',', 'JJ', 'NN', ',', 'JJ', 'VBN', 'IN', 'DT', 'JJ', 'NN', 'CC', 'RB', 'IN', 'VBG', 'TO', 'DT', 'NN', ':']
+
+['PRP$', 'NN', 'RB', ',', 'NN', 'IN', 'DT', 'NN', ',', 'VBD', 'PDT', 'IN', 'NNP', 'NNP', 'VBD', 'PRP', 'VBD', 'IN', 'PRP$', 'NN', 'TO', 'VB', 'PRP', ':', 'NN', 'IN', 'DT', 'NN', 'IN', 'NNS', 'JJ', 'IN', 'NNS', ',', 'DT', 'NN', 'IN', 'NN', ',', 'WRB', 'TO', 'VB', ',', 'RB', ',', 'IN', 'DT', 'NNS']
+
+[]
+
+['CC', 'PRP', 'MD', 'VB', 'VBN', 'PRP', 'RB', 'RB', 'JJ', 'IN', 'PRP', 'VBD', 'VBN', 'DT', 'NNP']
+
+['IN', 'JJ', 'PRP', 'VBD', 'VBN', 'RB', 'DT', 'JJ', 'NN', 'IN', 'PRP$', ',', 'DT', 'JJ', 'IN', 'DT', 'NN', 'IN', 'VBG', 'NNP', 'IN', 'DT', 'NN']
+
+['PRP', 'VBD', 'RB', 'RB', 'RB', 'IN', 'DT', 'JJ', 'NNP', 'VBD', 'PRP', 'TO', 'DT', 'NN', 'IN', 'JJ', 'NN', ',', 'IN', 'DT', 'NN', 'VBD', 'TO', 'VB', 'PRP$', 'NN', 'NN']
+
+['DT', 'NN', 'VBD', 'VBN', 'TO', 'PRP', ',', 'RB', 'IN', 'VBN', 'VBD', 'PRP$', 'JJ', 'NN', 'IN', 'PRP$', 'NN']
+
+['``', 'PRP', 'MD', 'VB', 'RB', 'IN', 'JJ', 'IN', 'NN', 'WDT', 'VBZ', 'RB', 'VB', 'TO', 'VB', 'VBN', "''", ',', 'NNP', 'VBD']
+
+['PRP', 'VBD', 'TO', 'VB', 'RB', ',', 'RB', 'IN', 'DT', 'NN', 'VBD', 'IN', 'IN', 'DT', 'NN', ',', 'DT', 'JJ', ',', 'JJ', 'NN', 'IN', 'DT', 'JJ', 'NN', 'VBN', 'IN', 'PRP$', 'JJ', 'NN', 'NN']
+
+[]
+
+['PRP', 'VBD', 'RP', 'TO', 'VB', 'JJ', 'IN', 'DT', 'JJ', 'NN', 'NN', 'IN', 'DT', 'NN', 'VBD', 'TO', 'VB', 'IN', 'DT', 'NN', 'JJ', 'IN', 'DT', "''"]
+
+['``', 'DT', 'NN', 'VBZ', 'IN', 'DT', 'NN', 'IN', 'DT', 'NN', ':', 'DT', ',', 'PRP', 'VBZ', 'JJR', 'IN', 'DT', ',', 'DT', 'JJ', 'NN', 'IN', 'DT', 'JJ', 'NN']
+
+[]
+
+['PRP', 'RB', 'VBD', '``', 'NNP', "''", ',', 'CC', 'IN', 'IN', 'PRP', 'VBD', 'VBG', 'IN', 'DT', 'JJ', 'NN', 'JJ', 'IN', 'DT', 'NN', 'CC', 'NNP']
+
+['PRP', 'VBD', 'VBG', 'NN', 'CC', 'JJ', 'RB', 'RB', 'RB', 'IN', 'PRP', 'RB', 'MD', ',', 'CC', 'VBG', 'PRP', 'RP', 'IN', 'JJ', 'NN']
+
+['PRP', 'MD', 'VB', 'PRP', ',', 'VBG', 'RB', 'IN', 'PRP', 'VBD', 'IN', 'DT', 'NNS', ',', 'CC', 'DT', 'MD', 'VB', 'RP', 'DT', 'NN', 'IN', 'PRP$', 'NN']
+
+['DT', 'NN', 'IN', 'NN', 'CC', 'NN', 'JJ', 'IN', 'NNP', 'NNP', 'VBD', 'VBN', 'VBD', 'TO', 'VB', 'VBN', 'IN', 'JJ', 'NN']
+
+[]
+
+['PRP', 'VBD', 'RB', 'DT', 'JJ', 'IN', 'JJ', 'PRP', 'IN', 'DT', 'NNS', 'IN', 'DT', 'NNP', '.']
+
+['NNP', 'VBD', 'DT', 'NN', 'RB', 'IN', 'DT', 'NN', 'VBD', 'IN', 'DT', 'NN']
+
+['NNP', 'VBD', 'RP', 'RB', ',', 'RB', 'VBD', 'RB', 'RB', 'IN', 'RB']
+
+['IN', 'NNP', 'NNP', 'VBD', 'RP', 'DT', 'NN', 'JJ', 'TO', 'DT', 'WDT', 'PRP', 'VBD', 'VBN', 'IN', 'NNP', 'NNP', ',', 'IN', 'IN', 'PRP', 'VBD', 'VBN', 'PRP$', 'NN', 'IN', 'DT', 'NN']
+
+['PRP', 'VBD', 'VBN', 'NNS', 'IN', ',', 'WRB', 'PRP', 'VBD', 'RB', ',', 'CC', 'RB', 'VBD', 'VBN', 'RB', 'JJ', 'IN', 'DT', 'CD', ',', 'CC', 'PRP', 'VBD', 'PRP', 'VBD', 'JJ', 'IN', 'DT', 'NN', 'JJ', 'IN', 'DT', 'MD', 'VB']
+
+['CC', 'PRP', 'VBD', 'VBN', 'JJ', 'VBG', 'DT', 'NN', ',', 'VBG', 'DT', 'JJ', 'NN', 'IN', 'PRP$', 'JJ', 'NN', 'RB', 'IN', 'PRP', 'VBD', 'VBN', 'DT', 'JJ', 'NN', 'IN', 'NNP', ',', 'NNP', 'IN', 'CD']
+
+['RB', 'PRP', 'MD', 'VB', 'VBN', 'DT', 'JJ', 'JJ', 'NN', ',', 'IN', 'IN', 'PRP', 'VBD', 'RP', ',', 'VBP', ',', 'DT', 'NN', 'IN', 'PRP$', 'NNS', ',', 'PRP', 'MD', 'RB', 'RB', 'RB', 'VB', 'PRP$', 'NNS', 'VBG', 'RB', ':', 'DT', 'NN', 'IN', 'NN', 'VBD', 'RB', 'DT', 'JJ']
+
+['NNP', ',', 'PRP', 'VBD', ',', 'PRP', 'VBZ', 'VBG', 'IN', 'DT', 'NN', 'IN', 'VBG', 'WDT', 'VBZ', 'PRP', 'MD', 'RB', 'RB', 'RB', 'RB', 'VB', 'RP', 'PRP$', 'NNS', 'RB']
+
+['IN', 'DT', 'NN', 'NN', ',', 'NNP', 'VBD', 'VBG', 'TO', 'PRP', 'IN', 'NN', 'NNS', ',', 'JJ', 'IN', ':', '``', 'PRP', 'VBP', 'IN', 'NN', 'NNS', 'PRP', 'VBP', 'JJR', 'RP', ',', 'PRP', 'VBP', 'PRP', 'PRP', 'VBD', 'PRP$', 'NNS', "''"]
+
+['PRP', 'VBD', 'DT', 'JJ', 'NN', 'CC', 'DT', 'RB', 'JJR', 'NN', 'IN', 'PRP$', 'NN', ',', 'CC', 'VBD', ',', '``', 'PRP', 'VBP', 'IN', 'VBG', 'RB', 'TO', 'NNP', 'NNP', 'NNP', 'IN', 'NN', 'VBZ', 'IN', 'VBG', 'TO', 'DT', 'JJ', 'JJ', 'NN', 'IN', 'NN', 'CC', 'NN', "''"]
+
+['DT', 'JJ', 'NN', 'IN', 'NN', 'VBZ', 'IN', 'DT', 'JJ', 'NN', 'NN', "''"]
+
+['PRP', 'VBD', 'DT', 'JJ', 'NN', 'IN', 'PRP$', 'JJ', 'NN', ',', 'NNP', 'NNP', ',', 'DT', 'JJ', 'JJ', 'NN', ':', 'PRP$', 'NN', 'VBD', 'VBN', 'IN', 'NNP', ':', 'WP', 'VBZ', 'RB', 'IN', 'DT', 'JJ', 'NN', 'IN', 'DT', 'NNP', 'NNP', ',', 'VBG', 'NN', 'CC', 'NNS', ',', 'DT', 'JJ', 'RB', 'WRB', 'DT', 'JJ', 'NN', 'VBZ', 'DT', 'JJ', 'JJ', 'NN', 'IN', 'DT', 'NN', 'IN', 'NN', 'CC', 'NN', 'RB', 'DT', 'VBZ', 'VBG', 'CC', 'VBG', ',', 'JJ', 'IN', 'JJ', 'NN', ',', 'NN', ',', 'CC', 'NN']
+
+['``', 'DT', 'JJ', 'CC', 'JJ', 'NNP', 'VBD', 'VBG', 'NN', 'CC', 'NN', 'NNS', 'RB', ',', 'IN', 'PRP', 'VBP', 'NNS', 'PRP', 'VBP', 'RB', 'VB', 'CC', 'MD', 'RB', 'VB', ',', 'JJ', 'IN', 'NN', 'CC', 'NN', ',', 'JJ', 'IN', 'NN', 'CC', 'NN']
+
+['IN', ',', 'RB', ',', 'PRP', 'MD', 'VB', 'TO', 'VB', 'PRP$', 'JJ', ',', 'PRP', 'MD', 'VB', 'DT', 'NNS', 'IN', 'DT', 'JJ', 'IN', 'DT', 'NNS', 'PRP', 'VBP', 'VBN', 'CC', 'VB', 'DT', 'NN', 'PRP', 'VBD', 'RP', 'IN', 'CD', 'JJ', 'NN']
+
