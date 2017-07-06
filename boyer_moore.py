@@ -38,10 +38,10 @@ def find_boyer_moore_all(T, P):
     k = m - 1                    # j index of last occurrence of T[i] in P
     while i < n:
         # print("Checking for i = " + str(i))
-        if T[i] == P[k]:            # if things are equal
+        if T[i].lower() == P[k]:            # if things are equal
             # print("Found a partial match at " + str(i) + ", with k = " + str(k))
             if k == 0:
-                print("Pattern complete.")
+                #print("Pattern complete.")
                 indices += [i]     # check if Pattern is complete
                 i += 1 # This might be wrong
             else:
@@ -61,7 +61,7 @@ def find_boyer_moore_all(T, P):
     return indices
 
 def find_boyer_moore_all_paras(paras_list, pattern):
-    """ 
+    """
     return all indices of T at which the substring P begins
     T is now a list of paragraphs, each of which is a list of sentences
     boyer_moore is overkill here, probably
@@ -79,8 +79,8 @@ def find_boyer_moore_all_paras(paras_list, pattern):
 def find_any_patterns(paras_list, pattern_list):
     para_indices = []
     for pattern in pattern_list:
-        print(pattern)
+        #print(pattern)
         next_indices = find_boyer_moore_all_paras(paras_list, pattern)
-        print(next_indices)
+        #print(next_indices)
         para_indices = para_indices + next_indices
     return para_indices
