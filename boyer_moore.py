@@ -38,7 +38,7 @@ def find_boyer_moore_all(T, P):
     k = m - 1                    # j index of last occurrence of T[i] in P
     while i < n:
         # print("Checking for i = " + str(i))
-        if T[i].lower() == P[k]:            # if things are equal
+        if T[i].lower() == P[k] or P[k] == '':      # if things are equal, '' for as ... as case
             # print("Found a partial match at " + str(i) + ", with k = " + str(k))
             if k == 0:
                 #print("Pattern complete.")
