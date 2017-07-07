@@ -3,6 +3,7 @@ from analogy_strings import analogy_string_list
 from sentence_parser import get_speech_tags
 from personal import root
 import random
+import re
 
 # Implementation of the classifier to detect analogy.
 # http://www.nltk.org/book/ch06.html
@@ -15,8 +16,12 @@ def analogy_string_feature(text):
     # otherwise.
     for item in analogy_string_list:
         pattern = " ".join(item)
-        if pattern in text:
-            return {"analogy_string" : pattern}
+        if pattern != "as as":
+            if pattern in text: return {"analogy_string" : pattern}
+        else:
+            ptrn = "as .*\ as"
+            match = re.search(ptrn, text)
+            if match != None: return {"analogy_string": pattern}
 
     return {"analogy_string" : ""}
 
@@ -37,7 +42,7 @@ analogy_list = get_list(analogy_file_name)
 non_analogy_list = get_list(non_analogy_file_name)
 
 # labeled data.
-samples = [(text, 'analogy') for text in analogy_list] + [(text, 'not analogy') for text in non_analogy_list]
+samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
 random.shuffle(samples)
 
 # divide data into training set and test set
@@ -49,10 +54,23 @@ test_set = feature_sets[100 :]
 classifier = nltk.NaiveBayesClassifier.train(train_set)
 
 # test classifier
-s1 = "He talks like a person who knows everything."
-s2 = "If the rain stops now, I will be able to go to work."
-print(classifier.classify(analogy_string_feature(s1)))
-print(classifier.classify(analogy_string_feature(s2)))
 
+# s1 = "He talks like a person who knows everything."
+# s2 = "If the rain stops now, I will be able to go to work."
+# print(classifier.classify(analogy_string_feature(s1)))
+# print(classifier.classify(analogy_string_feature(s2)))
+#
 print(nltk.classify.accuracy(classifier, test_set))
 print(classifier.show_most_informative_features(5))
+
+# show the results the classifier guessed wrong.
+errors = []
+test_texts = samples[100 :]
+for (text, label) in test_texts:
+    guess = classifier.classify(analogy_string_feature(text))
+    if guess != label:
+        errors.append((label, guess, text))
+
+print("Correct label, Guess, Text:")
+for item in errors:
+    print(item)
