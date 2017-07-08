@@ -4,14 +4,15 @@ from sentence_parser import get_speech_tags
 from personal import root
 import random
 import re
+from boyer_moore import find_boyer_moore
 
 # Implementation of the classifier to detect analogy.
-# http://www.nltk.org/book/ch06.html
+# From http://www.nltk.org/book/ch06.html
 
 analogy_file_name = "\\test_extractions\\demo_analogy_samples.txt"
 non_analogy_file_name = "\\test_extractions\\demo_analogy_ground.txt"
 
-def analogy_string_feature(text):
+def get_analogy_string2(text):
     # Returns the first analogy string in the text if found one, empty string
     # otherwise.
     for item in analogy_string_list:
@@ -24,6 +25,37 @@ def analogy_string_feature(text):
             if match != None: return {"analogy_string": pattern}
 
     return {"analogy_string" : ""}
+
+def get_analogy_string(text):
+    # Returns a tuple of the first analogy indicator along with its speech tag in the text.
+    # e.g. (('as', 'RB'), ('fast', 'RB'), ('as', 'IN'))
+    result = []
+    tokens = text.split()
+    tagged_text = nltk.pos_tag(tokens)
+
+    for pattern in analogy_string_list:
+        match_index = find_boyer_moore(tokens, pattern)
+        if match_index != -1:
+            for i in range(len(pattern)):
+                result.append(tagged_text[match_index + i])
+            return {"analogy_indicator:" : tuple(result)}
+
+    return {"analogy_indicator:" : tuple(result)}
+
+def get_all_analogy_string(text):
+    # Returns a tuple of all analogy indicators along with its speech tag in the text.
+    # e.g. (('as', 'RB'), ('fast', 'RB'), ('as', 'IN'))
+    result = []
+    tokens = text.split()
+    tagged_text = nltk.pos_tag(tokens)
+
+    for pattern in analogy_string_list:
+        match_index = find_boyer_moore(tokens, pattern)
+        if match_index != -1:
+            for i in range(len(pattern)):
+                result.append(tagged_text[match_index + i])
+
+    return {"analogy_indicator:" : tuple(result)}
 
 def get_list(filename):
     # Returns all training data as a list
@@ -46,7 +78,7 @@ samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in n
 random.shuffle(samples)
 
 # divide data into training set and test set
-feature_sets = [(analogy_string_feature(text), label) for (text, label) in samples]
+feature_sets = [(get_analogy_string(text), label) for (text, label) in samples]
 train_set =  feature_sets[: 100]
 test_set = feature_sets[100 :]
 
@@ -55,21 +87,22 @@ classifier = nltk.NaiveBayesClassifier.train(train_set)
 
 # test classifier
 
+# Use the classifier to classify s1 and s2:
 # s1 = "He talks like a person who knows everything."
 # s2 = "If the rain stops now, I will be able to go to work."
-# print(classifier.classify(analogy_string_feature(s1)))
-# print(classifier.classify(analogy_string_feature(s2)))
-#
+# print(classifier.classify(get_analogy_string(s1)))
+# print(classifier.classify(get_analogy_string(s2)))
+
 print(nltk.classify.accuracy(classifier, test_set))
 print(classifier.show_most_informative_features(5))
 
-# show the results the classifier guessed wrong.
+# show the ones the classifier guessed wrong.
 errors = []
 test_texts = samples[100 :]
 for (text, label) in test_texts:
-    guess = classifier.classify(analogy_string_feature(text))
+    guess = classifier.classify(get_analogy_string(text))
     if guess != label:
-        errors.append((label, guess, text))
+        errors.append((label, guess, get_analogy_string(text), text))
 
 print("Correct label, Guess, Text:")
 for item in errors:
