@@ -11,6 +11,6 @@ To change the data set:
 5. Specify its location in the non_analogy_file_name variable
 
 To test the classifier, write your test code under "# test classifier".
-See methods you can used with NLTK's Naive Bayes Classifier at http://www.nltk.org/book/ch06.html.
+See methods you can use with NLTK's Naive Bayes Classifier at http://www.nltk.org/book/ch06.html.
 
 If you can, document the test result with the data set you use in the classifier results spreadsheet in the research group folder.
