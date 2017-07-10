@@ -6,17 +6,22 @@ from utils import para_to_pretty
 from utils import sent_to_pretty
 from personal import root as root
 from sentence_parser import *
+import csv
 
 SOURCE_NAME = "BRWN"
 
 file_name = "analogy_sentences_test.txt"
 output_handler = open(root + "test_extractions/" + file_name, "w", encoding="utf-8")
+csvfile =  open(root + "test_extractions/" + "names.csv", 'w')
+fieldnames = ['name', 'text']
+writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+writer.writeheader()
 
 # csv_file = "names.csv"
 # csv_handler = open()
 
 brown_paras = brown.paras()
-para_indices = find_any_patterns(brown_paras, analogy_string_list)
+para_indices = find_any_patterns(brown_paras[:10], analogy_string_list)
 
 for para_index in para_indices:
     sentence_pos = get_analogy_sentence(brown_paras[para_index], analogy_string_list)
@@ -26,5 +31,6 @@ for para_index in para_indices:
         id_tag = "[" + SOURCE_NAME + ", PARA#" + str(para_index) + ", SENT#" + str(sent_index) + "]"
         output_handler.write(id_tag)
         output_handler.write(sentence + "\n")
+        writer.writerow({'name': id_tag, 'text': sentence})
 
 output_handler.close()
