@@ -10,27 +10,23 @@ import csv
 
 SOURCE_NAME = "BRWN"
 
-file_name = "analogy_sentences_test.txt"
-output_handler = open(root + "test_extractions/" + file_name, "w", encoding="utf-8")
-csvfile =  open(root + "test_extractions/" + "names.csv", 'w')
-fieldnames = ['name', 'text']
-writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-writer.writeheader()
-
-# csv_file = "names.csv"
-# csv_handler = open()
+file_name = "analogy_sentences.txt"
+output_handler = open(root + "test_extractions\\" + file_name, "w", encoding="utf-8")
 
 brown_paras = brown.paras()
-para_indices = find_any_patterns(brown_paras[:10], analogy_string_list)
-
-for para_index in para_indices:
-    sentence_pos = get_analogy_sentence(brown_paras[para_index], analogy_string_list)
-    sentence = sentence_pos[0]
-    sent_index = sentence_pos[1]
-    if sentence != '':
-        id_tag = "[" + SOURCE_NAME + ", PARA#" + str(para_index) + ", SENT#" + str(sent_index) + "]"
-        output_handler.write(id_tag)
-        output_handler.write(sentence + "\n")
-        writer.writerow({'name': id_tag, 'text': sentence})
+para_indices = find_any_patterns(brown_paras, analogy_string_list)
+with open(root + "test_extractions\\analogy_names.csv", 'w') as csvfile:
+    fieldnames = ['name', 'text']
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
+    writer.writeheader()
+    for para_index in para_indices:
+        sentence_pos = get_analogy_sentence(brown_paras[para_index], analogy_string_list)
+        sentence = sentence_pos[0]
+        sent_index = sentence_pos[1]
+        if sentence != '':
+            id_tag = "[" + SOURCE_NAME + ", PARA#" + str(para_index) + ", SENT#" + str(sent_index) + "]"
+            output_handler.write(id_tag)
+            output_handler.write(sentence + "\n")
+            writer.writerow({'name': id_tag, 'text': sentence})
 
 output_handler.close()
