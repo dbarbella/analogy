@@ -1,23 +1,29 @@
 import csv
 import statistics
 
+
 sampleRatings = {}     # dict to hold the data from csv file
 incompleteRating = {}
 analogySample = {}
 notAnalogySample = {}
 unsureSample = {}
 
-# Method to load data from csv to dict
+# Method to load data from csv to sampleRatings
 def loadData(fileName):
     with open(fileName, 'r') as file:
         fileReader = csv.reader(file)
         next(fileReader, None)
-        
+        duplicates = []
         # reading the csv row
         for row in fileReader:
             id = row[0]
             text = row[1]
             
+            if id in duplicates:
+                continue
+            
+            duplicates.append(id)
+
             # Append if dict has an entry
             if id in sampleRatings:
                 if row[2] == '': continue
@@ -62,18 +68,16 @@ def analogyRelegate():
 # Method to export dictionary as CSV files        
 def exportCSV(fileName, samples):
     with open(fileName, 'w') as csvfile:
-        fieldnames = ['id', 'text', 'rating']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
-        writer.writeheader()
+        
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        writer.writerow(['id', 'text', 'ratings'])
+
         for key, value in samples.items():
-            writer.writerow({'id': key, 'text': value[0], 'rating': value[1]})
-def findDuplicates():
-    i =0
-    for key, value in analogySample.items():
-            if len(value[1]) > 3:
-                print(key,value)
-                i += 1
-    print(i)
+            text = value[0]
+            ratingList = [rating for rating in value[1]]
+            outputRow = [key, text]
+            outputRow.extend(ratingList)
+            writer.writerow(outputRow)
     
 def main():
     # csv file names to import from
@@ -82,7 +86,7 @@ def main():
     # loading data from files list
     for fileName in files:
         loadData(fileName)
-    
+        
     filterData(3)
     analogyRelegate()
     
@@ -91,6 +95,7 @@ def main():
     exportCSV('unsureSample.csv', unsureSample)
     
 main()
+print("Success")
 
 
 
