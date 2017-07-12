@@ -13,20 +13,30 @@ SOURCE_NAME = "BRWN"
 file_name = "analogy_sentences.txt"
 output_handler = open(root + "test_extractions\\" + file_name, "w", encoding="utf-8")
 
+# Find the indices of all paragraphs that contain the patterns as listed in
+# analogy_string_list
 brown_paras = brown.paras()
 para_indices = find_any_patterns(brown_paras, analogy_string_list)
+ids = {}            # save sentences' ids in hash table to prevent duplicates.
+
+# Extract the exact sentences and write them to csv and txt files.
 with open(root + "test_extractions\\analogy_names.csv", 'w') as csvfile:
     fieldnames = ['name', 'text']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
     writer.writeheader()
     for para_index in para_indices:
         sentence_pos = get_analogy_sentence(brown_paras[para_index], analogy_string_list)
+        # get_analogy_sentence returns a 2-element tuple. The first element is the analogy string,
+        # the second is its sentence index within the paragraph.
         sentence = sentence_pos[0]
         sent_index = sentence_pos[1]
         if sentence != '':
+            # Generate the ID of the sentence (e.g. [BRWN, PARA#1, SENT#1]).
             id_tag = "[" + SOURCE_NAME + ", PARA#" + str(para_index) + ", SENT#" + str(sent_index) + "]"
-            output_handler.write(id_tag)
-            output_handler.write(sentence + "\n")
-            writer.writerow({'name': id_tag, 'text': sentence})
+            if not id_tag in ids.keys():
+                ids[id_tag] = True
+                output_handler.write(id_tag + "\n")
+                output_handler.write(sentence + "\n")
+                writer.writerow({'name': id_tag, 'text': sentence})
 
 output_handler.close()
