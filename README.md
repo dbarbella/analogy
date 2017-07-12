@@ -1,9 +1,9 @@
 # Detecting Analogy in Text
 
-### The Analogy Corpus
-To build a model that can detect analogies in text, it is important that we have a corpus of analogies. This serves as a set of training examples from which our model can learn to classify whether a text contains an analogy or not.
+### The Demo Analogy Corpus
+To build a model that can detect analogies in text, it is important that we have a starting corpus of analogies. This serves as a set of training examples from which our model can learn to classify whether a text contains an analogy or not.
 
-The analogy corpus used for this project is in <file location>. It is built by searching in and extracting from the Brown corpus any sentence that contains an analogy indicator (the list of analogy indicators is specified in analogy_strings.py). The code to generate the corpus is in wordhunt.py.
+The demo analogy corpus used for this project is in <file location>. It is built by searching in and extracting from the Brown corpus any sentence that contains an analogy indicator (the list of analogy indicators is specified in analogy_strings.py). The code to generate the corpus is in wordhunt.py.
 
 
 
