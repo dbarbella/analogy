@@ -16,7 +16,9 @@ def analogy_ff_to_list(file_loc):
     file_handler.close()
     samples = [_snip_corpus_name(sample) for sample in split_file  if _snip_corpus_name(sample)]
     return samples
-    
+	
+def sent_to_pretty(sentence):
+	return " ".join(sentence)    
 
 # Takes something of the form "/n>name/ntexttexttext..." and returns (name, texttexttext...)
 def _snip_corpus_name(in_string):
