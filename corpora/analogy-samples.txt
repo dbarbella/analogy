@@ -297,7 +297,3 @@ Sound does much the same thing.
 It will bounce back, or be reflected, from a hard surface, such as walls of concrete, brick, and rock.
 When sound hits a soft surface such as curtains, rugs, and cloth draperies, it does not bounce back.
 The secret: bounced sound waves, which we call echoes.
- 
-;----
->
- 

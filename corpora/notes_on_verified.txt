@@ -1,0 +1,1 @@
+verified_analogies.csv and verified_non_analogies.csv were produced by scraping from the brown corpus all of the sentences that contained certain analogy phrases. There were then manually verified by three reviewers each.
