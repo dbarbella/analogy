@@ -9,12 +9,12 @@ from boyer_moore import find_boyer_moore
 # Implementation of the classifier to detect analogy.
 # From http://www.nltk.org/book/ch06.html
 
-analogy_file_name = "\\test_extractions\\demo_analogy_samples.txt"
+analogy_file_name = "\\test_extractions\\analogy_sentences.txt"
 non_analogy_file_name = "\\test_extractions\\demo_analogy_ground.txt"
 
 def get_analogy_string2(text):
     # Returns the first analogy string in the text if found one, empty string
-    # otherwise.
+    # otherwise.s
     for item in analogy_string_list:
         pattern = " ".join(item)
         if pattern != "as as":
@@ -57,6 +57,10 @@ def get_all_analogy_string(text):
 
     return {"analogy_indicator:" : tuple(result)}
 
+def get_pos_tags(text):
+    tokens = text.split()
+    return {"pos_tags:" : tuple(nltk.pos_tag(tokens))}
+
 def get_list(filename):
     # Returns all training data as a list
     # File should be formatted as a text line followed '>' in the next line
@@ -64,8 +68,8 @@ def get_list(filename):
     list = []
     file = open(root + filename, "r", encoding = "utf-8")
     for line in file.readlines():
-        if line[0] != '>':
-            list.append(line)
+        if line[0] != '[':
+            list.append(line[:-1])
 
     return list
 
@@ -78,9 +82,10 @@ samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in n
 random.shuffle(samples)
 
 # divide data into training set and test set
-feature_sets = [(get_analogy_string(text), label) for (text, label) in samples]
-train_set =  feature_sets[: 100]
-test_set = feature_sets[100 :]
+feature_sets = [({"text:" : text}, label) for (text, label) in samples]
+mid_point = int(len(samples) / 2)
+train_set =  feature_sets[: mid_point]
+test_set = feature_sets[mid_point :]
 
 # train classifier with training set
 classifier = nltk.NaiveBayesClassifier.train(train_set)
@@ -97,13 +102,13 @@ print(nltk.classify.accuracy(classifier, test_set))
 print(classifier.show_most_informative_features(5))
 
 # show the ones the classifier guessed wrong.
-errors = []
-test_texts = samples[100 :]
-for (text, label) in test_texts:
-    guess = classifier.classify(get_analogy_string(text))
-    if guess != label:
-        errors.append((label, guess, get_analogy_string(text), text))
-
-print("Correct label, Guess, Text:")
-for item in errors:
-    print(item)
+# errors = []
+# test_texts = samples[mid_point :]
+# for (text, label) in test_texts:
+#     guess = classifier.classify(get_pos_tags(text))
+#     if guess != label:
+#         errors.append((label, guess, get_pos_tags(text), text))
+#
+# print("Correct label, Guess, Text:")
+# for item in errors:
+#     print(item)
