@@ -37,12 +37,12 @@ def get_analogy_string(text, mode):
                 return {"analogy_indicator:" : tuple(result)}
             elif (mode == "svm"):
                 return (result)
-            
+
     if (mode == "naive" or mode == "max_ent"):
         return {"analogy_indicator:" : tuple(result)}
     elif (mode == "svm"):
         return (result)
-              
+
 
 def get_list(filename):
     # Returns all training data as a list
@@ -100,7 +100,7 @@ elif mode == "svm":
     print("LinearSvc: ", LinearSvc)
     print("Svc: ", Svc)
     print("NuSvc: ", NuSvc)
-    
+
 elif mode == "max_ent":
     max_ent = nltk.classify.MaxentClassifier.train(train_set, 'GIS', trace=0, max_iter=1000)
     print("Maximum Entropy: ")
