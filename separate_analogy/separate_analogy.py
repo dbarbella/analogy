@@ -91,9 +91,9 @@ def main():
     filterData(3)
     analogyRelegate()
     
-    exportCSV('analogySample.csv', analogySample)
-    exportCSV('notAnalogySample.csv', notAnalogySample)
-    exportCSV('unsureSample.csv', unsureSample)
+    exportCSV('analogy_sample.csv', analogySample)
+    exportCSV('not_analogy_sample.csv', notAnalogySample)
+    exportCSV('unsure_sample.csv', unsureSample)
     print("Success")
     
 main()
