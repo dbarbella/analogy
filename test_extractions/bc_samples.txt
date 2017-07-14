@@ -1,5 +1,3 @@
-id
-text
 [BRWN, PARA#13855, SENT#3]
 and yet like a child among adults .
 [BRWN, PARA#6643, SENT#2]
