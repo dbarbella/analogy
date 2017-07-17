@@ -21,4 +21,6 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     test_samples = samples[cutoff:]
     # Generate a representation, based on the value passed in for representation
 
-    # Run
+    # Run classifier, generate results
+
+    # Store results
