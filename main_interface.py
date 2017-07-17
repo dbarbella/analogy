@@ -7,7 +7,8 @@ import random
 # The rest will be the training set.
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier):
+# extra is other information that is used to specify the behavior of the classifier
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra=[]):
     # Read in the set of positive examples
     analogy_list = analogy_svms.get_list(positive_set)
     # Read in the set of negative examples
