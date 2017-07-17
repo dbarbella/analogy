@@ -91,6 +91,12 @@ def hashing(train_data, test_data):
     HashTest = HashVect.transform(test_data)
     return(HashTrans, HashTest)
 
+def fmeasure(matrix):
+    precision = matrix[0][0] / (matrix[0][1] + matrix[0][0])
+    recall = matrix[0][0] / (matrix[1][0] + matrix[0][0])
+    f_measure = (2 * precision * recall) / (precision + recall)
+    return(precision, recall, f_measure)
+    
 # within the if classifier = nn statement
 train_data, train_labels, test_data, test_labels = preprocess_svm_neural(samples)
 def svm(train_data, train_labels, test_data, test_labels, representation, extra=[]):
@@ -102,21 +108,24 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             test_predict_Svc_tf = Svc_tf.predict(TfidfTrans_test)
             score = Svc_tf.score(TfidfTrans_test, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_Svc_tf,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         elif representation == "count":
             CountTrans, CountTest = countvect(train_data, test_data)
             Svc_count = SVC().fit(CountTrans, train_labels)
             test_predict_Svc_count = Svc_count.predict(CountTest)
             score = Svc_tf.score(TfidfTrans_test, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_Svc_hash,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         elif representation == "hash":
             HashTrans, HashTest = hashing(train_data, test_data)
             Svc_hash = SVC().fit(HashTrans, train_labels)
             test_predict_Svc_hash = Svc_hash.predict(HashTest)
             score = Svc_hash.score(HashTest, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_Svc_hash,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         else:
             sys.exit("This representation has not been implemented yet.")
     # if the classifier is specified
@@ -127,21 +136,24 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             test_predict_LinearSvc_tf = LinearSvc.predict(TfidfTrans_test)
             score = LinearSvc.score(TfidfTrans_test, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_LinearSvc_tf,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         elif representation = "count":
             CountTrans, CountTest = countvect(train_data, test_data)
             LinearSvc_count = LinearSVC().fit(CountTrans, train_labels)
             test_predict_LinearSvc_count = LinearSvc_count.predict(CountTest)
             score = LinearSvc_count.score(CountTest, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_LinearSvc_count,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         elif representation = "hash":
             HashTrans, HashTest = hashing(train_data, test_data)
             LinearSvc_hash = LinearSVC().fit(HashTrans, train_labels)
             test_predict_LinearSvc_hash = LinearSvc_hash.predict(HashTest)
             score = LinearSvc_hash.score(HashTest, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_LinearSvc_hash,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         else:
             sys.exit("This representation has not been implemented yet.")
     elif extra == "nusvc":
@@ -151,21 +163,24 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             test_predict_NuSVC_tf = NuSvc_tf.predict(TfidfTrans_test)
             score = NuSvc_tf.score(TfidfTrans_test, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_NuSVC_tf,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         elif representation == "count":
             CountTrans, CountTest = countvect(train_data, test_data)
             NuSvc_count = NuSVC().fit(CountTrans, train_labels)
             test_predict_NuSVC_count = NuSvc_count.predict(CountTest)
             score = NuSvc_count.score(CountTest, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_NuSVC_count,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         elif representation == "hash":
             HashTrans, HashTest = hashing(train_data, test_data)
             NuSvc_hash = NuSVC().fit(HashTrans, train_labels)
             test_predict_NuSVC_hash = NuSvc_hash.predict(HashTest)
             score = NuSvc_hash.score(HashTest, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_NuSVC_hash,labels=["YES", "NO"])
-            return(score, matrix)
+            precision, recall, f_measure = fmeasure(matrix)
+            return(score, matrix, precision, recall, f_measure)
         else:
             sys.exit("This representation has not been implemented yet.")
     else:
@@ -179,19 +194,22 @@ def neural(train_data, train_labels, test_data, test_labels, representation):
         test_predict_MLP_tf = MLP_tf.predict(TfidfTrans_test)
         score = MLP_tf.score(TfidfTrans_test, test_labels)
         matrix = confusion_matrix(test_labels,test_predict_MLP_tf,labels=["YES", "NO"])
-        return(score, matrix)
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
     elif representation = "count":
         MLP_count = MLPClassifier().fit(CountTrans, train_labels)
         test_predict_MLP_count = MLP_count.predict(CountTest)
         score = MLP_count.score(CountTest, test_labels)
         matrix = confusion_matrix(test_labels,test_predict_MLP_count,labels=["YES", "NO"])
-        return(score, matrix)
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
     elif representation = "hash":
         MLP_hash = MLPClassifier().fit(HashTrans, train_labels)
         test_predict_MLP_hash = MLP_hash.predict(HashTest)
         score = MLP_hash.score(HashTest, test_labels))
-        matrix confusion_matrix(test_labels,test_predict_MLP_hash,labels=["YES", "NO"]))
-        return(score, matrix)
+        matrix = confusion_matrix(test_labels,test_predict_MLP_hash,labels=["YES", "NO"]))
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
     else:
         sys.exit("This classifier has not been implemented yet.")
 
