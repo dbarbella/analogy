@@ -9,9 +9,9 @@ import random
 # classifier is the classifier to use, as a string
 def analogy_trial(positive_set, negative_set, percent_test, representation, classifier):
     # Read in the set of positive examples
-    analogy_list = analogy_svms.get_list(analogy_file_name)
+    analogy_list = analogy_svms.get_list(positive_set)
     # Read in the set of negative examples
-    non_analogy_list = analogy_svms.get_list(non_analogy_file_name)
+    non_analogy_list = analogy_svms.get_list(negative_set)
     # Randomly divide them into a training set and a test set
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
     num_samples = len[samples]
