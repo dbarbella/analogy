@@ -1,5 +1,11 @@
 analogy_strings.py
 	- Contains sets of words used by other files
+	
+analogy_svms.py
+	- Prepares text samples to then use them with svm, naive bayes, or maximum entropy classifier.
+
+analogy_svms_w_dataoutput.py
+	- Prepares and runs text samples with specified classifier. Outputs csv file with results.
 
 boyer_moore.py
 	- Contains functions that search for sets of words in larger texts
