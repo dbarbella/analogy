@@ -173,7 +173,7 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
         
 # within the other if statement in main_interface        
 train_data, train_labels, test_data, test_labels = preprocess_svm_neural(samples)        
-def neural(train_data, train_labels, test_data, test_labels):
+def neural(train_data, train_labels, test_data, test_labels, representation):
     if representation = "tfidf":
         MLP_tf = MLPClassifier().fit(TfidfTrans, train_labels)
         test_predict_MLP_tf = MLP_tf.predict(TfidfTrans_test)
