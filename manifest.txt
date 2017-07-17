@@ -13,6 +13,9 @@ personal.py
 nltknoodling.py
 	- Scratch file for learning NLTK stuff
 
+separate_sample.py
+	- Separates 1-3 rated analogy samples into different csv files
+
 susd_remover.py
 	- Processes the raw SUSD files into the analogies format
 
