@@ -46,7 +46,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
 if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
-    analogy_trial(positive_set, negative_set, .5, 'tfidf', 'svm')
+    analogy_trial(positive_set, negative_set, .5, 'tfidf', 'neural')
     
 
     
