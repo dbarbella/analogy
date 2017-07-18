@@ -1,6 +1,7 @@
 import functions
 import random
 import sys
+from export_log import outputResults
 
 # positive_set is the set of positive examples, as a file
 # negative_set is the set of negative examples, as a file
@@ -19,16 +20,27 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     # Run classifier, generate results based on the value passed in for representation
     if classifier == "svm":
         train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-        return(functions.svm(train_data, train_labels, test_data, test_labels, representation, extra))
+        score, matrix, precision, recall, f_measure = (functions.svm(train_data, train_labels, test_data, test_labels, representation, extra))
     elif classifier == "neural":
         train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)        
-        return(functions.neural(train_data, train_labels, test_data, test_labels, representation))
+        score, matrix, precision, recall, f_measure = (functions.neural(train_data, train_labels, test_data, test_labels, representation))
     elif classifier == "naive":
         train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-        return(functions.naive(train_data, train_labels, test_data, test_labels, representation))
+        score, matrix, precision, recall, f_measure = (functions.naive(train_data, train_labels, test_data, test_labels, representation))
     elif classifier == "max_ent":
         train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-        return(functions.max_ent(train_data, train_labels, test_data, test_labels, representation))
+        score, matrix, precision, recall, f_measure = (functions.max_ent(train_data, train_labels, test_data, test_labels, representation))
     else:
         sys.exit("This classifier has not been implemented yet.")
     # Store results
+
+    outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure] 
+    outputResults(outputData)
+
+if __name__ == '__main__':
+    positive_set = 'test_extractions/bc_samples.txt'
+    negative_set = 'test_extractions/bc_grounds.txt'
+    analogy_trial(positive_set, negative_set, .5, 'tfidf', 'svm')
+    
+
+    
