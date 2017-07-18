@@ -2,6 +2,9 @@ import functions
 import random
 import sys
 from export_log import outputResults
+#--------
+import time
+
 
 # positive_set is the set of positive examples, as a file
 # negative_set is the set of negative examples, as a file
@@ -10,7 +13,8 @@ from export_log import outputResults
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra=[]):
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra=[], comment=""):
+    start = time.time()
     # Read in the set of positive examples
     analogy_list = functions.get_list_re(positive_set)
     # Read in the set of negative examples
@@ -18,6 +22,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     # Randomly divide them into a training set and a test set
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
     # Run classifier, generate results based on the value passed in for representation
+    beginTimer = time.time()
     if classifier == "svm":
         train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
         score, matrix, precision, recall, f_measure = (functions.svm(train_data, train_labels, test_data, test_labels, representation, extra))
@@ -33,8 +38,9 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     else:
         sys.exit("This classifier has not been implemented yet.")
     # Store results
-
-    outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure] 
+    algoTime = time.time()-beginTimer
+    runTime = time.time()-start
+    outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment] 
     outputResults(outputData)
 
 if __name__ == '__main__':
