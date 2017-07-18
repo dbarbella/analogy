@@ -1,5 +1,6 @@
-import analogy_svms
+import functions
 import random
+import sys
 
 # positive_set is the set of positive examples, as a file
 # negative_set is the set of negative examples, as a file
@@ -10,18 +11,24 @@ import random
 # extra is other information that is used to specify the behavior of the classifier
 def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra=[]):
     # Read in the set of positive examples
-    analogy_list = analogy_svms.get_list(positive_set)
+    analogy_list = functions.get_list_re(positive_set)
     # Read in the set of negative examples
-    non_analogy_list = analogy_svms.get_list(negative_set)
+    non_analogy_list = functions.get_list_re(negative_set)
     # Randomly divide them into a training set and a test set
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
-    num_samples = len[samples]
-    random.shuffle(samples)
-    cutoff = int((1.0 - percent_test) * num_samples)
-    training_samples = samples[:cutoff]
-    test_samples = samples[cutoff:]
-    # Generate a representation, based on the value passed in for representation
-
-    # Run classifier, generate results
-
+    # Run classifier, generate results based on the value passed in for representation
+    if classifier == "svm":
+        train_data, train_labels, test_data, test_labels = functions.preprocess_svm_neural(samples, percent_test)
+        functions.svm(train_data, train_labels, test_data, test_labels, representation, extra)
+    elif classifer == "neural":
+        train_data, train_labels, test_data, test_labels = functions.preprocess_svm_neural(samples, percent_test)        
+        functions.neural(train_data, train_labels, test_data, test_labels, representation)
+    elif classifer == "naive":
+        train_set, test_set = functions.preprocess_naive_max(samples)
+        functions.naive(train_set, test_set)
+    elif clasifier = "max_ent":
+        train_set, test_set = functions.preprocess_naive_max(samples)
+        functions.max_ent(train_set, test_set)
+    else:
+        sys.exit("This classifier has not been implemented yet.")
     # Store results
