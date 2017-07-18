@@ -47,7 +47,7 @@ def get_list_re(filename):
 
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test):
-    num_samples = len[samples]
+    num_samples = len(samples)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
     # create a train set and a test/development set
@@ -94,15 +94,25 @@ def hashing(train_data, test_data):
 
 # Implementetion of the fmeasure metric, which calculates the precision, recall and f1measure given a confusion matrix
 def fmeasure(matrix):
-    precision = matrix[0][0] / (matrix[0][1] + matrix[0][0])
-    recall = matrix[0][0] / (matrix[1][0] + matrix[0][0])
-    f_measure = (2 * precision * recall) / (precision + recall)
+    value1 = (matrix[0][1] + matrix[0][0])
+    value2 = (matrix[1][0] + matrix[0][0])
+    if value1 == 0 or value2 == 0:
+        precision = 0
+        recall = 0
+        f_measure = 0
+    else:
+        precision = matrix[0][0] / value1
+        recall = matrix[0][0] / value2
+        if precision == 0:
+            f_measure = 0
+        else:
+            f_measure = (2 * precision * recall) / (precision + recall)
     return(precision, recall, f_measure)
 
 # A function which classifies data using different SVMs    
 def svm(train_data, train_labels, test_data, test_labels, representation, extra=[]):
     # if the classifier not specified, use SVC as the default one
-    if extra == "":
+    if extra == []:
         # using tfidf representation
         if representation == "tfidf":
             TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
@@ -117,8 +127,8 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             CountTrans, CountTest = countvect(train_data, test_data)
             Svc_count = SVC().fit(CountTrans, train_labels)
             test_predict_Svc_count = Svc_count.predict(CountTest)
-            score = Svc_tf.score(TfidfTrans_test, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_Svc_hash,labels=["YES", "NO"])
+            score = Svc_count.score(CountTest, test_labels)
+            matrix = confusion_matrix(test_labels,test_predict_Svc_count,labels=["YES", "NO"])
             precision, recall, f_measure = fmeasure(matrix)
             return(score, matrix, precision, recall, f_measure)
         # using Hashing Vectorizer representation
@@ -142,7 +152,7 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             matrix = confusion_matrix(test_labels,test_predict_LinearSvc_tf,labels=["YES", "NO"])
             precision, recall, f_measure = fmeasure(matrix)
             return(score, matrix, precision, recall, f_measure)
-        elif representation = "count":
+        elif representation == "count":
             CountTrans, CountTest = countvect(train_data, test_data)
             LinearSvc_count = LinearSVC().fit(CountTrans, train_labels)
             test_predict_LinearSvc_count = LinearSvc_count.predict(CountTest)
@@ -150,7 +160,7 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             matrix = confusion_matrix(test_labels,test_predict_LinearSvc_count,labels=["YES", "NO"])
             precision, recall, f_measure = fmeasure(matrix)
             return(score, matrix, precision, recall, f_measure)
-        elif representation = "hash":
+        elif representation == "hash":
             HashTrans, HashTest = hashing(train_data, test_data)
             LinearSvc_hash = LinearSVC().fit(HashTrans, train_labels)
             test_predict_LinearSvc_hash = LinearSvc_hash.predict(HashTest)
@@ -236,13 +246,13 @@ def naive(train_data, train_labels, test_data, test_labels, representation):
         test_predict_naive_count = naive_count.predict(CountTest)
         score = naive_count.score(CountTest, test_labels)
         matrix = confusion_matrix(test_labels, test_predict_naive_count, labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix
+        precision, recall, f_measure = fmeasure(matrix)
         return(score, matrix, precision, recall, f_measure)
     elif representation == "hash":
         HashTrans, HashTest = hashing(train_data, test_data)
         naive_hash = MultinomialNB().fit(HashTrans, train_labels)
         test_predict_naive_hash = naive_hash.predict(HashTest)
-        score = naive_hash.score(HashTest, test_labels))
+        score = naive_hash.score(HashTest, test_labels)
         matrix = confusion_matrix(test_labels,test_predict_naive_hash,labels=["YES", "NO"])
         precision, recall, f_measure = fmeasure(matrix)
         return(score, matrix, precision, recall, f_measure)
