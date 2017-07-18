@@ -51,7 +51,7 @@ def get_list_re(filename):
 # labeled data.
 samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
 
-def preprocess_svm_neural(samples):
+def preprocess_svm_neural(samples, percent_test):
     num_samples = len[samples]
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
@@ -64,7 +64,7 @@ def preprocess_svm_neural(samples):
     test_labels = [label for (text, label) in test_set]
     return(train_data, train_labels, test_data, test_labels)
 
-def preprocess_naive_max(samples):
+def preprocess_naive_max(samples, percent_test):
     num_samples = len[samples]
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
