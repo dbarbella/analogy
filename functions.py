@@ -5,7 +5,6 @@ from personal import root
 #------------------------
 from nltk.classify import SklearnClassifier
 from sklearn.metrics import confusion_matrix
-from sklearn.preprocessing import StandardScaler
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
@@ -13,7 +12,8 @@ from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
 from sklearn.svm import NuSVC
 from sklearn.neural_network import MLPClassifier
-from nltk.classify import maxent
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import MultinomialNB
 import sys
 #------------------------
 import random
@@ -45,11 +45,8 @@ def get_list_re(filename):
 
     return list
 
-# labeled data
-samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
-
-# preprocess the data so it can be used with SVMs and Neural Nets
-def preprocess_svm_neural(samples, percent_test):
+# preprocess the data so it can be used by the classifiers
+def preprocess(samples, percent_test):
     num_samples = len[samples]
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
@@ -64,17 +61,6 @@ def preprocess_svm_neural(samples, percent_test):
     test_data = [text for (text, label) in test_set]
     test_labels = [label for (text, label) in test_set]
     return(train_data, train_labels, test_data, test_labels)
-
-# preprocess the data so it can be used with Naive Bayes and Maximum Entropy(which are implemented through NLTK)
-def preprocess_naive_max(samples, percent_test):
-    num_samples = len[samples]
-    random.shuffle(samples)
-    cutoff = int((1.0 - percent_test) * num_samples)
-    # create a train set and a test/development set
-    feature_sets = [({"text:" : text}, label) for (text, label) in samples]
-    train_set =  feature_sets[:cutoff]
-    test_set = feature_sets[cutoff:]
-    return(train_set, test_set)
     
 # Transform the data so it can be represented using tfidf    
 def tfidf(train_data, test_data):
@@ -197,39 +183,91 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
         
 # function which classifies data using MLP Neural Net classifier      
 def neural(train_data, train_labels, test_data, test_labels, representation):
-    if representation = "tfidf":
+    if representation == "tfidf":
+        TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
         MLP_tf = MLPClassifier().fit(TfidfTrans, train_labels)
         test_predict_MLP_tf = MLP_tf.predict(TfidfTrans_test)
         score = MLP_tf.score(TfidfTrans_test, test_labels)
         matrix = confusion_matrix(test_labels,test_predict_MLP_tf,labels=["YES", "NO"])
         precision, recall, f_measure = fmeasure(matrix)
         return(score, matrix, precision, recall, f_measure)
-    elif representation = "count":
+    elif representation == "count":
+        CountTrans, CountTest = countvect(train_data, test_data)
         MLP_count = MLPClassifier().fit(CountTrans, train_labels)
         test_predict_MLP_count = MLP_count.predict(CountTest)
         score = MLP_count.score(CountTest, test_labels)
         matrix = confusion_matrix(test_labels,test_predict_MLP_count,labels=["YES", "NO"])
         precision, recall, f_measure = fmeasure(matrix)
         return(score, matrix, precision, recall, f_measure)
-    elif representation = "hash":
+    elif representation == "hash":
+        HashTrans, HashTest = hashing(train_data, test_data)
         MLP_hash = MLPClassifier().fit(HashTrans, train_labels)
         test_predict_MLP_hash = MLP_hash.predict(HashTest)
-        score = MLP_hash.score(HashTest, test_labels))
-        matrix = confusion_matrix(test_labels,test_predict_MLP_hash,labels=["YES", "NO"]))
+        score = MLP_hash.score(HashTest, test_labels)
+        matrix = confusion_matrix(test_labels,test_predict_MLP_hash,labels=["YES", "NO"])
         precision, recall, f_measure = fmeasure(matrix)
         return(score, matrix, precision, recall, f_measure)
     # if another representation is given as a parameter
     else:
         sys.exit("This classifier has not been implemented yet.")
 
-# function which classifies data using the NLTK version of Naive Bayes
-def naive(train_set, test_set):
-    classifier = nltk.NaiveBayesClassifier.train(train_set)
-    score = nltk.classify.accuracy(classifier, test_set)
-    return(score)
+# function which classifies data using the Scikit version of Naive Bayes
+def naive(train_data, train_labels, test_data, test_labels, representation):
+    if representation == "tfidf":
+        TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
+        naive_tf = MultinomialNB().fit(TfidfTrans, train_labels)
+        test_predict_naive_tf = naive_tf.predict(TfidfTrans_test)
+        score = naive_tf.score(TfidfTrans_test, test_labels)
+        matrix = confusion_matrix(test_labels, test_predict_naive_tf, labels=["YES", "NO"])
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
+    elif representation == "count":
+        CountTrans, CountTest = countvect(train_data, test_data)
+        naive_count = MultinomialNB().fit(CountTrans, train_labels)
+        test_predict_naive_count = naive_count.predict(CountTest)
+        score = naive_count.score(CountTest, test_labels)
+        matrix = confusion_matrix(test_labels, test_predict_naive_count, labels=["YES", "NO"])
+        precision, recall, f_measure = fmeasure(matrix
+        return(score, matrix, precision, recall, f_measure)
+    elif representation == "hash":
+        HashTrans, HashTest = hashing(train_data, test_data)
+        naive_hash = MultinomialNB().fit(HashTrans, train_labels)
+        test_predict_naive_hash = naive_hash.predict(HashTest)
+        score = naive_hash.score(HashTest, test_labels))
+        matrix = confusion_matrix(test_labels,test_predict_naive_hash,labels=["YES", "NO"])
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
+    # if another representation is given as a parameter
+    else:
+        sys.exit("This classifier has not been implemented yet.")
 
-# function which classifies data using the NLTK version of Maximum Entropy
-def max_ent(train_set, test_set):
-    max_ent = nltk.classify.MaxentClassifier.train(train_set, 'GIS', trace=0, max_iter=1000)
-    score = nltk.classify.accuracy(max_ent, test_set)
-    return(score)
+# function which classifies data using the Scikit version of Maximum Entropy
+def max_ent(train_data, train_labels, test_data, test_labels, representation):
+    if representation == "tfidf":
+        TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
+        logit_tf = LogisticRegression().fit(TfidfTrans, train_labels)
+        test_predict_tf = logit_tf.predict(TfidfTrans_test)
+        score = logit_tf.score(TfidfTrans_test, test_labels)
+        matrix = confusion_matrix(test_labels, test_predict_tf, labels=["YES", "NO"])
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
+    elif representation == "count":
+        CountTrans, CountTest = countvect(train_data, test_data)
+        logit_count = LogisticRegression().fit(CountTrans, train_labels)
+        test_predict_count = logit_count.predict(CountTest)
+        score = logit_count.score(CountTest, test_labels)
+        matrix = confusion_matrix(test_labels, test_predict_count, labels=["YES", "NO"])
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
+    elif representation == "hash":
+        HashTrans, HashTest = hashing(train_data, test_data)
+        logit_hash = LogisticRegression().fit(HashTrans, train_data)
+        test_predict_hash = logit_hash.predict(HashTest)
+        score = logit_hash.score(HashTest, test_labels)
+        matrix = confusion_matrix(test_labels,test_predict_hash,labels=["YES", "NO"])
+        precision, recall, f_measure = fmeasure(matrix)
+        return(score, matrix, precision, recall, f_measure)
+    else:
+        sys.exit("This classifier has not been implemented yet.")
+
+        
