@@ -1,7 +1,6 @@
 import nltk
 from analogy_strings import analogy_string_list
 from sentence_parser import get_speech_tags
-from sentence_parser import get_pp
 from personal import root
 #------------------------
 from nltk.classify import SklearnClassifier
@@ -9,7 +8,6 @@ from sklearn.metrics import confusion_matrix
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
-from sklearn.feature_extraction.text import DictVectorizer
 from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
 from sklearn.svm import NuSVC
@@ -64,18 +62,16 @@ def preprocess(samples, percent_test):
     test_labels = [label for (text, label) in test_set]
     return(train_data, train_labels, test_data, test_labels)
 
-# preprocess the data so it can be used with Naive Bayes and Maximum Entropy(which are implemented through NLTK)
-def preprocess_naive_max(samples, percent_test):
-    num_samples = len[samples]
-    random.shuffle(samples)
-    cutoff = int((1.0 - percent_test) * num_samples)
-    # create a train set and a test/development set
-    feature_sets = [({"text:" : text}, label) for (text, label) in samples]
-    train_set =  feature_sets[:cutoff]
-    test_set = feature_sets[cutoff:]
-    return(train_set, test_set)
-
-# Transform the data so it can be represented using tfidf
+# Transform the data so it can be represented by prepositional phrases.
+def preposition(train_data, test_data):
+    pp_training_set = [get_pp(text) for text in train_data]
+    pp_test_set = [get_pp(text) for text in test_data]
+    dict_vect = DictVectorizer()
+    PpTrans = dict_vect.fit_transform(pp_training_set)
+    PpTest = dict_vect.fit(pp_test_set)
+    return (PpTrans, PpTest)
+    
+# Transform the data so it can be represented using tfidf    
 def tfidf(train_data, test_data):
     TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False)
     TfidfTrans = TfidfVect.fit_transform(train_data)
@@ -96,15 +92,6 @@ def hashing(train_data, test_data):
     HashTest = HashVect.transform(test_data)
     return(HashTrans, HashTest)
 
-# Transform the data so it can be represented by prepositional phrases.
-def preposition(train_data, test_data):
-    pp_training_set = [get_pp(text) for text in train_data]
-    pp_test_set = [get_pp(text) for text in test_data]
-    dict_vect = DictVectorizer()
-    PpTrans = dict_vect.fit_transform(pp_training_set)
-    PpTest = dict_vect.fit(pp_test_set)
-    return (PpTrans, PpTest)
-
 # Implementetion of the fmeasure metric, which calculates the precision, recall and f1measure given a confusion matrix
 def fmeasure(matrix):
     precision = matrix[0][0] / (matrix[0][1] + matrix[0][0])
@@ -112,7 +99,7 @@ def fmeasure(matrix):
     f_measure = (2 * precision * recall) / (precision + recall)
     return(precision, recall, f_measure)
 
-# A function which classifies data using different SVMs
+# A function which classifies data using different SVMs    
 def svm(train_data, train_labels, test_data, test_labels, representation, extra=[]):
     # if the classifier not specified, use SVC as the default one
     if extra == "":
@@ -143,14 +130,6 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             matrix = confusion_matrix(test_labels,test_predict_Svc_hash,labels=["YES", "NO"])
             precision, recall, f_measure = fmeasure(matrix)
             return(score, matrix, precision, recall, f_measure)
-        elif representation == "preposition":
-            PpTrans, PpTest = preposition(train_data, test_data)
-            Svc_pp = SVC().fit(PpTrans, train_labels)
-            test_predict_Svc_pp = Svc_pp.predict(HashTest)
-            score = Svc_pp.score(PpTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_Svc_pp,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
         else:
             sys.exit("This representation has not been implemented yet.")
     # if the classifier is specified: linear/nusvc
@@ -177,14 +156,6 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             test_predict_LinearSvc_hash = LinearSvc_hash.predict(HashTest)
             score = LinearSvc_hash.score(HashTest, test_labels)
             matrix = confusion_matrix(test_labels,test_predict_LinearSvc_hash,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        elif representation == "preposition":
-            PpTrans, PpTest = preposition(train_data, test_data)
-            LinearSvc_pp = LinearSVC().fit(PpTrans, train_labels)
-            test_predict_LinearSvc_pp = LinearSvc_pp.predict(HashTest)
-            score = LinearSvc_pp.score(PpTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_LinearSvc_pp,labels=["YES", "NO"])
             precision, recall, f_measure = fmeasure(matrix)
             return(score, matrix, precision, recall, f_measure)
         else:
@@ -214,20 +185,12 @@ def svm(train_data, train_labels, test_data, test_labels, representation, extra=
             matrix = confusion_matrix(test_labels,test_predict_NuSVC_hash,labels=["YES", "NO"])
             precision, recall, f_measure = fmeasure(matrix)
             return(score, matrix, precision, recall, f_measure)
-        elif representation == "preposition":
-            PpTrans, PpTest = preposition(train_data, test_data)
-            NuSvc_pp = NuSVC().fit(PpTrans, train_labels)
-            test_predict_NuSvc_pp = NuSvc_pp.predict(HashTest)
-            score = NuSvc_pp.score(PpTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_NuSvc_pp,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
         else:
             sys.exit("This representation has not been implemented yet.")
     else:
         sys.exit("This classifier has not been implemented yet.")
-
-# function which classifies data using MLP Neural Net classifier
+        
+# function which classifies data using MLP Neural Net classifier      
 def neural(train_data, train_labels, test_data, test_labels, representation):
     if representation == "tfidf":
         TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
@@ -315,3 +278,5 @@ def max_ent(train_data, train_labels, test_data, test_labels, representation):
         return(score, matrix, precision, recall, f_measure)
     else:
         sys.exit("This classifier has not been implemented yet.")
+
+        
