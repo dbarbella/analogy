@@ -86,7 +86,7 @@ def countvect(train_data, test_data):
     return(CountTrans, CountTest)
 
 # Transform the data so it can be represented using Hashing Vectorizer
-def hashing(train_data, test_data, classifier):
+def hashing(train_data, test_data, classifier=[]):
     if classifier == "naive":
         HashVect = HashingVectorizer(lowercase=False, non_negative=True)
     else:
@@ -151,7 +151,7 @@ def get_data(train_data, test_data, representation, classifier):
         if classifier == "naive":
             return hashing(train_data, test_data, naive)
         else:
-            return hashing(train_data, test_data, naive)
+            return hashing(train_data, test_data)
     else:
         sys.exit("This representation has not been implemented yet.")
         return None

@@ -7,6 +7,7 @@ currentRunningFile = "analogy_svms"
 OutputFileName = "Trial"
 now = time.strftime("%c")
 now  = now.replace(" ", "_")
+now  = now.replace(":", "")
 
 #output results to .csv file
 def outputResults(testOutput):
