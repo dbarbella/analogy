@@ -86,8 +86,11 @@ def countvect(train_data, test_data):
     return(CountTrans, CountTest)
 
 # Transform the data so it can be represented using Hashing Vectorizer
-def hashing(train_data, test_data):
-    HashVect = HashingVectorizer(lowercase=False)
+def hashing(train_data, test_data, classifier):
+    if classifier == "naive":
+        HashVect = HashingVectorizer(lowercase=False, non_negative=True)
+    else:
+         HashVect = HashingVectorizer(lowercase=False)
     HashTrans = HashVect.fit_transform(train_data)
     HashTest = HashVect.transform(test_data)
     return(HashTrans, HashTest)
@@ -111,7 +114,7 @@ def fmeasure(matrix):
 
 def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
     clfier = get_classifier(classifier_name, extra)
-    train_set, test_set = get_data(train_data, test_data, representation)
+    train_set, test_set = get_data(train_data, test_data, representation, classifier)
 
     learn_results = clfier.fit(train_set, train_labels)
     score = learn_results.score(test_set, test_labels)
@@ -139,13 +142,16 @@ def get_classifier(name, extra):
         sys.exit("This classifier has not been implemented yet.")
         return None
 
-def get_data(train_data, test_data, representation):
+def get_data(train_data, test_data, representation, classifier):
     if representation == "tfidf":
         return tfidf(train_data, test_data)
     elif representation == "count":
         return countvect(train_data, test_data)
     elif representation == "hash":
-        return hashing(train_data, test_data)
+        if classifier == "naive":
+            return hashing(train_data, test_data, naive)
+        else:
+            return hashing(train_data, test_data, naive)
     else:
         sys.exit("This representation has not been implemented yet.")
         return None
