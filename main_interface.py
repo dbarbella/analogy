@@ -24,7 +24,8 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
 
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
-    functions.classify(samples, percent_test, classifier, representation, extra)
+    train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
+    score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra)
 
     # Store results
     algoTime = time.time()-beginTimer

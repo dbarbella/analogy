@@ -109,7 +109,7 @@ def fmeasure(matrix):
             f_measure = (2 * precision * recall) / (precision + recall)
     return(precision, recall, f_measure)
 
-def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
+def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
     clfier = get_classifier(classifier_name, extra)
     train_set, test_set = get_data(train_data, test_data, representation)
 
@@ -123,7 +123,7 @@ def classify(train_data, train_labels, test_data, test_labels, classifier_name, 
 
 def get_classifier(name, extra):
     if name == "svm":
-        if extra == "" or extra = "svc":
+        if extra == "" or extra == "svc":
             return SVC()
         elif extra == "linear":
             return LinearSVC()
