@@ -70,8 +70,8 @@ def preposition(train_data, test_data):
     PpTrans = dict_vect.fit_transform(pp_training_set)
     PpTest = dict_vect.fit(pp_test_set)
     return (PpTrans, PpTest)
-    
-# Transform the data so it can be represented using tfidf    
+
+# Transform the data so it can be represented using tfidf
 def tfidf(train_data, test_data):
     TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False)
     TfidfTrans = TfidfVect.fit_transform(train_data)
@@ -109,182 +109,43 @@ def fmeasure(matrix):
             f_measure = (2 * precision * recall) / (precision + recall)
     return(precision, recall, f_measure)
 
-# A function which classifies data using different SVMs    
-def svm(train_data, train_labels, test_data, test_labels, representation, extra=[]):
-    # if the classifier not specified, use SVC as the default one
-    if extra == []:
-        # using tfidf representation
-        if representation == "tfidf":
-            TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
-            Svc_tf = SVC().fit(TfidfTrans, train_labels)
-            test_predict_Svc_tf = Svc_tf.predict(TfidfTrans_test)
-            score = Svc_tf.score(TfidfTrans_test, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_Svc_tf,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        # using Count Vectorizer representation
-        elif representation == "count":
-            CountTrans, CountTest = countvect(train_data, test_data)
-            Svc_count = SVC().fit(CountTrans, train_labels)
-            test_predict_Svc_count = Svc_count.predict(CountTest)
-            score = Svc_count.score(CountTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_Svc_count,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        # using Hashing Vectorizer representation
-        elif representation == "hash":
-            HashTrans, HashTest = hashing(train_data, test_data)
-            Svc_hash = SVC().fit(HashTrans, train_labels)
-            test_predict_Svc_hash = Svc_hash.predict(HashTest)
-            score = Svc_hash.score(HashTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_Svc_hash,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        else:
-            sys.exit("This representation has not been implemented yet.")
-    # if the classifier is specified: linear/nusvc
-    elif extra == "linear":
-        if representation == "tfidf":
-            TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
-            LinearSvc = LinearSVC().fit(TfidfTrans, train_labels)
-            test_predict_LinearSvc_tf = LinearSvc.predict(TfidfTrans_test)
-            score = LinearSvc.score(TfidfTrans_test, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_LinearSvc_tf,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        elif representation == "count":
-            CountTrans, CountTest = countvect(train_data, test_data)
-            LinearSvc_count = LinearSVC().fit(CountTrans, train_labels)
-            test_predict_LinearSvc_count = LinearSvc_count.predict(CountTest)
-            score = LinearSvc_count.score(CountTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_LinearSvc_count,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        elif representation == "hash":
-            HashTrans, HashTest = hashing(train_data, test_data)
-            LinearSvc_hash = LinearSVC().fit(HashTrans, train_labels)
-            test_predict_LinearSvc_hash = LinearSvc_hash.predict(HashTest)
-            score = LinearSvc_hash.score(HashTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_LinearSvc_hash,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        else:
-            sys.exit("This representation has not been implemented yet.")
-    elif extra == "nusvc":
-        if representation == "tfidf":
-            TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
-            NuSvc_tf = NuSVC().fit(TfidfTrans, train_labels)
-            test_predict_NuSVC_tf = NuSvc_tf.predict(TfidfTrans_test)
-            score = NuSvc_tf.score(TfidfTrans_test, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_NuSVC_tf,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        elif representation == "count":
-            CountTrans, CountTest = countvect(train_data, test_data)
-            NuSvc_count = NuSVC().fit(CountTrans, train_labels)
-            test_predict_NuSVC_count = NuSvc_count.predict(CountTest)
-            score = NuSvc_count.score(CountTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_NuSVC_count,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        elif representation == "hash":
-            HashTrans, HashTest = hashing(train_data, test_data)
-            NuSvc_hash = NuSVC().fit(HashTrans, train_labels)
-            test_predict_NuSVC_hash = NuSvc_hash.predict(HashTest)
-            score = NuSvc_hash.score(HashTest, test_labels)
-            matrix = confusion_matrix(test_labels,test_predict_NuSVC_hash,labels=["YES", "NO"])
-            precision, recall, f_measure = fmeasure(matrix)
-            return(score, matrix, precision, recall, f_measure)
-        else:
-            sys.exit("This representation has not been implemented yet.")
-    else:
-        sys.exit("This classifier has not been implemented yet.")
-        
-# function which classifies data using MLP Neural Net classifier      
-def neural(train_data, train_labels, test_data, test_labels, representation):
-    if representation == "tfidf":
-        TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
-        MLP_tf = MLPClassifier().fit(TfidfTrans, train_labels)
-        test_predict_MLP_tf = MLP_tf.predict(TfidfTrans_test)
-        score = MLP_tf.score(TfidfTrans_test, test_labels)
-        matrix = confusion_matrix(test_labels,test_predict_MLP_tf,labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    elif representation == "count":
-        CountTrans, CountTest = countvect(train_data, test_data)
-        MLP_count = MLPClassifier().fit(CountTrans, train_labels)
-        test_predict_MLP_count = MLP_count.predict(CountTest)
-        score = MLP_count.score(CountTest, test_labels)
-        matrix = confusion_matrix(test_labels,test_predict_MLP_count,labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    elif representation == "hash":
-        HashTrans, HashTest = hashing(train_data, test_data)
-        MLP_hash = MLPClassifier().fit(HashTrans, train_labels)
-        test_predict_MLP_hash = MLP_hash.predict(HashTest)
-        score = MLP_hash.score(HashTest, test_labels)
-        matrix = confusion_matrix(test_labels,test_predict_MLP_hash,labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    # if another representation is given as a parameter
-    else:
-        sys.exit("This classifier has not been implemented yet.")
+def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
+    clfier = get_classifier(classifier_name, extra)
+    train_set, test_set = get_data(train_data, test_data, representation)
 
-# function which classifies data using the Scikit version of Naive Bayes
-def naive(train_data, train_labels, test_data, test_labels, representation):
-    if representation == "tfidf":
-        TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
-        naive_tf = MultinomialNB().fit(TfidfTrans, train_labels)
-        test_predict_naive_tf = naive_tf.predict(TfidfTrans_test)
-        score = naive_tf.score(TfidfTrans_test, test_labels)
-        matrix = confusion_matrix(test_labels, test_predict_naive_tf, labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    elif representation == "count":
-        CountTrans, CountTest = countvect(train_data, test_data)
-        naive_count = MultinomialNB().fit(CountTrans, train_labels)
-        test_predict_naive_count = naive_count.predict(CountTest)
-        score = naive_count.score(CountTest, test_labels)
-        matrix = confusion_matrix(test_labels, test_predict_naive_count, labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    elif representation == "hash":
-        HashTrans, HashTest = hashing(train_data, test_data)
-        naive_hash = MultinomialNB().fit(HashTrans, train_labels)
-        test_predict_naive_hash = naive_hash.predict(HashTest)
-        score = naive_hash.score(HashTest, test_labels)
-        matrix = confusion_matrix(test_labels,test_predict_naive_hash,labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    # if another representation is given as a parameter
-    else:
-        sys.exit("This classifier has not been implemented yet.")
+    learn_results = clfier.fit(train_set, train_labels)
+    score = learn_results.score(test_set, test_labels)
+    test_predict = learn_results.predict(test_set)
+    matrix = confusion_matrix(test_labels, test_predict, labels = ['YES', 'NO'])
+    precision, recall, f_measure = fmeasure(matrix)
 
-# function which classifies data using the Scikit version of Maximum Entropy
-def max_ent(train_data, train_labels, test_data, test_labels, representation):
-    if representation == "tfidf":
-        TfidfTrans, TfidfTrans_test = tfidf(train_data, test_data)
-        logit_tf = LogisticRegression().fit(TfidfTrans, train_labels)
-        test_predict_tf = logit_tf.predict(TfidfTrans_test)
-        score = logit_tf.score(TfidfTrans_test, test_labels)
-        matrix = confusion_matrix(test_labels, test_predict_tf, labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    elif representation == "count":
-        CountTrans, CountTest = countvect(train_data, test_data)
-        logit_count = LogisticRegression().fit(CountTrans, train_labels)
-        test_predict_count = logit_count.predict(CountTest)
-        score = logit_count.score(CountTest, test_labels)
-        matrix = confusion_matrix(test_labels, test_predict_count, labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
-    elif representation == "hash":
-        HashTrans, HashTest = hashing(train_data, test_data)
-        logit_hash = LogisticRegression().fit(HashTrans, train_data)
-        test_predict_hash = logit_hash.predict(HashTest)
-        score = logit_hash.score(HashTest, test_labels)
-        matrix = confusion_matrix(test_labels,test_predict_hash,labels=["YES", "NO"])
-        precision, recall, f_measure = fmeasure(matrix)
-        return(score, matrix, precision, recall, f_measure)
+    return (score, matrix, precision, recall, f_measure)
+
+def get_classifier(name, extra):
+    if name == "svm":
+        if extra == "" or extra = "svc":
+            return SVC()
+        elif extra == "linear":
+            return LinearSVC()
+        elif extra == "nusvc":
+            return NuSVC()
+    elif name == "neural":
+        return MLPClassifier()
+    elif name == "naive":
+        return MultinomialNB()
+    elif name == "max_ent":
+        return LogisticRegression()
     else:
         sys.exit("This classifier has not been implemented yet.")
+        return None
+
+def get_data(train_data, test_data, representation):
+    if representation == "tfidf":
+        return tfidf(train_data, test_data)
+    elif representation == "count":
+        return countvect(train_data, test_data)
+    elif representation == "hash":
+        return hashing(train_data, test_data)
+    else:
+        sys.exit("This representation has not been implemented yet.")
+        return None
