@@ -1,6 +1,7 @@
 import glob
 import csv
 
+path = "/logs/exp_trials/"
 
 with open("logs/consolidated/"+"consolidated_log.csv", 'w') as resultsFile:
     fileWriter = csv.writer(resultsFile, quoting=csv.QUOTE_ALL)
