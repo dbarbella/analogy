@@ -149,7 +149,7 @@ def get_data(train_data, test_data, representation, classifier):
         return countvect(train_data, test_data)
     elif representation == "hash":
         if classifier == "naive":
-            return hashing(train_data, test_data, naive)
+            return hashing(train_data, test_data, "naive")
         else:
             return hashing(train_data, test_data)
     else:
