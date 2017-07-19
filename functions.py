@@ -114,7 +114,7 @@ def fmeasure(matrix):
 
 def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
     clfier = get_classifier(classifier_name, extra)
-    train_set, test_set = get_data(train_data, test_data, representation, classifier)
+    train_set, test_set = get_data(train_data, test_data, representation, classifier_name)
 
     learn_results = clfier.fit(train_set, train_labels)
     score = learn_results.score(test_set, test_labels)
