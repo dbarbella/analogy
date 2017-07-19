@@ -17,18 +17,5 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     # Randomly divide them into a training set and a test set
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
     # Run classifier, generate results based on the value passed in for representation
-    if classifier == "svm":
-        train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-        return(functions.svm(train_data, train_labels, test_data, test_labels, representation, extra))
-    elif classifier == "neural":
-        train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)        
-        return(functions.neural(train_data, train_labels, test_data, test_labels, representation))
-    elif classifier == "naive":
-        train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-        return(functions.naive(train_data, train_labels, test_data, test_labels, representation))
-    elif classifier == "max_ent":
-        train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-        return(functions.max_ent(train_data, train_labels, test_data, test_labels, representation))
-    else:
-        sys.exit("This classifier has not been implemented yet.")
+    functions.run_classifier(samples, percent_test, representation, extra)
     # Store results
