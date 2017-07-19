@@ -86,11 +86,8 @@ def countvect(train_data, test_data):
     return(CountTrans, CountTest)
 
 # Transform the data so it can be represented using Hashing Vectorizer
-def hashing(train_data, test_data, special=[]):
-    if special == []:
-        HashVect = HashingVectorizer(lowercase=False)
-    elif special == "naive":
-        HashVect = HashingVectorizer(lowercase=False, non_negative=True)
+def hashing(train_data, test_data):
+    HashVect = HashingVectorizer(lowercase=False)
     HashTrans = HashVect.fit_transform(train_data)
     HashTest = HashVect.transform(test_data)
     return(HashTrans, HashTest)
@@ -252,7 +249,7 @@ def naive(train_data, train_labels, test_data, test_labels, representation):
         precision, recall, f_measure = fmeasure(matrix)
         return(score, matrix, precision, recall, f_measure)
     elif representation == "hash":
-        HashTrans, HashTest = hashing(train_data, test_data, "naive")
+        HashTrans, HashTest = hashing(train_data, test_data)
         naive_hash = MultinomialNB().fit(HashTrans, train_labels)
         test_predict_naive_hash = naive_hash.predict(HashTest)
         score = naive_hash.score(HashTest, test_labels)
@@ -291,5 +288,3 @@ def max_ent(train_data, train_labels, test_data, test_labels, representation):
         return(score, matrix, precision, recall, f_measure)
     else:
         sys.exit("This classifier has not been implemented yet.")
-
-        

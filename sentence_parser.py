@@ -3,7 +3,7 @@ from nltk.parse import stanford
 import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 
-parser = StanfordParser()
+#parser = StanfordParser()
 
 def is_noun(label):
     noun_labels = {"NN", "NNP", "NNPS", "NNS", "NP"}
