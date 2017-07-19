@@ -1,9 +1,8 @@
 import glob
 import csv
 
-path = 'Logs/exp_trials/*.csv'
 
-with open("Logs/consolidated/"+"consolidated_log.csv", 'w') as resultsFile:
+with open("logs/consolidated/"+"consolidated_log.csv", 'w') as resultsFile:
     fileWriter = csv.writer(resultsFile, quoting=csv.QUOTE_ALL)
     fileWriter.writerow(["datetime", "positive_set", "negative_set", "representation", "classifier", "extra", "score", "matrix", "precision", "recall", "f_measure", "Runtime(seconds)", "Algorithm_time(seconds)", "Comments"])
            
