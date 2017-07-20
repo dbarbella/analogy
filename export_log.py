@@ -6,13 +6,14 @@ import csv
 currentRunningFile = "analogy_svms"
 OutputFileName = "Trial"
 now = time.strftime("%c")
+currentTime = now
 now  = now.replace(" ", "_")
 now  = now.replace(":", "")
 
 #output results to .csv file
 def outputResults(testOutput):
     
-    testOutput.insert(0, now)
+    testOutput.insert(0, currentTime)
      
     if os.path.exists("logs/exp_trials/"+OutputFileName+"_"+now+".csv"):
         with open(OutputFileName+"_"+now+".csv", 'a') as resultsFile:
