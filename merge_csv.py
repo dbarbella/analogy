@@ -1,19 +1,17 @@
 import glob
 import csv
+import pandas as pd
 
-path = "logs/exp_trials/*.csv"
-with open("logs/consolidated/"+"consolidated_log.csv", 'w') as resultsFile:
-    fileWriter = csv.writer(resultsFile, quoting=csv.QUOTE_ALL)
-    fileWriter.writerow(["datetime", "positive_set", "negative_set", "representation", "classifier", "extra", "score", "matrix", "precision", "recall", "f_measure", "Runtime(seconds)", "Algorithm_time(seconds)", "Comments"])
+path = "logs/"
+allFiles = glob.glob("logs/exp_trials/*.csv")
+frame = pd.DataFrame()
+list_ = []
+for file_ in allFiles:
+    df = pd.read_csv(file_,index_col=None, header=0)
+    list_.append(df)
+frame = pd.concat(list_)
 
-    for fileName in glob.glob(path):
-        with open(fileName, 'r') as file:
-            fileReader = csv.reader(file)
-            next(fileReader, None)
-            for row in fileReader:
-                fileWriter.writerow(row)
-    print("File successfully consolidated at Logs/consolidated.")
-            
-        
-    
-    
+frame['datetime'] = pd.to_datetime(frame['datetime'])
+frame.sort_values(by='datetime')
+frame.to_csv('logs/consolidated/consolidated_log.csv', encoding='utf-8', quoting=csv.QUOTE_ALL)      
+print("Successfully consolidated the file")
