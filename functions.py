@@ -116,7 +116,6 @@ def fmeasure(matrix):
 
 
 def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, time, extra=[]):
-
     @timeout(time)
     def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
         clfier = get_classifier(classifier_name, extra)

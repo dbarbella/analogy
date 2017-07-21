@@ -21,11 +21,12 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     non_analogy_list = functions.get_list_re(negative_set)
     # Randomly divide them into a training set and a test set
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
-
+    
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
-    score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra)
+    
+    score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, 1, extra)
 
     # Store results
     algoTime = time.time()-beginTimer
@@ -36,4 +37,4 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
 if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
-    analogy_trial(positive_set, negative_set, .5, 'tfidf', 'neural')
+    analogy_trial(positive_set, negative_set, .5, 'hash', 'neural')
