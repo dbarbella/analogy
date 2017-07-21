@@ -25,22 +25,25 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
+    try:
+        score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, 1, extra)
+    except:
+        print("Classifier timeout.")
+        print("Output error in log.")
+        algoTime = time.time()-beginTimer
+        runTime = time.time()-start
+        outputData = [positive_set, negative_set, representation, classifier, extra, "", "", "", "", "", "", "", "Algorithm Timeout"]
+        outputResults(outputData)
+    else:
+        algoTime = time.time()-beginTimer
+        runTime = time.time()-start
+        outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
     
-    score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, 1, extra)
-
     # Store results
-    algoTime = time.time()-beginTimer
-    runTime = time.time()-start
-    outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
     outputResults(outputData)
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
     analogy_trial(positive_set, negative_set, .5, 'hash', 'neural')
-=======
-    positive_set = 'C:\\Projects\\analogy\\test_extractions\\bc_samples.txt'
-    negative_set = 'C:\\Projects\\analogy\\test_extractions\\random_grounds.txt'
-    analogy_trial(positive_set, negative_set, .5, 'hash', 'svm', 'linear')
->>>>>>> fd2b804428b03bb72415b30156810240831ea2cd
+
