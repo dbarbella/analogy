@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # This produces a corpus made up of all of the sentences in the brown corpus that are not
 # included in verified_analogies.csv or verified_non_analogies.csv
 
@@ -13,7 +12,7 @@ from nltk.corpus import brown
 import re
 # What we want to create is a file of all of the brown sentences. As we go, we should
 # not include the ones that are in our labeled set.
-# The code we have that names sentences from that corpus is at wordhunt.py 
+# The code we have that names sentences from that corpus is at wordhunt.py
 
 
 # Extract the exact sentences and write them to csv and txt files.
@@ -43,7 +42,7 @@ def make_unlabeled_set(labeled_set_files, storage_file):
                 sent_index += 1
             para_index += 1
             sent_index = 1
-    
+
 =======
 # This produces a corpus made up of all of the sentences in the brown corpus that are not
 # included in verified_analogies.csv or verified_non_analogies.csv
@@ -59,7 +58,7 @@ from nltk.corpus import brown
 import re
 # What we want to create is a file of all of the brown sentences. As we go, we should
 # not include the ones that are in our labeled set.
-# The code we have that names sentences from that corpus is at wordhunt.py 
+# The code we have that names sentences from that corpus is at wordhunt.py
 
 
 # Extract the exact sentences and write them to csv and txt files.
@@ -89,6 +88,6 @@ def make_unlabeled_set(labeled_set_files, storage_file):
                 sent_index += 1
             para_index += 1
             sent_index = 1
-    
+
 >>>>>>> 4657b10db19ea4bc1a12a2cac842e4988eb39836
 make_unlabeled_set(["verified_analogies.csv", "verified_non_analogies.csv"],"dmb_open_test.csv")
