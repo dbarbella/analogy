@@ -5,9 +5,51 @@
  [  0 290]]","0","0","0"
 "Tue Jul 18 16:12:34 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","neural","[]","0.659340659341","[[  0 155]
  [  0 300]]","0","0","0","0.11871790885925293","0.10758829116821289",""
-"Tue Jul 18 15:51:43 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","svm","[]","0.643956043956","[[  0 162]
- [  0 293]]","0","0","0","0.10377740859985352","0.09217071533203125",""
 "Tue Jul 18 15:44:04 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","svm","[]","0.650549450549","[[  0 159]
  [  0 296]]","0","0","0","0.10326886177062988"
 "Tue Jul 18 15:57:21 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","svm","[]","0.663736263736","[[  0 153]
  [  0 302]]","0","0","0","0.10367822647094727","0.09198546409606934",""
+ "Wed_Jul_19_142052_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","neural","[]","0.641758241758","[[ 16 149]
+ [ 14 276]]","0.0969696969697","0.533333333333","0.164102564103","2.9455037117004395","2.9337575435638428",""
+"Wed_Jul_19_160341_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","svm","nusvc","0.610989010989","[[ 27 130]
+ [ 47 251]]","0.171974522293","0.364864864865","0.233766233766","0.1008443832397461","0.08887314796447754",""
+"Wed_Jul_19_142541_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","neural","[]","0.650549450549","[[  0 159]
+ [  0 296]]","0","0","0","160.47285556793213","160.46046447753906","never finished running"
+"Wed_Jul_19_155654_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","max_ent","[]","0.696703296703","[[  3 133]
+ [  5 314]]","0.0220588235294","0.375","0.0416666666667","0.8211541175842285","0.8095667362213135",""
+"Wed_Jul_19_160327_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","svm","linear","0.648351648352","[[ 21 135]
+ [ 25 274]]","0.134615384615","0.45652173913","0.207920792079","0.0798788070678711","0.06787848472595215",""
+"Wed_Jul_19_141757_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","neural","[]","0.626373626374","[[  0 170]
+ [  0 285]]","0","0","0","0.12919306755065918","0.11790871620178223",""
+"Wed_Jul_19_142115_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","neural","[]","0.637362637363","[[ 19 142]
+ [ 23 271]]","0.11801242236","0.452380952381","0.187192118227","2.251852512359619","2.240164279937744",""
+"Wed_Jul_19_155602_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","max_ent","[]","0.650549450549","[[ 26 127]
+ [ 32 270]]","0.169934640523","0.448275862069","0.24644549763","0.04904460906982422","0.03730297088623047",""
+"Wed_Jul_19_155911_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","naive","[]","0.613186813187","[[  0 176]
+ [  0 279]]","0","0","0","0.04773211479187012","0.03581595420837402",""
+"Wed_Jul_19_160316_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","svm","linear","0.63956043956","[[ 24 130]
+ [ 34 267]]","0.155844155844","0.413793103448","0.22641509434","0.05021166801452637","0.038277626037597656",""
+"Wed_Jul_19_155622_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","max_ent","[]","0.661538461538","[[ 17 141]
+ [ 13 284]]","0.107594936709","0.566666666667","0.18085106383","0.049669504165649414","0.03803133964538574",""
+"Wed_Jul_19_160136_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","svm","nusvc","0.617582417582","[[ 48 109]
+ [ 65 233]]","0.305732484076","0.424778761062","0.355555555556","0.09264612197875977","0.08100581169128418",""
+"Wed_Jul_19_155930_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","naive","[]","0.628571428571","[[  0 169]
+ [  0 286]]","0","0","0","0.2990391254425049","0.28699183464050293",""
+"Wed_Jul_19_143719_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","max_ent","[]","0.646153846154","[[  0 161]
+ [  0 294]]","0","0","0","0.04915618896484375","0.037291526794433594",""
+"Wed_Jul_19_160257_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","svm","svc","0.657142857143","[[  0 156]
+ [  0 299]]","0","0","0","0.10731625556945801","0.09543013572692871",""
+"Wed_Jul_19_160120_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","svm","linear","0.635164835165","[[ 12 140]
+ [ 26 277]]","0.0789473684211","0.315789473684","0.126315789474","0.05068016052246094","0.03859686851501465",""
+"Wed_Jul_19_11:09:33_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","neural","[]","0.646153846154","[[ 14 148]
+ [ 13 280]]","0.0864197530864","0.518518518519","0.148148148148","1.2409563064575195","1.2279858589172363",""
+"Wed_Jul_19_144043_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","neural","[]","0.637362637363","[[ 25 134]
+ [ 31 265]]","0.157232704403","0.446428571429","0.232558139535","4085.727862596512","4085.71622467041",""
+"Wed_Jul_19_160046_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","svm","svc","0.683516483516","[[  0 144]
+ [  0 311]]","0","0","0","0.11521458625793457","0.10326766967773438",""
+"Wed_Jul_19_160351_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","svm","nusvc","0.483516483516","[[ 77  93]
+ [142 143]]","0.452941176471","0.351598173516","0.39588688946","0.0875999927520752","0.07571172714233398",""
+"Wed_Jul_19_160212_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","svm","svc","0.646153846154","[[  0 161]
+ [  0 294]]","0","0","0","0.10260319709777832","0.09098029136657715",""
+"Wed_Jul_19_155922_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","naive","[]","0.643956043956","[[ 13 153]
+ [  9 280]]","0.078313253012","0.590909090909","0.13829787234","0.045013427734375","0.032974958419799805",""
