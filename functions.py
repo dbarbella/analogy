@@ -1,13 +1,16 @@
 import nltk
 from analogy_strings import analogy_string_list
 from sentence_parser import get_speech_tags
+from sentence_parser import get_pp
 from personal import root
+
 #------------------------
 from nltk.classify import SklearnClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
+from sklearn.feature_extraction import DictVectorizer
 from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
 from sklearn.svm import NuSVC
@@ -15,6 +18,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 import sys
+from timeout import timeout
 #------------------------
 import random
 import re
@@ -68,7 +72,7 @@ def preposition(train_data, test_data):
     pp_test_set = [get_pp(text) for text in test_data]
     dict_vect = DictVectorizer()
     PpTrans = dict_vect.fit_transform(pp_training_set)
-    PpTest = dict_vect.fit(pp_test_set)
+    PpTest = dict_vect.transform(pp_test_set)
     return (PpTrans, PpTest)
 
 # Transform the data so it can be represented using tfidf
@@ -112,19 +116,26 @@ def fmeasure(matrix):
             f_measure = (2 * precision * recall) / (precision + recall)
     return(precision, recall, f_measure)
 
-def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
-    clfier = get_classifier(classifier_name, extra)
-    train_set, test_set = get_data(train_data, test_data, representation, classifier_name)
 
-    learn_results = clfier.fit(train_set, train_labels)
-    score = learn_results.score(test_set, test_labels)
-    test_predict = learn_results.predict(test_set)
-    matrix = confusion_matrix(test_labels, test_predict, labels = ['YES', 'NO'])
-    precision, recall, f_measure = fmeasure(matrix)
+def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, time, extra=[]):
 
-    return (score, matrix, precision, recall, f_measure)
+    @timeout(time)
+    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
+        clfier = get_classifier(classifier_name, extra)
+        train_set, test_set = get_data(train_data, test_data, representation, classifier_name)
+
+        learn_results = clfier.fit(train_set, train_labels)
+        score = learn_results.score(test_set, test_labels)
+        test_predict = learn_results.predict(test_set)
+        matrix = confusion_matrix(test_labels, test_predict, labels = ['YES', 'NO'])
+        precision, recall, f_measure = fmeasure(matrix)
+
+        return (score, matrix, precision, recall, f_measure)
+    return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra)
 
 def get_classifier(name, extra):
+    # Return the classifier instance corresponding to the
+    # classifier name.
     if name == "svm":
         if extra == "" or extra == "svc":
             return SVC()
@@ -140,9 +151,11 @@ def get_classifier(name, extra):
         return LogisticRegression()
     else:
         sys.exit("This classifier has not been implemented yet.")
-        return None
+    return None
 
-def get_data(train_data, test_data, representation, classifier):
+def get_representation(train_data, test_data, representation, classifier):
+    # Return the representation of the data corresponding to the
+    # representation name.
     if representation == "tfidf":
         return tfidf(train_data, test_data)
     elif representation == "count":
@@ -152,6 +165,8 @@ def get_data(train_data, test_data, representation, classifier):
             return hashing(train_data, test_data, "naive")
         else:
             return hashing(train_data, test_data)
+    elif representation == "preposition":
+        return preposition(train_data, test_data)
     else:
         sys.exit("This representation has not been implemented yet.")
-        return None
+    return None
