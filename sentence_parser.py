@@ -1,9 +1,10 @@
 from analogy_strings import analogy_string_list
 from nltk.parse import stanford
 import nltk
+from nltk.tree import ParentedTree
 from nltk.stem.wordnet import WordNetLemmatizer
 
-#parser = StanfordParser()
+parser = stanford.StanfordParser()
 
 def is_noun(label):
     noun_labels = {"NN", "NNP", "NNPS", "NNS", "NP"}
@@ -19,7 +20,7 @@ def is_adj(label):
 
 def convert_to_base_form(word, type):
     # Convert a verb or adjective to its baseform.
-    # type should be either 'v' for verb or 'a' for adjective.
+    # type should be either 'v' for 'verb' or 'a' for 'adjective'.
     wnl = WordNetLemmatizer()
     return wnl.lemmatize(word, type)
 
@@ -63,7 +64,7 @@ def get_pp(text):
     # the text. If the phrase is preceded by a VP/ADJP, the result
     # include the verb/adj also. If the phrase is preceded by a NP,
     # the noun is not included.
-    result = []
+    phrases = {}
 
     for structure in parser.parse(nltk.word_tokenize(text)):
         tree = ParentedTree.convert(structure)
@@ -71,16 +72,18 @@ def get_pp(text):
             if subtree.label() == "PP":
                 preposition = subtree.leaves()[0]
                 left_sibling = subtree.left_sibling()
-                left_sibling_label = left_sibling.label()
-                if is_noun(left_sibling_label):
-                    result.append(preposition)
-                elif is_verb(left_sibling_label):
-                    verb = convert_to_base_form(" ".join(left_sibling.leaves()), 'v')
-                    word = verb + " " + preposition
-                    result.append(word)
-                elif is_adj(left_sibling_label):
-                    adj = convert_to_base_form(" ".join(left_sibling.leaves()), 'a')
-                    word = adj + " " + preposition
-                    result.append(word)
 
-    return {"prepositional_phrases" : result}
+                if left_sibling != None:
+                    left_sibling_label = left_sibling.label()
+                    if is_noun(left_sibling_label):
+                        phrases[preposition] = True
+                    elif is_verb(left_sibling_label):
+                        verb = convert_to_base_form(" ".join(left_sibling.leaves()), 'v')
+                        word = verb + " " + preposition
+                        phrases[word] = True
+                    elif is_adj(left_sibling_label):
+                        adj = convert_to_base_form(" ".join(left_sibling.leaves()), 'a')
+                        word = adj + " " + preposition
+                        phrases[word] = True
+
+    return phrases

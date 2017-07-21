@@ -35,6 +35,12 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     outputResults(outputData)
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
     analogy_trial(positive_set, negative_set, .5, 'hash', 'neural')
+=======
+    positive_set = 'C:\\Projects\\analogy\\test_extractions\\bc_samples.txt'
+    negative_set = 'C:\\Projects\\analogy\\test_extractions\\random_grounds.txt'
+    analogy_trial(positive_set, negative_set, .5, 'hash', 'svm', 'linear')
+>>>>>>> fd2b804428b03bb72415b30156810240831ea2cd
