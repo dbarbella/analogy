@@ -4,7 +4,7 @@ import sys
 from export_log import outputResults
 #--------
 import time
-
+import math
 
 # positive_set is the set of positive examples, as a file
 # negative_set is the set of negative examples, as a file
@@ -14,6 +14,7 @@ import time
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
 def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, timer=1000000000, extra={}, comment=""):
+
     start = time.time()
     # Read in the set of positive examples
     analogy_list = functions.get_list_re(positive_set)
@@ -46,4 +47,3 @@ if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
     analogy_trial(positive_set, negative_set, .5, 'hash', 'neural')
-
