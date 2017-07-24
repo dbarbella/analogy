@@ -13,7 +13,7 @@ import math
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, timer=1000000000, extra={}, comment=""):
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier,extra={}, timer=1000000000, comment=""):
 
     start = time.time()
     # Read in the set of positive examples
@@ -27,7 +27,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     beginTimer = time.time()
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
     try:
-        score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, timer, extra)
+        score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra, timer)
     except:
         print("Classifier timeout.")
         print("Output error in log.")
@@ -39,11 +39,11 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
         outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
-    
+
     # Store results
     outputResults(outputData)
 
 if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
-    analogy_trial(positive_set, negative_set, .5, 'hash', 'neural')
+    analogy_trial(positive_set, negative_set, .5, 'count', 'neural', {"stop_words":"english"})
