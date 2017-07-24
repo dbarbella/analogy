@@ -13,7 +13,7 @@ import time
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra={}, comment=""):
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, timer=1000000000, extra={}, comment=""):
     start = time.time()
     # Read in the set of positive examples
     analogy_list = functions.get_list_re(positive_set)
@@ -26,7 +26,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     beginTimer = time.time()
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
     try:
-        score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, 1, extra)
+        score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, timer, extra)
     except:
         print("Classifier timeout.")
         print("Output error in log.")
