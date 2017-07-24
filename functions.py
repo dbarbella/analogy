@@ -117,9 +117,9 @@ def fmeasure(matrix):
     return(precision, recall, f_measure)
 
 
-def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, time, extra=[]):
+def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, time, extra):
     @timeout(time)
-    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra=[]):
+    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
         clfier = get_classifier(classifier_name, extra)
         train_set, test_set = get_representation(train_data, test_data, representation, classifier_name)
 
@@ -133,14 +133,14 @@ def classify(train_data, train_labels, test_data, test_labels, classifier_name, 
     return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra)
 
 def get_classifier(name, extra):
-    # Return the classifier instance corresponding to the
+    # Return the classifier of the data corresponding to the
     # classifier name.
     if name == "svm":
-        if extra == "" or extra == "svc":
+        if extra["sub_class"] == "" or extra["sub_class"] == "svc":
             return SVC()
-        elif extra == "linear":
+        elif extra["sub_class"] == "linear":
             return LinearSVC()
-        elif extra == "nusvc":
+        elif extra["sub_class"] == "nusvc":
             return NuSVC()
     elif name == "neural":
         return MLPClassifier()
@@ -150,7 +150,7 @@ def get_classifier(name, extra):
         return LogisticRegression()
     else:
         sys.exit("This classifier has not been implemented yet.")
-    return None
+        return None
 
 def get_representation(train_data, test_data, representation, classifier):
     # Return the representation of the data corresponding to the
