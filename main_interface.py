@@ -13,7 +13,7 @@ import time
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra=[], comment=""):
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra={}, comment=""):
     start = time.time()
     # Read in the set of positive examples
     analogy_list = functions.get_list_re(positive_set)
