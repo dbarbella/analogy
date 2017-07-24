@@ -8,5 +8,5 @@ negative_set = 'test_extractions/bc_grounds.txt'
 for classifier in list_of_classifiers:
     for representation in list_of_representation:
         print("Classifier: " + classifier + "\tRepresentation: " + representation)
-        analogy_trial(positive_set, negative_set, .5, representation, classifier, {"sub_class":""}, 5)
+        analogy_trial(positive_set, negative_set, .5, representation, classifier, timer= 5)
         print()

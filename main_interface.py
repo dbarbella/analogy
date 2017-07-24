@@ -14,7 +14,7 @@ import math
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier,extra={}, timer=1000000000, comment=""):
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra={"sub_class":""}, timer=1000000000, comment=""):
 
     start = time.time()
     # Read in the set of positive examples

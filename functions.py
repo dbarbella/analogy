@@ -114,7 +114,7 @@ def fmeasure(matrix):
             f_measure = (2 * precision * recall) / (precision + recall)
     return(precision, recall, f_measure)
 
-def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra, time):
+def classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra={"sub_class":""}, time=1000000000):
     @timeout(time)
     def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
         clfier = get_classifier(classifier_name, extra)
