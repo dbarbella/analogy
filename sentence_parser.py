@@ -4,7 +4,7 @@ import nltk
 from nltk.tree import ParentedTree
 from nltk.stem.wordnet import WordNetLemmatizer
 
-parser = stanford.StanfordParser()
+#parser = stanford.StanfordParser()
 
 def is_noun(label):
     noun_labels = {"NN", "NNP", "NNPS", "NNS", "NP"}

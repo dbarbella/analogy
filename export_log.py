@@ -16,7 +16,7 @@ def outputResults(testOutput):
     testOutput.insert(0, currentTime)
      
     if os.path.exists("logs/exp_trials/"+OutputFileName+"_"+now+".csv"):
-        with open(OutputFileName+"_"+now+".csv", 'a') as resultsFile:
+        with open("logs/exp_trials/"+OutputFileName+"_"+now+".csv", 'a') as resultsFile:
             fileReader = csv.reader(resultsFile)
             fileWriter = csv.writer(resultsFile, quoting=csv.QUOTE_ALL)
             fileWriter.writerow(testOutput)

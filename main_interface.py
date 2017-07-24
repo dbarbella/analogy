@@ -4,6 +4,7 @@ import sys
 from export_log import outputResults
 #--------
 import time
+import timeout 
 import math
 
 # positive_set is the set of positive examples, as a file
@@ -28,7 +29,8 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
     try:
         score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra, timer)
-    except:
+    
+    except timeout.TimeoutError:
         print("Classifier timeout.")
         print("Output error in log.")
         algoTime = time.time()-beginTimer
@@ -42,6 +44,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
 
     # Store results
     outputResults(outputData)
+    print("Successfully logged trial results")
 
 if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'

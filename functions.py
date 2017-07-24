@@ -82,7 +82,7 @@ def tfidf(train_data, test_data, extra):
 
 # Transform the data so it can be represented using Count Vectorizer
 def countvect(train_data, test_data, extra):
-    CountVect = CountVectorizer(lowercase=False, stop_words=extra['stop_words'])
+    CountVect = CountVectorizer(lowercase=False)
     CountTrans = CountVect.fit_transform(train_data)
     CountTest = CountVect.transform(test_data)
     return(CountTrans, CountTest)
