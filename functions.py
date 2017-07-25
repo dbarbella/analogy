@@ -83,7 +83,6 @@ def tfidf(train_data, test_data, extra):
 # Transform the data so it can be represented using Count Vectorizer
 def countvect(train_data, test_data, extra):
     CountVect = CountVectorizer(lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'])
-    print(CountVect)
     CountTrans = CountVect.fit_transform(train_data)
     CountTest = CountVect.transform(test_data)
     return(CountTrans, CountTest)
@@ -138,7 +137,6 @@ def get_classifier(name, extra):
         elif extra["sub_class"] == "nusvc":
             return NuSVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'])
     elif name == "neural":
-        print(MLPClassifier(hidden_layer_sizes=extra['hidden_layer_sizes'], activation=extra['activation'], solver=extra['solver'], max_iter=extra['max_iter'], early_stopping=extra['early_stopping'], learning_rate=extra['learning_rate']))
         return MLPClassifier(hidden_layer_sizes=extra['hidden_layer_sizes'], activation=extra['activation'], solver=extra['solver'], max_iter=extra['max_iter'], early_stopping=extra['early_stopping'], learning_rate=extra['learning_rate'])
     elif name == "naive":
         return MultinomialNB(alpha=extra['alpha'])
