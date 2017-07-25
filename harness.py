@@ -1,5 +1,6 @@
 from main_interface import *
 from emails import send_email
+import traceback
 
 list_of_classifiers = ["naive", "svm", "max_ent", "neural"]
 list_of_representation = ["count", "tfidf", "hash"]
@@ -15,13 +16,14 @@ for classifier in list_of_classifiers:
         except:
             e = sys.exc_info()
             print(e)
-            errors.append((classifier, representation, e))
+            errors.append((classifier, representation, e, traceback.format_exc()))
             print()
+            
 
 if errors:
     error_msg = ''
     for error in errors:
-        error_msg = error_msg + '\nError in classifier: ' + str(error[0]) + '\nRepresentation: ' + str(error[1]) + '\nError msg: ' + str(error[2]) + "\n"
+        error_msg = error_msg + '\nError in classifier: ' + str(error[0]) + '\nRepresentation: ' + str(error[1]) + '\nError msg: ' + str(error[3]) + "\n"
     print("-----------------------------------------------------------------")
     print("Errors:\n")
     print(error_msg)

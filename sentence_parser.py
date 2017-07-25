@@ -21,7 +21,7 @@ def is_adj(label):
 
 def prepositions_set(filename):
     prepositions = set()
-    prepositions_file = open(root + filename, "r")
+    prepositions_file = open(filename, "r")
     for line in prepositions_file:
         prepositions.add(line[:-1])
     return prepositions
