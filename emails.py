@@ -16,6 +16,7 @@ def send_email(body, toaddr="nrback16@earlham.edu", subject="AUTOMATIC TESTING A
     text = msg.as_string()
     server.sendmail(fromaddr, toaddr, text)
     server.quit()
+    print('There was an error in automatic testing. Error email send to ' + toaddr )
     
 if __name__ == "__main__":
     send_email("Error 1999")

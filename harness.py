@@ -14,9 +14,12 @@ try:
             print()
 except:
     e = sys.exc_info()
-    error.append(e)
+    errors.append(e)
 
 if errors:
-    error_msg = '\n'.join(erros)
+    error_msg = ''
+    for error in errors:
+        error_msg = '\n' +str(error)
     send_email(error_msg)
+    
     
