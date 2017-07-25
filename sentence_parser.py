@@ -3,11 +3,13 @@ from nltk.parse import stanford
 import nltk
 from nltk.tree import ParentedTree
 from nltk.stem.wordnet import WordNetLemmatizer
+from personal import root
+import functions
 
-#parser = stanford.StanfordParser()
+noun_labels = {"NN", "NNP", "NNPS", "NNS", "NP"}
+adj_labels = {"JJ", "JJR", "JJS"}
 
 def is_noun(label):
-    noun_labels = {"NN", "NNP", "NNPS", "NNS", "NP"}
     return label in noun_labels
 
 def is_verb(label):
@@ -15,8 +17,19 @@ def is_verb(label):
     return label in verb_labels
 
 def is_adj(label):
-    adj_labels = {"JJ", "JJR", "JJS"}
     return label in adj_labels
+
+def prepositions_set(filename):
+    prepositions = set()
+    prepositions_file = open(root + filename, "r")
+    for line in prepositions_file:
+        prepositions.add(line[:-1])
+    return prepositions
+
+prepositions = prepositions_set("prepositions.txt")
+
+def is_conventional_preposition(word):
+    return word.lower() in prepositions
 
 def convert_to_base_form(word, type):
     # Convert a verb or adjective to its baseform.
@@ -49,6 +62,7 @@ def get_speech_tags(sentence):
 
 def get_subtree(sentence, tag):
     # Returns a list of subtrees of the sentence with the specified tag.
+    parser = stanford.StanfordParser()
     result = []
 
     for tree in parser.parse(sentence.split()):
@@ -59,7 +73,7 @@ def get_subtree(sentence, tag):
 
     return result
 
-def get_pp(text):
+def get_pp_old(text):
     # Return: a list of prepositions inside PP's in
     # the text. If the phrase is preceded by a VP/ADJP, the result
     # include the verb/adj also. If the phrase is preceded by a NP,
@@ -85,5 +99,29 @@ def get_pp(text):
                         adj = convert_to_base_form(" ".join(left_sibling.leaves()), 'a')
                         word = adj + " " + preposition
                         phrases[word] = True
+
+    return phrases
+
+def get_pp(text):
+    # Return: a list of prepositions inside PP's in
+    # the text. If the phrase is preceded by a VP/ADJP, the result
+    # include the verb/adj also. If the phrase is preceded by a NP,
+    # the noun is not included.
+    parser = stanford.StanfordParser()
+    phrases = {}
+
+    for structure in parser.parse(nltk.word_tokenize(text)):
+        tree = ParentedTree.convert(structure)
+        for subtree in tree.subtrees():
+            if subtree.label() == "PP":
+                preposition = subtree.leaves()[0]       # first word of the prep phrase
+                left_sibling = subtree.left_sibling()
+                if left_sibling != None:
+                    left_sibling_label = left_sibling.label()
+                    if is_adj(left_sibling_label):
+                        adj = " ".join(left_sibling.leaves())
+                        preposition = adj + " " + preposition
+                if not is_conventional_preposition(preposition):
+                    phrases[preposition] = True
 
     return phrases
