@@ -75,14 +75,14 @@ def preposition(train_data, test_data):
 
 # Transform the data so it can be represented using tfidf
 def tfidf(train_data, test_data, extra):
-    TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False)
+    TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'])
     TfidfTrans = TfidfVect.fit_transform(train_data)
     TfidfTrans_test = TfidfVect.transform(test_data)
     return(TfidfTrans, TfidfTrans_test)
 
 # Transform the data so it can be represented using Count Vectorizer
 def countvect(train_data, test_data, extra):
-    CountVect = CountVectorizer(lowercase=False)
+    CountVect = CountVectorizer(lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'])
     CountTrans = CountVect.fit_transform(train_data)
     CountTest = CountVect.transform(test_data)
     return(CountTrans, CountTest)
@@ -90,9 +90,9 @@ def countvect(train_data, test_data, extra):
 # Transform the data so it can be represented using Hashing Vectorizer
 def hashing(train_data, test_data,extra, classifier=[]):
     if classifier == "naive":
-        HashVect = HashingVectorizer(lowercase=False, non_negative=True)
+        HashVect = HashingVectorizer(lowercase=False, non_negative=True, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'])
     else:
-         HashVect = HashingVectorizer(lowercase=False)
+         HashVect = HashingVectorizer(lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'])
     HashTrans = HashVect.fit_transform(train_data)
     HashTest = HashVect.transform(test_data)
     return(HashTrans, HashTest)
@@ -131,17 +131,17 @@ def classify(train_data, train_labels, test_data, test_labels, classifier_name, 
 def get_classifier(name, extra):
     if name == "svm":
         if extra["sub_class"] == "" or extra["sub_class"] == "svc":
-            return SVC()
+            return SVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'], )
         elif extra["sub_class"] == "linear":
-            return LinearSVC()
+            return LinearSVC(C=extra['C'])
         elif extra["sub_class"] == "nusvc":
-            return NuSVC()
+            return NuSVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'])
     elif name == "neural":
-        return MLPClassifier()
+        return MLPClassifier(hidden_layer_sizes=extra['hidden_layer_sizes'], activation=extra['activation'], solver=extra['solver'], max_iter=extra['max_iter'], early_stopping=extra['early_stopping'], learning_rate=extra['learning_rate'])
     elif name == "naive":
-        return MultinomialNB()
+        return MultinomialNB(alpha=extra['alpha'])
     elif name == "max_ent":
-        return LogisticRegression()
+        return LogisticRegression(C=extra['C'], max_iter=extra['max_iter_log'], solver=extra['solver_log'])
     else:
         sys.exit("This classifier has not been implemented yet.")
         return None
@@ -159,3 +159,28 @@ def get_representation(train_data, test_data, representation, classifier, extra)
     else:
         sys.exit("This representation has not been implemented yet.")
         return None
+
+def set_default(extra, key, value):
+    try:
+        if extra[key] == "":
+            extra[key] = value
+    except KeyError:
+        extra[key] = value
+        
+def set_extra_new(extra):
+    set_default(extra,'stop_words', None)
+    set_default(extra,'hidden_layer_sizes', 100)
+    set_default(extra,'activation', 'relu')
+    set_default(extra,'max_df', 1.0)
+    set_default(extra,'norm', 'l2')
+    set_default(extra,'alpha', 1.0)
+    set_default(extra,'max_iter', 200)
+    set_default(extra,'max_iter_log', 100)
+    set_default(extra,'max_iter_linear', 1000)
+    set_default(extra,'max_iter_svc', -1)
+    set_default(extra,'solver', 'adam')
+    set_default(extra,'solver_log', 'liblinear')
+    set_default(extra,'early_stopping', False)
+    set_default(extra,'C', 1.0)
+    set_default(extra,'learning_rate','constant')
+    return(extra)
