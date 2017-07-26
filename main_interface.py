@@ -35,13 +35,13 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
         print("Output error in log.")
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
-        outputData = [positive_set, negative_set, representation, classifier, extra, "", "", "", "", "", "", "", "Algorithm Timeout"]
+        outputData = [positive_set, negative_set, percent_test, representation, classifier, extra, "", "", "", "", "", "", "", "Algorithm Timeout"]
         outputResults(outputData)
     
     else:
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
-        outputData = [positive_set, negative_set, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
+        outputData = [positive_set, negative_set, percent_test, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
 
     # Store results
     outputResults(outputData)
