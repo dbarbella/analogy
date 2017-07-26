@@ -1,0 +1,3 @@
+"datetime","positive_set","negative_set","representation","classifier","extra","score","matrix","precision","recall","f_measure","Runtime(seconds)","Algorithm_time(seconds)","Comments"
+"Mon Jul 24 14:55:20 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","naive","{}","0.659340659341","[[ 20 136]
+ [ 19 280]]","0.128205128205","0.512820512821","0.205128205128","0.04667091369628906","0.03305554389953613",""
