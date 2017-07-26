@@ -26,7 +26,7 @@ def prepositions_set(filename):
         prepositions.add(line[:-1])
     return prepositions
 
-prepositions = prepositions_set("prepositions.txt")
+# prepositions = prepositions_set("prepositions.txt")
 
 def is_conventional_preposition(word):
     return word.lower() in prepositions
