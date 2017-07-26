@@ -23,6 +23,6 @@ def outputResults(testOutput):
     else:
         with open("logs/exp_trials/"+OutputFileName+"_"+now+".csv", 'w') as resultsFile:
             fileWriter = csv.writer(resultsFile, quoting=csv.QUOTE_ALL)
-            fileWriter.writerow(["datetime", "positive_set", "negative_set", "representation", "classifier", "extra", "score", "matrix", "precision", "recall", "f_measure", "Runtime(seconds)", "Algorithm_time(seconds)", "Comments"])
+            fileWriter.writerow(["datetime", "positive_set", "negative_set", "percent_test", "representation", "classifier", "extra", "score", "matrix", "precision", "recall", "f_measure", "Runtime(seconds)", "Algorithm_time(seconds)", "Comments"])
             fileWriter.writerow(testOutput)
 
