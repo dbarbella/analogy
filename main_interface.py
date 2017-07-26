@@ -14,7 +14,7 @@ import math
 # representation is the representation to use, as a string
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
-def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra={}, timer=1000000000, comment=""):
+def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra={"sub_class":""}, timer=1000000000, comment=""):
 
     start = time.time()
     # Read in the set of positive examples
@@ -23,13 +23,15 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     non_analogy_list = functions.get_list_re(negative_set)
     # Randomly divide them into a training set and a test set
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
-    extra = functions.set_extra_new(extra)
+    extra = functions.set_extra(extra)
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
+    # Make sure the classifier runs within a set time
     try:
         score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra, timer)
-    
+        
+    # catch the timeout error
     except timeout.TimeoutError:
         print("Classifier timeout.")
         print("Output error in log.")
@@ -50,4 +52,4 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
 if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
-    analogy_trial(positive_set, negative_set, .5, 'count', 'neural', {"stop_words":"english"})
+    analogy_trial(positive_set, negative_set, .5, 'count', 'neural', {"sub_class":"nusvc", "stop_words":'english', "max_df":0.8, "activation":"tanh", "learning_rate":"adaptive"})

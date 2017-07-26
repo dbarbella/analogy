@@ -1,0 +1,25 @@
+"datetime","positive_set","negative_set","representation","classifier","extra","score","matrix","precision","recall","f_measure","Runtime(seconds)","Algorithm_time(seconds)","Comments"
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","naive","{'sub_class': ''}","0.637362637363","[[ 13 154]
+ [ 11 277]]","0.0778443113772","0.541666666667","0.13612565445","0.044480323791503906","0.03314924240112305",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","naive","{'sub_class': ''}","0.650549450549","[[  0 159]
+ [  0 296]]","0","0","0","0.044599056243896484","0.034155845642089844",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","naive","{'sub_class': ''}","0.652747252747","[[  0 158]
+ [  0 297]]","0","0","0","0.2745957374572754","0.2640879154205322",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","svm","{'sub_class': ''}","0.683516483516","[[  0 144]
+ [  0 311]]","0","0","0","0.10218238830566406","0.09148478507995605",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","svm","{'sub_class': ''}","0.652747252747","[[  0 158]
+ [  0 297]]","0","0","0","0.10020303726196289","0.08957886695861816",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","svm","{'sub_class': ''}","0.648351648352","[[  0 160]
+ [  0 295]]","0","0","0","0.09873080253601074","0.08823204040527344",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","max_ent","{'sub_class': ''}","0.635164835165","[[ 26 135]
+ [ 31 263]]","0.16149068323","0.456140350877","0.238532110092","0.045790910720825195","0.03533196449279785",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","max_ent","{'sub_class': ''}","0.648351648352","[[  0 160]
+ [  0 295]]","0","0","0","0.0453343391418457","0.03475761413574219",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","max_ent","{'sub_class': ''}","0.703296703297","[[ 10 127]
+ [  8 310]]","0.0729927007299","0.555555555556","0.129032258065","0.7241780757904053","0.7137305736541748",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","neural","{'sub_class': ''}","0.632967032967","[[ 24 141]
+ [ 26 264]]","0.145454545455","0.48","0.223255813953","1.702016830444336","1.6913247108459473",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","neural","{'sub_class': ''}","0.652747252747","[[ 19 133]
+ [ 25 278]]","0.125","0.431818181818","0.19387755102","1.0681052207946777","1.0543224811553955",""
+"Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","neural","{'sub_class': ''}","","","","","","","","Algorithm Timeout"
+"Mon Jul 24 15:32:16 2017","Mon Jul 24 15:32:16 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","neural","{'sub_class': ''}","","","","","","","","Algorithm Timeout"
