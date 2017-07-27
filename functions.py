@@ -11,7 +11,6 @@ from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
 from sklearn.svm import NuSVC
-
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
@@ -50,6 +49,7 @@ def get_list_re(filename):
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test):
     num_samples = len(samples)
+    random.seed(1234)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
     # create a train set and a test/development set
@@ -90,9 +90,9 @@ def countvect(train_data, test_data, extra):
 # Transform the data so it can be represented using Hashing Vectorizer
 def hashing(train_data, test_data,extra, classifier=[]):
     if classifier == "naive":
-        HashVect = HashingVectorizer(lowercase=False, non_negative=True, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'])
+        HashVect = HashingVectorizer(lowercase=False, non_negative=True, stop_words=extra['stop_words'],norm=extra['norm'])
     else:
-         HashVect = HashingVectorizer(lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'])
+         HashVect = HashingVectorizer(lowercase=False, stop_words=extra['stop_words'], norm=extra['norm'])
     HashTrans = HashVect.fit_transform(train_data)
     HashTest = HashVect.transform(test_data)
     return(HashTrans, HashTest)
@@ -166,14 +166,15 @@ def set_default(extra, key, value):
             extra[key] = value
     except KeyError:
         extra[key] = value
-        
-def set_extra_new(extra):
+
+def set_extra(extra):
     set_default(extra,'stop_words', None)
     set_default(extra,'hidden_layer_sizes', 100)
     set_default(extra,'activation', 'relu')
     set_default(extra,'max_df', 1.0)
     set_default(extra,'norm', 'l2')
     set_default(extra,'alpha', 1.0)
+    set_default(extra,'kernel', 'rbf')
     set_default(extra,'max_iter', 200)
     set_default(extra,'max_iter_log', 100)
     set_default(extra,'max_iter_linear', 1000)

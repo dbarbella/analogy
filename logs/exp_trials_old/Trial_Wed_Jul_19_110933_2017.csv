@@ -1,0 +1,3 @@
+"datetime","positive_set","negative_set","representation","classifier","extra","score","matrix","precision","recall","f_measure","Runtime(seconds)","Algorithm_time(seconds)","Comments"
+"Wed_Jul_19_11:09:33_2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","neural","[]","0.646153846154","[[ 14 148]
+ [ 13 280]]","0.0864197530864","0.518518518519","0.148148148148","1.2409563064575195","1.2279858589172363",""
