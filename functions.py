@@ -49,6 +49,7 @@ def get_list_re(filename):
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test):
     num_samples = len(samples)
+    random.seed(1234)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
     # create a train set and a test/development set
@@ -165,7 +166,7 @@ def set_default(extra, key, value):
             extra[key] = value
     except KeyError:
         extra[key] = value
-        
+
 def set_extra(extra):
     set_default(extra,'stop_words', None)
     set_default(extra,'hidden_layer_sizes', 100)
@@ -184,5 +185,3 @@ def set_extra(extra):
     set_default(extra,'C', 1.0)
     set_default(extra,'learning_rate','constant')
     return(extra)
-        
-        
