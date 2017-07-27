@@ -9,6 +9,12 @@ analogy_svms_w_dataoutput.py
 
 boyer_moore.py
 	- Contains functions that search for sets of words in larger texts
+	
+emails.py
+	- Script used to send error reports from harness.py to specified emails 
+	
+harness.py
+	-Runs automatic tests with combinations of classifier and representation
 
 import_susd.py
 	- Stub attempt to import SUSD as an NLTK corpus
