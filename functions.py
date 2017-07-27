@@ -47,9 +47,10 @@ def get_list_re(filename):
     return list
 
 # preprocess the data so it can be used by the classifiers
-def preprocess(samples, percent_test):
+def preprocess(samples, percent_test, caller=''):
     num_samples = len(samples)
-    random.seed(1234)
+    if caller == 'test_main_interface_output': 
+        random.seed(1234)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
     # create a train set and a test/development set

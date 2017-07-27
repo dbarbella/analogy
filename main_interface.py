@@ -6,6 +6,7 @@ from export_log import outputResults
 import time
 import timeout 
 import math
+import inspect
 
 # positive_set is the set of positive examples, as a file
 # negative_set is the set of negative examples, as a file
@@ -15,7 +16,7 @@ import math
 # classifier is the classifier to use, as a string
 # extra is other information that is used to specify the behavior of the classifier
 def analogy_trial(positive_set, negative_set, percent_test, representation, classifier, extra={"sub_class":""}, timer=1000000000, comment=""):
-
+    caller = inspect.stack()[1][3]
     start = time.time()
     # Read in the set of positive examples
     analogy_list = functions.get_list_re(positive_set)
@@ -26,7 +27,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     extra = functions.set_extra(extra)
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
-    train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test)
+    train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test, caller)
     # Make sure the classifier runs within a set time
     try:
         score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra, timer)
@@ -44,12 +45,18 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
         outputData = [positive_set, negative_set, percent_test, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
-
+    
     # Store results
     outputResults(outputData)
-    print("Successfully logged trial results")
+    if caller != "test_main_interface_output":
+        print("Successfully logged trial results")
+    outputData = outputData[7:-3]
+    outputData[1] = outputData[1].tolist()
+    return outputData
 
 if __name__ == '__main__':
     positive_set = 'test_extractions/bc_samples.txt'
     negative_set = 'test_extractions/bc_grounds.txt'
-    analogy_trial(positive_set, negative_set, .5, 'count', 'neural', {"sub_class":"nusvc", "stop_words":'english', "max_df":0.8, "activation":"tanh", "learning_rate":"adaptive"})
+    #analogy_trial(positive_set, negative_set, .5, 'count', 'neural', {"sub_class":"nusvc", "stop_words":'english', "max_df":0.8, "activation":"tanh", "learning_rate":"adaptive"})
+    analogy_trial(positive_set, negative_set, .5, "count", "naive", {"sub_class":""}, timer= 5)
+    
