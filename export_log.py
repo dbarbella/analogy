@@ -13,7 +13,7 @@ now  = now.replace(":", "")
 #output results to .csv file
 def outputResults(testOutput):
     
-    testOutput.insert(0, currentTime)
+    #testOutput.insert(0, currentTime)
      
     if os.path.exists("logs/exp_trials/"+OutputFileName+"_"+now+".csv"):
         with open("logs/exp_trials/"+OutputFileName+"_"+now+".csv", 'a') as resultsFile:
