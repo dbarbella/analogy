@@ -44,7 +44,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
         outputData = [currentTime, positive_set, negative_set, percent_test, representation, classifier, extra, "", "", "", "", "", "", "", "Algorithm Timeout"]
-        outputResults(outputData)
+        
     
     else:
         algoTime = time.time()-beginTimer
