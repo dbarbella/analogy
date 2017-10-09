@@ -7,7 +7,7 @@ list_of_representation = ["count", "tfidf", "hash"]
 list_of_extras = [{"sub_class":""}, {"sub_class":"linear", "stop_words":'english', "max_df":0.8, "activation":"tanh", "learning_rate":"adaptive"}]
 positive_set = 'test_extractions/bc_samples.txt'
 negative_set = 'test_extractions/bc_grounds.txt'
-trial_info = 'Positive Analogy File: ' + positive_set + '\nNegative Analogy File: '+ negative_set + '\nExtra: ' + str(extras) + '\n'
+trial_info = 'Positive Analogy File: ' + positive_set + '\nNegative Analogy File: '+ negative_set + '\nExtra: ' + str(list_of_extras) + '\n'
 errors = []
 
 for classifier in list_of_classifiers:
