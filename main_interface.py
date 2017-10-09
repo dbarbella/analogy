@@ -27,6 +27,11 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     extra = functions.set_extra(extra)
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
+    now = time.strftime("%c")
+    currentTime = now
+    now  = now.replace(" ", "_")
+    now  = now.replace(":", "")
+    
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test, caller)
     # Make sure the classifier runs within a set time
     try:
@@ -38,13 +43,13 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
         print("Output error in log.")
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
-        outputData = [positive_set, negative_set, percent_test, representation, classifier, extra, "", "", "", "", "", "", "", "Algorithm Timeout"]
+        outputData = [currentTime, positive_set, negative_set, percent_test, representation, classifier, extra, "", "", "", "", "", "", "", "Algorithm Timeout"]
         outputResults(outputData)
     
     else:
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
-        outputData = [beginTimer, positive_set, negative_set, percent_test, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
+        outputData = [currentTime, positive_set, negative_set, percent_test, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
     
     # Store results
     outputResults(outputData)
