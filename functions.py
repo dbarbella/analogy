@@ -186,3 +186,22 @@ def set_extra(extra):
     set_default(extra,'C', 1.0)
     set_default(extra,'learning_rate','constant')
     return(extra)
+
+
+def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra={"sub_class":""}, time=1000000000):
+    @timeout(time)
+    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
+        clfier = get_classifier(classifier_name, extra)
+        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra)
+        
+        selector = SelectPercentile(f_classif, percentile=10)
+        estimators = [('reduce_dim', selector), ('clf', clfier)]
+        pipe = Pipeline(estimators)
+        
+        learn_results = pipe.fit(train_set, train_labels)
+        score = learn_results.score(test_set, test_labels)
+        test_predict = learn_results.predict(test_set)
+        matrix = confusion_matrix(test_labels, test_predict, labels = ['YES', 'NO'])
+        precision, recall, f_measure = fmeasure(matrix)
+        return (score, matrix, precision, recall, f_measure)
+    return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra)
