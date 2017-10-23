@@ -20,6 +20,9 @@ from timeout import timeout
 import random
 import re
 from boyer_moore import find_boyer_moore
+#-------------------------
+from sklearn.pipeline import Pipeline
+from sklearn.feature_selection import SelectPercentile, f_classif
 
 def get_list(filename):
     # Returns all training data as a list
