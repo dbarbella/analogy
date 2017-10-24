@@ -1,0 +1,1204 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.0915.2112                               -->
+<workbook original-version='10.4' source-build='10.4.0 (10400.17.0915.2112)' source-platform='win' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='training_sets' inline='true' name='federated.1k1vskc1sjzl6j1187z411ijcbsk' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='training_sets' name='textscan.1hxlclb1sbeiix1bbqgp61fo27n1'>
+            <connection class='textscan' directory='C:/Users/Vuong Khuat/Desktop' filename='training_sets.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.500684' measure-ordering='alphabetic' measure-percentage='0.499316' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='consolidated_log' inline='true' name='federated.14kkov71pf5bn91gy67050ozlhpd' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='consolidated_log' name='textscan.0k0upz709a4jxo14du7rj0gmlaz0'>
+            <connection class='textscan' directory='C:/Projects/analogy/analogy/logs/consolidated' filename='consolidated_log.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='training_examples' name='textscan.0vltuxu0bkgc9v12ufxq21ji1o6j'>
+            <connection class='textscan' directory='C:/Users/Vuong Khuat/Desktop' filename='training_examples.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0k0upz709a4jxo14du7rj0gmlaz0' name='consolidated_log.csv' table='[consolidated_log#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='datetime' ordinal='0' />
+            <column datatype='string' name='positive_set' ordinal='1' />
+            <column datatype='string' name='negative_set' ordinal='2' />
+            <column datatype='string' name='representation' ordinal='3' />
+            <column datatype='string' name='classifier' ordinal='4' />
+            <column datatype='string' name='extra' ordinal='5' />
+            <column datatype='real' name='score' ordinal='6' />
+            <column datatype='string' name='matrix' ordinal='7' />
+            <column datatype='real' name='precision' ordinal='8' />
+            <column datatype='real' name='recall' ordinal='9' />
+            <column datatype='real' name='f_measure' ordinal='10' />
+            <column datatype='real' name='Runtime(seconds)' ordinal='11' />
+            <column datatype='real' name='Algorithm_time(seconds)' ordinal='12' />
+            <column datatype='string' name='Comments' ordinal='13' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>datetime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[datetime]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>datetime</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>positive_set</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[positive_set]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>positive_set</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>negative_set</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[negative_set]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>negative_set</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>representation</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[representation]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>representation</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>classifier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[classifier]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>classifier</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>extra</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[extra]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>extra</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[score]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>score</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>matrix</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[matrix]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>matrix</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>precision</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[precision]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>precision</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recall</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[recall]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>recall</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>f_measure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[f_measure]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>f_measure</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Runtime(seconds)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Runtime(seconds)]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>Runtime(seconds)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Algorithm_time(seconds)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Algorithm_time(seconds)]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>Algorithm_time(seconds)</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comments</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Comments]</local-name>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias>Comments</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[consolidated_log.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Algorithm time(seconds)' datatype='real' name='[Algorithm_time(seconds)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Classifier' datatype='string' name='[classifier]' role='dimension' type='nominal' />
+      <column caption='Datetime' datatype='string' hidden='true' name='[datetime]' role='dimension' type='nominal' />
+      <column caption='Extra' datatype='string' hidden='true' name='[extra]' role='dimension' type='nominal' />
+      <column caption='F Measure' datatype='real' name='[f_measure]' role='measure' type='quantitative' />
+      <column caption='Matrix' datatype='string' name='[matrix]' role='dimension' type='nominal' />
+      <column caption='Negative Set' datatype='string' name='[negative_set]' role='dimension' type='nominal' />
+      <column caption='Positive Set' datatype='string' name='[positive_set]' role='dimension' type='nominal' />
+      <column caption='Precision' datatype='real' name='[precision]' role='measure' type='quantitative' />
+      <column caption='Recall' datatype='real' name='[recall]' role='measure' type='quantitative' />
+      <column caption='Representation' datatype='string' name='[representation]' role='dimension' type='nominal' />
+      <column caption='Score' datatype='real' name='[score]' role='measure' type='quantitative' />
+      <column-instance column='[Algorithm_time(seconds)]' derivation='Avg' name='[avg:Algorithm_time(seconds):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[precision]' derivation='Avg' name='[avg:precision:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[recall]' derivation='Avg' name='[avg:recall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[score]' derivation='Avg' name='[avg:score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Algorithm_time(seconds)]' derivation='Sum' name='[sum:Algorithm_time(seconds):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[f_measure]' derivation='Sum' name='[sum:f_measure:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[precision]' derivation='Sum' name='[sum:precision:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[recall]' derivation='Sum' name='[sum:recall:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[score]' derivation='Sum' name='[sum:score:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.485636' measure-ordering='alphabetic' measure-percentage='0.514364' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:Algorithm_time(seconds):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[sum:Algorithm_time(seconds):qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[sum:recall:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[sum:f_measure:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[sum:precision:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:recall:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:score:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[sum:score:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:precision:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='training_examples' inline='true' name='federated.0r9i14x08ldylh1b1u04r06276ci' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='training_examples' name='textscan.1yfkx8502juxt61fpcx0z1nvsrar'>
+            <connection class='textscan' directory='C:/Users/Vuong Khuat/Desktop' filename='training_examples.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1yfkx8502juxt61fpcx0z1nvsrar' name='training_examples.csv' table='[training_examples#csv]' type='table'>
+          <columns character-set='UTF-8' header='no' locale='en_US' separator='&#9;'>
+            <column datatype='string' name='F1' ordinal='0' />
+            <column datatype='string' name='F2' ordinal='1' />
+            <column datatype='string' name='F3' ordinal='2' />
+            <column datatype='string' name='F4' ordinal='3' />
+            <column datatype='string' name='F5' ordinal='4' />
+            <column datatype='string' name='F6' ordinal='5' />
+            <column datatype='string' name='F7' ordinal='6' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F2</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F2]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F2</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F3</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F3]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F4</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F4]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F4</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F5]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F5</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F6</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F6]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F6</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F7</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F7]</local-name>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias>F7</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[training_examples.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;\\t&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;false&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column aggregation='CountD' datatype='string' name='[F1]' role='dimension' type='nominal' />
+      <column aggregation='CountD' datatype='string' name='[F2]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.55814' measure-ordering='alphabetic' measure-percentage='0.44186' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Classifier Results Analysis</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='consolidated_log' name='federated.14kkov71pf5bn91gy67050ozlhpd' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14kkov71pf5bn91gy67050ozlhpd'>
+            <column caption='Algorithm time(seconds)' datatype='real' name='[Algorithm_time(seconds)]' role='measure' type='quantitative' />
+            <column-instance column='[Algorithm_time(seconds)]' derivation='Avg' name='[avg:Algorithm_time(seconds):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[precision]' derivation='Avg' name='[avg:precision:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[recall]' derivation='Avg' name='[avg:recall:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[score]' derivation='Avg' name='[avg:score:qk]' pivot='key' type='quantitative' />
+            <column caption='Classifier' datatype='string' name='[classifier]' role='dimension' type='nominal' />
+            <column caption='Negative Set' datatype='string' name='[negative_set]' role='dimension' type='nominal' />
+            <column-instance column='[classifier]' derivation='None' name='[none:classifier:nk]' pivot='key' type='nominal' />
+            <column-instance column='[negative_set]' derivation='None' name='[none:negative_set:nk]' pivot='key' type='nominal' />
+            <column-instance column='[positive_set]' derivation='None' name='[none:positive_set:nk]' pivot='key' type='nominal' />
+            <column-instance column='[representation]' derivation='None' name='[none:representation:nk]' pivot='key' type='nominal' />
+            <column caption='Positive Set' datatype='string' name='[positive_set]' role='dimension' type='nominal' />
+            <column caption='Precision' datatype='real' name='[precision]' role='measure' type='quantitative' />
+            <column caption='Recall' datatype='real' name='[recall]' role='measure' type='quantitative' />
+            <column caption='Representation' datatype='string' name='[representation]' role='dimension' type='nominal' />
+            <column caption='Score' datatype='real' name='[score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:negative_set:nk]' value='342' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:precision:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:recall:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:Algorithm_time(seconds):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:precision:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:recall:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.14kkov71pf5bn91gy67050ozlhpd].[avg:score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25187844038009644' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.14kkov71pf5bn91gy67050ozlhpd].[avg:precision:qk] + ([federated.14kkov71pf5bn91gy67050ozlhpd].[avg:recall:qk] + ([federated.14kkov71pf5bn91gy67050ozlhpd].[avg:Algorithm_time(seconds):qk] + ([federated.14kkov71pf5bn91gy67050ozlhpd].[avg:precision:qk] + ([federated.14kkov71pf5bn91gy67050ozlhpd].[avg:recall:qk] + [federated.14kkov71pf5bn91gy67050ozlhpd].[avg:score:qk])))))</rows>
+        <cols>([federated.14kkov71pf5bn91gy67050ozlhpd].[none:positive_set:nk] / ([federated.14kkov71pf5bn91gy67050ozlhpd].[none:negative_set:nk] / ([federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk] / [federated.14kkov71pf5bn91gy67050ozlhpd].[none:representation:nk])))</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='training_examples' name='federated.0r9i14x08ldylh1b1u04r06276ci' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0r9i14x08ldylh1b1u04r06276ci'>
+            <column aggregation='CountD' datatype='string' name='[F1]' role='dimension' type='nominal' />
+            <column aggregation='CountD' datatype='string' name='[F2]' role='dimension' type='nominal' />
+            <column-instance column='[F1]' derivation='None' name='[none:F1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[F2]' derivation='None' name='[none:F2:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0r9i14x08ldylh1b1u04r06276ci].[none:F1:nk] / [federated.0r9i14x08ldylh1b1u04r06276ci].[none:F2:nk])</rows>
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='72'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14kkov71pf5bn91gy67050ozlhpd].[none:classifier:nk]</field>
+            <field>[federated.14kkov71pf5bn91gy67050ozlhpd].[none:matrix:nk]</field>
+            <field>[federated.14kkov71pf5bn91gy67050ozlhpd].[none:negative_set:nk]</field>
+            <field>[federated.14kkov71pf5bn91gy67050ozlhpd].[none:positive_set:nk]</field>
+            <field>[federated.14kkov71pf5bn91gy67050ozlhpd].[none:representation:nk]</field>
+            <field>[federated.14kkov71pf5bn91gy67050ozlhpd].[sum:recall:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0r9i14x08ldylh1b1u04r06276ci].[none:F1:nk]</field>
+            <field>[federated.0r9i14x08ldylh1b1u04r06276ci].[none:F2:nk]</field>
+            <field>[federated.0r9i14x08ldylh1b1u04r06276ci].[none:F3:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='84' name='Sheet 2' width='192'>
+      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
+      KP5/RSrT4tcDQL0AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

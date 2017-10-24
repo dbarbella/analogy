@@ -1,0 +1,27 @@
+# To install Tableau:
+
+After install there is a 14 day trial but if you have a student account you 
+can get a free 1-year access following this link
+https://www.tableau.com/about/blog/2013/3/tableau-students-free-access-tableau-desktop-21617
+
+
+
+# Good videos/documentation on using Tableau for beginners
+https://www.tableau.com/beginners-data-visualization
+https://www.tableau.com/learn/training
+
+https://youtu.be/AyzIchw2Lik
+https://youtu.be/jj6-0cvcNEA
+
+
+
+# What I was able to do
+Make a graph which details the results of the classification with
+different classifiers
+
+
+
+# What I attempted to do but was not successful
+- Find a way to retrieve the output of what tfidf, count, and hashing 
+produce, which we can build some visualization on.
+- Rearrange the specifications to get the desired diagram.
