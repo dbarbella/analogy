@@ -27,13 +27,12 @@ parameters = {
     'vect__max_df': (0.5, 0.75, 1.0),
     'vect__max_features': (None, 5000, 10000, 50000),
     'vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
+    'vect__strip_accents' : ('ascii', 'unicode', None),
+    'vect__analyzer' : ('word', 'char', 'char_wb'),    
+    'vect__stop_words' : ('english', None),
+    'vect__min_df': (0.1, 0.25),                        
     'svc__kernel' : ('linear', 'poly', 'rbf', 'sigmoid'),
     'svc__tol' : (1e-3, 1e-2)
-    #'tfidf__use_idf': (True, False),
-    #'tfidf__norm': ('l1', 'l2'),
-    #'clf__alpha': (0.00001, 0.000001),
-    #'clf__penalty': ('l2', 'elasticnet'),
-    #'clf__n_iter': (10, 50, 80),
 }
 
 if __name__ == "__main__":
