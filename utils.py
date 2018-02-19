@@ -1,5 +1,4 @@
 from personal import root as root
-
 # Contains utility functions for analogy processing
 
 # Converts a list of sentences that are lists of words into an easy-to-read paragraph
@@ -30,4 +29,4 @@ def _snip_corpus_name(in_string):
         print ("Something went wrong:\n" + str(split_string))
     
     
-print(analogy_ff_to_list(root + "/corpora/analogy-samples.txt"))
+#print(analogy_ff_to_list(root + "/corpora/analogy-samples.txt"))
