@@ -1,0 +1,281 @@
+Performing grid search...
+pipeline: ['hash', 'svc']
+parameters:
+{'hash__analyzer': ('word', 'char', 'char_wb'),
+ 'hash__ngram_range': ((1, 1), (1, 2)),
+ 'hash__norm': ('l1', 'l2', None),
+ 'svc__decision_function_shape': ('ovo', 'ovr'),
+ 'svc__degree': (2, 3, 4),
+ 'svc__kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
+ 'svc__tol': (0.0001, 0.001, 0.01)}
+Fitting 3 folds for each of 1296 candidates, totalling 3888 fits
+done in 620.378s
+
+Best score: 0.677
+Best parameters set:
+	hash__analyzer: 'char_wb'
+	hash__ngram_range: (1, 1)
+	hash__norm: None
+	svc__decision_function_shape: 'ovo'
+	svc__degree: 2
+	svc__kernel: 'linear'
+	svc__tol: 0.0001
+
+Getting the confusion matrix for the best estimator:
+[[ 16 148]
+ [ 27 264]]
+ 
+ 
+Performing grid search...
+pipeline: ['count', 'svc']
+parameters:
+{'count__analyzer': ('word', 'char', 'char_wb'),
+ 'count__max_df': (0.5, 0.75, 0.8),
+ 'count__max_features': (None, 5000, 10000, 50000),
+ 'count__min_df': (0.1, 0.2, 0.3),
+ 'count__ngram_range': ((1, 1), (1, 2)),
+ 'svc__decision_function_shape': ('ovo', 'ovr'),
+ 'svc__degree': (2, 3, 4),
+ 'svc__kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
+ 'svc__tol': (0.0001, 0.001, 0.01)}
+Fitting 3 folds for each of 15552 candidates, totalling 46656 fits
+done in 5648.887s
+
+Best score: 0.673
+Best parameters set:
+	count__analyzer: 'word'
+	count__max_df: 0.5
+	count__max_features: None
+	count__min_df: 0.3
+	count__ngram_range: (1, 1)
+	svc__decision_function_shape: 'ovo'
+	svc__degree: 2
+	svc__kernel: 'poly'
+	svc__tol: 0.0001
+
+Getting the confusion matrix for the best estimator:
+[[  7 157]
+ [  8 283]]
+ 
+Performing grid search...
+pipeline: ['tfidf', 'svc']
+parameters:
+{'svc__decision_function_shape': ('ovo', 'ovr'),
+ 'svc__degree': (2, 3, 4),
+ 'svc__kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
+ 'svc__tol': (0.0001, 0.001, 0.01),
+ 'tfidf__analyzer': ('word', 'char', 'char_wb'),
+ 'tfidf__max_df': (0.5, 0.75, 0.8),
+ 'tfidf__max_features': (None, 5000, 10000, 50000),
+ 'tfidf__ngram_range': ((1, 1), (1, 2)),
+ 'tfidf__use_idf': (True, False)}
+Fitting 3 folds for each of 10368 candidates, totalling 31104 fits
+done in 3226.861s
+
+Best score: 0.666
+Best parameters set:
+	svc__decision_function_shape: 'ovo'
+	svc__degree: 2
+	svc__kernel: 'linear'
+	svc__tol: 0.0001
+	tfidf__analyzer: 'char'
+	tfidf__max_df: 0.5
+	tfidf__max_features: None
+	tfidf__ngram_range: (1, 1)
+	tfidf__use_idf: True
+
+Getting the confusion matrix for the best estimator:
+[[  0 164]
+ [  0 291]]
+Performing grid search...
+pipeline: ['hash', 'linearsvc']
+parameters:
+{'hash__analyzer': ('word', 'char', 'char_wb'),
+ 'hash__ngram_range': ((1, 1), (1, 2)),
+ 'hash__norm': ('l1', 'l2', None),
+ 'linearsvc__intercept_scaling': (0.9, 1, 1.3),
+ 'linearsvc__multi_class': ('ovr', 'crammer_singer'),
+ 'linearsvc__penalty': ('l1', 'l2'),
+ 'linearsvc__tol': (1e-05, 0.0001, 0.001)}
+Fitting 3 folds for each of 648 candidates, totalling 1944 fits
+done in 666.242s
+
+Best score: 0.688
+Best parameters set:
+	hash__analyzer: 'char_wb'
+	hash__ngram_range: (1, 1)
+	hash__norm: None
+	linearsvc__intercept_scaling: 1.3
+	linearsvc__multi_class: 'crammer_singer'
+	linearsvc__penalty: 'l1'
+	linearsvc__tol: 0.001
+
+Getting the confusion matrix for the best estimator:
+[[ 25 139]
+ [ 37 254]]
+ 
+Performing grid search...
+pipeline: ['count', 'linearsvc']
+parameters:
+{'count__analyzer': ('word', 'char', 'char_wb'),
+ 'count__max_df': (0.5, 0.75, 0.8),
+ 'count__max_features': (None, 5000, 10000, 50000),
+ 'count__min_df': (0.1, 0.2, 0.3),
+ 'count__ngram_range': ((1, 1), (1, 2)),
+ 'linearsvc__intercept_scaling': (0.9, 1, 1.3),
+ 'linearsvc__multi_class': ('ovr', 'crammer_singer'),
+ 'linearsvc__penalty': ('l1', 'l2'),
+ 'linearsvc__tol': (1e-05, 0.0001, 0.001)}
+Fitting 3 folds for each of 7776 candidates, totalling 23328 fits
+done in 7030.269s
+
+Best score: 0.679
+Best parameters set:
+	count__analyzer: 'char'
+	count__max_df: 0.75
+	count__max_features: None
+	count__min_df: 0.1
+	count__ngram_range: (1, 1)
+	linearsvc__intercept_scaling: 1.3
+	linearsvc__multi_class: 'ovr'
+	linearsvc__penalty: 'l2'
+	linearsvc__tol: 0.0001
+
+Getting the confusion matrix for the best estimator:
+[[ 47 117]
+ [ 61 230]]
+ 
+Performing grid search...
+pipeline: ['tfidf', 'linearsvc']
+parameters:
+{'linearsvc__intercept_scaling': (0.9, 1, 1.3),
+ 'linearsvc__multi_class': ('ovr', 'crammer_singer'),
+ 'linearsvc__penalty': ('l1', 'l2'),
+ 'linearsvc__tol': (1e-05, 0.0001, 0.001),
+ 'tfidf__analyzer': ('word', 'char', 'char_wb'),
+ 'tfidf__max_df': (0.5, 0.75, 0.8),
+ 'tfidf__max_features': (None, 5000, 10000, 50000),
+ 'tfidf__ngram_range': ((1, 1), (1, 2)),
+ 'tfidf__use_idf': (True, False)}
+Fitting 3 folds for each of 5184 candidates, totalling 15552 fits
+done in 1487.970s
+
+Best score: 0.673
+Best parameters set:
+	linearsvc__intercept_scaling: 0.9
+	linearsvc__multi_class: 'crammer_singer'
+	linearsvc__penalty: 'l1'
+	linearsvc__tol: 1e-05
+	tfidf__analyzer: 'char'
+	tfidf__max_df: 0.8
+	tfidf__max_features: None
+	tfidf__ngram_range: (1, 2)
+	tfidf__use_idf: True
+
+Getting the confusion matrix for the best estimator:
+[[  3 161]
+ [  3 288]]
+ 
+Performing grid search...
+pipeline: ['hash', 'nusvc']
+parameters:
+{'hash__analyzer': ('word', 'char', 'char_wb'),
+ 'hash__ngram_range': ((1, 1), (1, 2)),
+ 'hash__norm': ('l1', 'l2', None),
+ 'nusvc__decision_function_shape': ('ovo', 'ovr'),
+ 'nusvc__degree': (2, 3, 4),
+ 'nusvc__kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
+ 'nusvc__nu': (0.5, 0.6, 0.7),
+ 'nusvc__tol': (0.0001, 0.001)}
+Fitting 3 folds for each of 2592 candidates, totalling 7776 fits
+done in 880.290s
+
+Best score: 0.670
+Best parameters set:
+	hash__analyzer: 'char'
+	hash__ngram_range: (1, 1)
+	hash__norm: None
+	nusvc__decision_function_shape: 'ovo'
+	nusvc__degree: 2
+	nusvc__kernel: 'linear'
+	nusvc__nu: 0.5
+	nusvc__tol: 0.001
+
+Getting the confusion matrix for the best estimator:
+[[ 22 142]
+ [ 44 247]]
+ 
+Performing grid search...
+pipeline: ['count', 'nusvc']
+parameters:
+{'count__analyzer': ('word', 'char', 'char_wb'),
+ 'count__max_df': (0.5, 0.75, 0.8),
+ 'count__max_features': (None, 5000, 10000, 50000),
+ 'count__min_df': (0.1, 0.2, 0.3),
+ 'count__ngram_range': ((1, 1), (1, 2)),
+ 'nusvc__decision_function_shape': ('ovo', 'ovr'),
+ 'nusvc__degree': (2, 3, 4),
+ 'nusvc__kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
+ 'nusvc__nu': (0.5, 0.6, 0.7),
+ 'nusvc__tol': (0.0001, 0.001)}
+Fitting 3 folds for each of 31104 candidates, totalling 93312 fits
+done in 8368.520s
+
+Best score: 0.684
+Best parameters set:
+	count__analyzer: 'word'
+	count__max_df: 0.5
+	count__max_features: None
+	count__min_df: 0.3
+	count__ngram_range: (1, 1)
+	nusvc__decision_function_shape: 'ovo'
+	nusvc__degree: 4
+	nusvc__kernel: 'poly'
+	nusvc__nu: 0.6
+	nusvc__tol: 0.0001
+
+Getting the confusion matrix for the best estimator:
+[[157   7]
+ [282   9]]
+ 
+Performing grid search...
+pipeline: ['tfidf', 'nusvc']
+parameters:
+{'nusvc__decision_function_shape': ('ovo', 'ovr'),
+ 'nusvc__degree': (2, 3, 4),
+ 'nusvc__kernel': ('linear', 'poly', 'rbf', 'sigmoid'),
+ 'nusvc__nu': (0.5, 0.6, 0.7),
+ 'nusvc__tol': (0.0001, 0.001),
+ 'tfidf__analyzer': ('word', 'char', 'char_wb'),
+ 'tfidf__max_df': (0.5, 0.75, 0.8),
+ 'tfidf__max_features': (None, 5000, 10000, 50000),
+ 'tfidf__ngram_range': ((1, 1), (1, 2)),
+ 'tfidf__use_idf': (True, False)}
+Fitting 3 folds for each of 20736 candidates, totalling 62208 fits
+done in 4999.390s
+
+Best score: 0.651
+Best parameters set:
+	nusvc__decision_function_shape: 'ovo'
+	nusvc__degree: 2
+	nusvc__kernel: 'rbf'
+	nusvc__nu: 0.6
+	nusvc__tol: 0.001
+	tfidf__analyzer: 'char_wb'
+	tfidf__max_df: 0.8
+	tfidf__max_features: None
+	tfidf__ngram_range: (1, 2)
+	tfidf__use_idf: True
+
+Getting the confusion matrix for the best estimator:
+[[ 25 139]
+ [ 37 254]]
+ 
+Performing grid search...
+pipeline: ['hash', 'naive']
+parameters:
+{'hash__analyzer': ('word', 'char', 'char_wb'),
+ 'hash__ngram_range': ((1, 1), (1, 2)),
+ 'hash__norm': ('l1', 'l2', None),
+ 'naive__fit_prior': (False, True)}
+Fitting 3 folds for each of 36 candidates, totalling 108 fits
