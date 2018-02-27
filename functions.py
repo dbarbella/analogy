@@ -110,8 +110,8 @@ def fmeasure(matrix):
         recall = 0
         f_measure = 0
     else:
-        precision = matrix[0][0] / value1
-        recall = matrix[0][0] / value2
+        precision = matrix[0][0] / value2
+        recall = matrix[0][0] / value1
         if precision == 0:
             f_measure = 0
         else:
