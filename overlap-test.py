@@ -30,10 +30,11 @@ def main():
         grid_search.fit(train_data, train_labels)
         if count == 0:
             prediction = grid_search.best_estimator_.predict(test_data)
+            matrix = confusion_matrix(test_labels, prediction, labels = ['YES', 'NO'])   
         else:
             prediction_second_input = grid_search.best_estimator_.predict(test_data)
+            matrix = confusion_matrix(test_labels, prediction_second_input, labels = ['YES', 'NO'])   
         count += 1
-        matrix = confusion_matrix(test_labels, prediction, labels = ['YES', 'NO'])   
         print(matrix)
         
     for i in range(len(test_labels)):
