@@ -9,7 +9,7 @@ from nltk.parse import stanford
 jar = './stanford-parser/jars/stanford-parser.jar'
 model = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 parser = stanford.StanfordParser(model,jar,encoding = 'utf8')
-
+verb = ['VB', 'VBZ', 'VBC' , 'VBN', 'VBP']
 class Node:
     def __init__(self,value):
         self.value = value
@@ -25,8 +25,8 @@ class Node:
         return self.value
 
 sentences = []
-lower_tie = 1
-upper_tie = 100
+lower_tie = 2
+upper_tie = 6
 
 phrases = ['S','SBAR']
 
@@ -40,10 +40,17 @@ def linking_word_check(sent):
         if w in txt:
             ind = txt.index(w)
     # print(list_of_word[ind])
-    if list_of_word[ind][0] == linking_word[2] or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
+    for w in list_of_word:
+        if w[1] == 'JJ' or w[1] == 'RB':
+            sent = sent.replace(w[0] + " ", "")
+        # if w[1] == 'CC':
+        #     sent = sent.replace(w[0], "")
+            # print(w[0])
+    print(sent)
+    if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
         # if list_of_word[ind][1] == "JJ":
         return parse(sent, list_of_word[ind][0], "JJ")
-    elif list_of_word[ind][0] == linking_word[0] or list_of_word[ind][0] == linking_word[1]:
+    elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
             return parse(sent,list_of_word[ind][0],"IN")
 
@@ -91,16 +98,20 @@ def base_search(target,p,base):
                 if len(p[i][j])> 1:
                     if p[i][j] == target:
                         temp = j
-                        while p[i][temp - 1]._label != 'VB' or p[i][temp - 1] != 'VBZ':
+                        while p[i][temp]._label not in verb:
                             if temp <= 0:
                                 break
-                            temp = temp - 1
-                        if p[i][temp] == 'VBZ':
-                            return p[0]
-                        else:
-                            return [p[0],p[i][temp]]
-                    else:
-                        base = base_search(target,p[i],base)
+                            else:
+                                temp = temp - 1
+                        result = []
+                        # for k in range(i):
+                        #     result.append(p[k])
+                        # # result.append(p[i-1])
+                        # for l in range(temp):
+                        #     result.append(p[i][l])
+                        # return result
+                        return [p[i-1],p[i][temp]]
+                    base = base_search(target,p[i],base)
     return base
 
 def segmentWords(s):
@@ -123,7 +134,7 @@ def delete_stopword(sent):
             filtered_words.append(word)
     return " ".join(filtered_words)
 
-with open('./verified_analogies.csv') as file:
+with open('./sampleTraining.csv') as file:
     readcsv = csv.reader(file,delimiter = ',')
     for row in readcsv:
         sentence = row[1]
