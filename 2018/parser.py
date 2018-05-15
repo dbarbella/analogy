@@ -15,8 +15,16 @@ class Node:
         self.value = value
         self.parent = None
         self.children = []
+
     def __ne__(self, other):
         return self.value == other.value
+
+    def printTree(self):
+        ret = ""
+        for child in self.children:
+            ret += "\t"+ str(child.parent) + "\n"
+            ret += child.printTree()
+        return ret
 
     def search_base(self,node):
         print(self.value)
@@ -70,7 +78,7 @@ def recursive_search(p,w,l,phrase, node):
             if p[i]._label == l:
                 if p[i][0] == w:
                     if len(p) > i + 1:
-                        return p[i+1],p
+                        return p[i+1],node
             elif p[i]._label in phrases:
                 for j in p[i]:
                     phrase,node = recursive_search(j,w,l,phrase,node)
@@ -78,41 +86,50 @@ def recursive_search(p,w,l,phrase, node):
                 phrase,node = recursive_search(p[i],w,l,phrase, node)
 
     return phrase,node
-
 def parse(sent,w,l):
     phrase = None
     base = None
     target = None
-    node = None
+    parent_node = None
     parsed_sent = parser.raw_parse(sent)
     for line in parsed_sent:
-        target, node =  recursive_search(line[0],w,l,phrase, node)
-        # print(node)
-        base = base_search(node,line[0],base)
+        parent_node = Node(line)
+
+        target, node =  recursive_search(line[0],w,l,phrase, parent_node)
+        parent_node = creatingParentNode(line, parent_node)
+        base = base_search2(target,parent_node,base)
     return base,target
 
-def base_search(target,p,base):
-    for i in range(len(p)):
-        if len(p[i])>1:
-            for j in range(len(p[i])):
-                if len(p[i][j])> 1:
-                    if p[i][j] == target:
-                        temp = j
-                        while p[i][temp]._label not in verb:
-                            if temp <= 0:
-                                break
-                            else:
-                                temp = temp - 1
-                        result = []
-                        # for k in range(i):
-                        #     result.append(p[k])
-                        # # result.append(p[i-1])
-                        # for l in range(temp):
-                        #     result.append(p[i][l])
-                        # return result
-                        return [p[i-1],p[i][temp]]
-                    base = base_search(target,p[i],base)
+# def base_search(target,p,base):
+#     for i in range(len(p)):
+#         if len(p[i])>1:
+#             for j in range(len(p[i])):
+#                 if len(p[i][j])> 1:
+#                     if p[i][j] == target:
+#                         temp = j
+#                         while p[i][temp]._label not in verb:
+#                             if temp <= 0:
+#                                 break
+#                             else:
+#                                 temp = temp - 1
+#                         result = []
+#                         # for k in range(i):
+#                         #     result.append(p[k])
+#                         # # result.append(p[i-1])
+#                         # for l in range(temp):
+#                         #     result.append(p[i][l])
+#                         # return result
+#                         return [p[i-1],p[i][temp]]
+#                     base = base_search(target,p[i],base)
+#     return base
+
+def base_search2(target,parent_node,base):
+    for child in parent_node.children:
+        if str(child.value) == str(target):
+            return child.parent.parent.value
+        base = base_search2(target,child,base)
     return base
+
 
 def segmentWords(s):
     return s.split()
@@ -142,14 +159,32 @@ with open('./sampleTraining.csv') as file:
         sentence = delete_stopword(token)
         sentences.append(sentence)
 
+def tryoutParent(sent):
+    parsed_sent = parser.raw_parse(sent)
+    node_parent = None
+    for line in parsed_sent:
+        p = Node(line)
+        node_parent = creatingParentNode(line,p)
+    return node_parent
 
-print(len(sentences))
+def creatingParentNode(key, node):
+    for count in range(len(key)):
+        if len(key[count]) > 1:
+            child = Node(key[count])
+            child.parent = node
+            subtree = creatingParentNode(key[count],child)
+            node.children.append(subtree)
+    return node
+
+
+
+
+# print(len(sentences))
 p_sent = []
 start = time()
 c = lower_tie
 for i in range(lower_tie,upper_tie):
     p_sent.append(linking_word_check(sentences[i]))
-
 
 for sent in p_sent:
     print("___", c + 1, "___")
@@ -157,7 +192,10 @@ for sent in p_sent:
     c += 1
 end = time()
 print("time: ", end - start)
-
+# for i in range(lower_tie,upper_tie):
+#     p_sent.append(tryoutParent(sentences[i]))
+# for p in p_sent:
+#     print(p.printTree())
 # c=0
 # new_sent = sentences[lower_tie:upper_tie]
 # parsed_sent = parser.raw_parse_sents(new_sent)
