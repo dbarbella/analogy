@@ -10,6 +10,8 @@ jar = './stanford-parser/jars/stanford-parser.jar'
 model = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 parser = stanford.StanfordParser(model,jar,encoding = 'utf8')
 verb = ['VB', 'VBZ', 'VBC' , 'VBN', 'VBP']
+noun = ['NP','NN', 'NNP', 'NNS', 'PRP', 'S', 'SBAR']
+pronoun =['UH', 'CC', ',', 'INTJ']
 class Node:
     def __init__(self,value):
         self.value = value
@@ -33,8 +35,8 @@ class Node:
         return self.value
 
 sentences = []
-lower_tie = 2
-upper_tie = 6
+lower_tie = 1
+upper_tie = 100
 
 phrases = ['S','SBAR']
 
@@ -48,9 +50,9 @@ def linking_word_check(sent):
         if w in txt:
             ind = txt.index(w)
     # print(list_of_word[ind])
-    for w in list_of_word:
-        if w[1] == 'JJ' or w[1] == 'RB':
-            sent = sent.replace(w[0] + " ", "")
+    # for w in list_of_word:
+    #     if w[1] == 'JJ' or w[1] == 'RB':
+    #         sent = sent.replace(w[0] + " ", "")
         # if w[1] == 'CC':
         #     sent = sent.replace(w[0], "")
             # print(w[0])
@@ -88,7 +90,7 @@ def recursive_search(p,w,l,phrase, node):
     return phrase,node
 def parse(sent,w,l):
     phrase = None
-    base = None
+    base = []
     target = None
     parent_node = None
     parsed_sent = parser.raw_parse(sent)
@@ -100,33 +102,29 @@ def parse(sent,w,l):
         base = base_search2(target,parent_node,base)
     return base,target
 
-# def base_search(target,p,base):
-#     for i in range(len(p)):
-#         if len(p[i])>1:
-#             for j in range(len(p[i])):
-#                 if len(p[i][j])> 1:
-#                     if p[i][j] == target:
-#                         temp = j
-#                         while p[i][temp]._label not in verb:
-#                             if temp <= 0:
-#                                 break
-#                             else:
-#                                 temp = temp - 1
-#                         result = []
-#                         # for k in range(i):
-#                         #     result.append(p[k])
-#                         # # result.append(p[i-1])
-#                         # for l in range(temp):
-#                         #     result.append(p[i][l])
-#                         # return result
-#                         return [p[i-1],p[i][temp]]
-#                     base = base_search(target,p[i],base)
-#     return base
-
 def base_search2(target,parent_node,base):
     for child in parent_node.children:
         if str(child.value) == str(target):
-            return child.parent.parent.value
+            temp = child.parent
+            p_child = {}
+            result = []
+            while temp.value._label not in noun:
+                i = 0
+                p_child[temp.parent] = temp
+                temp = temp.parent
+                # while temp.value[i]._label not in noun or temp.value[i]._label not in verb:
+                #     if i == len(temp.value) - 1:
+                #         break
+                #     elif i <  len(temp.value) - 1:
+                #         i+= 1
+                while temp.value[i]._label in pronoun:
+                    i += 1
+                result.append(temp.value[i])
+
+            f = []
+            while len(result) > 0:
+                f.append(result.pop())
+            return f
         base = base_search2(target,child,base)
     return base
 
@@ -151,7 +149,7 @@ def delete_stopword(sent):
             filtered_words.append(word)
     return " ".join(filtered_words)
 
-with open('./sampleTraining.csv') as file:
+with open('./verified_analogies.csv') as file:
     readcsv = csv.reader(file,delimiter = ',')
     for row in readcsv:
         sentence = row[1]
@@ -159,13 +157,13 @@ with open('./sampleTraining.csv') as file:
         sentence = delete_stopword(token)
         sentences.append(sentence)
 
-def tryoutParent(sent):
-    parsed_sent = parser.raw_parse(sent)
-    node_parent = None
-    for line in parsed_sent:
-        p = Node(line)
-        node_parent = creatingParentNode(line,p)
-    return node_parent
+# def tryoutParent(sent):
+#     parsed_sent = parser.raw_parse(sent)
+#     node_parent = None
+#     for line in parsed_sent:
+#         p = Node(line)
+#         node_parent = creatingParentNode(line,p)
+#     return node_parent
 
 def creatingParentNode(key, node):
     for count in range(len(key)):
