@@ -9,9 +9,10 @@ from nltk.parse import stanford
 jar = './stanford-parser/jars/stanford-parser.jar'
 model = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 parser = stanford.StanfordParser(model,jar,encoding = 'utf8')
+
 verb = ['VB', 'VBZ', 'VBC' , 'VBN', 'VBP']
-noun = ['NP','NN', 'NNP', 'NNS', 'PRP', 'S', 'SBAR']
-pronoun =['UH', 'CC', ',', 'INTJ']
+noun = ['NP','NN', 'NNP', 'NNS', 'PRP', 'S', 'SBAR', 'WHNP']
+pronoun =['UH', 'CC', ',', 'INTJ','ADVP','RRC','PRN','RB', 'TO']
 class Node:
     def __init__(self,value):
         self.value = value
@@ -35,8 +36,8 @@ class Node:
         return self.value
 
 sentences = []
-lower_tie = 1
-upper_tie = 100
+lower_tie = 5
+upper_tie = 157
 
 phrases = ['S','SBAR']
 
@@ -56,18 +57,28 @@ def linking_word_check(sent):
         # if w[1] == 'CC':
         #     sent = sent.replace(w[0], "")
             # print(w[0])
-    print(sent)
+    # print("***\t",sent,"\t***")
     if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
         # if list_of_word[ind][1] == "JJ":
-        return parse(sent, list_of_word[ind][0], "JJ")
+        result = parse(sent, list_of_word[ind][0], "JJ")
+        print(result)
+        return result
     elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
-            return parse(sent,list_of_word[ind][0],"IN")
+            result = parse(sent,list_of_word[ind][0],"IN")
+            print(result)
+            return  result
 
         if list_of_word[ind][1] == 'JJ':
-            return parse(sent, list_of_word[ind][0], "JJ")
+            result = parse(sent, list_of_word[ind][0], "JJ")
+            print(result)
+            return result
+
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
-        return parse(sent, list_of_word[ind][0], "RB")
+        result = parse(sent, list_of_word[ind][0], "RB")
+        print(result)
+        return result
+
 
     else:
         return
@@ -80,7 +91,7 @@ def recursive_search(p,w,l,phrase, node):
             if p[i]._label == l:
                 if p[i][0] == w:
                     if len(p) > i + 1:
-                        return p[i+1],node
+                        return p[i+1],p
             elif p[i]._label in phrases:
                 for j in p[i]:
                     phrase,node = recursive_search(j,w,l,phrase,node)
@@ -108,23 +119,36 @@ def base_search2(target,parent_node,base):
             temp = child.parent
             p_child = {}
             result = []
+
             while temp.value._label not in noun:
-                i = 0
+
                 p_child[temp.parent] = temp
                 temp = temp.parent
-                # while temp.value[i]._label not in noun or temp.value[i]._label not in verb:
-                #     if i == len(temp.value) - 1:
-                #         break
-                #     elif i <  len(temp.value) - 1:
-                #         i+= 1
-                while temp.value[i]._label in pronoun:
-                    i += 1
-                result.append(temp.value[i])
-
-            f = []
-            while len(result) > 0:
-                f.append(result.pop())
-            return f
+            # print("temp",temp.value)
+            for temp in p_child:
+                i = 0
+                childNode = p_child[temp]
+                while  (temp.value[i]) != (childNode.value) and i < len(temp.value) - 1 :
+                    if temp.value[i]._label not in pronoun:
+                        result.append(temp.value[i])
+                        # print("temp\n",temp.value)
+                    i+=1
+            subject = None
+            if len(result) > 0:
+                firstVerb = None
+                subject = result.pop()
+                if len(result)>0:
+                    if result[len(result)-1]._label in verb:
+                        firstVerb = result.pop()
+                    if subject[0]._label == 'PRP':
+                        f = []
+                        f.append(subject)
+                        f.append(firstVerb)
+                        f += result
+                        return f
+                    else:
+                        return subject
+            return subject
         base = base_search2(target,child,base)
     return base
 
@@ -140,7 +164,6 @@ def readFile(fileName):
     f.close()
     result = segmentWords('\n'.join(contents))
     return result
-
 
 with open('./verified_analogies.csv') as file:
     readcsv = csv.reader(file,delimiter = ',')
@@ -159,7 +182,8 @@ with open('./verified_analogies.csv') as file:
 
 def creatingParentNode(key, node):
     for count in range(len(key)):
-        if len(key[count]) > 1:
+
+        if len(key[count]) > 1 or len(key[count][0]) > 1:
             child = Node(key[count])
             child.parent = node
             subtree = creatingParentNode(key[count],child)
@@ -177,8 +201,10 @@ for i in range(lower_tie,upper_tie):
     p_sent.append(linking_word_check(sentences[i]))
 
 for sent in p_sent:
+    print('***\t', sentences[c], "\t***")
     print("___", c + 1, "___")
     print("___",sent,"___")
+
     c += 1
 end = time()
 print("time: ", end - start)
