@@ -11,7 +11,7 @@ model = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 parser = stanford.StanfordParser(model,jar,encoding = 'utf8')
 
 verb = ['VB', 'VBZ', 'VBC' , 'VBN', 'VBP']
-noun = ['NP','NN', 'NNP', 'NNS', 'PRP', 'S', 'SBAR', 'WHNP']
+noun = ['NP','NN', 'NNP', 'NNS', 'PRP', 'S', 'WHNP']
 pronoun =['UH', 'CC', ',', 'INTJ','ADVP','RRC','PRN','RB', 'TO']
 class Node:
     def __init__(self,value):
@@ -22,11 +22,12 @@ class Node:
     def __ne__(self, other):
         return self.value == other.value
 
-    def printTree(self):
+    def printTree(self,layer):
         ret = ""
+        layer += 1
         for child in self.children:
-            ret += "\t"+ str(child.parent) + "\n"
-            ret += child.printTree()
+            ret += str(layer) + "\t" * layer + str(child.parent.value) + "\n"
+            ret += child.printTree(layer)
         return ret
 
     def search_base(self,node):
@@ -36,7 +37,7 @@ class Node:
         return self.value
 
 sentences = []
-lower_tie = 5
+lower_tie = 1
 upper_tie = 157
 
 phrases = ['S','SBAR']
@@ -60,24 +61,24 @@ def linking_word_check(sent):
     # print("***\t",sent,"\t***")
     if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
         # if list_of_word[ind][1] == "JJ":
-        result = parse(sent, list_of_word[ind][0], "JJ")
-        print(result)
-        return result
+        base, target = parse(sent, list_of_word[ind][0], "JJ")
+        print(base , "___", target)
+        return base, "___", target
     elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
-            result = parse(sent,list_of_word[ind][0],"IN")
-            print(result)
-            return  result
+            base,target = parse(sent,list_of_word[ind][0],"IN")
+            print(base, "___", target)
+            return base, "___", target
 
         if list_of_word[ind][1] == 'JJ':
-            result = parse(sent, list_of_word[ind][0], "JJ")
-            print(result)
-            return result
+            base,target = parse(sent, list_of_word[ind][0], "JJ")
+            print(base, "___", target)
+            return base, "___", target
 
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
-        result = parse(sent, list_of_word[ind][0], "RB")
-        print(result)
-        return result
+        base,target = parse(sent, list_of_word[ind][0], "RB")
+        print(base, "___", target)
+        return base, "___", target
 
 
     else:
@@ -107,9 +108,10 @@ def parse(sent,w,l):
     parsed_sent = parser.raw_parse(sent)
     for line in parsed_sent:
         parent_node = Node(line)
-
+        # print(line)
         target, node =  recursive_search(line[0],w,l,phrase, parent_node)
         parent_node = creatingParentNode(line, parent_node)
+        # print(parent_node.printTree(0))
         base = base_search2(target,parent_node,base)
     return base,target
 
@@ -137,18 +139,21 @@ def base_search2(target,parent_node,base):
             if len(result) > 0:
                 firstVerb = None
                 subject = result.pop()
-                if len(result)>0:
-                    if result[len(result)-1]._label in verb:
-                        firstVerb = result.pop()
-                    if subject[0]._label == 'PRP':
-                        f = []
-                        f.append(subject)
-                        f.append(firstVerb)
-                        f += result
-                        return f
-                    else:
-                        return subject
+                if type(subject[0]) == nltk.tree.Tree:
+                    print(subject[0]._label)
+                    if len(result)>0:
+                        if result[len(result)-1]._label in verb:
+                            firstVerb = result.pop()
+                        if subject[0]._label == 'PRP':
+                            f = []
+                            f.append(subject)
+                            f.append(firstVerb)
+                            f += result
+                            return f
+                        else:
+                            return subject
             return subject
+
         base = base_search2(target,child,base)
     return base
 
@@ -182,15 +187,25 @@ with open('./verified_analogies.csv') as file:
 
 def creatingParentNode(key, node):
     for count in range(len(key)):
-
-        if len(key[count]) > 1 or len(key[count][0]) > 1:
+        if type(key[count]) == nltk.tree.Tree:
             child = Node(key[count])
             child.parent = node
             subtree = creatingParentNode(key[count],child)
             node.children.append(subtree)
     return node
 
+def checkAvailabilityNode(key):
+    count = len(key)
+    for i in range(count):
+        if len(key[i]) > 1:
+            return  True
+    return False
 
+def writeCSVFile(txt):
+    f = open('base_target_ouput.csv', 'w')
+    f.write(txt)  # Give your csv text here.
+    ## Python will convert \n to os.linesep
+    f.close()
 
 
 # print(len(sentences))
@@ -200,14 +215,19 @@ c = lower_tie
 for i in range(lower_tie,upper_tie):
     p_sent.append(linking_word_check(sentences[i]))
 
+text_output = ""
 for sent in p_sent:
     print('***\t', sentences[c], "\t***")
+    text_output += str(c) + ","+sentences[c]
     print("___", c + 1, "___")
     print("___",sent,"___")
-
+    text_output += str(sent) +"\n"
     c += 1
+writeCSVFile(text_output)
 end = time()
 print("time: ", end - start)
+
+
 # for i in range(lower_tie,upper_tie):
 #     p_sent.append(tryoutParent(sentences[i]))
 # for p in p_sent:
