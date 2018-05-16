@@ -141,20 +141,12 @@ def readFile(fileName):
     result = segmentWords('\n'.join(contents))
     return result
 
-def delete_stopword(sent):
-    stopword = set(readFile('./stopword.txt'))
-    filtered_words = []
-    for word in sent:
-        if word not in stopword:
-            filtered_words.append(word)
-    return " ".join(filtered_words)
 
 with open('./verified_analogies.csv') as file:
     readcsv = csv.reader(file,delimiter = ',')
     for row in readcsv:
         sentence = row[1]
         token = nltk.word_tokenize(sentence)
-        sentence = delete_stopword(token)
         sentences.append(sentence)
 
 # def tryoutParent(sent):
