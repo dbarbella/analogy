@@ -51,26 +51,6 @@ ID, Sentence, Target, Base
   (NP (JJ unripe) (NNS persimmons))
   (PP (IN in) (NP (PRP$ his) (NN mouth))))"
 "[BRWN, PARA#2794, SENT#6]","Bitterness comes over him and the taste of time is like unripe persimmons in his mouth .","None","(PP (TO to) (NP (CD one)))"
-"[BRWN, PARA#149, SENT#1]","The aged care plan , similar to one the President sponsored last year as a senator , a fight on Capitol hill .","(NP
-  (NP (NP (NNS Thousands)) (PP (IN of) (NP (NN buffalo))))
-  (PRN
-    (-LRB- -LRB-)
-    (NP
-      (NP (`` ``) (NN bison) ('' ''))
-      (SBAR
-        (S
-          (NP (PRP they))
-          (VP
-            (MD will)
-            (ADVP (RB never))
-            (VP
-              (VB be)
-              (PP
-                (TO to)
-                (NP
-                  (NP (DT the) (NN man))
-                  (PP (IN on) (NP (DT the) (NN street))))))))))
-    (-RRB- -RRB-)))","(NP (DT a) (JJ mobile) (JJ brown) (NN throw-rug))"
 "[BRWN, PARA#7095, SENT#2]","The first news stories had it that this blaze was started by a bolt of lightning , as though Miriam could call down fire from heaven like a prophet of the Old Testament .","(NP
   (NP (NNP Charles))
   (, ,)
