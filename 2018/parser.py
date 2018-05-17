@@ -62,23 +62,23 @@ def linking_word_check(sent):
     if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
         # if list_of_word[ind][1] == "JJ":
         base, target = parse(sent, list_of_word[ind][0], "JJ")
-        print(base , "___", target)
-        return base, "___", target
+        print(base , target)
+        return base,  target
     elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
             base,target = parse(sent,list_of_word[ind][0],"IN")
-            print(base, "___", target)
-            return base, "___", target
+            print(base, target)
+            return base,  target
 
         if list_of_word[ind][1] == 'JJ':
             base,target = parse(sent, list_of_word[ind][0], "JJ")
-            print(base, "___", target)
-            return base, "___", target
+            print(base,  target)
+            return base,  target
 
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
         base,target = parse(sent, list_of_word[ind][0], "RB")
-        print(base, "___", target)
-        return base, "___", target
+        print(base,  target)
+        return base,  target
 
 
     else:
