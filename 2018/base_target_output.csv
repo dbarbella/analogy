@@ -1,5 +1,5 @@
 ID, Sentence, Target, Base
-"[BRWN, PARA#13855, SENT#3]" , " and yet like a child among adults ." , "(NP (NNS sensations))" , "(NP
+"[BRWN, PARA#13855, SENT#3]"," and yet like a child among adults .","(NP (NNS sensations))","(NP
   (NP (DT a) (JJ young) (NN prince))
   (PP
     (IN in)
@@ -9,11 +9,11 @@ ID, Sentence, Target, Base
         (VBG dabbling)
         (NP (PRP$ his) (NN hand))
         (PP (IN in) (NP (DT a) (NN pool)))))))"
-"[BRWN, PARA#6643, SENT#2]" , "I don't mean a few aesthetes who play about with sensations like a young prince in a miniature dabbling his hand in a pool ." , "[Tree('NP', [Tree('PRP', ['he'])]), None, Tree('VBG', ['holding']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['bottle'])]), Tree('VP', [Tree('VBG', ['being']), Tree('ADJP', [Tree('JJ', ['queer']), Tree('CC', ['and']), Tree('JJ', ['careful'])])]), Tree('VP', [Tree('VBG', ['pawing']), Tree('IN', ['about']), Tree('PP', [Tree('IN', ['in']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['drawer'])])])]), Tree('VBD', ['was'])]" , "(NP
+"[BRWN, PARA#6643, SENT#2]","I don't mean a few aesthetes who play about with sensations like a young prince in a miniature dabbling his hand in a pool .","[Tree('NP', [Tree('PRP', ['he'])]), None, Tree('VBG', ['holding']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['bottle'])]), Tree('VP', [Tree('VBG', ['being']), Tree('ADJP', [Tree('JJ', ['queer']), Tree('CC', ['and']), Tree('JJ', ['careful'])])]), Tree('VP', [Tree('VBG', ['pawing']), Tree('IN', ['about']), Tree('PP', [Tree('IN', ['in']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['drawer'])])])]), Tree('VBD', ['was'])]","(NP
   (NP (DT a) (NN snake))
   (PP
     (IN at)
     (NP
       (NP (DT the) (NN length))
       (PP (IN of) (NP (PRP$ his) (NN arm))))))"
-"[BRWN, PARA#11103, SENT#1]" , "Oh , he was being queer and careful , pawing about in the drawer and holding the bottle like a snake at the length of his arm ." , "(NP (NNS men))" , "(NP (NN sheep))"
+"[BRWN, PARA#11103, SENT#1]","Oh , he was being queer and careful , pawing about in the drawer and holding the bottle like a snake at the length of his arm .","(NP (NNS men))","(NP (NN sheep))"
