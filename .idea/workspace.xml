@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d467e49e-303e-4cae-9737-74223d28120f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/2018/base_target_output.csv" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/2018/base_target_output.csv" afterPath="$PROJECT_DIR$/2018/base_target_output.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2018/parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="223" column="22" lean-forward="true" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="210" column="23" lean-forward="true" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526576946901</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="reformat output file">
+      <created>1526577818192</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1526577818192</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -437,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2018/parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="223" column="22" lean-forward="true" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="210" column="23" lean-forward="true" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
