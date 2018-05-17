@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d467e49e-303e-4cae-9737-74223d28120f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/2018/base_target_output.tsv" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2018/base_target_output.csv" afterPath="$PROJECT_DIR$/2018/base_target_output.csv" />
+      <change beforePath="$PROJECT_DIR$/2018/base_target_output.csv" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +37,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_target_output.csv" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
+      <file leaf-file-name="base_target_output.tsv" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2018/base_target_output.tsv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
@@ -85,6 +86,7 @@
         <option value="$PROJECT_DIR$/2018/readme.md" />
         <option value="$PROJECT_DIR$/2018/parser.py" />
         <option value="$PROJECT_DIR$/2018/base_target_output.csv" />
+        <option value="$PROJECT_DIR$/2018/base_target_output.tsv" />
       </list>
     </option>
   </component>
@@ -291,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526566959846</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="reformat output file">
+      <created>1526576713389</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1526576713390</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -406,6 +415,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2018/base_target_output.tsv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
