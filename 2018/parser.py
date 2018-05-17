@@ -1,8 +1,6 @@
 import os
 import nltk
-# nltk.download()
 import csv
-# import en
 import re
 from time import time
 from nltk.parse import stanford
@@ -30,15 +28,9 @@ class Node:
             ret += child.printTree(layer)
         return ret
 
-    def search_base(self,node):
-        print(self.value)
-        for child in node.children:
-            self.search_base(child)
-        return self.value
-
 sentences = []
-lower_tie = 1
-upper_tie = 10
+lower_tie = 4
+upper_tie = 157
 
 phrases = ['S','SBAR']
 
@@ -51,40 +43,28 @@ def linking_word_check(sent):
     for w in linking_word:
         if w in txt:
             ind = txt.index(w)
-    # print(list_of_word[ind])
-    # for w in list_of_word:
-    #     if w[1] == 'JJ' or w[1] == 'RB':
-    #         sent = sent.replace(w[0] + " ", "")
-        # if w[1] == 'CC':
-        #     sent = sent.replace(w[0], "")
-            # print(w[0])
-    # print("***\t",sent,"\t***")
     if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
-        # if list_of_word[ind][1] == "JJ":
-        base, target = parse(sent, list_of_word[ind][0], "JJ")
-        print(base , target)
-        return '"',base,'","',  target, '"'
+        if list_of_word[ind][1] == "JJ":
+            base, target = parse(sent, list_of_word[ind][0], "JJ")
+            print(base ,  target)
+            return base, target
     elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
             base,target = parse(sent,list_of_word[ind][0],"IN")
-            print(base, target)
-            return '"', base, '","', target, '"'
+            print(base,  target)
+            return base, target
 
         if list_of_word[ind][1] == 'JJ':
             base,target = parse(sent, list_of_word[ind][0], "JJ")
             print(base,  target)
-            return '"', base, '","', target, '"'
+            return base, target
 
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
         base,target = parse(sent, list_of_word[ind][0], "RB")
-        print(base,  target)
-        return '"', base, '","', target, '"'
-
-
+        print(base, target)
+        return base, target
     else:
-        return
-
-
+        return None,None
 
 def recursive_search(p,w,l,phrase, node):
     for i in range(len(p)):
@@ -98,11 +78,11 @@ def recursive_search(p,w,l,phrase, node):
                     phrase,node = recursive_search(j,w,l,phrase,node)
             if len(p[i]) > 1:
                 phrase,node = recursive_search(p[i],w,l,phrase, node)
-
     return phrase,node
+
 def parse(sent,w,l):
     phrase = None
-    base = []
+    base = None
     target = None
     parent_node = None
     parsed_sent = parser.raw_parse(sent)
@@ -122,11 +102,11 @@ def base_search2(target,parent_node,base):
             p_child = {}
             result = []
 
-            while temp.value._label not in noun:
-
+            while temp.value._label not in noun :
+                # print("temp", temp.value)
                 p_child[temp.parent] = temp
                 temp = temp.parent
-            # print("temp",temp.value)
+
             for temp in p_child:
                 i = 0
                 childNode = p_child[temp]
@@ -140,7 +120,7 @@ def base_search2(target,parent_node,base):
                 firstVerb = None
                 subject = result.pop()
                 if type(subject[0]) == nltk.tree.Tree:
-                    print(subject[0]._label)
+                    # print(subject[0]._label)
                     if len(result)>0:
                         if result[len(result)-1]._label in verb:
                             firstVerb = result.pop()
@@ -169,21 +149,15 @@ def readFile(fileName):
     f.close()
     result = segmentWords('\n'.join(contents))
     return result
-
+num_tag = []
 with open('./verified_analogies.csv') as file:
     readcsv = csv.reader(file,delimiter = ',')
     for row in readcsv:
         sentence = row[1]
+        tag = row[0]
+        num_tag.append(tag)
         token = nltk.word_tokenize(sentence)
         sentences.append(sentence)
-
-# def tryoutParent(sent):
-#     parsed_sent = parser.raw_parse(sent)
-#     node_parent = None
-#     for line in parsed_sent:
-#         p = Node(line)
-#         node_parent = creatingParentNode(line,p)
-#     return node_parent
 
 def creatingParentNode(key, node):
     for count in range(len(key)):
@@ -198,32 +172,34 @@ def checkAvailabilityNode(key):
     count = len(key)
     for i in range(count):
         if len(key[i]) > 1:
-            return  True
+            return True
     return False
 
-def writeCSVFile(txt):
-    f = open('base_target_ouput.csv', 'w')
-    f.write(txt)  # Give your csv text here.
-    ## Python will convert \n to os.linesep
+def writeTSVFile():
+    f = open('base_target_output.csv', 'w')
+    for line in text_output:
+            f.write(line)
     f.close()
-
 
 # print(len(sentences))
 p_sent = []
 start = time()
 c = lower_tie
+base = []
+target = []
+trash = [",","'", '"', "`"]
+text_output = "ID, Sentence, Target, Base\n"
 for i in range(lower_tie,upper_tie):
-    p_sent.append(linking_word_check(sentences[i]))
+    b,t = linking_word_check(sentences[i])
+    for s in trash:
+        b = "".join(str(b).split(s))
+        t = "".join(str(t).split(s))
+    base.append(b)
+    target.append(t)
+for i in range(lower_tie,upper_tie):
+    text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i])+ '","'+ str(target[i]) + '"' + "\n"
 
-text_output = ""
-for sent in p_sent:
-    print('***\t', sentences[c], "\t***")
-    text_output += str(c) + ","+sentences[c]
-    print("___", c + 1, "___")
-    print("___",sent,"___")
-    text_output += str(sent) +"\n"
-    c += 1
-writeCSVFile(text_output)
+writeTSVFile()
 end = time()
 print("time: ", end - start)
 

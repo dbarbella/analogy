@@ -7,3 +7,6 @@ In the folder 2018. Run the file: parser.py. This file has not yet been commente
 The sample data is taken from sampleTraining.csv. There are only some samples as I am developing the algorithm.
 To modify the batch, refer to variable lower_tie and upper_tie. The lower end min is 1 and the upper end maximum is 157
 
+To run an arbitrary text, user needs to make a CSV file with this format:
+"ID", "Sentence"
+And replace the path to the CSV into the open file function. 
