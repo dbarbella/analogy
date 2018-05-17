@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d467e49e-303e-4cae-9737-74223d28120f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2018/base_target_output.tsv" afterPath="$PROJECT_DIR$/2018/base_target_output.tsv" />
+      <change beforePath="$PROJECT_DIR$/2018/base_target_output.csv" afterPath="$PROJECT_DIR$/2018/base_target_output.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_target_output.csv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base_target_output.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="704" column="0" lean-forward="false" selection-start-line="704" selection-start-column="0" selection-end-line="704" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_target_output.tsv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base_target_output.tsv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2018/base_target_output.tsv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
@@ -94,8 +94,8 @@
       <list>
         <option value="$PROJECT_DIR$/2018/readme.md" />
         <option value="$PROJECT_DIR$/2018/parser.py" />
-        <option value="$PROJECT_DIR$/2018/base_target_output.csv" />
         <option value="$PROJECT_DIR$/2018/base_target_output.tsv" />
+        <option value="$PROJECT_DIR$/2018/base_target_output.csv" />
       </list>
     </option>
   </component>
@@ -372,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526580370580</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="reformat output file">
+      <created>1526580748705</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1526580748705</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -476,14 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="704" column="0" lean-forward="false" selection-start-line="704" selection-start-column="0" selection-end-line="704" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2018/parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3086">
@@ -498,6 +497,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="724" column="0" lean-forward="true" selection-start-line="724" selection-start-column="0" selection-end-line="724" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
       </provider>
