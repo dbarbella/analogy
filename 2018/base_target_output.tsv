@@ -1,5 +1,5 @@
-ID	Sentence	Base	Target
-[BRWN, PARA#13855, SENT#3]	 and yet like a child among adults .	(NP (NNS sensations))	(NP
+ID	Sentence	Target	Base
+"[BRWN, PARA#6643, SENT#2]"	"I don't mean a few aesthetes who play about with sensations like a young prince in a miniature dabbling his hand in a pool ."	"(NP (NNS sensations))"	"(NP
   (NP (DT a) (JJ young) (NN prince))
   (PP
     (IN in)
@@ -8,12 +8,91 @@ ID	Sentence	Base	Target
       (VP
         (VBG dabbling)
         (NP (PRP$ his) (NN hand))
-        (PP (IN in) (NP (DT a) (NN pool)))))))
-[BRWN, PARA#6643, SENT#2]	I don't mean a few aesthetes who play about with sensations like a young prince in a miniature dabbling his hand in a pool .	[Tree('NP', [Tree('PRP', ['he'])]), None, Tree('VBG', ['holding']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['bottle'])]), Tree('VP', [Tree('VBG', ['being']), Tree('ADJP', [Tree('JJ', ['queer']), Tree('CC', ['and']), Tree('JJ', ['careful'])])]), Tree('VP', [Tree('VBG', ['pawing']), Tree('IN', ['about']), Tree('PP', [Tree('IN', ['in']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['drawer'])])])]), Tree('VBD', ['was'])]	(NP
+        (PP (IN in) (NP (DT a) (NN pool)))))))"
+"[BRWN, PARA#11103, SENT#1]"	"Oh , he was being queer and careful , pawing about in the drawer and holding the bottle like a snake at the length of his arm ."	"[Tree('NP', [Tree('PRP', ['he'])]), None, Tree('VBG', ['holding']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['bottle'])]), Tree('VP', [Tree('VBG', ['being']), Tree('ADJP', [Tree('JJ', ['queer']), Tree('CC', ['and']), Tree('JJ', ['careful'])])]), Tree('VP', [Tree('VBG', ['pawing']), Tree('IN', ['about']), Tree('PP', [Tree('IN', ['in']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['drawer'])])])]), Tree('VBD', ['was'])]"	"(NP
   (NP (DT a) (NN snake))
   (PP
     (IN at)
     (NP
       (NP (DT the) (NN length))
-      (PP (IN of) (NP (PRP$ his) (NN arm))))))
-[BRWN, PARA#11103, SENT#1]	Oh , he was being queer and careful , pawing about in the drawer and holding the bottle like a snake at the length of his arm .	(NP (NNS men))	(NP (NN sheep))
+      (PP (IN of) (NP (PRP$ his) (NN arm))))))"
+"[BRWN, PARA#7932, SENT#4]"	"`` I went to the city and there I did weep , men a-crowing like asses , and living like sheep ."	"(NP (NNS men))"	"(NP (NN sheep))"
+"[BRWN, PARA#10745, SENT#1]"	"Rumor of a big battle spread like a grassfire up the valley ."	"(NP (NP (NNP Rumor)) (PP (IN of) (NP (DT a) (JJ big) (NN battle))))"	"(NP (DT a) (NN grassfire))"
+"[BRWN, PARA#10432, SENT#2]"	"When the sun came out , Stevie strode proudly into Orange Square, smiling like a landlord on industrious tenants ."	"(VBG smiling)"	"(NP
+  (NP (DT a) (NN landlord))
+  (PP (IN on) (NP (JJ industrious) (NNS tenants))))"
+"[BRWN, PARA#15342, SENT#3]"	"They gave the room a strange note of incongruity , like a mole on a beautiful face ."	"[Tree('NP', [Tree('PRP', ['They'])]), None, Tree('VBD', ['gave']), Tree('NP', [Tree('DT', ['the']), Tree('NN', ['room'])]), Tree('NP', [Tree('NP', [Tree('DT', ['a']), Tree('JJ', ['strange']), Tree('NN', ['note'])]), Tree('PP', [Tree('IN', ['of']), Tree('NP', [Tree('NN', ['incongruity'])])])])]"	"(NP (DT a) (NN mole))"
+"[BRWN, PARA#10442, SENT#25]"	"It always came on , faithfully , just like a radio or juke box , whenever he started to worry too much about something , when the bad things tried to push their way into him ."	"[Tree('NP', [Tree('PRP', ['It'])]), None, Tree('VBD', ['came']), Tree('PP', [Tree('IN', ['on']), Tree(',', [',']), Tree('ADVP', [Tree('RB', ['faithfully'])]), Tree(',', [',']), Tree('ADVP', [Tree('RB', ['just'])])])]"	"(NP (DT a) (NN radio) (CC or) (NN juke) (NN box))"
+"[BRWN, PARA#4440, SENT#1]"	"The design of a mechanical interlocking frame is much like a mechanical puzzle , but once understood , the principles can be applied to any track and signal arrangement ."	"(NP
+  (NP (DT The) (NN design))
+  (PP
+    (IN of)
+    (NP (DT a) (JJ mechanical) (NN interlocking) (NN frame))))"	"(NP (DT a) (JJ mechanical) (NN puzzle))"
+"[BRWN, PARA#14598, SENT#3]"	"The sticks fell like a shower around her and she felt them sting her flesh and send tiny points of pain along her thighs ."	"(NP (DT The) (NN sticks))"	"(NP (DT a) (NN shower))"
+"[BRWN, PARA#12957, SENT#3]"	"I saw the pony fall like a stone and the young warrior flew over its head , bouncing like a rubber ball ."	"(VBG bouncing)"	"(NP (DT a) (NN rubber) (NN ball))"
+"[BRWN, PARA#10517, SENT#7]"	"The redcoat officer collapsed like a punctured bolster , and the horse reared and threw him from the saddle , except that one booted foot caught in the stirrup ."	"(NP (DT The) (NN redcoat) (NN officer))"	"(NP (DT a) (JJ punctured) (NN bolster))"
+"[BRWN, PARA#13928, SENT#1]"	"As Matsuo climbed by using the vines and kicking his feet against the trunk , a mood of gloom immersed him like a jungle shadow ."	"(NP (NP (DT a) (NN mood)) (PP (IN of) (NP (NN gloom))))"	"(NP (DT a) (NN jungle) (NN shadow))"
+"[BRWN, PARA#14854, SENT#3]"	"But Chris brightened up like a candle ."	"(NP (NNP Chris))"	"(NP (DT a) (NN candle))"
+"[BRWN, PARA#4370, SENT#2]"	"Aids sounds more like a Pony Club , or horsemanship classes -- riding a horse and showing a dog are very similar ! !"	"[]"	"None"
+"[BRWN, PARA#5915, SENT#16]"	"But I would say I recond he did not mind it for he had a plenty more left and then they would lean to me like a sore eyd kitten to a basin of milk '' ."	"[Tree('NP', [Tree('PRP', ['they'])]), None, Tree('VB', ['lean']), Tree('PP', [Tree('TO', ['to']), Tree('NP', [Tree('PRP', ['me'])])]), Tree('MD', ['would'])]"	"(NP (DT a) (JJ sore) (NN eyd) (NN kitten))"
+"[BRWN, PARA#9134, SENT#4]"	"This theorem is similar to the theorem of Kakutani that there exists a circumscribing cube around any closed , bounded convex set in Af ."	"(NP (DT This) (NN theorem))"	"(PP
+  (TO to)
+  (NP (NP (DT the) (NN theorem)) (PP (IN of) (NP (NNP Kakutani)))))"
+"[BRWN, PARA#11825, SENT#3]"	"His hands snatched at an imaginary bucket , swooping down hard to grab it and coming away with equal snap like a ball that's been bounced hard ."	"(VP
+  (VBG swooping)
+  (ADVP (RB down) (RB hard))
+  (S (VP (TO to) (VP (VB grab) (NP (PRP it))))))"	"(NP
+  (NP (DT a) (NN ball))
+  (SBAR
+    (WHNP (WDT that))
+    (S (VP (VBZ 's) (VP (VBN been) (ADJP (RB bounced) (JJ hard)))))))"
+"[BRWN, PARA#3874, SENT#5]"	"For this does not account for the integral , elemental power of that which grows with abounding vigor as the play unfolds , nor does it explain the strange numinous sense of presentness which comes over those who watch the play like a spell ."	"(NP (DT the) (NN play))"	"(NP (DT a) (NN spell))"
+"[BRWN, PARA#2794, SENT#6]"	"Bitterness comes over him and the taste of time is like unripe persimmons in his mouth ."	"(NP (NP (DT the) (NN taste)) (PP (IN of) (NP (NN time))))"	"(NP
+  (NP (JJ unripe) (NNS persimmons))
+  (PP (IN in) (NP (PRP$ his) (NN mouth))))"
+"[BRWN, PARA#149, SENT#1]"	"The aged care plan , similar to one the President sponsored last year as a senator , a fight on Capitol hill ."	"None"	"(PP (TO to) (NP (CD one)))"
+"[BRWN, PARA#2288, SENT#2]"	"Thousands of buffalo ( `` bison '' they will never be to the man on the street ) grazing like a mobile brown throw-rug upon the rolling , dusty-green grassland ."	"(NP
+  (NP (NP (NNS Thousands)) (PP (IN of) (NP (NN buffalo))))
+  (PRN
+    (-LRB- -LRB-)
+    (NP
+      (NP (`` ``) (NN bison) ('' ''))
+      (SBAR
+        (S
+          (NP (PRP they))
+          (VP
+            (MD will)
+            (ADVP (RB never))
+            (VP
+              (VB be)
+              (PP
+                (TO to)
+                (NP
+                  (NP (DT the) (NN man))
+                  (PP (IN on) (NP (DT the) (NN street))))))))))
+    (-RRB- -RRB-)))"	"(NP (DT a) (JJ mobile) (JJ brown) (NN throw-rug))"
+"[BRWN, PARA#7095, SENT#2]"	"The first news stories had it that this blaze was started by a bolt of lightning , as though Miriam could call down fire from heaven like a prophet of the Old Testament ."	"(NP (NNP Miriam))"	"(NP
+  (NP (DT a) (NN prophet))
+  (PP (IN of) (NP (DT the) (JJ Old) (NN Testament))))"
+"[BRWN, PARA#14002, SENT#3]"	"Charles , also fifteen , was tall and skinny , scraggly , with straight black hair like an Indian's and sharp brown eyes ."	"(NP
+  (NP (NNP Charles))
+  (, ,)
+  (RRC (ADVP (RB also)) (NP (CD fifteen)))
+  (, ,))"	"(NP
+  (NP (DT an) (NNP Indian) (POS 's))
+  (CC and)
+  (NP (JJ sharp) (JJ brown) (NNS eyes)))"
+"[BRWN, PARA#14920, SENT#7]"	"I felt like a Hun in Rome ."	"[Tree('NP', [Tree('PRP', ['I'])]), None, Tree('VBD', ['felt'])]"	"(NP (DT a) (NNP Hun))"
+"[BRWN, PARA#15656, SENT#1]"	"`` I paint the nothing '' , he said once to Franz Kline and myself , `` the nothing that is behind the something , the inexpressible , unpaintable ' tick ' in the unconscious , the ' spirit ' of the moment resting forever , suspended like a huge balloon , in non-time '' ."	"(PP
+  (IN of)
+  (NP
+    (NP (DT the) (NN moment))
+    (VP (VBG resting) (ADVP (RB forever)))))"	"(NP (DT a) (JJ huge) (NN balloon))"
+"[BRWN, PARA#10277, SENT#4]"	"At the slope's base coils of concertina stretched out of eye range like a wild tangle of children's hoops , stopped simultaneously , weirdly poised as if awaiting the magic of the child's touch to start them all rolling again ."	"(NP (NP (NNS coils)) (PP (IN of) (NP (NN concertina))))"	"(NP
+  (NP (DT a) (JJ wild) (NN tangle))
+  (PP (IN of) (NP (NP (NNS children) (POS 's)) (NNS hoops)))
+  (, ,)
+  (VP (VBN stopped) (ADVP (RB simultaneously)))
+  (, ,)
+  (VP (ADVP (RB weirdly)) (VBN poised)))"
+"[BRWN, PARA#6824, SENT#3]"	"The specific analogy to the dilemma of love is the problem of the `` breakthrough '' in the realm of art ."	"None"	"None"
