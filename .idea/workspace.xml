@@ -29,8 +29,8 @@
       <file leaf-file-name="base_target_output.csv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="500">
+              <caret line="723" column="0" lean-forward="true" selection-start-line="723" selection-start-column="0" selection-end-line="723" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -337,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526577888198</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="reformat output file">
+      <created>1526578021957</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1526578021957</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -461,8 +468,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2018/base_target_output.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="723" column="0" lean-forward="true" selection-start-line="723" selection-start-column="0" selection-end-line="723" selection-end-column="0" />
           <folding />
         </state>
       </provider>
