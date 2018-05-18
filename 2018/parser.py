@@ -11,6 +11,7 @@ parser = stanford.StanfordParser(model,jar,encoding = 'utf8')
 verb = ['VB', 'VBZ', 'VBC' , 'VBN', 'VBP']
 noun = ['NP','NN', 'NNP', 'NNS', 'PRP', 'S', 'WHNP']
 pronoun =['UH', 'CC', ',', 'INTJ','ADVP','RRC','PRN','RB', 'TO']
+phrases = ['S','SBAR']
 class Node:
     def __init__(self,value):
         self.value = value
@@ -32,7 +33,7 @@ sentences = []
 lower_tie = 4
 upper_tie = 157
 
-phrases = ['S','SBAR']
+
 
 def linking_word_check(sent):
     # print(sent)
@@ -46,22 +47,22 @@ def linking_word_check(sent):
     if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
         if list_of_word[ind][1] == "JJ":
             base, target = parse(sent, list_of_word[ind][0], "JJ")
-            print(base ,  target)
+            # print(base ,  target)
             return base, target
     elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
             base,target = parse(sent,list_of_word[ind][0],"IN")
-            print(base,  target)
+            # print(base,  target)
             return base, target
 
         if list_of_word[ind][1] == 'JJ':
             base,target = parse(sent, list_of_word[ind][0], "JJ")
-            print(base,  target)
+            # print(base,  target)
             return base, target
 
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
         base,target = parse(sent, list_of_word[ind][0], "RB")
-        print(base, target)
+        # print(base, target)
         return base, target
     else:
         return None,None
@@ -103,7 +104,6 @@ def base_search2(target,parent_node,base):
             result = []
 
             while temp.value._label not in noun :
-                # print("temp", temp.value)
                 p_child[temp.parent] = temp
                 temp = temp.parent
 
@@ -140,24 +140,18 @@ def base_search2(target,parent_node,base):
 
 def segmentWords(s):
     return s.split()
-
-def readFile(fileName):
-    contents = []
-    f = open(fileName)
-    for line in f:
-        contents.append(line)
-    f.close()
-    result = segmentWords('\n'.join(contents))
-    return result
 num_tag = []
-with open('./verified_analogies.csv') as file:
-    readcsv = csv.reader(file,delimiter = ',')
-    for row in readcsv:
-        sentence = row[1]
-        tag = row[0]
-        num_tag.append(tag)
-        token = nltk.word_tokenize(sentence)
-        sentences.append(sentence)
+def readFile(fileName):
+    sent =[]
+    with open(fileName) as file:
+        readcsv = csv.reader(file, delimiter=',')
+        for row in readcsv:
+            sentence = row[1]
+            tag = row[0]
+            num_tag.append(tag)
+            sent.append(sentence)
+    return sent
+
 
 def creatingParentNode(key, node):
     for count in range(len(key)):
@@ -175,34 +169,40 @@ def checkAvailabilityNode(key):
             return True
     return False
 
-def writeTSVFile():
-    f = open('base_target_output.csv', 'w')
-    for line in text_output:
-            f.write(line)
-    f.close()
+# def writeTSVFile():
+#     f = open('base_target_output.csv', 'w')
+#     for line in text_output:
+#             f.write(line)
+#     f.close()
 
 # print(len(sentences))
-p_sent = []
-start = time()
-c = lower_tie
+# p_sent = []
+# start = time()
+# c = lower_tie
 base = []
 target = []
 trash = [",","'", '"', "`"]
-text_output = "ID, Sentence, Target, Base\n"
-for i in range(lower_tie,upper_tie):
-    b,t = linking_word_check(sentences[i])
+# text_output = "ID, Sentence, Target, Base\n"
+# for i in range(lower_tie,upper_tie):
+#     b,t = linking_word_check(sentences[i])
+#     for s in trash:
+#         b = "".join(str(b).split(s))
+#         t = "".join(str(t).split(s))
+#     base.append(b)
+#     target.append(t)
+# for i in range(lower_tie,upper_tie):
+#     text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i])+ '","'+ str(target[i]) + '"' + "\n"
+
+# writeTSVFile()
+# end = time()
+# print("time: ", end - start)
+
+def chunk(sentence):
+    b, t = linking_word_check(sentence)
     for s in trash:
         b = "".join(str(b).split(s))
         t = "".join(str(t).split(s))
-    base.append(b)
-    target.append(t)
-for i in range(lower_tie,upper_tie):
-    text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i])+ '","'+ str(target[i]) + '"' + "\n"
-
-writeTSVFile()
-end = time()
-print("time: ", end - start)
-
+    return b,t
 
 # for i in range(lower_tie,upper_tie):
 #     p_sent.append(tryoutParent(sentences[i]))
@@ -218,7 +218,9 @@ print("time: ", end - start)
 #         print(sentence,end = "\n\n")
 #         c+=1
 
-
+# sentences = readFile('./verified_analogies.csv')
+# for s in sentences:
+#     chunk(s)
 # print(sentences)
 # # GUI
 # for line in parsed_sent:
