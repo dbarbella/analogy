@@ -24,7 +24,7 @@ class TestCase(unittest.TestCase):
             self.assertEqual(project_target,target[i])
     def test_None(self):
         sentences = readFile('./verified_analogies.csv')
-        for s in sentences
+        for s in sentences:
             self.assertIsNotNone(chunk(s))
 
 if __name__ == '__main__':
