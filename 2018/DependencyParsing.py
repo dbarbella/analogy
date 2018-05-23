@@ -13,7 +13,7 @@ noun = ['NP','NN', 'NNP', 'NNS', 'PRP']
 tobe = ["was being", "were being" "will be", "is going to", "am going to", "are going to", "has been", "have been", "am", "are", "is", "was", "were"]
 def dependency_parse(sentence):
     for v in tobe:
-        sentence = sentence.replace('\b'+v+'\b','do')
+        sentence = sentence.replace('\b'+v+'\b','behave')
     result = dependency_parser.raw_parse(sentence)
     # dep = result.__next__()
     target = None
@@ -33,33 +33,54 @@ def target_search(p):
     return None, None
 
 def base_search(tar_index,line):
-    base_index = line[tar_index]["head"]
+    base_index = tar_index
     while line[base_index]["tag"] not in verb:
-        base_index = line[base_index]["head"]
-    temp = line[base_index]["head"]
-    if line[temp]["tag"] in noun:
-        return line[temp]["word"]
-    elif line[temp]["tag"] in verb and check_nested_SV(line, base_index):
+        temp = line[base_index]["head"]
+        if temp == 0:
+            break
+        else:
+            base_index = temp
+    grand_base_index = line[base_index]["head"]
+    if line[grand_base_index]["tag"] in verb:
         for i in range(len(line)):
-            if line[i]["head"] == temp:
-                if line[i]["tag"] in noun and i != tar_index:
-                    return line[i]["word"]
+            if line[i]["head"] == grand_base_index and line[i]["tag"] in noun and i != base_index:
+                return line[i]["word"]
+    elif search_WP(line,base_index):
+        return line[grand_base_index]["word"]
+    # elif "dobj" in line[base_index]["deps"]:
+    #     base_index = line[base_index]["deps"]["dobj"]
+    #     base = base_index[0]
+    #     if line[base]["tag"] in noun and "compound" in line[base]["deps"]:
+    #         base = line[base]["deps"]["compound"]
+    #         b = base[0]
+    #         return line[b]["word"]
+    #     elif line[base]["tag"] in verb:
+    #         for i in range(len(line)):
+    #             if line[i]["head"] == base and line[base]["tag"] in noun and i != tar_index:
+    #                 return line[i]["word"]
+    #     return line[base]["word"]
     else:
         for i in range(len(line)):
-            if line[i]["head"] == base_index:
-                if line[i]["tag"] in noun and i != tar_index:
-                    return line[i]["word"]
-def check_nested_SV(line,base_index):
+            if line[i]["head"] == base_index and line[i]["tag"] in noun and i != tar_index:
+                return line[i]["word"]
+
+def search_WP(line,head):
     for i in range(len(line)):
-        if line[i]["head"] == base_index:
-            if line[i]["tag"] == "WP":
+        if line[i]["head"] == head:
+            if line[i]["tag"] == 'WP':
                 return True
     return False
+
+def countable_check(line,index):
+    if line[index]["tag"] == "CD":
+        base = line[index]["deps"]["nmod"]
+        base_index = base[0]
+        return line[base_index]["word"]
 
 if __name__ == '__main__':
     sentences = readFile('./verified_analogies.csv')
     lower_tie = 0
-    upper_tie = 50
+    upper_tie = 150
     start = time()
     base = []
     target = []
