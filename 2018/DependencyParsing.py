@@ -10,9 +10,9 @@ subject = ['nsubjpass', 'nsubj']
 noun = ['NP','NN', 'NNP', 'NNS', 'PRP']
 linking_words = ["like"]
 number = ["tens", "hundreds", "thousands", "millions", "billions", "trillions","dose","dozen","piece","fragment"]
-tobe = ["was being", "were being" "will be", "is going to", "am going to", "are going to", "has been", "have been", "am", "are", "is", "was", "were"]
+tobe = ["was being", "were being", "will have been", "will be", "is going to", "am going to", "are going to", "has been", "have been", "am", "are", "is", "was", "were"]
 def dependency_parse(sentence,like_count):
-    for v in tobe:
+    for v in tobe: #to be behaves oddly compared with other nouns, hence return it with the verb "behave", which makes the parser perform normal again
         sentence = sentence.replace('\b'+v+'\b','behave')
     result = dependency_parser.raw_parse(sentence)
     target = None
@@ -60,26 +60,32 @@ def base_search(tar_index,line):
     if search_WP(line,base_index): #if there is a Wh-phrase, return the Noun that the Wh is refering to
         return check_numerical(line,grand_base_index)
     else:
-        for s in subject:
+        for s in subject: #up to this stage, it is most likely that the structure would be like this: S V like O
             if s in line[base_index]["deps"]:
                 return find_subject(line,base_index,s)
 
 def find_subject(line,index,s):
+    """find the subject based on the verb"""
     b = line[index]["deps"][s]
     temp = b[len(b) - 1]
     return check_numerical(line, temp)
 
 def check_numerical(line,index):
+    """check if the current noun is a number noun, if it is, return the real noun"""
     if line[index]["word"] is not None:
         if line[index]["tag"] == 'CD' or line[index]["word"].lower() in number:
-            base_index = line[index]["deps"]["nmod"][0]
-            return line[base_index]["word"]
-
+            if "nmod" in line[index]["deps"]:
+                temp = line[index]["deps"]["nmod"]
+                base_index = temp[len(temp)-1]
+                return line[base_index]["word"]
+            else:
+                return line[index]["word"]
         else:
             return line[index]["word"]
 
 
 def search_WP(line,head):
+    """search if the current sentence has a Wh structure, this kinda partly solves the anaphora but not entirely"""
     for i in range(len(line)):
         if line[i]["head"] == head:
             if line[i]["tag"] == 'WP':
