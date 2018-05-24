@@ -84,8 +84,8 @@
       <file leaf-file-name="DependencyParsing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2018/DependencyParsing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="750">
+              <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -489,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527020539810</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="improve dependency parsing">
+      <created>1527098719143</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1527098719143</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -532,7 +539,8 @@
     <MESSAGE value="test cases updated" />
     <MESSAGE value="update readme" />
     <MESSAGE value="dependency parsing" />
-    <option name="LAST_COMMIT_MESSAGE" value="dependency parsing" />
+    <MESSAGE value="improve dependency parsing" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve dependency parsing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -662,8 +670,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2018/DependencyParsing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state relative-caret-position="750">
+          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>

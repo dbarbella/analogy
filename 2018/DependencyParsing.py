@@ -34,6 +34,11 @@ def target_search(p):
 
 def base_search(tar_index,line):
     base_index = tar_index
+    grand_base_index = line[base_index]["head"]
+    if line[grand_base_index]["tag"] in noun and line[grand_base_index]["rel"] == 'dobj':
+        for i in range(grand_base_index,tar_index):
+            if "compound" in line[i]["deps"] and line[i]["head"] == grand_base_index:
+                return line[grand_base_index]["word"]
     while line[base_index]["tag"] not in verb:
         temp = line[base_index]["head"]
         if temp == 0:
@@ -41,28 +46,29 @@ def base_search(tar_index,line):
         else:
             base_index = temp
     grand_base_index = line[base_index]["head"]
-    if line[grand_base_index]["tag"] in verb:
-        for i in range(len(line)):
-            if line[i]["head"] == grand_base_index and line[i]["tag"] in noun and i != base_index:
+    while line[grand_base_index]["tag"] in verb:
+        for i in range(base_index):
+            if line[i]["head"] == base_index and line[i]["tag"] in noun and i != tar_index and line[i]["rel"] != "nmod:tmod":
                 return line[i]["word"]
-    elif search_WP(line,base_index):
+        for i in range(len(line)):
+            if line[i]["head"] == grand_base_index and line[i]["tag"] in noun and i != tar_index and line[i]["rel"] != "nmod:tmod":
+                return line[i]["word"]
+        base_index = line[base_index]["head"]
+        grand_base_index = line[base_index]["head"]
+
+    if search_WP(line,base_index):
         return line[grand_base_index]["word"]
-    # elif "dobj" in line[base_index]["deps"]:
-    #     base_index = line[base_index]["deps"]["dobj"]
-    #     base = base_index[0]
-    #     if line[base]["tag"] in noun and "compound" in line[base]["deps"]:
-    #         base = line[base]["deps"]["compound"]
-    #         b = base[0]
-    #         return line[b]["word"]
-    #     elif line[base]["tag"] in verb:
-    #         for i in range(len(line)):
-    #             if line[i]["head"] == base and line[base]["tag"] in noun and i != tar_index:
-    #                 return line[i]["word"]
-    #     return line[base]["word"]
     else:
         for i in range(len(line)):
-            if line[i]["head"] == base_index and line[i]["tag"] in noun and i != tar_index:
+            if line[i]["head"] == base_index and line[i]["tag"] in noun and i != tar_index and line[i]["rel"] != "nmod:tmod":
                 return line[i]["word"]
+
+def check_numerical(line,index):
+    if line[index]["tag"] == 'CD':
+        for i in range(index, len(line)):
+            if line[i]["head"] == index and line[i]["tag"] in noun:
+                return line[i]["word"]
+
 
 def search_WP(line,head):
     for i in range(len(line)):
@@ -71,25 +77,25 @@ def search_WP(line,head):
                 return True
     return False
 
-def countable_check(line,index):
-    if line[index]["tag"] == "CD":
-        base = line[index]["deps"]["nmod"]
-        base_index = base[0]
-        return line[base_index]["word"]
+
 
 if __name__ == '__main__':
     sentences = readFile('./verified_analogies.csv')
     lower_tie = 0
     upper_tie = 150
     start = time()
+    count = 0
     base = []
     target = []
     for i in range(lower_tie,upper_tie):
         print('____', i, '_____')
         print(sentences[i])
         t,b = dependency_parse(sentences[i])
+        if t and b is not None:
+            count+=1
         base.append(b)
         target.append(t)
         print(b, '________', t)
     print('running time:', time() - start)
+    print('detect:', count)
 
