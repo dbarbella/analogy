@@ -59,3 +59,16 @@ if __name__ == "__main__":
     best_parameters = grid_search.best_estimator_.get_params()
     for param_name in sorted(parameters.keys()):
         print("\t%s: %r" % (param_name, best_parameters[param_name]))
+    print()
+    
+    print("Getting the confusion matrix for the best estimator:")
+    prediction = grid_search.best_estimator_.predict(test_data)
+    matrix = confusion_matrix(test_labels, prediction, labels = ['YES', 'NO'])
+    precision, recall, f_measure = functions.fmeasure(matrix)
+    accuracy = accuracy_from_matrix(matrix)
+    print("Accuracy ", accuracy)
+    print("Precision, recall, f-score:")
+    print(precision, recall, f_measure)
+    print(matrix)
+    print()
+
