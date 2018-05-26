@@ -79,7 +79,7 @@ def preposition(train_data, test_data):
 
 # Transform the data so it can be represented using tfidf
 def tfidf(train_data, test_data, extra):
-    TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'])
+    TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'], min_df=extra['min_df'])
     TfidfTrans = TfidfVect.fit_transform(train_data)
     TfidfTrans_test = TfidfVect.transform(test_data)
     return(TfidfTrans, TfidfTrans_test)
@@ -139,7 +139,7 @@ def get_classifier(name, extra):
         elif extra["sub_class"] == "linear":
             return LinearSVC(C=extra['C'])
         elif extra["sub_class"] == "nusvc":
-            return NuSVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'])
+            return NuSVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'], decision_function_shape=extra['decision_function_shape'], degree=extra['degree'], nu=extra['nu'], tol=extra['tol'])
     elif name == "neural":
         return MLPClassifier(hidden_layer_sizes=extra['hidden_layer_sizes'], activation=extra['activation'], solver=extra['solver'], max_iter=extra['max_iter'], early_stopping=extra['early_stopping'], learning_rate=extra['learning_rate'])
     elif name == "naive":
@@ -172,10 +172,12 @@ def set_default(extra, key, value):
         extra[key] = value
 
 def set_extra(extra):
+    set_default(extra,'sub_class', "")
     set_default(extra,'stop_words', None)
     set_default(extra,'hidden_layer_sizes', 100)
     set_default(extra,'activation', 'relu')
     set_default(extra,'max_df', 1.0)
+    set_default(extra,'min_df', 1.0)
     set_default(extra,'norm', 'l2')
     set_default(extra,'alpha', 1.0)
     set_default(extra,'kernel', 'rbf')
@@ -187,7 +189,11 @@ def set_extra(extra):
     set_default(extra,'solver_log', 'liblinear')
     set_default(extra,'early_stopping', False)
     set_default(extra,'C', 1.0)
+    set_default(extra,'degree', 3)
     set_default(extra,'learning_rate','constant')
+    set_default(extra,'decision_function_shape','ovr')
+    set_default(extra,'nu', 0.5)
+    set_default(extra,'tol', 0.001)
     return(extra)
 
 
