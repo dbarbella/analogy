@@ -77,7 +77,7 @@ def preposition(train_data, test_data):
     pp_test_set = [get_pp(text) for text in test_data]
     dict_vect = DictVectorizer()
     PpTrans = dict_vect.fit_transform(pp_training_set)
-    PpTest = dict_vect.fit(pp_test_set)
+    PpTest = dict_vect.transform(pp_test_set)
     return (PpTrans, PpTest)
 
 def base_target_pair(train_data, test_data, extra):
@@ -85,7 +85,7 @@ def base_target_pair(train_data, test_data, extra):
     bt_testing = [dependency_parse(text) for text in test_data]
     dict_vect = DictVectorizer()
     bt_train = dict_vect.fit_transform(bt_training)
-    bt_test = dict_vect.fit(bt_testing)
+    bt_test = dict_vect.transform(bt_testing)
     return (bt_train, bt_test)
 
 

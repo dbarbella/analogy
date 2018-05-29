@@ -21,7 +21,10 @@ def dependency_parse(sentence):
         target, tar_index = target_search(line.nodes)
         if tar_index is not None:
             base = base_search(tar_index,line.nodes)
-    return target,base
+    if base is not None:
+        return {"base":base, "target":target}
+    else:
+        return {"base": "", "target": ""}
 
 def target_search(p):
     for i in range(len(p)):
