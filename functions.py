@@ -1,9 +1,10 @@
-import nltk
-from analogy_strings import analogy_string_list
-from sentence_parser import get_speech_tags
-from personal import root
+# import nltk
+# from analogy_strings import analogy_string_list
+# from sentence_parser import get_speech_tags
+# from personal import root
 #------------------------
 from nltk.classify import SklearnClassifier
+from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import confusion_matrix
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
@@ -19,11 +20,15 @@ from timeout import timeout
 #------------------------
 import random
 import re
+import csv
 from boyer_moore import find_boyer_moore
 #-------------------------
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectPercentile, f_classif
+sys.path.insert(0, './2018')
+from DependencyParsing import dependency_parse
 
+"""To add new feature, add new function that takes a train and a test set and extra and return a train and a test set based on what representation you want ot use"""
 def get_list(filename):
     # Returns all training data as a list
     # File should be formatted as a text line followed '>' in the next line
@@ -39,15 +44,13 @@ def get_list(filename):
 
 # Returns all training data as a list which contains only the text(removing the source, paragraph #, sentence #, ratings
 def get_list_re(filename):
-    list = []
-    file = open(filename, "r", encoding = "utf-8")
-    for line in file.readlines():
-        if line[0] != '>' and line != "\n":
-            l = line.split("]\",")[-1]
-            final = re.sub("[^a-zA-Z]"," ", l)
-            list.append(final)
-
-    return list
+    sent = []
+    with open(filename) as file:
+        readcsv = csv.reader(file, delimiter=',')
+        for row in readcsv:
+            sentence = row[1]
+            sent.append(sentence)
+    return sent
 
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test, caller=''):
@@ -76,6 +79,15 @@ def preposition(train_data, test_data):
     PpTrans = dict_vect.fit_transform(pp_training_set)
     PpTest = dict_vect.fit(pp_test_set)
     return (PpTrans, PpTest)
+
+def base_target_pair(train_data, test_data, extra):
+    bt_training = [dependency_parse(text) for text in train_data]
+    bt_testing = [dependency_parse(text) for text in test_data]
+    dict_vect = DictVectorizer()
+    bt_train = dict_vect.fit_transform(bt_training)
+    bt_test = dict_vect.fit(bt_testing)
+    return (bt_train, bt_test)
+
 
 # Transform the data so it can be represented using tfidf
 def tfidf(train_data, test_data, extra):
@@ -155,6 +167,8 @@ def get_representation(train_data, test_data, representation, classifier, extra)
         return tfidf(train_data, test_data, extra)
     elif representation == "count":
         return countvect(train_data, test_data, extra)
+    elif representation == "base_target":
+        return base_target_pair(train_data,test_data,extra)
     elif representation == "hash":
         if classifier == "naive":
             return hashing(train_data, test_data, extra, "naive")
@@ -176,8 +190,8 @@ def set_extra(extra):
     set_default(extra,'stop_words', None)
     set_default(extra,'hidden_layer_sizes', 100)
     set_default(extra,'activation', 'relu')
-    set_default(extra,'max_df', 1.0)
-    set_default(extra,'min_df', 1.0)
+    set_default(extra,'max_df', 1.0) #1.0
+    set_default(extra,'min_df', 0.5) #1.0
     set_default(extra,'norm', 'l2')
     set_default(extra,'alpha', 1.0)
     set_default(extra,'kernel', 'rbf')
@@ -194,6 +208,7 @@ def set_extra(extra):
     set_default(extra,'decision_function_shape','ovr')
     set_default(extra,'nu', 0.5)
     set_default(extra,'tol', 0.001)
+    set_default(extra, 'word_hypernyms', 0.001)
     return(extra)
 
 

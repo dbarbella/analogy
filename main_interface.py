@@ -80,8 +80,8 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
        
 
 if __name__ == '__main__':
-    positive_set = 'test_extractions/bc_samples.txt'
-    negative_set = 'test_extractions/random_grounds.txt'
-    analogy_pipeline(positive_set, negative_set, .5, 'tfidf', 'svm')
+    positive_set = 'corpora/verified_analogies.csv'
+    negative_set = 'corpora/verified_non_analogies.csv'
+    analogy_trial(positive_set, negative_set, .5, 'tfidf', 'svm')
 
     

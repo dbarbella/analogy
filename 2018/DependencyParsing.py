@@ -1,5 +1,5 @@
 from nltk.parse.stanford import StanfordDependencyParser
-from parser import readFile, writeTSVFile
+# from parser import readFile, writeTSVFile
 
 path_to_jar = './stanford-parser/jars/stanford-parser.jar'
 path_to_models_jar = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
@@ -11,25 +11,25 @@ noun = ['NP','NN', 'NNP', 'NNS', 'PRP']
 linking_words = ["like"]
 number = ["tens", "hundreds", "thousands", "millions", "billions", "trillions","dose","dozen","piece","fragment"]
 tobe = ["was being", "were being", "will have been", "will be", "is going to", "am going to", "are going to", "has been", "have been", "am", "are", "is", "was", "were"]
-def dependency_parse(sentence,like_count):
+def dependency_parse(sentence):
     for v in tobe: #to be behaves oddly compared with other nouns, hence return it with the verb "behave", which makes the parser perform normal again
         sentence = sentence.replace('\b'+v+'\b','behave')
     result = dependency_parser.raw_parse(sentence)
     target = None
     base = None
     for line in result:
-        target, tar_index,like_count = target_search(line.nodes,like_count)
+        target, tar_index = target_search(line.nodes)
         if tar_index is not None:
             base = base_search(tar_index,line.nodes)
-    return target,base,like_count
+    return target,base
 
-def target_search(p,like_count):
+def target_search(p):
     for i in range(len(p)):
         if p[i]["word"] in linking_words:
             index = p[i]["head"]
-            like_count += 1
-            return check_numerical(p,index), index, like_count
-    return None, None, like_count
+
+            return check_numerical(p,index), index
+    return None, None
 
 def base_search(tar_index,line):
     base_index = tar_index
@@ -93,32 +93,32 @@ def search_WP(line,head):
     return False
 
 
-if __name__ == '__main__':
-    num_tag = []
-    sentences,num_tag = readFile('./verified_analogies.csv')
-    lower_tie = 0
-    upper_tie = 157
-    start = time()
-    count = 0
-    base = []
-    target = []
-    like_count = 0
-    text_output = "ID, Sentence, Target, Base\n"
-    for i in range(lower_tie,upper_tie):
-        print('____', i, '_____')
-        print(sentences[i])
-        t,b, like_count = dependency_parse(sentences[i],like_count)
-        if t and b is not None:
-            count+=1
-        base.append(b)
-        target.append(t)
-        print(b, '________', t)
-    print(len(base))
-    print(len(target))
-    print(like_count)
-    for i in range(lower_tie,upper_tie):
-        text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i]) + '","' + str(target[i]) + '"' + "\n"
-    writeTSVFile('base_target.csv', text_output)
-    print('running time:', time() - start)
-    print('detect:', count)
+# if __name__ == '__main__':
+#     num_tag = []
+#     sentences,num_tag = readFile('./verified_analogies.csv')
+#     lower_tie = 0
+#     upper_tie = 157
+#     start = time()
+#     count = 0
+#     base = []
+#     target = []
+#     like_count = 0
+#     text_output = "ID, Sentence, Target, Base\n"
+#     for i in range(lower_tie,upper_tie):
+#         print('____', i, '_____')
+#         print(sentences[i])
+#         t,b = dependency_parse(sentences[i])
+#         if t and b is not None:
+#             count+=1
+#         base.append(b)
+#         target.append(t)
+#         print(b, '________', t)
+#     print(len(base))
+#     print(len(target))
+#     print(like_count)
+#     for i in range(lower_tie,upper_tie):
+#         text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i]) + '","' + str(target[i]) + '"' + "\n"
+#     writeTSVFile('base_target.csv', text_output)
+#     print('running time:', time() - start)
+#     print('detect:', count)
 

@@ -78,6 +78,10 @@ parameters_count = {
     #'count__stop_words' : ('english', None),
     'count__min_df': (0.1, 0.2, 0.3)                        
 }
+
+parameters_wordnet = {
+
+}
     
 parameters_tfidf = {
     'tfidf__max_df': (0.5, 0.75, 0.8),
