@@ -1,5 +1,6 @@
 from nltk.parse.stanford import StanfordDependencyParser
 # from parser import readFile, writeTSVFile
+from nltk.corpus import wordnet as wn
 
 path_to_jar = './stanford-parser/jars/stanford-parser.jar'
 path_to_models_jar = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
@@ -22,9 +23,36 @@ def dependency_parse(sentence):
         if tar_index is not None:
             base = base_search(tar_index,line.nodes)
     if base is not None:
-        return {"base":base, "target":target}
+        base = wn.morphy(changePronoun(base), wn.NOUN)
+        target = wn.morphy(changePronoun(target), wn.NOUN)
+        base = personName(base)
+        target = personName(target)
+        b = wn.synset(str(base)+ '.n.01')
+        t = wn.synset(str(target)+ '.n.01')
+        return {"base":base, "target":target, "similarity": wn.path_similarity(b,t), "sentence": sentence} #add features here
     else:
-        return {"base": "", "target": ""}
+        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence }
+
+def personName(word):
+    if word == None:
+        return wn.morphy('person', wn.NOUN)
+    return word
+
+def changePronoun(word):
+    if word.lower() == 'she':
+        return 'female'
+    elif word.lower() == 'he':
+        return 'male'
+    elif word.lower() == 'i' or word.lower() == 'you':
+        return 'person'
+    elif word.lower() == 'they'or word.lower() == 'we':
+        return 'people'
+    elif word.lower() == 'it' or word.lower == 'this' or word.lower()== 'that':
+        return 'thing'
+    elif word.lower() == 'these' or word.lower() == 'those':
+        return 'things'
+    else:
+        return word.lower()
 
 def target_search(p):
     for i in range(len(p)):

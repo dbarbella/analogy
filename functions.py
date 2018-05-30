@@ -81,6 +81,7 @@ def preposition(train_data, test_data):
     return (PpTrans, PpTest)
 
 def base_target_pair(train_data, test_data, extra):
+    """refer to DependencyParsing.py to change/add features to the model"""
     bt_training = [dependency_parse(text) for text in train_data]
     bt_testing = [dependency_parse(text) for text in test_data]
     dict_vect = DictVectorizer()
