@@ -17,6 +17,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 import sys
 from timeout import timeout
+import numpy as np
+import matplotlib.pyplot as plt
 #------------------------
 import random
 import re
@@ -84,10 +86,14 @@ def base_target_pair(train_data, test_data, extra):
     """refer to DependencyParsing.py to change/add features to the model"""
     bt_training = [dependency_parse(text) for text in train_data]
     bt_testing = [dependency_parse(text) for text in test_data]
+    X = []
+    for train,test in zip(bt_training, bt_testing):
+        X.append(train["similarity"])
+        X.append(test["similarity"])
     dict_vect = DictVectorizer()
     bt_train = dict_vect.fit_transform(bt_training)
     bt_test = dict_vect.transform(bt_testing)
-    return (bt_train, bt_test)
+    return (bt_train, bt_test, X)
 
 
 # Transform the data so it can be represented using tfidf
@@ -217,12 +223,37 @@ def classify_pipeline(train_data, train_labels, test_data, test_labels, classifi
     @timeout(time)
     def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
         clfier = get_classifier(classifier_name, extra)
-        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra)
-        
+        train_set, test_set, X = get_representation(train_data, test_data, representation, classifier_name, extra)
         selector = SelectPercentile(f_classif, percentile=10)
         estimators = [('reduce_dim', selector), ('clf', clfier)]
         pipe = Pipeline(estimators)
-        
+        Y = []
+        average_pos = 0.0
+        average_neg = 0.0
+        num_pos, num_neg = 0,0
+        for train, test, x_i in zip(train_labels, test_labels, X):
+            if train == 'YES':
+                Y.append(1)
+                average_pos += x_i
+                num_pos += 1
+            else:
+                Y.append(0)
+                average_neg += x_i
+                num_neg += 1
+            if test == 'YES':
+                Y.append(1)
+                average_pos += x_i
+                num_pos += 1
+            else:
+                Y.append(0)
+                average_neg += x_i
+                num_neg +=1
+        average_pos = average_pos/num_pos
+        average_neg = average_neg/num_neg
+        print("average pos:", average_pos)
+        print("average neg:", average_neg)
+        plt.scatter(X,Y)
+        plt.show()
         learn_results = pipe.fit(train_set, train_labels)
         score = learn_results.score(test_set, test_labels)
         test_predict = learn_results.predict(test_set)
