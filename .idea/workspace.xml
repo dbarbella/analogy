@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d467e49e-303e-4cae-9737-74223d28120f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2018/DependencyParsing.py" afterPath="$PROJECT_DIR$/2018/DependencyParsing.py" />
-      <change beforePath="$PROJECT_DIR$/base_target_testing.csv" afterPath="$PROJECT_DIR$/base_target_testing.csv" />
-      <change beforePath="$PROJECT_DIR$/base_target_training.csv" afterPath="$PROJECT_DIR$/base_target_training.csv" />
-      <change beforePath="$PROJECT_DIR$/corpora/verified_non_analogies.csv" afterPath="$PROJECT_DIR$/corpora/verified_non_analogies.csv" />
-      <change beforePath="$PROJECT_DIR$/functions.py" afterPath="$PROJECT_DIR$/functions.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +50,8 @@
       <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="96" column="13" lean-forward="false" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+            <state relative-caret-position="-1997">
+              <caret line="108" column="27" lean-forward="true" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
               <folding>
                 <element signature="e#164#207#0" expanded="true" />
               </folding>
@@ -656,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527780585675</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="store base target with equal number of examples">
+      <created>1527798209264</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1527798209264</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -708,7 +710,8 @@
     <MESSAGE value="added base, target, word-relatedness features" />
     <MESSAGE value="added wordnet features" />
     <MESSAGE value="write csv file for base target storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="write csv file for base target storage" />
+    <MESSAGE value="store base target with equal number of examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="store base target with equal number of examples" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1111,8 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="96" column="13" lean-forward="false" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+        <state relative-caret-position="-1997">
+          <caret line="108" column="27" lean-forward="true" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
           <folding>
             <element signature="e#164#207#0" expanded="true" />
           </folding>
