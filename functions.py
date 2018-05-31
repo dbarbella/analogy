@@ -16,6 +16,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 import sys
+import operator
 from timeout import timeout
 import numpy as np
 import matplotlib.pyplot as plt
@@ -85,8 +86,17 @@ def preposition(train_data, test_data):
 
 def base_target_pair(train_data, test_data, extra):
     """refer to DependencyParsing.py to change/add features to the model"""
-    bt_training = readCSV('base_target_training.csv')
-    bt_testing = readCSV('base_target_testing.csv')
+    # bt_training = readCSV('base_target_training.csv')
+    # bt_testing = readCSV('base_target_testing.csv')
+    bt_training= [dependency_parse(text) for text in train_data]
+    bt_testing = [dependency_parse(text) for text in test_data]
+    train_txt = ""
+    test_txt = ""
+    for train, test in zip(bt_training, bt_testing):
+        train_txt += '"' + train["sentence"]  + '","' + str(train["base"]) + '","' +  str(test["target"])  +'"\n'
+        test_txt += '"'+ test["sentence"] + '","' + str(test["base"]) + '","' + str(test["target"]) +'"\n'
+    writeCSVFile(train_txt, 'base_target_training.csv')
+    writeCSVFile(test_txt, 'base_target_testing.csv')
     dict_vect = DictVectorizer()
     bt_train = dict_vect.fit_transform(bt_training)
     bt_test = dict_vect.transform(bt_testing)
@@ -103,7 +113,13 @@ def readCSV(csvFile):
             if len(b) > 0:
                 base = wn.synset(b + '.n.01')
                 target = wn.synset(t + '.n.01')
-                dic.append({"base": b, "target": t, "sentence": sentence, "similarity": wn.path_similarity(base,target)})
+                count = 0
+                temp_dict = {}
+                while count > 3:
+                    temp = base.hypernyms()
+                    temp_dict[temp] = wn.path_similarity(target, temp)
+                similarity = max(temp_dict.items(), key= operator.itemgetter(1))[0]
+                dic.append({"base": b, "target": t, "sentence": sentence, "similarity": temp_dict[similarity]})
             else:
                 dic.append({"base": "", "target": t, "sentence": sentence, "similarity": 0.0})
     return dic
@@ -243,7 +259,7 @@ def classify_pipeline(train_data, train_labels, test_data, test_labels, classifi
         selector = SelectPercentile(f_classif, percentile=10)
         estimators = [('reduce_dim', selector), ('clf', clfier)]
         pipe = Pipeline(estimators)
-        test_labels.pop()
+        # test_labels.pop()
         learn_results = pipe.fit(train_set, train_labels)
         score = learn_results.score(test_set, test_labels)
         test_predict = learn_results.predict(test_set)

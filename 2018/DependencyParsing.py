@@ -22,6 +22,7 @@ def dependency_parse(sentence):
         target, tar_index = target_search(line.nodes)
         if tar_index is not None:
             base = base_search(tar_index,line.nodes)
+
     if base is not None:
         base = wn.morphy(changePronoun(base), wn.NOUN) #change the word back to a noun
         target = wn.morphy(changePronoun(target), wn.NOUN) #change back to a noun
