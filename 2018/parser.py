@@ -169,11 +169,7 @@ def checkAvailabilityNode(key):
             return True
     return False
 
-# def writeTSVFile():
-#     f = open('base_target_output.csv', 'w')
-#     for line in text_output:
-#             f.write(line)
-#     f.close()
+
 
 # print(len(sentences))
 # p_sent = []

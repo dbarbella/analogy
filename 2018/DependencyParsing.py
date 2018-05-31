@@ -23,9 +23,9 @@ def dependency_parse(sentence):
         if tar_index is not None:
             base = base_search(tar_index,line.nodes)
     if base is not None:
-        base = wn.morphy(changePronoun(base), wn.NOUN)
-        target = wn.morphy(changePronoun(target), wn.NOUN)
-        base = personName(base)
+        base = wn.morphy(changePronoun(base), wn.NOUN) #change the word back to a noun
+        target = wn.morphy(changePronoun(target), wn.NOUN) #change back to a noun
+        base = personName(base) #check if it is a person name
         target = personName(target)
         b = wn.synset(str(base)+ '.n.01')
         t = wn.synset(str(target)+ '.n.01')
@@ -123,6 +123,11 @@ def search_WP(line,head):
                 return True
     return False
 
+def writeCSVFile(text_output, to_dir):
+    f = open(to_dir, 'w')
+    for line in text_output:
+            f.write(line)
+    f.close()
 
 # if __name__ == '__main__':
 #     num_tag = []

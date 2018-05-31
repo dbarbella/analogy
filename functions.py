@@ -23,12 +23,13 @@ import matplotlib.pyplot as plt
 import random
 import re
 import csv
+from nltk.corpus import wordnet as wn
 from boyer_moore import find_boyer_moore
 #-------------------------
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectPercentile, f_classif
 sys.path.insert(0, './2018')
-from DependencyParsing import dependency_parse
+from DependencyParsing import dependency_parse,writeCSVFile,changePronoun, personName
 
 """To add new feature, add new function that takes a train and a test set and extra and return a train and a test set based on what representation you want ot use"""
 def get_list(filename):
@@ -84,17 +85,28 @@ def preposition(train_data, test_data):
 
 def base_target_pair(train_data, test_data, extra):
     """refer to DependencyParsing.py to change/add features to the model"""
-    bt_training = [dependency_parse(text) for text in train_data]
-    bt_testing = [dependency_parse(text) for text in test_data]
-    X = []
-    for train,test in zip(bt_training, bt_testing):
-        X.append(train["similarity"])
-        X.append(test["similarity"])
+    bt_training = readCSV('base_target_training.csv')
+    bt_testing = readCSV('base_target_testing.csv')
     dict_vect = DictVectorizer()
     bt_train = dict_vect.fit_transform(bt_training)
     bt_test = dict_vect.transform(bt_testing)
-    return (bt_train, bt_test, X)
+    return (bt_train, bt_test)
 
+def readCSV(csvFile):
+    dic = []
+    with open(csvFile) as file:
+        readcsv = csv.reader(file, delimiter=',')
+        for row in readcsv:
+            sentence = row[0]
+            b = row[1]
+            t = row[2]
+            if len(b) > 0:
+                base = wn.synset(b + '.n.01')
+                target = wn.synset(t + '.n.01')
+                dic.append({"base": b, "target": t, "sentence": sentence, "similarity": wn.path_similarity(base,target)})
+            else:
+                dic.append({"base": "", "target": t, "sentence": sentence, "similarity": 0.0})
+    return dic
 
 # Transform the data so it can be represented using tfidf
 def tfidf(train_data, test_data, extra):
@@ -122,6 +134,7 @@ def hashing(train_data, test_data,extra, classifier=[]):
 
 # Implementetion of the fmeasure metric, which calculates the precision, recall and f1measure given a confusion matrix
 def fmeasure(matrix):
+    """f1 score"""
     value1 = (matrix[0][1] + matrix[0][0])
     value2 = (matrix[1][0] + matrix[0][0])
     if value1 == 0 or value2 == 0:
@@ -170,6 +183,7 @@ def get_classifier(name, extra):
         return None
 
 def get_representation(train_data, test_data, representation, classifier, extra):
+    """representation of data"""
     if representation == "tfidf":
         return tfidf(train_data, test_data, extra)
     elif representation == "count":
@@ -193,6 +207,7 @@ def set_default(extra, key, value):
         extra[key] = value
 
 def set_extra(extra):
+    """set extra parameters"""
     set_default(extra,'sub_class', "")
     set_default(extra,'stop_words', None)
     set_default(extra,'hidden_layer_sizes', 100)
@@ -221,39 +236,14 @@ def set_extra(extra):
 
 def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra={"sub_class":""}, time=1000000000):
     @timeout(time)
+
     def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
         clfier = get_classifier(classifier_name, extra)
-        train_set, test_set, X = get_representation(train_data, test_data, representation, classifier_name, extra)
+        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra)
         selector = SelectPercentile(f_classif, percentile=10)
         estimators = [('reduce_dim', selector), ('clf', clfier)]
         pipe = Pipeline(estimators)
-        Y = []
-        average_pos = 0.0
-        average_neg = 0.0
-        num_pos, num_neg = 0,0
-        for train, test, x_i in zip(train_labels, test_labels, X):
-            if train == 'YES':
-                Y.append(1)
-                average_pos += x_i
-                num_pos += 1
-            else:
-                Y.append(0)
-                average_neg += x_i
-                num_neg += 1
-            if test == 'YES':
-                Y.append(1)
-                average_pos += x_i
-                num_pos += 1
-            else:
-                Y.append(0)
-                average_neg += x_i
-                num_neg +=1
-        average_pos = average_pos/num_pos
-        average_neg = average_neg/num_neg
-        print("average pos:", average_pos)
-        print("average neg:", average_neg)
-        plt.scatter(X,Y)
-        plt.show()
+        test_labels.pop()
         learn_results = pipe.fit(train_set, train_labels)
         score = learn_results.score(test_set, test_labels)
         test_predict = learn_results.predict(test_set)
