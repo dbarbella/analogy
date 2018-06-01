@@ -1,7 +1,7 @@
 from nltk.parse.stanford import StanfordDependencyParser
 # from parser import readFile, writeTSVFile
 from nltk.corpus import wordnet as wn
-
+import json
 path_to_jar = './stanford-parser/jars/stanford-parser.jar'
 path_to_models_jar = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 from time import time
@@ -12,16 +12,20 @@ noun = ['NP','NN', 'NNP', 'NNS', 'PRP']
 linking_words = ["like"]
 number = ["tens", "hundreds", "thousands", "millions", "billions", "trillions","dose","dozen","piece","fragment"]
 tobe = ["was being", "were being", "will have been", "will be", "is going to", "am going to", "are going to", "has been", "have been", "am", "are", "is", "was", "were"]
-def dependency_parse(sentence):
+
+def parse(sentence):
     for v in tobe: #to be behaves oddly compared with other nouns, hence return it with the verb "behave", which makes the parser perform normal again
         sentence = sentence.replace('\b'+v+'\b','behave')
     result = dependency_parser.raw_parse(sentence)
+    for line in result:
+        return toDict(line.nodes),line
+
+def dependency_parse(result,sentence):
     target = None
     base = None
-    for line in result:
-        target, tar_index = target_search(line.nodes)
-        if tar_index is not None:
-            base = base_search(tar_index,line.nodes)
+    target, tar_index = target_search(result.nodes)
+    if tar_index is not None:
+        base = base_search(tar_index,result.nodes)
 
     if base is not None:
         base = wn.morphy(changePronoun(base), wn.NOUN) #change the word back to a noun
@@ -32,7 +36,7 @@ def dependency_parse(sentence):
         t = wn.synset(str(target)+ '.n.01')
         return {"base":base, "target":target, "similarity": wn.path_similarity(b,t), "sentence": sentence} #add features here
     else:
-        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence }
+        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence}
 
 def personName(word):
     if word == None:
@@ -130,6 +134,23 @@ def writeCSVFile(text_output, to_dir):
             f.write(line)
     f.close()
 
+def writeJSONFile(txt, to_dir):
+    with open(to_dir, 'w') as fp:
+        json.dump(txt,fp)
+
+def toDict(line):
+    dic = {}
+    properties = ["address", "ctag", "feats", "head", "lemma", "rel", "tag", "word"]
+    for i in range(len(line)):
+        temp = {}
+        for p in properties:
+            temp[p] = line[i][p]
+        deps = {}
+        for key in line[i]["deps"]:
+            deps[key] = line[i]["deps"][key]
+        temp["deps"] = deps
+        dic[i] = temp
+    return dic
 # if __name__ == '__main__':
 #     num_tag = []
 #     sentences,num_tag = readFile('./verified_analogies.csv')

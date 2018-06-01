@@ -60,7 +60,6 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     return outputData
 
 def analogy_pipeline(positive_set, negative_set, percent_test, representation, classifier, extra={"sub_class":""}, timer=1000000000, comment=""):
-
     start = time.time()
     # Read in the set of positive examples
     analogy_list = functions.get_list_re(positive_set)
