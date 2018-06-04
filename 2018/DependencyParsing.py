@@ -14,11 +14,12 @@ number = ["tens", "hundreds", "thousands", "millions", "billions", "trillions","
 tobe = ["was being", "were being", "will have been", "will be", "is going to", "am going to", "are going to", "has been", "have been", "am", "are", "is", "was", "were"]
 
 def parse(sentence):
+    temp = ""
     for v in tobe: #to be behaves oddly compared with other nouns, hence return it with the verb "behave", which makes the parser perform normal again
-        sentence = sentence.replace('\b'+v+'\b','behave')
-    result = dependency_parser.raw_parse(sentence)
+        temp = sentence.replace('\b'+v+'\b','behave')
+    result = dependency_parser.raw_parse(temp)
     for line in result:
-        return toDict(line.nodes),line
+        return toDict(line.nodes,sentence),line
 
 def dependency_parse(result,sentence):
     target = None
@@ -138,7 +139,7 @@ def writeJSONFile(txt, to_dir):
     with open(to_dir, 'w') as fp:
         json.dump(txt,fp)
 
-def toDict(line):
+def toDict(line,sent):
     dic = {}
     properties = ["address", "ctag", "feats", "head", "lemma", "rel", "tag", "word"]
     for i in range(len(line)):
@@ -151,32 +152,4 @@ def toDict(line):
         temp["deps"] = deps
         dic[i] = temp
     return dic
-# if __name__ == '__main__':
-#     num_tag = []
-#     sentences,num_tag = readFile('./verified_analogies.csv')
-#     lower_tie = 0
-#     upper_tie = 157
-#     start = time()
-#     count = 0
-#     base = []
-#     target = []
-#     like_count = 0
-#     text_output = "ID, Sentence, Target, Base\n"
-#     for i in range(lower_tie,upper_tie):
-#         print('____', i, '_____')
-#         print(sentences[i])
-#         t,b = dependency_parse(sentences[i])
-#         if t and b is not None:
-#             count+=1
-#         base.append(b)
-#         target.append(t)
-#         print(b, '________', t)
-#     print(len(base))
-#     print(len(target))
-#     print(like_count)
-#     for i in range(lower_tie,upper_tie):
-#         text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i]) + '","' + str(target[i]) + '"' + "\n"
-#     writeTSVFile('base_target.csv', text_output)
-#     print('running time:', time() - start)
-#     print('detect:', count)
 

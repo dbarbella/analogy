@@ -33,6 +33,7 @@ from sklearn.feature_selection import SelectPercentile, f_classif
 sys.path.insert(0, './2018')
 from DependencyParsing import dependency_parse,writeCSVFile,changePronoun, personName, parse
 
+modifier = ['amod','nmod']
 """To add new feature, add new function that takes a train and a test set and extra and return a train and a test set based on what representation you want ot use"""
 def get_list(filename):
     # Returns all training data as a list
@@ -87,28 +88,29 @@ def preposition(train_data, test_data):
 
 def base_target_pair(train_data, test_data, extra):
     """refer to DependencyParsing.py to change/add features to the model"""
-    # bt_training = readCSV('base_target_training.csv')
-    # bt_testing = readCSV('base_target_testing.csv')
-    bt_training, bt_testing = [],[]
-    count = 0
-    train_parsed_dic, test_parsed_dic = {}, {}
-    for text1, text2 in zip(train_data,test_data):
-        dic,parsed_sent = parse(text1)
-        bt_training.append((dependency_parse(parsed_sent,text1)))
-        dic2, parsed_sent2 = parse(text2)
-        bt_testing.append(dependency_parse(parsed_sent2,text2))
-        train_parsed_dic[(count)] = dic
-        test_parsed_dic[(count)] = dic2
-        count +=1
-    writeJSON(train_parsed_dic, "train_tree.json")
-    writeJSON(test_parsed_dic, "test_tree.json")
+    bt_training = readCSV('base_target_training.csv', "parsed_tree.json")
+    bt_testing = readCSV('base_target_testing.csv', "parsed_tree.json")
 
-    # bt_training= [dependency_parse(text) for text in train_data]
-    # bt_testing = [dependency_parse(text) for text in test_data]
-    training_txt, testing_txt = "", ""
-    # for train,test in zip(bt_training, bt_testing):
-    #     training_txt += str(train['tree']) + "\n\n"
-    #     testing_txt += str(test['tree']) + "\n\n"
+    # bt_training, bt_testing = [],[]
+    # parsed_dic = {}
+    # for text1, text2 in zip(train_data,test_data):
+    #     dic,parsed_sent = parse(text1)
+    #     bt_training.append((dependency_parse(parsed_sent,text1)))
+    #     dic2, parsed_sent2 = parse(text2)
+    #     bt_testing.append(dependency_parse(parsed_sent2,text2))
+    #     parsed_dic[(text1)] = dic
+    #     parsed_dic[(text2)] = dic2
+    #
+    # writeJSON(parsed_dic, "parsed_tree.json")
+    # training_txt, testing_txt = "", ""
+    # for train, test in zip(bt_training, bt_testing):
+    #     training_txt += '"' + str(train["base"]) + '","' + str(train["target"]) + '","' + str(
+    #         train["sentence"]) + '","' + str(train["similarity"]) + '"\n'
+    #     testing_txt += '"' + str(test["base"]) + '","' + str(test["target"]) + '","' + str(
+    #         test["sentence"]) + '","' + str(test["similarity"]) + '"\n'
+    # writeCSVFile(training_txt, 'base_target_training.csv')
+    # writeCSVFile(testing_txt, 'base_target_testing.csv')
+
     #
     dict_vect = DictVectorizer()
     bt_train = dict_vect.fit_transform(bt_training)
@@ -119,29 +121,47 @@ def writeJSON(dic, dire):
     with open(dire, 'w') as fp:
         json.dump(dic,fp)
 
-def readCSV(csvFile):
-    dic = []
-    with open(csvFile) as file:
+def readCSV(csvFile, jsonFile):
+    lst = []
+    with open(csvFile) as file,open(jsonFile) as js:
         readcsv = csv.reader(file, delimiter=',')
+        data = json.load(js)
         for row in readcsv:
-            sentence = row[0]
-            b = row[1]
-            t = row[2]
-            if len(b) > 0:
-                base = wn.synset(b + '.n.01')
-                target = wn.synset(t + '.n.01')
-                count = 3
-                temp_dict = {}
-                while count > 0:
-                    temp = base.hypernyms()
-                    count -=1
-                    temp_dict[str(temp)] = wn.path_similarity(target, temp)
-                similarity = max(temp_dict.items(), key= operator.itemgetter(1))[0]
-                dic.append({"base": b, "target": t, "sentence": sentence, "similarity": temp_dict[str(similarity)]})
-            else:
-                dic.append({"base": "", "target": t, "sentence": sentence, "similarity": 0.0})
-    return dic
+            sentence = row[2]
+            b = row[0]
+            t = row[1]
+            similarity  = row[3]
+            tar_ind = getIndex(t, sentence)
+            base_ind = getIndex(b, sentence)
+            tar_supp_feature = ""
+            base_supp_feature = ""
+            # for mod in modifier:
+            #     if tar_ind is not None:
+            #         if mod in data[sentence][str(tar_ind+2)]["deps"]:
+            #             for j in data[sentence][str(tar_ind+2)]["deps"][mod]:
+            #                 tar_supp_feature += data[sentence][str(j)]["word"]
+            #     if base_ind is not None:
+            #         if mod in data[sentence][str(base_ind+2)]["deps"]:
+            #             for j in data[sentence][str(base_ind+2)]["deps"][mod]:
+            #                 base_supp_feature += data[sentence][str(j)]["word"]
+            lst.append({"base": b, "target": t, "sentence": sentence, "similarity": similarity})
+    return lst
 
+def wordForm(word):
+    w = None
+    try:
+        w = wn.synset(word + '.n.01')
+    except:
+        print(word)
+    return w
+
+def getIndex(word,sentence):
+    lst = sentence.split()
+    ind = 0
+    for w in lst:
+        if w.lower() == word.lower():
+            return ind
+        ind += 1
 # Transform the data so it can be represented using tfidf
 def tfidf(train_data, test_data, extra):
     TfidfVect = TfidfVectorizer(tokenizer=lambda doc: doc, lowercase=False, stop_words=extra['stop_words'], max_df=extra['max_df'], norm=extra['norm'], min_df=extra['min_df'])
