@@ -1,6 +1,8 @@
+import nltk
 from nltk.parse.stanford import StanfordDependencyParser
 # from parser import readFile, writeTSVFile
 from nltk.corpus import wordnet as wn
+from nltk import word_tokenize
 import json
 path_to_jar = './stanford-parser/jars/stanford-parser.jar'
 path_to_models_jar = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
@@ -21,44 +23,80 @@ def parse(sentence):
     for line in result:
         return toDict(line.nodes,sentence),line
 
-def dependency_parse(result,sentence):
-    target = None
+def dependency_parse(result,sentence,label):
     base = None
     target, tar_index = target_search(result.nodes)
     if tar_index is not None:
         base = base_search(tar_index,result.nodes)
-
-    if base is not None:
-        base = wn.morphy(changePronoun(base), wn.NOUN) #change the word back to a noun
-        target = wn.morphy(changePronoun(target), wn.NOUN) #change back to a noun
-        base = personName(base) #check if it is a person name
-        target = personName(target)
-        b = wn.synset(str(base)+ '.n.01')
-        t = wn.synset(str(target)+ '.n.01')
-        return {"base":base, "target":target, "similarity": wn.path_similarity(b,t), "sentence": sentence} #add features here
+    if base is not None and len(target) > 1:
+        base, b = changePronoun(base) #check if it is a person name
+        print(sentence, "---", base, target)
+        target, t = changePronoun(target)
+        similarity = wn.path_similarity(b,t)
+        if similarity is None:
+            similarity = 0.0
+        return {"base":base, "target":target, "similarity": similarity, "sentence": sentence, "detected": True, "label": label} #add features here
     else:
-        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence}
+        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence, "detected": False, "label": label}
 
-def personName(word):
-    if word == None:
-        return wn.morphy('person', wn.NOUN)
-    return word
+
+
 
 def changePronoun(word):
-    if word.lower() == 'she':
-        return 'female'
-    elif word.lower() == 'he':
-        return 'male'
-    elif word.lower() == 'i' or word.lower() == 'you':
-        return 'person'
-    elif word.lower() == 'they'or word.lower() == 'we':
-        return 'people'
-    elif word.lower() == 'it' or word.lower == 'this' or word.lower()== 'that':
-        return 'thing'
-    elif word.lower() == 'these' or word.lower() == 'those':
-        return 'things'
+    tag = nltk.pos_tag(word_tokenize((word)))
+    if tag[0][1] == 'NN' or tag[0][1]== 'NNS':
+        w= wn.morphy(word, wn.NOUN)
+        if w is None:
+            w = wn.morphy('person', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        else:
+            return w, wn.synset(str(w) + '.n.01')
+    elif tag[0][1]== 'NNP' or tag[0][1]== 'NNPS':
+        w = wn.morphy('person', wn.NOUN)
+        return w, wn.synset(str(w) + '.n.01')
+    elif tag[0][1]== 'PRP' or tag[0][1]== 'PRPS':
+        if word.lower() == 'she':
+            w = wn.morphy('female', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        elif word.lower() == 'he':
+            w = wn.morphy('male', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        elif word.lower() == 'i' or word.lower() == 'you' or word.lower() == 'who':
+            w = wn.morphy('person', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        elif word.lower() == 'they'or word.lower() == 'we':
+            w = wn.morphy('people', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        elif word.lower() == 'it':
+            w = wn.morphy('thing', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+    elif tag[0][1]== 'DT':
+        if  word.lower() == 'this' or word.lower()== 'that':
+            w = wn.morphy('thing', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        elif word.lower() == 'these' or word.lower() == 'those':
+            w = wn.morphy('things', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+    elif tag[0][1]== 'WRP' or tag[0][1]== 'WRT':
+        w = wn.morphy('thing', wn.NOUN)
+        return w, wn.synset(str(w) + '.n.01')
+    elif '-' in word:
+        ind = word.index('-')
+        w = wn.morphy(word[:ind], wn.NOUN)
+        return w, wn.synset(str(w) + '.n.01')
+    elif tag[0][1]in verb:
+        w = wn.morphy(word, wn.VERB)
+        return w, wn.synset(str(w) + '.v.01')
+    elif tag[0][1]== 'JJ' or tag[0][1]== 'JJS':
+        w = wn.morphy(word, wn.ADJ)
+        if w == None:
+            w= wn.morphy('person', wn.NOUN)
+            return w, wn.synset(str(w) + '.n.01')
+        else:
+            return w, wn.synset(str(w) + '.a.01')
     else:
-        return word.lower()
+        w = wn.morphy('thing', wn.NOUN)
+        return w, wn.synset(str(w) + '.n.01')
 
 def target_search(p):
     for i in range(len(p)):
@@ -135,9 +173,6 @@ def writeCSVFile(text_output, to_dir):
             f.write(line)
     f.close()
 
-def writeJSONFile(txt, to_dir):
-    with open(to_dir, 'w') as fp:
-        json.dump(txt,fp)
 
 def toDict(line,sent):
     dic = {}

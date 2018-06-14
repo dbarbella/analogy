@@ -15,12 +15,13 @@ from sklearn.svm import NuSVC
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
+from collections import defaultdict
 import sys
 import json
 import operator
 from timeout import timeout
 import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 #------------------------
 import random
 import re
@@ -30,8 +31,7 @@ from boyer_moore import find_boyer_moore
 #-------------------------
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectPercentile, f_classif
-sys.path.insert(0, './2018')
-from DependencyParsing import dependency_parse,writeCSVFile,changePronoun, personName, parse
+
 
 modifier = ['amod','nmod']
 """To add new feature, add new function that takes a train and a test set and extra and return a train and a test set based on what representation you want ot use"""
@@ -58,24 +58,80 @@ def get_list_re(filename):
             sent.append(sentence)
     return sent
 
+def read_CSV(csvfile, r):
+    lst = []
+    with open(csvfile) as file:
+        readcsv = csv.reader(file, delimiter=',')
+        for row in readcsv:
+            sentence = row[r]
+            lst.append(sentence)
+    return lst
+
+def explore_csv(filename):
+    sentences = filename
+    data = {}
+    count = 0
+    c = 0
+    for sent in sentences:
+        c += 1
+        test_appearance, true_positive, false_negative = 0,0,0
+        for seed in range(100):
+            sent_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
+            false_csv = read_CSV('./testing/false' + str(seed) + '.csv',1)
+            test_sent = read_CSV('./testing/test_set' + str(seed)+ '.csv',1)
+            if str(sent) in sent_csv:
+                true_positive += 1
+            if str(sent) in test_sent:
+                test_appearance += 1
+            if str(sent) in false_csv:
+                false_negative += 1
+        if true_positive > 0:
+            count += 1
+        dic= {'data': sent, 'true_positive': true_positive, 'false_negative': false_negative, 'test_appearance': test_appearance}
+        data[str(c)] = dic
+    print(count/159)
+    writeJSON(data, './testing/data.json')
+
 # preprocess the data so it can be used by the classifiers
-def preprocess(samples, percent_test, caller=''):
+def preprocess(samples, percent_test,seed, caller= ''):
     num_samples = len(samples)
     if caller == 'test_main_interface_output': 
-        random.seed(1234)
+        random.seed(seed)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
-    # create a train set and a test/development set
-    feature_sets = [(text, label) for (text, label) in samples]
-    train_set =  feature_sets[:cutoff]
-    test_set = feature_sets[cutoff:]
+    train_data, test_data, train_labels, test_labels = [], [], [], []
+    y_count, n_count = 0,0
+    train_set, test_set = [],[]
+    for key in samples:
+        if y_count > cutoff/2 :
+            break
+        elif key["label"] == 'YES':
+            train_set.append(key)
+            y_count += 1
+    for key in samples:
+        if n_count > cutoff/2 :
+            break
+        elif key["label"] == 'NO':
+            train_set.append(key)
+            n_count += 1
+    for key in samples:
+        if key not in train_set:
+            test_set.append(key)
+    train_data,train_labels = divide_data_labels(train_data,train_labels,train_set)
+    test_data, test_labels = divide_data_labels(test_data, test_labels, test_set)
     # separate the training data and the training labels
-    train_data = [text for (text, label) in train_set]
-    train_labels = [label for (text, label) in train_set]
-    # separate the test data and the test labels
-    test_data = [text for (text, label) in test_set]
-    test_labels = [label for (text, label) in test_set]
     return(train_data, train_labels, test_data, test_labels)
+
+def divide_data_labels(data,label, set):
+    for key in set:
+        dic = {}
+        for k in key:
+            if k == "label":
+                label.append(key["label"])
+            else:
+                dic[k] = key[k]
+        data.append(dic)
+    return data,label
 
 # Transform the data so it can be represented by prepositional phrases.
 def preposition(train_data, test_data):
@@ -86,65 +142,51 @@ def preposition(train_data, test_data):
     PpTest = dict_vect.transform(pp_test_set)
     return (PpTrans, PpTest)
 
-def base_target_pair(train_data, test_data, extra):
+def base_target_pair(train_data, test_data, extra, train_labels, test_labels):
     """refer to DependencyParsing.py to change/add features to the model"""
-    bt_training = readCSV('base_target_training.csv', "parsed_tree.json")
-    bt_testing = readCSV('base_target_testing.csv', "parsed_tree.json")
-
-    # bt_training, bt_testing = [],[]
-    # parsed_dic = {}
-    # for text1, text2 in zip(train_data,test_data):
-    #     dic,parsed_sent = parse(text1)
-    #     bt_training.append((dependency_parse(parsed_sent,text1)))
-    #     dic2, parsed_sent2 = parse(text2)
-    #     bt_testing.append(dependency_parse(parsed_sent2,text2))
-    #     parsed_dic[(text1)] = dic
-    #     parsed_dic[(text2)] = dic2
-    #
-    # writeJSON(parsed_dic, "parsed_tree.json")
-    # training_txt, testing_txt = "", ""
-    # for train, test in zip(bt_training, bt_testing):
-    #     training_txt += '"' + str(train["base"]) + '","' + str(train["target"]) + '","' + str(
-    #         train["sentence"]) + '","' + str(train["similarity"]) + '"\n'
-    #     testing_txt += '"' + str(test["base"]) + '","' + str(test["target"]) + '","' + str(
-    #         test["sentence"]) + '","' + str(test["similarity"]) + '"\n'
-    # writeCSVFile(training_txt, 'base_target_training.csv')
-    # writeCSVFile(testing_txt, 'base_target_testing.csv')
-
-    #
     dict_vect = DictVectorizer()
-    bt_train = dict_vect.fit_transform(bt_training)
-    bt_test = dict_vect.transform(bt_testing)
+    bt_train = dict_vect.fit_transform(train_data)
+    bt_test = dict_vect.transform(test_data)
+    # print(bt_training, bt_testing)
     return (bt_train, bt_test)
+    # return training_txt
+
+def delete_element(count,o_list):
+    lst = []
+    for i in range(len(o_list)):
+        if isFalse(i,count):
+            lst.append(o_list[i])
+    return lst
+
+def isFalse(i,s):
+    for j in s:
+        if i == j:
+            return True
+    return False
 
 def writeJSON(dic, dire):
     with open(dire, 'w') as fp:
         json.dump(dic,fp)
 
-def readCSV(csvFile, jsonFile):
+def readCSV(csvFile, method):
     lst = []
-    with open(csvFile) as file,open(jsonFile) as js:
+    with open(csvFile) as file:
         readcsv = csv.reader(file, delimiter=',')
-        data = json.load(js)
         for row in readcsv:
             sentence = row[2]
             b = row[0]
             t = row[1]
             similarity  = row[3]
-            tar_ind = getIndex(t, sentence)
-            base_ind = getIndex(b, sentence)
-            tar_supp_feature = ""
-            base_supp_feature = ""
-            # for mod in modifier:
-            #     if tar_ind is not None:
-            #         if mod in data[sentence][str(tar_ind+2)]["deps"]:
-            #             for j in data[sentence][str(tar_ind+2)]["deps"][mod]:
-            #                 tar_supp_feature += data[sentence][str(j)]["word"]
-            #     if base_ind is not None:
-            #         if mod in data[sentence][str(base_ind+2)]["deps"]:
-            #             for j in data[sentence][str(base_ind+2)]["deps"][mod]:
-            #                 base_supp_feature += data[sentence][str(j)]["word"]
-            lst.append({"base": b, "target": t, "sentence": sentence, "similarity": similarity})
+            label = row[4]
+            detected = True
+            if len(t) == 0 and len(b) == 0:
+                detected = False
+            if method == 1:
+                lst.append({"base":b, "target":t, "similarity": similarity,"sentence": sentence,"detected": detected, "label": label})
+            elif method == 0:
+                lst.append({"base":b, "target":t, "similarity": similarity,"sentence": sentence,"detected": detected})
+            else:
+                lst.append({"sentence": sentence, "label": label})
     return lst
 
 def wordForm(word):
@@ -236,14 +278,14 @@ def get_classifier(name, extra):
         sys.exit("This classifier has not been implemented yet.")
         return None
 
-def get_representation(train_data, test_data, representation, classifier, extra):
+def get_representation(train_data, test_data, representation, classifier, extra, train_labels, test_labels):
     """representation of data"""
     if representation == "tfidf":
         return tfidf(train_data, test_data, extra)
     elif representation == "count":
         return countvect(train_data, test_data, extra)
     elif representation == "base_target":
-        return base_target_pair(train_data,test_data,extra)
+        return base_target_pair(train_data,test_data,extra, train_labels, test_labels)
     elif representation == "hash":
         if classifier == "naive":
             return hashing(train_data, test_data, extra, "naive")
@@ -288,20 +330,34 @@ def set_extra(extra):
     return(extra)
 
 
-def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra={"sub_class":""}, time=1000000000):
+def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra={"sub_class":""}, time=1000000000):
     @timeout(time)
 
-    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
+    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra):
         clfier = get_classifier(classifier_name, extra)
-        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra)
+        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra, train_labels, test_labels)
         selector = SelectPercentile(f_classif, percentile=10)
         estimators = [('reduce_dim', selector), ('clf', clfier)]
         pipe = Pipeline(estimators)
-        # test_labels.pop()
         learn_results = pipe.fit(train_set, train_labels)
         score = learn_results.score(test_set, test_labels)
         test_predict = learn_results.predict(test_set)
+        d = {'sentence': [],'data': [], 'label': [], 'answer': []}
+        d2 =  {'data': [], 'label': [], 'answer': []}
+        # d = {'data': test_data, 'label': test_predict, 'answer': test_labels}
+        for pred, lab, dat in zip(test_predict, test_labels, test_data):
+            if pred == lab == 'YES':
+                d['sentence'].append(dat['sentence'])
+                d['data'].append(dat)
+                d['label'].append(pred)
+                d['answer'].append(lab)
+            if pred == lab == 'NO':
+                d2['data'].append(dat)
+                d2['label'].append(pred)
+                d2['answer'].append(lab)
+        pd.DataFrame(d, columns=['data','label','answer']).to_csv('./testing/prediction' + str(int(seed)) + '.csv')
+        pd.DataFrame(d2, columns= ['data', 'label', 'answer']).to_csv('./testing/false'+ str(int(seed)) + '.csv')
         matrix = confusion_matrix(test_labels, test_predict, labels = ['YES', 'NO'])
         precision, recall, f_measure = fmeasure(matrix)
         return (score, matrix, precision, recall, f_measure)
-    return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra)
+    return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra)
