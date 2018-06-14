@@ -178,20 +178,7 @@ def checkAvailabilityNode(key):
 base = []
 target = []
 trash = [",","'", '"', "`"]
-# text_output = "ID, Sentence, Target, Base\n"
-# for i in range(lower_tie,upper_tie):
-#     b,t = linking_word_check(sentences[i])
-#     for s in trash:
-#         b = "".join(str(b).split(s))
-#         t = "".join(str(t).split(s))
-#     base.append(b)
-#     target.append(t)
-# for i in range(lower_tie,upper_tie):
-#     text_output +=  '"' + num_tag[i] + '","' +  sentences[i] + '","'+ str(base[i])+ '","'+ str(target[i]) + '"' + "\n"
 
-# writeTSVFile()
-# end = time()
-# print("time: ", end - start)
 
 def chunk(sentence):
     b, t = linking_word_check(sentence)

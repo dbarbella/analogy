@@ -96,7 +96,8 @@ if __name__ == '__main__':
         seed = 1000 + count * 30
         analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'svm', seed)
     bt_parsed = functions.readCSV('base_target.csv', 0)
-    functions.explore_csv(bt_parsed)
+    bt_label = functions.readCSV('base_target.csv',2)
+    functions.explore_csv(bt_parsed,bt_label)
     # print(max(acc))
     # print(min(acc))
     # print(sum(acc)/len(acc))

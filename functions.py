@@ -67,12 +67,12 @@ def read_CSV(csvfile, r):
             lst.append(sentence)
     return lst
 
-def explore_csv(filename):
-    sentences = filename
+def explore_csv(bt_parsed, bt_label):
+    sentences = bt_parsed
     data = {}
     count = 0
     c = 0
-    for sent in sentences:
+    for sent,label in zip(sentences,bt_label):
         c += 1
         test_appearance, true_positive, false_negative = 0,0,0
         for seed in range(100):
@@ -85,11 +85,8 @@ def explore_csv(filename):
                 test_appearance += 1
             if str(sent) in false_csv:
                 false_negative += 1
-        if true_positive > 0:
-            count += 1
-        dic= {'data': sent, 'true_positive': true_positive, 'false_negative': false_negative, 'test_appearance': test_appearance}
+        dic= {'data': sent, 'label': label["label"], 'true_predicted': true_positive, 'false_predicted': false_negative, 'test_appearance': test_appearance}
         data[str(c)] = dic
-    print(count/159)
     writeJSON(data, './testing/data.json')
 
 # preprocess the data so it can be used by the classifiers
@@ -166,7 +163,7 @@ def isFalse(i,s):
 
 def writeJSON(dic, dire):
     with open(dire, 'w') as fp:
-        json.dump(dic,fp)
+        json.dump(dic, fp, indent= 4)
 
 def readCSV(csvFile, method):
     lst = []
@@ -185,6 +182,8 @@ def readCSV(csvFile, method):
                 lst.append({"base":b, "target":t, "similarity": similarity,"sentence": sentence,"detected": detected, "label": label})
             elif method == 0:
                 lst.append({"base":b, "target":t, "similarity": similarity,"sentence": sentence,"detected": detected})
+            elif method == 2:
+                lst.append({"label": label})
             else:
                 lst.append({"sentence": sentence, "label": label})
     return lst
@@ -346,12 +345,12 @@ def classify_pipeline(train_data, train_labels, test_data, test_labels, classifi
         d2 =  {'data': [], 'label': [], 'answer': []}
         # d = {'data': test_data, 'label': test_predict, 'answer': test_labels}
         for pred, lab, dat in zip(test_predict, test_labels, test_data):
-            if pred == lab == 'YES':
+            if pred == 'YES':
                 d['sentence'].append(dat['sentence'])
                 d['data'].append(dat)
                 d['label'].append(pred)
                 d['answer'].append(lab)
-            if pred == lab == 'NO':
+            if pred ==  'NO':
                 d2['data'].append(dat)
                 d2['label'].append(pred)
                 d2['answer'].append(lab)
