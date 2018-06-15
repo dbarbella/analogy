@@ -98,9 +98,7 @@ if __name__ == '__main__':
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
     functions.explore_csv(bt_parsed,bt_label)
-    # print(max(acc))
-    # print(min(acc))
-    # print(sum(acc)/len(acc))
+
 
 
     
