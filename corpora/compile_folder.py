@@ -24,6 +24,7 @@ def compile_to_output():
     text_files = glob.glob(path)
     output_handler = open(output_name, "w", encoding="utf8")
     for next_file in text_files:
+        print(next_file)
         output_handler.write(formatted_file(next_file))
     output_handler.close()
 
