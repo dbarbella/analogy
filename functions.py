@@ -15,6 +15,7 @@ from sklearn.svm import NuSVC
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
+import matplotlib.pyplot as plt
 from collections import defaultdict
 import sys
 import json
@@ -72,6 +73,8 @@ def explore_csv(bt_parsed, bt_label):
     data = {}
     count = 0
     c = 0
+    color = []
+    x,y = [],[]
     for sent,label in zip(sentences,bt_label):
         c += 1
         test_appearance, true_positive, false_negative = 0,0,0
@@ -85,9 +88,18 @@ def explore_csv(bt_parsed, bt_label):
                 test_appearance += 1
             if str(sent) in false_csv:
                 false_negative += 1
+        x.append(true_positive)
+        y.append(false_negative)
+        if label['label'] == 'YES':
+            color.append(true_positive/159)
+        else:
+            color.append(false_negative/159)
         dic= {'data': sent, 'label': label["label"], 'true_predicted': true_positive, 'false_predicted': false_negative, 'test_appearance': test_appearance}
         data[str(c)] = dic
+    plt.scatter(x,y,s = 50, c = color, cmap = 'gray')
+    plt.show()
     writeJSON(data, './testing/data.json')
+
 
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test,seed, caller= ''):
@@ -165,23 +177,26 @@ def writeJSON(dic, dire):
     with open(dire, 'w') as fp:
         json.dump(dic, fp, indent= 4)
 
-def readCSV(csvFile, method):
+def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
     lst = []
-    with open(csvFile) as file:
+    with open(csvFile) as file, open(csvTree) as tree:
         readcsv = csv.reader(file, delimiter=',')
-        for row in readcsv:
+        readTree = csv.reader(tree, delimiter = ",")
+        for row,row1 in zip(readcsv,readTree):
             sentence = row[2]
             b = row[0]
             t = row[1]
+            tree_detected = row1[1]
             similarity  = row[3]
             label = row[4]
             detected = True
             if len(t) == 0 and len(b) == 0:
                 detected = False
             if method == 1:
-                lst.append({"base":b, "target":t, "similarity": similarity,"sentence": sentence,"detected": detected, "label": label})
+                lst.append({"sentence": sentence,"base": b, "target": t, "similarity": similarity,"detected": detected, "tree_detected": tree_detected, "label": label})
+
             elif method == 0:
-                lst.append({"base":b, "target":t, "similarity": similarity,"sentence": sentence,"detected": detected})
+                lst.append({"sentence": sentence,"base": b, "target": t, "similarity": similarity,"detected": detected, "tree_detected": tree_detected})
             elif method == 2:
                 lst.append({"label": label})
             else:

@@ -1,9 +1,11 @@
 import os
 import nltk
 import csv
+import sys
 import re
 from time import time
 from nltk.parse import stanford
+os.chdir('..')
 jar = './stanford-parser/jars/stanford-parser.jar'
 model = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 parser = stanford.StanfordParser(model,jar,encoding = 'utf8')
@@ -44,12 +46,13 @@ def linking_word_check(sent):
     for w in linking_word:
         if w in txt:
             ind = txt.index(w)
-    if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
-        if list_of_word[ind][1] == "JJ":
-            base, target = parse(sent, list_of_word[ind][0], "JJ")
-            # print(base ,  target)
-            return base, target
-    elif list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
+    # if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
+    #     print(type(list_of_word))
+    #     if list_of_word[ind][1] == "JJ":
+    #         base, target = parse(sent, list_of_word[ind][0], "JJ")
+    #         # print(base ,  target)
+    #         return base, target
+    if list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
             base,target = parse(sent,list_of_word[ind][0],"IN")
             # print(base,  target)
@@ -103,14 +106,14 @@ def base_search2(target,parent_node,base):
             p_child = {}
             result = []
 
-            while temp.value._label not in noun :
+            while temp is not None and temp.value._label not in noun :
                 p_child[temp.parent] = temp
                 temp = temp.parent
 
             for temp in p_child:
                 i = 0
                 childNode = p_child[temp]
-                while  (temp.value[i]) != (childNode.value) and i < len(temp.value) - 1 :
+                while temp is not None and (temp.value[i]) != (childNode.value) and i < len(temp.value) - 1 :
                     if temp.value[i]._label not in pronoun:
                         result.append(temp.value[i])
                         # print("temp\n",temp.value)
@@ -133,7 +136,6 @@ def base_search2(target,parent_node,base):
                         else:
                             return subject
             return subject
-
         base = base_search2(target,child,base)
     return base
 
@@ -186,7 +188,26 @@ def chunk(sentence):
         b = "".join(str(b).split(s))
         t = "".join(str(t).split(s))
     return b,t
+def writeCSVFile(text_output, to_dir):
+    f = open(to_dir, 'w')
+    for line in text_output:
+            f.write(line)
+    f.close()
 
+if __name__ == '__main__':
+    pos = readFile('./corpora/verified_analogies.csv')
+    neg = readFile('./corpora/verified_non_analogies.csv')
+    samples = pos + neg
+    txt = ""
+    for sent in samples:
+        if sent is not None:
+            base,target = linking_word_check(sent)
+            print(str(base) + "___"+ str(target))
+            if base is not None and target is not None:
+                txt += '"' + sent + '","' + str(1) + '"\n'
+            else:
+                txt += '"' + sent + '","' + str(0) + '"\n'
+    writeCSVFile(txt, './base_target_tree.csv')
 # for i in range(lower_tie,upper_tie):
 #     p_sent.append(tryoutParent(sentences[i]))
 # for p in p_sent:

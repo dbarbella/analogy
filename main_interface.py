@@ -9,7 +9,7 @@ import math
 import inspect
 sys.path.insert(0, './2018')
 import pandas as pd
-from DependencyParsing import dependency_parse,writeCSVFile,changePronoun, parse
+# from DependencyParsing import dependency_parse,writeCSVFile,changePronoun, parse
 # positive_set is the set of positive examples, as a file
 # negative_set is the set of negative examples, as a file
 # percent_test is the portion of the imput sets that should be used as the test set
@@ -69,7 +69,7 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
     # Randomly divide them into a training set and a test set
 
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
-    bt_parsed = functions.readCSV('base_target.csv',1)
+    bt_parsed = functions.readCSV('base_target.csv',1,'base_target_tree.csv')
 
     extra = functions.set_extra(extra)
     # Run classifier, generate results based on the value passed in for representation
@@ -85,20 +85,22 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
     print(score)
     print(matrix)
     print(precision, recall, f_measure)
-
+    return score
        
 
 if __name__ == '__main__':
     positive_set = 'corpora/verified_analogies.csv'
     negative_set = 'corpora/verified_non_analogies.csv'
-
+    score_store = []
     for count in range(100):
         seed = 1000 + count * 30
-        analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'svm', seed)
+        score_store.append(analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'svm', seed))
+    print(max(score_store))
+    print(min(score_store))
+    print(sum(score_store) / len(score_store))
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
     functions.explore_csv(bt_parsed,bt_label)
-
 
 
     

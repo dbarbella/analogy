@@ -3,7 +3,10 @@ from nltk.parse.stanford import StanfordDependencyParser
 # from parser import readFile, writeTSVFile
 from nltk.corpus import wordnet as wn
 from nltk import word_tokenize
+import os
+import csv
 import json
+os.chdir('..')
 path_to_jar = './stanford-parser/jars/stanford-parser.jar'
 path_to_models_jar = './stanford-parser/jars/stanford-english-corenlp-2018-02-27-models.jar'
 from time import time
@@ -173,7 +176,14 @@ def writeCSVFile(text_output, to_dir):
             f.write(line)
     f.close()
 
-
+def readFile(fileName):
+    sent =[]
+    with open(fileName) as file:
+        readcsv = csv.reader(file, delimiter=',')
+        for row in readcsv:
+            sentence = row[1]
+            sent.append(sentence)
+    return sent
 def toDict(line,sent):
     dic = {}
     properties = ["address", "ctag", "feats", "head", "lemma", "rel", "tag", "word"]
@@ -188,3 +198,15 @@ def toDict(line,sent):
         dic[i] = temp
     return dic
 
+if __name__ == '__main__':
+    pos = readFile('./corpora/verified_analogies.csv')
+    neg = readFile('./corpora/verified_analogies.csv')
+    samples = [(text, 'YES') for text in pos] + [(text, 'NO') for text in neg]
+    bt_dep = []
+    for (sent,label) in samples:
+        dic, line = parse(sent)
+        bt_dep.append(dependency_parse(line,sent,label))
+    txt = ""
+    for dep in bt_dep:
+        txt += '"' + str(dep["base"]) + '","' + str(dep["target"]) + '","' + str(dep["sentence"]) + '","' + str(dep["similarity"]) +  '","' + str(dep["label"])+'"\n'
+    writeCSVFile(txt,'./base_target.csv')
