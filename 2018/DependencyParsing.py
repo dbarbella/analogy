@@ -27,10 +27,10 @@ def parse(sentence):
         return toDict(line.nodes,sentence),line
 
 def dependency_parse(result,sentence,label):
-    base = None
+    base, tree = None, None
     target, tar_index = target_search(result.nodes)
     if tar_index is not None:
-        base = base_search(tar_index,result.nodes)
+        base,tree = base_search(tar_index,result.nodes)
     if base is not None and len(target) > 1:
         base, b = changePronoun(base) #check if it is a person name
         print(sentence, "---", base, target)
@@ -38,9 +38,9 @@ def dependency_parse(result,sentence,label):
         similarity = wn.path_similarity(b,t)
         if similarity is None:
             similarity = 0.0
-        return {"base":base, "target":target, "similarity": similarity, "sentence": sentence, "detected": True, "label": label} #add features here
+        return {"base":base, "target":target, "similarity": similarity, "sentence": sentence, "tree_type": tree, "detected": True, "label": label} #add features here
     else:
-        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence, "detected": False, "label": label}
+        return {"base": "", "target": "","similarity": 0.0, "sentence": sentence, "tree_type": 0, "detected": False, "label": label}
 
 
 
@@ -112,12 +112,12 @@ def target_search(p):
 def base_search(tar_index,line):
     base_index = tar_index
     if base_index == 0: #there is no base
-        return None
+        return None,0
     grand_base_index = line[base_index]["head"] # the head of current index
     if line[grand_base_index]["tag"] in noun and line[grand_base_index]["rel"] == 'dobj': #check if the head of the current index is a noun and is a direct object
         for i in range(grand_base_index,tar_index):
             if "compound" in line[i]["deps"] and line[i]["head"] == grand_base_index: #this case deals with V-ing sentences
-                return check_numerical(line,grand_base_index)
+                return check_numerical(line,grand_base_index),1
     while line[base_index]["tag"] not in verb: #find the closest verb to the target
         temp = line[base_index]["head"]
         if temp == 0:
@@ -128,19 +128,20 @@ def base_search(tar_index,line):
     while line[grand_base_index]["tag"] in verb:#trace back to the main verb in a multi-verb sentence
         for s in subject: #find the subject of this verb
             if s in line[base_index]["deps"]:
-                return find_subject(line,base_index,s)
+                return find_subject(line,base_index,s),2
         for s in subject:
             if s in line[grand_base_index]["deps"]:
-                return find_subject(line,grand_base_index,s)
+                return find_subject(line,grand_base_index,s),3
         base_index = line[base_index]["head"]
         grand_base_index = line[base_index]["head"]
 
     if search_WP(line,base_index): #if there is a Wh-phrase, return the Noun that the Wh is refering to
-        return check_numerical(line,grand_base_index)
+        return check_numerical(line,grand_base_index),4
     else:
         for s in subject: #up to this stage, it is most likely that the structure would be like this: S V like O
             if s in line[base_index]["deps"]:
-                return find_subject(line,base_index,s)
+                return find_subject(line,base_index,s),5
+    return None,0
 
 def find_subject(line,index,s):
     """find the subject based on the verb"""
@@ -208,5 +209,5 @@ if __name__ == '__main__':
         bt_dep.append(dependency_parse(line,sent,label))
     txt = ""
     for dep in bt_dep:
-        txt += '"' + str(dep["base"]) + '","' + str(dep["target"]) + '","' + str(dep["sentence"]) + '","' + str(dep["similarity"]) +  '","' + str(dep["label"])+'"\n'
+        txt += '"' + str(dep["base"]) + '","' + str(dep["target"]) + '","' + str(dep["sentence"]) + '","' + str(dep["similarity"]) + '","' + str(dep["tree_type"]) + '","' + str(dep["label"])+'"\n'
     writeCSVFile(txt,'./base_target.csv')

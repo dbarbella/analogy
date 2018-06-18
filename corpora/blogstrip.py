@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-
+print("Hello")
 file_name = sys.argv[1]
 out_file_name = file_name + "_stripped.txt"
 

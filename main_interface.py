@@ -4,7 +4,8 @@ import sys
 from export_log import outputResults
 #--------
 import time
-import timeout 
+import timeout
+import json
 import math
 import inspect
 sys.path.insert(0, './2018')
@@ -100,7 +101,17 @@ if __name__ == '__main__':
     print(sum(score_store) / len(score_store))
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
-    functions.explore_csv(bt_parsed,bt_label)
+    tree_type = functions.read_CSV('base_target.csv',4)
+    tree = []
+    for i in tree_type:
+        tree.append(int(i)/5)
+    functions.explore_parser()
+    # bt_parsed = functions.readCSV('base_target.csv', 0)
+    # bt_label = functions.readCSV('base_target.csv', 2)
+    # functions.explore_csv(bt_parsed, bt_label,tree)
+
+
+
 
 
     

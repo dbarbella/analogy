@@ -68,14 +68,16 @@ def read_CSV(csvfile, r):
             lst.append(sentence)
     return lst
 
-def explore_csv(bt_parsed, bt_label):
+def explore_csv(bt_parsed, bt_label, tree_type):
     sentences = bt_parsed
     data = {}
-    count = 0
+    dic = {}
+    for i in range(6):
+        dic[str(i)] = 0
     c = 0
     color = []
     x,y = [],[]
-    for sent,label in zip(sentences,bt_label):
+    for sent,label,tp in zip(sentences,bt_label,tree_type):
         c += 1
         test_appearance, true_positive, false_negative = 0,0,0
         for seed in range(100):
@@ -84,21 +86,36 @@ def explore_csv(bt_parsed, bt_label):
             test_sent = read_CSV('./testing/test_set' + str(seed)+ '.csv',1)
             if str(sent) in sent_csv:
                 true_positive += 1
+                if label["label"] == 'YES':
+                    dic[str(int(tp)*5)] += 1
             if str(sent) in test_sent:
                 test_appearance += 1
             if str(sent) in false_csv:
                 false_negative += 1
+                if label["label"] == 'NO':
+                    dic[str(int(tp) * 5)] += 1
         x.append(true_positive)
         y.append(false_negative)
-        if label['label'] == 'YES':
-            color.append(true_positive/159)
-        else:
-            color.append(false_negative/159)
-        dic= {'data': sent, 'label': label["label"], 'true_predicted': true_positive, 'false_predicted': false_negative, 'test_appearance': test_appearance}
+        color.append(tp)
+        dic= {'data': sent, 'label': label["label"], 'tree_type': tp, 'true_predicted': true_positive, 'false_predicted': false_negative, 'test_appearance': test_appearance}
         data[str(c)] = dic
-    plt.scatter(x,y,s = 50, c = color, cmap = 'gray')
-    plt.show()
+    print(dic)
+    # plt.scatter(x,y,s = 50, c = color)
+    # plt.show()
     writeJSON(data, './testing/data.json')
+
+def explore_parser():
+    dic = {}
+    for i in range(6):
+        dic[str(i)] = {"YES": 0, "NO": 0}
+    tree_type = read_CSV('base_target.csv', 4)
+    label = read_CSV('base_target.csv', 5)
+    for tp,lab in zip(tree_type,label):
+        if lab == 'YES':
+            dic[str(tp)]["YES"] += 1
+        else:
+            dic[str(tp)]["NO"] += 1
+    print(dic)
 
 
 # preprocess the data so it can be used by the classifiers
@@ -188,7 +205,7 @@ def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
             t = row[1]
             tree_detected = row1[1]
             similarity  = row[3]
-            label = row[4]
+            label = row[5]
             detected = True
             if len(t) == 0 and len(b) == 0:
                 detected = False
