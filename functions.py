@@ -68,55 +68,102 @@ def read_CSV(csvfile, r):
             lst.append(sentence)
     return lst
 
+
+
 def explore_csv(bt_parsed, bt_label, tree_type):
     sentences = bt_parsed
-    data = {}
-    dic = {}
-    for i in range(6):
-        dic[str(i)] = 0
-    c = 0
-    color = []
-    x,y = [],[]
-    for sent,label,tp in zip(sentences,bt_label,tree_type):
-        c += 1
-        test_appearance, true_positive, false_negative = 0,0,0
-        for seed in range(100):
-            sent_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
-            false_csv = read_CSV('./testing/false' + str(seed) + '.csv',1)
-            test_sent = read_CSV('./testing/test_set' + str(seed)+ '.csv',1)
+    data = defaultdict(lambda :0)
+    for i in range(318):
+        data[str(i)] = {"true_predicted": 0, "false_predicted": 0, "test_appearance": 0}
+    lst_type = []
+    pos_sent = read_CSV('base_target_pos.csv',1)
+    neg_sent = read_CSV('base_target_neg.csv',1)
+    for seed in range(100):
+        d = {}
+        c = 0
+        for i in range(6):
+            d[str(i)] = 0
+        sent_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
+        false_csv = read_CSV('./testing/false' + str(seed) + '.csv',1)
+        test_sent = read_CSV('./testing/test_set' + str(seed)+ '.csv',1)
+        for sent, label, tp in zip(sentences, bt_label, tree_type):
+            temp_true = int(data[str(c)]["true_predicted"])
+            temp_false = int(data[str(c)]["false_predicted"])
+            temp_appr = int(data[str(c)]["test_appearance"])
             if str(sent) in sent_csv:
-                true_positive += 1
-                if label["label"] == 'YES':
-                    dic[str(int(tp)*5)] += 1
+                if str(sent) in pos_sent:
+                    temp_true += 1
+                    d[str(tp)] += 1
             if str(sent) in test_sent:
-                test_appearance += 1
+                temp_appr += 1
             if str(sent) in false_csv:
-                false_negative += 1
-                if label["label"] == 'NO':
-                    dic[str(int(tp) * 5)] += 1
-        x.append(true_positive)
-        y.append(false_negative)
-        color.append(tp)
-        dic= {'data': sent, 'label': label["label"], 'tree_type': tp, 'true_predicted': true_positive, 'false_predicted': false_negative, 'test_appearance': test_appearance}
-        data[str(c)] = dic
-    print(dic)
+                if str(sent) in neg_sent:
+                    temp_false += 1
+                    d[str(tp)] += 1
+            dic= {'data': sent, 'label': label["label"], 'tree_type': tp, 'true_predicted': temp_true, 'false_predicted': temp_false, 'test_appearance': temp_appr}
+            data[str(c)] = dic
+            c += 1
+        # print(d)
+        lst_type.append(d)
+        # x.append(true_positive)
+        # y.append(false_negative)
+        # print("x__",x)
+        # print("y__",y)
+        # color.append(tp)
+    d = {}
+    for i in range(6):
+        d[str(i)] = 0
+    for d_i in lst_type:
+        for i in d_i:
+            d[i] += d_i[i]
+    for i in d:
+        d[i] = d[i]/100
+    print(d)
     # plt.scatter(x,y,s = 50, c = color)
     # plt.show()
     writeJSON(data, './testing/data.json')
 
-def explore_parser():
-    dic = {}
+def explore_tree_type():
+    d = {}
     for i in range(6):
-        dic[str(i)] = {"YES": 0, "NO": 0}
-    tree_type = read_CSV('base_target.csv', 4)
-    label = read_CSV('base_target.csv', 5)
-    for tp,lab in zip(tree_type,label):
-        if lab == 'YES':
-            dic[str(tp)]["YES"] += 1
-        else:
-            dic[str(tp)]["NO"] += 1
-    print(dic)
-
+        d[str(i)] = {"YES": 0, "NO":0}
+    tree_type = read_CSV('base_target.csv',4)
+    label = read_CSV('base_target.csv',5)
+    for tpe, lab in zip(tree_type,label):
+        d[tpe][lab] += 1
+    for key in d:
+        d[key]["YES"] = d[key]["YES"]/ (d[key]["YES"] + d[key]["NO"])
+        d[key]["NO"] = 1 - d[key]["YES"]
+    print(d)
+def explore_parser():
+    tree_parse_count, dep_parse_count, count = 0,0,0
+    for seed in range(100):
+        pos_count,neg_count = -1,-1
+        false_csv = read_CSV('./testing/false' + str(seed) + '.csv', 1)
+        true_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
+        label_false_csv = read_CSV('./testing/false' + str(seed) + '.csv',3)
+        label_true_csv =  read_CSV('./testing/prediction' + str(seed) + '.csv',3)
+        for dat_pos, dat_neg, lab_pos, lab_neg in zip(true_csv, false_csv, label_true_csv, label_false_csv):
+            if pos_count >=0 and neg_count >=0:
+                if "'tree_detected': '1'" in dat_pos:
+                    if lab_pos == 'YES':
+                        tree_parse_count += 1
+                if  "'tree_detected': '0'" in dat_neg:
+                    if lab_neg == 'NO':
+                        tree_parse_count += 1
+                if "'detected': True" in dat_pos:
+                    if lab_pos == 'YES':
+                        dep_parse_count += 1
+                if  "'detected': False" in dat_neg:
+                    if lab_neg == 'NO':
+                        dep_parse_count += 1
+                count += 1
+            count+= 1
+            pos_count += 1
+            neg_count += 1
+    print(count)
+    print("tree parse: ",tree_parse_count,"___", tree_parse_count/count)
+    print("dep parse", dep_parse_count,"____", dep_parse_count/count)
 
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test,seed, caller= ''):
@@ -194,6 +241,12 @@ def writeJSON(dic, dire):
     with open(dire, 'w') as fp:
         json.dump(dic, fp, indent= 4)
 
+def writeCSVFile(text_output, to_dir):
+    f = open(to_dir, 'w')
+    for line in text_output:
+            f.write(line)
+    f.close()
+
 def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
     lst = []
     with open(csvFile) as file, open(csvTree) as tree:
@@ -205,15 +258,15 @@ def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
             t = row[1]
             tree_detected = row1[1]
             similarity  = row[3]
+            tree_type = row[4]
             label = row[5]
             detected = True
             if len(t) == 0 and len(b) == 0:
                 detected = False
             if method == 1:
-                lst.append({"sentence": sentence,"base": b, "target": t, "similarity": similarity,"detected": detected, "tree_detected": tree_detected, "label": label})
-
+                lst.append({"sentence": sentence,"detected": detected,"tree_type": tree_type, "tree_detected": tree_detected, "label": label})
             elif method == 0:
-                lst.append({"sentence": sentence,"base": b, "target": t, "similarity": similarity,"detected": detected, "tree_detected": tree_detected})
+                lst.append({"sentence": sentence,"detected": detected,"tree_type": tree_type, "tree_detected": tree_detected})
             elif method == 2:
                 lst.append({"label": label})
             else:
@@ -360,6 +413,22 @@ def set_extra(extra):
     set_default(extra, 'word_hypernyms', 0.001)
     return(extra)
 
+def divide_pos_neg():
+    bt_parsed = readCSV('base_target.csv',0)
+    label = readCSV('base_target.csv',2)
+    d1,d2 = {"data": []},{"data": []}
+    c,n,p = 0,0,0
+    for lab,sent in zip(label,bt_parsed):
+        if lab["label"] == 'YES':
+            d1["data"].append(sent)
+            p  += 1
+        elif lab["label"] == "NO":
+            d2["data"].append(sent)
+            n += 1
+        c += 1
+    pd.DataFrame(d1, columns=['data']).to_csv('base_target_pos' + '.csv')
+    pd.DataFrame(d2, columns=['data']).to_csv('base_target_neg' + '.csv')
+
 
 def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra={"sub_class":""}, time=1000000000):
     @timeout(time)
@@ -377,12 +446,12 @@ def classify_pipeline(train_data, train_labels, test_data, test_labels, classifi
         d2 =  {'data': [], 'label': [], 'answer': []}
         # d = {'data': test_data, 'label': test_predict, 'answer': test_labels}
         for pred, lab, dat in zip(test_predict, test_labels, test_data):
-            if pred == 'YES':
+            if pred ==  'YES':
                 d['sentence'].append(dat['sentence'])
                 d['data'].append(dat)
                 d['label'].append(pred)
                 d['answer'].append(lab)
-            if pred ==  'NO':
+            if pred == 'NO':
                 d2['data'].append(dat)
                 d2['label'].append(pred)
                 d2['answer'].append(lab)

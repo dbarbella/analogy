@@ -102,10 +102,13 @@ if __name__ == '__main__':
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
     tree_type = functions.read_CSV('base_target.csv',4)
+    functions.divide_pos_neg()
     tree = []
     for i in tree_type:
-        tree.append(int(i)/5)
+        tree.append(int(i))
+    functions.explore_csv(bt_parsed,bt_label,tree)
     functions.explore_parser()
+    functions.explore_tree_type()
     # bt_parsed = functions.readCSV('base_target.csv', 0)
     # bt_label = functions.readCSV('base_target.csv', 2)
     # functions.explore_csv(bt_parsed, bt_label,tree)

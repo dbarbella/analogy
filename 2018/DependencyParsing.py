@@ -201,7 +201,7 @@ def toDict(line,sent):
 
 if __name__ == '__main__':
     pos = readFile('./corpora/verified_analogies.csv')
-    neg = readFile('./corpora/verified_analogies.csv')
+    neg = readFile('./corpora/verified_non_analogies.csv')
     samples = [(text, 'YES') for text in pos] + [(text, 'NO') for text in neg]
     bt_dep = []
     for (sent,label) in samples:
