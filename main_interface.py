@@ -70,18 +70,15 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
     # Randomly divide them into a training set and a test set
 
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
-    bt_parsed = functions.readCSV('base_target.csv',1,'base_target_tree.csv')
-
+    bt_parsed = functions.readCSV('base_target.csv',1)
     extra = functions.set_extra(extra)
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
     train_data, train_labels, test_data, test_labels = functions.preprocess(bt_parsed, percent_test, seed, 'test_main_interface_output')
     # Make sure the classifier runs within a set time
     seed = (seed - 1000) / 30
-    dic = {'data':[]}
-    for dat in test_data:
-        dic['data'].append(dat)
-    pd.DataFrame(dic, columns=['data']).to_csv('./testing/test_set' + str(int(seed)) + '.csv')
+    train_data = functions.strip_id(train_data)
+    test_data = functions.strip_id(test_data)
     score, matrix, precision, recall, f_measure = functions.classify_pipeline(train_data, train_labels, test_data, test_labels, classifier, representation, seed, extra, timer)
     print(score)
     print(matrix)
@@ -90,6 +87,7 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
        
 
 if __name__ == '__main__':
+    # functions.add_ID_to_CSV()
     positive_set = 'corpora/verified_analogies.csv'
     negative_set = 'corpora/verified_non_analogies.csv'
     score_store = []
@@ -101,7 +99,7 @@ if __name__ == '__main__':
     print(sum(score_store) / len(score_store))
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
-    tree_type = functions.read_CSV('base_target.csv',4)
+    tree_type = functions.read_CSV('base_target.csv',5)
     functions.divide_pos_neg()
     tree = []
     for i in tree_type:
@@ -109,9 +107,9 @@ if __name__ == '__main__':
     functions.explore_csv(bt_parsed,bt_label,tree)
     functions.explore_parser()
     functions.explore_tree_type()
-    # bt_parsed = functions.readCSV('base_target.csv', 0)
-    # bt_label = functions.readCSV('base_target.csv', 2)
-    # functions.explore_csv(bt_parsed, bt_label,tree)
+    bt_parsed = functions.readCSV('base_target.csv', 0)
+    bt_label = functions.readCSV('base_target.csv', 2)
+    functions.explore_csv(bt_parsed, bt_label,tree)
 
 
 

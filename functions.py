@@ -127,8 +127,8 @@ def explore_tree_type():
     d = {}
     for i in range(6):
         d[str(i)] = {"YES": 0, "NO":0}
-    tree_type = read_CSV('base_target.csv',4)
-    label = read_CSV('base_target.csv',5)
+    tree_type = read_CSV('base_target.csv',5)
+    label = read_CSV('base_target.csv',6)
     for tpe, lab in zip(tree_type,label):
         d[tpe][lab] += 1
     for key in d:
@@ -253,22 +253,25 @@ def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
         readcsv = csv.reader(file, delimiter=',')
         readTree = csv.reader(tree, delimiter = ",")
         for row,row1 in zip(readcsv,readTree):
-            sentence = row[2]
-            b = row[0]
-            t = row[1]
+            ide = row[0]
+            sentence = row[1]
+            b = row[2]
+            t = row[3]
+            similarity  = row[4]
+            tree_type = row[5]
+            label = row[6]
             tree_detected = row1[1]
-            similarity  = row[3]
-            tree_type = row[4]
-            label = row[5]
             detected = True
             if len(t) == 0 and len(b) == 0:
                 detected = False
             if method == 1:
-                lst.append({"sentence": sentence,"detected": detected,"tree_type": tree_type, "tree_detected": tree_detected, "label": label})
+                lst.append({"sentence": sentence,   "tree_type": tree_type, "detected": detected, "tree_detected": tree_detected, "label": label})
             elif method == 0:
-                lst.append({"sentence": sentence,"detected": detected,"tree_type": tree_type, "tree_detected": tree_detected})
+                lst.append({"sentence": sentence,  "tree_type": tree_type, "detected": detected, "tree_detected": tree_detected})
             elif method == 2:
                 lst.append({"label": label})
+            elif method == 3:
+                lst.append({"sentence": sentence, "base": b, "target": t, "similarity": similarity, "tree_type": tree_type, "label": label})
             else:
                 lst.append({"sentence": sentence, "label": label})
     return lst
@@ -412,6 +415,15 @@ def set_extra(extra):
     set_default(extra,'tol', 0.001)
     set_default(extra, 'word_hypernyms', 0.001)
     return(extra)
+def strip_id(lst):
+    output = []
+    for dic in lst:
+        d = {}
+        for key in dic:
+            if key != "sentence":
+                d[key] = dic[key]
+        output.append(d)
+    return output
 
 def divide_pos_neg():
     bt_parsed = readCSV('base_target.csv',0)
@@ -436,10 +448,11 @@ def classify_pipeline(train_data, train_labels, test_data, test_labels, classifi
     def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra):
         clfier = get_classifier(classifier_name, extra)
         train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra, train_labels, test_labels)
-        selector = SelectPercentile(f_classif, percentile=10)
+        selector = SelectPercentile(f_classif, percentile=100)
         estimators = [('reduce_dim', selector), ('clf', clfier)]
         pipe = Pipeline(estimators)
         learn_results = pipe.fit(train_set, train_labels)
+
         score = learn_results.score(test_set, test_labels)
         test_predict = learn_results.predict(test_set)
         d = {'sentence': [],'data': [], 'label': [], 'answer': []}
@@ -447,7 +460,7 @@ def classify_pipeline(train_data, train_labels, test_data, test_labels, classifi
         # d = {'data': test_data, 'label': test_predict, 'answer': test_labels}
         for pred, lab, dat in zip(test_predict, test_labels, test_data):
             if pred ==  'YES':
-                d['sentence'].append(dat['sentence'])
+                # d['sentence'].append(dat['sentence'])
                 d['data'].append(dat)
                 d['label'].append(pred)
                 d['answer'].append(lab)
