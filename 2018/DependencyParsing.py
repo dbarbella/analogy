@@ -58,10 +58,10 @@ def changePronoun(word):
         w = wn.morphy('person', wn.NOUN)
         return w, wn.synset(str(w) + '.n.01')
     elif tag[0][1]== 'PRP' or tag[0][1]== 'PRPS':
-        if word.lower() == 'she':
+        if word.lower() == 'she' or word.lower == 'her':
             w = wn.morphy('female', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
-        elif word.lower() == 'he':
+        elif word.lower() == 'he' or word.lower() == 'him':
             w = wn.morphy('male', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
         elif word.lower() == 'i' or word.lower() == 'you' or word.lower() == 'who':
@@ -89,7 +89,11 @@ def changePronoun(word):
         return w, wn.synset(str(w) + '.n.01')
     elif tag[0][1]in verb:
         w = wn.morphy(word, wn.VERB)
-        return w, wn.synset(str(w) + '.v.01')
+        if w is None:
+            w = wn.morphy("action", wn.NOUN)
+            return w, wn.synset(str(w) + '.v.01')
+        else:
+            return w, wn.synset(str(w) + '.v.01')
     elif tag[0][1]== 'JJ' or tag[0][1]== 'JJS':
         w = wn.morphy(word, wn.ADJ)
         if w == None:

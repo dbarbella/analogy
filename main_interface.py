@@ -72,13 +72,18 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
     samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
     bt_parsed = functions.readCSV('base_target.csv',1)
     extra = functions.set_extra(extra)
+    num_samples = min(len(analogy_list), len(non_analogy_list))
     # Run classifier, generate results based on the value passed in for representation
     beginTimer = time.time()
-    train_data, train_labels, test_data, test_labels = functions.preprocess(bt_parsed, percent_test, seed, 'test_main_interface_output')
+    train_data, train_labels, test_data, test_labels = functions.preprocess(bt_parsed, percent_test, seed,num_samples, 'test_main_interface_output')
     # Make sure the classifier runs within a set time
     seed = (seed - 1000) / 30
-    train_data = functions.strip_id(train_data)
-    test_data = functions.strip_id(test_data)
+    dic = {'data': []}
+    for dat in test_data:
+        dic['data'].append(dat)
+    pd.DataFrame(dic, columns=['data']).to_csv('./testing/test_set' + str(int(seed)) + '.csv')
+    # train_data = functions.strip_id(train_data)
+    # test_data = functions.strip_id(test_data)
     score, matrix, precision, recall, f_measure = functions.classify_pipeline(train_data, train_labels, test_data, test_labels, classifier, representation, seed, extra, timer)
     print(score)
     print(matrix)
@@ -93,13 +98,13 @@ if __name__ == '__main__':
     score_store = []
     for count in range(100):
         seed = 1000 + count * 30
-        score_store.append(analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'svm', seed))
+        score_store.append(analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'naive', seed))
     print(max(score_store))
     print(min(score_store))
     print(sum(score_store) / len(score_store))
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
-    tree_type = functions.read_CSV('base_target.csv',5)
+    tree_type = functions.read_CSV('base_target.csv',4)
     functions.divide_pos_neg()
     tree = []
     for i in tree_type:

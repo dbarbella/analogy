@@ -73,11 +73,12 @@ def read_CSV(csvfile, r):
 def explore_csv(bt_parsed, bt_label, tree_type):
     sentences = bt_parsed
     data = defaultdict(lambda :0)
-    for i in range(318):
+    for i in range(600):
         data[str(i)] = {"true_predicted": 0, "false_predicted": 0, "test_appearance": 0}
     lst_type = []
     pos_sent = read_CSV('base_target_pos.csv',1)
     neg_sent = read_CSV('base_target_neg.csv',1)
+    count = 0
     for seed in range(100):
         d = {}
         c = 0
@@ -86,6 +87,11 @@ def explore_csv(bt_parsed, bt_label, tree_type):
         sent_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
         false_csv = read_CSV('./testing/false' + str(seed) + '.csv',1)
         test_sent = read_CSV('./testing/test_set' + str(seed)+ '.csv',1)
+        sent_csv = sent_csv[1:]
+        false_csv = false_csv[1:]
+        test_sent = test_sent[1:]
+        if test_sent == false_csv + sent_csv:
+            count += 1
         for sent, label, tp in zip(sentences, bt_label, tree_type):
             temp_true = int(data[str(c)]["true_predicted"])
             temp_false = int(data[str(c)]["false_predicted"])
@@ -119,6 +125,7 @@ def explore_csv(bt_parsed, bt_label, tree_type):
     for i in d:
         d[i] = d[i]/100
     print(d)
+    print(count/100)
     # plt.scatter(x,y,s = 50, c = color)
     # plt.show()
     writeJSON(data, './testing/data.json')
@@ -127,8 +134,8 @@ def explore_tree_type():
     d = {}
     for i in range(6):
         d[str(i)] = {"YES": 0, "NO":0}
-    tree_type = read_CSV('base_target.csv',5)
-    label = read_CSV('base_target.csv',6)
+    tree_type = read_CSV('base_target.csv',4)
+    label = read_CSV('base_target.csv',5)
     for tpe, lab in zip(tree_type,label):
         d[tpe][lab] += 1
     for key in d:
@@ -166,8 +173,7 @@ def explore_parser():
     print("dep parse", dep_parse_count,"____", dep_parse_count/count)
 
 # preprocess the data so it can be used by the classifiers
-def preprocess(samples, percent_test,seed, caller= ''):
-    num_samples = len(samples)
+def preprocess(samples, percent_test,seed, num_samples, caller= ''):
     if caller == 'test_main_interface_output': 
         random.seed(seed)
     random.shuffle(samples)
@@ -253,21 +259,21 @@ def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
         readcsv = csv.reader(file, delimiter=',')
         readTree = csv.reader(tree, delimiter = ",")
         for row,row1 in zip(readcsv,readTree):
-            ide = row[0]
-            sentence = row[1]
-            b = row[2]
-            t = row[3]
-            similarity  = row[4]
-            tree_type = row[5]
-            label = row[6]
+            # ide = row[0]
+            sentence = row[2]
+            b = row[0]
+            t = row[1]
+            similarity  = row[3]
+            tree_type = row[4]
+            label = row[5]
             tree_detected = row1[1]
             detected = True
             if len(t) == 0 and len(b) == 0:
                 detected = False
             if method == 1:
-                lst.append({"sentence": sentence,   "tree_type": tree_type, "detected": detected, "tree_detected": tree_detected, "label": label})
+                lst.append({"sentence": sentence, "detected": detected, "tree_type": tree_type,  "tree_detected": tree_detected, "label": label})
             elif method == 0:
-                lst.append({"sentence": sentence,  "tree_type": tree_type, "detected": detected, "tree_detected": tree_detected})
+                lst.append({"sentence": sentence, "detected": detected, "tree_type": tree_type, "tree_detected": tree_detected})
             elif method == 2:
                 lst.append({"label": label})
             elif method == 3:

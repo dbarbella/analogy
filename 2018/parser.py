@@ -62,6 +62,8 @@ def linking_word_check(sent):
             base,target = parse(sent, list_of_word[ind][0], "JJ")
             # print(base,  target)
             return base, target
+        else:
+            return None,None
 
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
         base,target = parse(sent, list_of_word[ind][0], "RB")
