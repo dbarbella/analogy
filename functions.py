@@ -72,9 +72,12 @@ def read_CSV(csvfile, r):
 
 def explore_csv(bt_parsed, bt_label, tree_type):
     sentences = bt_parsed
+    d_type = {}
+    for i in range(6):
+        d_type[str(i)] = 0
     data = defaultdict(lambda :0)
     for i in range(600):
-        data[str(i)] = {"true_predicted": 0, "false_predicted": 0, "test_appearance": 0}
+        data[str(i)] = {"correct_predicted": 0, "false_predicted": 0, "test_appearance": 0}
     lst_type = []
     pos_sent = read_CSV('base_target_pos.csv',1)
     neg_sent = read_CSV('base_target_neg.csv',1)
@@ -93,8 +96,7 @@ def explore_csv(bt_parsed, bt_label, tree_type):
         if test_sent == false_csv + sent_csv:
             count += 1
         for sent, label, tp in zip(sentences, bt_label, tree_type):
-            temp_true = int(data[str(c)]["true_predicted"])
-            temp_false = int(data[str(c)]["false_predicted"])
+            temp_true = int(data[str(c)]["correct_predicted"])
             temp_appr = int(data[str(c)]["test_appearance"])
             if str(sent) in sent_csv:
                 if str(sent) in pos_sent:
@@ -102,11 +104,13 @@ def explore_csv(bt_parsed, bt_label, tree_type):
                     d[str(tp)] += 1
             if str(sent) in test_sent:
                 temp_appr += 1
+                tpe = sent["tree_type"]
+                d_type[tpe] += 1
             if str(sent) in false_csv:
                 if str(sent) in neg_sent:
-                    temp_false += 1
+                    temp_true += 1
                     d[str(tp)] += 1
-            dic= {'data': sent, 'label': label["label"], 'tree_type': tp, 'true_predicted': temp_true, 'false_predicted': temp_false, 'test_appearance': temp_appr}
+            dic= {'data': sent, 'label': label["label"], 'tree_type': tp, 'correct_predicted': temp_true,'test_appearance': temp_appr}
             data[str(c)] = dic
             c += 1
         # print(d)
@@ -123,11 +127,8 @@ def explore_csv(bt_parsed, bt_label, tree_type):
         for i in d_i:
             d[i] += d_i[i]
     for i in d:
-        d[i] = d[i]/100
+        d[i] = d[i]/d_type[i]
     print(d)
-    print(count/100)
-    # plt.scatter(x,y,s = 50, c = color)
-    # plt.show()
     writeJSON(data, './testing/data.json')
 
 def explore_tree_type():
