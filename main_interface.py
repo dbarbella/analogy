@@ -34,12 +34,12 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
     currentTime = now
     now  = now.replace(" ", "_")
     now  = now.replace(":", "")
-    
+
     train_data, train_labels, test_data, test_labels = functions.preprocess(samples, percent_test, caller)
     # Make sure the classifier runs within a set time
     try:
         score, matrix, precision, recall, f_measure = functions.classify(train_data, train_labels, test_data, test_labels, classifier, representation, extra, timer)
-        
+
     # catch the timeout error
     except timeout.TimeoutError:
         print("Classifier timeout.")
@@ -52,7 +52,7 @@ def analogy_trial(positive_set, negative_set, percent_test, representation, clas
         algoTime = time.time()-beginTimer
         runTime = time.time()-start
         outputData = [currentTime, positive_set, negative_set, percent_test, representation, classifier, extra, score, matrix, precision, recall, f_measure, runTime, algoTime, comment]
-    
+
     # Store results
     outputResults(outputData)
     if caller != "test_main_interface_output":
@@ -68,8 +68,8 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
     # Read in the set of negative examples
     non_analogy_list = functions.get_list_re(negative_set)
     # Randomly divide them into a training set and a test set
-
-    samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list]
+    nan_set = functions.read_CSV('corpora/dmb_open_test.csv', 1)
+    samples = [(text, 'YES') for text in analogy_list] + [(text, 'NO') for text in non_analogy_list] + [(txt,'NO') for txt in nan_set]
     bt_parsed = functions.readCSV('base_target.csv',1)
     extra = functions.set_extra(extra)
     num_samples = min(len(analogy_list), len(non_analogy_list))
@@ -88,20 +88,28 @@ def analogy_pipeline(positive_set, negative_set, percent_test, representation, c
     print(score)
     print(matrix)
     print(precision, recall, f_measure)
-    return score
-       
+    return score, f_measure
+
 
 if __name__ == '__main__':
     # functions.add_ID_to_CSV()
     positive_set = 'corpora/verified_analogies.csv'
     negative_set = 'corpora/verified_non_analogies.csv'
-    score_store = []
+    # functions.divide_pos_neg() #
+    score_store, f_score_store = [],[]
     for count in range(100):
         seed = 1000 + count * 30
-        score_store.append(analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'naive', seed))
+        score, f_score = analogy_pipeline(positive_set, negative_set, .5, 'base_target', 'svm', seed)
+        score_store.append(score)
+        f_score_store.append(f_score)
+    print("accuracy")
     print(max(score_store))
     print(min(score_store))
     print(sum(score_store) / len(score_store))
+    print("f_score")
+    print(max(f_score_store))
+    print(min(f_score_store))
+    print(sum(f_score_store) / len(f_score_store))
     bt_parsed = functions.readCSV('base_target.csv', 0)
     bt_label = functions.readCSV('base_target.csv',2)
     tree_type = functions.read_CSV('base_target.csv',4)
@@ -120,4 +128,4 @@ if __name__ == '__main__':
 
 
 
-    
+

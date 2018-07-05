@@ -1,6 +1,7 @@
 import os
 import nltk
 import csv
+import random
 import sys
 import re
 from time import time
@@ -90,14 +91,11 @@ def parse(sent,w,l):
     phrase = None
     base = None
     target = None
-    parent_node = None
     parsed_sent = parser.raw_parse(sent)
     for line in parsed_sent:
         parent_node = Node(line)
-        # print(line)
         target, node =  recursive_search(line[0],w,l,phrase, parent_node)
         parent_node = creatingParentNode(line, parent_node)
-        # print(parent_node.printTree(0))
         base = base_search2(target,parent_node,base)
     return base,target
 
@@ -183,7 +181,6 @@ base = []
 target = []
 trash = [",","'", '"', "`"]
 
-
 def chunk(sentence):
     b, t = linking_word_check(sentence)
     for s in trash:
@@ -197,19 +194,22 @@ def writeCSVFile(text_output, to_dir):
     f.close()
 
 if __name__ == '__main__':
-    pos = readFile('./corpora/verified_analogies.csv')
-    neg = readFile('./corpora/verified_non_analogies.csv')
-    samples = pos + neg
+    # pos = readFile('./corpora/verified_analogies.csv')
+    # neg = readFile('./corpora/verified_non_analogies.csv')
+    # samples = pos + neg
+    samples = readFile('./corpora/dmb_open_test.csv')
+    random.seed(1234)
+    random.shuffle(samples)
     txt = ""
-    for sent in samples:
-        if sent is not None:
-            base,target = linking_word_check(sent)
+    for i in range(300):
+        if samples[i] is not None:
+            base,target = linking_word_check(samples[i])
             print(str(base) + "___"+ str(target))
             if base is not None and target is not None:
-                txt += '"' + sent + '","' + str(1) + '"\n'
+                txt += '"' + samples[i] + '","' + str(1) + '"\n'
             else:
-                txt += '"' + sent + '","' + str(0) + '"\n'
-    writeCSVFile(txt, './base_target_tree.csv')
+                txt += '"' + samples[i] + '","' + str(0) + '"\n'
+    writeCSVFile(txt, './random_parse_tree.csv')
 # for i in range(lower_tie,upper_tie):
 #     p_sent.append(tryoutParent(sentences[i]))
 # for p in p_sent:

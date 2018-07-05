@@ -76,7 +76,7 @@ def explore_csv(bt_parsed, bt_label, tree_type):
     for i in range(6):
         d_type[str(i)] = 0
     data = defaultdict(lambda :0)
-    for i in range(600):
+    for i in range(756):
         data[str(i)] = {"correct_predicted": 0, "false_predicted": 0, "test_appearance": 0}
     lst_type = []
     pos_sent = read_CSV('base_target_pos.csv',1)
@@ -115,11 +115,6 @@ def explore_csv(bt_parsed, bt_label, tree_type):
             c += 1
         # print(d)
         lst_type.append(d)
-        # x.append(true_positive)
-        # y.append(false_negative)
-        # print("x__",x)
-        # print("y__",y)
-        # color.append(tp)
     d = {}
     for i in range(6):
         d[str(i)] = 0
@@ -272,9 +267,9 @@ def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
             if len(t) == 0 and len(b) == 0:
                 detected = False
             if method == 1:
-                lst.append({"sentence": sentence, "detected": detected, "tree_type": tree_type,  "tree_detected": tree_detected, "label": label})
+                lst.append({"sentence": sentence,   "tree_detected": tree_detected, "label": label})
             elif method == 0:
-                lst.append({"sentence": sentence, "detected": detected, "tree_type": tree_type, "tree_detected": tree_detected})
+                lst.append({"sentence": sentence,  "tree_detected": tree_detected})
             elif method == 2:
                 lst.append({"label": label})
             elif method == 3:

@@ -5,6 +5,7 @@ from nltk.corpus import wordnet as wn
 from nltk import word_tokenize
 import os
 import csv
+import random
 import json
 os.chdir('..')
 path_to_jar = './stanford-parser/jars/stanford-parser.jar'
@@ -47,17 +48,17 @@ def dependency_parse(result,sentence,label):
 
 def changePronoun(word):
     tag = nltk.pos_tag(word_tokenize((word)))
-    if tag[0][1] == 'NN' or tag[0][1]== 'NNS':
+    if tag[0][1] == 'NN' or tag[0][1]== 'NNS': #noun
         w= wn.morphy(word, wn.NOUN)
         if w is None:
             w = wn.morphy('person', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
         else:
             return w, wn.synset(str(w) + '.n.01')
-    elif tag[0][1]== 'NNP' or tag[0][1]== 'NNPS':
+    elif tag[0][1]== 'NNP' or tag[0][1]== 'NNPS': #name
         w = wn.morphy('person', wn.NOUN)
         return w, wn.synset(str(w) + '.n.01')
-    elif tag[0][1]== 'PRP' or tag[0][1]== 'PRPS':
+    elif tag[0][1]== 'PRP' or tag[0][1]== 'PRPS': #pronoun
         if word.lower() == 'she' or word.lower == 'her':
             w = wn.morphy('female', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
@@ -73,28 +74,28 @@ def changePronoun(word):
         elif word.lower() == 'it':
             w = wn.morphy('thing', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
-    elif tag[0][1]== 'DT':
+    elif tag[0][1]== 'DT': #determiner
         if  word.lower() == 'this' or word.lower()== 'that':
             w = wn.morphy('thing', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
         elif word.lower() == 'these' or word.lower() == 'those':
             w = wn.morphy('things', wn.NOUN)
             return w, wn.synset(str(w) + '.n.01')
-    elif tag[0][1]== 'WRP' or tag[0][1]== 'WRT':
+    elif tag[0][1]== 'WRP' or tag[0][1]== 'WRT': #
         w = wn.morphy('thing', wn.NOUN)
         return w, wn.synset(str(w) + '.n.01')
-    elif '-' in word:
+    elif '-' in word: #compounds
         ind = word.index('-')
         w = wn.morphy(word[:ind], wn.NOUN)
         return w, wn.synset(str(w) + '.n.01')
-    elif tag[0][1]in verb:
+    elif tag[0][1]in verb: #verb
         w = wn.morphy(word, wn.VERB)
         if w is None:
             w = wn.morphy("action", wn.NOUN)
             return w, wn.synset(str(w) + '.v.01')
         else:
             return w, wn.synset(str(w) + '.v.01')
-    elif tag[0][1]== 'JJ' or tag[0][1]== 'JJS':
+    elif tag[0][1]== 'JJ' or tag[0][1]== 'JJS': #adjective
         w = wn.morphy(word, wn.ADJ)
         if w == None:
             w= wn.morphy('person', wn.NOUN)
@@ -107,9 +108,8 @@ def changePronoun(word):
 
 def target_search(p):
     for i in range(len(p)):
-        if p[i]["word"] in linking_words:
+        if p[i]["word"] in linking_words: #return the head of the linking word
             index = p[i]["head"]
-
             return check_numerical(p,index), index
     return None, None
 
@@ -190,6 +190,7 @@ def readFile(fileName):
             sent.append(sentence)
     return sent
 def toDict(line,sent):
+    """create a dictionary based on Dependency properties"""
     dic = {}
     properties = ["address", "ctag", "feats", "head", "lemma", "rel", "tag", "word"]
     for i in range(len(line)):
@@ -204,14 +205,22 @@ def toDict(line,sent):
     return dic
 
 if __name__ == '__main__':
-    pos = readFile('./corpora/verified_analogies.csv')
-    neg = readFile('./corpora/verified_non_analogies.csv')
-    samples = [(text, 'YES') for text in pos] + [(text, 'NO') for text in neg]
+    # pos = readFile('./corpora/verified_analogies.csv')
+    # neg = readFile('./corpora/verified_non_analogies.csv')
+    # samples = [(text, 'YES') for text in pos] + [(text, 'NO') for text in neg]
+    samples = readFile('./corpora/dmb_open_test.csv')
+    random.seed(1234)
+    random.shuffle(samples)
     bt_dep = []
-    for (sent,label) in samples:
-        dic, line = parse(sent)
-        bt_dep.append(dependency_parse(line,sent,label))
+    for i in range(300):
+        try:
+            dic, line = parse(samples[i])
+        except StopIteration:
+            break
+        # print(sent)
+        bt_dep.append(dependency_parse(line,samples[i],'NO'))
     txt = ""
     for dep in bt_dep:
         txt += '"' + str(dep["base"]) + '","' + str(dep["target"]) + '","' + str(dep["sentence"]) + '","' + str(dep["similarity"]) + '","' + str(dep["tree_type"]) + '","' + str(dep["label"])+'"\n'
-    writeCSVFile(txt,'./base_target.csv')
+
+    writeCSVFile(txt,'./random_parse.csv')
