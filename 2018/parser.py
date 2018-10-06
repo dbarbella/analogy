@@ -47,28 +47,22 @@ def linking_word_check(sent):
     for w in linking_word:
         if w in txt:
             ind = txt.index(w)
-    # if list_of_word[ind][0].lower() == linking_word[2].lower() or list_of_word[ind][0] == linking_word[3] or list_of_word[ind][0] == linking_word[6]:
-    #     print(type(list_of_word))
-    #     if list_of_word[ind][1] == "JJ":
-    #         base, target = parse(sent, list_of_word[ind][0], "JJ")
-    #         # print(base ,  target)
-    #         return base, target
     if list_of_word[ind][0].lower() == linking_word[0].lower() or list_of_word[ind][0] == linking_word[1]:
         if list_of_word[ind][1] == 'IN':
             base,target = parse(sent,list_of_word[ind][0],"IN")
-            # print(base,  target)
+            print(base,  target)
             return base, target
 
         if list_of_word[ind][1] == 'JJ':
             base,target = parse(sent, list_of_word[ind][0], "JJ")
-            # print(base,  target)
+            print(base,  target)
             return base, target
         else:
             return None,None
 
     elif list_of_word[ind][0] == linking_word[4] or list_of_word[ind][0] == linking_word[5]:
         base,target = parse(sent, list_of_word[ind][0], "RB")
-        # print(base, target)
+        print(base, target)
         return base, target
     else:
         return None,None
@@ -194,10 +188,10 @@ def writeCSVFile(text_output, to_dir):
     f.close()
 
 if __name__ == '__main__':
-    # pos = readFile('./corpora/verified_analogies.csv')
-    # neg = readFile('./corpora/verified_non_analogies.csv')
-    # samples = pos + neg
-    samples = readFile('./corpora/dmb_open_test.csv')
+    pos = readFile('./corpora/verified_analogies.csv')
+    neg = readFile('./corpora/verified_non_analogies.csv')
+    samples = pos + neg
+    # samples = readFile('./corpora/dmb_open_test.csv')
     random.seed(1234)
     random.shuffle(samples)
     txt = ""
