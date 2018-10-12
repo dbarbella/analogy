@@ -1,13 +1,6 @@
 import os
 import nltk
 import csv
-import random
-import sys
-import re
-from time import time
-from nltk import Tree
-from nltk.draw.util import CanvasFrame
-from nltk.draw import TreeWidget
 from nltk.parse import stanford
 os.chdir('..')
 jar = './stanford-parser/jars/stanford-parser.jar'
@@ -23,16 +16,6 @@ class Node:
         self.base = None
         self.target = None
 
-    def __ne__(self, other):
-        return self.value == other.value
-
-    def printTree(self,layer):
-        ret = ""
-        layer += 1
-        for child in self.children:
-            ret += str(layer) + "\t" * layer + str(child.parent.value) + "\n"
-            ret += child.printTree(layer)
-        return ret
     def createTree(self):
         if type(self.value[0]) == nltk.tree.Tree:
             for key in self.value:
