@@ -90,6 +90,12 @@ class Extract:
         signals = [x.strip() for x in signals]
         return signals
 
+    def writeCSVFile(self,text_output, to_dir):
+        f = open(to_dir, 'w')
+        for line in text_output:
+            f.write(line)
+        f.close()
+
 if __name__ == "__main__":
     extract = Extract()
     signals = extract.read_by_line("./2018/analogy_signals.txt")
@@ -97,30 +103,21 @@ if __name__ == "__main__":
     count,like_count,i = 0,0,0
     base_found = 0
     base, target = None,None
+    txt = ""
     for s in sentences:
         if "like" in s:
             base, target = extract.search(s,"like","PP")
         else:
             for signal in signals:
                 if signal in s:
-                    s = s.replace(signal, "like")
-                    base, target = extract.search(s,"like", "PP")
+                    new_sent = s.replace(signal, "like")
+                    base, target = extract.search(new_sent,"like", "PP")
                     break
         if base is not None and target is not None:
-            count+=1
+            txt += '"' + s + '","' + str(1) + '"\n'
         else:
-            parsed_sent = parser.raw_parse(s)
-            for line in parsed_sent:
-                cf = CanvasFrame()
-                t = Tree.fromstring(str(line))
-                tc = TreeWidget(cf.canvas(), t)
-                cf.add_widget(tc, 10, 10)
-                i += 1
-                cf.print_to_file('./2018/undetectedCases/tree' + str(i) + '.ps')
-                tree_name = './2018/undetectedCases/tree' + str(i) + '.ps'
-                tree_new_name = './2018/undetectedCases/tree' + str(i) + '.png'
-                os.system('convert ' + tree_name + ' ' + tree_new_name)
-                cf.destroy()
+            txt += '"' + s + '","' + str(0) + '"\n'
+    extract.writeCSVFile(txt, './base_target_tree.csv')
     print("parsing time: ", extract.parsing_time)
     print("base time: ", extract.base_time)
     print("target time: ", extract.target_time)
