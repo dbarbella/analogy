@@ -19,6 +19,7 @@ class Node:
         self.base = None
         self.target = None
         self.like_phrase = None
+        self.word = ""
 
     def createTree(self):
         if type(self.value[0]) == nltk.tree.Tree:
@@ -40,12 +41,22 @@ class Node:
                 self.base,self.like_phrase = key.base_search(word,label)
         return self.base,self.like_phrase
 
-    def target_search(self):
+    def target_search(self,label):
         if self.parent is not None:
             for child in self.parent.children:
-                if child.value._label == "NP":
+                if child.value._label == label:
                     return child
-            return self.parent.target_search()
+            return self.parent.target_search(label)
+
+    def to_word(self):
+        if type(self.value) == nltk.tree.Tree:
+            for child in self.children:
+                if type(child.value[0]) != nltk.tree.Tree:
+                    self.word += str(child.value[0]) +" "
+                else:
+                    self.word += child.to_word()
+        return self.word
+
 
 class Extract:
     def __init__(self):
@@ -71,10 +82,11 @@ class Extract:
             root.createTree() #create a tree based on the parsed tree
             base,like_phrase = root.base_search(w,l) #search for base
             if base is not None: #if base is found then search for target
-                target = like_phrase.target_search() #tranverse to the target from the base
-                base_val = base.value #for returning
+                label = base.value._label
+                target = like_phrase.target_search(label) #tranverse to the target from the base
+                base_val = base.to_word()
             if target is not None:
-                target_val = target.value #for returning
+                target_val = target.to_word()
         return base_val,target_val
 
     def read_by_line(self,fileName):
@@ -109,7 +121,8 @@ if __name__ == "__main__":
     sentences = extract.readFile('./corpora/verified_analogies.csv')
     count,like_count,i = 0,0,0
     base_found = 0
-    base, target = None,None
+    txt = ""
+    base, target = "",""
     for s in sentences:
         if "like" in s:
             base, target = extract.search(s,"like","PP")
@@ -121,7 +134,12 @@ if __name__ == "__main__":
                     break
         if base is not None and target is not None:
             count += 1
-        # else:
-        #     extract.drawTreeAndSaveImage(s,i)
-        #     i+=1
+            txt += '"' + s + '","' + str(0) + '","' + base +'","' + target + '"\n'
+        else:
+            extract.drawTreeAndSaveImage(s,i)
+            i+=1
+            txt += '"' + s + '","' + str(0) + '","' + str(base) +'","' + str(target) + '"\n'
+        print("___B___", base)
+        print("___T___", target)
+    extract.writeCSVFile(txt, "./base_target_tree.csv")
     print("detected cases ",count)
