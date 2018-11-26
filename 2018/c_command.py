@@ -134,7 +134,7 @@ if __name__ == "__main__":
                     break
         if base is not None and target is not None:
             count += 1
-            txt += '"' + s + '","' + str(0) + '","' + base +'","' + target + '"\n'
+            txt += '"' + s + '","' + str(1) + '","' + base +'","' + target + '"\n'
         else:
             extract.drawTreeAndSaveImage(s,i)
             i+=1
