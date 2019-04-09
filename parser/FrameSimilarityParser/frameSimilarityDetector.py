@@ -41,7 +41,7 @@ class Frame:
         
     def getElements(self):
         # Returns list of elements in frame
-        return self.elements[:]
+        return self._elements[:]
     
     def getName(self):
         # Returns name of frame
@@ -70,7 +70,7 @@ class Frame:
             if i in oRelations:
                 overLap += 5
                 
-        return overLap > len(self._Relations)*3/5 + len(self.addElements)*.6
+        return overLap > len(self._relations)*3/5 + len(self._elements)*.3
     
     def __eq__(self, other):
         return self.getName() == other.getName()
@@ -129,6 +129,49 @@ def loadFrames(fileName):
             
     return frames
     
+
+def getRelation(start, frames, depth, curDepth=0):
+    '''
+        Returns a list of frames related to the given start frame, indirectly
+        out to a depth
+        
+        start = a frame from which to generate relations
+        frames = the list of frames to find relations in
+        depth = the number of direct relations to follow out
+    '''
+    if curDepth >= depth:
+        return []
+    relations = start.getRelations()
+    for ind, relation in enumerate(relations):
+        relation = list(filter(lambda x: x.getName() == relation, frames))
+        if not len(relation):
+            continue
+        relation = relation[0]
+        relations[ind] = [relation]+ getRelation(relation, frames, depth, curDepth+1)
+    return relations
+
+def getSimilarityAtDepth(start, frames, depth, curDepth=0):
+    '''
+        getSimilarityAtDepth:        
+            Returns a list of frames related or "similar" to the starting frame.
+            Frame similarity is defined by frame's internal similarity function
+            (if compared frames have a large number of similar frame elements
+            and relations)
+        
+        start = a frame from which to generate relations
+        frames = the list of frames to find relations in
+        depth = the number of direct relations to follow out
+    '''
+
+    if curDepth >= depth:
+        return []
+    relations = start.getRelations()
+    for ind, relation in enumerate(relations):
+        relation = list(filter(lambda x: x.getName() == relation, frames))[0]
+        similars = list(filter(lambda x: x.similarTo(relation), frames))
+        relations[ind] = [relation]+ [i for b in [getRelation(similar, frames, depth, curDepth+1) for similar in similars] for c in b for i in c ]
+    return [i for b in relations for i in b]
+
 def main():
     '''
     Parses frRelation.xml into list of frames and writes the frames to a file
@@ -151,7 +194,17 @@ def main():
         for frame in frames[1:]:
             outFile.write(str(frame)+'\n')
             outFile.write('-'*20+'\n')
-
+    print(frames[1], type(frames[1]))
+    a = getSimilarityAtDepth(frames[1], frames, 3)
+    a = a[:-1] + a[-1]
+    print(a[1])
+    print(a[2])
+    print(a[3])
+    print(a[4])
+    for i, e in enumerate(a):
+        print(i, e.getName())
+    print(len(a))
+    
     file.close()
     
 if __name__ == '__main__':
