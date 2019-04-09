@@ -194,16 +194,9 @@ def main():
         for frame in frames[1:]:
             outFile.write(str(frame)+'\n')
             outFile.write('-'*20+'\n')
-    print(frames[1], type(frames[1]))
+    
     a = getSimilarityAtDepth(frames[1], frames, 3)
     a = a[:-1] + a[-1]
-    print(a[1])
-    print(a[2])
-    print(a[3])
-    print(a[4])
-    for i, e in enumerate(a):
-        print(i, e.getName())
-    print(len(a))
     
     file.close()
     
