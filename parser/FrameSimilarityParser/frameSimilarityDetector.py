@@ -63,7 +63,7 @@ class Frame:
         oElements = other.getElements()
         oRelations = other.getRelations()
         
-        ownEOSum= len(oElements) + len(oRelations)
+        ownEOSum= len(oElements)/10 + len(oRelations)
         
         # If they share the same frame elements, this weight is taken into accounbt
         for i in self.getElements():
@@ -75,7 +75,7 @@ class Frame:
             if i in oRelations:
                 overLap += 1
                 
-        return abs(overLap - ownEOSum)/ownEOSum > .97
+        return abs(overLap - ownEOSum)/ownEOSum < .75
     
     def __eq__(self, other):
         return self.getName() == other.getName()
@@ -221,8 +221,8 @@ def main():
             outFile.write('-'*20+'\n')
     
     a = list(getSimilarityAtDepth(frames[1], frames, 2))
-    #print(a[:10])
-    #print(len(a))
+    print(a[:10])
+    print(len(a))
     file.close()
     
     return frames
