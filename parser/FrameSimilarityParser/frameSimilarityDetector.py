@@ -54,7 +54,7 @@ class Frame:
         # Return relations of frame
         return self._relations[:]
     
-    def similarTo(self, other):
+    def similarTo(self, other, threshold=.75):
         '''
             Judges whether a frame is similar to another frame based on number of
             keyword similarities in the frames
@@ -63,7 +63,9 @@ class Frame:
         oElements = other.getElements()
         oRelations = other.getRelations()
         
-        ownEOSum= len(oElements)/10 + len(oRelations)
+        #   Render relation symmetric
+        ownEOSum= min(len(oElements)/10 + len(oRelations),
+                      len(self._elements)/10 + len(self._relations))
         
         # If they share the same frame elements, this weight is taken into accounbt
         for i in self.getElements():
@@ -75,7 +77,7 @@ class Frame:
             if i in oRelations:
                 overLap += 1
                 
-        return abs(overLap - ownEOSum)/ownEOSum < .75
+        return abs(overLap - ownEOSum)/ownEOSum < threshold
     
     def __eq__(self, other):
         return self.getName() == other.getName()
@@ -155,7 +157,7 @@ def getRelation(start, frames, depth, curDepth=0):
         relations[ind] = [relation]+ getRelation(relation, frames, depth, curDepth+1)
     return relations
 
-def getSimilarityAtDepth(start, frames, depth, curDepth=0):
+def getSimilarityAtDepth(start, frames, depth, curDepth=0, threshold=.75):
     '''
         getSimilarityAtDepth:        
             Returns a set of frames related or "similar" to the starting frame.
@@ -166,6 +168,7 @@ def getSimilarityAtDepth(start, frames, depth, curDepth=0):
         start = a frame from which to generate relations
         frames = the list of frames to find relations in
         depth = the number of direct relations to follow out
+        threshold = minimmum threshold for similarity. defaults at 75%
     '''
     if curDepth >= depth:
         return []
@@ -177,25 +180,12 @@ def getSimilarityAtDepth(start, frames, depth, curDepth=0):
     # Go through all the frames in frames and add immediately similar frames and their similarities to the list of similars
     
     for frame in frames:
-        if start.similarTo(frame):
+        if start.similarTo(frame, threshold):
             similars.append([frame] + list(getSimilarityAtDepth(frame, frames, depth, curDepth+1)))
     
     # Returns 1-d list of similar frames
     return {i for e in similars for i in e}
             
-            
-
-'''
-    if curDepth >= depth:
-        return []
-    relations = start.getRelations()
-    for ind, relation in enumerate(relations):
-        relation = list(filter(lambda x: x.getName() == relation, frames))[0]
-        similars = list(filter(lambda x: x.similarTo(relation), frames))
-        relations[ind] = [relation]+ [i for b in [getRelation(similar, frames, depth, curDepth+1) for similar in similars] for c in b for i in c ]
-    return [i for b in relations for i in b]
-'''
-
 
 def main():
     '''
@@ -220,7 +210,11 @@ def main():
             outFile.write(str(frame)+'\n')
             outFile.write('-'*20+'\n')
     
-    a = list(getSimilarityAtDepth(frames[1], frames, 2))
+    avg = 0
+    for ind in range(len(frames)//100):
+        avg += len(getSimilarityAtDepth(frames[ind], frames, 2, threshold=.1))
+    print('avg @ 75%: ', avg/len(frames))
+    a = list(getSimilarityAtDepth(frames[4], frames, 2))
     print(a[:10])
     print(len(a))
     file.close()

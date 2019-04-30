@@ -42,8 +42,16 @@ frameSimilarityDetector:
             returns the elements of a frame
         getRelations()
             returns concretely related frames to a frame
-        similarTo()
-            returns abstractly related frames to a frame
+        similarTo(other, threshold=0<=Threshold<=100)
+            returns abstractly related frames to a frame. % Difference below a 
+            threshold. Default = .75. .1  =>  ~ 34 frames similar
+                                      .4  => ~ 74 frames similar
+                                      .5  => ~77 frames similar
+                                      .6  => ~ 125 frames similar
+                                      .75 => ~ 338 frames similar
+                                      .8  => ~ 512 similar frames
+                            
+            (Symmetric)
             (Returns frames with a large number of common elements / frame
              relations)
             
@@ -84,7 +92,7 @@ frameSimilarityDetector:
         getSimilarityAtDepth(start, frames, depth, curDepth=0)
             '''
             getSimilarityAtDepth:        
-                Returns a list of frames related or "similar" to the starting frame.
+                Returns a set of frames related or "similar" to the starting frame.
                 Frame similarity is defined by frame's internal similarity function
                 (if compared frames have a large number of similar frame elements
                 and relations)
