@@ -1,3 +1,0 @@
-"datetime","positive_set","negative_set","representation","classifier","extra","score","matrix","precision","recall","f_measure","Runtime(seconds)","Algorithm_time(seconds)","Comments"
-"Tue Jul 25 13:56:02 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","neural","{'max_iter_log': 100, 'max_iter': 200, 'C': 1.0, 'hidden_layer_sizes': 100, 'activation': 'relu', 'learning_rate': 'constant', 'stop_words': 'english', 'solver': 'adam', 'max_iter_svc': -1, 'early_stopping': False, 'solver_log': 'liblinear', 'max_iter_linear': 1000, 'norm': 'l2', 'alpha': 1.0, 'max_df': 1.0}","0.643956043956","[[ 12 152]
- [ 10 281]]","0.0731707317073","0.545454545455","0.129032258065","2.2294623851776123","2.217979669570923",""
