@@ -1,1 +1,0 @@
-root = "/eccs/users/nrback/Analogy/"
