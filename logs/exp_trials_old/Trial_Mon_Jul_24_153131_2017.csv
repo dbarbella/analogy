@@ -1,7 +1,0 @@
-"datetime","positive_set","negative_set","representation","classifier","extra","score","matrix","precision","recall","f_measure","Runtime(seconds)","Algorithm_time(seconds)","Comments"
-"Mon Jul 24 15:31:31 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","count","naive","{}","0.617582417582","[[ 14 162]
- [ 12 267]]","0.0795454545455","0.538461538462","0.138613861386","0.045230865478515625","0.03364253044128418",""
-"Mon Jul 24 15:31:31 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","tfidf","naive","{}","0.657142857143","[[  0 156]
- [  0 299]]","0","0","0","0.04584050178527832","0.034613847732543945",""
-"Mon Jul 24 15:31:31 2017","test_extractions/bc_samples.txt","test_extractions/bc_grounds.txt","hash","naive","{}","0.67032967033","[[  0 150]
- [  0 305]]","0","0","0","0.2742159366607666","0.2637200355529785",""

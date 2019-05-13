@@ -15,12 +15,14 @@ from sklearn.svm import NuSVC
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
+import matplotlib.pyplot as plt
+from collections import defaultdict
 import sys
 import json
 import operator
 from timeout import timeout
 import numpy as np
-import matplotlib.pyplot as plt
+import pandas as pd
 #------------------------
 import random
 import re
@@ -30,8 +32,7 @@ from boyer_moore import find_boyer_moore
 #-------------------------
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectPercentile, f_classif
-sys.path.insert(0, './2018')
-from DependencyParsing import dependency_parse,writeCSVFile,changePronoun, personName, parse
+
 
 modifier = ['amod','nmod']
 """To add new feature, add new function that takes a train and a test set and extra and return a train and a test set based on what representation you want ot use"""
@@ -58,24 +59,154 @@ def get_list_re(filename):
             sent.append(sentence)
     return sent
 
+def read_CSV(csvfile, r):
+    lst = []
+    with open(csvfile) as file:
+        readcsv = csv.reader(file, delimiter=',')
+        for row in readcsv:
+            sentence = row[r]
+            lst.append(sentence)
+    return lst
+
+
+
+def explore_csv(bt_parsed, bt_label, tree_type):
+    sentences = bt_parsed
+    d_type = {}
+    for i in range(6):
+        d_type[str(i)] = 0
+    data = defaultdict(lambda :0)
+    for i in range(756):
+        data[str(i)] = {"correct_predicted": 0, "false_predicted": 0, "test_appearance": 0}
+    lst_type = []
+    pos_sent = read_CSV('base_target_pos.csv',1)
+    neg_sent = read_CSV('base_target_neg.csv',1)
+    count = 0
+    for seed in range(100):
+        d = {}
+        c = 0
+        for i in range(6):
+            d[str(i)] = 0
+        sent_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
+        false_csv = read_CSV('./testing/false' + str(seed) + '.csv',1)
+        test_sent = read_CSV('./testing/test_set' + str(seed)+ '.csv',1)
+        sent_csv = sent_csv[1:]
+        false_csv = false_csv[1:]
+        test_sent = test_sent[1:]
+        if test_sent == false_csv + sent_csv:
+            count += 1
+        for sent, label, tp in zip(sentences, bt_label, tree_type):
+            temp_true = int(data[str(c)]["correct_predicted"])
+            temp_appr = int(data[str(c)]["test_appearance"])
+            if str(sent) in sent_csv:
+                if str(sent) in pos_sent:
+                    temp_true += 1
+                    d[str(tp)] += 1
+            if str(sent) in test_sent:
+                temp_appr += 1
+                tpe = sent["tree_type"]
+                d_type[tpe] += 1
+            if str(sent) in false_csv:
+                if str(sent) in neg_sent:
+                    temp_true += 1
+                    d[str(tp)] += 1
+            dic= {'data': sent, 'label': label["label"], 'tree_type': tp, 'correct_predicted': temp_true,'test_appearance': temp_appr}
+            data[str(c)] = dic
+            c += 1
+        # print(d)
+        lst_type.append(d)
+    d = {}
+    for i in range(6):
+        d[str(i)] = 0
+    for d_i in lst_type:
+        for i in d_i:
+            d[i] += d_i[i]
+    for i in d:
+        d[i] = d[i]/d_type[i]
+    print(d)
+    writeJSON(data, './testing/data.json')
+
+def explore_tree_type():
+    d = {}
+    for i in range(6):
+        d[str(i)] = {"YES": 0, "NO":0}
+    tree_type = read_CSV('base_target.csv',4)
+    label = read_CSV('base_target.csv',5)
+    for tpe, lab in zip(tree_type,label):
+        d[tpe][lab] += 1
+    for key in d:
+        d[key]["YES"] = d[key]["YES"]/ (d[key]["YES"] + d[key]["NO"])
+        d[key]["NO"] = 1 - d[key]["YES"]
+    print(d)
+def explore_parser():
+    tree_parse_count, dep_parse_count, count = 0,0,0
+    for seed in range(100):
+        pos_count,neg_count = -1,-1
+        false_csv = read_CSV('./testing/false' + str(seed) + '.csv', 1)
+        true_csv = read_CSV('./testing/prediction' + str(seed)+ '.csv',1)
+        label_false_csv = read_CSV('./testing/false' + str(seed) + '.csv',3)
+        label_true_csv =  read_CSV('./testing/prediction' + str(seed) + '.csv',3)
+        for dat_pos, dat_neg, lab_pos, lab_neg in zip(true_csv, false_csv, label_true_csv, label_false_csv):
+            if pos_count >=0 and neg_count >=0:
+                if "'tree_detected': '1'" in dat_pos:
+                    if lab_pos == 'YES':
+                        tree_parse_count += 1
+                if  "'tree_detected': '0'" in dat_neg:
+                    if lab_neg == 'NO':
+                        tree_parse_count += 1
+                if "'detected': True" in dat_pos:
+                    if lab_pos == 'YES':
+                        dep_parse_count += 1
+                if  "'detected': False" in dat_neg:
+                    if lab_neg == 'NO':
+                        dep_parse_count += 1
+                count += 1
+            count+= 1
+            pos_count += 1
+            neg_count += 1
+    print(count)
+    print("tree parse: ",tree_parse_count,"___", tree_parse_count/count)
+    print("dep parse", dep_parse_count,"____", dep_parse_count/count)
+
 # preprocess the data so it can be used by the classifiers
-def preprocess(samples, percent_test, caller=''):
-    num_samples = len(samples)
+def preprocess(samples, percent_test,seed, num_samples, caller= ''):
     if caller == 'test_main_interface_output': 
-        random.seed(1234)
+        random.seed(seed)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
-    # create a train set and a test/development set
-    feature_sets = [(text, label) for (text, label) in samples]
-    train_set =  feature_sets[:cutoff]
-    test_set = feature_sets[cutoff:]
+    train_data, test_data, train_labels, test_labels = [], [], [], []
+    y_count, n_count = 0,0
+    train_set, test_set = [],[]
+    for key in samples:
+        if y_count > cutoff/2 :
+            break
+        elif key["label"] == 'YES':
+            train_set.append(key)
+            y_count += 1
+    for key in samples:
+        if n_count > cutoff/2 :
+            break
+        elif key["label"] == 'NO':
+            train_set.append(key)
+            n_count += 1
+    for key in samples:
+        if key not in train_set:
+            test_set.append(key)
+    train_data,train_labels = divide_data_labels(train_data,train_labels,train_set)
+    test_data, test_labels = divide_data_labels(test_data, test_labels, test_set)
     # separate the training data and the training labels
-    train_data = [text for (text, label) in train_set]
-    train_labels = [label for (text, label) in train_set]
-    # separate the test data and the test labels
-    test_data = [text for (text, label) in test_set]
-    test_labels = [label for (text, label) in test_set]
     return(train_data, train_labels, test_data, test_labels)
+
+def divide_data_labels(data,label, set):
+    for key in set:
+        dic = {}
+        for k in key:
+            if k == "label":
+                label.append(key["label"])
+            else:
+                dic[k] = key[k]
+        data.append(dic)
+    return data,label
 
 # Transform the data so it can be represented by prepositional phrases.
 def preposition(train_data, test_data):
@@ -86,65 +217,65 @@ def preposition(train_data, test_data):
     PpTest = dict_vect.transform(pp_test_set)
     return (PpTrans, PpTest)
 
-def base_target_pair(train_data, test_data, extra):
+def base_target_pair(train_data, test_data, extra, train_labels, test_labels):
     """refer to DependencyParsing.py to change/add features to the model"""
-    bt_training = readCSV('base_target_training.csv', "parsed_tree.json")
-    bt_testing = readCSV('base_target_testing.csv', "parsed_tree.json")
-
-    # bt_training, bt_testing = [],[]
-    # parsed_dic = {}
-    # for text1, text2 in zip(train_data,test_data):
-    #     dic,parsed_sent = parse(text1)
-    #     bt_training.append((dependency_parse(parsed_sent,text1)))
-    #     dic2, parsed_sent2 = parse(text2)
-    #     bt_testing.append(dependency_parse(parsed_sent2,text2))
-    #     parsed_dic[(text1)] = dic
-    #     parsed_dic[(text2)] = dic2
-    #
-    # writeJSON(parsed_dic, "parsed_tree.json")
-    # training_txt, testing_txt = "", ""
-    # for train, test in zip(bt_training, bt_testing):
-    #     training_txt += '"' + str(train["base"]) + '","' + str(train["target"]) + '","' + str(
-    #         train["sentence"]) + '","' + str(train["similarity"]) + '"\n'
-    #     testing_txt += '"' + str(test["base"]) + '","' + str(test["target"]) + '","' + str(
-    #         test["sentence"]) + '","' + str(test["similarity"]) + '"\n'
-    # writeCSVFile(training_txt, 'base_target_training.csv')
-    # writeCSVFile(testing_txt, 'base_target_testing.csv')
-
-    #
     dict_vect = DictVectorizer()
-    bt_train = dict_vect.fit_transform(bt_training)
-    bt_test = dict_vect.transform(bt_testing)
+    bt_train = dict_vect.fit_transform(train_data)
+    bt_test = dict_vect.transform(test_data)
+    # print(bt_training, bt_testing)
     return (bt_train, bt_test)
+    # return training_txt
+
+def delete_element(count,o_list):
+    lst = []
+    for i in range(len(o_list)):
+        if isFalse(i,count):
+            lst.append(o_list[i])
+    return lst
+
+def isFalse(i,s):
+    for j in s:
+        if i == j:
+            return True
+    return False
 
 def writeJSON(dic, dire):
     with open(dire, 'w') as fp:
-        json.dump(dic,fp)
+        json.dump(dic, fp, indent= 4)
 
-def readCSV(csvFile, jsonFile):
+def writeCSVFile(text_output, to_dir):
+    f = open(to_dir, 'w')
+    for line in text_output:
+            f.write(line)
+    f.close()
+
+def readCSV(csvFile, method, csvTree = './base_target_tree.csv'):
     lst = []
-    with open(csvFile) as file,open(jsonFile) as js:
+    with open(csvFile) as file, open(csvTree) as tree:
         readcsv = csv.reader(file, delimiter=',')
-        data = json.load(js)
-        for row in readcsv:
+        readTree = csv.reader(tree, delimiter = ",")
+        for row,row1 in zip(readcsv,readTree):
+            # ide = row[0]
             sentence = row[2]
             b = row[0]
             t = row[1]
             similarity  = row[3]
-            tar_ind = getIndex(t, sentence)
-            base_ind = getIndex(b, sentence)
-            tar_supp_feature = ""
-            base_supp_feature = ""
-            # for mod in modifier:
-            #     if tar_ind is not None:
-            #         if mod in data[sentence][str(tar_ind+2)]["deps"]:
-            #             for j in data[sentence][str(tar_ind+2)]["deps"][mod]:
-            #                 tar_supp_feature += data[sentence][str(j)]["word"]
-            #     if base_ind is not None:
-            #         if mod in data[sentence][str(base_ind+2)]["deps"]:
-            #             for j in data[sentence][str(base_ind+2)]["deps"][mod]:
-            #                 base_supp_feature += data[sentence][str(j)]["word"]
-            lst.append({"base": b, "target": t, "sentence": sentence, "similarity": similarity})
+            tree_type = row[4]
+            label = row[5]
+            tree_detected = row1[1]
+            detected = True
+            if len(t) == 0 and len(b) == 0:
+                detected = False
+            if method == 1:
+                lst.append({"sentence": sentence,   "tree_detected": tree_detected, "label": label})
+            elif method == 0:
+                lst.append({"sentence": sentence,  "tree_detected": tree_detected})
+            elif method == 2:
+                lst.append({"label": label})
+            elif method == 3:
+                lst.append({"sentence": sentence, "base": b, "target": t, "similarity": similarity, "tree_type": tree_type, "label": label})
+            else:
+                lst.append({"sentence": sentence, "label": label})
     return lst
 
 def wordForm(word):
@@ -236,14 +367,14 @@ def get_classifier(name, extra):
         sys.exit("This classifier has not been implemented yet.")
         return None
 
-def get_representation(train_data, test_data, representation, classifier, extra):
+def get_representation(train_data, test_data, representation, classifier, extra, train_labels, test_labels):
     """representation of data"""
     if representation == "tfidf":
         return tfidf(train_data, test_data, extra)
     elif representation == "count":
         return countvect(train_data, test_data, extra)
     elif representation == "base_target":
-        return base_target_pair(train_data,test_data,extra)
+        return base_target_pair(train_data,test_data,extra, train_labels, test_labels)
     elif representation == "hash":
         if classifier == "naive":
             return hashing(train_data, test_data, extra, "naive")
@@ -286,22 +417,62 @@ def set_extra(extra):
     set_default(extra,'tol', 0.001)
     set_default(extra, 'word_hypernyms', 0.001)
     return(extra)
+def strip_id(lst):
+    output = []
+    for dic in lst:
+        d = {}
+        for key in dic:
+            if key != "sentence":
+                d[key] = dic[key]
+        output.append(d)
+    return output
+
+def divide_pos_neg():
+    bt_parsed = readCSV('base_target.csv',0)
+    label = readCSV('base_target.csv',2)
+    d1,d2 = {"data": []},{"data": []}
+    c,n,p = 0,0,0
+    for lab,sent in zip(label,bt_parsed):
+        if lab["label"] == 'YES':
+            d1["data"].append(sent)
+            p  += 1
+        elif lab["label"] == "NO":
+            d2["data"].append(sent)
+            n += 1
+        c += 1
+    pd.DataFrame(d1, columns=['data']).to_csv('base_target_pos' + '.csv')
+    pd.DataFrame(d2, columns=['data']).to_csv('base_target_neg' + '.csv')
 
 
-def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra={"sub_class":""}, time=1000000000):
+def classify_pipeline(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra={"sub_class":""}, time=1000000000):
     @timeout(time)
 
-    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra):
+    def _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra):
         clfier = get_classifier(classifier_name, extra)
-        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra)
-        selector = SelectPercentile(f_classif, percentile=10)
+        train_set, test_set = get_representation(train_data, test_data, representation, classifier_name, extra, train_labels, test_labels)
+        selector = SelectPercentile(f_classif, percentile=100)
         estimators = [('reduce_dim', selector), ('clf', clfier)]
         pipe = Pipeline(estimators)
-        # test_labels.pop()
         learn_results = pipe.fit(train_set, train_labels)
+
         score = learn_results.score(test_set, test_labels)
         test_predict = learn_results.predict(test_set)
+        d = {'sentence': [],'data': [], 'label': [], 'answer': []}
+        d2 =  {'data': [], 'label': [], 'answer': []}
+        # d = {'data': test_data, 'label': test_predict, 'answer': test_labels}
+        for pred, lab, dat in zip(test_predict, test_labels, test_data):
+            if pred ==  'YES':
+                # d['sentence'].append(dat['sentence'])
+                d['data'].append(dat)
+                d['label'].append(pred)
+                d['answer'].append(lab)
+            if pred == 'NO':
+                d2['data'].append(dat)
+                d2['label'].append(pred)
+                d2['answer'].append(lab)
+        pd.DataFrame(d, columns=['data','label','answer']).to_csv('./testing/prediction' + str(int(seed)) + '.csv')
+        pd.DataFrame(d2, columns= ['data', 'label', 'answer']).to_csv('./testing/false'+ str(int(seed)) + '.csv')
         matrix = confusion_matrix(test_labels, test_predict, labels = ['YES', 'NO'])
         precision, recall, f_measure = fmeasure(matrix)
         return (score, matrix, precision, recall, f_measure)
-    return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra)
+    return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, seed, extra)

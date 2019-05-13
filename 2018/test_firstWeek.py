@@ -14,6 +14,7 @@ class TestCase(unittest.TestCase):
             for row in readcsv:
                 b = row[2]
                 t = row[3]
+
                 base.append(b)
                 target.append(t)
         print(len(base), len(target), len(sentences))

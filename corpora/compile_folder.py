@@ -14,16 +14,19 @@ from nltk import word_tokenize
 #reload(sys)
 #sys.setdefaultencoding('utf8')
 
-dir_name = sys.argv[1]
-output_name = sys.argv[2]
+# dir_name = sys.argv[1]
+# output_name = sys.argv[2]
+dir_name = "./1-3_meth_901"
+output_name = "./testCompile.csv"
 # path = "./" + dir_name + "/*.txt"
 
 
 def compile_to_output():
-    path = dir_name + "/*.txt"
+    path = dir_name + ".txt"
     text_files = glob.glob(path)
     output_handler = open(output_name, "w", encoding="utf8")
     for next_file in text_files:
+        print(next_file)
         output_handler.write(formatted_file(next_file))
     output_handler.close()
 
@@ -39,8 +42,10 @@ def formatted_file(file_name):
     source_name = just_file_name(file_name)
     print("Processing file:", source_name)
     with open(file_name, encoding="utf8") as file_handler:
-        paras = file_handler.readlines()
+        para = file_handler.read().replace('\n', ' ')
+        # paras = file_handler.readlines()
         para_num = 0
+'''
         for para in paras:
             if not para.isspace():
                 sents_in_para = sent_tokenize(para)
@@ -53,6 +58,19 @@ def formatted_file(file_name):
                     output += "$,\n"
                     sent_num += 1
                 para_num += 1
+'''
+        # for para in paras:
+        #     if not para.isspace():
+        sents_in_para = sent_tokenize(para)
+        sent_num = 0
+        for sent in sents_in_para:
+            output += "$"
+            output += build_index(source_name, para_num, sent_num)
+            output += "$, $"
+            output += remove_bads(sent.rstrip())
+            output += "$,\n"
+            sent_num += 1
+        para_num += 1
     return output
 
 def remove_bads(in_string):
