@@ -21,7 +21,7 @@ para_indices = find_any_patterns(paras, analogy_string_list)
 ids = {}            # save sentences' ids in hash table to prevent duplicates.
 
 # Extract the exact sentences and write them to csv and txt files.
-with open(root + "test_extractions\\" + csv_file_name, 'w') as csvfile:
+with open(root + "test_extractions\\" + csv_file_name, 'w', encoding="utf-8") as csvfile:
     fieldnames = ['name', 'text']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
     writer.writeheader()
