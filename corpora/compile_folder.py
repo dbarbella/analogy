@@ -32,6 +32,8 @@ def compile_to_output():
 # What I want is a list of paragraphs, each of which is a list of sentences.
 # Right now, I have a list of sentences
 # Make sure we're handling null paras appropriately
+# Last sentences of paragraphs currently contain extra newlines.
+# This is now also going to be responsible for killing bad characters.
 def formatted_file(file_name):
     output = ""
     source_name = just_file_name(file_name)
@@ -44,14 +46,17 @@ def formatted_file(file_name):
                 sents_in_para = sent_tokenize(para)
                 sent_num = 0
                 for sent in sents_in_para:
-                    output += "\""
+                    output += "$"
                     output += build_index(source_name, para_num, sent_num)
-                    output += "\", \""
-                    output += sent
-                    output += "\",\n"
+                    output += "$, $"
+                    output += remove_bads(sent.rstrip())
+                    output += "$,\n"
                     sent_num += 1
                 para_num += 1
     return output
+
+def remove_bads(in_string):
+    return in_string.replace('\x00', '')
 
 # Builds this:
 # [BRWN, PARA#4051, SENT#12]
