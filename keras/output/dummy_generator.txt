@@ -1,0 +1,35 @@
+Epoch 1/1
+7648/7648 [==============================] - 1s 143us/step - loss: 0.1238
+--- Generating with seed: " again .the spe"
+------ temperature: 0.5
+ again .the sperlfow like a pristel ap exprasss and chrililal to the his stard .ike a roven the now which we a drewl ; ; sus the all call wat wateh .the had den core it eape of camife , ke a shill and hasss blembod like a honical and arking a geamaloral the famy , the hold wit like a ganglat on chile tat the whtled this stllowly id the mat bet on a cild ran the high , he d's ard ras allop-ed siding like a gronst------ temperature: 1.0
+g like a gronste like a hunternnout fog ftat thas till as infere or a mass like a lample sarience forsil a grms lnge wat the mogram stem is like a langer to well vel snad hing and ally wot ween ore of the unifed forthin oud crass , camiof , and honen the dogh when he , wed clemed to same like a ruther has beent he folt like an erniggre er thmpaiging stipperens modemuit the poneat he sale , in dinio alles wowh ch------ temperature: 1.2
+o alles wowh chese of has aben , enge wntom oud and hosed heir now , frommoith the whill yes spored res same a diburating a fome whith cterestin cole like a priss langhe chised like a shiad gount foo the presine the pliss woblias arsing a gead ling the wiff , ent hoss in case and fhenting , and the matule a gessise feem .s in like a gramsly wifl firmslike .thine her mat in cleabling come a fogs whe had eng moten
+
+Nietszche corpus:
+--- Generating with seed: "ng of the
+indiv"
+
+------ temperature: 0.5
+ng of the
+individual, and with the cause of a way or superficial subject and lights and unreligion and perhaps a power of the experience it with the faith and condition of the probleness of the falseh of the explanation. when one does not profound with him who has always the problem and in a common and the man in the most definged than the termed of progily and the great great far too need a man of men it has ha
+------ temperature: 1.0
+f men it has haided our generation of to'idian, and caraces, and pleter?
+should one should be being and tlefys plebeian timold from agination
+of
+corroget than every
+hards in the unconditions and domen to pryes over, in the intellectual in poses of differency, perhaps semily. what syfor all
+cuttase agreeably in every prudisticurated to go aerrew with dislike" less think us creative omje, such ashawation and man."
+------ temperature: 1.2
+ation and man."
+
+11. founder loves which sight condition, is them egreemss, with little judgming against
+the me. the common: and
+ignative ethicant
+them
+severity: bould, they had presumet as
+yelier mores with let one of the general chuonorifed eid now
+do protect it
+how mitunce. it is regarded as (in short, that
+it and close hater every still! i call themselves from reniold them whether then
+by well only breaks, h
