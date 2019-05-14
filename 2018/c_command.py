@@ -124,7 +124,9 @@ class Node:
                 if child.value._label == label:
                     child.to_word()
                     return child.word
-            return self.parent.target_search(label)
+            if self.parent.value._label not in ["S", "SBAR"]:
+                return self.parent.target_search(label)
+        return None
 
     def to_word(self):
         if len(self.word) == 0:
