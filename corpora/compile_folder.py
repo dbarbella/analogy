@@ -45,6 +45,20 @@ def formatted_file(file_name):
         para = file_handler.read().replace('\n', ' ')
         # paras = file_handler.readlines()
         para_num = 0
+'''
+        for para in paras:
+            if not para.isspace():
+                sents_in_para = sent_tokenize(para)
+                sent_num = 0
+                for sent in sents_in_para:
+                    output += "$"
+                    output += build_index(source_name, para_num, sent_num)
+                    output += "$, $"
+                    output += remove_bads(sent.rstrip())
+                    output += "$,\n"
+                    sent_num += 1
+                para_num += 1
+'''
         # for para in paras:
         #     if not para.isspace():
         sents_in_para = sent_tokenize(para)

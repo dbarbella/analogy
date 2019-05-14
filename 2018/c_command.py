@@ -105,8 +105,9 @@ class Node:
             role = key.themantic_search(role)
         return role
 
-    def base_search(self, word, label):
+    def base_search(self, word, label, caches = []):
         for key in self.children:
+
             if key.value._label == label:
                 if key.value[0][0] == word:
                     if len(key.children) > 1:
@@ -121,26 +122,28 @@ class Node:
         if self.parent is not None:
             for child in self.parent.children:
                 if child.value._label == label:
+                    child.to_word()
                     return child.word
             return self.parent.target_search(label)
 
     def to_word(self):
         if len(self.word) == 0:
-            return self._to_word()
-        else:
-            return self.word
+            self.word = self._to_word("")
+        
+        return self.word
 
-    def _to_word(self):
+    def _to_word(self, temp):
         if type(self.value) == nltk.tree.Tree:
-            if len(self.children) == 0:
+            if len(self.children) == 0:                
                 return str(self.value[0])
             else:
                 for child in self.children:
+
                     if type(child.value[0]) != nltk.tree.Tree:
-                        self.word += str(child.value[0]) + " "
+                        temp += str(child.value[0]) + " "
                     else:
-                        self.word += child._to_word()
-        return self.word
+                        temp += child._to_word("")
+        return temp
 
 
 class Extract:
@@ -168,9 +171,10 @@ class Extract:
 
 if __name__ == "__main__":
     signals = utilities.read_by_line("./2018/analogy_signals.txt")
-    sentences = utilities.read_by_line("./2018/blogCorpusRefined.csv")
+    sentences = utilities.read_by_line("./2018/sample.csv")
     for s in sentences:
         print(s)
+        utilities.drawTreeAndSaveImage(s, 0, "/Users/davitkvartskhava/Desktop/analogy/2018/treeImage")
         if "like" in s:
             sent = Sentence(s)
         else:
