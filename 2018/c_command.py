@@ -105,6 +105,19 @@ class Node:
             role = key.themantic_search(role)
         return role
 
+    def search_for_base_and_target(self, role, word, label):
+        base = []
+        target = []
+        for key in self.children:
+            if key.value._label == "VP":
+                base,like_phrase = key.base_search(word,label)
+                if base is not None:
+                    role["base"].append(base.to_word())
+                    role["target"].append(like_phrase.target_search(base.value._label))
+                return role
+            role = key.search_for_base_and_target(role, word, label)
+        return role
+
     def base_search(self, word, label, caches = []):
         for key in self.children:
 
@@ -154,35 +167,51 @@ class Extract:
         self.base_time = 0
         self.target_time = 0
         self.createTree_time = 0
-
+    #sentence, word = "like", label
+    #searches for all targets and their corresponding bases in a sentence.
     def search(self, sent, w, l):
-        base_val, target_val, base, target = None, None, None, None
+        role = {"base":[], "target":[]}
+
         parsed_sent = utilities.parser.raw_parse(sent)
         for line in parsed_sent:
             root = Node(line[0])  # create the root node
             root.createTree()  # create a tree based on the parsed tree
-            base, like_phrase = root.base_search(w, l)  # search for base
-            if base is not None:  # if base is found then search for target
-                label = base.value._label
-                target = like_phrase.target_search(label)  # tranverse to the target from the base
-                base_val = base.to_word()
-            if target is not None:
-                target_val = target.to_word()
-        return base_val, target_val
+            ###################
+            role = root.search_for_base_and_target(role, w, l)
+        return role["base"], role["target"]
 
 
 if __name__ == "__main__":
     signals = utilities.read_by_line("./2018/analogy_signals.txt")
-    sentences = utilities.read_by_line("./2018/sample.csv")
+    # sentences = utilities.readFile("./corpora/verified_analogies.csv")
+    ext = Extract()
+
+    output_text = "id, base, target, label\n"
+    count  = 0
+    sentences = ["Kicking a dog is like drowning a cat."]
+
     for s in sentences:
-        print(s)
-        utilities.drawTreeAndSaveImage(s, 0, "/Users/davitkvartskhava/Desktop/analogy/2018/treeImage")
+        utilities.drawTreeAndSaveImage(s, count, "./2018")
         if "like" in s:
             sent = Sentence(s)
+            base = sent.roles['base']
+            target = sent.roles['target']
+            print("BASE: ", base, "TARGET: ", target)
+            count += 1
+
         else:
             for signal in signals:
                 if signal in s:
                     new_sent = s.replace(signal, "like")
                     sent = Sentence(new_sent)
+                    base = sent.roles['base']
+                    target = sent.roles['target']
+                    print("BASE: ", base, "TARGET: ", target)
+                    # if base == None:
+                    #     base = []
+                    # if target == None:
+                    #     target = []
+                    # output_text += str(count)+", "+"$".join(base)+", "+"$".join(target)+", 1\n"
+                    # count += 1
                     break
-        print("___",sent.roles)
+        # utilities.writeCSVFile(output_text, "./outp.csv")
