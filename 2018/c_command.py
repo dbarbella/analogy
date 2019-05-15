@@ -138,8 +138,10 @@ class Node:
                 if child.value._label == label:
                     child.to_word()
                     return child.word
-            if self.parent.value._label not in ["S", "SBAR"]:
-                return self.parent.target_search(label)
+                # elif child.value._label == ['S']:
+
+            # if self.parent.value._label not in ["S", "SBAR"]:
+            return self.parent.target_search(label)
         return None
 
     def to_word(self):
@@ -190,10 +192,10 @@ if __name__ == "__main__":
 
     output_text = "id, base, target, label\n"
     count  = 0
-    sentences = ["I don't mean a few aesthetes who play about with sensations like a young prince in a miniature dabbling his hand in a pool ."]
+    sentences = ["a car that is like a real one is like a man in the pool."]
 
     for s in sentences:
-        utilities.drawTreeAndSaveImage(s, count, "./2018")
+        utilities.drawTreeAndSaveImage(s, 4, "./2018")
         if "like" in s:
             sent = Sentence(s)
             base = sent.roles['base']
