@@ -114,6 +114,7 @@ class Node:
                 if base is not None:
                     role["base"].append(base.to_word())
                     role["target"].append(like_phrase.target_search(base.value._label))
+                    role["action"].append(key.search_verb(verbs))
                 return role
             role = key.search_for_base_and_target(role, word, label)
         return role
@@ -169,8 +170,9 @@ class Extract:
         self.createTree_time = 0
     #sentence, word = "like", label
     #searches for all targets and their corresponding bases in a sentence.
+    #also searches for action.
     def search(self, sent, w, l):
-        role = {"base":[], "target":[]}
+        role = {"base":[], "target":[], "action":[]}
 
         parsed_sent = utilities.parser.raw_parse(sent)
         for line in parsed_sent:
@@ -178,7 +180,7 @@ class Extract:
             root.createTree()  # create a tree based on the parsed tree
             ###################
             role = root.search_for_base_and_target(role, w, l)
-        return role["base"], role["target"]
+        return role["base"], role["target"], role["action"]
 
 
 if __name__ == "__main__":
@@ -188,7 +190,7 @@ if __name__ == "__main__":
 
     output_text = "id, base, target, label\n"
     count  = 0
-    sentences = ["Kicking a dog is like drowning a cat."]
+    sentences = ["I don't mean a few aesthetes who play about with sensations like a young prince in a miniature dabbling his hand in a pool ."]
 
     for s in sentences:
         utilities.drawTreeAndSaveImage(s, count, "./2018")
