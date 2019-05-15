@@ -52,7 +52,7 @@ if __name__ == '__main__':
 		signals = utilities.read_by_line("./2018/analogy_signals.txt")
 
 		count = 0
-		sentences = TEST#utilities.readFile(input_filename)
+		sentences = utilities.readFile(input_filename)
 		result = "" #goes to output file
 
 		for next_sent in sentences:
