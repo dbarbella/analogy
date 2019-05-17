@@ -37,8 +37,8 @@ def produce_next_lines(count, base, target, action):
 		if base[i] == None:
 			action[i] = 'NaN'
 
-		result += str(count)+', '+base[i].strip()+', '+target[i].strip()+', '+action[i].strip()+'\n'
-
+		result += '"'+ str(count)+'","'+base[i].strip()+'","'+target[i].strip()+'","'+action[i].strip()+'"\n'
+        
 	return result
 
 
