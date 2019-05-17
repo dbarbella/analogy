@@ -3,7 +3,7 @@ import numpy
 
 DICTIONARY = {}
 
-RANGE = 10
+RANGE = 20
 
 #Returns file handle
 def read_file(filename):
@@ -124,14 +124,26 @@ def fill_the_gap_euc(A, B, base_word):
 	sorted_to_answer = sort_by_cos_for_vector(answer_vec)
 	return sorted_to_answer[:RANGE]
 
-def sort_by_cos_relative_to(direction_vect, relative_to_vect):#direction_vect ->> AB
-	return_list = [] #list of tuples -> (cos_value, word)
+def sort_by_cos_relative_to(direction_vect, relative_to_vect):#direction_vect ->> D, #relative_to_vect ->> C
+	return_list_cos = [] #list of tuples -> (cos_value, word)
+	return_list_dis = []
+	return_list = []
+
 	for next_word in DICTIONARY:
 
 		next_cos_value = relative_cosine(direction_vect, DICTIONARY[next_word], relative_to_vect)#(B-A, next_vect, C)
-		return_list.append((next_cos_value, next_word))
+		distance = magnitude(direction_vect - DICTIONARY[next_word])
+		return_list_cos.append((next_cos_value, next_word))
+		return_list_dis.append((distance, next_word))
 
-	return_list.sort(key=lambda tup: tup[0], reverse = True)
+	return_list_cos.sort(key=lambda tup: tup[0], reverse = True)
+	return_list_dis.sort(key=lambda tup: tup[0], reverse = False)
+
+	for i in range(100):
+		next_dist_tuple = return_list_dis[i]
+		for next_cos_tuple in return_list_cos:
+			if next_cos_tuple[1] == next_dist_tuple[1]:
+				return_list.append((next_cos_tuple[0], next_dist_tuple[1], next_dist_tuple[0]))
 	return return_list
 
 #this is for vectors.
@@ -143,7 +155,6 @@ def cosine(vect1, vect2):
 	else:
 		return numpy.dot(vect1, vect2) / magnitude_product
 	
-
 
 #relative_to_vect = C
 def relative_cosine(vect1, vect2, relative_to_vect):
@@ -162,9 +173,15 @@ def fill_the_gap(A, B, base_word):
 
 # print(relative_cosine(numpy.array([1,2,3]), numpy.array([4,5,6]), numpy.array([1,2,3])))
 #print(magnitude(numpy.array([1,2,3,4,5])))
-parse_co_occurence_matrix("glove.6B/glove.6B.50d.txt")
+parse_co_occurence_matrix("../glove.6B/glove.6B.100d.txt")
 #print("FIRST:", cosine_for_words("king", "queen"), "SECOND:", cosine_for_words("queen","king"))
-fill_the_gap("king", "queen", "man")
+#fill_the_gap("man", "police", "wife")
+list_of_analogies = [("walk", "walked", "go"),("queen", "king", "man"),("boy", "son", "girl"),("kitten", "cat", "puppy"),("france", "paris", "germany"), ("bird", "feather", "dog"), ("steam", "gas", "ice"), ("day", "night", "light"), ("dark", "darker", "windy"), ("like", "love", "dislike")]
+
+for i in list_of_analogies:
+	fill_the_gap(i[0], i[1], i[2])
+	print("\n")
+
 # lst = sort_by_cos_similarity("Georgia")
 # for i in range(20):
 # 	print(lst[i])
