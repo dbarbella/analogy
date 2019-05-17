@@ -124,12 +124,13 @@ def fill_the_gap_euc(A, B, base_word):
 	sorted_to_answer = sort_by_cos_for_vector(answer_vec)
 	return sorted_to_answer[:RANGE]
 
-def sort_by_cos_relative_to(direction_vect, relative_to_vect):#direction_vect ->> AB
+def sort_by_cos_relative_to(direction_vect, relative_to_vect):#direction_vect ->> D, #relative_to_vect ->> C
 	return_list = [] #list of tuples -> (cos_value, word)
 	for next_word in DICTIONARY:
 
 		next_cos_value = relative_cosine(direction_vect, DICTIONARY[next_word], relative_to_vect)#(B-A, next_vect, C)
-		return_list.append((next_cos_value, next_word))
+		distance = magnitude(direction_vect - DICTIONARY[next_word])
+		return_list.append((next_cos_value, next_word, distance))
 
 	return_list.sort(key=lambda tup: tup[0], reverse = True)
 	return return_list
@@ -143,7 +144,6 @@ def cosine(vect1, vect2):
 	else:
 		return numpy.dot(vect1, vect2) / magnitude_product
 	
-
 
 #relative_to_vect = C
 def relative_cosine(vect1, vect2, relative_to_vect):
@@ -162,9 +162,14 @@ def fill_the_gap(A, B, base_word):
 
 # print(relative_cosine(numpy.array([1,2,3]), numpy.array([4,5,6]), numpy.array([1,2,3])))
 #print(magnitude(numpy.array([1,2,3,4,5])))
-parse_co_occurence_matrix("glove.6B/glove.6B.50d.txt")
+parse_co_occurence_matrix("../glove.6B/glove.6B.100d.txt")
 #print("FIRST:", cosine_for_words("king", "queen"), "SECOND:", cosine_for_words("queen","king"))
-fill_the_gap("king", "queen", "man")
+#fill_the_gap("man", "police", "wife")
+list_of_analogies = [("king", "queen", "man"),("queen", "king", "man"),("boy", "son", "girl"),("kitten", "cat", "puppy"),("france", "paris", "germany"), ("bird", "feather", "dog"), ("steam", "gas", "ice"), ("sun", "light", "moon"), ("dark", "darker", "funny"), ("like", "love", "dislike")]
+
+for i in list_of_analogies:
+	fill_the_gap(i[0], i[1], i[2])
+
 # lst = sort_by_cos_similarity("Georgia")
 # for i in range(20):
 # 	print(lst[i])
