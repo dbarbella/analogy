@@ -28,9 +28,9 @@ NUMBER_OF_FILES = 50000
 def text_to_paras(book_id):
     #book_root = '../book%s.txt' % book_id
     #put in directory of the .txt files
-    book_root = '../../../bookScraping/debomed'
+    book_root = '../../../bookScraping'
     corpus = PlaintextCorpusReader(book_root, '.*')
-    paragraphs = corpus.paras('book%s_nobom.txt' % book_id)
+    paragraphs = corpus.paras('book%s.txt' % book_id)
     return paragraphs
 
 def write_analogies(book_id):
@@ -67,5 +67,7 @@ def write_analogies(book_id):
                     writer.writerow({'name': id_tag, 'text': sentence})
     output_handler.close()
 
+# for i in range(11,101):
+#     write_analogies(i)
 
-write_analogies(1)
+write_analogies(10)
