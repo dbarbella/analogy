@@ -9,8 +9,10 @@ from utils import para_to_pretty
 from utils import sent_to_pretty
 from sentence_parser import *
 from personal import root as root
+from sys import argv
 import nltk
 import csv
+
 
 
 """
@@ -23,22 +25,24 @@ The output will be stored in analogy/finding_analogies/extractions
 SOURCE_NAME = "GUT"
 NUMBER_OF_FILES = 50000
 
+#the first command line argument is the directory where the books are located
+book_dir = argv[1]
+#the second command line argument is the output directory
+out_dir = argv[2]
 #converts text file to a list of lists where the outer list are paragraphs
 #and the inner list is sentences, split by words
 def text_to_paras(book_id):
-    #book_root = '../book%s.txt' % book_id
     #put in directory of the .txt files
-    book_root = '../../../bookScraping'
-    corpus = PlaintextCorpusReader(book_root, '.*')
+    corpus = PlaintextCorpusReader(book_dir, '.*')
     paragraphs = corpus.paras('book%s.txt' % book_id)
     return paragraphs
 
 def write_analogies(book_id):
 
     book_id = str(book_id)
-    txt_file_name = "analogy_sentences_book%s.txt" % book_id
-    csv_file_name = "analogy_names_book%s.csv" % book_id
-    output_handler = open(root + "extractions\\" + txt_file_name, "w", encoding="utf-8")
+    txt_file_name = "book%s_analogies.txt" % book_id
+    csv_file_name = "book%s_analogies.csv" % book_id
+    output_handler = open(out_dir + txt_file_name, "w", encoding="utf-8")
 
     # Find the indices of all paragraphs that contain the patterns as listed in
     # analogy_string_list
@@ -47,7 +51,7 @@ def write_analogies(book_id):
     ids = {}            # save sentences' ids in hash table to prevent duplicates.
 
     # Extract the exact sentences and write them to csv and txt files.
-    with open("extractions/large_gutenberg\\" + csv_file_name, 'w', encoding="utf-8") as csvfile:
+    with open(out_dir + csv_file_name, 'w', encoding="utf-8") as csvfile:
         fieldnames = ['name', 'text']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
         writer.writeheader()
