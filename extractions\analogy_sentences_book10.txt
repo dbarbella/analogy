@@ -1,0 +1,624 @@
+[10, PARA#1570, SENT#1]
+15 : 11 Who is like unto thee , O LORD , among the gods ?
+[10, PARA#4429, SENT#1]
+33 : 17 His glory is like the firstling of his bullock , and his horns are like the horns of unicorns : with them he shall push the people together to the ends of the earth : and they are the ten thousands of Ephraim , and they are the thousands of Manasseh .
+[10, PARA#4441, SENT#1]
+33 : 29 Happy art thou , O Israel : who is like unto thee , O people saved by the LORD , the shield of thy help , and who is the sword of thy excellency !
+[10, PARA#6115, SENT#4]
+and who is like to thee in Israel ?
+[10, PARA#6348, SENT#1]
+7 : 23 And what one nation in the earth is like thy people , even like Israel , whom God went to redeem for a people to himself , and to make him a name , and to do for you great things and terrible , for thy land , before thy people , which thou redeemedst to thee from Egypt , from the nations and their gods ?
+[10, PARA#6612, SENT#1]
+18 : 27 And the watchman said , Me thinketh the running of the foremost is like the running of Ahimaaz the son of Zadok .
+[10, PARA#7655, SENT#1]
+9 : 20 And the watchman told , saying , He came even unto them , and cometh not again : and the driving is like the driving of Jehu the son of Nimshi ; for he driveth furiously .
+[10, PARA#8474, SENT#1]
+17 : 21 And what one nation in the earth is like thy people Israel , whom God went to redeem to be his own people , to make thee a name of greatness and terribleness , by driving out nations from before thy people whom thou hast redeemed out of Egypt ?
+[10, PARA#10587, SENT#1]
+34 : 7 What man is like Job , who drinketh up scorning like water ?
+[10, PARA#11027, SENT#1]
+22 : 14 I am poured out like water , and all my bones are out of joint : my heart is like wax ; it is melted in the midst of my bowels .
+[10, PARA#11230, SENT#1]
+35 : 10 All my bones shall say , LORD , who is like unto thee , which deliverest the poor from him that is too strong for him , yea , the poor and the needy from him that spoileth him ?
+[10, PARA#11254, SENT#1]
+36 : 6 Thy righteousness is like the great mountains ; thy judgments are a great deep : O LORD , thou preservest man and beast .
+[10, PARA#11472, SENT#1]
+49 : 12 Nevertheless man being in honour abideth not : he is like the beasts that perish .
+[10, PARA#11480, SENT#1]
+49 : 20 Man that is in honour , and understandeth not , is like the beasts that perish .
+[10, PARA#11596, SENT#1]
+58 : 4 Their poison is like the poison of a serpent : they are like the deaf adder that stoppeth her ear ;
+[10, PARA#11808, SENT#1]
+71 : 19 Thy righteousness also , O God , is very high , who hast done great things : O God , who is like unto thee !
+[10, PARA#12633, SENT#1]
+113 : 5 Who is like unto the LORD our God , who dwelleth on high ,
+[10, PARA#12987, SENT#1]
+133 : 2 It is like the precious ointment upon the head , that ran down upon the beard , even Aaron ' s beard : that went down to the skirts of his garments ;
+[10, PARA#13127, SENT#1]
+144 : 4 Man is like to vanity : his days are as a shadow that passeth away .
+[10, PARA#13693, SENT#1]
+20 : 5 Counsel in the heart of man is like deep water ; but a man of understanding will draw it out .
+[10, PARA#13830, SENT#1]
+25 : 11 A word fitly spoken is like apples of gold in pictures of silver .
+[10, PARA#13833, SENT#1]
+25 : 14 Whoso boasteth himself of a false gift is like clouds and wind without rain .
+[10, PARA#13838, SENT#1]
+25 : 19 Confidence in an unfaithful man in time of trouble is like a broken tooth , and a foot out of joint .
+[10, PARA#13846, SENT#1]
+25 : 28 He that hath no rule over his own spirit is like a city that is broken down , and without walls .
+[10, PARA#13863, SENT#1]
+26 : 17 He that passeth by , and meddleth with strife belonging not to him , is like one that taketh a dog by the ears .
+[10, PARA#13899, SENT#1]
+28 : 3 A poor man that oppresseth the poor is like a sweeping rain which leaveth no food .
+[10, PARA#13982, SENT#1]
+31 : 14 She is like the merchants ' ships ; she bringeth her food from afar .
+[10, PARA#14201, SENT#1]
+2 : 9 My beloved is like a roe or a young hart : behold , he standeth behind our wall , he looketh forth at the windows , shewing himself through the lattice .
+[10, PARA#14220, SENT#1]
+4 : 4 Thy neck is like the tower of David builded for an armoury , whereon there hang a thousand bucklers , all shields of mighty men .
+[10, PARA#14226, SENT#4]
+4 : 11 Thy lips , O my spouse , drop as the honeycomb : honey and milk are under thy tongue ; and the smell of thy garments is like the smell of Lebanon .
+[10, PARA#14257, SENT#1]
+7 : 2 Thy navel is like a round goblet , which wanteth not liquor : thy belly is like an heap of wheat set about with lilies .
+[10, PARA#14260, SENT#1]
+7 : 5 Thine head upon thee is like Carmel , and the hair of thine head like purple ; the king is held in the galleries .
+[10, PARA#14261, SENT#2]
+7 : 7 This thy stature is like to a palm tree , and thy breasts to clusters of grapes .
+[10, PARA#14794, SENT#1]
+33 : 9 The earth mourneth and languisheth : Lebanon is ashamed and hewn down : Sharon is like a wilderness ; and Bashan and Carmel shake off their fruits .
+[10, PARA#15887, SENT#4]
+for that day is great , so that none is like it : it is even the time of Jacob ' s trouble , but he shall be saved out of it .
+[10, PARA#16053, SENT#1]
+38 : 7 Now when Ebedmelech the Ethiopian , one of the eunuchs which was in the king ' s house , heard that they had put Jeremiah in the dungeon ; the king then sitting in the gate of Benjamin ; 38 : 8 Ebedmelech went forth out of the king ' s house , and spake to the king saying , 38 : 9 My lord the king , these men have done evil in all that they have done to Jeremiah the prophet , whom they have cast into the dungeon ; and he is like to die for hunger in the place where he is : for there is no more bread in the city .
+[10, PARA#16171, SENT#1]
+46 : 20 Egypt is like a very fair heifer , but destruction cometh ; it cometh out of the north .
+[10, PARA#16239, SENT#1]
+49 : 19 Behold , he shall come up like a lion from the swelling of Jordan against the habitation of the strong : but I will suddenly make him run away from her : and who is a chosen man , that I may appoint over her ?
+[10, PARA#16297, SENT#1]
+50 : 44 Behold , he shall come up like a lion from the swelling of Jordan unto the habitation of the strong : but I will make them suddenly run away from her : and who is a chosen man , that I may appoint over her ?
+[10, PARA#16326, SENT#1]
+51 : 33 For thus saith the LORD of hosts , the God of Israel ; The daughter of Babylon is like a threshingfloor , it is time to thresh her : yet a little while , and the time of her harvest shall come .
+[10, PARA#16852, SENT#1]
+19 : 10 Thy mother is like a vine in thy blood , planted by the waters : she was fruitful and full of branches by reason of many waters .
+[10, PARA#16956, SENT#1]
+23 : 20 For she doted upon their paramours , whose flesh is as the flesh of asses , and whose issue is like the issue of horses .
+[10, PARA#17003, SENT#1]
+25 : 8 Thus saith the Lord GOD ; Because that Moab and Seir do say , Behold , the house of Judah is like unto all the heathen ; 25 : 9 Therefore , behold , I will open the side of Moab from the cities , from his cities which are on his frontiers , the glory of the country , Bethjeshimoth , Baalmeon , and Kiriathaim , 25 : 10 Unto the men of the east with the Ammonites , and will give them in possession , that the Ammonites may not be remembered among the nations .
+[10, PARA#17051, SENT#1]
+27 : 32 And in their wailing they shall take up a lamentation for thee , and lament over thee , saying , What city is like Tyrus , like the destroyed in the midst of the sea ?
+[10, PARA#17623, SENT#1]
+3 : 25 He answered and said , Lo , I see four men loose , walking in the midst of the fire , and they have no hurt ; and the form of the fourth is like the Son of God .
+[10, PARA#17940, SENT#1]
+7 : 11 Ephraim also is like a silly dove without heart : they call to Egypt , they go to Assyria .
+[10, PARA#18705, SENT#3]
+for he is like a refiner ' s fire , and like fullers ' soap : 3 : 3 And he shall sit as a refiner and purifier of silver : and he shall purify the sons of Levi , and purge them as gold and silver , that they may offer unto the LORD an offering in righteousness .
+[10, PARA#18965, SENT#2]
+It is like unto children sitting in the markets , and calling unto their fellows , 11 : 17 And saying , We have piped unto you , and ye have not danced ; we have mourned unto you , and ye have not lamented .
+[10, PARA#19034, SENT#1]
+13 : 31 Another parable put he forth unto them , saying , The kingdom of heaven is like to a grain of mustard seed , which a man took , and sowed in his field : 13 : 32 Which indeed is the least of all seeds : but when it is grown , it is the greatest among herbs , and becometh a tree , so that the birds of the air come and lodge in the branches thereof .
+[10, PARA#19035, SENT#1]
+13 : 33 Another parable spake he unto them ; The kingdom of heaven is like unto leaven , which a woman took , and hid in three measures of meal , till the whole was leavened .
+[10, PARA#19042, SENT#1]
+13 : 44 Again , the kingdom of heaven is like unto treasure hid in a field ; the which when a man hath found , he hideth , and for joy thereof goeth and selleth all that he hath , and buyeth that field .
+[10, PARA#19043, SENT#1]
+13 : 45 Again , the kingdom of heaven is like unto a merchant man , seeking goodly pearls : 13 : 46 Who , when he had found one pearl of great price , went and sold all that he had , and bought it .
+[10, PARA#19044, SENT#1]
+13 : 47 Again , the kingdom of heaven is like unto a net , that was cast into the sea , and gathered of every kind : 13 : 48 Which , when it was full , they drew to shore , and sat down , and gathered the good into vessels , but cast the bad away .
+[10, PARA#19047, SENT#1]
+13 : 52 Then said he unto them , Therefore every scribe which is instructed unto the kingdom of heaven is like unto a man that is an householder , which bringeth forth out of his treasure things new and old .
+[10, PARA#19201, SENT#1]
+20 : 1 For the kingdom of heaven is like unto a man that is an householder , which went out early in the morning to hire labourers into his vineyard .
+[10, PARA#19258, SENT#1]
+22 : 1 And Jesus answered and spake unto them again by parables , and said , 22 : 2 The kingdom of heaven is like unto a certain king , which made a marriage for his son , 22 : 3 And sent forth his servants to call them that were bidden to the wedding : and they would not come .
+[10, PARA#19284, SENT#1]
+22 : 39 And the second is like unto it , Thou shalt love thy neighbour as thyself .
+[10, PARA#19614, SENT#3]
+4 : 31 It is like a grain of mustard seed , which , when it is sown in the earth , is less than all the seeds that be in the earth : 4 : 32 But when it is sown , it groweth up , and becometh greater than all herbs , and shooteth out great branches ; so that the fowls of the air may lodge under the shadow of it .
+[10, PARA#19886, SENT#1]
+12 : 31 And the second is like , namely this , Thou shalt love thy neighbour as thyself .
+[10, PARA#20246, SENT#2]
+6 : 47 Whosoever cometh to me , and heareth my sayings , and doeth them , I will shew you to whom he is like : 6 : 48 He is like a man which built an house , and digged deep , and laid the foundation on a rock : and when the flood arose , the stream beat vehemently upon that house , and could not shake it : for it was founded upon a rock .
+[10, PARA#20247, SENT#1]
+6 : 49 But he that heareth , and doeth not , is like a man that without a foundation built an house upon the earth ; against which the stream did beat vehemently , and immediately it fell ; and the ruin of that house was great .
+[10, PARA#20518, SENT#3]
+13 : 19 It is like a grain of mustard seed , which a man took , and cast into his garden ; and it grew , and waxed a great tree ; and the fowls of the air lodged in the branches of it .
+[10, PARA#20519, SENT#2]
+13 : 21 It is like leaven , which a woman took and hid in three measures of meal , till the whole was leavened .
+[10, PARA#21218, SENT#2]
+9 : 9 Some said , This is he : others said , He is like him : but he said , I am he .
+[10, PARA#22076, SENT#1]
+17 : 29 Forasmuch then as we are the offspring of God , we ought not to think that the Godhead is like unto gold , or silver , or stone , graven by art and man ' s device .
+[10, PARA#23965, SENT#2]
+For he that wavereth is like a wave of the sea driven with the wind and tossed .
+[10, PARA#23979, SENT#1]
+1 : 23 For if any be a hearer of the word , and not a doer , he is like unto a man beholding his natural face in a glass : 1 : 24 For he beholdeth himself , and goeth his way , and straightway forgetteth what manner of man he was .
+[10, PARA#24450, SENT#1]
+13 : 4 And they worshipped the dragon which gave power unto the beast : and they worshipped the beast , saying , Who is like unto the beast ?
+[10, PARA#24532, SENT#3]
+And every shipmaster , and all the company in ships , and sailors , and as many as trade by sea , stood afar off , 18 : 18 And cried when they saw the smoke of her burning , saying , What city is like unto this great city !
+[10, PARA#10211, SENT#3]
+13 : 12 Your remembrances are like unto ashes , your bodies to bodies of clay .
+[10, PARA#10699, SENT#1]
+40 : 18 His bones are as strong pieces of brass ; his bones are like bars of iron .
+[10, PARA#10713, SENT#1]
+41 : 18 By his neesings a light doth shine , and his eyes are like the eyelids of the morning .
+[10, PARA#10750, SENT#1]
+1 : 4 The ungodly are not so : but are like the chaff which the wind driveth away .
+[10, PARA#12198, SENT#1]
+90 : 5 Thou carriest them away as with a flood ; they are as a sleep : in the morning they are like grass which groweth up .
+[10, PARA#12347, SENT#1]
+102 : 11 My days are like a shadow that declineth ; and I am withered like grass .
+[10, PARA#12653, SENT#1]
+115 : 8 They that make them are like unto them ; so is every one that trusteth in them .
+[10, PARA#13009, SENT#1]
+135 : 18 They that make them are like unto them : so is every one that trusteth in them .
+[10, PARA#13654, SENT#1]
+18 : 19 A brother offended is harder to be won than a strong city : and their contentions are like the bars of a castle .
+[10, PARA#13867, SENT#1]
+26 : 23 Burning lips and a wicked heart are like a potsherd covered with silver dross .
+[10, PARA#14218, SENT#1]
+4 : 2 Thy teeth are like a flock of sheep that are even shorn , which came up from the washing ; whereof every one bear twins , and none is barren among them .
+[10, PARA#14219, SENT#1]
+4 : 3 Thy lips are like a thread of scarlet , and thy speech is comely : thy temples are like a piece of a pomegranate within thy locks .
+[10, PARA#14221, SENT#1]
+4 : 5 Thy two breasts are like two young roes that are twins , which feed among the lilies .
+[10, PARA#14256, SENT#2]
+the joints of thy thighs are like jewels , the work of the hands of a cunning workman .
+[10, PARA#14258, SENT#1]
+7 : 3 Thy two breasts are like two young roes that are twins .
+[10, PARA#15199, SENT#1]
+57 : 20 But the wicked are like the troubled sea , when it cannot rest , whose waters cast up mire and dirt .
+[10, PARA#16737, SENT#2]
+13 : 4 O Israel , thy prophets are like the foxes in the deserts .
+[10, PARA#16938, SENT#1]
+22 : 27 Her princes in the midst thereof are like wolves ravening the prey , to shed blood , and to destroy souls , to get dishonest gain .
+[10, PARA#17945, SENT#1]
+7 : 16 They return , but not to the most High : they are like a deceitful bow : their princes shall fall by the sword for the rage of their tongue : this shall be their derision in the land of Egypt .
+[10, PARA#19307, SENT#2]
+for ye are like unto whited sepulchres , which indeed appear beautiful outward , but are within full of dead men ' s bones , and of all uncleanness .
+[10, PARA#20274, SENT#3]
+7 : 32 They are like unto children sitting in the marketplace , and calling one to another , and saying , We have piped unto you , and ye have not danced ; we have mourned to you , and ye have not wept .
+[10, PARA#24305, SENT#1]
+2 : 18 And unto the angel of the church in Thyatira write ; These things saith the Son of God , who hath his eyes like unto a flame of fire , and his feet are like fine brass ; 2 : 19 I know thy works , and charity , and service , and faith , and thy patience , and thy works ; and the last to be more than the first .
+[10, PARA#5272, SENT#3]
+And he brake them from off his arms like a thread .
+[10, PARA#5862, SENT#1]
+17 : 7 And the staff of his spear was like a weaver ' s beam ; and his spear ' s head weighed six hundred shekels of iron : and one bearing a shield went before him .
+[10, PARA#6682, SENT#1]
+21 : 19 And there was again a battle in Gob with the Philistines , where Elhanan the son of Jaareoregim , a Bethlehemite , slew the brother of Goliath the Gittite , the staff of whose spear was like a weaver ' s beam .
+[10, PARA#7304, SENT#1]
+18 : 44 And it came to pass at the seventh time , that he said , Behold , there ariseth a little cloud out of the sea , like a man ' s hand .
+[10, PARA#8351, SENT#1]
+11 : 23 And he slew an Egyptian , a man of great stature , five cubits high ; and in the Egyptian ' s hand was a spear like a weaver ' s beam ; and he went down to him with a staff , and plucked the spear out of the Egyptian ' s hand , and slew him with his own spear .
+[10, PARA#8516, SENT#1]
+20 : 5 And there was war again with the Philistines ; and Elhanan the son of Jair slew Lahmi the brother of Goliath the Gittite , whose spear staff was like a weaver ' s beam .
+[10, PARA#10128, SENT#2]
+and how long shall the words of thy mouth be like a strong wind ?
+[10, PARA#10178, SENT#3]
+11 : 12 For vain men would be wise , though man be born like a wild ass ' s colt .
+[10, PARA#10203, SENT#1]
+12 : 25 They grope in the dark without light , and he maketh them to stagger like a drunken man .
+[10, PARA#10226, SENT#1]
+14 : 2 He cometh forth like a flower , and is cut down : he fleeth also as a shadow , and continueth not .
+[10, PARA#10230, SENT#1]
+14 : 8 Though the root thereof wax old in the earth , and the stock thereof die in the ground ; 14 : 9 Yet through the scent of water it will bud , and bring forth boughs like a plant .
+[10, PARA#10271, SENT#1]
+16 : 14 He breaketh me with breach upon breach , he runneth upon me like a giant .
+[10, PARA#10315, SENT#1]
+19 : 10 He hath destroyed me on every side , and I am gone : and mine hope hath he removed like a tree .
+[10, PARA#10357, SENT#1]
+21 : 11 They send forth their little ones like a flock , and their children dance .
+[10, PARA#10663, SENT#2]
+38 : 3 Gird up now thy loins like a man ; for I will demand of thee , and answer thou me .
+[10, PARA#10690, SENT#1]
+40 : 6 Then answered the LORD unto Job out of the whirlwind , and said , 40 : 7 Gird up thy loins now like a man : I will demand of thee , and declare thou unto me .
+[10, PARA#10698, SENT#1]
+40 : 17 He moveth his tail like a cedar : the sinews of his stones are wrapped together .
+[10, PARA#10726, SENT#1]
+41 : 31 He maketh the deep to boil like a pot : he maketh the sea like a pot of ointment .
+[10, PARA#10749, SENT#1]
+1 : 3 And he shall be like a tree planted by the rivers of water , that bringeth forth his fruit in his season ; his leaf also shall not wither ; and whatsoever he doeth shall prosper .
+[10, PARA#10761, SENT#1]
+2 : 9 Thou shalt break them with a rod of iron ; thou shalt dash them in pieces like a potter ' s vessel .
+[10, PARA#10806, SENT#1]
+7 : 2 Lest he tear my soul like a lion , rending it in pieces , while there is none to deliver .
+[10, PARA#11028, SENT#1]
+22 : 15 My strength is dried up like a potsherd ; and my tongue cleaveth to my jaws ; and thou hast brought me into the dust of death .
+[10, PARA#11123, SENT#1]
+29 : 6 He maketh them also to skip like a calf ; Lebanon and Sirion like a young unicorn .
+[10, PARA#11153, SENT#1]
+31 : 12 I am forgotten as a dead man out of mind : I am like a broken vessel .
+[10, PARA#11295, SENT#1]
+37 : 35 I have seen the wicked in great power , and spreading himself like a green bay tree .
+[10, PARA#11334, SENT#1]
+39 : 11 When thou with rebukes dost correct man for iniquity , thou makest his beauty to consume away like a moth : surely every man is vanity .
+[10, PARA#11524, SENT#1]
+52 : 2 The tongue deviseth mischiefs ; like a sharp razor , working deceitfully .
+[10, PARA#11530, SENT#1]
+52 : 8 But I am like a green olive tree in the house of God : I trust in the mercy of God for ever and ever .
+[10, PARA#11550, SENT#1]
+55 : 6 And I said , Oh that I had wings like a dove !
+[10, PARA#11609, SENT#1]
+59 : 6 They return at evening : they make a noise like a dog , and go round about the city .
+[10, PARA#11617, SENT#1]
+59 : 14 And at evening let them return ; and let them make a noise like a dog , and go round about the city .
+[10, PARA#11666, SENT#1]
+64 : 3 Who whet their tongue like a sword , and bend their bows to shoot their arrows , even bitter words :
+[10, PARA#11926, SENT#1]
+77 : 20 Thou leddest thy people like a flock by the hand of Moses and Aaron .
+[10, PARA#11978, SENT#1]
+78 : 52 But made his own people to go forth like sheep , and guided them in the wilderness like a flock .
+[10, PARA#11983, SENT#1]
+78 : 57 But turned back , and dealt unfaithfully like their fathers : they were turned aside like a deceitful bow .
+[10, PARA#11991, SENT#1]
+78 : 65 Then the LORD awaked as one out of sleep , and like a mighty man that shouteth by reason of wine .
+[10, PARA#12012, SENT#1]
+80 : 1 Give ear , O Shepherd of Israel , thou that leadest Joseph like a flock ; thou that dwellest between the cherubims , shine forth .
+[10, PARA#12069, SENT#1]
+83 : 13 O my God , make them like a wheel ; as the stubble before the wind .
+[10, PARA#12238, SENT#1]
+92 : 12 The righteous shall flourish like the palm tree : he shall grow like a cedar in Lebanon .
+[10, PARA#12342, SENT#1]
+102 : 6 I am like a pelican of the wilderness : I am like an owl of the desert .
+[10, PARA#12362, SENT#1]
+102 : 26 They shall perish , but thou shalt endure : yea , all of them shall wax old like a garment ; as a vesture shalt thou change them , and they shall be changed :
+[10, PARA#12388, SENT#1]
+104 : 2 Who coverest thyself with light as with a garment : who stretchest out the heavens like a curtain :
+[10, PARA#12462, SENT#1]
+105 : 41 He opened the rock , and the waters gushed out ; they ran in the dry places like a river .
+[10, PARA#12541, SENT#1]
+107 : 27 They reel to and fro , and stagger like a drunken man , and are at their wit ' s end .
+[10, PARA#12555, SENT#1]
+107 : 41 Yet setteth he the poor on high from affliction , and maketh him families like a flock .
+[10, PARA#12797, SENT#1]
+119 : 83 For I am become like a bottle in the smoke ; yet do I not forget thy statutes .
+[10, PARA#12890, SENT#1]
+119 : 176 I have gone astray like a lost sheep ; seek thy servant ; for I do not forget thy commandments .
+[10, PARA#13083, SENT#1]
+140 : 3 They have sharpened their tongues like a serpent ; adders ' poison is under their lips .
+[10, PARA#13630, SENT#1]
+17 : 22 A merry heart doeth good like a medicine : but a broken spirit drieth the bones .
+[10, PARA#13796, SENT#1]
+23 : 32 At the last it biteth like a serpent , and stingeth like an adder .
+[10, PARA#14207, SENT#1]
+2 : 17 Until the day break , and the shadows flee away , turn , my beloved , and be thou like a roe or a young hart upon the mountains of Bether .
+[10, PARA#14357, SENT#1]
+5 : 26 And he will lift up an ensign to the nations from far , and will hiss unto them from the end of the earth : and , behold , they shall come with speed swiftly : 5 : 27 None shall be weary nor stumble among them ; none shall slumber nor sleep ; neither shall the girdle of their loins be loosed , nor the latchet of their shoes be broken : 5 : 28 Whose arrows are sharp , and all their bows bent , their horses ' hoofs shall be counted like flint , and their wheels like a whirlwind : 5 : 29 Their roaring shall be like a lion , they shall roar like young lions : yea , they shall roar , and lay hold of the prey , and shall carry it away safe , and none shall deliver it .
+[10, PARA#14430, SENT#1]
+10 : 13 For he saith , By the strength of my hand I have done it , and by my wisdom ; for I am prudent : and I have removed the bounds of the people , and have robbed their treasures , and I have put down the inhabitants like a valiant man : 10 : 14 And my hand hath found as a nest the riches of the people : and as one gathereth eggs that are left , have I gathered all the earth ; and there was none that moved the wing , or opened the mouth , or peeped .
+[10, PARA#14544, SENT#2]
+17 : 13 The nations shall rush like the rushing of many waters : but God shall rebuke them , and they shall flee far off , and shall be chased as the chaff of the mountains before the wind , and like a rolling thing before the whirlwind .
+[10, PARA#14548, SENT#1]
+18 : 4 For so the LORD said unto me , I will take my rest , and I will consider in my dwelling place like a clear heat upon herbs , and like a cloud of dew in the heat of harvest .
+[10, PARA#14605, SENT#1]
+22 : 18 He will surely violently turn and toss thee like a ball into a large country : there shalt thou die , and there the chariots of thy glory shall be the shame of thy lord ' s house .
+[10, PARA#14648, SENT#1]
+24 : 20 The earth shall reel to and fro like a drunkard , and shall be removed like a cottage ; and the transgression thereof shall be heavy upon it ; and it shall fall , and not rise again .
+[10, PARA#14692, SENT#1]
+27 : 10 Yet the defenced city shall be desolate , and the habitation forsaken , and left like a wilderness : there shall the calf feed , and there shall he lie down , and consume the branches thereof .
+[10, PARA#14760, SENT#1]
+30 : 33 For Tophet is ordained of old ; yea , for the king it is prepared ; he hath made it deep and large : the pile thereof is fire and much wood ; the breath of the LORD , like a stream of brimstone , doth kindle it .
+[10, PARA#14884, SENT#1]
+38 : 12 Mine age is departed , and is removed from me as a shepherd ' s tent : I have cut off like a weaver my life : he will cut me off with pining sickness : from day even to night wilt thou make an end of me .
+[10, PARA#14908, SENT#1]
+40 : 11 He shall feed his flock like a shepherd : he shall gather the lambs with his arm , and carry them in his bosom , and shall gently lead those that are with young .
+[10, PARA#14959, SENT#1]
+42 : 13 The LORD shall go forth as a mighty man , he shall stir up jealousy like a man of war : he shall cry , yea , roar ; he shall prevail against his enemies .
+[10, PARA#14960, SENT#1]
+42 : 14 I have long time holden my peace ; I have been still , and refrained myself : now will I cry like a travailing woman ; I will destroy and devour at once .
+[10, PARA#15075, SENT#1]
+49 : 2 And he hath made my mouth like a sharp sword ; in the shadow of his hand hath he hid me , and made me a polished shaft ; in his quiver hath he hid me ; 49 : 3 And said unto me , Thou art my servant , O Israel , in whom I will be glorified .
+[10, PARA#15102, SENT#1]
+50 : 7 For the Lord GOD will help me ; therefore shall I not be confounded : therefore have I set my face like a flint , and I know that I shall not be ashamed .
+[10, PARA#15112, SENT#1]
+51 : 6 Lift up your eyes to the heavens , and look upon the earth beneath : for the heavens shall vanish away like smoke , and the earth shall wax old like a garment , and they that dwell therein shall die in like manner : but my salvation shall be for ever , and my righteousness shall not be abolished .
+[10, PARA#15114, SENT#1]
+51 : 8 For the moth shall eat them up like a garment , and the worm shall eat them like wool : but my righteousness shall be for ever , and my salvation from generation to generation .
+[10, PARA#15201, SENT#1]
+58 : 1 Cry aloud , spare not , lift up thy voice like a trumpet , and shew my people their transgression , and the house of Jacob their sins .
+[10, PARA#15206, SENT#2]
+If thou take away from the midst of thee the yoke , the putting forth of the finger , and speaking vanity ; 58 : 10 And if thou draw out thy soul to the hungry , and satisfy the afflicted soul ; then shall thy light rise in obscurity , and thy darkness be as the noon day : 58 : 11 And the LORD shall guide thee continually , and satisfy thy soul in drought , and make fat thy bones : and thou shalt be like a watered garden , and like a spring of water , whose waters fail not .
+[10, PARA#15225, SENT#2]
+When the enemy shall come in like a flood , the Spirit of the LORD shall lift up a standard against him .
+[10, PARA#15320, SENT#1]
+66 : 12 For thus saith the LORD , Behold , I will extend peace to her like a river , and the glory of the Gentiles like a flowing stream : then shall ye suck , ye shall be borne upon her sides , and be dandled upon her knees .
+[10, PARA#15323, SENT#1]
+66 : 15 For , behold , the LORD will come with fire , and with his chariots like a whirlwind , to render his anger with fury , and his rebuke with flames of fire .
+[10, PARA#15371, SENT#1]
+2 : 30 In vain have I smitten your children ; they received no correction : your own sword hath devoured your prophets , like a destroying lion .
+[10, PARA#15531, SENT#2]
+and who is he to whom the mouth of the LORD hath spoken , that he may declare it , for what the land perisheth and is burned up like a wilderness , that none passeth through ?
+[10, PARA#15578, SENT#1]
+11 : 19 But I was like a lamb or an ox that is brought to the slaughter ; and I knew not that they had devised devices against me , saying , Let us destroy the tree with the fruit thereof , and let us cut him off from the land of the living , that his name may be no more remembered .
+[10, PARA#15767, SENT#1]
+23 : 9 Mine heart within me is broken because of the prophets ; all my bones shake ; I am like a drunken man , and like a man whom wine hath overcome , because of the LORD , and because of the words of his holiness .
+[10, PARA#15784, SENT#1]
+23 : 29 Is not my word like as a fire ?
+[10, PARA#15819, SENT#1]
+25 : 34 Howl , ye shepherds , and cry ; and wallow yourselves in the ashes , ye principal of the flock : for the days of your slaughter and of your dispersions are accomplished ; and ye shall fall like a pleasant vessel .
+[10, PARA#15836, SENT#1]
+26 : 17 Then rose up certain of the elders of the land , and spake to all the assembly of the people , saying , 26 : 18 Micah the Morasthite prophesied in the days of Hezekiah king of Judah , and spake to all the people of Judah , saying , Thus saith the LORD of hosts ; Zion shall be plowed like a field , and Jerusalem shall become heaps , and the mountain of the house as the high places of a forest .
+[10, PARA#16159, SENT#2]
+46 : 8 Egypt riseth up like a flood , and his waters are moved like the rivers ; and he saith , I will go up , and will cover the earth ; I will destroy the city and the inhabitants thereof .
+[10, PARA#16173, SENT#1]
+46 : 22 The voice thereof shall go like a serpent ; for they shall march with an army , and come against her with axes , as hewers of wood .
+[10, PARA#16214, SENT#1]
+48 : 38 There shall be lamentation generally upon all the housetops of Moab , and in the streets thereof : for I have broken Moab like a vessel wherein is no pleasure , saith the LORD .
+[10, PARA#16295, SENT#1]
+50 : 42 They shall hold the bow and the lance : they are cruel , and will not shew mercy : their voice shall roar like the sea , and they shall ride upon horses , every one put in array , like a man to the battle , against thee , O daughter of Babylon .
+[10, PARA#16327, SENT#1]
+51 : 34 Nebuchadrezzar the king of Babylon hath devoured me , he hath crushed me , he hath made me an empty vessel , he hath swallowed me up like a dragon , he hath filled his belly with my delicates , he hath cast me out .
+[10, PARA#16404, SENT#1]
+2 : 3 He hath cut off in his fierce anger all the horn of Israel : he hath drawn back his right hand from before the enemy , and he burned against Jacob like a flaming fire , which devoureth round about .
+[10, PARA#16417, SENT#1]
+2 : 18 Their heart cried unto the LORD , O wall of the daughter of Zion , let tears run down like a river day and night : give thyself no rest ; let not the apple of thine eye cease .
+[10, PARA#16466, SENT#1]
+3 : 52 Mine enemies chased me sore , like a bird , without cause .
+[10, PARA#16485, SENT#1]
+4 : 7 Her Nazarites were purer than snow , they were whiter than milk , they were more ruddy in body than rubies , their polishing was of sapphire : 4 : 8 Their visage is blacker than a coal ; they are not known in the streets : their skin cleaveth to their bones ; it is withered , it is become like a stick .
+[10, PARA#16936, SENT#1]
+22 : 25 There is a conspiracy of her prophets in the midst thereof , like a roaring lion ravening the prey ; they have devoured souls ; they have taken the treasure and precious things ; they have made her many widows in the midst thereof .
+[10, PARA#17125, SENT#1]
+32 : 1 And it came to pass in the twelfth year , in the twelfth month , in the first day of the month , that the word of the LORD came unto me , saying , 32 : 2 Son of man , take up a lamentation for Pharaoh king of Egypt , and say unto him , Thou art like a young lion of the nations , and thou art as a whale in the seas : and thou camest forth with thy rivers , and troubledst the waters with thy feet , and fouledst their rivers .
+[10, PARA#17239, SENT#1]
+36 : 37 Thus saith the Lord GOD ; I will yet for this be enquired of by the house of Israel , to do it for them ; I will increase them with men like a flock .
+[10, PARA#17265, SENT#1]
+38 : 9 Thou shalt ascend and come like a storm , thou shalt be like a cloud to cover the land , thou , and all thy bands , and many people with thee .
+[10, PARA#17386, SENT#1]
+43 : 1 Afterward he brought me to the gate , even the gate that looketh toward the east : 43 : 2 And , behold , the glory of the God of Israel came from the way of the east : and his voice was like a noise of many waters : and the earth shined with his glory .
+[10, PARA#17705, SENT#1]
+7 : 4 The first was like a lion , and had eagle ' s wings : I beheld till the wings thereof were plucked , and it was lifted up from the earth , and made stand upon the feet as a man , and a man ' s heart was given to it .
+[10, PARA#17707, SENT#1]
+7 : 6 After this I beheld , and lo another , like a leopard , which had upon the back of it four wings of a fowl ; the beast had also four heads ; and dominion was given to it .
+[10, PARA#17832, SENT#1]
+11 : 40 And at the time of the end shall the king of the south push at him : and the king of the north shall come against him like a whirlwind , with chariots , and with horsemen , and with many ships ; and he shall enter into the countries , and shall overflow and pass over .
+[10, PARA#17862, SENT#1]
+2 : 2 Plead with your mother , plead : for she is not my wife , neither am I her husband : let her therefore put away her whoredoms out of her sight , and her adulteries from between her breasts ; 2 : 3 Lest I strip her naked , and set her as in the day that she was born , and make her as a wilderness , and set her like a dry land , and slay her with thirst .
+[10, PARA#17968, SENT#1]
+9 : 11 As for Ephraim , their glory shall fly away like a bird , from the birth , and from the womb , and from the conception .
+[10, PARA#17997, SENT#1]
+11 : 10 They shall walk after the LORD : he shall roar like a lion : when he shall roar , then the children shall tremble from the west .
+[10, PARA#18018, SENT#1]
+13 : 7 Therefore I will be unto them as a lion : as a leopard by the way will I observe them : 13 : 8 I will meet them as a bear that is bereaved of her whelps , and will rend the caul of their heart , and there will I devour them like a lion : the wild beast shall tear them .
+[10, PARA#18033, SENT#2]
+I have heard him , and observed him : I am like a green fir tree .
+[10, PARA#18043, SENT#1]
+1 : 8 Lament like a virgin girded with sackcloth for the husband of her youth .
+[10, PARA#18060, SENT#1]
+2 : 9 They shall run to and fro in the city ; they shall run upon the wall , they shall climb up upon the houses ; they shall enter in at the windows like a thief .
+[10, PARA#18185, SENT#1]
+9 : 5 And the Lord GOD of hosts is he that toucheth the land , and it shall melt , and all that dwell therein shall mourn : and it shall rise up wholly like a flood ; and shall be drowned , as by the flood of Egypt .
+[10, PARA#18298, SENT#1]
+4 : 10 Be in pain , and labour to bring forth , O daughter of Zion , like a woman in travail : for now shalt thou go forth out of the city , and thou shalt dwell in the field , and thou shalt go even to Babylon ; there shalt thou be delivered ; there the LORD shall redeem thee from the hand of thine enemies .
+[10, PARA#18341, SENT#1]
+7 : 17 They shall lick the dust like a serpent , they shall move out of their holes like worms of the earth : they shall be afraid of the LORD our God , and shall fear because of thee .
+[10, PARA#18368, SENT#1]
+2 : 8 But Nineveh is of old like a pool of water : yet they shall flee away .
+[10, PARA#18459, SENT#1]
+2 : 13 And he will stretch out his hand against the north , and destroy Assyria ; and will make Nineveh a desolation , and dry like a wilderness .
+[10, PARA#18614, SENT#1]
+10 : 7 And they of Ephraim shall be like a mighty man , and their heart shall rejoice as through wine : yea , their children shall see it , and be glad ; their heart shall rejoice in the LORD .
+[10, PARA#18641, SENT#1]
+12 : 6 In that day will I make the governors of Judah like an hearth of fire among the wood , and like a torch of fire in a sheaf ; and they shall devour all the people round about , on the right hand and on the left : and Jerusalem shall be inhabited again in her own place , even in Jerusalem .
+[10, PARA#18761, SENT#1]
+3 : 16 And Jesus , when he was baptized , went up straightway out of the water : and , lo , the heavens were opened unto him , and he saw the Spirit of God descending like a dove , and lighting upon him : 3 : 17 And lo a voice from heaven , saying , This is my beloved Son , in whom I am well pleased .
+[10, PARA#19520, SENT#1]
+1 : 10 And straightway coming up out of the water , he saw the heavens opened , and the Spirit like a dove descending upon him : 1 : 11 And there came a voice from heaven , saying , Thou art my beloved Son , in whom I am well pleased .
+[10, PARA#20144, SENT#1]
+3 : 21 Now when all the people were baptized , it came to pass , that Jesus also being baptized , and praying , the heaven was opened , 3 : 22 And the Holy Ghost descended in a bodily shape like a dove upon him , and a voice came from heaven , which said , Thou art my beloved Son ; in thee I am well pleased .
+[10, PARA#20924, SENT#1]
+1 : 32 And John bare record , saying , I saw the Spirit descending from heaven like a dove , and it abode upon him .
+[10, PARA#21812, SENT#1]
+8 : 32 The place of the scripture which he read was this , He was led as a sheep to the slaughter ; and like a lamb dumb before his shearer , so opened he not his mouth : 8 : 33 In his humiliation his judgment was taken away : and who shall declare his generation ?
+[10, PARA#24336, SENT#1]
+4 : 3 And he that sat was to look upon like a jasper and a sardine stone : and there was a rainbow round about the throne , in sight like unto an emerald .
+[10, PARA#24340, SENT#1]
+4 : 7 And the first beast was like a lion , and the second beast like a calf , and the third beast had a face as a man , and the fourth beast was like a flying eagle .
+[10, PARA#24456, SENT#1]
+13 : 11 And I beheld another beast coming up out of the earth ; and he had two horns like a lamb , and he spake as a dragon .
+[10, PARA#24534, SENT#1]
+18 : 21 And a mighty angel took up a stone like a great millstone , and cast it into the sea , saying , Thus with violence shall that great city Babylon be thrown down , and shall be found no more at all .
+[10, PARA#24579, SENT#1]
+21 : 10 And he carried me away in the spirit to a great and high mountain , and shewed me that great city , the holy Jerusalem , descending out of heaven from God , 21 : 11 Having the glory of God : and her light was like unto a stone most precious , even like a jasper stone , clear as crystal ; 21 : 12 And had a wall great and high , and had twelve gates , and at the gates twelve angels , and names written thereon , which are the names of the twelve tribes of the children of Israel : 21 : 13 On the east three gates ; on the north three gates ; on the south three gates ; and on the west three gates .
+[10, PARA#545, SENT#1]
+25 : 25 And the first came out red , all over like an hairy garment ; and they called his name Esau .
+[10, PARA#14500, SENT#1]
+14 : 19 But thou art cast out of thy grave like an abominable branch , and as the raiment of those that are slain , thrust through with a sword , that go down to the stones of the pit ; as a carcase trodden under feet .
+[10, PARA#14530, SENT#1]
+16 : 11 Wherefore my bowels shall sound like an harp for Moab , and mine inward parts for Kirharesh .
+[10, PARA#15322, SENT#1]
+66 : 14 And when ye see this , your heart shall rejoice , and your bones shall flourish like an herb : and the hand of the LORD shall be known toward his servants , and his indignation toward his enemies .
+[10, PARA#16405, SENT#1]
+2 : 4 He hath bent his bow like an enemy : he stood with his right hand as an adversary , and slew all that were pleasant to the eye in the tabernacle of the daughter of Zion : he poured out his fury like fire .
+[10, PARA#16508, SENT#1]
+5 : 10 Our skin was black like an oven because of the terrible famine .
+[10, PARA#17935, SENT#1]
+7 : 6 For they have made ready their heart like an oven , whiles they lie in wait : their baker sleepeth all the night ; in the morning it burneth as a flaming fire .
+[10, PARA#1833, SENT#1]
+26 : 4 And thou shalt make loops of blue upon the edge of the one curtain from the selvedge in the coupling ; and likewise shalt thou make in the uttermost edge of another curtain , in the coupling of the second .
+[10, PARA#1873, SENT#1]
+27 : 11 And likewise for the north side in length there shall be hangings of an hundred cubits long , and his twenty pillars and their twenty sockets of brass ; the hooks of the pillars and their fillets of silver .
+[10, PARA#2102, SENT#1]
+36 : 11 And he made loops of blue on the edge of one curtain from the selvedge in the coupling : likewise he made in the uttermost side of another curtain , in the coupling of the second .
+[10, PARA#4047, SENT#2]
+even so will I do likewise .
+[10, PARA#4088, SENT#2]
+And also unto thy maidservant thou shalt do likewise .
+[10, PARA#4179, SENT#1]
+22 : 3 In like manner shalt thou do with his ass ; and so shalt thou do with his raiment ; and with all lost thing of thy brother ' s , which he hath lost , and thou hast found , shalt thou do likewise : thou mayest not hide thyself .
+[10, PARA#4891, SENT#1]
+1 : 3 And Judah said unto Simeon his brother , Come up with me into my lot , that we may fight against the Canaanites ; and I likewise will go with thee into thy lot .
+[10, PARA#5053, SENT#1]
+7 : 5 So he brought down the people unto the water : and the LORD said unto Gideon , Every one that lappeth of the water with his tongue , as a dog lappeth , him shalt thou set by himself ; likewise every one that boweth down upon his knees to drink .
+[10, PARA#5064, SENT#1]
+7 : 17 And he said unto them , Look on me , and do likewise : and , behold , when I come to the outside of the camp , it shall be that , as I do , so shall ye do .
+[10, PARA#5078, SENT#1]
+8 : 8 And he went up thence to Penuel , and spake unto them likewise : and the men of Penuel answered him as the men of Succoth had answered him .
+[10, PARA#5138, SENT#1]
+9 : 49 And all the people likewise cut down every man his bough , and followed Abimelech , and put them to the hold , and set the hold on fire upon them ; so that all the men of the tower of Shechem died also , about a thousand men and women .
+[10, PARA#5956, SENT#1]
+19 : 21 And when it was told Saul , he sent other messengers , and they prophesied likewise .
+[10, PARA#6193, SENT#1]
+31 : 5 And when his armourbearer saw that Saul was dead , he fell likewise upon his sword , and died with him .
+[10, PARA#6213, SENT#1]
+1 : 11 Then David took hold on his clothes , and rent them ; and likewise all the men that were with him : 1 : 12 And they mourned , and wept , and fasted until even , for Saul , and for Jonathan his son , and for the people of the LORD , and for the house of Israel ; because they were fallen by the sword .
+[10, PARA#6565, SENT#1]
+17 : 5 Then said Absalom , Call now Hushai the Archite also , and let us hear likewise what he saith .
+[10, PARA#7089, SENT#1]
+11 : 8 And likewise did he for all his strange wives , which burnt incense and sacrificed unto their gods .
+[10, PARA#8321, SENT#1]
+10 : 5 And when his armourbearer saw that Saul was dead , he fell likewise on the sword , and died .
+[10, PARA#8507, SENT#1]
+19 : 15 And when the children of Ammon saw that the Syrians were fled , they likewise fled before Abishai his brother , and entered into the city .
+[10, PARA#8588, SENT#1]
+23 : 27 For by the last words of David the Levites were numbered from twenty years old and above : 23 : 28 Because their office was to wait on the sons of Aaron for the service of the house of the LORD , in the courts , and in the chambers , and in the purifying of all holy things , and the work of the service of the house of God ; 23 : 29 Both for the shewbread , and for the fine flour for meat offering , and for the unleavened cakes , and for that which is baked in the pan , and for that which is fried , and for all manner of measure and size ; 23 : 30 And to stand every morning to thank and praise the LORD , and likewise at even : 23 : 31 And to offer all burnt sacrifices unto the LORD in the sabbaths , in the new moons , and on the set feasts , by number , according to the order commanded unto them , continually before the LORD : 23 : 32 And that they should keep the charge of the tabernacle of the congregation , and the charge of the holy place , and the charge of the sons of Aaron their brethren , in the service of the house of the LORD .
+[10, PARA#8608, SENT#1]
+24 : 31 These likewise cast lots over against their brethren the sons of Aaron in the presence of David the king , and Zadok , and Ahimelech , and the chief of the fathers of the priests and Levites , even the principal fathers over against their younger brethren .
+[10, PARA#8648, SENT#1]
+27 : 4 And over the course of the second month was Dodai an Ahohite , and of his course was Mikloth also the ruler : in his course likewise were twenty and four thousand .
+[10, PARA#8675, SENT#1]
+28 : 16 And by weight he gave gold for the tables of shewbread , for every table ; and likewise silver for the tables of silver : 28 : 17 Also pure gold for the fleshhooks , and the bowls , and the cups : and for the golden basons he gave gold by weight for every bason ; and likewise silver by weight for every bason of silver : 28 : 18 And for the altar of incense refined gold by weight ; and gold for the pattern of the chariot of the cherubims , that spread out their wings , and covered the ark of the covenant of the LORD .
+[10, PARA#8698, SENT#1]
+29 : 24 And all the princes , and the mighty men , and all the sons likewise of king David , submitted themselves unto Solomon the king .
+[10, PARA#8744, SENT#1]
+3 : 11 And the wings of the cherubims were twenty cubits long : one wing of the one cherub was five cubits , reaching to the wall of the house : and the other wing was likewise five cubits , reaching to the wing of the other cherub .
+[10, PARA#9225, SENT#1]
+29 : 22 So they killed the bullocks , and the priests received the blood , and sprinkled it on the altar : likewise , when they had killed the rams , they sprinkled the blood upon the altar : they killed also the lambs , and they sprinkled the blood upon the altar .
+[10, PARA#9692, SENT#2]
+5 : 10 I likewise , and my brethren , and my servants , might exact of them money and corn : I pray you , let us leave off this usury .
+[10, PARA#9956, SENT#2]
+4 : 15 Then Esther bade them return Mordecai this answer , 4 : 16 Go , gather together all the Jews that are present in Shushan , and fast ye for me , and neither eat nor drink three days , night or day : I also and my maidens will fast likewise ; and so will I go in unto the king , which is not according to the law : and if I perish , I perish .
+[10, PARA#10536, SENT#1]
+31 : 38 If my land cry against me , or that the furrows likewise thereof complain ; 31 : 39 If I have eaten the fruits thereof without money , or have caused the owners thereof to lose their life : 31 : 40 Let thistles grow instead of wheat , and cockle instead of barley .
+[10, PARA#10649, SENT#1]
+37 : 6 For he saith to the snow , Be thou on the earth ; likewise to the small rain , and to the great rain of his strength .
+[10, PARA#11470, SENT#1]
+49 : 10 For he seeth that wise men die , likewise the fool and the brutish person perish , and leave their wealth to others .
+[10, PARA#11527, SENT#1]
+52 : 5 God shall likewise destroy thee for ever , he shall take thee away , and pluck thee out of thy dwelling place , and root thee out of the land of the living .
+[10, PARA#14108, SENT#1]
+7 : 21 Also take no heed unto all words that are spoken ; lest thou hear thy servant curse thee : 7 : 22 For oftentimes also thine own heart knoweth that thou thyself likewise hast cursed others .
+[10, PARA#14752, SENT#1]
+30 : 24 The oxen likewise and the young asses that ear the ground shall eat clean provender , which hath been winnowed with the shovel and with the fan .
+[10, PARA#17312, SENT#1]
+40 : 16 And there were narrow windows to the little chambers , and to their posts within the gate round about , and likewise to the arches : and windows were round about inward : and upon each post were palm trees .
+[10, PARA#18357, SENT#1]
+1 : 12 Thus saith the LORD ; Though they be quiet , and likewise many , yet thus shall they be cut down , when he shall pass through .
+[10, PARA#19180, SENT#1]
+18 : 35 So likewise shall my heavenly Father do also unto you , if ye from your hearts forgive not every one his brother their trespasses .
+[10, PARA#19204, SENT#1]
+20 : 5 Again he went out about the sixth and ninth hour , and did likewise .
+[10, PARA#19208, SENT#1]
+20 : 10 But when the first came , they supposed that they should have received more ; and they likewise received every man a penny .
+[10, PARA#19244, SENT#1]
+21 : 30 And he came to the second , and said likewise .
+[10, PARA#19249, SENT#1]
+21 : 36 Again , he sent other servants more than the first : and they did unto them likewise .
+[10, PARA#19340, SENT#1]
+24 : 32 Now learn a parable of the fig tree ; When his branch is yet tender , and putteth forth leaves , ye know that summer is nigh : 24 : 33 So likewise ye , when ye shall see all these things , know that it is near , even at the doors .
+[10, PARA#19369, SENT#1]
+25 : 17 And likewise he that had received two , he also gained other two .
+[10, PARA#19604, SENT#1]
+4 : 16 And these are they likewise which are sown on stony ground ; who , when they have heard the word , immediately receive it with gladness ; 4 : 17 And have no root in themselves , and so endure but for a time : afterward , when affliction or persecution ariseth for the word ' s sake , immediately they are offended .
+[10, PARA#19880, SENT#1]
+12 : 21 And the second took her , and died , neither left he any seed : and the third likewise .
+[10, PARA#20119, SENT#1]
+2 : 38 And she coming in that instant gave thanks likewise unto the Lord , and spake of him to all them that looked for redemption in Jerusalem .
+[10, PARA#20138, SENT#2]
+3 : 11 He answereth and saith unto them , He that hath two coats , let him impart to him that hath none ; and he that hath meat , let him do likewise .
+[10, PARA#20140, SENT#1]
+3 : 14 And the soldiers likewise demanded of him , saying , And what shall we do ?
+[10, PARA#20208, SENT#1]
+5 : 33 And they said unto him , Why do the disciples of John fast often , and make prayers , and likewise the disciples of the Pharisees ; but thine eat and drink ?
+[10, PARA#20234, SENT#1]
+6 : 31 And as ye would that men should do to you , do ye also to them likewise .
+[10, PARA#20416, SENT#1]
+10 : 32 And likewise a Levite , when he was at the place , came and looked on him , and passed by on the other side .
+[10, PARA#20419, SENT#3]
+Then said Jesus unto him , Go , and do thou likewise .
+[10, PARA#20508, SENT#2]
+13 : 3 I tell you , Nay : but , except ye repent , ye shall all likewise perish .
+[10, PARA#20509, SENT#2]
+13 : 5 I tell you , Nay : but , except ye repent , ye shall all likewise perish .
+[10, PARA#20553, SENT#1]
+14 : 33 So likewise , whosoever he be of you that forsaketh not all that he hath , he cannot be my disciple .
+[10, PARA#20559, SENT#1]
+15 : 7 I say unto you , that likewise joy shall be in heaven over one sinner that repenteth , more than over ninety and nine just persons , which need no repentance .
+[10, PARA#20596, SENT#1]
+16 : 25 But Abraham said , Son , remember that thou in thy lifetime receivedst thy good things , and likewise Lazarus evil things : but now he is comforted , and thou art tormented .
+[10, PARA#20608, SENT#1]
+17 : 10 So likewise ye , when ye shall have done all those things which are commanded you , say , We are unprofitable servants : we have done that which was our duty to do .
+[10, PARA#20624, SENT#1]
+17 : 31 In that day , he which shall be upon the housetop , and his stuff in the house , let him not come down to take it away : and he that is in the field , let him likewise not return back .
+[10, PARA#20679, SENT#1]
+19 : 19 And he said likewise to him , Be thou also over five cities .
+[10, PARA#20750, SENT#1]
+21 : 31 So likewise ye , when ye see these things come to pass , know ye that the kingdom of God is nigh at hand .
+[10, PARA#20786, SENT#1]
+22 : 36 Then said he unto them , But now , he that hath a purse , let him take it , and likewise his scrip : and he that hath no sword , let him sell his garment , and buy one .
+[10, PARA#21046, SENT#1]
+5 : 19 Then answered Jesus and said unto them , Verily , verily , I say unto you , The Son can do nothing of himself , but what he seeth the Father do : for what things soever he doeth , these also doeth the Son likewise .
+[10, PARA#21079, SENT#1]
+6 : 11 And Jesus took the loaves ; and when he had given thanks , he distributed to the disciples , and the disciples to them that were set down ; and likewise of the fishes as much as they would .
+[10, PARA#21602, SENT#1]
+21 : 13 Jesus then cometh , and taketh bread , and giveth them , and fish likewise .
+[10, PARA#21676, SENT#1]
+3 : 24 Yea , and all the prophets from Samuel and those that follow after , as many as have spoken , have likewise foretold of these days .
+[10, PARA#22394, SENT#1]
+1 : 26 For this cause God gave them up unto vile affections : for even their women did change the natural use into that which is against nature : 1 : 27 And likewise also the men , leaving the natural use of the woman , burned in their lust one toward another ; men with men working that which is unseemly , and receiving in themselves that recompence of their error which was meet .
+[10, PARA#22759, SENT#1]
+7 : 3 Let the husband render unto the wife due benevolence : and likewise also the wife unto the husband .
+[10, PARA#22760, SENT#1]
+7 : 4 The wife hath not power of her own body , but the husband : and likewise also the husband hath not power of his own body , but the wife .
+[10, PARA#22776, SENT#1]
+7 : 22 For he that is called in the Lord , being a servant , is the Lord ' s freeman : likewise also he that is called , being free , is Christ ' s servant .
+[10, PARA#22904, SENT#4]
+14 : 9 So likewise ye , except ye utter by the tongue words easy to be understood , how shall it be known what is spoken ?
+[10, PARA#23201, SENT#1]
+2 : 13 And the other Jews dissembled likewise with him ; insomuch that Barnabas also was carried away with their dissimulation .
+[10, PARA#23484, SENT#1]
+4 : 16 And when this epistle is read among you , cause that it be read also in the church of the Laodiceans ; and that ye likewise read the epistle from Laodicea .
+[10, PARA#23728, SENT#1]
+2 : 3 The aged women likewise , that they be in behaviour as becometh holiness , not false accusers , not given to much wine , teachers of good things ; 2 : 4 That they may teach the young women to be sober , to love their husbands , to love their children , 2 : 5 To be discreet , chaste , keepers at home , good , obedient to their own husbands , that the word of God be not blasphemed .
+[10, PARA#23729, SENT#1]
+2 : 6 Young men likewise exhort to be sober minded .
+[10, PARA#23772, SENT#1]
+2 : 14 Forasmuch then as the children are partakers of flesh and blood , he also himself likewise took part of the same ; that through death he might destroy him that had the power of death , that is , the devil ; 2 : 15 And deliver them who through fear of death were all their lifetime subject to bondage .
+[10, PARA#24078, SENT#1]
+4 : 1 Forasmuch then as Christ hath suffered for us in the flesh , arm yourselves likewise with the same mind : for he that hath suffered in the flesh hath ceased from sin ; 4 : 2 That he no longer should live the rest of his time in the flesh to the lusts of men , but to the will of God .
+[10, PARA#24387, SENT#1]
+8 : 12 And the fourth angel sounded , and the third part of the sun was smitten , and the third part of the moon , and the third part of the stars ; so as the third part of them was darkened , and the day shone not for a third part of it , and the night likewise .
+[10, PARA#16481, SENT#1]
+4 : 2 The precious sons of Zion , comparable to fine gold , how are they esteemed as earthen pitchers , the work of the hands of the potter !
+[10, PARA#17376, SENT#1]
+42 : 11 And the way before them was like the appearance of the chambers which were toward the north , as long as they , and as broad as they : and all their goings out were both according to their fashions , and according to their doors .
+[10, PARA#1609, SENT#1]
+16 : 31 And the house of Israel called the name thereof Manna : and it was like coriander seed , white ; and the taste of it was like wafers made with honey .
+[10, PARA#1794, SENT#1]
+24 : 17 And the sight of the glory of the LORD was like devouring fire on the top of the mount in the eyes of the children of Israel .
+[10, PARA#5208, SENT#1]
+13 : 6 Then the woman came and told her husband , saying , A man of God came unto me , and his countenance was like the countenance of an angel of God , very terrible : but I asked him not whence he was , neither told he me his name : 13 : 7 But he said unto me , Behold , thou shalt conceive , and bear a son ; and now drink no wine nor strong drink , neither eat any unclean thing : for the child shall be a Nazarite to God from the womb to the day of his death .
+[10, PARA#6983, SENT#1]
+7 : 33 And the work of the wheels was like the work of a chariot wheel : their axletrees , and their naves , and their felloes , and their spokes , were all molten .
+[10, PARA#16525, SENT#1]
+1 : 7 And their feet were straight feet ; and the sole of their feet was like the sole of a calf ' s foot : and they sparkled like the colour of burnished brass .
+[10, PARA#16531, SENT#1]
+1 : 13 As for the likeness of the living creatures , their appearance was like burning coals of fire , and like the appearance of lamps : it went up and down among the living creatures ; and the fire was bright , and out of the fire went forth lightning .
+[10, PARA#16534, SENT#1]
+1 : 16 The appearance of the wheels and their work was like unto the colour of a beryl : and they four had one likeness : and their appearance and their work was as it were a wheel in the middle of a wheel .
+[10, PARA#17116, SENT#1]
+31 : 8 The cedars in the garden of God could not hide him : the fir trees were not like his boughs , and the chestnut trees were not like his branches ; nor any tree in the garden of God was like unto him in his beauty .
+[10, PARA#17299, SENT#1]
+40 : 3 And he brought me thither , and , behold , there was a man , whose appearance was like the appearance of brass , with a line of flax in his hand , and a measuring reed ; and he stood in the gate .
+[10, PARA#17710, SENT#1]
+7 : 9 I beheld till the thrones were cast down , and the Ancient of days did sit , whose garment was white as snow , and the hair of his head like the pure wool : his throne was like the fiery flame , and his wheels as burning fire .
+[10, PARA#17778, SENT#1]
+10 : 4 And in the four and twentieth day of the first month , as I was by the side of the great river , which is Hiddekel ; 10 : 5 Then I lifted up mine eyes , and looked , and behold a certain man clothed in linen , whose loins were girded with fine gold of Uphaz : 10 : 6 His body also was like the beryl , and his face as the appearance of lightning , and his eyes as lamps of fire , and his arms and his feet like in colour to polished brass , and the voice of his words like the voice of a multitude .
+[10, PARA#18104, SENT#1]
+2 : 9 Yet destroyed I the Amorite before them , whose height was like the height of the cedars , and he was strong as the oaks ; yet I destroyed his fruit from above , and his roots from beneath .
+[10, PARA#18214, SENT#1]
+1 : 4 But the LORD sent out a great wind into the sea , and there was a mighty tempest in the sea , so that the ship was like to be broken .
+[10, PARA#19497, SENT#1]
+28 : 3 His countenance was like lightning , and his raiment white as snow : 28 : 4 And for fear of him the keepers did shake , and became as dead men .
+[10, PARA#24448, SENT#1]
+13 : 2 And the beast which I saw was like unto a leopard , and his feet were as the feet of a bear , and his mouth as the mouth of a lion : and the dragon gave him his power , and his seat , and great authority .

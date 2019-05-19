@@ -1,7 +1,7 @@
 #changes the directory to the output directory
 cd $1
 #converts to utf-8 by removing the first 3 bytes
-for f in *; do
+for f in *.txt; do
     tail -c +4 "$f" > "${f%.txt}.nobom"
 done
 

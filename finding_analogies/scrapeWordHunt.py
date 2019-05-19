@@ -42,7 +42,7 @@ def write_analogies(book_id):
     book_id = str(book_id)
     txt_file_name = "book%s_analogies.txt" % book_id
     csv_file_name = "book%s_analogies.csv" % book_id
-    output_handler = open(out_dir + txt_file_name, "w", encoding="utf-8")
+    output_handler = open(out_dir  + txt_file_name, "w", encoding="utf-8")
 
     # Find the indices of all paragraphs that contain the patterns as listed in
     # analogy_string_list
@@ -71,7 +71,7 @@ def write_analogies(book_id):
                     writer.writerow({'name': id_tag, 'text': sentence})
     output_handler.close()
 
-# for i in range(11,101):
-#     write_analogies(i)
+for i in range(11,101):
+    write_analogies(i)
 
-write_analogies(10)
+#write_analogies(10)
