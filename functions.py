@@ -20,7 +20,7 @@ from collections import defaultdict
 import sys
 import json
 import operator
-from timeout import timeout
+from timeout_decorator import timeout
 import numpy as np
 import pandas as pd
 #------------------------
@@ -170,7 +170,7 @@ def explore_parser():
 
 # preprocess the data so it can be used by the classifiers
 def preprocess(samples, percent_test,seed, num_samples, caller= ''):
-    if caller == 'test_main_interface_output': 
+    if caller == 'test_main_interface_output':
         random.seed(seed)
     random.shuffle(samples)
     cutoff = int((1.0 - percent_test) * num_samples)
