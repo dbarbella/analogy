@@ -6,6 +6,7 @@ from sys import argv
 from subprocess import call, Popen
 import os
 from time import sleep
+from get_path import get_path
 
 """
 This is to scrap the all the English books on gutenberg.org as of 04/15/2019
@@ -62,7 +63,7 @@ if __name__=="__main__":
     Popen(["bash", "-c", "chmod +x make_dirs.sh"])
     call(["bash","./make_dirs.sh",output_dir])
     sleep(1)
-    #main()
-    #sleep(1)
-    #Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
-    #call(["bash","./text_cleaner.sh",output_dir])
+    main()
+    sleep(1)
+    Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
+    call(["bash","./text_cleaner.sh",output_dir])
