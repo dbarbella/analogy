@@ -29,6 +29,8 @@ NUMBER_OF_FILES = 50000
 book_dir = argv[1]
 #the second command line argument is the output directory
 out_dir = argv[2]
+if out_dir[-1] != "/":
+    out_dir = out_dir = "/"
 #converts text file to a list of lists where the outer list are paragraphs
 #and the inner list is sentences, split by words
 def text_to_paras(book_id):
@@ -69,9 +71,22 @@ def write_analogies(book_id):
                     output_handler.write(id_tag + "\n")
                     output_handler.write(sentence + "\n")
                     writer.writerow({'name': id_tag, 'text': sentence})
+    print(book_id + " worked.")
     output_handler.close()
 
-for i in range(11,101):
-    write_analogies(i)
+counter = 0
+i=100
+while counter < 500:
+    i+=1
+    try:
+        write_analogies(i)
+    except:
+        pass
+    counter += 1
+
+
+
+
+
 
 #write_analogies(10)

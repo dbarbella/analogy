@@ -59,7 +59,10 @@ def main():
 #before all the books are downloaded, which causes an error.
 #sleep fixes that.
 if __name__=="__main__":
-    main()
+    Popen(["bash", "-c", "chmod +x make_dirs.sh"])
+    call(["bash","./make_dirs.sh",output_dir])
     sleep(1)
-    Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
-    call(["bash","./text_cleaner.sh",output_dir])
+    #main()
+    #sleep(1)
+    #Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
+    #call(["bash","./text_cleaner.sh",output_dir])
