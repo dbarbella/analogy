@@ -12,7 +12,7 @@ from sklearn.feature_extraction.text import HashingVectorizer
 from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
 from sklearn.svm import NuSVC
-from sklearn.neural_network import MLPClassifier
+#from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import MultinomialNB
 import matplotlib.pyplot as plt
@@ -349,23 +349,23 @@ def classify(train_data, train_labels, test_data, test_labels, classifier_name, 
     return _classify(train_data, train_labels, test_data, test_labels, classifier_name, representation, extra)
 
 
-def get_classifier(name, extra):
-    if name == "svm":
-        if extra["sub_class"] == "" or extra["sub_class"] == "svc":
-            return SVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'], )
-        elif extra["sub_class"] == "linear":
-            return LinearSVC(C=extra['C'])
-        elif extra["sub_class"] == "nusvc":
-            return NuSVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'], decision_function_shape=extra['decision_function_shape'], degree=extra['degree'], nu=extra['nu'], tol=extra['tol'])
-    elif name == "neural":
-        return MLPClassifier(hidden_layer_sizes=extra['hidden_layer_sizes'], activation=extra['activation'], solver=extra['solver'], max_iter=extra['max_iter'], early_stopping=extra['early_stopping'], learning_rate=extra['learning_rate'])
-    elif name == "naive":
-        return MultinomialNB(alpha=extra['alpha'])
-    elif name == "max_ent":
-        return LogisticRegression(C=extra['C'], max_iter=extra['max_iter_log'], solver=extra['solver_log'])
-    else:
-        sys.exit("This classifier has not been implemented yet.")
-        return None
+# def get_classifier(name, extra):
+#     if name == "svm":
+#         if extra["sub_class"] == "" or extra["sub_class"] == "svc":
+#             return SVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'], )
+#         elif extra["sub_class"] == "linear":
+#             return LinearSVC(C=extra['C'])
+#         elif extra["sub_class"] == "nusvc":
+#             return NuSVC(kernel=extra['kernel'], max_iter=extra['max_iter_svc'], decision_function_shape=extra['decision_function_shape'], degree=extra['degree'], nu=extra['nu'], tol=extra['tol'])
+#     elif name == "neural":
+#         return MLPClassifier(hidden_layer_sizes=extra['hidden_layer_sizes'], activation=extra['activation'], solver=extra['solver'], max_iter=extra['max_iter'], early_stopping=extra['early_stopping'], learning_rate=extra['learning_rate'])
+#     elif name == "naive":
+#         return MultinomialNB(alpha=extra['alpha'])
+#     elif name == "max_ent":
+#         return LogisticRegression(C=extra['C'], max_iter=extra['max_iter_log'], solver=extra['solver_log'])
+#     else:
+#         sys.exit("This classifier has not been implemented yet.")
+#         return None
 
 def get_representation(train_data, test_data, representation, classifier, extra, train_labels, test_labels):
     """representation of data"""

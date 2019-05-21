@@ -74,15 +74,12 @@ def write_analogies(book_id):
     print(book_id + " worked.")
     output_handler.close()
 
-counter = 0
-i=100
-while counter < 500:
-    i+=1
+
+for i in range(5000):
     try:
         write_analogies(i)
     except:
         pass
-    counter += 1
 
 
 

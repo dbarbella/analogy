@@ -7,6 +7,7 @@ from subprocess import call, Popen
 import os
 from time import sleep
 from get_path import get_path
+from get_path import get_path
 
 """
 This is to scrap the all the English books on gutenberg.org as of 04/15/2019
@@ -19,6 +20,10 @@ output_dir = argv[1]
 NUM_BOOKS = 59510
 URL = "https://www.gutenberg.org/ebooks/"
 
+begin = argv[2]
+end = argv[3]
+if end == "all"
+    end = NUM_BOOKS
 
 
 #each english book is a url "https://www.gutenberg.org/ebooks/"
@@ -33,6 +38,7 @@ def scrap_book_num(book_num):
        web_html = web_request.text
        soup = BeautifulSoup(web_html,"html.parser")
        links = soup.find_all('a',class_="link")
+       out_path = get_path(book_num, output_dir)
        for link in links:
          if "Text" in link.text:
            get_book=link.get('href')
@@ -52,8 +58,9 @@ def scrap_book_num(book_num):
 #running the following line on your command line should fix it:
 #export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 #if that doesn't fix it, you can make a regular loop that downloads each book
+
 def main():
-    for i in range(1,NUM_BOOKS,5):
+    for i in range(begin,end,5):
       with Pool(5) as p:
           action = p.map(scrap_book_num, [x for x in range(i,i+5)])
 #sometimes one thread finishes late, meaning the next lines are executed
