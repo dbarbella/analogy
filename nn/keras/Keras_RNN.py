@@ -92,7 +92,6 @@ for word, i in word_index.items():
             embedding_matrix[i] = embedding_vector
 
 
-
 from keras.models import Sequential
 from keras.layers import Embedding, Flatten, Dense, LSTM
 
