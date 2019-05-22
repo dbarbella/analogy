@@ -7,8 +7,11 @@ from boyer_moore import find_any_patterns
 from analogy_strings import analogy_string_list
 from utils import para_to_pretty
 from utils import sent_to_pretty
-from sentence_parser import *
+from get_path import get_path 
+from sentence_parser import get_analogy_sentence
+from subprocess import call, Popen
 from personal import root as root
+from time import sleep
 from sys import argv
 import nltk
 import csv
@@ -29,23 +32,28 @@ NUMBER_OF_FILES = 50000
 book_dir = argv[1]
 #the second command line argument is the output directory
 out_dir = argv[2]
+
 if out_dir[-1] != "/":
-    out_dir = out_dir = "/"
+    out_dir +=  "/"
+if book_dir[-1] != "/":
+    book_dir +=  "/"
+    
 #converts text file to a list of lists where the outer list are paragraphs
 #and the inner list is sentences, split by words
 def text_to_paras(book_id):
     #put in directory of the .txt files
-    corpus = PlaintextCorpusReader(book_dir, '.*')
+    book_path = get_path(book_id, book_dir)
+    corpus = PlaintextCorpusReader(book_path, '.*')
     paragraphs = corpus.paras('book%s.txt' % book_id)
     return paragraphs
 
 def write_analogies(book_id):
-
+    
+    out_path = get_path(book_id, out_dir)
     book_id = str(book_id)
-    txt_file_name = "book%s_analogies.txt" % book_id
-    csv_file_name = "book%s_analogies.csv" % book_id
-    output_handler = open(out_dir  + txt_file_name, "w", encoding="utf-8")
-
+    txt_file_name = out_path 
+    csv_file_name = out_path
+    output_handler = open(txt_file_name + "book%s_analogies.txt" % book_id, "w", encoding="utf-8")
     # Find the indices of all paragraphs that contain the patterns as listed in
     # analogy_string_list
     paras = text_to_paras(book_id)
@@ -53,7 +61,8 @@ def write_analogies(book_id):
     ids = {}            # save sentences' ids in hash table to prevent duplicates.
 
     # Extract the exact sentences and write them to csv and txt files.
-    with open(out_dir + csv_file_name, 'w', encoding="utf-8") as csvfile:
+    with open(csv_file_name + "book%s_analogies.csv" % book_id, 'w', encoding="utf-8") as csvfile:
+
         fieldnames = ['name', 'text']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
         writer.writeheader()
@@ -71,15 +80,21 @@ def write_analogies(book_id):
                     output_handler.write(id_tag + "\n")
                     output_handler.write(sentence + "\n")
                     writer.writerow({'name': id_tag, 'text': sentence})
-    print(book_id + " worked.")
     output_handler.close()
 
 
-for i in range(5000):
-    try:
-        write_analogies(i)
-    except:
-        pass
+if __name__ == "__main__":
+    #uncomment these if it is the first time running the code wuth an output directory
+    #Popen(["bash", "-c", "chmod +x make_dirs.sh"])
+    #call(["bash","./make_dirs.sh",out_dir])
+    #sleep(1)  
+    for i in range(1,10000):
+        try:
+            write_analogies(i)
+            print(("book%s" % i) + " worked")
+        except Exception as e:
+            print(e)
+            pass 
 
 
 

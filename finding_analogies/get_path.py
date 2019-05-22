@@ -12,7 +12,7 @@ def get_path(book_num,out_dir):
       fst_path = "0-10000/"
   else:
     fst = int(book_num[0]) * 10000
-    fst_path = ("%s-%s") % (fst, fst + _nines(num_len-1)) + "/"
+    fst_path = ("%s-%s") % (fst, str(fst + 10000) + "/")
   out_path = out_dir + fst_path
 
   if num_len < 4:
