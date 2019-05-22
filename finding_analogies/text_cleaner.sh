@@ -1,29 +1,27 @@
 #changes the directory to the output directory
 cd $1
 #converts to utf-8 by removing the first 3 bytes
-echo $pwd
+
+# for f in ./*.txt; do
+#     tail -c +4 "$f" > "${f%.txt}.nobom"
+# done
 
 
 for f in ./*.txt; do
-    tail -c +4 "$f" > "${f%.txt}.nobom"
+    sed '1s/^\xEF\xBB\xBF//' < "$f" > "${f%.txt}.nobom"
 done
 
-for f in ./*.nobom; do
-    rm $f
-done
+
 #removes .txt files
 find . -name "*.txt" -maxdepth 1 -type f -print0 | xargs -0 /bin/rm -f
 
 #changes the .nobom files to .txt files
-for f in ./*.nobom.txt; do
+for f in ./*.nobom; do
     mv -- "$f" "${f%.nobom}.txt"
 done
 
 
-for f in ./*_no_bom.txt; do
-    mv -- "$f" "${f%_no_bom.txt}.txt"
-done
-
+ 
 #removes gutenber/copy right related lines from the files
 #I think this removes some files entirely
 #fixin that would require changing this lines I think

@@ -16,14 +16,21 @@ The output directory should be an argument in the command line
 """
 
 output_dir = argv[1]
+if output_dir[-1] != "/":
+    output_dir += "/"
+    
+ 
 #the number of books changes over time
 NUM_BOOKS = 59510
 URL = "https://www.gutenberg.org/ebooks/"
 
-begin = argv[2]
+begin = int(argv[2])
 end = argv[3]
-if end == "all"
+
+if end == "all":
     end = NUM_BOOKS
+else:
+    end = int(end)
 
 
 #each english book is a url "https://www.gutenberg.org/ebooks/"
@@ -36,7 +43,10 @@ def scrap_book_num(book_num):
        book_url = URL + book_num
        web_request = requests.get(book_url)
        web_html = web_request.text
-       soup = BeautifulSoup(web_html,"html.parser")
+       try:
+           soup = BeautifulSoup(web_html,"html.parser")
+       except:
+            pass
        links = soup.find_all('a',class_="link")
        out_path = get_path(book_num, output_dir)
        for link in links:
@@ -45,11 +55,21 @@ def scrap_book_num(book_num):
            request = requests.get("https:"+get_book)
            #../is the parent directory, you can change the following line to
            #change output destination
-           with open(output_dir+"book"+book_num+".txt",'wb') as open_file:
+           with open(out_path+"book"+book_num+".txt",'wb') as open_file:
                for chunk in request.iter_content(10000):
                     open_file.write(chunk)
+           print("book%s" % book_num + "worked")
            open_file.close()
+           
 
+def clean(begin,end):
+    Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
+    for i in range(begin,end+1,100):
+        clean_path = get_path(i,output_dir)
+        call(["bash","./text_cleaner.sh",clean_path])
+        print("cleaned" + clean_path)
+
+        
 
 #I am multithreading the scrapping to make it run faster, as it is very slow
 #this might take quite a bit of cpu power
@@ -63,6 +83,8 @@ def main():
     for i in range(begin,end,5):
       with Pool(5) as p:
           action = p.map(scrap_book_num, [x for x in range(i,i+5)])
+            
+ 
 #sometimes one thread finishes late, meaning the next lines are executed
 #before all the books are downloaded, which causes an error.
 #sleep fixes that.
@@ -72,5 +94,4 @@ if __name__=="__main__":
     sleep(1)
     main()
     sleep(1)
-    Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
-    call(["bash","./text_cleaner.sh",output_dir])
+    clean(begin,end)
