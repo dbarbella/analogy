@@ -25,10 +25,12 @@ NUM_BOOKS = 59510
 URL = "https://www.gutenberg.org/ebooks/"
 
 begin = int(argv[2])
-end = int(argv[3])
+end = argv[3]
 
 if end == "all":
     end = NUM_BOOKS
+else:
+    end = int(end)
 
 
 #each english book is a url "https://www.gutenberg.org/ebooks/"
@@ -41,7 +43,10 @@ def scrap_book_num(book_num):
        book_url = URL + book_num
        web_request = requests.get(book_url)
        web_html = web_request.text
-       soup = BeautifulSoup(web_html,"html.parser")
+       try:
+           soup = BeautifulSoup(web_html,"html.parser")
+       except:
+            pass
        links = soup.find_all('a',class_="link")
        out_path = get_path(book_num, output_dir)
        for link in links:
@@ -50,10 +55,12 @@ def scrap_book_num(book_num):
            request = requests.get("https:"+get_book)
            #../is the parent directory, you can change the following line to
            #change output destination
-           with open(out_path+"book"+book_num+".txt",'w', encoding="utf-8") as open_file:
+           with open(out_path+"book"+book_num+".txt",'wb') as open_file:
                for chunk in request.iter_content(10000):
                     open_file.write(chunk)
+           print("book%s" % book_num + "worked")
            open_file.close()
+           
 
 def clean(begin,end):
     Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
@@ -82,9 +89,9 @@ def main():
 #before all the books are downloaded, which causes an error.
 #sleep fixes that.
 if __name__=="__main__":
-    #Popen(["bash", "-c", "chmod +x make_dirs.sh"])
-    #call(["bash","./make_dirs.sh",output_dir])
-    #sleep(1)
-    #main()
-    #sleep(1)
+    Popen(["bash", "-c", "chmod +x make_dirs.sh"])
+    call(["bash","./make_dirs.sh",output_dir])
+    sleep(1)
+    main()
+    sleep(1)
     clean(begin,end)

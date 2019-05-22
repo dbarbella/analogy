@@ -33,6 +33,10 @@ book_dir = argv[1]
 #the second command line argument is the output directory
 out_dir = argv[2]
 
+begin = int(argv[3])
+
+end = int(argv[4])
+
 if out_dir[-1] != "/":
     out_dir +=  "/"
 if book_dir[-1] != "/":
@@ -88,7 +92,7 @@ if __name__ == "__main__":
     #Popen(["bash", "-c", "chmod +x make_dirs.sh"])
     #call(["bash","./make_dirs.sh",out_dir])
     #sleep(1)  
-    for i in range(1,10000):
+    for i in range(begin, end):
         try:
             write_analogies(i)
             print(("book%s" % i) + " worked")
