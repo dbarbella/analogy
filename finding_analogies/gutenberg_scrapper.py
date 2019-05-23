@@ -71,7 +71,7 @@ def clean(begin,end):
 
         
 
-#I am multithreading the scrapping to make it run faster, as it is very slow
+#This code is multithreading the scrapping to make it run faster, as it is very slow
 #this might take quite a bit of cpu power
 #there's a bug on macOS Sierra or higher that has not been fixed as of
 #04/15/2019, that doesn't allow python to fork sometimes.
@@ -79,10 +79,31 @@ def clean(begin,end):
 #export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 #if that doesn't fix it, you can make a regular loop that downloads each book
 
+# def main():
+#     for i in range(begin,end,5):
+#       with Pool(5) as p:
+#           action = p.map(scrap_book_num, [x for x in range(i,i+5)])
+
+#this is without multithread. If the machine is too fast, multithreading can break request
+# def main():
+#     for i in range(begin, end):
+#         sleep(0.5)
+#         scrap_book_num(i)
+#     return
+
+
 def main():
-    for i in range(begin,end,5):
-      with Pool(5) as p:
-          action = p.map(scrap_book_num, [x for x in range(i,i+5)])
+    i = begin
+    while i <= end:
+        try:
+            scrap_book_num(i)
+            i+=1
+        except:
+            sleep(3)
+            scrap_book_num(i)
+            
+        
+    
             
  
 #sometimes one thread finishes late, meaning the next lines are executed
