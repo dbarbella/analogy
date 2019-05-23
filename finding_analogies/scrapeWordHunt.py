@@ -88,7 +88,7 @@ def write_analogies(book_id):
 
 
 if __name__ == "__main__":
-    #uncomment these if it is the first time running the code wuth an output directory
+    #uncomment these if it is the first time running the code with an output directory
     #Popen(["bash", "-c", "chmod +x make_dirs.sh"])
     #call(["bash","./make_dirs.sh",out_dir])
     #sleep(1)  
