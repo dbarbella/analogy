@@ -3,3 +3,6 @@
 /glove/
 .DS_Store
 0-10000/
+nn/pytorch/__pycache__/
+nn/pytorch/data/
+nn/pytorch/model.pt
