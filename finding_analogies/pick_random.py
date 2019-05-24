@@ -22,8 +22,9 @@ NUM_OF_BOOKS = 59510
 
 if out_path[-1] != "/":
     out_path += "/"
+if in_path[-1] != "/":
+    in_path += "/"
 
-    
 def like_is_verb(sentence):
   toks = word_tokenize(sentence)
   word_pos_pairs = pos_tag(toks)
@@ -48,7 +49,7 @@ def get_random_analogy():
     #if the randomly generated path does not exist
     try:
         data = pd.read_csv(analogies)
-    except:
+    except:        
         return get_random_analogy()
     #if file selected has no analogies in it, call the function again to pick a different analogy
     if len(data)  == 0:
@@ -81,7 +82,8 @@ def write_random_analogies(num, out_name):
     frame_analogies.to_csv(out_name, encoding='utf-8', index=False)
     
 def main():
-    last_csv_file = len(fnmatch.filter(os.listdir(out_path), '*.csv'))
+    last_csv_file = len(fnmatch.filter(os.listdir(out_path), '*.csv')) + 1
+    print(last_csv_file)
     begin = last_csv_file
     end = last_csv_file + NUM_OF_FILES
     for i in range(begin, end):
@@ -89,6 +91,7 @@ def main():
         write_random_analogies(NUM_PER_FILE, out_name)
     
 
+    
 main()
 #get_random_analogy()
 
