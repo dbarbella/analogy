@@ -31,7 +31,7 @@ def save_doc(lines, filename):
 	file.write(data)
 	file.close()
  
-# load document
+# load corpus
 in_filename = 'sentences.csv'
 doc = load_doc(in_filename)
 print(doc[:200])
@@ -43,7 +43,7 @@ print('Total Tokens: %d' % len(tokens))
 print('Unique Tokens: %d' % len(set(tokens)))
  
 # organize into sequences of tokens
-length = 50 + 1
+length = 51
 sequences = list()
 for i in range(length, len(tokens)):
 	# select sequence of tokens
@@ -57,9 +57,6 @@ print('Total Sequences: %d' % len(sequences))
 # save sequences to file
 out_filename = 'sequences.txt'
 save_doc(sequences, out_filename)
-
-
-# In[24]:
 
 
 from numpy import array

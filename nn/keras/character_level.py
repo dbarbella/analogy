@@ -1,9 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[8]:
-
-
+# read csv function
 import csv
 def readCSV(fileName,r):
     sent = []
@@ -15,7 +11,7 @@ def readCSV(fileName,r):
     return sent
 
 
-# In[9]:
+# Using our corpus
 
 
 neg = readCSV('./verified_non_analogies.csv',1)
@@ -25,7 +21,7 @@ labels = [1]*len(pos) + [0] * len(neg)
 texts = pos + neg
 
 
-# In[10]:
+# Import corpus from amazon
 
 
 import keras
@@ -36,33 +32,32 @@ str_pos = open(path).read().lower()
 print('Corpus length:', len(str_pos))
 
 
-# In[11]:
+# preprocess
 
 
 import numpy as np
-maxlen = 15
-step = 3
-sentences = []
-next_chars = []
+maxlen = 15 # we allow 15 characters per sequence
+step = 3 # how many characters we skip after each sequence
+sentences = [] # store samples
+next_chars = []  
 for i in range(0, len(str_pos) - maxlen, step):
     sentences.append(str_pos[i: i+maxlen])
     next_chars.append(str_pos[i+maxlen])
 print("Number of sequences", len(sentences))
 
-chars = sorted(list(set(str_pos)))
-print("Unique characters, ", len(chars))
-char_indices = dict((char,  chars.index(char)) for char in chars)
-print(char_indices)
+chars = sorted(list(set(str_pos))) # all the characters in the corpus
+print("Unique characters, ", len(chars)) 
+char_indices = dict((char,  chars.index(char)) for char in chars) # a hashmap with character and its index in the "vocab"
 print("Vectorization...")
 x = np.zeros((len(sentences), maxlen, len(chars)), dtype = np.bool)
 y = np.zeros((len(sentences), len(chars)), dtype = np.bool)
-for i, sentence in enumerate(sentences):
+for i, sentence in enumerate(sentences): # initialize the input and output
     for t, char in enumerate(sentence):
         x[i,t,char_indices[char]] = 1
     y[i, char_indices[next_chars[i]]] = 1
 
 
-# In[12]:
+# build model
 
 
 from keras.layers import LSTM, Dense
@@ -75,7 +70,7 @@ optimizer = RMSprop(lr=0.01)
 model.compile(loss='categorical_crossentropy', optimizer=optimizer)
 
 
-# In[13]:
+# sampling function
 
 
 def sample(preds, temperature=1.0):
@@ -87,7 +82,7 @@ def sample(preds, temperature=1.0):
     return np.argmax(probas)
 
 
-# In[14]:
+# train and generate
 
 
 import random
@@ -96,7 +91,7 @@ for epoch in range(1, 100):
     print('epoch', epoch)
     model.fit(x, y, batch_size=128, epochs=1)
     start_index = random.randint(0, len(str_pos) - maxlen - 1)
-    generated_text = str_pos[start_index: start_index + maxlen]
+    generated_text = str_pos[start_index: start_index + maxlen] #given a sample text, predict a sequence.
     print('\n--- Generating with seed: "' + generated_text + '"')
     for temperature in [0.5,1.0, 1.2]:
         print('\n------ temperature:', temperature)
@@ -111,6 +106,3 @@ for epoch in range(1, 100):
             generated_text += next_char
             generated_text = generated_text[1:]
             sys.stdout.write(next_char)
-
-
-# In[2]:

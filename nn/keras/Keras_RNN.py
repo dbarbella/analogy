@@ -39,16 +39,16 @@ sequences = tokenizer.texts_to_sequences(texts)
 word_index = tokenizer.word_index
 print("Found {} unique tokens".format(len(word_index)))
 
-data = pad_sequences(sequences, maxlen = maxlen)
+data = pad_sequences(sequences, maxlen = maxlen) # pad sequences to a fixed length
 labels = np.asarray(labels)
 
 indices = np.arange(data.shape[0])
 
-np.random.shuffle(indices)
+np.random.shuffle(indices) #shuffle the sentences
 
 data = data[indices]
 labels = labels[indices]
-
+# train test split
 train_data = data[:len(data)-test]
 test_data = data[len(data)-test:]
 train_targets = labels[:len(data) - test]
