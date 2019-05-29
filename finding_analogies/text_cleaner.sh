@@ -1,18 +1,19 @@
+#this code is for GNU, and running it on other UNIX based systems may require some tewaking. It will run on tools/hopper.
+
 #changes the directory to the output directory
 cd $1
-#converts to utf-8 by removing the first 3 bytes
-
-# for f in ./*.txt; do
-#     tail -c +4 "$f" > "${f%.txt}.nobom"
-# done
 
 
+#this regular expression is a match for the first three bytes of a BOM text file.
+#By removing those (if they exist), the file is converted to a utf-8 file.
+#the reason this is not done in place is convenience and enabling it to run on different machines
+#the additional cost of this is very small
 for f in ./*.txt; do
     sed '1s/^\xEF\xBB\xBF//' < "$f" > "${f%.txt}.nobom"
 done
 
 
-#removes .txt files
+#removes the .txt files
 find . -name "*.txt" -maxdepth 1 -type f -print0 | xargs -0 /bin/rm -f
 
 #changes the .nobom files to .txt files
@@ -23,10 +24,9 @@ done
 
  
 #removes gutenber/copy right related lines from the files
-#I think this removes some files entirely
-#fixin that would require changing this lines I think
-#to run this in mac, add ['.bak'] between -i and the regular expression.
-#then uncomment the comment after this loop
+#to run this in macOS, add ['.bak'] between -i and the regular expression in the then statement.
+#then uncomment the comment starting with find . -name '*bak" after this loop
+
 for i in ./book*; do
   if grep -q "START OF THIS PROJECT GUTENBERG\|END OF THIS PROJECT GUTENBERG" $i
   then

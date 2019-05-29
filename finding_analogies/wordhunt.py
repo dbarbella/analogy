@@ -8,6 +8,10 @@ from personal import root as root
 from sentence_parser import *
 import csv
 
+"""
+This script is an alternative/demo to scrapeWordHunt.py, but is not
+used in this folder.
+"""
 SOURCE_NAME = "GUT"
 
 txt_file_name = "analogy_sentences_GUT.txt"

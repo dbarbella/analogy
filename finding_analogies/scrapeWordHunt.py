@@ -10,19 +10,19 @@ from utils import sent_to_pretty
 from get_path import get_path 
 from sentence_parser import get_analogy_sentence
 from subprocess import call, Popen
-from personal import root as root
 from time import sleep
 from sys import argv
 import nltk
 import csv
 
 
-
 """
-this is wordHunt.py adapted for the output files of gutenberg_scrapper.py
-It will give a csv of analogies, with what file and where in the file
+this is wordHunt.py adapted for the output files and directory hierarchy of gutenberg_scrapper.py
+It will give both .txt and a csv of analogies, with what file and where in the file
 the analogies are in.
-The output will be stored in analogy/finding_analogies/extractions
+The output will be stored in the indicated output directory. The program willc reate subdirectories for the texts.
+It's ran as:
+python scrapeWordHunt.py input_dir output_dir begin_num end_num
 """
 
 SOURCE_NAME = "GUT"
@@ -58,11 +58,10 @@ def write_analogies(book_id):
     txt_file_name = out_path 
     csv_file_name = out_path
     output_handler = open(txt_file_name + "book%s_analogies.txt" % book_id, "w", encoding="utf-8")
-    # Find the indices of all paragraphs that contain the patterns as listed in
-    # analogy_string_list
+    # Find the indices of all paragraphs that contain the patterns as listed in analogy_string_list
     paras = text_to_paras(book_id)
     para_indices = find_any_patterns(paras, analogy_string_list)
-    ids = {}            # save sentences' ids in hash table to prevent duplicates.
+    ids = {}      # save sentences' ids in hash table to prevent duplicates.
 
     # Extract the exact sentences and write them to csv and txt files.
     with open(csv_file_name + "book%s_analogies.csv" % book_id, 'w', encoding="utf-8") as csvfile:
@@ -88,11 +87,12 @@ def write_analogies(book_id):
 
 
 if __name__ == "__main__":
-    #uncomment these if it is the first time running the code with an output directory
+    #uncomment these if it is the first time running the code with a certain output directory
     #Popen(["bash", "-c", "chmod +x make_dirs.sh"])
     #call(["bash","./make_dirs.sh",out_dir])
     #sleep(1)  
     for i in range(begin, end):
+        #the book might not exist, which will raise an error.
         try:
             write_analogies(i)
             print(("book%s" % i) + " worked")
@@ -100,9 +100,3 @@ if __name__ == "__main__":
             print(e)
             pass 
 
-
-
-
-
-
-#write_analogies(10)

@@ -1,7 +1,10 @@
+#creates the right path for a book to the output path using an output directory and a book id
+#for example, if the directory ius usr/output/directory and the book is book2345,
+#the output path will be usr/output/directory/1-20000/22000-22999/22300-22399/book22435
+
 def _nines(digit):
   num = "9" * digit
   return int(num)
-
 
 def get_path(book_num,out_dir):
   book_num = str(book_num)

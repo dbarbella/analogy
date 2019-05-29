@@ -1,0 +1,13 @@
+REQUIREMENTS:
+
+Python3
+
+bs4 - BeautifulSoup -any version
+pandas - any version
+timeout-decorator - version or higher 0.4.1
+NLTK - do not know about versions
+
+
+If you wish to use the multithreading option to run the code faster (recommended if ran from a personal computer):
+
+Pool - any version

@@ -1,3 +1,9 @@
+#changes directory to output directory and creates the necessary folders in that directory.
+#takes the output  directory as an argument
+#This can probably be made usinf some sort of loop in bash.
+#These were written by a Python script.
+
+#if this is not ran, the computer might be unable to open the folder with the text files in it.
 cd $1
 
 mkdir ./0-10000
