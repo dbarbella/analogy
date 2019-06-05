@@ -3,10 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 from multiprocessing import Pool
 from sys import argv
+from clean import clean
 from subprocess import call, Popen
 import os
 from time import sleep
-from get_path import get_path
 from get_path import get_path
 
 """
@@ -27,8 +27,8 @@ if output_dir[-1] != "/":
 
 
 
-#the number of books changes over time
-NUM_BOOKS = 59510
+#the number of books changes over time, there could be more in the future
+NUM_BOOKS = 59000
 URL = "https://www.gutenberg.org/ebooks/"
 
 #lowest book number to be scraped
@@ -74,12 +74,12 @@ def scrap_book_num(book_num):
 #this gunction calls the text_cleaner.sh script, which converts to the necessary file format for NLTK to 
 #to be able to understand the text files, while also removing unecessary repetetive lines relating
 #to copyright or project gutenberg.
-def clean(begin,end):
+def clean(begin, end ,output_dir):
     Popen(["bash", "-c", "chmod +x text_cleaner.sh"])
     for i in range(begin,end+1,100):
         clean_path = get_path(i,output_dir)
-        call(["bash","./text_cleaner.sh",clean_path])
-        print("cleaned" + clean_path)
+        call(["bash","./text_cleaner.sh", clean_path])
+        print("cleaned", clean_path)
 
         
 """
@@ -92,7 +92,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 if that doesn't fix it, you can make a regular loop that downloads each book
 """
 
-#this is without multithread. If the machine is too fast, multithreading can break request
+#this is without multithreading. If the machine is too fast, multithreading can break request limits
 # def main():
 #     for i in range(begin, end):
 #         sleep(0.5)
@@ -121,4 +121,4 @@ if __name__=="__main__":
     sleep(1)
     main()
     sleep(1)
-    clean(begin,end)
+    clean(begin,end, output_dir)

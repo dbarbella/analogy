@@ -6,7 +6,7 @@ cd $1
 
 #this regular expression is a match for the first three bytes of a BOM text file.
 #By removing those (if they exist), the file is converted to a utf-8 file.
-#the reason this is not done in place is convenience and enabling it to run on different machines
+#the reason this is not done in place is convenience and enabling it to run on different operating systems
 #the additional cost of this is very small
 for f in ./*.txt; do
     sed '1s/^\xEF\xBB\xBF//' < "$f" > "${f%.txt}.nobom"
@@ -24,14 +24,16 @@ done
 
  
 #removes gutenber/copy right related lines from the files
-#to run this in macOS, add ['.bak'] between -i and the regular expression in the then statement.
+#to run this in macOS, add ['.bak'] between -i and the regular expressions in the then statements.
 #then uncomment the comment starting with find . -name '*bak" after this loop
 
 for i in ./book*; do
-  if grep -q "START OF THIS PROJECT GUTENBERG\|END OF THIS PROJECT GUTENBERG" $i
+  if grep -q "START OF THIS PROJECT GUTENBERG|END OF THIS PROJECT GUTENBERG" $i
   then
     sed -i '1,/START OF THIS PROJECT GUTENBERG/d;/END OF THIS PROJECT GUTENBERG/, $d;/^$/d; /End of the Project/, $d' $i
   fi
 done
+
+
 
 # find . -name "*bak" -type f -print0 | xargs -0 /bin/rm -f

@@ -34,7 +34,6 @@ book_dir = argv[1]
 out_dir = argv[2]
 
 begin = int(argv[3])
-
 end = int(argv[4])
 
 if out_dir[-1] != "/":
@@ -65,7 +64,6 @@ def write_analogies(book_id):
 
     # Extract the exact sentences and write them to csv and txt files.
     with open(csv_file_name + "book%s_analogies.csv" % book_id, 'w', encoding="utf-8") as csvfile:
-
         fieldnames = ['name', 'text']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
         writer.writeheader()
