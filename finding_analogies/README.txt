@@ -7,7 +7,7 @@ The code requires Python3, and several packages as specified in the requirements
 The code is ran like:
 python gutenberg_scrapper.py output_dir begin_num end_num
 
-Where output_dir is where you want the text files to be scraped.
+Where output_dir is where you want the text files to be scrapped.
 If you want them to run in the directory the script is ran,
 you should set output_dir to ./ .
 
@@ -57,7 +57,7 @@ It's ran as:
 python scrapeWordHunt.py input_dir output_dir begin_num end_num
 where:
 input_dir: directory where the scraped texts are.
-  The program can get to the proper subdirectory its self.
+  The program can get to the proper subdirectory itself.
 ouput_dir: directory where the analogy .txt and .csv files will be
   stored. Will have the same sub-directory structure as gutenberg_scrapper.py
 begin: lowest book id
@@ -81,7 +81,7 @@ num_total_csv: how many total csv files.
 punctuation_fix.py
 
 TAKES A SINGLE CSV FILE AS AN ARGUMENT, NOT A DIRECTORY!
-Many Gutenberg texts have extra spaces between punctuations signs
+Many Gutenberg texts have extra spaces between punctuation signs
 due to the quality of the scan, which can make the sentences hard
 to read.  This script removes the extra spaces. It is not very fast,
 so should only be ran when necessary, such as texts that will
@@ -97,3 +97,5 @@ out_path: This one is optional. Output path to the resulting csv file.
 context.py
 
 Is used in pick_random, gets a number of previous and following sentences for each csv. This is not a script users are supposed to call, so the number of sentences is hard-coded. To change them, change NUM_PREV and NUM_AFTER in the python file, at the top.
+
+
