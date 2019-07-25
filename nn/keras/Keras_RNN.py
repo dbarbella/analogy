@@ -3,29 +3,62 @@
 
 #phi - simple LSTM
 
+# Use:
+# python Keras_RNN.py non_analogies_csv analogies_csv glove_file
+# Or just
+# python Keras_RNN.py to run with things in the default locations.
 
+import sys
 import csv
+import numpy as np
+from keras.preprocessing.text import Tokenizer
+from keras.preprocessing.sequence import pad_sequences
+from keras.models import Sequential
+from keras.layers import Embedding, Flatten, Dense, LSTM
+
 def readCSV(fileName,r):
     sent = []
     with open(fileName) as file:
         readcsv = csv.reader(file, delimiter=',')
         for row in readcsv:
+            # This seems like a workaround for our source files being
+            # inconsistent - revisit this.
             sentence = row[r]
             sent.append(sentence)
     return sent
 
-# In[5]:
+default_non_analogies = '../.././corpora/verified_non_analogies.csv'
+default_sentences = '../.././corpora/sentences.csv'
+default_glove_directory = '../.././corpora/glove/'
+default_glove_file = 'glove.6B.100d.txt'
 
-neg = readCSV('./verified_non_analogies.csv',1)
-pos = readCSV('./sentences.csv',0)
+num_args = len(sys.argv)
+
+
+if num_args < 2:
+    non_analogies_file = default_non_analogies 
+else:
+    non_analogies_file = sys.argv[1]
+
+if num_args < 3:
+    sentences_file = default_sentences 
+else:
+    sentences_file = sys.argv[2]
+    
+if num_args < 4:
+    glove_file = default_glove_directory + default_glove_file
+else:
+    glove_file = sys.argv[3]
+
+
+neg = readCSV(non_analogies_file,1)
+pos = readCSV(sentences_file,0)
 labels = [1]*len(pos) + [0] * len(neg)
 texts = pos + neg
 
 
-# In[66]:
-import numpy as np
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+
+
 
 maxlen = 28 #maximum allowed number of words in a sentence 
 
@@ -64,7 +97,7 @@ print("Shape of test_targets", test_targets.shape)
 embedding_index = {}
 
 #download glove before this
-f = open("./glove.6B.100d.txt")
+f = open(glove_file)
 for line in f:
     values = line.split()
     word = values[0]
@@ -74,7 +107,7 @@ f.close()
 
 print("Found {} words".format(len(embedding_index)))
 
-import numpy as np
+
 k = 4 # 4 k-fold
 num_val_samples = len(train_data) // k
 num_epochs = 10
@@ -92,8 +125,7 @@ for word, i in word_index.items():
             embedding_matrix[i] = embedding_vector
 
 
-from keras.models import Sequential
-from keras.layers import Embedding, Flatten, Dense, LSTM
+
 
 def build_model():
     model = Sequential()
@@ -136,15 +168,15 @@ for i in range(k):
 #plot results in training
 
 def plot():
-	avg_acc_history = [np.mean([x[i] for x in acc_history] ) for i in range(num_epochs)]
-	avg_val_acc_history = [np.mean([x[i] for x in val_acc_history] ) for i in range(num_epochs)]
-	import matplotlib.pyplot as plt
-	plt.plot(range(1, len(avg_acc_history) + 1), avg_acc_history, 'bo', label = 'training acc')
-	plt.plot(range(1, len(avg_val_acc_history) + 1), avg_val_acc_history, 'b', label = 'Validation acc')
-	plt.xlabel('Epochs')
-	plt.ylabel('Acc')
-	plt.legend()
-	plt.show()
+    avg_acc_history = [np.mean([x[i] for x in acc_history] ) for i in range(num_epochs)]
+    avg_val_acc_history = [np.mean([x[i] for x in val_acc_history] ) for i in range(num_epochs)]
+    import matplotlib.pyplot as plt
+    plt.plot(range(1, len(avg_acc_history) + 1), avg_acc_history, 'bo', label = 'training acc')
+    plt.plot(range(1, len(avg_val_acc_history) + 1), avg_val_acc_history, 'b', label = 'Validation acc')
+    plt.xlabel('Epochs')
+    plt.ylabel('Acc')
+    plt.legend()
+    plt.show()
 
 
 
