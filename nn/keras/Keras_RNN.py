@@ -29,6 +29,16 @@ default_analogies_file = '../.././corpora/verified_analogies.csv'
 default_glove_directory = '../.././corpora/glove/'
 default_glove_file = 'glove.6B.100d.txt'
 
+num_folds = 4
+num_epochs = 10
+
+# Embed sentences # Is this the number of dimensions of the embedding vectors?
+embedding_dim = 100
+
+max_sen_length_in_words = 28  # maximum allowed number of words in a sentence
+lexicon_size = 10000  # choosing the most 10000 common words # Is this correct?
+num_test_samples = 40  # number of testing samples # Consider making this a percent, rather than an absolute number.
+
 #############################################################
 # Managing command line arguments
 #############################################################
@@ -49,10 +59,6 @@ if num_args < 4:
     glove_file = default_glove_directory + default_glove_file
 else:
     glove_file = sys.argv[3]
-    
-max_sen_length_in_words = 28  # maximum allowed number of words in a sentence
-lexicon_size = 10000  # choosing the most 10000 common words # Is this correct?
-num_test_samples = 40  # number of testing samples # Consider making this a percent, rather than an absolute number.
 
 
 #############################################################
@@ -109,6 +115,7 @@ train_data = padded_sequences[:len(padded_sequences) - num_test_samples]
 test_data = padded_sequences[len(padded_sequences) - num_test_samples:]
 train_labels = labels[:len(padded_sequences) - num_test_samples]
 test_labels = labels[len(padded_sequences) - num_test_samples:]
+num_val_samples = len(train_data) // num_folds
 
 print("Shape of data ", padded_sequences.shape)
 print("Shape of label", labels.shape)
@@ -130,12 +137,6 @@ f.close()
 
 print("Found {} words".format(len(embedding_index)))
 
-num_folds = 4
-num_val_samples = len(train_data) // num_folds
-num_epochs = 10
-
-# Embed sentences
-embedding_dim = 100
 
 embedding_matrix = np.zeros((lexicon_size, embedding_dim))
 for word, i in word_index.items():
@@ -145,10 +146,19 @@ for word, i in word_index.items():
             embedding_matrix[i] = embedding_vector
 
 
+# I assume that some of the magic numbers in here are sizes and shapes
 def build_model():
+    # This is keras.models's Sequential()
     model = Sequential()
+    # Adds an embedding layer - See https://keras.io/layers/embeddings/
+    # The first argument to the embedding layer is the size of the vocabulary. The is the dimensions
+    # of the input.
+    # Second argument is the dimensions of the embedding space. This is the dimensions of the output.
+    # input_length is the maximum length of the sentence, in words.
     model.add(Embedding(lexicon_size, embedding_dim, input_length=max_sen_length_in_words))
+    # Adds an LSTM layer of size 32?
     model.add(LSTM(32))
+    # Adds a dense layer
     model.add(Dense(1, activation='sigmoid'))
     model.layers[0].set_weights([embedding_matrix])
     model.layers[0].trainable = False
@@ -156,39 +166,51 @@ def build_model():
                   loss='binary_crossentropy',
                   metrics=['acc'])
     model.save_weights('pre_trained_glove_model.h5')
+    model.summary()
     return model
 
 
-# k-fold training
-val_acc_history = []
-acc_history = []
+# k-fold training - Each fold chooses a new slice of the training data to be the validation set
+val_acc_histories = []
+acc_histories = []
 for i in range(num_folds):
     print('processing fold: #', i)
-    val_data = train_data[i * num_val_samples: (i+1)*num_val_samples]
-    val_targets = train_labels[i * num_val_samples: (i + 1) * num_val_samples]
-    
+    # Get the training data from the i'th fold
+    # Validation is the i'th slice every time. Training is everything else
+    val_data = train_data[(i*num_val_samples):((i+1)*num_val_samples)]
+    val_targets = train_labels[(i*num_val_samples):((i+1)*num_val_samples)]
+    # This is everything that's not in the validation set.
     partial_train_data = np.concatenate([train_data[:i*num_val_samples],
                                         train_data[(i+1)*num_val_samples:]], axis=0)
-    
-    partial_test_data = np.concatenate([train_labels[:i * num_val_samples],
-                                        train_labels[(i + 1) * num_val_samples:]], axis=0)
-    
+    partial_train_labels = np.concatenate([train_labels[:i * num_val_samples],
+                                           train_labels[(i + 1) * num_val_samples:]], axis=0)
+    # Put together the structure of the ANN
     model = build_model()
-    history = model.fit(partial_train_data, partial_test_data, epochs=num_epochs, batch_size=1, verbose=0,
+    # Trains the model. Learn about fit here: https://keras.io/models/sequential/#fit
+    # This returns a history object, which we probably want to store somewhere, or pull things out of.
+    history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=1, verbose=0,
                         validation_data=(val_data, val_targets))
+    # Validation accuracy and training accuracy
     val_acc = history.history['val_acc']
     acc = history.history['acc']
-    val_acc_history.append(val_acc)
-    acc_history.append(acc)
+    # Append these to lists.
+    val_acc_histories.append(val_acc)
+    acc_histories.append(acc)
 
+# Actually does the evaluation, using the test data.
+# The results returned by this are a list of two things:
+results = model.evaluate(test_data, test_labels)
+print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+print(model.metrics_names)
+print(results)
 
 def plot():
     """
     Plots the results.
     :return: No return value.
     """
-    avg_acc_history = [np.mean([x[epoch] for x in acc_history]) for epoch in range(num_epochs)]
-    avg_val_acc_history = [np.mean([x[epoch] for x in val_acc_history]) for epoch in range(num_epochs)]
+    avg_acc_history = [np.mean([x[epoch] for x in acc_histories]) for epoch in range(num_epochs)]
+    avg_val_acc_history = [np.mean([x[epoch] for x in val_acc_histories]) for epoch in range(num_epochs)]
     import matplotlib.pyplot as plt
     plt.plot(range(1, len(avg_acc_history) + 1), avg_acc_history, 'bo', label='training acc')
     plt.plot(range(1, len(avg_val_acc_history) + 1), avg_val_acc_history, 'b', label='Validation acc')
@@ -198,4 +220,4 @@ def plot():
     plt.show()
 
 
-results = model.evaluate(test_data, test_labels)
+
