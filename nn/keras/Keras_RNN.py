@@ -13,6 +13,8 @@
 
 import sys
 import csv
+import time
+from datetime import datetime
 import numpy as np
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
@@ -28,6 +30,7 @@ default_non_analogies_file = '../.././corpora/verified_non_analogies.csv'
 default_analogies_file = '../.././corpora/verified_analogies.csv'
 default_glove_directory = '../.././corpora/glove/'
 default_glove_file = 'glove.6B.100d.txt'
+default_results_file = './results/results-debugging.txt'
 
 num_folds = 4
 num_epochs = 10
@@ -38,6 +41,7 @@ embedding_dim = 100
 max_sen_length_in_words = 28  # maximum allowed number of words in a sentence
 lexicon_size = 10000  # choosing the most 10000 common words # Is this correct?
 num_test_samples = 40  # number of testing samples # Consider making this a percent, rather than an absolute number.
+epoch_batch_size = 1  # Size of the batch in each epoch.
 
 #############################################################
 # Managing command line arguments
@@ -60,6 +64,9 @@ if num_args < 4:
 else:
     glove_file = sys.argv[3]
 
+# Start the timer
+start_time = time.time()
+start_datetime = datetime.now()
 
 #############################################################
 # Reading in the CSVs
@@ -80,11 +87,13 @@ def readCSV(file_name, sentence_column):
     return sent
 
 
-non_analogy_sentences = readCSV(non_analogies_file, 1)
 analogy_sentences = readCSV(analogies_file, 1)
+num_analogy_sentences = len(analogy_sentences)
+non_analogy_sentences = readCSV(non_analogies_file, 1)
+num_non_analogy_sentences = len(non_analogy_sentences)
 
 # Create a numpy array of the correct labels.
-labels = np.asarray([1] * len(analogy_sentences) + [0] * len(non_analogy_sentences))
+labels = np.asarray([1] * num_analogy_sentences + [0] * num_non_analogy_sentences)
 
 # Create a list of all of the sentences
 all_sentences = analogy_sentences + non_analogy_sentences
@@ -188,8 +197,8 @@ for i in range(num_folds):
     model = build_model()
     # Trains the model. Learn about fit here: https://keras.io/models/sequential/#fit
     # This returns a history object, which we probably want to store somewhere, or pull things out of.
-    history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=1, verbose=0,
-                        validation_data=(val_data, val_targets))
+    history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=epoch_batch_size,
+                        verbose=0, validation_data=(val_data, val_targets))
     # Validation accuracy and training accuracy
     val_acc = history.history['val_acc']
     acc = history.history['acc']
@@ -199,10 +208,56 @@ for i in range(num_folds):
 
 # Actually does the evaluation, using the test data.
 # The results returned by this are a list of two things:
+# A loss and an accuracy.
 results = model.evaluate(test_data, test_labels)
 print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 print(model.metrics_names)
 print(results)
+test_loss = results[0]
+test_accuracy = results[1]
+
+# Stop the timer
+stop_time = time.time()
+elapsed_time = stop_time - start_time
+
+
+# This will need to record all of the parameters used, along with the results.
+def record_results(results_file=default_results_file):
+    print("Recording results...")
+    results_handler = open(results_file, 'a')
+    results_handler.write("="*30 + "\n")
+    results_handler.write("Start time: " + str(datetime.now().strftime('%Y-%m-%d %H:%M:%S')) + "\n")
+    results_handler.write("Elapsed time (s): " + str(elapsed_time) + "\n")
+
+    # Record information about the training data
+    results_handler.write("Analogies file: " + analogies_file + "\n")
+    results_handler.write("Non-Analogies file: " + non_analogies_file + "\n")
+    results_handler.write("Analogies: " + str(num_analogy_sentences) +
+                          " Non-Analogies: " + str(num_non_analogy_sentences) +
+                          " Total: " + str(num_analogy_sentences + num_non_analogy_sentences) + "\n")
+
+    # Record information about the NN setup
+    results_handler.write("Embedding vector dimensions: " + str(embedding_dim) + "\n")
+
+    # Record information about the training.
+    results_handler.write("Training epochs: " + str(num_epochs) + "\n")
+    results_handler.write("Epoch batch size: " + str(epoch_batch_size) + "\n")
+
+    # Record information about the results.
+    results_handler.write("Testing Loss: " + str(test_loss) + "\n")
+    results_handler.write("Testing Accuracy: " + str(test_accuracy) + "\n")
+
+    # Record the full dehydrated model - Consider whether we want this.
+    # results_handler.write("Model configuration:" + str(model.get_config()) + "\n")
+    # Record a summary of the model
+    model.summary(print_fn=lambda x: results_handler.write(x + '\n'))
+
+    results_handler.write("\n")
+    results_handler.close()
+
+
+record_results()
+
 
 def plot():
     """
@@ -218,6 +273,3 @@ def plot():
     plt.ylabel('Acc')
     plt.legend()
     plt.show()
-
-
-
