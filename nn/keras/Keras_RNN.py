@@ -20,6 +20,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
 from keras.layers import Embedding, Flatten, Dense, LSTM
+from sklearn.metrics import confusion_matrix
 
 
 #############################################################
@@ -155,7 +156,6 @@ for word, i in word_index.items():
             embedding_matrix[i] = embedding_vector
 
 
-# I assume that some of the magic numbers in here are sizes and shapes
 def build_model():
     # This is keras.models's Sequential()
     model = Sequential()
@@ -178,33 +178,45 @@ def build_model():
     model.summary()
     return model
 
+# Extremely double-check this, maybe change some of the globals to return values, check if it even works
+def train_model():
+    global val_acc_histories, acc_histories, i, model
+    val_acc_histories = []
+    acc_histories = []
+    for i in range(num_folds):
+        print('processing fold: #', i)
+        # Get the training data from the i'th fold
+        # Validation is the i'th slice every time. Training is everything else
+        val_data = train_data[(i * num_val_samples):((i + 1) * num_val_samples)]
+        val_targets = train_labels[(i * num_val_samples):((i + 1) * num_val_samples)]
+        # This is everything that's not in the validation set.
+        partial_train_data = np.concatenate([train_data[:i * num_val_samples],
+                                             train_data[(i + 1) * num_val_samples:]], axis=0)
+        partial_train_labels = np.concatenate([train_labels[:i * num_val_samples],
+                                               train_labels[(i + 1) * num_val_samples:]], axis=0)
+        # Put together the structure of the ANN
+        model = build_model()
+        # Trains the model. Learn about fit here: https://keras.io/models/sequential/#fit
+        # This returns a history object, which we probably want to store somewhere, or pull things out of.
+        history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=epoch_batch_size,
+                            verbose=0, validation_data=(val_data, val_targets))
+        # Validation accuracy and training accuracy
+        val_acc = history.history['val_acc']
+        acc = history.history['acc']
+        # Append these to lists.
+        val_acc_histories.append(val_acc)
+        acc_histories.append(acc)
+
 
 # k-fold training - Each fold chooses a new slice of the training data to be the validation set
-val_acc_histories = []
-acc_histories = []
-for i in range(num_folds):
-    print('processing fold: #', i)
-    # Get the training data from the i'th fold
-    # Validation is the i'th slice every time. Training is everything else
-    val_data = train_data[(i*num_val_samples):((i+1)*num_val_samples)]
-    val_targets = train_labels[(i*num_val_samples):((i+1)*num_val_samples)]
-    # This is everything that's not in the validation set.
-    partial_train_data = np.concatenate([train_data[:i*num_val_samples],
-                                        train_data[(i+1)*num_val_samples:]], axis=0)
-    partial_train_labels = np.concatenate([train_labels[:i * num_val_samples],
-                                           train_labels[(i + 1) * num_val_samples:]], axis=0)
-    # Put together the structure of the ANN
-    model = build_model()
-    # Trains the model. Learn about fit here: https://keras.io/models/sequential/#fit
-    # This returns a history object, which we probably want to store somewhere, or pull things out of.
-    history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=epoch_batch_size,
-                        verbose=0, validation_data=(val_data, val_targets))
-    # Validation accuracy and training accuracy
-    val_acc = history.history['val_acc']
-    acc = history.history['acc']
-    # Append these to lists.
-    val_acc_histories.append(val_acc)
-    acc_histories.append(acc)
+# This should probably be its own function - likely a mutator that takes the model as an argument?
+train_model()
+
+def equals_one(x):
+    return x == 1
+
+def first(x):
+    return x[0]
 
 # Actually does the evaluation, using the test data.
 # The results returned by this are a list of two things:
@@ -215,6 +227,25 @@ print(model.metrics_names)
 print(results)
 test_loss = results[0]
 test_accuracy = results[1]
+# How can we get the confusion matrix?
+# Predicting the Test set results? Should this be model.predict? What should we predict on?
+# y_pred = classifier.predict(X_test)
+y_pred = model.predict(test_data)
+print("y_pred:")
+print(y_pred)
+# check to make sure we're rounding this in the right direction.
+# Actually change of heart. Make these all into booleans.
+y_pred = map(first, (y_pred > .5))
+print("chopped y_pred:")
+print(y_pred)
+print("test_labels")
+print(test_labels)
+print("Booled' Test Labels")
+bool_test_labels = map(equals_one, test_labels)
+print(bool_test_labels)
+print("Confusion Matrix:")
+print(confusion_matrix(bool_test_labels, y_pred))
+results_confusion_matrix = confusion_matrix(bool_test_labels, y_pred)
 
 # Stop the timer
 stop_time = time.time()
@@ -242,10 +273,12 @@ def record_results(results_file=default_results_file):
     # Record information about the training.
     results_handler.write("Training epochs: " + str(num_epochs) + "\n")
     results_handler.write("Epoch batch size: " + str(epoch_batch_size) + "\n")
+    results_handler.write("Training folds: " + str(num_folds) + "\n")
 
     # Record information about the results.
     results_handler.write("Testing Loss: " + str(test_loss) + "\n")
     results_handler.write("Testing Accuracy: " + str(test_accuracy) + "\n")
+    results_handler.write("Confusion Matrix:\n " + str(results_confusion_matrix) + "\n")
 
     # Record the full dehydrated model - Consider whether we want this.
     # results_handler.write("Model configuration:" + str(model.get_config()) + "\n")
