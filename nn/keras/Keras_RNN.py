@@ -137,7 +137,7 @@ print("Shape of test_labels", test_labels.shape)
 embedding_index = {}
 
 # Download glove before this
-f = open(glove_file)
+f = open(glove_file, encoding="utf8")
 for line in f:
     values = line.split()
     word = values[0]
@@ -235,13 +235,15 @@ print("y_pred:")
 print(y_pred)
 # check to make sure we're rounding this in the right direction.
 # Actually change of heart. Make these all into booleans.
-y_pred = map(first, (y_pred > .5))
+# y_pred = map(first, (y_pred > .5))
+y_pred_bools = (y_pred > .5)
+y_pred = list(map(first, y_pred_bools))
 print("chopped y_pred:")
 print(y_pred)
 print("test_labels")
 print(test_labels)
 print("Booled' Test Labels")
-bool_test_labels = map(equals_one, test_labels)
+bool_test_labels = list(map(equals_one, test_labels))
 print(bool_test_labels)
 print("Confusion Matrix:")
 print(confusion_matrix(bool_test_labels, y_pred))
