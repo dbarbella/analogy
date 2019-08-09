@@ -12,26 +12,23 @@
 # reproduce the results.
 
 import sys
-import csv
 import time
 from datetime import datetime
 import numpy as np
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras.models import Sequential
-from keras.layers import Embedding, Flatten, Dense, LSTM
-from sklearn.metrics import confusion_matrix
-
+from Keras_RNN_utils import readCSV, produce_embedding_index
 
 #############################################################
 # PARAMETERS - DEFAULTS
 #############################################################
+from Keras_RNN_utils import evaluate_model, train_model
 
-default_non_analogies_file = '../.././corpora/verified_non_analogies.csv'
-default_analogies_file = '../.././corpora/verified_analogies.csv'
-default_glove_directory = '../.././corpora/glove/'
+default_non_analogies_file = '../../corpora/verified_non_analogies.csv'
+default_analogies_file = '../../corpora/verified_analogies.csv'
+default_glove_directory = '../../corpora/glove/'
 default_glove_file = 'glove.6B.100d.txt'
-default_results_file = './results/results-debugging.txt'
+default_results_file = './results/results-variability-test.txt'
 
 num_folds = 4
 num_epochs = 10
@@ -68,25 +65,6 @@ else:
 # Start the timer
 start_time = time.time()
 start_datetime = datetime.now()
-
-#############################################################
-# Reading in the CSVs
-#############################################################
-def readCSV(file_name, sentence_column):
-    """
-    :param file_name: The file name of the CSV to read
-    :param sentence_column: The column within the CSV that contains the sentences.
-    Try to make sure this is 1, for consistency.
-    :return: A list of the sentences, as strings.
-    """
-    sent = []
-    with open(file_name) as file:
-        csv_reader = csv.reader(file, delimiter=',')
-        for row in csv_reader:
-            sentence = row[sentence_column]
-            sent.append(sentence)
-    return sent
-
 
 analogy_sentences = readCSV(analogies_file, 1)
 num_analogy_sentences = len(analogy_sentences)
@@ -127,26 +105,7 @@ train_labels = labels[:len(padded_sequences) - num_test_samples]
 test_labels = labels[len(padded_sequences) - num_test_samples:]
 num_val_samples = len(train_data) // num_folds
 
-print("Shape of data ", padded_sequences.shape)
-print("Shape of label", labels.shape)
-print("Shape of train_data", train_data.shape)
-print("Shape of test_data", test_data.shape)
-print("Shape of train_labels", train_labels.shape)
-print("Shape of test_labels", test_labels.shape)
-
-embedding_index = {}
-
-# Download glove before this
-f = open(glove_file, encoding="utf8")
-for line in f:
-    values = line.split()
-    word = values[0]
-    coefs = np.asarray(values[1:], dtype='float32')
-    embedding_index[word] = coefs
-f.close()
-
-print("Found {} words".format(len(embedding_index)))
-
+embedding_index = produce_embedding_index(glove_file)
 
 embedding_matrix = np.zeros((lexicon_size, embedding_dim))
 for word, i in word_index.items():
@@ -156,98 +115,13 @@ for word, i in word_index.items():
             embedding_matrix[i] = embedding_vector
 
 
-def build_model():
-    # This is keras.models's Sequential()
-    model = Sequential()
-    # Adds an embedding layer - See https://keras.io/layers/embeddings/
-    # The first argument to the embedding layer is the size of the vocabulary. The is the dimensions
-    # of the input.
-    # Second argument is the dimensions of the embedding space. This is the dimensions of the output.
-    # input_length is the maximum length of the sentence, in words.
-    model.add(Embedding(lexicon_size, embedding_dim, input_length=max_sen_length_in_words))
-    # Adds an LSTM layer of size 32?
-    model.add(LSTM(32))
-    # Adds a dense layer
-    model.add(Dense(1, activation='sigmoid'))
-    model.layers[0].set_weights([embedding_matrix])
-    model.layers[0].trainable = False
-    model.compile(optimizer='rmsprop',
-                  loss='binary_crossentropy',
-                  metrics=['acc'])
-    model.save_weights('pre_trained_glove_model.h5')
-    model.summary()
-    return model
-
-# Extremely double-check this, maybe change some of the globals to return values, check if it even works
-def train_model():
-    global val_acc_histories, acc_histories, i, model
-    val_acc_histories = []
-    acc_histories = []
-    for i in range(num_folds):
-        print('processing fold: #', i)
-        # Get the training data from the i'th fold
-        # Validation is the i'th slice every time. Training is everything else
-        val_data = train_data[(i * num_val_samples):((i + 1) * num_val_samples)]
-        val_targets = train_labels[(i * num_val_samples):((i + 1) * num_val_samples)]
-        # This is everything that's not in the validation set.
-        partial_train_data = np.concatenate([train_data[:i * num_val_samples],
-                                             train_data[(i + 1) * num_val_samples:]], axis=0)
-        partial_train_labels = np.concatenate([train_labels[:i * num_val_samples],
-                                               train_labels[(i + 1) * num_val_samples:]], axis=0)
-        # Put together the structure of the ANN
-        model = build_model()
-        # Trains the model. Learn about fit here: https://keras.io/models/sequential/#fit
-        # This returns a history object, which we probably want to store somewhere, or pull things out of.
-        history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=epoch_batch_size,
-                            verbose=0, validation_data=(val_data, val_targets))
-        # Validation accuracy and training accuracy
-        val_acc = history.history['val_acc']
-        acc = history.history['acc']
-        # Append these to lists.
-        val_acc_histories.append(val_acc)
-        acc_histories.append(acc)
-
-
 # k-fold training - Each fold chooses a new slice of the training data to be the validation set
 # This should probably be its own function - likely a mutator that takes the model as an argument?
-train_model()
+model, val_acc_histories, acc_histories = train_model(num_val_samples, train_data, train_labels, lexicon_size,
+                                                      embedding_dim, max_sen_length_in_words, embedding_matrix,
+                                                      num_epochs, epoch_batch_size, num_folds)
 
-def equals_one(x):
-    return x == 1
-
-def first(x):
-    return x[0]
-
-# Actually does the evaluation, using the test data.
-# The results returned by this are a list of two things:
-# A loss and an accuracy.
-results = model.evaluate(test_data, test_labels)
-print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-print(model.metrics_names)
-print(results)
-test_loss = results[0]
-test_accuracy = results[1]
-# How can we get the confusion matrix?
-# Predicting the Test set results? Should this be model.predict? What should we predict on?
-# y_pred = classifier.predict(X_test)
-y_pred = model.predict(test_data)
-print("y_pred:")
-print(y_pred)
-# check to make sure we're rounding this in the right direction.
-# Actually change of heart. Make these all into booleans.
-# y_pred = map(first, (y_pred > .5))
-y_pred_bools = (y_pred > .5)
-y_pred = list(map(first, y_pred_bools))
-print("chopped y_pred:")
-print(y_pred)
-print("test_labels")
-print(test_labels)
-print("Booled' Test Labels")
-bool_test_labels = list(map(equals_one, test_labels))
-print(bool_test_labels)
-print("Confusion Matrix:")
-print(confusion_matrix(bool_test_labels, y_pred))
-results_confusion_matrix = confusion_matrix(bool_test_labels, y_pred)
+test_loss, test_accuracy, results_confusion_matrix = evaluate_model(model, test_data, test_labels)
 
 # Stop the timer
 stop_time = time.time()
