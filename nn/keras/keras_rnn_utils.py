@@ -12,8 +12,6 @@ from keras import Sequential
 from keras.layers import Embedding, LSTM, Dense
 from sklearn.metrics import confusion_matrix
 
-#from nn.keras.Keras_RNN import num_folds
-
 
 def readCSV(file_name, sentence_column):
     """
@@ -126,3 +124,13 @@ def build_model(lexicon_size, embedding_dim, max_sen_length_in_words, embedding_
     model.save_weights('pre_trained_glove_model.h5')
     model.summary()
     return model
+
+
+def produce_embedding_matrix(lexicon_size, embedding_dim, embedding_index, word_index):
+    embedding_matrix = np.zeros((lexicon_size, embedding_dim))
+    for word, i in word_index.items():
+        if i < lexicon_size:
+            embedding_vector = embedding_index.get(word)
+            if embedding_vector is not None:
+                embedding_matrix[i] = embedding_vector
+    return embedding_matrix

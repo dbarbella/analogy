@@ -4,9 +4,9 @@
 # phi - simple LSTM
 
 # Use:
-# python Keras_RNN.py non_analogies_csv analogies_csv glove_file
+# python keras_rnn.py non_analogies_csv analogies_csv glove_file
 # Or just
-# python Keras_RNN.py to run with things in the default locations.
+# python keras_rnn.py to run with things in the default locations.
 
 # To do: Figure out where the parameters are set that allows us to
 # reproduce the results.
@@ -17,12 +17,13 @@ from datetime import datetime
 import numpy as np
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras_rnn_utils import readCSV, produce_embedding_index
+from keras_rnn_utils import readCSV, produce_embedding_index, produce_embedding_matrix
+from keras_rnn_utils import evaluate_model, train_model
 
 #############################################################
 # PARAMETERS - DEFAULTS
 #############################################################
-from keras_rnn_utils import evaluate_model, train_model
+
 
 default_non_analogies_file = '../../corpora/verified_non_analogies.csv'
 default_analogies_file = '../../corpora/verified_analogies.csv'
@@ -92,6 +93,7 @@ padded_sequences = pad_sequences(sequences, maxlen=max_sen_length_in_words)
 # An np array that contains a range of values from 0 to (n-1)
 indices = np.arange(padded_sequences.shape[0])
 
+# This is the first place it becomes nondeterministic
 np.random.shuffle(indices)  # shuffle np array that contains the indices
 
 # Arrange the padded sequences and their labels in the same random order.
@@ -106,14 +108,7 @@ test_labels = labels[len(padded_sequences) - num_test_samples:]
 num_val_samples = len(train_data) // num_folds
 
 embedding_index = produce_embedding_index(glove_file)
-
-embedding_matrix = np.zeros((lexicon_size, embedding_dim))
-for word, i in word_index.items():
-    if i < lexicon_size:
-        embedding_vector = embedding_index.get(word)
-        if embedding_vector is not None:
-            embedding_matrix[i] = embedding_vector
-
+embedding_matrix = produce_embedding_matrix(lexicon_size, embedding_dim, embedding_index, word_index)
 
 # k-fold training - Each fold chooses a new slice of the training data to be the validation set
 # This should probably be its own function - likely a mutator that takes the model as an argument?
