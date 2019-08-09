@@ -17,12 +17,12 @@ from datetime import datetime
 import numpy as np
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from Keras_RNN_utils import readCSV, produce_embedding_index
+from keras_rnn_utils import readCSV, produce_embedding_index
 
 #############################################################
 # PARAMETERS - DEFAULTS
 #############################################################
-from Keras_RNN_utils import evaluate_model, train_model
+from keras_rnn_utils import evaluate_model, train_model
 
 default_non_analogies_file = '../../corpora/verified_non_analogies.csv'
 default_analogies_file = '../../corpora/verified_analogies.csv'
