@@ -19,6 +19,8 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras_rnn_utils import readCSV, produce_embedding_index, produce_embedding_matrix
 from keras_rnn_utils import evaluate_model, train_model
+from keras import backend as backend
+
 
 #############################################################
 # PARAMETERS - DEFAULTS
@@ -29,9 +31,11 @@ default_non_analogies_file = '../../corpora/verified_non_analogies.csv'
 default_analogies_file = '../../corpora/verified_analogies.csv'
 default_glove_directory = '../../corpora/glove/'
 default_glove_file = 'glove.6B.100d.txt'
-default_results_file = './results/results-variability-test.txt'
-default_spreadsheet_file = './results/results-sheet.csv'
+default_results_file = './results/sen-len-trials-file-2.txt'
+default_spreadsheet_file = './results/sen-len-trials-sheet-2.csv'
 default_experiments_file = './results/experiments.txt'
+
+sheet_comment = "Experimenting with different max_sen_length_in_words"
 
 num_folds = 4
 num_epochs = 10
@@ -68,22 +72,23 @@ else:
 
 # This will need to record all of the parameters used, along with the results.
 def record_results(trial_results_dict, results_file=default_results_file, results_sheet=default_spreadsheet_file):
-    print("Recording results...")
+    # print("Recording results...")
     results_handler = open(results_file, 'a')
     results_handler.write("="*30 + "\n")
     sheet_handler = open(results_sheet, 'a')
 
     start_datetime = trial_results_dict["start_datetime"]
     results_handler.write("Start time: " + str(start_datetime.strftime('%Y-%m-%d %H:%M:%S')) + "\n")
+    sheet_handler.write(sheet_comment + ",")
     sheet_handler.write(str(start_datetime.strftime('%Y-%m-%d %H:%M:%S'))+",")
 
     elapsed_time = trial_results_dict["elapsed_time"]
     results_handler.write("Elapsed time (s): " + str(elapsed_time) + "\n")
+    results_handler.write("Sheet Comment: " + sheet_comment + "\n")
     sheet_handler.write(str(elapsed_time) + ",")
 
     num_analogy_sentences = trial_results_dict["num_analogy_sentences"]
     num_non_analogy_sentences = trial_results_dict["num_non_analogy_sentences"]
-
 
     # Record information about the training data
     results_handler.write("Analogies file: " + analogies_file + "\n")  # This is a global for now.
@@ -91,12 +96,16 @@ def record_results(trial_results_dict, results_file=default_results_file, result
     results_handler.write("Analogies: " + str(num_analogy_sentences) +
                           " Non-Analogies: " + str(num_non_analogy_sentences) +
                           " Total: " + str(num_analogy_sentences + num_non_analogy_sentences) + "\n")
-    sheet_handler.write(analogies_file+","+non_analogies_file+","+str(num_analogy_sentences)+","+
+    sheet_handler.write(analogies_file+","+non_analogies_file+","+str(num_analogy_sentences)+"," +
                         str(num_non_analogy_sentences)+","+str(num_analogy_sentences + num_non_analogy_sentences)+",")
 
     # Record information about the NN setup
     results_handler.write("Embedding vector dimensions: " + str(embedding_dim) + "\n")  # This is a global for now.
     sheet_handler.write(str(embedding_dim)+",")
+    results_handler.write("Max sentence length (words): " + str(max_sen_length_in_words) + "\n")  # Global for now.
+    sheet_handler.write(str(max_sen_length_in_words) + ",")
+    results_handler.write("Lexicon size: " + str(lexicon_size) + "\n")  # Global for now.
+    sheet_handler.write(str(lexicon_size) + ",")
 
     # Record information about the training.
     results_handler.write("Training epochs: " + str(num_epochs) + "\n")  # This is a global for now.
@@ -129,7 +138,6 @@ def record_results(trial_results_dict, results_file=default_results_file, result
 
 # This should almost certainly produce a dictionary.
 def run_trial():
-    #global num_analogy_sentences, num_non_analogy_sentences, model, val_acc_histories, acc_histories, test_loss, test_accuracy, results_confusion_matrix, elapsed_time
     trial_results_dict = {}
     # Start the timer
     start_time = time.time()
@@ -155,14 +163,17 @@ def run_trial():
     # Why are we limiting the number of words to 10000?
     tokenizer = Tokenizer(num_words=lexicon_size)
     tokenizer.fit_on_texts(all_sentences)
+    # These sequences are lists of word indexes.
     sequences = tokenizer.texts_to_sequences(all_sentences)
+    # sen_lens = list(map(len, sequences))
+    # print(sorted(sen_lens))
+    # print(len(sen_lens))
     word_index = tokenizer.word_index
-    print("Found {} unique tokens".format(len(word_index)))
+    # print("Found {} unique tokens".format(len(word_index)))
     # pad sequences to a fixed length
     padded_sequences = pad_sequences(sequences, maxlen=max_sen_length_in_words)
     # An np array that contains a range of values from 0 to (n-1)
     indices = np.arange(padded_sequences.shape[0])
-    # This is the first place it becomes nondeterministic
     np.random.shuffle(indices)  # shuffle np array that contains the indices
     # Arrange the padded sequences and their labels in the same random order.
     padded_sequences = padded_sequences[indices]
@@ -200,16 +211,17 @@ def run_trial():
     return trial_results_dict
 
 
-accuracies = []
-for i in range(20):
-    trial_results_dict = run_trial()
-    accuracies.append(trial_results_dict["test_accuracy"])
-
-print(accuracies)
-print(sum(accuracies)/len(accuracies))
-
-
-
+# for j in range(10, 90, 10):
+for j in range(20, 21, 10):
+    accuracies = []
+    max_sen_length_in_words = j
+    for i in range(5):
+        trial_dict = run_trial()
+        accuracies.append(trial_dict["test_accuracy"])
+        backend.clear_session()
+    print(max_sen_length_in_words)
+    print(accuracies)
+    print(sum(accuracies)/len(accuracies))
 
 
 def plot(trial_results_dict):

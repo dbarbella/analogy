@@ -3,16 +3,14 @@
 
 import csv
 import numpy as np
-
+from keras import Sequential
+from keras.layers import Embedding, LSTM, Dense
+from sklearn.metrics import confusion_matrix
+import time
 
 #############################################################
 # Reading in the CSVs
 #############################################################
-from keras import Sequential
-from keras.layers import Embedding, LSTM, Dense
-from sklearn.metrics import confusion_matrix
-
-
 def readCSV(file_name, sentence_column):
     """
     :param file_name: The file name of the CSV to read
@@ -54,9 +52,11 @@ def evaluate_model(model, test_data, test_labels):
     # The results returned by this are a list of two things:
     # A loss and an accuracy.
     results = model.evaluate(test_data, test_labels)
+    '''
     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     print(model.metrics_names)
     print(results)
+    '''
     test_loss = results[0]
     test_accuracy = results[1]
     # How can we get the confusion matrix?
@@ -78,7 +78,8 @@ def train_model(num_val_samples, train_data, train_labels, lexicon_size, embeddi
     val_acc_histories = []
     acc_histories = []
     for i in range(num_folds):
-        print('processing fold: #', i)
+
+        # print('processing fold: #', i)
         # Get the training data from the i'th fold
         # Validation is the i'th slice every time. Training is everything else
         val_data = train_data[(i * num_val_samples):((i + 1) * num_val_samples)]
@@ -88,8 +89,10 @@ def train_model(num_val_samples, train_data, train_labels, lexicon_size, embeddi
                                              train_data[(i + 1) * num_val_samples:]], axis=0)
         partial_train_labels = np.concatenate([train_labels[:i * num_val_samples],
                                                train_labels[(i + 1) * num_val_samples:]], axis=0)
+
         # Put together the structure of the ANN
         model = build_model(lexicon_size, embedding_dim, max_sen_length_in_words, embedding_matrix)
+
         # Trains the model. Learn about fit here: https://keras.io/models/sequential/#fit
         # This returns a history object, which we probably want to store somewhere, or pull things out of.
         history = model.fit(partial_train_data, partial_train_labels, epochs=num_epochs, batch_size=epoch_batch_size,
@@ -100,6 +103,7 @@ def train_model(num_val_samples, train_data, train_labels, lexicon_size, embeddi
         # Append these to lists.
         val_acc_histories.append(val_acc)
         acc_histories.append(acc)
+
     return model, val_acc_histories, acc_histories
 
 
@@ -122,7 +126,7 @@ def build_model(lexicon_size, embedding_dim, max_sen_length_in_words, embedding_
                   loss='binary_crossentropy',
                   metrics=['acc'])
     model.save_weights('pre_trained_glove_model.h5')
-    model.summary()
+    # model.summary()
     return model
 
 
