@@ -16,9 +16,24 @@ doc.sentences[0].print_dependencies()
 # From the old way of doing it:
 # parser = stanford.StanfordParser(model, jar, encoding='utf8')
 
-text = "The cat sleeps."
-client = CoreNLPClient(annotators=['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref'], timeout=20000, memory='2G', be_quiet=False)
-ann = client.annotate(text)
+
+def demo_test():
+    # ['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref']
+    text = "I love cats. They are cute."
+    with CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'],
+                       timeout=60000, memory='4G', be_quiet=True) as client:
+        #client = CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos'], timeout=20000, memory='2G', be_quiet=False)
+        print("##########-----About to annotate...-----")
+        # ann = client.annotate(text, annotators=['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref'])
+        ann = client.annotate(text)
+        sentence = ann.sentence[0]
+
+        print('---')
+        print('Constituency parse of first sentence')
+        constituency_parse = sentence.parseTree
+        print(constituency_parse)
+
+
 
 
 # Figure out what i is.
@@ -46,5 +61,5 @@ def draw_tree_save_image(sentence):  #, i, dir):
         cf.destroy()
     '''
 
-
+demo_test()
 # draw_tree_save_image("This is my cat. It is my child.")
