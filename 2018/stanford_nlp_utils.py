@@ -16,6 +16,12 @@ doc.sentences[0].print_dependencies()
 # From the old way of doing it:
 # parser = stanford.StanfordParser(model, jar, encoding='utf8')
 
+# Check to make sure these are all correct
+# Pretty sure they're not.
+verbs = ["VB", "VBD", "VBG", "VBN", "VBZ", "VBP"]
+nouns = ["DP", "NP", "NN", "NNS", "NNP", "NNPS", "PDT", "PRP"]
+locations = ["in", "inside", "on", "onto", "into", "under", "above", "at", "from"]
+instruments = ["by", "with"]
 
 def demo_test():
     # ['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref']
@@ -32,9 +38,83 @@ def demo_test():
         print('Constituency parse of first sentence')
         constituency_parse = sentence.parseTree
         print(constituency_parse)
+        print(constituency_parse.value)
+        print("$$")
+
+        print('---')
+        print('first subtree of constituency parse')
+        print(constituency_parse.child[0])
+        print(constituency_parse.child[0].value)
+        print("@@")
+
+        print('---')
+        print('Number of subtrees of constituency parse')
+        print(len(constituency_parse.child))
+
+        print("Roles:")
+        print(test_thematic_search(constituency_parse))
 
 
+def test_thematic_search(parse):
+    roles = {"action": [],
+             "agent": [],
+             "theme": [],
+             "location": [],
+             "instrument": [],
+             "base": [],
+             "target": []}
+    test_thematic_search_find(parse, roles)
 
+
+# This is sketchy, and probably belongs in a class.
+def test_thematic_search_find(parse, roles):
+    for child in parse.child:
+        print("Next child value:", child)
+        if child.value == "VP":
+            # So here we need to replace key.search_verb with something that does search_verb but with child.
+            roles["action"].append(search_verb(child, verbs))
+            '''
+            roles["theme"].append(child.search_noun(nouns))
+            roles["agent"].append(child.search_up(nouns))
+            roles["location"].append(child.search_with_keywords(locations))
+            roles["instrument"].append(child.search_with_keywords(instruments))
+            '''
+            # base, like_phrase = key.base_search("like", "PP")
+            # if base is not None:
+            #    roles["base"].append(base.to_word())
+            #    roles["target"].append(like_phrase.target_search(base.value._label))
+            return roles
+        roles = test_thematic_search_find(child, roles)
+    return roles
+
+
+# It's very unclear why this is doing what it's doing.
+def search_verb(node, verbs, to_return=None):
+    print("Calling search_verb", node.value, verbs)
+    for i in range(len(node.child)):
+        print("Next subchild: ", node.child[i].value)
+        if node.child[i].value in verbs:
+            if i < len(node.child) - 1:
+                if node.child[i + 1].value != "RB":
+                    # This needs to get the word at the location
+                    print("returning node.child[i].value:", node.child[i].value)
+                    return node.child[i].value
+                elif node.child[i + 1].value in verbs:
+                    print("returning node.child[i + 1].value:", node.child[i + 1].value)
+                    return node.child[i + 1].value
+        else:
+            print("That wasn't in verbs.")
+
+        to_return = node.child[i].search_verb(label, to_return)
+    return to_return
+
+
+# May no longer be used?
+def to_word(self):
+    if len(self.word) == 0:
+        self.word = self._to_word("")
+
+    return self.word
 
 # Figure out what i is.
 # This is a unusual name for this; rename it, most likely.
