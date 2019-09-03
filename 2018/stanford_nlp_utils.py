@@ -56,6 +56,8 @@ def demo_test():
 
 
 def test_thematic_search(parse):
+    # This might need to go up top, with the call underneath, and then we don't make
+    # roles an argument.
     roles = {"action": [],
              "agent": [],
              "theme": [],
@@ -63,29 +65,32 @@ def test_thematic_search(parse):
              "instrument": [],
              "base": [],
              "target": []}
-    test_thematic_search_find(parse, roles)
+
+    # This is sketchy, and probably belongs in a class.
+    def test_thematic_search_find(parse):
+        for child in parse.child:
+            print("Next child value:", child)
+            if child.value == "VP":
+                # So here we need to replace key.search_verb with something that does search_verb but with child.
+                roles["action"].append(search_verb(child, verbs))
+                roles["theme"].append(search_noun(child, nouns))
+                # roles["agent"].append(search_up(child, nouns))
+                '''
+                roles["location"].append(child.search_with_keywords(locations))
+                roles["instrument"].append(child.search_with_keywords(instruments))
+                '''
+                # base, like_phrase = key.base_search("like", "PP")
+                # if base is not None:
+                #    roles["base"].append(base.to_word())
+                #    roles["target"].append(like_phrase.target_search(base.value._label))
+                # return roles
+            test_thematic_search_find(child)
+            print("Roles now:", roles)
+        # return roles
 
 
-# This is sketchy, and probably belongs in a class.
-def test_thematic_search_find(parse, roles):
-    for child in parse.child:
-        print("Next child value:", child)
-        if child.value == "VP":
-            # So here we need to replace key.search_verb with something that does search_verb but with child.
-            roles["action"].append(search_verb(child, verbs))
-            '''
-            roles["theme"].append(child.search_noun(nouns))
-            roles["agent"].append(child.search_up(nouns))
-            roles["location"].append(child.search_with_keywords(locations))
-            roles["instrument"].append(child.search_with_keywords(instruments))
-            '''
-            # base, like_phrase = key.base_search("like", "PP")
-            # if base is not None:
-            #    roles["base"].append(base.to_word())
-            #    roles["target"].append(like_phrase.target_search(base.value._label))
-            return roles
-        roles = test_thematic_search_find(child, roles)
-    return roles
+    test_thematic_search_find(parse)
+    return(roles)
 
 
 # It's very unclear why this is doing what it's doing.
@@ -108,6 +113,27 @@ def search_verb(node, verbs, to_return=None):
         to_return = node.child[i].search_verb(label, to_return)
     return to_return
 
+
+def search_noun(node, nouns, to_return=None):
+    for next_child in node.child:
+        if next_child.value in nouns:
+            return next_child.value
+        if to_return is None:
+            to_return = search_noun(next_child, nouns, to_return)
+    return to_return
+
+
+# For this one to work, we need to be able to go up the tree. Are any others like that?
+# If that's the case, then we need to rebuild the tree after all.
+# Yeah, we're going to need to rebuild the tree with links up.
+def search_up(node, label, to_return=None):
+    if self.parent is not None:
+        for child in node.parent.child:  # Not sure if parent works here; might need another strategy
+            if child.value in label:
+                return child.to_word()
+            if to_return is None:
+                to_return = node.parent.search_up(label, to_return)
+    return to_return
 
 # May no longer be used?
 def to_word(self):
