@@ -8,11 +8,6 @@ from stanfordnlp.server import CoreNLPClient
 
 os.environ["CORENLP_HOME"] = "/Users/David/Documents/Code/analogy/corenlp"
 
-'''
-doc = pipeline("Barack Obama was born in Hawaii.  He was elected president in 2008.")
-doc.sentences[0].print_dependencies()
-'''
-
 # From the old way of doing it:
 # parser = stanford.StanfordParser(model, jar, encoding='utf8')
 
@@ -26,7 +21,9 @@ instruments = ["by", "with"]
 def demo_test():
     # ['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref']
     # text = "A cat in a cup is like a dog in a bucket."
-    text = "A cat is like a dog."
+    # text = "Rumor of a big battle spread like a grassfire up the valley." # This one doesn't parse correctly.
+    text = "When the sun came out, Stevie strode proudly into Orange Square," \
+           "smiling like a landlord on industrious tenants."
     with CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'],
                        timeout=60000, memory='4G', be_quiet=True) as client:
         #client = CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos'], timeout=20000, memory='2G', be_quiet=False)
@@ -39,11 +36,12 @@ def demo_test():
         print('Constituency parse of first sentence')
         constituency_parse = sentence.parseTree
 
-        '''
+
         print(constituency_parse)
         print(constituency_parse.value)
         print("$$")
 
+        '''
         print('---')
         print('first subtree of constituency parse')
         print(constituency_parse.child[0])
@@ -209,9 +207,11 @@ class CoreNLPNode:
         return self
 
     def search_verb(self, label, to_return=None):
+        print("Doing search_verb with", self.value)
         for i in range(len(self.children)):
             print(self.children[i].value)
             if self.children[i].value in label:
+                print("self.children[i].value, which is", self.children[i].value, "matched")
                 if i < len(self.children) - 1:
                     if self.children[i + 1].value != "RB":
                         return self.children[i].to_word()
@@ -251,34 +251,41 @@ class CoreNLPNode:
 
     # The other version of this takes role as an argument. Is that somehow important?
     # What may be going on is that we're changing things for the wrong self.
-    def thematic_search(self): # role):
+    def thematic_search(self):  # role):
         for child in self.children:
+            print("Next child value:", child.value)
             if child.value == "VP":
                 new_actions = child.search_verb(verbs)
                 print("New Actions:", new_actions)
-                self.root.roles["action"].append(new_actions)
+                if new_actions:
+                    self.root.roles["action"].append(new_actions)
 
                 new_themes = child.search_noun(nouns)
                 print("New Actions:", new_themes)
-                self.root.roles["theme"].append(new_themes)
+                if new_themes:
+                    self.root.roles["theme"].append(new_themes)
 
                 new_agents = child.search_up(nouns)
                 print("New Agents:", new_agents)
-                self.root.roles["agent"].append(new_agents)
+                if new_agents:
+                    self.root.roles["agent"].append(new_agents)
 
                 new_locations = child.search_with_keywords(locations)
                 print("New Locations:", new_locations)
-                self.root.roles["location"].append(new_locations)
+                if new_locations:
+                    self.root.roles["location"].append(new_locations)
 
                 new_instruments = child.search_with_keywords(instruments)
                 print("New Instruments:", new_instruments)
-                self.root.roles["instrument"].append(new_instruments)
+                if new_instruments:
+                    self.root.roles["instrument"].append(new_instruments)
 
                 base, like_phrase = child.base_search("like", "PP")
                 print("Base:", base, like_phrase)
-                print(base.value)
-                print(like_phrase.value)
-                #self.root.roles["base"].append(base.to_word())
+                print(base)
+                print(like_phrase)
+                if base:
+                    self.root.roles["base"].append(base)
                 '''
                 if base is not None:
                     self.root.roles["base"].append(base.to_word())
@@ -303,6 +310,8 @@ class CoreNLPNode:
             role = child.search_for_base_and_target(role, word, label)
         return role
 
+    # Word is the word "like" in how we're typically using this.
+    # Label is PP. Neither of these things ever change.
     def base_search(self, word, label, caches=[]):
         print("starting base_search with", self.value, word, label)
         for child in self.children:
@@ -316,8 +325,10 @@ class CoreNLPNode:
                 if True:  # child.value[0][0] == word:  # This isn't right, this is just to see what happens.
                     if len(child.children) > 1:
                         print("Returning from top case.")
-                        print(child.core_nlp_parse)
-                        return child.children[1], child
+                        print(child.children[1].children[1].core_nlp_parse)
+                        base_found = child.children[1].children[1].value
+                        like_phrase_found = child.children[1].value
+                        return base_found, like_phrase_found
                 elif child.value[0] == "ADVP" and child.value[1][0] == word:
                     print("Returning from second case.")
                     return child.children[2], child
@@ -338,31 +349,17 @@ class CoreNLPNode:
         return None
 
     def to_word(self):
-        if len(self.word) == 0:
-            self.word = self._to_word("")
-        return self.word
+        if self is not None:
+            if len(self.word) == 0:
+                self.word = self._to_word("")
+            return self.word[:-1]  # Cut off the final space.
 
-    '''
-    def _to_word(self, temp):
-        if type(self.value) == nltk.tree.Tree:
-            if len(self.children) == 0:
-                return str(self.value[0])
-            else:
-                for child in self.children:
-
-                    if type(child.value[0]) != nltk.tree.Tree:
-                        temp += str(child.value[0]) + " "
-                    else:
-                        temp += child._to_word("")
-        return temp
-    '''
     def _to_word(self, temp):
         if len(self.children) == 0:
-            return self.value
+            return self.value + " "
         else:
             for child in self.children:
                 temp += child._to_word("")
-        print("_to_word returning:", temp)
         return temp
 
 
