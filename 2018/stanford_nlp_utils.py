@@ -207,11 +207,9 @@ class CoreNLPNode:
         return self
 
     def search_verb(self, label, to_return=None):
-        print("Doing search_verb with", self.value)
         for i in range(len(self.children)):
             print(self.children[i].value)
             if self.children[i].value in label:
-                print("self.children[i].value, which is", self.children[i].value, "matched")
                 if i < len(self.children) - 1:
                     if self.children[i + 1].value != "RB":
                         return self.children[i].to_word()
@@ -253,7 +251,6 @@ class CoreNLPNode:
     # What may be going on is that we're changing things for the wrong self.
     def thematic_search(self):  # role):
         for child in self.children:
-            print("Next child value:", child.value)
             if child.value == "VP":
                 new_actions = child.search_verb(verbs)
                 print("New Actions:", new_actions)
@@ -282,10 +279,12 @@ class CoreNLPNode:
 
                 base, like_phrase = child.base_search("like", "PP")
                 print("Base:", base, like_phrase)
-                print(base)
-                print(like_phrase)
                 if base:
-                    self.root.roles["base"].append(base)
+                    print(base.to_word())
+                    print(like_phrase.to_word())
+                    self.root.roles["base"].append(base.to_word())
+                else:
+                    print("Returned None for Base")
                 '''
                 if base is not None:
                     self.root.roles["base"].append(base.to_word())
@@ -312,28 +311,48 @@ class CoreNLPNode:
 
     # Word is the word "like" in how we're typically using this.
     # Label is PP. Neither of these things ever change.
+    # The original version of this returns a node consider revisiting that.
     def base_search(self, word, label, caches=[]):
         print("starting base_search with", self.value, word, label)
+        # For each of the children of the current node, do the following:
         for child in self.children:
             print("next child's value:", child.value)
+            # Check to see if that child is a PP.
             if child.value == label:
                 print("That was equal to label")
-                print("@@@@@child.value[0][0] is", child.value[0][0])
                 # Unclear what this is for, because nothing is documented, but this should be checking for like.
                 # Instead, it's currently getting the first letter of the label.
-                # This is really hacked together.
-                if True:  # child.value[0][0] == word:  # This isn't right, this is just to see what happens.
+                # Check to see if the PP's leftmost grandchild is the word "like."
+                leftmost_grandchild_value = child.children[0].children[0].value
+                print("leftmost_grandchild_value is", leftmost_grandchild_value)
+                if leftmost_grandchild_value == word:
                     if len(child.children) > 1:
                         print("Returning from top case.")
+                        print("child:")
+                        print(child.core_nlp_parse)
+                        print("child's Second child's second child:")
                         print(child.children[1].children[1].core_nlp_parse)
-                        base_found = child.children[1].children[1].value
-                        like_phrase_found = child.children[1].value
+                        base_found = child.children[1]
+                        like_phrase_found = child
                         return base_found, like_phrase_found
                 elif child.value[0] == "ADVP" and child.value[1][0] == word:
                     print("Returning from second case.")
+                    # This needs revisiting, it's currently nothing.
                     return child.children[2], child
             if self.base is None:
                 self.base, self.like_phrase = child.base_search(word, label)
+        return self.base, self.like_phrase
+
+    def base_search_original(self, word, label, caches = []):
+        for key in self.children:
+            if key.value._label == label:
+                if key.value[0][0] == word:
+                    if len(key.children) > 1:
+                        return key.children[1], key
+                elif key.value[0]._label == "ADVP" and key.value[1][0] == word:
+                    return key.children[2], key
+            if self.base is None:
+                self.base, self.like_phrase = key.base_search(word, label)
         return self.base, self.like_phrase
 
     def target_search(self, label):
@@ -349,7 +368,7 @@ class CoreNLPNode:
         return None
 
     def to_word(self):
-        if self is not None:
+        if self:
             if len(self.word) == 0:
                 self.word = self._to_word("")
             return self.word[:-1]  # Cut off the final space.
