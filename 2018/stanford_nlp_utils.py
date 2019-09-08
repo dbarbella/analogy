@@ -22,44 +22,58 @@ def demo_test():
     # ['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref']
     # text = "A cat in a cup is like a dog in a bucket."
     # text = "Rumor of a big battle spread like a grassfire up the valley." # This one doesn't parse correctly.
-    text = "When the sun came out, Stevie strode proudly into Orange Square," \
-           "smiling like a landlord on industrious tenants."
+    # text = "When the sun came out, Stevie strode proudly into Orange Square," \
+    #       "smiling like a landlord on industrious tenants. A cat is like a dog."
+
+    text = '''and yet like a child among adults .
+    I don't mean a few aesthetes who play about with sensations , like a young prince in a miniature dabbling his hand in a pool .
+    Oh , he was being queer and careful , pawing about in the drawer and holding the bottle like a snake at the length of his arm .
+    `` I went to the city And there I did Weep , Men a-crowing like asses , And living like sheep .
+    Rumor of a big battle spread like a grassfire up the valley .
+    When the sun came out , Stevie strode proudly into Orange Square , smiling like a landlord on industrious tenants .
+    They gave the room a strange note of incongruity , like a mole on a beautiful face .
+    It always came on , faithfully , just like a radio or juke box , whenever he started to worry too much about something , when the bad things tried to push their way into him .
+    The design of a mechanical interlocking frame is much like a mechanical puzzle , but once understood , the principles can be applied to any track and signal arrangement .
+    The sticks fell like a shower around her and she felt them sting her flesh and send tiny points of pain along her thighs .
+    I saw the pony fall like a stone and the young warrior flew over its head , bouncing like a rubber ball .
+    '''
+    #  text = "A cat is like a dog."
     with CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'],
                        timeout=60000, memory='4G', be_quiet=True) as client:
-        #client = CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos'], timeout=20000, memory='2G', be_quiet=False)
         print("##########-----About to annotate...-----")
         # ann = client.annotate(text, annotators=['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref'])
         ann = client.annotate(text)
-        sentence = ann.sentence[0]
+        for sentence in ann.sentence:
 
-        print('---')
-        print('Constituency parse of first sentence')
-        constituency_parse = sentence.parseTree
+            '''
+            print('---')
+            print('Constituency parse of first sentence')
+            '''
+            constituency_parse = sentence.parseTree
+            '''
+            print(constituency_parse)
+            print(constituency_parse.value)
+            print("$$")
+            
+            print('---')
+            print('first subtree of constituency parse')
+            print(constituency_parse.child[0])
+            print(constituency_parse.child[0].value)
+            print("@@")
+    
+            print('---')
+            print('Number of subtrees of constituency parse')
+            print(len(constituency_parse.child))
+    
+            print("Roles:")
+            print(test_thematic_search(constituency_parse))
+            '''
 
-
-        print(constituency_parse)
-        print(constituency_parse.value)
-        print("$$")
-
-        '''
-        print('---')
-        print('first subtree of constituency parse')
-        print(constituency_parse.child[0])
-        print(constituency_parse.child[0].value)
-        print("@@")
-
-        print('---')
-        print('Number of subtrees of constituency parse')
-        print(len(constituency_parse.child))
-
-        print("Roles:")
-        print(test_thematic_search(constituency_parse))
-        '''
-
-        my_parse = CoreNLPNode(constituency_parse)
-        my_parse.create_tree()
-        my_parse.thematic_search()
-        print("Final roles:", my_parse.roles)
+            my_parse = CoreNLPNode(constituency_parse)
+            my_parse.create_tree()
+            my_parse.thematic_search()
+            ## print("Sentence:", sentence)
+            print("Final roles:", my_parse.roles)
 
 
 def test_thematic_search(parse):
@@ -208,7 +222,6 @@ class CoreNLPNode:
 
     def search_verb(self, label, to_return=None):
         for i in range(len(self.children)):
-            print(self.children[i].value)
             if self.children[i].value in label:
                 if i < len(self.children) - 1:
                     if self.children[i + 1].value != "RB":
@@ -249,49 +262,57 @@ class CoreNLPNode:
 
     # The other version of this takes role as an argument. Is that somehow important?
     # What may be going on is that we're changing things for the wrong self.
-    def thematic_search(self):  # role):
+    def thematic_search(self, verbose=False):  # role):
         for child in self.children:
             if child.value == "VP":
                 new_actions = child.search_verb(verbs)
-                print("New Actions:", new_actions)
+                if verbose:
+                    print("New Actions:", new_actions)
                 if new_actions:
                     self.root.roles["action"].append(new_actions)
 
                 new_themes = child.search_noun(nouns)
-                print("New Actions:", new_themes)
+                if verbose:
+                    print("New Actions:", new_themes)
                 if new_themes:
                     self.root.roles["theme"].append(new_themes)
 
                 new_agents = child.search_up(nouns)
-                print("New Agents:", new_agents)
+                if verbose:
+                    print("New Agents:", new_agents)
                 if new_agents:
                     self.root.roles["agent"].append(new_agents)
 
                 new_locations = child.search_with_keywords(locations)
-                print("New Locations:", new_locations)
+                if verbose:
+                    print("New Locations:", new_locations)
                 if new_locations:
                     self.root.roles["location"].append(new_locations)
 
                 new_instruments = child.search_with_keywords(instruments)
-                print("New Instruments:", new_instruments)
+                if verbose:
+                    print("New Instruments:", new_instruments)
                 if new_instruments:
                     self.root.roles["instrument"].append(new_instruments)
 
                 base, like_phrase = child.base_search("like", "PP")
-                print("Base:", base, like_phrase)
+                if verbose:
+                    print("Base:", base, like_phrase)
                 if base:
-                    print(base.to_word())
-                    print(like_phrase.to_word())
-                    self.root.roles["base"].append(base.to_word())
-                else:
-                    print("Returned None for Base")
-                '''
-                if base is not None:
+                    if verbose:
+                        print(base.to_word())
+                        print(like_phrase.to_word())
                     self.root.roles["base"].append(base.to_word())
                     target = like_phrase.target_search(base.value)
                     self.root.roles["target"].append(target)
+                else:
+                    if verbose:
+                        print("Returned None for Base")
+
+
+
                 # return roles
-                '''
+
             child.thematic_search()
 
 
@@ -312,31 +333,37 @@ class CoreNLPNode:
     # Word is the word "like" in how we're typically using this.
     # Label is PP. Neither of these things ever change.
     # The original version of this returns a node consider revisiting that.
-    def base_search(self, word, label, caches=[]):
-        print("starting base_search with", self.value, word, label)
+    def base_search(self, word, label, caches=[], verbose=False):
+        if verbose:
+            print("starting base_search with", self.value, word, label)
         # For each of the children of the current node, do the following:
         for child in self.children:
-            print("next child's value:", child.value)
+            if verbose:
+                print("next child's value:", child.value)
             # Check to see if that child is a PP.
             if child.value == label:
-                print("That was equal to label")
+                if verbose:
+                    print("That was equal to label")
                 # Unclear what this is for, because nothing is documented, but this should be checking for like.
                 # Instead, it's currently getting the first letter of the label.
                 # Check to see if the PP's leftmost grandchild is the word "like."
                 leftmost_grandchild_value = child.children[0].children[0].value
-                print("leftmost_grandchild_value is", leftmost_grandchild_value)
+                if verbose:
+                    print("leftmost_grandchild_value is", leftmost_grandchild_value)
                 if leftmost_grandchild_value == word:
                     if len(child.children) > 1:
-                        print("Returning from top case.")
-                        print("child:")
-                        print(child.core_nlp_parse)
-                        print("child's Second child's second child:")
-                        print(child.children[1].children[1].core_nlp_parse)
+                        if verbose:
+                            print("Returning from top case.")
+                            print("child:")
+                            print(child.core_nlp_parse)
+                            print("child's Second child's second child:")
+                            print(child.children[1].children[1].core_nlp_parse)
                         base_found = child.children[1]
                         like_phrase_found = child
                         return base_found, like_phrase_found
                 elif child.value[0] == "ADVP" and child.value[1][0] == word:
-                    print("Returning from second case.")
+                    if verbose:
+                        print("Returning from second case.")
                     # This needs revisiting, it's currently nothing.
                     return child.children[2], child
             if self.base is None:
@@ -358,7 +385,7 @@ class CoreNLPNode:
     def target_search(self, label):
         if self.parent is not None:
             for child in self.parent.children:
-                if child.value._label == label:
+                if child.value == label:
                     child.to_word()
                     return child.word
                 # elif child.value._label == ['S']:
@@ -367,11 +394,12 @@ class CoreNLPNode:
             return self.parent.target_search(label)
         return None
 
+    # The purpose of this is to avoid redoing calculations
     def to_word(self):
         if self:
             if len(self.word) == 0:
-                self.word = self._to_word("")
-            return self.word[:-1]  # Cut off the final space.
+                self.word = self._to_word("")[:-1]  # Cut off the final space.
+            return self.word
 
     def _to_word(self, temp):
         if len(self.children) == 0:
