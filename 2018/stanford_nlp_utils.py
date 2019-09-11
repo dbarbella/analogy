@@ -26,8 +26,8 @@ def demo_test(replace_like=False):
     # text = "Rumor of a big battle spread like a grassfire up the valley." # This one doesn't parse correctly.
     # text = "When the sun came out, Stevie strode proudly into Orange Square," \
     #       "smiling like a landlord on industrious tenants. A cat is like a dog."
-
-    text = '''and yet like a child among adults .
+    text = ''
+    text_big = '''and yet like a child among adults .
     I don't mean a few aesthetes who play about with sensations , like a young prince in a miniature dabbling his hand in a pool .
     Oh , he was being queer and careful , pawing about in the drawer and holding the bottle like a snake at the length of his arm .
     `` I went to the city And there I did Weep , Men a-crowing like asses , And living like sheep .
@@ -53,7 +53,6 @@ def demo_test(replace_like=False):
         print(token.word)
         # sentence is a Sentence. Where and how is this defined?
         for sentence in ann.sentence:
-            print("Here is the sentence.")
             if replace_like:
                 replace_with_like(sentence, signals, "like")
             for token in sentence.token:
@@ -205,7 +204,7 @@ class CoreNLPNode:
                 if new_instruments:
                     self.root.roles["instrument"].append(new_instruments)
 
-                base, like_phrase = child.base_search(self.signals, "PP")
+                base, like_phrase = child.base_search(self.signals, "PP", verbose=True)
                 if verbose:
                     print("Base:", base, like_phrase)
                 if base:
@@ -235,6 +234,7 @@ class CoreNLPNode:
                 if verbose:
                     print("That was equal to label")
                 # Check to see if the PP's leftmost grandchild is the word "like."
+                print(self.value)
                 leftmost_grandchild_value = child.children[0].children[0].value
                 if verbose:
                     print("leftmost_grandchild_value is", leftmost_grandchild_value)
@@ -255,7 +255,7 @@ class CoreNLPNode:
                     # This needs revisiting, it's currently nothing.
                     return child.children[2], child
             if self.base is None:
-                self.base, self.like_phrase = child.base_search(signals, label)
+                self.base, self.like_phrase = child.base_search(signals, label, verbose=verbose)
         return self.base, self.like_phrase
 
     def target_search(self, label):
