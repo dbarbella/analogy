@@ -19,6 +19,7 @@ locations = ["in", "inside", "on", "onto", "into", "under", "above", "at", "from
 instruments = ["by", "with"]
 
 
+
 def demo_test(replace_like=False):
     # ['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref']
     # text = "A cat in a cup is like a dog in a bucket."
@@ -40,8 +41,7 @@ def demo_test(replace_like=False):
     '''
     text += '''This dog is analogous to an atom.'''
 
-    if replace_like:
-        signals = read_by_line("analogy_signals.txt")
+
     with CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'],
                        timeout=60000, memory='4G', be_quiet=True) as client:
         print("##########-----About to annotate...-----")
@@ -107,10 +107,13 @@ class CoreNLPNode:
         self.target = None
         self.like_phrase = None
         self.word = ""
+
         if not root:
             self.root = self  # This happens if we are setting up the root.
+            self.signals = read_by_line("analogy_signals.txt")
         else:
             self.root = root  # This one happens if we are setting up a child.
+            self.signals = self.root.signals
         self.roles = {"action": [],
                       "agent": [],
                       "theme": [],
@@ -120,7 +123,6 @@ class CoreNLPNode:
                       "target": []}
 
     def create_tree(self):
-        # if type(self.value[0]) == nltk.tree.Tree:
         for next_child in self.core_nlp_parse.child:
             child = CoreNLPNode(next_child, self.root)
             child.parent = self
@@ -170,7 +172,7 @@ class CoreNLPNode:
 
     # The other version of this takes role as an argument. Is that somehow important?
     # What may be going on is that we're changing things for the wrong self.
-    def thematic_search(self, analogy_signals=["like"], verbose=False):  # role):
+    def thematic_search(self, verbose=False):  # role):
         for child in self.children:
             if child.value == "VP":
                 new_actions = child.search_verb(verbs)
@@ -203,7 +205,7 @@ class CoreNLPNode:
                 if new_instruments:
                     self.root.roles["instrument"].append(new_instruments)
 
-                base, like_phrase = child.base_search(analogy_signals, "PP")
+                base, like_phrase = child.base_search(self.signals, "PP")
                 if verbose:
                     print("Base:", base, like_phrase)
                 if base:
@@ -221,9 +223,9 @@ class CoreNLPNode:
     # Word is the word "like" in how we're typically using this.
     # Label is PP. Neither of these things ever change.
     # The original version of this returns a node consider revisiting that.
-    def base_search(self, analogy_signals, label, caches=[], verbose=False):
+    def base_search(self, signals, label, verbose=False):
         if verbose:
-            print("starting base_search with", self.value, analogy_signals, label)
+            print("starting base_search with", self.value, signals, label)
         # For each of the children of the current node, do the following:
         for child in self.children:
             if verbose:
@@ -232,13 +234,11 @@ class CoreNLPNode:
             if child.value == label:
                 if verbose:
                     print("That was equal to label")
-                # Unclear what this is for, because nothing is documented, but this should be checking for like.
-                # Instead, it's currently getting the first letter of the label.
                 # Check to see if the PP's leftmost grandchild is the word "like."
                 leftmost_grandchild_value = child.children[0].children[0].value
                 if verbose:
                     print("leftmost_grandchild_value is", leftmost_grandchild_value)
-                if leftmost_grandchild_value in analogy_signals:
+                if leftmost_grandchild_value in signals:
                     if len(child.children) > 1:
                         if verbose:
                             print("Returning from top case.")
@@ -249,13 +249,13 @@ class CoreNLPNode:
                         base_found = child.children[1]
                         like_phrase_found = child
                         return base_found, like_phrase_found
-                elif child.value[0] == "ADVP" and child.value[1][0] in analogy_signals:
+                elif child.value[0] == "ADVP" and child.value[1][0] in signals:
                     if verbose:
                         print("Returning from second case.")
                     # This needs revisiting, it's currently nothing.
                     return child.children[2], child
             if self.base is None:
-                self.base, self.like_phrase = child.base_search(analogy_signals, label)
+                self.base, self.like_phrase = child.base_search(signals, label)
         return self.base, self.like_phrase
 
     def target_search(self, label):
@@ -286,8 +286,8 @@ class CoreNLPNode:
         return temp
 
 
-def read_by_line(fileName):
-    with open(fileName) as file:
+def read_by_line(file_name):
+    with open(file_name) as file:
         signals = file.readlines()
     signals = [x.strip() for x in signals]
     return signals
