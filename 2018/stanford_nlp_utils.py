@@ -19,7 +19,6 @@ locations = ["in", "inside", "on", "onto", "into", "under", "above", "at", "from
 instruments = ["by", "with"]
 
 
-
 def demo_test(replace_like=False):
     # ['tokenize','ssplit','pos','lemma','ner','parse','depparse','coref']
     # text = "A cat in a cup is like a dog in a bucket."
@@ -40,7 +39,6 @@ def demo_test(replace_like=False):
     I saw the pony fall like a stone and the young warrior flew over its head , bouncing like a rubber ball .
     '''
     text += '''This dog is analogous to an atom.'''
-
 
     with CoreNLPClient(annotators=['tokenize', 'ssplit', 'pos', 'lemma', 'ner', 'parse', 'depparse', 'coref'],
                        timeout=60000, memory='4G', be_quiet=True) as client:
@@ -64,15 +62,13 @@ def demo_test(replace_like=False):
             my_parse = CoreNLPNode(constituency_parse)
             my_parse.create_tree()
             my_parse.thematic_search()
-            #print("Sentence:", sentence)
-            #  print("Final roles:", my_parse.roles)
             print("BASE: ", my_parse.roles["base"], "TARGET: ",
                   my_parse.roles["target"], "ACTION: ", my_parse.roles["action"])
 
 
 # Figure out what i is.
 # This is a unusual name for this; rename it, most likely.
-def draw_tree_save_image(sentence):  #, i, dir):
+def draw_tree_save_image(sentence):
     pipeline = stanfordnlp.Pipeline(models_dir="../stanfordnlp_resources")  # This sets up a default neural pipeline in English
     doc = pipeline(sentence)
     doc.sentences[0].print_dependencies()
