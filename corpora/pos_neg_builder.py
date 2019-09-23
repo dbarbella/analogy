@@ -23,10 +23,13 @@ import csv
 
 ONE_FACTOR_SENTENCE_COLUMN = 1
 ONE_FACTOR_SCALAR_COLUMN = 2
+ONE_FACTOR_VALID_COLUMN = 3
 
 TWO_FACTOR_SENTENCE_COLUMN = 1
 TWO_FACTOR_STR_COLUMN = 2
 TWO_FACTOR_ATT_COLUMN = 3
+TWO_FACTOR_VALID_COLUMN = 4
+
 
 def one_factor_cutoff(scalar):
     """
@@ -46,13 +49,22 @@ def two_factor_cutoff(structural, attributional):
     :return:
     """
     if 1 <= structural <= 3 and 1 <= attributional <= 3:
+        print(structural, attributional)
+        print(structural > attributional)
         return structural > attributional
     else:
         raise ValueError("In two_factor_cutoff, one of the values was out of bounds.")
 
 
+def validity_check(validity_val):
+    if validity_val == 'F':
+        return False
+    else:
+        return True
+
 def produce_pos_neg_files(dict_of_input_files, pos_file_name, neg_file_name,
-                          one_factor_func=one_factor_cutoff, two_factor_func=two_factor_cutoff):
+                          one_factor_func=one_factor_cutoff, two_factor_func=two_factor_cutoff,
+                          in_delimiter=','):
     """
     :param dict_of_input_files: This is a dictionary with file names as keys and "one_factor" or "two_factor"
     as values.
@@ -60,40 +72,50 @@ def produce_pos_neg_files(dict_of_input_files, pos_file_name, neg_file_name,
     :param neg_file_name: The file to which we want to write the negative examples.
     :param one_factor_func: The function that determines whether a one-factor example is an analogy.
     :param two_factor_func: The function that determines whether a two-factor example is an analogy.
+    :param in_delimiter: The delimiter used in the input files. A single comma by default.
     :return: None
     """
-    with open(pos_file_name) as pos_file, open(neg_file_name) as neg_file:
+    with open(pos_file_name, 'w') as pos_file, open(neg_file_name, 'w') as neg_file:
         pos_writer = csv.writer(pos_file, quoting=csv.QUOTE_ALL)
         neg_writer = csv.writer(neg_file, quoting=csv.QUOTE_ALL)
         for file_name in dict_of_input_files.keys():
             input_type = dict_of_input_files[file_name]
-            with open(file_name) as file:
-                csv_reader = csv.reader(file, delimiter=',')  # This may need to change.
+            with open(file_name, 'r') as file:
+                csv_reader = csv.reader(file, delimiter=in_delimiter)  # How can we indicate a header row?
+
+                csv_reader.__next__()  # Move past the header row; this is not a great solution.
 
                 if input_type == "one_factor":
                     for row in csv_reader:  # Consider refactoring this so that only one var holds the func name.
                         sentence = row[ONE_FACTOR_SENTENCE_COLUMN]
-                        scalar = row[ONE_FACTOR_SCALAR_COLUMN]
-                        is_analogy = one_factor_func(scalar)
-                        if is_analogy:
-                            # We would like this to drop the entire row into pos_file_name
-                            pos_writer.writerow(row)
-                        else:
-                            # We would like this to drop the entire row into neg_file_name
-                            neg_writer.writerow(row)
+                        scalar = float(row[ONE_FACTOR_SCALAR_COLUMN])
+                        valid = validity_check(row[ONE_FACTOR_VALID_COLUMN])
+                        if valid:
+                            is_analogy = one_factor_func(scalar)
+                            if is_analogy:
+                                # We would like this to drop the entire row into pos_file_name
+                                pos_writer.writerow(row)
+                            else:
+                                # We would like this to drop the entire row into neg_file_name
+                                neg_writer.writerow(row)
 
                 elif input_type == "two_factor":
+                    # We need a smarter way to handle header rows.
                     for row in csv_reader:  # Consider refactoring this so that only one var holds the func name.
                         sentence = row[TWO_FACTOR_SENTENCE_COLUMN]
-                        structural = row[TWO_FACTOR_STR_COLUMN]
-                        attributional = row[TWO_FACTOR_STR_COLUMN]
-                        is_analogy = two_factor_func(structural, attributional)
-                        if is_analogy:
-                            # We would like this to drop the entire row into pos_file_name
-                            pos_writer.writerow(row)
-                        else:
-                            # We would like this to drop the entire row into neg_file_name
-                            neg_writer.writerow(row)
+                        structural = float(row[TWO_FACTOR_STR_COLUMN])
+                        attributional = float(row[TWO_FACTOR_ATT_COLUMN])
+                        valid = validity_check(row[TWO_FACTOR_VALID_COLUMN])
+                        if valid:
+                            is_analogy = two_factor_func(structural, attributional)
+                            if is_analogy:
+                                # We would like this to drop the entire row into pos_file_name
+                                print("Writing pos", row)
+                                pos_writer.writerow(row)
+                            else:
+                                # We would like this to drop the entire row into neg_file_name
+                                print("Writing neg", row)
+                                neg_writer.writerow(row)
 
 '''
 def exportCSV(fileName, samples):
@@ -126,6 +148,6 @@ def readCSV(file_name, sentence_column):
     return sent
 '''
 
-if name == '__main__':
-    file_dict = {"analogy_names_OANC-TRAV-label1.tsv": "two_factor"}
-    produce_pos_neg_files({})
+if __name__ == '__main__':
+    file_dict = {"./oanc/analogy_names_OANC-TRAV-label1.tsv": "two_factor"}
+    produce_pos_neg_files(file_dict, "first-pos-test-file.tsv", "first-neg-test-file.tsv", in_delimiter='\t')
