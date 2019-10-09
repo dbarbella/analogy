@@ -31,11 +31,11 @@ default_non_analogies_file = '../../corpora/verified_non_analogies.csv'
 default_analogies_file = '../../corpora/verified_analogies.csv'
 default_glove_directory = '../../corpora/glove/'
 default_glove_file = 'glove.6B.100d.txt'
-default_results_file = './results/sen-len-trials-file-2.txt'
-default_spreadsheet_file = './results/sen-len-trials-sheet-2.csv'
+default_results_file = './results/nonfic-retest-results-20.txt'
+default_spreadsheet_file = './results/nonfic-retest-sheet-20.csv'
 default_experiments_file = './results/experiments.txt'
 
-sheet_comment = "Experimenting with different max_sen_length_in_words"
+default_sheet_comment = "Test: NONFIC."
 
 num_folds = 4
 num_epochs = 10
@@ -43,7 +43,8 @@ num_epochs = 10
 # Embed sentences # Is this the number of dimensions of the embedding vectors?
 embedding_dim = 100
 
-max_sen_length_in_words = 28  # maximum allowed number of words in a sentence
+max_sen_length_in_words = 0  # maximum allowed number of words in a sentence - Replace this with the 95th percentile.
+max_sen_len_percentile = .95
 lexicon_size = 10000  # choosing the most 10000 common words # Is this correct?
 num_test_samples = 40  # number of testing samples # Consider making this a percent, rather than an absolute number.
 epoch_batch_size = 1  # Size of the batch in each epoch.
@@ -73,18 +74,18 @@ else:
 # This will need to record all of the parameters used, along with the results.
 def record_results(trial_results_dict, results_file=default_results_file, results_sheet=default_spreadsheet_file):
     # print("Recording results...")
-    results_handler = open(results_file, 'a')
+    results_handler = open(results_file, 'a', encoding="utf8")
     results_handler.write("="*30 + "\n")
-    sheet_handler = open(results_sheet, 'a')
+    sheet_handler = open(results_sheet, 'a', encoding="utf8")
 
     start_datetime = trial_results_dict["start_datetime"]
     results_handler.write("Start time: " + str(start_datetime.strftime('%Y-%m-%d %H:%M:%S')) + "\n")
-    sheet_handler.write(sheet_comment + ",")
+    sheet_handler.write(default_sheet_comment + ",")
     sheet_handler.write(str(start_datetime.strftime('%Y-%m-%d %H:%M:%S'))+",")
 
     elapsed_time = trial_results_dict["elapsed_time"]
     results_handler.write("Elapsed time (s): " + str(elapsed_time) + "\n")
-    results_handler.write("Sheet Comment: " + sheet_comment + "\n")
+    results_handler.write("Sheet Comment: " + default_sheet_comment + "\n")
     sheet_handler.write(str(elapsed_time) + ",")
 
     num_analogy_sentences = trial_results_dict["num_analogy_sentences"]
@@ -145,6 +146,7 @@ def run_trial():
     trial_results_dict["start_time"] = start_time
     trial_results_dict["start_datetime"] = start_datetime
 
+    # What the heck are these magic numbers
     analogy_sentences = readCSV(analogies_file, 1)
     num_analogy_sentences = len(analogy_sentences)
     non_analogy_sentences = readCSV(non_analogies_file, 1)
@@ -165,9 +167,8 @@ def run_trial():
     tokenizer.fit_on_texts(all_sentences)
     # These sequences are lists of word indexes.
     sequences = tokenizer.texts_to_sequences(all_sentences)
-    # sen_lens = list(map(len, sequences))
-    # print(sorted(sen_lens))
-    # print(len(sen_lens))
+    sen_lens = list(map(len, sequences))
+    max_sen_length_in_words = sorted(sen_lens)[round(len(sen_lens)*max_sen_len_percentile)]
     word_index = tokenizer.word_index
     # print("Found {} unique tokens".format(len(word_index)))
     # pad sequences to a fixed length
@@ -211,19 +212,6 @@ def run_trial():
     return trial_results_dict
 
 
-# for j in range(10, 90, 10):
-for j in range(20, 21, 10):
-    accuracies = []
-    max_sen_length_in_words = j
-    for i in range(5):
-        trial_dict = run_trial()
-        accuracies.append(trial_dict["test_accuracy"])
-        backend.clear_session()
-    print(max_sen_length_in_words)
-    print(accuracies)
-    print(sum(accuracies)/len(accuracies))
-
-
 def plot(trial_results_dict):
     """
     Plots the results.
@@ -240,3 +228,14 @@ def plot(trial_results_dict):
     plt.ylabel('Acc')
     plt.legend()
     plt.show()
+
+
+if __name__ == '__main__':
+    accuracies = []
+    for i in range(20):
+        trial_dict = run_trial()
+        accuracies.append(trial_dict["test_accuracy"])
+        backend.clear_session()
+    print(max_sen_length_in_words)
+    print(accuracies)
+    print(sum(accuracies)/len(accuracies))

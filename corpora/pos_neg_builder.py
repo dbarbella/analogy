@@ -75,12 +75,13 @@ def produce_pos_neg_files(dict_of_input_files, pos_file_name, neg_file_name,
     :param in_delimiter: The delimiter used in the input files. A single comma by default.
     :return: None
     """
-    with open(pos_file_name, 'w') as pos_file, open(neg_file_name, 'w') as neg_file:
+    with open(pos_file_name, 'w', newline='', encoding="utf-8") as pos_file, \
+            open(neg_file_name, 'w', newline='', encoding="utf-8") as neg_file:
         pos_writer = csv.writer(pos_file, quoting=csv.QUOTE_ALL)
         neg_writer = csv.writer(neg_file, quoting=csv.QUOTE_ALL)
         for file_name in dict_of_input_files.keys():
             input_type = dict_of_input_files[file_name]
-            with open(file_name, 'r') as file:
+            with open(file_name, 'r', encoding="utf-8") as file:
                 csv_reader = csv.reader(file, delimiter=in_delimiter)  # How can we indicate a header row?
 
                 csv_reader.__next__()  # Move past the header row; this is not a great solution.
@@ -149,5 +150,9 @@ def readCSV(file_name, sentence_column):
 '''
 
 if __name__ == '__main__':
-    file_dict = {"./oanc/analogy_names_OANC-TRAV-label1.tsv": "two_factor"}
-    produce_pos_neg_files(file_dict, "first-pos-test-file.tsv", "first-neg-test-file.tsv", in_delimiter='\t')
+    file_dict = {#"./oanc/analogy_names_OANC-TRAV-label1.tsv": "two_factor",
+                 "./oanc/analogy_names_OANC-NONFIC-label1.tsv": "two_factor"}
+    produce_pos_neg_files(file_dict,
+                          "nonfic-pos-test-file.csv",
+                          "nonfic-neg-test-file.csv",
+                          in_delimiter='\t')

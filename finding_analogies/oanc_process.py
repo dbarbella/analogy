@@ -1,7 +1,9 @@
+import sys
+sys.path.append('..')
+
 from nltk.corpus.reader.tagged import TaggedCorpusReader
 import glob
-from nn.keras
-/boyer_moore import find_boyer_moore_all_paras
+from boyer_moore import find_boyer_moore_all_paras
 from boyer_moore import find_any_patterns
 from analogy_strings import analogy_string_list
 from utils import para_to_pretty
@@ -23,45 +25,33 @@ def build_file_list(root_directory):
 
 
 # Use the ANC tool to build an nltk version of the data here.
-oanc_directory = root + "\\corpora\\oanc\\nltk-data"  # oanc/nltk-data"
+oanc_directory = root + "\\corpora\\oanc\\nltk-data\\travel_guides"  # oanc/nltk-data"
 oanc_files = build_file_list(oanc_directory)
 
-corpus = TaggedCorpusReader('.', ["./ch1.txt"])
-print(corpus.fileids())
-x = corpus.words()[:50]
-print(x)
-print("Step one complete.")
-
 # See http://www.nltk.org/howto/corpus.html
-corpus2 = TaggedCorpusReader(oanc_directory, oanc_files, sep="_")  # We need to specify that _ is used as a separator.
-print(corpus2.fileids())
-x = corpus2.words()[:50]
+oanc_corpus = TaggedCorpusReader(oanc_directory, oanc_files, sep="_")  # Specify that _ is used as a separator.
+print(oanc_corpus.fileids())
+x = oanc_corpus.words()[:50]
 print(x)
-y = corpus2.paras()[:10]
-for i in range (len(y)):
-    print(len(y[i]))
-
-
-
-
+y = oanc_corpus.paras()[:10]
 
 """
 This script is an alternative/demo to scrapeWordHunt.py, but is not
 used in this folder.
 """
-SOURCE_NAME = "OANC"
+SOURCE_NAME = "OANC-TRAV"
 
-txt_file_name = "analogy_sentences_OANC.txt"
-csv_file_name = "analogy_names_OANC.csv"
-output_handler = open(root + "extractions\\" + txt_file_name, "w", encoding="utf-8")
+txt_file_name = "analogy_sentences_OANC-TRAV.txt"
+csv_file_name = "analogy_names_OANC-TRAV.csv"
+output_handler = open(root + "\\corpora\\extractions\\" + txt_file_name, "w", encoding="utf-8")
 
 # Find the indices of all paragraphs that contain the patterns as listed in
 # analogy_string_list
-paras = gutenberg.paras()
+paras = oanc_corpus.paras()
 para_indices = find_any_patterns(paras, analogy_string_list)
 ids = {}            # save sentences' ids in hash table to prevent duplicates.
 # Extract the exact sentences and write them to csv and txt files.
-with open(root + "extractions\\" + csv_file_name, 'w', encoding="utf-8") as csvfile:
+with open(root + "\\corpora\\extractions\\" + csv_file_name, 'w', encoding="utf-8") as csvfile:
     fieldnames = ['name', 'text']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL, lineterminator='\n')
     writer.writeheader()

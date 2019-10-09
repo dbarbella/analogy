@@ -8,6 +8,7 @@ from keras.layers import Embedding, LSTM, Dense
 from sklearn.metrics import confusion_matrix
 import time
 
+
 #############################################################
 # Reading in the CSVs
 #############################################################
@@ -19,9 +20,10 @@ def readCSV(file_name, sentence_column):
     :return: A list of the sentences, as strings.
     """
     sent = []
-    with open(file_name) as file:
+    with open(file_name, encoding="utf8") as file:
         csv_reader = csv.reader(file, delimiter=',')
         for row in csv_reader:
+            print("row:", row)
             sentence = row[sentence_column]
             sent.append(sentence)
     return sent
