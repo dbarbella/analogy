@@ -29,7 +29,11 @@ def readCSV(file_name, sentence_column):
     return sent
 
 
-def produce_embedding_index(glove_file):
+def produce_glove_embedding_index(glove_file):
+    """
+    :param glove_file: A glove file
+    :return: A dictionary that maps words to np arrays of values.
+    """
     index = {}
     f = open(glove_file, encoding="utf8")
     for line in f:
@@ -39,6 +43,31 @@ def produce_embedding_index(glove_file):
         index[next_word] = coefs
     f.close()
     return index
+
+
+def produce_glove_embedding_matrix(lexicon_size, embedding_dim, embedding_index, word_index):
+    """
+    :param lexicon_size: Use the n most common words
+    :param embedding_dim: The number of embedding dimensions to use. It doesn't make sense for this to exceed the
+    number of dimensions of the glove file, probably.
+    :param embedding_index: A dictionary that maps words to numpy arrays of numbers
+    :param word_index: A dictionary that maps words in the source sentences to unique indices.
+    :return: embedding_matrix, a matrix of embedding vectors for the lexicon_size most frequent words in the input
+    sentences, in order.
+    """
+    embedding_matrix = np.zeros((lexicon_size, embedding_dim))
+    # Iterate through each word, index pair.
+    for word, i in word_index.items():
+        # Check to see if it is one of the lexicon_size most frequent.
+        if i < lexicon_size:
+            # If it is, get the embedding vector for that word.
+            embedding_vector = embedding_index.get(word)
+            # If we found one, make that the correct column of the embedding matrix
+            if embedding_vector is not None:
+                embedding_matrix[i] = embedding_vector
+            else:
+                print("Warning: No embedding vector found for: ", word)
+    return embedding_matrix
 
 
 def first(x):
@@ -132,11 +161,3 @@ def build_model(lexicon_size, embedding_dim, max_sen_length_in_words, embedding_
     return model
 
 
-def produce_embedding_matrix(lexicon_size, embedding_dim, embedding_index, word_index):
-    embedding_matrix = np.zeros((lexicon_size, embedding_dim))
-    for word, i in word_index.items():
-        if i < lexicon_size:
-            embedding_vector = embedding_index.get(word)
-            if embedding_vector is not None:
-                embedding_matrix[i] = embedding_vector
-    return embedding_matrix

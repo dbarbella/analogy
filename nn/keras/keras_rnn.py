@@ -17,7 +17,7 @@ from datetime import datetime
 import numpy as np
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras_rnn_utils import readCSV, produce_embedding_index, produce_embedding_matrix
+from keras_rnn_utils import readCSV, produce_glove_embedding_index, produce_glove_embedding_matrix
 from keras_rnn_utils import evaluate_model, train_model
 from keras import backend as backend
 
@@ -29,13 +29,14 @@ from keras import backend as backend
 
 default_non_analogies_file = '../../corpora/verified_non_analogies.csv'
 default_analogies_file = '../../corpora/verified_analogies.csv'
+default_embedding_method = 'glove'
 default_glove_directory = '../../corpora/glove/'
 default_glove_file = 'glove.6B.100d.txt'
-default_results_file = './results/nonfic-retest-results-20.txt'
-default_spreadsheet_file = './results/nonfic-retest-sheet-20.csv'
+default_results_file = './results/testing_check.txt'
+default_spreadsheet_file = './results/testing_check.csv'
 default_experiments_file = './results/experiments.txt'
 
-default_sheet_comment = "Test: NONFIC."
+default_sheet_comment = "Confirming keras_rnn isn't broken."
 
 num_folds = 4
 num_epochs = 10
@@ -64,11 +65,15 @@ if num_args < 3:
     analogies_file = default_analogies_file
 else:
     analogies_file = sys.argv[2]
-    
+
 if num_args < 4:
-    glove_file = default_glove_directory + default_glove_file
+    embedding_method = default_embedding_method
 else:
-    glove_file = sys.argv[3]
+    embedding_method = sys.argv[3]
+
+# This needs to change now that we're supporting multiple embedding methods.
+if embedding_method == 'glove':
+    glove_file = default_glove_directory + default_glove_file
 
 
 # This will need to record all of the parameters used, along with the results.
@@ -101,8 +106,9 @@ def record_results(trial_results_dict, results_file=default_results_file, result
                         str(num_non_analogy_sentences)+","+str(num_analogy_sentences + num_non_analogy_sentences)+",")
 
     # Record information about the NN setup
-    results_handler.write("Embedding vector dimensions: " + str(embedding_dim) + "\n")  # This is a global for now.
-    sheet_handler.write(str(embedding_dim)+",")
+    results_handler.write("Embedding Method: " + str(embedding_method) + "\n")
+    results_handler.write("Embedding vector dimensions: " + str(embedding_dim) + "\n")  # A global for now.
+    sheet_handler.write(str(embedding_dim) + ",")
     results_handler.write("Max sentence length (words): " + str(max_sen_length_in_words) + "\n")  # Global for now.
     sheet_handler.write(str(max_sen_length_in_words) + ",")
     results_handler.write("Lexicon size: " + str(lexicon_size) + "\n")  # Global for now.
@@ -169,8 +175,9 @@ def run_trial():
     sequences = tokenizer.texts_to_sequences(all_sentences)
     sen_lens = list(map(len, sequences))
     max_sen_length_in_words = sorted(sen_lens)[round(len(sen_lens)*max_sen_len_percentile)]
+    # word_index is a dictionary that maps each word in the sentence list to a unique index.
+    # It may be in order of frequency.
     word_index = tokenizer.word_index
-    # print("Found {} unique tokens".format(len(word_index)))
     # pad sequences to a fixed length
     padded_sequences = pad_sequences(sequences, maxlen=max_sen_length_in_words)
     # An np array that contains a range of values from 0 to (n-1)
@@ -185,8 +192,12 @@ def run_trial():
     train_labels = labels[:len(padded_sequences) - num_test_samples]
     test_labels = labels[len(padded_sequences) - num_test_samples:]
     num_val_samples = len(train_data) // num_folds
-    embedding_index = produce_embedding_index(glove_file)
-    embedding_matrix = produce_embedding_matrix(lexicon_size, embedding_dim, embedding_index, word_index)
+    # This may require some careful surgery to support other things.
+    if embedding_method == 'glove':
+        embedding_index = produce_glove_embedding_index(glove_file)
+        embedding_matrix = produce_glove_embedding_matrix(lexicon_size, embedding_dim, embedding_index, word_index)
+    #elif embedding_method == 'bert':
+
     # k-fold training - Each fold chooses a new slice of the training data to be the validation set
     # This should probably be its own function - likely a mutator that takes the model as an argument?
     model, val_acc_histories, acc_histories = train_model(num_val_samples, train_data, train_labels, lexicon_size,
@@ -232,7 +243,7 @@ def plot(trial_results_dict):
 
 if __name__ == '__main__':
     accuracies = []
-    for i in range(20):
+    for i in range(1):
         trial_dict = run_trial()
         accuracies.append(trial_dict["test_accuracy"])
         backend.clear_session()
