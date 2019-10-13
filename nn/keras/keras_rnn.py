@@ -241,7 +241,7 @@ def plot(trial_results_dict):
     plt.show()
 
 
-if __name__ == '__main__':
+def run_test():
     accuracies = []
     for i in range(1):
         trial_dict = run_trial()
@@ -249,4 +249,8 @@ if __name__ == '__main__':
         backend.clear_session()
     print(max_sen_length_in_words)
     print(accuracies)
-    print(sum(accuracies)/len(accuracies))
+    print(sum(accuracies) / len(accuracies))
+
+
+if __name__ == '__main__':
+    run_test()
